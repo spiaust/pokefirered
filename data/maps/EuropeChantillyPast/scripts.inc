@@ -14,3 +14,27 @@ EuropeChantillyPast_EliseAway::
 	setflag FLAG_TEMP_1
 	removeobject 2
 	end
+
+EuropeChantillyPast_RealismChateau::
+	msgbox EuropeChantillyPast_RealismChateauText, MSGBOX_SIGN
+	end
+
+EuropeChantillyPast_RealismChateauText::
+	.string "CHATEAU DE CHANTILLY - 1940\n"
+	.string "The moat surrounds the chateau.$"
+
+EuropeChantillyPast_RealismStables::
+	msgbox EuropeChantillyPast_RealismStablesText, MSGBOX_SIGN
+	end
+
+EuropeChantillyPast_RealismStablesText::
+	.string "GRANDES ECURIES\n"
+	.string "The Great Stables face the lawns.$"
+
+EuropeChantillyPast_RealismPelouse::
+	msgbox EuropeChantillyPast_RealismPelouseText, MSGBOX_SIGN
+	end
+
+EuropeChantillyPast_RealismPelouseText::
+	.string "GRANDE PELOUSE\n"
+	.string "Return west to the refuge.$"

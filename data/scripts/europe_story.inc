@@ -62,10 +62,11 @@ EuropeStory_BattleDecline::
 	goto EuropeStory_End
 
 EuropeStory_Text_Offer::
-	.string "I'm an aide to PROFESSOR OAK.\p"
-	.string "OAK wants to learn how traveling\n"
-	.string "partners grow together.\p"
-	.string "Will you join our ENGLAND study?$"
+	.string "OAK asked us to study what makes a\n"
+	.string "route safe for people and POKEMON.\p"
+	.string "Start with our meadow trainers,\n"
+	.string "then meet your rival in OXFORD.\p"
+	.string "Will you join the field study?$"
 EuropeStory_Text_Accepted::
 	.string "Thank you! Battle OLIVER in the\n"
 	.string "meadow and ALICE on OXFORD TRAIL.\p"

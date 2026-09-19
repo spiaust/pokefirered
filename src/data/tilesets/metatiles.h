@@ -201,3 +201,45 @@ const u32 gMetatileAttributes_PokemonLeague[] = INCBIN_U32("data/tilesets/second
 
 const u16 gMetatiles_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame/metatiles.bin");
 const u32 gMetatileAttributes_HallOfFame[] = INCBIN_U32("data/tilesets/secondary/hall_of_fame/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeLondon[] = INCBIN_U16("data/tilesets/secondary/europe_london/metatiles.bin");
+const u32 gMetatileAttributes_EuropeLondon[] = INCBIN_U32("data/tilesets/secondary/europe_london/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeParis[] = INCBIN_U16("data/tilesets/secondary/europe_paris/metatiles.bin");
+const u32 gMetatileAttributes_EuropeParis[] = INCBIN_U32("data/tilesets/secondary/europe_paris/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeBerlin[] = INCBIN_U16("data/tilesets/secondary/europe_berlin/metatiles.bin");
+const u32 gMetatileAttributes_EuropeBerlin[] = INCBIN_U32("data/tilesets/secondary/europe_berlin/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeOxford[] = INCBIN_U16("data/tilesets/secondary/europe_oxford/metatiles.bin");
+const u32 gMetatileAttributes_EuropeOxford[] = INCBIN_U32("data/tilesets/secondary/europe_oxford/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeChantilly[] = INCBIN_U16("data/tilesets/secondary/europe_chantilly/metatiles.bin");
+const u32 gMetatileAttributes_EuropeChantilly[] = INCBIN_U32("data/tilesets/secondary/europe_chantilly/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeOranienburg[] = INCBIN_U16("data/tilesets/secondary/europe_oranienburg/metatiles.bin");
+const u32 gMetatileAttributes_EuropeOranienburg[] = INCBIN_U32("data/tilesets/secondary/europe_oranienburg/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeDoverPort[] = INCBIN_U16("data/tilesets/secondary/europe_doverport/metatiles.bin");
+const u32 gMetatileAttributes_EuropeDoverPort[] = INCBIN_U32("data/tilesets/secondary/europe_doverport/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeCalaisPort[] = INCBIN_U16("data/tilesets/secondary/europe_calaisport/metatiles.bin");
+const u32 gMetatileAttributes_EuropeCalaisPort[] = INCBIN_U32("data/tilesets/secondary/europe_calaisport/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeChantillyPost[] = INCBIN_U16("data/tilesets/secondary/europe_chantillypost/metatiles.bin");
+const u32 gMetatileAttributes_EuropeChantillyPost[] = INCBIN_U32("data/tilesets/secondary/europe_chantillypost/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeBeauvais[] = INCBIN_U16("data/tilesets/secondary/europe_beauvais/metatiles.bin");
+const u32 gMetatileAttributes_EuropeBeauvais[] = INCBIN_U32("data/tilesets/secondary/europe_beauvais/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeAmiens[] = INCBIN_U16("data/tilesets/secondary/europe_amiens/metatiles.bin");
+const u32 gMetatileAttributes_EuropeAmiens[] = INCBIN_U32("data/tilesets/secondary/europe_amiens/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeRouen[] = INCBIN_U16("data/tilesets/secondary/europe_rouen/metatiles.bin");
+const u32 gMetatileAttributes_EuropeRouen[] = INCBIN_U32("data/tilesets/secondary/europe_rouen/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeLeHavrePast[] = INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/metatiles.bin");
+const u32 gMetatileAttributes_EuropeLeHavrePast[] = INCBIN_U32("data/tilesets/secondary/europe_lehavrepast/metatile_attributes.bin");
+
+const u16 gMetatiles_EuropeSouthamptonPast[] = INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/metatiles.bin");
+const u32 gMetatileAttributes_EuropeSouthamptonPast[] = INCBIN_U32("data/tilesets/secondary/europe_southamptonpast/metatile_attributes.bin");

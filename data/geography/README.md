@@ -1,3 +1,21 @@
+See [HISTORICAL-LONDON.md](HISTORICAL-LONDON.md) for the v0.59 Westminster district.
+
+See [HISTORICAL-SOUTHAMPTON.md](HISTORICAL-SOUTHAMPTON.md) for the v0.58 old town.
+
+See [HISTORICAL-LE-HAVRE.md](HISTORICAL-LE-HAVRE.md) for the v0.57 harbor district.
+
+See [AMIENS-ROUEN.md](AMIENS-ROUEN.md) for the v0.56 historical districts.
+
+See [STATION-BEAUVAIS.md](STATION-BEAUVAIS.md) for the v0.55 historical districts.
+
+See [HISTORICAL-CHANTILLY.md](HISTORICAL-CHANTILLY.md) for the v0.54 historical estate.
+
+See [COASTAL-LANDMARKS.md](COASTAL-LANDMARKS.md) for the v0.53 Dover and Calais districts.
+
+See [REGIONAL-LANDMARKS.md](REGIONAL-LANDMARKS.md) for the v0.52 Oxford,
+Chantilly and Oranienburg districts, and [LANDMARKS.md](LANDMARKS.md) for the
+London, Paris and Berlin districts.
+
 # Geographic realism and World Options
 
 ## Current playable checkpoint
@@ -39,11 +57,11 @@ Variables 0x40D2-0x40D4 hold preferences. No quest IDs or collision data change.
 
 The user selected compressed, recognizable layouts with optional extra
 visual detail. Further story chapters are deferred while this is the active
-priority. The existing walking maps remain prototypes and are not yet
-realistic recreations. A regional map and menu are the first foundation,
+priority. The capital walking maps now include the landmark districts described in
+LANDMARKS.md. Other towns remain early prototypes. A regional map and menu are the first foundation,
 not completion of the town overhaul.
 
-Next: London, then Paris/Berlin and Oxford/Chantilly/Oranienburg, the coastal
+Next: refine the capital districts and redesign Oxford/Chantilly/Oranienburg, the coastal
 ports, and the historical towns. Preserve map/event identifiers and validate
 existing-save positions when routes or buildings move. Use local rivers,
 road axes, landmark placement and architecture to distinguish each town.

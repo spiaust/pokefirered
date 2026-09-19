@@ -148,3 +148,27 @@ EuropeGarden_Text_Sign::
 	.string "Please give resting POKEMON space.\n"
 	.string "The guide can take you to reception.\p"
 	.string "CELEBI waits near the south path.$"
+
+EuropeBeauvaisGarden_RealismCathedral::
+	msgbox EuropeBeauvaisGarden_RealismCathedralText, MSGBOX_SIGN
+	end
+
+EuropeBeauvaisGarden_RealismCathedralText::
+	.string "SAINT-PIERRE - BEAUVAIS\n"
+	.string "The Gothic choir and transept.$"
+
+EuropeBeauvaisGarden_RealismPalace::
+	msgbox EuropeBeauvaisGarden_RealismPalaceText, MSGBOX_SIGN
+	end
+
+EuropeBeauvaisGarden_RealismPalaceText::
+	.string "EPISCOPAL PALACE GATE\n"
+	.string "Two towers beside the cathedral.$"
+
+EuropeBeauvaisGarden_RealismRiver::
+	msgbox EuropeBeauvaisGarden_RealismRiverText, MSGBOX_SIGN
+	end
+
+EuropeBeauvaisGarden_RealismRiverText::
+	.string "THERAIN RIVERSIDE\n"
+	.string "Cross the bridges to the south bank.$"

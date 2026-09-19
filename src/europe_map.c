@@ -203,8 +203,8 @@ static const u8 sJournalLeads[][4][44] = {
      _("above the LE HAVRE pier."), _("Then check its details with the captain.")},
     {_("CONFIRM WITH THE CAPTAIN"), _("You copied the dock instructions."),
      _("Speak to the captain below your arrival."), _("The return service remains available.")},
-    {_("REPORT THE PORT VISIT TO ADA"), _("Return through CELEBI, then visit ADA"),
-     _("in OXFORD to record your port visit."), _("The dockworker still offers free care.")},
+    {_("THE FERRY IS READY"), _("The clerk can take you to SOUTHAMPTON."),
+     _("You may also visit ADA in OXFORD"), _("to file your notes. This is optional.")},
     {_("SAIL FROM LE HAVRE"), _("Speak to the ferry clerk on the quay,"),
      _("left of the closed entrance."), _("He offers transport to SOUTHAMPTON.")},
     {_("REPORT TO THE RECEPTION HOST"), _("Speak to the host below your arrival"),
@@ -215,8 +215,8 @@ static const u8 sJournalLeads[][4][44] = {
      _("for the bag with a green label."), _("Bring it to the reception worker.")},
     {_("RETURN THE LABELED BAG"), _("Take the bag to the reception worker"),
      _("on the right side of the upper quay."), _("The traveler is waiting for it.")},
-    {_("REPORT SOUTHAMPTON TO ADA"), _("Return through CELEBI and visit ADA"),
-     _("in OXFORD to record the reception."), _("The worker's free care remains open.")},
+    {_("THE LONDON GROUP IS READY"), _("The clerk can take you to LONDON."),
+     _("You may also visit ADA in OXFORD"), _("to file your notes. This is optional.")},
     {_("TRAVEL TO LONDON RECEPTION"), _("Speak to the clerk below the care worker"),
      _("on SOUTHAMPTON's upper quay."), _("He offers onward transport to LONDON.")},
     {_("MEET ROSE AT RECEPTION"), _("Speak to ROSE on the courtyard's left"),
@@ -276,12 +276,12 @@ static u8 GetJournalLead(void)
     if (stage < 2) return LEAD_ROUEN_BOOK_DONE + stage;
     stage = VarGet(VAR_EUROPE_DOCK_CHECK);
     if (stage < 3) return LEAD_LE_HAVRE_READY + stage;
-    if (VarGet(VAR_EUROPE_PORT_ACCOUNT) != 1) return LEAD_DOCK_DONE;
+    if (VarGet(VAR_EUROPE_PORT_ACCOUNT) != 1 && !VarGet(VAR_EUROPE_SOUTHAMPTON)) return LEAD_DOCK_DONE;
     stage = VarGet(VAR_EUROPE_SOUTHAMPTON);
     if (stage < 2) return LEAD_PORT_ARCHIVED + stage;
     stage = VarGet(VAR_EUROPE_LUGGAGE);
     if (stage < 3) return LEAD_SOUTHAMPTON_DONE + stage;
-    if (VarGet(VAR_EUROPE_SOUTH_ACCOUNT) != 1) return LEAD_LUGGAGE_DONE;
+    if (VarGet(VAR_EUROPE_SOUTH_ACCOUNT) != 1 && !VarGet(VAR_EUROPE_LONDON_PAST)) return LEAD_LUGGAGE_DONE;
     stage = VarGet(VAR_EUROPE_LONDON_PAST);
     return LEAD_SOUTH_ACCOUNT + (stage > 2 ? 2 : stage);
 }
@@ -609,12 +609,14 @@ void OpenEuropeMap(MainCallback callback)
         sEuropeMapCurrent = 0;
         break;
     case MAP_NUM(MAP_EUROPE_PARIS):
+    case MAP_NUM(MAP_EUROPE_NOTREDAME):
     case MAP_NUM(MAP_EUROPE_PARIS_COUNTRYSIDE):
     case MAP_NUM(MAP_EUROPE_PARIS_STATION):
     case MAP_NUM(MAP_EUROPE_PARIS_CENTER):
         sEuropeMapCurrent = 1;
         break;
     case MAP_NUM(MAP_EUROPE_BERLIN):
+    case MAP_NUM(MAP_EUROPE_REICHSTAG):
     case MAP_NUM(MAP_EUROPE_BERLIN_COUNTRYSIDE):
     case MAP_NUM(MAP_EUROPE_BERLIN_STATION):
     case MAP_NUM(MAP_EUROPE_BERLIN_CENTER):

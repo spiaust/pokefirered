@@ -243,8 +243,11 @@
 #define VAR_0x40BE                 0x40BE
 #define VAR_0x40BF                 0x40BF
 #define VAR_0x40C0                 0x40C0
+#define VAR_EUROPE_CASE_NOTRE_DAME  VAR_0x40C0 // 0 unstarted; 1 accepted; 2/3 one clue; 4 both; 5 resolved; 6 rewarded.
 #define VAR_0x40C1                 0x40C1
+#define VAR_EUROPE_CASE_WESTMINSTER VAR_0x40C1
 #define VAR_0x40C2                 0x40C2
+#define VAR_EUROPE_CASE_REICHSTAG   VAR_0x40C2
 #define VAR_0x40C3                 0x40C3
 #define VAR_0x40C4                 0x40C4
 #define VAR_0x40C5                 0x40C5

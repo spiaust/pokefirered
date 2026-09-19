@@ -85,3 +85,27 @@ EuropeRouen_Text_DepartureNotice::
 	.string "The porter on the east side can\n"
 	.string "help you board the confirmed train.\p"
 	.string "Return services remain available.$"
+
+EuropeRouenPast_RealismCathedral::
+	msgbox EuropeRouenPast_RealismCathedralText, MSGBOX_SIGN
+	end
+
+EuropeRouenPast_RealismCathedralText::
+	.string "NOTRE-DAME DE ROUEN\n"
+	.string "The cathedral north of the SEINE.$"
+
+EuropeRouenPast_RealismClock::
+	msgbox EuropeRouenPast_RealismClockText, MSGBOX_SIGN
+	end
+
+EuropeRouenPast_RealismClockText::
+	.string "GROS-HORLOGE\n"
+	.string "The clock west of the cathedral.$"
+
+EuropeRouenPast_RealismSeine::
+	msgbox EuropeRouenPast_RealismSeineText, MSGBOX_SIGN
+	end
+
+EuropeRouenPast_RealismSeineText::
+	.string "SEINE QUAYS\n"
+	.string "Follow the paths along both banks.$"

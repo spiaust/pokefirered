@@ -25,6 +25,10 @@ EuropeCelebi_Report::
 	giveitem ITEM_RARE_CANDY, 1
 	setvar VAR_EUROPE_CELEBI_STORY, 3
 EuropeCelebi_Complete::
+	goto_if_eq VAR_EUROPE_LONDON_PAST, 2, EuropeCelebi_Conclusion
+	goto_if_ne VAR_EUROPE_DOCK_CHECK, 3, EuropeCelebi_AfterPort
+	goto_if_ne VAR_EUROPE_PORT_ACCOUNT, 1, EuropePortAccount_Ada
+EuropeCelebi_AfterPort::
 	goto_if_eq VAR_EUROPE_LUGGAGE, 3, EuropeSouthAccount_Ada
 	goto_if_eq VAR_EUROPE_DOCK_CHECK, 3, EuropePortAccount_Ada
 	goto_if_eq VAR_EUROPE_REUNION_STORY, 6, EuropeAmiensAccount_Ada
@@ -69,11 +73,13 @@ EuropeCelebi_Text_Locked::
 	.string "Earn the THUNDERBADGE, then return.\n"
 	.string "This journey needs a trained team.$"
 EuropeCelebi_Text_Offer::
-	.string "ADA: Travelers in CHANTILLY FOREST\n"
-	.string "have seen a small green POKEMON.\p"
-	.string "Their watches stop near it, while\n"
-	.string "the forest keeps moving around them.\p"
-	.string "Will you investigate the sighting?$"
+	.string "ADA: OAK sent me your route\n"
+	.string "studies. Similar disturbances\p"
+	.string "surround old landmarks. The\n"
+	.string "records point to CHANTILLY. A\p"
+	.string "green POKEMON waits there, and\n"
+	.string "watches stop nearby. Will you\p"
+	.string "investigate?$"
 EuropeCelebi_Text_Directions::
 	.string "Take the train to CHANTILLY. Walk\n"
 	.string "south into CHANTILLY FOREST.\p"
@@ -112,20 +118,39 @@ EuropeCelebi_Text_Leave::
 	.string "You step back. The POKEMON waits\n"
 	.string "patiently beside the forest path.$"
 EuropeCelebi_Text_Report::
-	.string "ADA: CELEBI! Old stories say it can\n"
-	.string "cross time. You saw a memory.\p"
-	.string "A platform in 1940... We must learn\n"
-	.string "who needed help, and where they were.\p"
-	.string "Thank you for bringing this report.\n"
-	.string "This is for your traveling partner.$"
+	.string "ADA: CELEBI showed you a route\n"
+	.string "from 1940. People and their\p"
+	.string "POKEMON were seeking safe places\n"
+	.string "together. It is asking us to\p"
+	.string "understand that journey. Record\n"
+	.string "what you learn and help where you\p"
+	.string "can. This is for your partner.$"
 EuropeCelebi_Text_Complete::
-	.string "ADA: The station was in CHANTILLY.\n"
-	.string "CELEBI can guide you to 1940.\p"
-	.string "Find it again in CHANTILLY FOREST.\n"
-	.string "It will stay near your arrival spot\p"
-	.string "and bring you home whenever you ask.\n"
-	.string "You can leave and resume your visit.$"
+	.string "ADA: Begin at the CHANTILLY\n"
+	.string "refuge. Listen to the keeper\p"
+	.string "before moving on. CELEBI will wait\n"
+	.string "at each arrival point to bring you\p"
+	.string "home. We are helping companions\n"
+	.string "stay together, not trying to\p"
+	.string "change the war.$"
 EuropeCelebi_Text_Full::
 	.string "ADA: Your report is safe. Make room\n"
 	.string "in ITEMS for one RARE CANDY, then\p"
 	.string "return so we can review your notes.$"
+
+EuropeCelebi_Conclusion::
+ msgbox EuropeCelebi_ConclusionText
+ call EuropeCase_Synthesis
+ goto_if_ne VAR_EUROPE_PORT_ACCOUNT, 1, EuropePortAccount_Ada
+ goto_if_ne VAR_EUROPE_SOUTH_ACCOUNT, 1, EuropeSouthAccount_Ada
+ goto EuropeCelebi_End
+EuropeCelebi_ConclusionText::
+ .string "ADA: Your account is complete.\p"
+ .string "CELEBI showed us a chain of care,\n"
+ .string "not a secret weapon or a lost prize.\p"
+ .string "Safe shelter, honest news and people\n"
+ .string "keeping their partners close.\p"
+ .string "That is what our present-day routes\n"
+ .string "need too. OAK can use these notes.\p"
+ .string "Keep exploring the landmarks and\n"
+ .string "helping the companions you meet.$"

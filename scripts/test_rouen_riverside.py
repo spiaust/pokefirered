@@ -40,8 +40,10 @@ if __name__=='__main__':
     if not args.legacy:sys.exit(0)
     old=Emulator(ROOT/'artifacts/releases/Pokemon-European-Tour-v0.34.gba')
     try:
-        load_checkpoint(old,'rouen-complete',True)
-        old.walk('RIGHT',11);assert old.location()==(43,34,21,16)
+        # Use the genuine pre-expansion battery. rouen-complete now contains
+        # newer cached terrain and must not be loaded backwards into v0.34.
+        load_checkpoint(old,'riverside-old-edge',True)
+        assert old.location()==(43,34,21,16),old.location()
         start_action(old,4)
         for _ in range(5):old.press('A',150)
         old.battery(ROOT/'test-output/riverside-old-edge.sav')

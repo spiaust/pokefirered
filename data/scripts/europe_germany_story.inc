@@ -86,8 +86,10 @@ EuropeGermany_Text_Decline::
 	.string "Come back when you're ready!$"
 
 EuropeGermany_Text_Reward::
-	.string "KARL's report says the beacon works!\n"
-	.string "Thanks for connecting our towns.\p"
+	.string "LENA: KARL restored the beacon!\n"
+	.string "Reliable signals help companions\p"
+	.string "find safe paths. A faulty relay at\n"
+	.string "the REICHSTAG needs attention too.\p"
 	.string "This MAGNET is for your team.$"
 
 EuropeGermany_Text_Complete::

@@ -1407,3 +1407,297 @@ const u16 gTilesetPalettes_HallOfFame[][16] =
 	INCBIN_U16("data/tilesets/secondary/hall_of_fame/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/hall_of_fame/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_EuropeLondon[] = INCBIN_U32("data/tilesets/secondary/europe_london/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeLondon[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_london/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeParis[] = INCBIN_U32("data/tilesets/secondary/europe_paris/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeParis[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_paris/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeBerlin[] = INCBIN_U32("data/tilesets/secondary/europe_berlin/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeBerlin[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_berlin/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeOxford[] = INCBIN_U32("data/tilesets/secondary/europe_oxford/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeOxford[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oxford/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeChantilly[] = INCBIN_U32("data/tilesets/secondary/europe_chantilly/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeChantilly[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantilly/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeOranienburg[] = INCBIN_U32("data/tilesets/secondary/europe_oranienburg/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeOranienburg[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_oranienburg/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeDoverPort[] = INCBIN_U32("data/tilesets/secondary/europe_doverport/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeDoverPort[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_doverport/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeCalaisPort[] = INCBIN_U32("data/tilesets/secondary/europe_calaisport/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeCalaisPort[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_calaisport/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeChantillyPost[] = INCBIN_U32("data/tilesets/secondary/europe_chantillypost/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeChantillyPost[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_chantillypost/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeBeauvais[] = INCBIN_U32("data/tilesets/secondary/europe_beauvais/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeBeauvais[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_beauvais/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeAmiens[] = INCBIN_U32("data/tilesets/secondary/europe_amiens/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeAmiens[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_amiens/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeRouen[] = INCBIN_U32("data/tilesets/secondary/europe_rouen/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeRouen[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_rouen/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeLeHavrePast[] = INCBIN_U32("data/tilesets/secondary/europe_lehavrepast/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeLeHavrePast[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_lehavrepast/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_EuropeSouthamptonPast[] = INCBIN_U32("data/tilesets/secondary/europe_southamptonpast/tiles.4bpp.lz");
+const u16 gTilesetPalettes_EuropeSouthamptonPast[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/15.gbapal"),
+};

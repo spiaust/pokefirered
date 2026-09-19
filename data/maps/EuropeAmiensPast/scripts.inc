@@ -110,3 +110,27 @@ EuropeAmiens_Text_Done::
 	.string "Rest here with your team a while.\p"
 	.string "The guide can return you to the post.\n"
 	.string "Your green friend knows another way.$"
+
+EuropeAmiensPast_RealismCathedral::
+	msgbox EuropeAmiensPast_RealismCathedralText, MSGBOX_SIGN
+	end
+
+EuropeAmiensPast_RealismCathedralText::
+	.string "NOTRE-DAME D'AMIENS\n"
+	.string "The cathedral above SAINT-LEU.$"
+
+EuropeAmiensPast_RealismSaintLeu::
+	msgbox EuropeAmiensPast_RealismSaintLeuText, MSGBOX_SIGN
+	end
+
+EuropeAmiensPast_RealismSaintLeuText::
+	.string "SAINT-LEU\n"
+	.string "Canals and houses north of the church.$"
+
+EuropeAmiensPast_RealismSomme::
+	msgbox EuropeAmiensPast_RealismSommeText, MSGBOX_SIGN
+	end
+
+EuropeAmiensPast_RealismSommeText::
+	.string "SOMME RIVERSIDE\n"
+	.string "Bridges connect the canal banks.$"

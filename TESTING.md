@@ -1,5 +1,207 @@
 # Prototype verification — 2026-09-18
 
+## v0.61 Paris promenade verification - 2026-09-19
+
+53 focused PASS results on the updated build and its generated map data:
+41 map/path checks, 3 capital compatibility checks, 3 dialogue/tree/
+regeneration checks, 2 full-map Paris preservation/generation checks,
+2 emulator walking/save checks and 2 Notre-Dame investigation/save checks.
+
+The walking test visits both garden approaches, the garden loop and the
+promenade toward the island. It reads the signs, saves and cold-loads the
+new district, checks the loaded terrain and returns through the hub to the
+countryside. The Notre-Dame test checks entry cancellation, clues, peaceful
+resolution, one-time rewards, exit/re-entry and cold saves inside.
+Every v0.60 Paris map cell retains its collision, elevation and land/water
+type. Previous v0.60 ROM and user saves are hash-verified during packaging.
+
+## v0.60 landmark, story and visual verification - 2026-09-19
+
+109 focused PASS results across staged build-and-test passes. Each gameplay
+stage was built and tested before moving on; the final Notre-Dame visual
+correction was followed by another complete case test, the edge-case suite
+and the revised story test.
+
+- 41 map/path checks; 7 layout/terrain compatibility checks.
+- 3 static checks for dialogue widths, complete tree silhouettes and
+  deterministic interior/case generation.
+- 8 case play-through/save results, including the final Notre-Dame recheck.
+- 7 edge cases: both clue orders in each room, all three full reward pockets,
+  and a real, catchable level-12 Gastly battle. Rewards do not repeat.
+- 12 new-game country/starter results and 4 Celebi chapter checks.
+- 10 story/travel results: deferred reports, Ada's ending, case synthesis,
+  Southampton and London travel, journal state and modern rail bookings.
+- 11 walking/save results: Paris, Berlin, London, Oranienburg and historical
+  London. Berlin's new garden paths and entrance signs were exercised.
+- 6 deliberately stale route-save tree caches refresh correctly on cold
+  Continue, preserving the player position, team and existing progress.
+
+In-game building, garden, interior and Ghost encounter screenshots were
+inspected. Testing uses disposable test-output saves. The package keeps
+v0.59, verifies its SHA256, and hashes user artifact saves before and after
+copying the new ROM. Existing emulator save states are not upgrade fixtures.
+
+## v0.59 historical London verification - 2026-09-19
+
+52 focused checks passed on the final build:
+
+- 2 landmark walking/save checks: complete loaded terrain, four signs,
+  both bridges, cold Continue, historical map and Southampton/Celebi returns.
+- 9 story checks: London travel/welcome/journal/booking (3), v0.48 adjacent
+  save migration (1), Oxford prerequisite report (2), Southampton travel (3).
+- 38 map checks, old terrain/layout compatibility (1), sign widths (1),
+  deterministic generation and absence of modern London Eye tiles (1).
+
+In-game palace and river-crossing screenshots were inspected. All original
+walkable terrain/elevations and story characters are preserved. Historical
+and modern London layouts remain separate. Final logs/screenshots are
+archived with v0.59; packaging verifies the previous v0.58 ROM hash. User
+saves are not used or changed.
+
+## v0.58 historical Southampton verification - 2026-09-19
+
+59 focused checks passed on the final build:
+
+- 2 landmark walking/save checks: reception bypass, complete loaded terrain,
+  four signs, wall-side lanes, pier, cold Continue, map and ferry/Celebi returns.
+- 16 story checks: Southampton travel (3), luggage (3), care (3), Oxford
+  report (2), London travel (3), v0.44/v0.48 adjacent-save migrations (2).
+- 38 map checks, original harbor art/layout compatibility (1), sign widths
+  (1), deterministic asset/map generation (1).
+
+All original walkable terrain remains unchanged. Three formerly blocked
+edge cells bypass both workers; the original northern exit stays closed.
+In-game screenshots of Bargate, Tudor House, walls and quay were inspected.
+Final build and test logs are archived with v0.58. Packaging verifies the
+previous v0.57 ROM hash; user saves are not used or changed.
+
+## v0.57 historical Le Havre verification - 2026-09-19
+
+59 focused checks passed on the final build:
+
+- 2 landmark walking/save checks: all loaded terrain, four signs, crossings,
+  cold Continue in the new district, historical map and Rouen/Celebi returns.
+- 16 story checks: Le Havre travel (3), dock task (2), care (3), direct port
+  return (3), Southampton travel (3), old dockworker/ferry-clerk saves (2).
+- 38 map checks, original harbor art/layout compatibility (1), sign widths
+  (1), and deterministic asset/map generation (1).
+
+Initial walking exposed the dockworker blocking the eastbound terminal
+path. A two-cell boardwalk bypass resolved it; every old walkable position
+and the blocked northern exit are preserved. In-game screenshots of both
+landmarks and basin crossings were inspected. The final build and regression
+logs are archived with v0.57. The v0.56 ROM hash is checked during packaging;
+user saves are never touched by the tests or release script.
+
+## v0.56 Amiens and Rouen verification - 2026-09-19
+
+64 focused checks passed on the final build:
+
+- 4 new walking/save checks: both districts, every loaded terrain cell,
+  bridges, signs, preserved quests, cold Continue, Town Map and train/Celebi returns.
+- 17 existing quest/travel checks: Amiens (3), bulletin (2), Rouen (3),
+  route book (3), riverside (2), v0.35 book migration (1), Le Havre (3).
+- 38 map checks, 2 original-terrain/layout checks, 2 dialogue-width checks
+  and 1 deterministic-generation check.
+
+The riverside migration test now boots its genuine v0.34 edge battery in
+the archived ROM. Its previous setup incorrectly loaded a later cached-map
+battery backwards into that ROM. The old-edge fixture and new-ROM migration
+both pass. User saves were not used or changed.
+
+Final logs and screenshots are archived with v0.56 in artifacts/releases.
+The v0.55 ROM is retained and its SHA256 checked during packaging.
+
+## v0.55 station and Beauvais verification - 2026-09-19
+
+Each district was built and tested before the next. Final coverage is 61
+focused checks:
+
+- 4 station/Beauvais walking checks: migrated old batteries, full loaded terrain,
+  signs, landmark approaches, Save/cold Continue, era maps and original exits.
+- 3 station-post story, 4 evacuation, 2 garden reunion, 3 onward Amiens checks
+  and 2 refuge walking/story checks, including real pending rail itineraries.
+- 38 static map checks, 2 old-coordinate/layout-isolation checks, 2 sign-width
+  checks and 1 byte-for-byte generation check.
+
+A test battery was produced by normal walking/Save in the actual v0.54 ROM
+at the expanded post coordinate (26,20), then loaded in this build. Its new
+station layout and complete runtime terrain are verified. This addresses
+v0.54's shared refuge/post layout, which had spread estate scenery to the post.
+A permanent assertion now requires independent layouts for these maps.
+All old on-foot coordinates retain elevation/behavior; the inaccessible moat
+becomes forecourt. Beauvais keeps its original garden quest area and reception.
+New artwork was inspected through actual mGBA screenshots. Logs/screenshots
+are archived under artifacts/releases/v0.55-*. Previous ROM and player saves
+are retained. This is focused regression, not the entire project test suite.
+
+## v0.54 historical Chantilly verification - 2026-09-19
+
+The expanded refuge/estate passes 55 focused checks:
+
+- 2 new mGBA checks: old battery terrain, landmark/sign walking, preserved
+  progress, district Save/cold Continue, historical map, Celebi round trip
+  and completion of the original blanket quest.
+- 5 original time-travel checks, 3 station-post checks and 4 evacuation checks,
+  covering gates, No/B choices, unfinished visits, relocated characters and
+  actual pending rail journeys.
+- 38 static map checks, 2 old-position/hardware/reproducibility checks and
+  1 dialogue-width check.
+
+The 16x14 refuge expands east to 56x32. All formerly walkable coordinates
+retain their elevation and terrain behavior. Cached refuge terrain clears on
+load; story character flags remain controlled by the original map scripts.
+Chateau/stables sprites are reused because these structures predate 1940.
+The source history and reconstruction limits are in
+ data/geography/HISTORICAL-CHANTILLY.md.
+Screenshots were inspected in mGBA. Logs and screenshots are retained under
+artifacts/releases/v0.54-*. The previous ROM and player saves are preserved.
+This is focused regression coverage, not every project test.
+
+## v0.53 coastal landmark verification - 2026-09-19
+
+Dover and Calais were built and tested sequentially. The final combined ROM
+passes 68 focused checks:
+
+- 4 port walking/save checks: old batteries, full terrain comparison, landmark
+  paths, signs, cold Continue, regional map return, ferry rounds and coach exits.
+- 3 transport checks: badge gating, No/B, coach entry, ferry returns and an old
+  genuine coastal rail booking resumed through Paris to Berlin.
+- 13 walking/save checks across the six previously expanded modern towns.
+- 3 historical London checks for gates, returns and saved rail detours.
+- 38 static map checks, 2 port compatibility/hardware checks, 2 sign-width checks.
+- 3 generation checks proving all eight modern landmark districts reproduce.
+
+The first old Dover battery exposed the saved Island Harbor layout ID. Port
+load now migrates that ID to the new individual layout before terrain loading,
+while retaining every original terminal tile and player coordinate. Actual
+mGBA screenshots were inspected for castle, cliff face, town hall and lighthouse.
+The previous v0.52 ROM is retained; player battery saves are untouched.
+Build/test logs and screenshots are archived under artifacts/releases/v0.53-*.
+This is focused regression coverage, not a rerun of every project test.
+
+## v0.52 regional landmark verification - 2026-09-19
+
+Oxford, Chantilly and Oranienburg were implemented, built and tested in order.
+The final combined ROM passes 67 focused checks:
+
+- 6 regional walking/save checks: old batteries, all loaded terrain, landmarks,
+  signs, bridges, cold Continue, map return, service approaches and trail links.
+- 2 Oxford transport checks: old surfing battery/dismount and riverboat return.
+- 7 capital district checks covering London, Paris and Berlin.
+- 3 World Options checks including saved settings, registration and cycling.
+- 3 historical London checks including old progress and onward/return travel.
+- 38 static map checks, 3 old-coordinate/hardware checks and 3 text-width checks.
+- 2 byte-for-byte generation checks covering all six landmark districts.
+
+The pathfinder now excludes elevation-1 shoreline tiles even when their
+behavior is normal; mGBA correctly blocks walking onto those water edges.
+Regional sprite crops ignore alpha below 128 to prevent faint stray pixels
+from shrinking visible architecture. Capital generation remains identical.
+Build, test logs and screenshots are archived under artifacts/releases/v0.52-*.
+This is a focused regression, not a rerun of the complete project suite.
+Player saves are untouched; update with normal in-game Save and CONTINUE.
+
 ## Baseline
 
 Upstream: `pret/pokefirered` commit
@@ -1469,3 +1671,28 @@ the test and confirmed identity preservation. All 38 static map path checks
 passed. Geographic data generation is byte-for-byte reproducible. Map,
 options and avatar screenshots were inspected. No full-suite run, surfing
 regression, or town-layout overhaul is claimed by this checkpoint.
+
+
+## v0.51 Capital landmark districts
+
+The release adds London/Paris/Berlin walking-map districts and independent
+landmark tilesets. Each capital was built and tested before the next. Static
+checks cover all old traversable positions, unchanged land/water/elevation,
+GBA metatile/palette limits, and all 38 existing map path/link checks. Real
+input tests compare every loaded capital map tile with its authored data,
+walk the new districts, read signs, cross bridges, save normally and cold
+Continue. Berlin's central Gate passage is traversable. London also checks
+the clinic/station and an old surfing save; Paris and Berlin reconnect to
+the countryside. Screenshots were inspected for all six landmark sprites.
+
+The surfing check exposed the existing SavedMapViewIsEmpty out-of-bounds
+read: clearing the cache could still appear nonempty, restoring zero tiles.
+The loop now uses the actual array bound. The same old battery dismounted
+correctly in v0.50, failed before this fix, and passes after it. All final
+capital reload tests now check the complete terrain buffer to catch this.
+
+Early test-harness corrections accounted for legitimate walking friendship
+gains and the clinic's central exit tile. The final ROM was then retested
+for all three districts, World Options persistence, registered-item use and
+cycling avatar continuity. The historical London regression was also run.
+This is a focused regression pass; the entire project suite was not run.

@@ -1,5 +1,12 @@
 # Pokémon European Tour — playable prototype
 
+Current update: **v0.59** expands historical London with Westminster,
+Parliament Square, Whitehall, the Thames and two crossings. Walk east from
+reception. Quests and save progress remain available. See
+[directions and historical limits](data/geography/HISTORICAL-LONDON.md)
+and [playing instructions](EUROPE.md). The first historical landmark passes
+are complete; fuller streets and finer architectural details remain next.
+
 This workspace contains the first England/France/Germany prototype.
 Its first tour quest rewards visiting the guides in the three starting cities.
 Local trail trainers and station shops provide battles and repeatable supplies.

@@ -187,12 +187,10 @@ gPikachuIntro_Text_Page3::
     .string "adventure begin!$"
 
 gOakSpeech_Text_WelcomeToTheWorld::
-    .string "Hello, traveler!\n"
-    .string "Glad to meet you!\p"
-    .string "Welcome to the EUROPEAN TOUR!\p"
-    .string "I'm PROFESSOR OAK.\p"
-    .string "I study POKéMON and the places\n"
-    .string "they call home across Europe.\p$"
+	.string "Hello, traveler! I'm PROFESSOR\n"
+	.string "OAK. Welcome to the EUROPEAN TOUR!\p"
+	.string "I study how POKEMON share our\n"
+	.string "towns, forests and old roads.$"
 
 gOakSpeech_Text_ThisWorld::
     .string "From city parks to country paths…$"
@@ -202,10 +200,11 @@ gOakSpeech_Text_IsInhabitedFarAndWide::
     .string "Each country has its own wildlife.\p$"
 
 gOakSpeech_Text_IStudyPokemon::
-    .string "Explore on foot or by BICYCLE.\n"
-    .string "Ride trains between our cities.\p"
-    .string "Make friends along the way!\p"
-    .string "Your first partner is waiting.\p$"
+	.string "Some familiar POKEMON routes are\n"
+	.string "changing. I need a partner who\p"
+	.string "will listen, investigate and help.\n"
+	.string "Meet our regional researchers.\p"
+	.string "Your first POKEMON is waiting!$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
     .string "But first, tell me a little about\n"

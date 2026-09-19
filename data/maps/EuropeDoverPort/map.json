@@ -1,7 +1,7 @@
 {
   "id": "MAP_EUROPE_DOVER_PORT",
   "name": "EuropeDoverPort",
-  "layout": "LAYOUT_ISLAND_HARBOR",
+  "layout": "LAYOUT_EUROPE_DOVER_PORT",
   "music": "MUS_SEVII_123",
   "region_map_section": "MAPSEC_EUROPE_DOVER",
   "requires_flash": false,
@@ -54,5 +54,30 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 44,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeDoverPort_RealismCastle"
+    },
+    {
+      "type": "sign",
+      "x": 53,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeDoverPort_RealismCliffs"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 22,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeDoverPort_RealismHarbor"
+    }
+  ]
 }

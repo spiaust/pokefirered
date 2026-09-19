@@ -49,4 +49,47 @@ EuropeLondon_Landmark::
 
 EuropeLondon_Text_Landmark::
 	.string "THAMES PROMENADE\n"
-	.string "A riverside walk through LONDON.$"
+	.string "Cross south to WESTMINSTER.\p"
+	.string "PARLIAMENT and the LONDON EYE\n"
+	.string "stand on opposite riverbanks.$"
+
+EuropeLondon_RealismWhitehall::
+	msgbox EuropeLondon_RealismTextWhitehall, MSGBOX_SIGN
+	end
+
+EuropeLondon_RealismTextWhitehall::
+	.string "WHITEHALL / PARLIAMENT SQUARE\n"
+	.string "Clock tower and PARLIAMENT: south.$"
+
+EuropeLondon_RealismParliament::
+	msgbox EuropeLondon_RealismTextParliament, MSGBOX_SIGN
+	end
+
+EuropeLondon_RealismTextParliament::
+	.string "PALACE OF WESTMINSTER\n"
+	.string "The clock tower houses BIG BEN.\p"
+	.string "WESTMINSTER BRIDGE leads east\n"
+	.string "to the LONDON EYE and SOUTH BANK.\p"
+	.string "Look for the green bridge rails.\n"
+	.string "LAMBETH's red crossing lies south.\p"
+	.string "Visitor room: face the south door.\n"
+	.string "Press A to ask about visiting.$"
+
+EuropeLondon_RealismEye::
+	msgbox EuropeLondon_RealismTextEye, MSGBOX_SIGN
+	end
+
+EuropeLondon_RealismTextEye::
+	.string "LONDON EYE\n"
+	.string "The wheel overlooks the THAMES.\p"
+	.string "PARLIAMENT stands across the river.$"
+
+EuropeLondon_RealismGardens::
+	msgbox EuropeLondon_RealismTextGardens, MSGBOX_SIGN
+	end
+
+EuropeLondon_RealismTextGardens::
+	.string "JUBILEE GARDENS\n"
+	.string "Follow the SOUTH BANK riverside path.\p"
+	.string "The garden loop rejoins the walk\n"
+	.string "toward the red LAMBETH crossing.$"

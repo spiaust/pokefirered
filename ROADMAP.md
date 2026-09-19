@@ -3,13 +3,128 @@
 The project grows in playable releases. Build and test each gameplay change
 before adding the next; preserve the previous ROM in `artifacts/releases`.
 
+## v0.61: Paris garden and promenade detail delivered
+
+Added connected paved loops around the Champ de Mars flower beds, two
+side approaches and a clearer left-bank promenade toward Notre-Dame's
+island bridge. Updated the existing signs with walking directions.
+Every v0.60 Paris collision, elevation and land/water cell is preserved.
+The Notre-Dame case remains accessible and save-compatible.
+
+Next: London's waterfront and bridge details, then street/building infill,
+additional landmark rooms and the remaining World Options/customization.
+See data/geography/PARIS-PROMENADE.md for the reference and layout limits.
+
+## v0.60: landmark cases, visual fixes and story revision
+
+Delivered three explorable landmark visitor areas: Notre-Dame, Westminster
+and the Reichstag, with saved investigations and one-time rewards. Gastly
+can be caught at Notre-Dame after its peaceful resolution. Corrected tree
+silhouettes and filtered landmark art address the reported visual issues.
+
+The revised opening, regional dialogue and Ada/Rose conclusion connect
+fieldwork to the historical chain of care. Two later Oxford report detours
+are now optional. Existing chapter flags, badges and saves are retained.
+
+Resumed town-detail work with connected Tiergarten paths and visitor
+entrance directions. Next: fuller street/building infill and distinctive
+waterfront details, followed by additional landmark interiors and the
+remaining World Options/character-customization work. The three new rooms
+are a first playable set, not completion of every landmark.
+See data/geography/LANDMARK-CASES.md for the story and case design.
+
+## v0.59: historical London first landmark pass delivered
+
+Westminster, Parliament Square, Whitehall and two Thames crossings now
+form a district east of the original reception. The existing palace art
+is reused, with no London Eye placed in the historical map. Old positions,
+quests and Southampton return travel remain available and tested.
+The playable historical destinations now have first landmark passes.
+Next: fuller street/building infill, distinctive bridge/waterfront details,
+then the remaining World Options and character-customization work.
+See data/geography/HISTORICAL-LONDON.md for references and remaining gaps.
+
+## v0.58: historical Southampton old town delivered
+
+Bargate anchors the north end of High Street; Tudor House and wall-side
+lanes lead to Town Quay. A three-cell boardwalk bypass opens the eastbound
+route without moving the luggage worker or London clerk. Old positions,
+quests, care and ferry travel remain available. The new district has been
+built and tested before moving on. Next: historical London, then finer
+street layouts and the remaining World Options/customization work.
+See data/geography/HISTORICAL-SOUTHAMPTON.md for sources and limits.
+
+## v0.57: historical Le Havre harbor delivered
+
+Notre-Dame church, Maison de l'Armateur and the Commerce/Roy basins now
+form a compressed district east of the existing terminal. A two-tile
+boardwalk bypass keeps the dockworker in place while opening the route.
+Old positions, quests, care and ferry travel remain available. The new
+district has been built and tested before moving on.
+Next: historical Southampton and London, followed by finer street layouts
+and the remaining World Options/customization work.
+See data/geography/HISTORICAL-LE-HAVRE.md for period references and limits.
+
+## v0.56: Amiens and Rouen landmark districts delivered
+
+Amiens now includes Notre-Dame, Saint-Leu houses and Somme canals. Rouen
+includes Notre-Dame, the Gros-Horloge and Seine quays. Existing quest hubs
+remain accessible, with cold-save migration and expanded-area saving tested.
+Each city was built and tested before moving on. These compressed districts
+use intact pre-destruction geography, not day-specific wartime damage.
+Next: historical Le Havre, Southampton and London; finer streets and the
+remaining World Options/customization work continue afterward.
+See data/geography/AMIENS-ROUEN.md for directions, sources and limits.
+
+## v0.55: station context and Beauvais delivered
+
+The Chantilly post has its own station/trackside layout, separate from the
+refuge estate. Beauvais Garden opens east into a cathedral/palace district
+and river crossings. Original reception and quest routes are retained.
+Next: historical Amiens and Rouen; finer streets, measured station facades
+and day-specific wartime conditions remain future refinements.
+See data/geography/STATION-BEAUVAIS.md for scope and verification.
+
+## v0.54: historical Chantilly estate delivered
+
+The 1940 refuge now opens east into a compressed estate with the chateau,
+moat, Great Stables, garden paths and Grande Pelouse. Original story tasks,
+characters and return coordinates are retained. The station post and other
+historical towns still need geographic/architectural passes. Next: historical
+station context and Beauvais, then the remaining historical destinations.
+See data/geography/HISTORICAL-CHANTILLY.md for period sources and limitations.
+
+## v0.53: coastal landmark districts delivered
+
+Dover and Calais now have coastal walking districts east of their preserved
+ferry terminals. Dover has its Great Tower, white cliffs and harbor paths;
+Calais has its town hall/belfry, lighthouse and northern seafront. Cold saves,
+ferry journeys, coach returns and saved rail bookings remain supported.
+Next are period-correct historical town layouts, followed by finer modern
+neighborhood/street detail and walking-map decoration settings.
+See data/geography/COASTAL-LANDMARKS.md for scope and references.
+
+## v0.52: regional landmark districts delivered
+
+Oxford, Chantilly and Oranienburg now have compressed landmark districts EAST
+of their original hubs, with custom architecture, rivers, crossings and paths.
+All six modern rail stops have received a first landmark pass. Ports (Dover
+and Calais), historical towns and finer neighborhood architecture remain next.
+Walking-map decoration settings and expanded customization remain pending.
+See data/geography/REGIONAL-LANDMARKS.md for scope, references and limitations.
+
 ## Active priority: geographic realism and customization
 
 User selected compressed, recognizable real-world layouts. Town redesign now
 takes priority over further story chapters. The first foundation adds a
 geographically projected regional map and the persistent WORLD OPTIONS key
-item. Walking maps and landmark architecture still require redesign. See
+item. Eight modern destinations now have first-pass landmark districts. See
 `data/geography/README.md` for scope, references and remaining work.
+
+v0.51 adds explorable landmark districts to London, Paris and Berlin, with
+custom architecture, rivers, crossings and paths. v0.52 adds Oxford, Chantilly and Oranienburg; v0.53 adds the coastal ports.
+Period-correct historical towns remain next. More
+capital street/building detail remains. See `data/geography/LANDMARKS.md`.
 
 | Stage | Scope | Status |
 | --- | --- | --- |

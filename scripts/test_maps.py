@@ -18,13 +18,31 @@ def reachable(layout, start):
     tiles = struct.unpack(f"<{width * height}H", raw)
     # These outdoor prototypes share General/Pallet Town. Water is not a
     # walking route even when its map-block collision bits are zero.
-    attr_data = (ROOT / "data/tilesets/primary/general/metatile_attributes.bin").read_bytes()
-    secondary = "island_harbor" if layout["secondary_tileset"] == "gTileset_IslandHarbor" else "pallet_town"
+    primary = "building" if layout["primary_tileset"] == "gTileset_Building" else "general"
+    attr_data = (ROOT / f"data/tilesets/primary/{primary}/metatile_attributes.bin").read_bytes()
+    secondary = {
+        "gTileset_PokemonTower": "pokemon_tower",
+        "gTileset_IslandHarbor": "island_harbor",
+        "gTileset_EuropeAmiens": "europe_amiens",
+        "gTileset_EuropeRouen": "europe_rouen",
+        "gTileset_EuropeLeHavrePast": "europe_lehavrepast",
+        "gTileset_EuropeSouthamptonPast": "europe_southamptonpast",
+        "gTileset_EuropeChantillyPost": "europe_chantillypost",
+        "gTileset_EuropeBeauvais": "europe_beauvais",
+        "gTileset_EuropeDoverPort": "europe_doverport",
+        "gTileset_EuropeCalaisPort": "europe_calaisport",
+        "gTileset_EuropeOranienburg": "europe_oranienburg",
+        "gTileset_EuropeChantilly": "europe_chantilly",
+        "gTileset_EuropeOxford": "europe_oxford",
+        "gTileset_EuropeLondon": "europe_london",
+        "gTileset_EuropeParis": "europe_paris",
+        "gTileset_EuropeBerlin": "europe_berlin",
+    }.get(layout["secondary_tileset"], "pallet_town")
     attr_data += (ROOT / f"data/tilesets/secondary/{secondary}/metatile_attributes.bin").read_bytes()
     attrs = struct.unpack(f"<{len(attr_data) // 4}I", attr_data)
     def walkable(block):
         behavior = attrs[block & 0x3FF] & 0x1FF
-        return not block & 0xC00 and behavior not in (0x10, 0x11, 0x12, 0x13, 0x15, 0x19, 0x1A, 0x1B)
+        return not block & 0xC00 and block >> 12 != 1 and behavior not in (0x10, 0x11, 0x12, 0x13, 0x15, 0x19, 0x1A, 0x1B)
     seen, queue = {start}, deque([start])
     while queue:
         x, y = queue.popleft()
@@ -42,7 +60,7 @@ maps = {name: load(f"data/maps/{name}/map.json") for name in groups["gMapGroup_E
 by_id = {value["id"]: value for value in maps.values()}
 for name, value in maps.items():
     layout = layouts[value["layout"]]
-    for event in value["warp_events"] + value["object_events"] + value["bg_events"]:
+    for event in value["warp_events"] + value["object_events"] + value["bg_events"] + value["coord_events"]:
         assert 0 <= event["x"] < layout["width"], (name, event)
         assert 0 <= event["y"] < layout["height"], (name, event)
     for event in value["warp_events"]:
@@ -51,13 +69,20 @@ for name, value in maps.items():
     for connection in value["connections"] or []:
         destination = by_id[connection["map"]]
         assert any(back["map"] == value["id"] for back in destination["connections"]), name
-    if name in ("EuropeBeauvaisGarden", "EuropeAmiensPast", "EuropeRouenPast", "EuropeLondonPast"):
+    if name in ("EuropeNotreDame", "EuropeWestminster", "EuropeReichstag"):
+        accessible = reachable(layout, (10,15))
+        for point in ((8,15),(4,6),(15,8),(10,5),(12,14),(10,16)):
+            assert point in accessible, (name, "case or exit unreachable", point)
+        assert len(value["coord_events"]) == 1 and not value["allow_escaping"]
+    elif name in ("EuropeBeauvaisGarden", "EuropeAmiensPast", "EuropeRouenPast", "EuropeLondonPast"):
         accessible = reachable(layout, (10, 16))
         for point in ((10, 16), (10, 15), (6, 9), (17, 6), (7, 9), (14, 15)):
             assert point in accessible, (name, "garden path unreachable", point)
         if name == "EuropeRouenPast":
             # Every formerly reachable tile remains safe for old battery saves.
-            assert reachable(layouts["LAYOUT_EUROPE_AMIENS_PAST"], (10,16)) <= accessible
+            legacy_amiens = dict(layouts["LAYOUT_EUROPE_AMIENS_PAST"], width=24, height=20,
+                secondary_tileset="gTileset_PalletTown", blockdata_filepath="data/geography/amiens-v055.bin")
+            assert reachable(legacy_amiens, (10,16)) <= accessible
             for point in ((25,16),(25,9),(28,9),(33,9),(33,16),(33,6)):
                 assert point in accessible, (name, point)
             for point in ((26,6),(29,12),(31,15)):

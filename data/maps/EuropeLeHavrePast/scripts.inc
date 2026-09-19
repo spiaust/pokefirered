@@ -66,3 +66,35 @@ EuropeLeHavre_Text_Return::
 	.string "The return service to ROUEN is open.\n"
 	.string "LEON can help your team rest there.\p"
 	.string "Return to ROUEN?$"
+
+EuropeLeHavrePast_RealismChurch::
+	msgbox EuropeLeHavrePast_RealismChurchText, MSGBOX_SIGN
+	end
+
+EuropeLeHavrePast_RealismChurchText::
+	.string "NOTRE-DAME CHURCH\n"
+	.string "The old church west of BASSIN DU ROY.$"
+
+EuropeLeHavrePast_RealismHouse::
+	msgbox EuropeLeHavrePast_RealismHouseText, MSGBOX_SIGN
+	end
+
+EuropeLeHavrePast_RealismHouseText::
+	.string "MAISON DE L'ARMATEUR\n"
+	.string "A tall house in SAINT-FRANCOIS.$"
+
+EuropeLeHavrePast_RealismCommerce::
+	msgbox EuropeLeHavrePast_RealismCommerceText, MSGBOX_SIGN
+	end
+
+EuropeLeHavrePast_RealismCommerceText::
+	.string "BASSIN DU COMMERCE\n"
+	.string "Walk around the old harbor basin.$"
+
+EuropeLeHavrePast_RealismRoy::
+	msgbox EuropeLeHavrePast_RealismRoyText, MSGBOX_SIGN
+	end
+
+EuropeLeHavrePast_RealismRoyText::
+	.string "BASSIN DU ROY\n"
+	.string "Quays link the two old quarters.$"

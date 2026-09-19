@@ -2,6 +2,171 @@
 
 A FireRed-based prototype of a journey through real European countries.
 
+
+## Paris garden and riverside paths (v0.61)
+
+Walk south from Paris's original square to the Eiffel Tower. Paved side
+paths now circle the Champ de Mars flower beds, and the left-bank
+promenade continues east toward Notre-Dame's island bridge. The Eiffel
+and Seine signs give directions. Notre-Dame's entrance and investigation
+work as before. Continue normally with your existing battery save.
+
+## Landmark investigations and visual fixes (v0.60)
+
+In modern Paris, London and Berlin, approach the south-facing entrance of
+Notre-Dame, Westminster or the Reichstag, face the building and press A.
+Nearby signs give directions. Inside, speak to the curator, read both
+records, and visit the attendant at the north end. Return to the curator
+for your reward. The red floor marker is the exit; normal saving works inside.
+
+Notre-Dame's case unlocks an optional, catchable level-12 Gastly encounter.
+Westminster concerns Hoothoot shelter; the Reichstag case concerns a faulty
+signal drawing Magnemite. These three visitor areas are fictional Pokemon
+interpretations. Other landmarks currently remain exterior sights.
+
+Oak and Ada now connect the regional studies, landmark cases and Celebi
+journey around safe routes and keeping companions together. After the
+historical London welcome, visit Ada for the conclusion. The Le Havre ferry
+now needs dock clearance, and London transport needs the returned luggage;
+Oxford reports for those two legs are optional and remain available later.
+
+Trees now use complete silhouettes, including after loading older route
+saves. Landmark art has cleaner edges and reduced visual noise. Berlin's
+Tiergarten has connected garden paths. The game remains native GBA pixel art.
+
+Use normal CONTINUE with your existing battery save after reopening the
+updated ROM. Do not resume an emulator save state made with an older ROM.
+Your existing save file is not replaced by the update. See
+[case guide and story direction](data/geography/LANDMARK-CASES.md).
+
+## Historical London / Westminster (v0.59)
+
+In historical LONDON, walk EAST from reception through the opening in the
+trees. Explore Parliament Square, Whitehall, the Palace of Westminster and
+the Thames. Westminster Bridge and the southern Lambeth crossing connect
+the riverbank paths. Return west for Rose, transport and Celebi.
+
+Use normal CONTINUE with your battery save. Existing walkable positions and
+progress are preserved, and saves beside Parliament reload there. This is
+a compressed district with an intact palace exterior, not a reconstruction
+of wartime damage on a specific date. See
+[design, references and limits](data/geography/HISTORICAL-LONDON.md).
+
+## Historical Southampton old town (v0.58)
+
+At SOUTHAMPTON reception, walk EAST past the London clerk, then north along
+the boardwalk around the two workers and east along the quay. Explore
+Bargate, Tudor House, the western wall-side lanes and Town Quay. High Street
+leads south from Bargate to the waterfront. Return west for luggage, care,
+the London clerk, Celebi and the return ferry.
+
+Use normal CONTINUE with your battery save. Existing walkable positions and
+progress are preserved; saves beside the new landmarks also reload there.
+These are simplified exterior landmarks in a compressed old-town district.
+See [design, sources and limits](data/geography/HISTORICAL-SOUTHAMPTON.md).
+
+## Historical Le Havre harbor (v0.57)
+
+At LE HAVRE, walk north to the dockworker, pass behind him along the widened
+boardwalk, then follow the quay EAST. Explore Notre-Dame church, the Maison
+de l'Armateur, Bassin du Commerce and Bassin du Roy. Cross the quay paths
+between the old quarters, then return west for the captain or Southampton.
+
+Use normal CONTINUE with your battery save. Existing walkable positions and
+progress are preserved, and saves in the expanded area reload there. This
+is a compressed interpretation of the old harbor, with simplified landmarks
+and crossings. See [design, sources and limits](data/geography/HISTORICAL-LE-HAVRE.md).
+
+## Historical Amiens and Rouen (v0.56)
+
+In AMIENS, walk EAST to Notre-Dame Cathedral, Saint-Leu canal houses and
+Somme riverside paths. In ROUEN, cross the existing river crossing and
+follow the eastern path to Notre-Dame, the Gros-Horloge and the Seine quays.
+Return west for existing quests, train notices and Celebi.
+
+Use normal CONTINUE with your battery save. Existing map positions and
+progress are preserved; saves made in the new scenery also reload there.
+These are compressed landmark districts with intact pre-destruction
+crossings, not day-specific wartime reconstructions. See
+[design, period references and artwork](data/geography/AMIENS-ROUEN.md).
+
+## Historical station and Beauvais (v0.55)
+
+At the CHANTILLY station post, walk EAST from Celebi into the new station
+forecourt and trackside district. Use the original notice to board trains.
+The dispatcher and refuge guide remain in their usual positions.
+
+In BEAUVAIS, accept Elise's existing garden visit once unlocked, then walk
+EAST from the garden to Saint-Pierre Cathedral, the episcopal palace gate
+and riverside crossings. Return west for the garden guide or Celebi.
+
+Old batteries, including v0.54 saves in the expanded station area, migrate
+on normal CONTINUE. The station now has a separate layout from the refuge.
+These are compressed historical interpretations, not exact reconstructions
+of station architecture or damage on a particular day in 1940. See
+[design and period references](data/geography/STATION-BEAUVAIS.md).
+
+## Historical Chantilly estate (v0.54)
+
+In the 1940 refuge, walk EAST from Celebi through the opening in the trees.
+Explore the chateau and moat, Great Stables, garden paths, canal and Grande
+Pelouse. Return west for Celebi, the keeper and the station guide. Existing
+story quests and the separate station-post journey remain available.
+
+Old battery saves load the expanded map automatically. Use normal CONTINUE.
+This is a compressed estate district using buildings that predate 1940;
+it is not a day-specific reconstruction of wartime conditions. Other historical
+towns and station layouts remain on the roadmap. See
+[historical design and sources](data/geography/HISTORICAL-CHANTILLY.md).
+
+## Dover and Calais coastal districts (v0.53)
+
+Take the existing station coach from London to Dover or Paris to Calais
+(third badge required). From either ferry arrival point, walk UP twice, then
+EAST along the quay into the new district.
+
+- DOVER: the square Great Tower of Dover Castle, white chalk cliffs meeting
+  the sea, clifftop paths, seafront promenade and harbor arm.
+- CALAIS: red-brick town hall and belfry, white lighthouse, northern seafront
+  promenade, pier and garden paths.
+
+The sailor still offers the Channel crossing; the original north exit still
+returns to London or Paris. Old port battery saves migrate automatically to
+the expanded layout. Use normal CONTINUE, not an old emulator save state.
+These are compressed landmark districts; detailed neighborhoods and complete
+street networks remain future work. See
+[coastal design and references](data/geography/COASTAL-LANDMARKS.md).
+
+## Oxford, Chantilly and Oranienburg landmarks (v0.52)
+
+Walk EAST from each town's central square into the new district:
+
+- OXFORD: Radcliffe Camera and its square, Magdalen Tower, High Street,
+  Cherwell crossings and meadow paths.
+- CHANTILLY: the chateau and moat, Great Stables, formal gardens and Grand Canal.
+- ORANIENBURG: the palace and walkable forecourt, Schlosspark paths,
+  Havel riverbanks and two crossings.
+
+These are compressed, recognizable landmark districts. Existing services and
+quest characters remain in their original hubs. The landmarks are always
+visible; WORLD OPTIONS does not yet toggle walking-map decoration. Historical towns and finer neighborhood architecture remain on the roadmap.
+Use normal in-game Save and CONTINUE when updating, not an older emulator state.
+See [design and references](data/geography/REGIONAL-LANDMARKS.md).
+
+## Explorable capital landmarks (v0.51)
+
+Walk south from the central square in LONDON, PARIS or BERLIN to explore the
+new landmark districts. In London, continue across the original river bridge
+to Westminster and the South Bank. Paris has the Eiffel Tower, Seine bridges
+and Notre-Dame island; Berlin has the Reichstag, Brandenburg Gate, Spree
+bridges and Tiergarten paths. Read the new signs to orient yourself.
+
+Existing clinics, stations and quest characters remain at their familiar
+locations. These compressed districts are the first city realism pass; the
+historical maps still await their own redesign. Landmarks
+are always visible, regardless of WORLD OPTIONS map-detail settings.
+
+
 ## Play the prototype
 
 Open `artifacts/Pokemon-European-Tour-Prototype.gba` in mGBA and choose **NEW

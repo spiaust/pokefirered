@@ -74,3 +74,27 @@ EuropeChallenge_Chantilly_Progress::
 EuropeChantilly_GymSign::
 	msgbox EuropeChantillyGym_Text_Statue, MSGBOX_SIGN
 	end
+
+EuropeChantilly_RealismChateau::
+	msgbox EuropeChantilly_RealismChateauText, MSGBOX_SIGN
+	end
+
+EuropeChantilly_RealismChateauText::
+	.string "CHATEAU DE CHANTILLY\n"
+	.string "Cross the moat to the chateau court.$"
+
+EuropeChantilly_RealismStables::
+	msgbox EuropeChantilly_RealismStablesText, MSGBOX_SIGN
+	end
+
+EuropeChantilly_RealismStablesText::
+	.string "GRANDES ECURIES\n"
+	.string "The estate's historic Great Stables.$"
+
+EuropeChantilly_RealismGardens::
+	msgbox EuropeChantilly_RealismGardensText, MSGBOX_SIGN
+	end
+
+EuropeChantilly_RealismGardensText::
+	.string "FORMAL GARDENS / GRAND CANAL\n"
+	.string "Paths follow the garden axes.$"

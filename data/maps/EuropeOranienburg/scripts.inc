@@ -73,3 +73,27 @@ EuropeChallenge_Oranienburg_Progress::
 EuropeOranienburg_GymSign::
 	msgbox EuropeOranienburgGym_Text_Statue, MSGBOX_SIGN
 	end
+
+EuropeOranienburg_RealismPalace::
+	msgbox EuropeOranienburg_RealismPalaceText, MSGBOX_SIGN
+	end
+
+EuropeOranienburg_RealismPalaceText::
+	.string "SCHLOSS ORANIENBURG\n"
+	.string "The palace faces SCHLOSSPLATZ.$"
+
+EuropeOranienburg_RealismPark::
+	msgbox EuropeOranienburg_RealismParkText, MSGBOX_SIGN
+	end
+
+EuropeOranienburg_RealismParkText::
+	.string "SCHLOSSPARK\n"
+	.string "Garden paths west of the palace.$"
+
+EuropeOranienburg_RealismHavel::
+	msgbox EuropeOranienburg_RealismHavelText, MSGBOX_SIGN
+	end
+
+EuropeOranienburg_RealismHavelText::
+	.string "HAVEL RIVERSIDE\n"
+	.string "Cross the bridges to SCHLOSSPLATZ.$"

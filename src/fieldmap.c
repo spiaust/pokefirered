@@ -471,14 +471,10 @@ static bool32 SavedMapViewIsEmpty(void)
     u16 i;
     u32 marker = 0;
 
-#ifndef UBFIX
-    // BUG: This loop extends past the bounds of the mapView array. Its size is only 0x100.
-    for (i = 0; i < 0x200; i++)
-        marker |= gSaveBlock2Ptr->mapView[i];
-#else
+    // Only inspect the saved tile cache. Reading past it can treat a cleared
+    // cache as populated and overwrite freshly loaded maps with zero tiles.
     for (i = 0; i < NELEMS(gSaveBlock2Ptr->mapView); i++)
         marker |= gSaveBlock2Ptr->mapView[i];
-#endif
 
     if (marker == 0)
         return TRUE;

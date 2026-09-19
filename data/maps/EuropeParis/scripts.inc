@@ -30,7 +30,9 @@ EuropeParis_Text_Welcome::
 	.string "Heal at the clinic. The station has\n"
 	.string "trains and traveling supplies.\p"
 	.string "CELINE waits west of this square.\n"
-	.string "Ask her about the garden survey.$"
+	.string "Ask her about the garden survey.\p"
+	.string "NOTRE-DAME has a visitor entrance\n"
+	.string "on its south side. Try the door.$"
 
 EuropeParis_Text_Clinic::
 	.string "POKEMON CLINIC\nFree care for traveling partners.$"
@@ -50,3 +52,33 @@ EuropeParis_Landmark::
 EuropeParis_Text_Landmark::
 	.string "TUILERIES GARDENS\n"
 	.string "Flowers and paths in central PARIS.$"
+
+EuropeParis_RealismEiffel::
+	msgbox EuropeParis_RealismEiffelText, MSGBOX_SIGN
+	end
+
+EuropeParis_RealismEiffelText::
+	.string "EIFFEL TOWER / CHAMP DE MARS\n"
+	.string "The SEINE lies to the north.\p"
+	.string "Garden paths circle the flower beds.\n"
+	.string "The riverside walk continues east.$"
+
+EuropeParis_RealismNotreDame::
+	msgbox EuropeParis_RealismNotreDameText, MSGBOX_SIGN
+	end
+
+EuropeParis_RealismNotreDameText::
+	.string "NOTRE-DAME / ILE DE LA CITE\n"
+	.string "The cathedral stands on an island.\p"
+	.string "Undercroft: face the south door.\n"
+	.string "Press A to ask about visiting.$"
+
+EuropeParis_RealismSeine::
+	msgbox EuropeParis_RealismSeineText, MSGBOX_SIGN
+	end
+
+EuropeParis_RealismSeineText::
+	.string "RIVES DE SEINE\n"
+	.string "Cross the bridges to the LEFT BANK.\p"
+	.string "Follow the promenade east for\n"
+	.string "the bridge to NOTRE-DAME.$"

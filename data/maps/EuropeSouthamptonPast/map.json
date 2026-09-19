@@ -102,5 +102,38 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 49,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeSouthamptonPast_RealismBargate"
+    },
+    {
+      "type": "sign",
+      "x": 37,
+      "y": 27,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeSouthamptonPast_RealismTudor"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeSouthamptonPast_RealismWalls"
+    },
+    {
+      "type": "sign",
+      "x": 51,
+      "y": 33,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeSouthamptonPast_RealismQuay"
+    }
+  ]
 }

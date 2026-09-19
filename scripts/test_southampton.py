@@ -19,7 +19,7 @@ def clerk(emu,choice='YES'):
     assert emu.location()==PORT
     emu.walk('UP',2);emu.walk('LEFT',2)
     before=preserved(emu);emu.press('LEFT');emu.press('A',180)
-    if emu.var(0x40D9)==1:choose(emu,choice)
+    if emu.var(0x40DA)==3:choose(emu,choice)
     else:emu.finish_dialogue()
     assert preserved(emu)==before
     if emu.location()!=SOUTH:
@@ -41,7 +41,7 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--legacy',action='store_true');args=p.parse_args()
     emu=Emulator(ROOT/'pokefirered.gba')
     try:
-        load_checkpoint(emu,'dock-check-complete',args.legacy)
+        load_checkpoint(emu,'le-havre-complete',args.legacy)
         clerk(emu);assert emu.var(STORY)==0
         load_checkpoint(emu,'port-return-arrived',args.legacy)
         for choice in ('NO','B'):clerk(emu,choice);assert emu.var(STORY)==0
@@ -61,7 +61,7 @@ if __name__=='__main__':
         host(emu);host(emu,'YES');rest(emu);clerk(emu);assert emu.var(STORY)==2
         emu.walk('UP',3);assert emu.location()==(43,36,8,3)
         emu.walk('DOWN',2);assert emu.location()==SOUTH
-        print('PASS: account gate, crossing No/B, arrival, host welcome, repeats and closed entrance',flush=True)
+        print('PASS: dock-clearance gate, crossing No/B, arrival, host welcome, repeats and closed entrance',flush=True)
         print('PASS: both returns, re-entry, care, England map context and seventeenth journal milestone',flush=True)
         load_checkpoint(emu,'evac-booking',args.legacy)
         if emu.location()!=PRESENT:cross(emu)

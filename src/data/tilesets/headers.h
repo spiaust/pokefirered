@@ -746,3 +746,157 @@ const struct Tileset gTileset_HallOfFame =
     .callback = NULL,
 };
 
+
+const struct Tileset gTileset_EuropeLondon =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeLondon,
+    .palettes = gTilesetPalettes_EuropeLondon,
+    .metatiles = gMetatiles_EuropeLondon,
+    .metatileAttributes = gMetatileAttributes_EuropeLondon,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeParis =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeParis,
+    .palettes = gTilesetPalettes_EuropeParis,
+    .metatiles = gMetatiles_EuropeParis,
+    .metatileAttributes = gMetatileAttributes_EuropeParis,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeBerlin =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeBerlin,
+    .palettes = gTilesetPalettes_EuropeBerlin,
+    .metatiles = gMetatiles_EuropeBerlin,
+    .metatileAttributes = gMetatileAttributes_EuropeBerlin,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeOxford =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeOxford,
+    .palettes = gTilesetPalettes_EuropeOxford,
+    .metatiles = gMetatiles_EuropeOxford,
+    .metatileAttributes = gMetatileAttributes_EuropeOxford,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeChantilly =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeChantilly,
+    .palettes = gTilesetPalettes_EuropeChantilly,
+    .metatiles = gMetatiles_EuropeChantilly,
+    .metatileAttributes = gMetatileAttributes_EuropeChantilly,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeOranienburg =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeOranienburg,
+    .palettes = gTilesetPalettes_EuropeOranienburg,
+    .metatiles = gMetatiles_EuropeOranienburg,
+    .metatileAttributes = gMetatileAttributes_EuropeOranienburg,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeDoverPort =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeDoverPort,
+    .palettes = gTilesetPalettes_EuropeDoverPort,
+    .metatiles = gMetatiles_EuropeDoverPort,
+    .metatileAttributes = gMetatileAttributes_EuropeDoverPort,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeCalaisPort =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeCalaisPort,
+    .palettes = gTilesetPalettes_EuropeCalaisPort,
+    .metatiles = gMetatiles_EuropeCalaisPort,
+    .metatileAttributes = gMetatileAttributes_EuropeCalaisPort,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeChantillyPost =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeChantillyPost,
+    .palettes = gTilesetPalettes_EuropeChantillyPost,
+    .metatiles = gMetatiles_EuropeChantillyPost,
+    .metatileAttributes = gMetatileAttributes_EuropeChantillyPost,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeBeauvais =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeBeauvais,
+    .palettes = gTilesetPalettes_EuropeBeauvais,
+    .metatiles = gMetatiles_EuropeBeauvais,
+    .metatileAttributes = gMetatileAttributes_EuropeBeauvais,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeAmiens =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeAmiens,
+    .palettes = gTilesetPalettes_EuropeAmiens,
+    .metatiles = gMetatiles_EuropeAmiens,
+    .metatileAttributes = gMetatileAttributes_EuropeAmiens,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeRouen =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeRouen,
+    .palettes = gTilesetPalettes_EuropeRouen,
+    .metatiles = gMetatiles_EuropeRouen,
+    .metatileAttributes = gMetatileAttributes_EuropeRouen,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeLeHavrePast =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeLeHavrePast,
+    .palettes = gTilesetPalettes_EuropeLeHavrePast,
+    .metatiles = gMetatiles_EuropeLeHavrePast,
+    .metatileAttributes = gMetatileAttributes_EuropeLeHavrePast,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EuropeSouthamptonPast =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EuropeSouthamptonPast,
+    .palettes = gTilesetPalettes_EuropeSouthamptonPast,
+    .metatiles = gMetatiles_EuropeSouthamptonPast,
+    .metatileAttributes = gMetatileAttributes_EuropeSouthamptonPast,
+    .callback = NULL,
+};

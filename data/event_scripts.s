@@ -1474,3 +1474,11 @@ Text_TestMsg::
 	.include "data/scripts/europe_south_account.inc"
 
 	.include "data/maps/EuropeLondonPast/scripts.inc"
+
+	.include "data/scripts/europe_landmarks.inc"
+
+	.include "data/maps/EuropeNotreDame/scripts.inc"
+
+	.include "data/maps/EuropeWestminster/scripts.inc"
+
+	.include "data/maps/EuropeReichstag/scripts.inc"

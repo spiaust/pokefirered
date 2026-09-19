@@ -8,7 +8,7 @@ EuropeSouthampton_Transition::
 EuropeSouthampton_Clerk::
 	lock
 	faceplayer
-	goto_if_ne VAR_EUROPE_PORT_ACCOUNT, 1, EuropeSouthampton_Locked
+	goto_if_ne VAR_EUROPE_DOCK_CHECK, 3, EuropeSouthampton_Locked
 	msgbox EuropeSouthampton_Text_Offer, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EuropeAmiens_Stay
 	msgbox EuropeSouthampton_Text_Crossing
@@ -40,10 +40,11 @@ EuropeSouthampton_Return::
 	releaseall
 	end
 EuropeSouthampton_Text_Locked::
-	.string "Before traveling farther, share\n"
-	.string "your port account with ADA.\p"
-	.string "Your green companion can take you\n"
-	.string "back to the present.$"
+	.string "The captain must confirm the dock\n"
+	.string "instructions before this group can\p"
+	.string "board. Speak to the dockworker,\n"
+	.string "read the notice, then ask the\p"
+	.string "captain.$"
 EuropeSouthampton_Text_Offer::
 	.string "A crossing to SOUTHAMPTON is ready.\n"
 	.string "The reception host can send you back.\p"
@@ -65,3 +66,35 @@ EuropeSouthampton_Text_Return::
 	.string "The LE HAVRE return is available.\n"
 	.string "The dockworker offers party care.\p"
 	.string "Return to LE HAVRE?$"
+
+EuropeSouthamptonPast_RealismBargate::
+	msgbox EuropeSouthamptonPast_RealismBargateText, MSGBOX_SIGN
+	end
+
+EuropeSouthamptonPast_RealismBargateText::
+	.string "BARGATE\n"
+	.string "The northern gate of the old town.$"
+
+EuropeSouthamptonPast_RealismTudor::
+	msgbox EuropeSouthamptonPast_RealismTudorText, MSGBOX_SIGN
+	end
+
+EuropeSouthamptonPast_RealismTudorText::
+	.string "TUDOR HOUSE\n"
+	.string "Timber framing beside the old lanes.$"
+
+EuropeSouthamptonPast_RealismWalls::
+	msgbox EuropeSouthamptonPast_RealismWallsText, MSGBOX_SIGN
+	end
+
+EuropeSouthamptonPast_RealismWallsText::
+	.string "WESTERN TOWN WALLS\n"
+	.string "Follow the lane towards TOWN QUAY.$"
+
+EuropeSouthamptonPast_RealismQuay::
+	msgbox EuropeSouthamptonPast_RealismQuayText, MSGBOX_SIGN
+	end
+
+EuropeSouthamptonPast_RealismQuayText::
+	.string "TOWN QUAY\n"
+	.string "The waterfront south of HIGH STREET.$"

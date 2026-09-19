@@ -72,3 +72,27 @@ EuropeChallenge_Oxford_Progress::
 EuropeOxford_GymSign::
 	msgbox EuropeOxfordGym_Text_Statue, MSGBOX_SIGN
 	end
+
+EuropeOxford_RealismRadcliffe::
+	msgbox EuropeOxford_RealismRadcliffeText, MSGBOX_SIGN
+	end
+
+EuropeOxford_RealismRadcliffeText::
+	.string "RADCLIFFE SQUARE\n"
+	.string "The domed RADCLIFFE CAMERA library.$"
+
+EuropeOxford_RealismMagdalen::
+	msgbox EuropeOxford_RealismMagdalenText, MSGBOX_SIGN
+	end
+
+EuropeOxford_RealismMagdalenText::
+	.string "MAGDALEN TOWER / HIGH STREET\n"
+	.string "MAGDALEN BRIDGE crosses the CHERWELL.$"
+
+EuropeOxford_RealismMeadow::
+	msgbox EuropeOxford_RealismMeadowText, MSGBOX_SIGN
+	end
+
+EuropeOxford_RealismMeadowText::
+	.string "CHERWELL MEADOW PATH\n"
+	.string "Follow the river back to HIGH STREET.$"

@@ -146,11 +146,12 @@ EuropeFrance_Text_NotStarted::
 	.string "PARIS is organizing a field survey.\p"
 	.string "Speak to her west of the city guide.$"
 EuropeFrance_Text_Review::
-	.string "REMY: Sunlit gardens shelter ODDISH.\n"
-	.string "The forest offers cover for bugs.\p"
-	.string "Different places support different\n"
-	.string "partners. Your notes show us both!\p"
-	.string "I've reviewed your survey report.$"
+	.string "REMY: The garden and forest offer\n"
+	.string "different kinds of shelter. The\p"
+	.string "survey helps us protect both.\n"
+	.string "Restless POKEMON in PARIS may be\p"
+	.string "missing a quiet place too. Your\n"
+	.string "report is ready for CELINE.$"
 EuropeFrance_Text_ReturnReport::
 	.string "Take the reviewed report to CELINE\n"
 	.string "in PARIS. Walk south or use the train.$"

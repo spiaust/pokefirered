@@ -48,3 +48,29 @@ EuropeBerlin_Landmark::
 EuropeBerlin_Text_Landmark::
 	.string "TIERGARTEN WALK\n"
 	.string "A green retreat in busy BERLIN.$"
+
+EuropeBerlin_RealismReichstag::
+	msgbox EuropeBerlin_RealismReichstagText, MSGBOX_SIGN
+	end
+
+EuropeBerlin_RealismReichstagText::
+	.string "REICHSTAG\n"
+	.string "The SPREE runs north of here.\p"
+	.string "Visitor archive: face the south door.\n"
+	.string "Press A to speak to the curator.$"
+
+EuropeBerlin_RealismGate::
+	msgbox EuropeBerlin_RealismGateText, MSGBOX_SIGN
+	end
+
+EuropeBerlin_RealismGateText::
+	.string "BRANDENBURG GATE\n"
+	.string "UNTER DEN LINDEN leads east.$"
+
+EuropeBerlin_RealismTiergarten::
+	msgbox EuropeBerlin_RealismTiergartenText, MSGBOX_SIGN
+	end
+
+EuropeBerlin_RealismTiergartenText::
+	.string "TIERGARTEN\n"
+	.string "Garden paths west of the GATE.$"

@@ -619,6 +619,36 @@ static void LoadSaveblockMapHeader(void)
         gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutId;
         CpuFill16(0, gSaveBlock2Ptr->mapView, sizeof(gSaveBlock2Ptr->mapView));
     }
+    // These European outdoor maps have no persistent dynamic tiles. Discard
+    // cached forests so older saves also load the corrected tree silhouettes.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON)
+        && (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LONDON)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LONDON_COUNTRYSIDE)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_OXFORD_TRAIL)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_PARIS_COUNTRYSIDE)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_CHANTILLY_TRAIL)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_BERLIN_COUNTRYSIDE)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_ORANIENBURG_TRAIL)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_PARIS)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_BERLIN)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_OXFORD)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_CHANTILLY)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_ORANIENBURG)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_DOVER_PORT)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_CALAIS_PORT)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_CHANTILLY_PAST)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_CHANTILLY_PAST_POST)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_BEAUVAIS_GARDEN)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_AMIENS_PAST)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_ROUEN_PAST)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LE_HAVRE_PAST)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_SOUTHAMPTON_PAST)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LONDON_PAST)))
+    {
+        // Ports formerly shared Island Harbor; use their new individual layouts.
+        gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutId;
+        CpuFill16(0, gSaveBlock2Ptr->mapView, sizeof(gSaveBlock2Ptr->mapView));
+    }
     gMapHeader.mapLayout = GetMapLayout();
 }
 

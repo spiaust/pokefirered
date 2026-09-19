@@ -111,8 +111,10 @@ EuropeTour_Text_BagFull::
 	.string "for your EXP. SHARE.$"
 
 EuropeTour_Text_Complete::
-	.string "Your three-city tour is complete!\p"
-	.string "Give EXP. SHARE to a POKEMON.\n"
-	.string "It gains EXP. even without battling.\p"
-	.string "Keep exploring the countryside\n"
-	.string "and meeting new partners!$"
+	.string "Your first three-city survey is\n"
+	.string "complete! The regional studies\p"
+	.string "build the skills you need. Look\n"
+	.string "inside the landmarks too:\p"
+	.string "WESTMINSTER, NOTRE-DAME and the\n"
+	.string "REICHSTAG each have a case to\p"
+	.string "investigate.$"

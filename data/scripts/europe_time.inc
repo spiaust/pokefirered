@@ -108,12 +108,12 @@ EuropeTime_Sign::
 	end
 
 EuropeTime_Text_Depart::
-	.string "CELEBI offers to lead you through\n"
-	.string "time to CHANTILLY in 1940.\p"
-	.string "It will wait where you arrive.\n"
-	.string "Speak to it there to return here.\p"
-	.string "Your rail booking stays saved.\n"
-	.string "Travel to the past?$"
+	.string "CELEBI opens the route to\n"
+	.string "CHANTILLY in 1940. Meet the refuge\p"
+	.string "keeper and learn where help is\n"
+	.string "needed. CELEBI will wait to bring\p"
+	.string "you home. Your present-day journey\n"
+	.string "is safe. Travel to the past?$"
 EuropeTime_Text_ReturnVisit::
 	.string "CELEBI remembers the port visit\n"
 	.string "you recorded with ADA.\p"

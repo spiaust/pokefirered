@@ -7,7 +7,7 @@ EuropeLondonPast_Transition::
 EuropeLondonPast_Clerk::
 	lock
 	faceplayer
-	goto_if_ne VAR_EUROPE_SOUTH_ACCOUNT, 1, EuropeLondonPast_Locked
+	goto_if_ne VAR_EUROPE_LUGGAGE, 3, EuropeLondonPast_Locked
 	msgbox EuropeLondonPast_Text_Offer, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EuropeAmiens_Stay
 	msgbox EuropeLondonPast_Text_Journey
@@ -48,10 +48,10 @@ EuropeLondonPast_Sign::
 	msgbox EuropeLondonPast_Text_Sign, MSGBOX_SIGN
 	end
 EuropeLondonPast_Text_Locked::
-	.string "Before traveling farther, tell ADA\n"
-	.string "about SOUTHAMPTON reception.\p"
-	.string "Your green friend can take you back\n"
-	.string "to the present.$"
+	.string "We are waiting for the missing\n"
+	.string "luggage to be returned. Speak to\p"
+	.string "the reception worker and help the\n"
+	.string "group get ready before we leave.$"
 EuropeLondonPast_Text_Offer::
 	.string "Transport to LONDON is ready.\n"
 	.string "ROSE will welcome you at reception.\p"
@@ -63,17 +63,19 @@ EuropeLondonPast_Text_Journey::
 	.string "At LONDON, the group gathers\n"
 	.string "in a quiet reception courtyard.$"
 EuropeLondonPast_Text_Welcome::
-	.string "ROSE: Welcome to LONDON reception.\n"
-	.string "You came from SOUTHAMPTON?\p"
-	.string "Your arrival is recorded. Stay in\n"
-	.string "the courtyard while we get ready.\p"
-	.string "The guide can arrange your return.\n"
-	.string "Your green friend is waiting too.$"
+	.string "ROSE: Welcome. Your companions can\n"
+	.string "rest together here. From CHANTILLY\p"
+	.string "to SOUTHAMPTON, people kept this\n"
+	.string "route open through small acts of\p"
+	.string "care. You helped that chain hold.\n"
+	.string "Tell ADA what you learned when you\p"
+	.string "return.$"
 EuropeLondonPast_Text_Welcomed::
-	.string "ROSE: Take your time here.\n"
-	.string "Your group can wait together.\p"
-	.string "The guide returns to SOUTHAMPTON.\n"
-	.string "Your green friend knows another way.$"
+	.string "ROSE: This part of the journey is\n"
+	.string "complete. Rest, explore, or visit\p"
+	.string "the friends you helped. The guide\n"
+	.string "returns to SOUTHAMPTON. CELEBI\p"
+	.string "will take you home to ADA.$"
 EuropeLondonPast_Text_Return::
 	.string "Return to SOUTHAMPTON reception?\n"
 	.string "The worker there offers party care.$"
@@ -81,3 +83,35 @@ EuropeLondonPast_Text_Sign::
 	.string "LONDON RECEPTION COURTYARD\p"
 	.string "Please speak to ROSE on the left.\n"
 	.string "Wait here with your companions.$"
+
+EuropeLondonPast_RealismPalace::
+	msgbox EuropeLondonPast_RealismPalaceText, MSGBOX_SIGN
+	end
+
+EuropeLondonPast_RealismPalaceText::
+	.string "PALACE OF WESTMINSTER\n"
+	.string "The clock tower beside the THAMES.$"
+
+EuropeLondonPast_RealismSquare::
+	msgbox EuropeLondonPast_RealismSquareText, MSGBOX_SIGN
+	end
+
+EuropeLondonPast_RealismSquareText::
+	.string "PARLIAMENT SQUARE\n"
+	.string "WHITEHALL leads north from here.$"
+
+EuropeLondonPast_RealismWestminster::
+	msgbox EuropeLondonPast_RealismWestminsterText, MSGBOX_SIGN
+	end
+
+EuropeLondonPast_RealismWestminsterText::
+	.string "WESTMINSTER BRIDGE\n"
+	.string "Cross the THAMES by Parliament.$"
+
+EuropeLondonPast_RealismLambeth::
+	msgbox EuropeLondonPast_RealismLambethText, MSGBOX_SIGN
+	end
+
+EuropeLondonPast_RealismLambethText::
+	.string "LAMBETH BRIDGE\n"
+	.string "The southern river crossing.$"
