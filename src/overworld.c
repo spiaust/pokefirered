@@ -439,6 +439,58 @@ static void LoadSaveblockObjEventScripts(void)
     const struct ObjectEventTemplate * src = gMapHeader.events->objectEvents;
     struct ObjectEventTemplate * savObjTemplates = gSaveBlock1Ptr->objectEventTemplates;
 
+    // v0.21 refuge saves predate its fourth, stationary station-post guide.
+    // Restore that template so it can spawn without leaving/reentering the map.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_CHANTILLY_PAST)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_CHANTILLY_PAST)
+        && gMapHeader.events->objectEventCount >= 4)
+        savObjTemplates[3] = src[3];
+
+    // Older Rouen saves predate the route-book pickup.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_ROUEN_PAST)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_ROUEN_PAST)
+        && gMapHeader.events->objectEventCount >= 4)
+        savObjTemplates[3] = src[3];
+
+    // Restore the onward transport clerk for earlier Rouen saves.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_ROUEN_PAST)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_ROUEN_PAST)
+        && gMapHeader.events->objectEventCount >= 5)
+        savObjTemplates[4] = src[4];
+
+    // Restore the London transport clerk in older Southampton saves.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_SOUTHAMPTON_PAST)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_SOUTHAMPTON_PAST)
+        && gMapHeader.events->objectEventCount >= 6)
+        savObjTemplates[5] = src[5];
+
+    // Southampton luggage task objects must appear in earlier saves too.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_SOUTHAMPTON_PAST)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_SOUTHAMPTON_PAST)
+        && gMapHeader.events->objectEventCount >= 5)
+        for (i = 3; i < 5; i++)
+            savObjTemplates[i] = src[i];
+
+    // Restore the onward clerk for saves made before its introduction.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LE_HAVRE_PAST)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LE_HAVRE_PAST)
+        && gMapHeader.events->objectEventCount >= 5)
+        savObjTemplates[4] = src[4];
+
+    // Earlier Le Havre saves predate its dockworker.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LE_HAVRE_PAST)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LE_HAVRE_PAST)
+        && gMapHeader.events->objectEventCount >= 4)
+        savObjTemplates[3] = src[3];
+
+    // v0.29 Amiens saves predate the stationary reunion NPCs and Meowth.
+    // Refresh their templates before the return-to-field script spawns them.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_AMIENS_PAST)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_AMIENS_PAST)
+        && gMapHeader.events->objectEventCount >= 7)
+        for (i = 3; i < 7; i++)
+            savObjTemplates[i] = src[i];
+
     for (i = 0; i < OBJECT_EVENT_TEMPLATES_COUNT; i++)
     {
         savObjTemplates[i].script = src[i].script;
@@ -558,6 +610,15 @@ static void LoadCurrentMapData(void)
 static void LoadSaveblockMapHeader(void)
 {
     gMapHeader = *Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
+    // v0.34 Rouen saves used the shared Amiens courtyard. Migrate its layout
+    // and discard cached old tiles without changing the player's coordinates.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_ROUEN_PAST)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_ROUEN_PAST)
+        && gSaveBlock1Ptr->mapLayoutId != gMapHeader.mapLayoutId)
+    {
+        gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutId;
+        CpuFill16(0, gSaveBlock2Ptr->mapView, sizeof(gSaveBlock2Ptr->mapView));
+    }
     gMapHeader.mapLayout = GetMapLayout();
 }
 

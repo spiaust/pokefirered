@@ -23,6 +23,7 @@
 #include "constants/event_object_movement.h"
 #include "constants/event_objects.h"
 #include "constants/songs.h"
+#include "constants/vars.h"
 #include "constants/metatile_behaviors.h"
 #include "constants/moves.h"
 #include "constants/trainer_types.h"
@@ -1156,6 +1157,21 @@ u8 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
     return sPlayerAvatarGfxIds[state][gender];
 }
 
+u8 GetEuropeAvatarGender(void)
+{
+    u16 style = VarGet(VAR_EUROPE_AVATAR_STYLE);
+    return style == 1 ? MALE : style == 2 ? FEMALE : gSaveBlock2Ptr->playerGender;
+}
+
+u8 GetEuropeAvatarGraphicsId(u8 oldId)
+{
+    u8 state;
+    for (state = 0; state < ARRAY_COUNT(sPlayerAvatarGfxIds); state++)
+        if (oldId == sPlayerAvatarGfxIds[state][0] || oldId == sPlayerAvatarGfxIds[state][1])
+            return sPlayerAvatarGfxIds[state][GetEuropeAvatarGender()];
+    return oldId;
+}
+
 u8 GetRSAvatarGraphicsIdByGender(u8 gender)
 {
     return sHoennLinkPartnerGfxIds[gender];
@@ -1289,6 +1305,7 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     u8 objectEventId;
     struct ObjectEvent *objectEvent;
 
+    gender = GetEuropeAvatarGender();
     playerObjEventTemplate.localId = LOCALID_PLAYER;
     playerObjEventTemplate.graphicsId = GetPlayerAvatarGraphicsIdByStateIdAndGender(PLAYER_AVATAR_GFX_NORMAL, gender);
     playerObjEventTemplate.x = x - 7;

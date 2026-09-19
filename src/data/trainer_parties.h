@@ -10860,3 +10860,53 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallPaxton[] = {
         .species = SPECIES_MUK,
     },
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_EuropeOliver[] = {
+    {.iv = 0, .lvl = 5, .species = SPECIES_PIDGEY},
+    {.iv = 0, .lvl = 5, .species = SPECIES_MAREEP},
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_EuropeCamille[] = {
+    {.iv = 0, .lvl = 4, .species = SPECIES_CATERPIE},
+    {.iv = 0, .lvl = 5, .species = SPECIES_ODDISH},
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_EuropeFelix[] = {
+    {.iv = 0, .lvl = 5, .species = SPECIES_SENTRET},
+    {.iv = 0, .lvl = 5, .species = SPECIES_HOOTHOOT},
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeAlice[] = {
+    {.iv = 0, .lvl = 6, .species = SPECIES_PIDGEY, .moves = {MOVE_TACKLE}},
+    {.iv = 0, .lvl = 6, .species = SPECIES_MAREEP, .moves = {MOVE_TACKLE}},
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeLucie[] = {
+    {.iv = 0, .lvl = 6, .species = SPECIES_CATERPIE, .moves = {MOVE_TACKLE}},
+    {.iv = 0, .lvl = 6, .species = SPECIES_ODDISH, .moves = {MOVE_ABSORB}},
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeOtto[] = {
+    {.iv = 0, .lvl = 6, .species = SPECIES_SENTRET, .moves = {MOVE_SCRATCH}},
+    {.iv = 0, .lvl = 6, .species = SPECIES_HOOTHOOT, .moves = {MOVE_TACKLE}},
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeRivalOxford[] = {
+    {.iv = 0, .lvl = 7, .species = SPECIES_PIDGEY, .moves = {MOVE_TACKLE}},
+    {.iv = 0, .lvl = 8, .species = SPECIES_EEVEE, .moves = {MOVE_TACKLE, MOVE_QUICK_ATTACK}},
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeLeaderEllis[] = {
+    {.iv = 0, .lvl = 10, .species = SPECIES_GEODUDE, .moves = {MOVE_TACKLE, MOVE_ROCK_THROW}},
+    {.iv = 0, .lvl = 12, .species = SPECIES_ONIX, .moves = {MOVE_TACKLE, MOVE_ROCK_TOMB}},
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeLeaderMarine[] = {
+    {.iv = 0, .lvl = 12, .species = SPECIES_PSYDUCK, .moves = {MOVE_SCRATCH, MOVE_WATER_GUN}},
+    {.iv = 0, .lvl = 14, .species = SPECIES_HORSEA, .moves = {MOVE_BUBBLE, MOVE_WATER_PULSE}},
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeLeaderConrad[] = {
+    {.iv = 0, .lvl = 14, .species = SPECIES_VOLTORB, .moves = {MOVE_TACKLE, MOVE_SPARK}},
+    {.iv = 0, .lvl = 16, .species = SPECIES_PIKACHU, .moves = {MOVE_QUICK_ATTACK, MOVE_SHOCK_WAVE}},
+};

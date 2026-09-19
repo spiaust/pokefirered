@@ -159,6 +159,54 @@
       "y": 12,
       "respawn_map": "MAP_SIX_ISLAND_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_SIX_ISLAND_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_EUROPE_LONDON",
+      "map": "MAP_EUROPE_LONDON",
+      "x": 6,
+      "y": 10,
+      "respawn_map": "MAP_EUROPE_LONDON_CENTER",
+      "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_EUROPE_PARIS",
+      "map": "MAP_EUROPE_PARIS",
+      "x": 6,
+      "y": 10,
+      "respawn_map": "MAP_EUROPE_PARIS_CENTER",
+      "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_EUROPE_BERLIN",
+      "map": "MAP_EUROPE_BERLIN",
+      "x": 6,
+      "y": 10,
+      "respawn_map": "MAP_EUROPE_BERLIN_CENTER",
+      "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_EUROPE_OXFORD",
+      "map": "MAP_EUROPE_OXFORD",
+      "x": 6,
+      "y": 10,
+      "respawn_map": "MAP_EUROPE_OXFORD_CENTER",
+      "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_EUROPE_CHANTILLY",
+      "map": "MAP_EUROPE_CHANTILLY",
+      "x": 6,
+      "y": 10,
+      "respawn_map": "MAP_EUROPE_CHANTILLY_CENTER",
+      "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_EUROPE_ORANIENBURG",
+      "map": "MAP_EUROPE_ORANIENBURG",
+      "x": 6,
+      "y": 10,
+      "respawn_map": "MAP_EUROPE_ORANIENBURG_CENTER",
+      "respawn_npc": "1"
     }
   ]
 }

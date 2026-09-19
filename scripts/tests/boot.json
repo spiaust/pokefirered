@@ -1,0 +1,6 @@
+[
+  {"frames": 600},
+  {"press": "START", "wait": 180},
+  {"screenshot": "test-output/boot.png"},
+  {"save_state": "test-output/boot.state"}
+]

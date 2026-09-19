@@ -261,24 +261,44 @@
 #define VAR_0x40D0                 0x40D0
 #define VAR_0x40D1                 0x40D1
 #define VAR_0x40D2                 0x40D2
+#define VAR_EUROPE_MAP_CONTRAST VAR_0x40D2
 #define VAR_0x40D3                 0x40D3
+#define VAR_EUROPE_AVATAR_STYLE VAR_0x40D3
 #define VAR_0x40D4                 0x40D4
+#define VAR_EUROPE_MAP_DETAIL VAR_0x40D4
 #define VAR_0x40D5                 0x40D5
+#define VAR_EUROPE_LONDON_PAST VAR_0x40D5 // 0 none; 1 arrived; 2 welcomed
 #define VAR_0x40D6                 0x40D6
+#define VAR_EUROPE_SOUTH_ACCOUNT VAR_0x40D6 // 0 unrecorded; 1 recorded by Ada
 #define VAR_0x40D7                 0x40D7
+#define VAR_EUROPE_LUGGAGE VAR_0x40D7 // 0 none; 1 requested; 2 found; 3 returned
 #define VAR_0x40D8                 0x40D8
+#define VAR_EUROPE_SOUTHAMPTON VAR_0x40D8 // 0 none; 1 arrived; 2 welcomed
 #define VAR_0x40D9                 0x40D9
+#define VAR_EUROPE_PORT_ACCOUNT VAR_0x40D9 // 0: unrecorded; 1: Ada recorded port account
 #define VAR_0x40DA                 0x40DA
 #define VAR_0x40DB                 0x40DB
 #define VAR_0x40DC                 0x40DC
 #define VAR_0x40DD                 0x40DD
 #define VAR_0x40DE                 0x40DE
 #define VAR_0x40DF                 0x40DF
+#define VAR_EUROPE_DOCK_CHECK VAR_0x40DA // 0 none; 1 requested; 2 notice; 3 confirmed.
+#define VAR_EUROPE_LE_HAVRE_STORY VAR_0x40DB // 0 none; 1 arrived; 2 welcomed.
+#define VAR_EUROPE_ROUEN_BOOK VAR_0x40DC // 0 none; 1 requested; 2 found; 3 returned.
+#define VAR_EUROPE_ROUEN_STORY VAR_0x40DD // 0 none; 1 arrived; 2 welcomed.
+#define VAR_EUROPE_AMIENS_NEWS VAR_0x40DE // 0 none; 1 requested; 2 board; 3 checked; 4 delivered.
+#define VAR_EUROPE_AMIENS_ACCOUNT VAR_0x40DF // 0 unrecorded; 1 archived by Ada.
+#define VAR_EUROPE_REUNION_STORY VAR_0x40E0 // 0 none; 1 active; 2 Mira; 3 porter; 4 both; 5 verified; 6 reunited.
 #define VAR_0x40E0                 0x40E0
+#define VAR_EUROPE_AMIENS_STORY VAR_0x40E1 // 0 none; 1 arrived; 2 briefed; 3 notice; 4 confirmed.
 #define VAR_0x40E1                 0x40E1
+#define VAR_EUROPE_GARDEN_STORY VAR_0x40E2 // 0 none; 1 whistle; 2 Pidgey found; 3 reunited.
 #define VAR_0x40E2                 0x40E2
+#define VAR_EUROPE_RELIEF_STORY VAR_0x40E3 // 0 none; 1 requested; 2 parcel; 3 rest unlocked.
 #define VAR_0x40E3                 0x40E3
+#define VAR_EUROPE_MESSAGE_STORY VAR_0x40E4 // 0 none; 1 message; 2 reply; 3 account; 4 rewarded.
 #define VAR_0x40E4                 0x40E4
+#define VAR_EUROPE_EVAC_STORY VAR_0x40E5 // 0 not departed; 1 arrived; 2 checked in.
 #define VAR_0x40E5                 0x40E5
 #define VAR_DAILY_SLOTS            0x40E6
 #define VAR_DAILY_WILDS            0x40E7
@@ -286,25 +306,45 @@
 #define VAR_DAILY_PLANTED_BERRIES  0x40E9
 #define VAR_DAILY_PICKED_BERRIES   0x40EA
 #define VAR_DAILY_ROULETTE         0x40EB
+#define VAR_EUROPE_DEPARTURE_STORY VAR_0x40EC // 0 none; 1 accepted; 2 notice; 3 confirmed; 4 delivered.
 #define VAR_0x40EC                 0x40EC
+#define VAR_EUROPE_PAST_STORY VAR_0x40ED // 0 none; 1 arrived; 2 child; 3 blanket; 4 helped.
 #define VAR_0x40ED                 0x40ED
+#define VAR_EUROPE_CELEBI_STORY VAR_0x40EE // 0 none; 1 active; 2 sighting; 3 report rewarded.
 #define VAR_0x40EE                 0x40EE
+#define VAR_EUROPE_ORANIENBURG_TM VAR_0x40EF // One-time Shock Wave reward.
 #define VAR_0x40EF                 0x40EF
 #define VAR_0x40F0                 0x40F0
+#define VAR_EUROPE_HOME_COUNTRY    VAR_0x40F0 // 0 = unchosen; 1 England, 2 France, 3 Germany
 #define VAR_DAILY_BP               0x40F1
 #define VAR_0x40F2                 0x40F2
 #define VAR_0x40F3                 0x40F3
 #define VAR_0x40F4                 0x40F4
 #define VAR_0x40F5                 0x40F5
+#define VAR_EUROPE_STAMP_LONDON    VAR_0x40F2
+#define VAR_EUROPE_STAMP_PARIS     VAR_0x40F3
+#define VAR_EUROPE_STAMP_BERLIN    VAR_0x40F4
+#define VAR_EUROPE_TOUR_REWARDED   VAR_0x40F5
 #define VAR_0x40F6                 0x40F6
+#define VAR_EUROPE_STARTER_SPECIES VAR_0x40F6
 #define VAR_0x40F7                 0x40F7
+#define VAR_EUROPE_RAIL_DESTINATION VAR_0x40F7 // 0 none; 1..6 saved final rail stop.
+// Regional route rewards use existing reserved variables; save layout is unchanged.
+#define VAR_EUROPE_ENGLAND_CHALLENGE VAR_0x40F8
+#define VAR_EUROPE_FRANCE_CHALLENGE VAR_0x40F9
+#define VAR_EUROPE_GERMANY_CHALLENGE VAR_0x40FA
 #define VAR_0x40F8                 0x40F8
 #define VAR_0x40F9                 0x40F9
 #define VAR_0x40FA                 0x40FA
+#define VAR_EUROPE_ENGLAND_STORY VAR_0x40FB // 0 unstarted, 1 field study, 2 report rewarded.
 #define VAR_0x40FB                 0x40FB
+#define VAR_EUROPE_OXFORD_TM VAR_0x40FC // One-time leader TM reward.
 #define VAR_0x40FC                 0x40FC
+#define VAR_EUROPE_FRANCE_STORY VAR_0x40FD // 0 none; 1 active; 2 gardens; 3 forest; 4 both; 5 report; 6 rewarded.
 #define VAR_0x40FD                 0x40FD
+#define VAR_EUROPE_CHANTILLY_TM VAR_0x40FE // One-time Water Pulse reward.
 #define VAR_0x40FE                 0x40FE
+#define VAR_EUROPE_GERMANY_STORY VAR_0x40FF // 0 none; 1 parts; 2 report; 3 rewarded.
 #define VAR_0x40FF                 0x40FF
 
 #define VARS_END                   0x40FF

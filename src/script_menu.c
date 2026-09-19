@@ -502,7 +502,71 @@ static const struct MenuAction sMultichoiceList_Exit[] = {
     { gOtherText_Exit }
 };
 
+static const u8 sText_EuropeEngland[] = _("ENGLAND");
+static const u8 sText_EuropeFrance[] = _("FRANCE");
+static const u8 sText_EuropeGermany[] = _("GERMANY");
+
+static const struct MenuAction sMultichoiceList_EuropeCountry[] = {
+    { sText_EuropeEngland },
+    { sText_EuropeFrance },
+    { sText_EuropeGermany }
+};
+
+static const u8 sText_EuropeLondon[] = _("LONDON");
+static const u8 sText_EuropeParis[] = _("PARIS");
+static const u8 sText_EuropeBerlin[] = _("BERLIN");
+static const u8 sText_EuropeOxford[] = _("OXFORD");
+static const u8 sText_EuropeChantilly[] = _("CHANTILLY");
+static const u8 sText_EuropeOranienburg[] = _("ORANIENBURG");
+static const struct MenuAction sMultichoiceList_EuropeTrain[] = {
+    { sText_EuropeLondon },
+    { sText_EuropeParis },
+    { sText_EuropeBerlin },
+    { sText_EuropeOxford },
+    { sText_EuropeChantilly },
+    { sText_EuropeOranienburg },
+    { gOtherText_Exit }
+};
+
+static const u8 sText_StarterBulbasaur[] = _("BULBASAUR / GRASS");
+static const u8 sText_StarterCyndaquil[] = _("CYNDAQUIL / FIRE");
+static const u8 sText_StarterTotodile[] = _("TOTODILE / WATER");
+static const u8 sText_StarterChikorita[] = _("CHIKORITA / GRASS");
+static const u8 sText_StarterTorchic[] = _("TORCHIC / FIRE");
+static const u8 sText_StarterSquirtle[] = _("SQUIRTLE / WATER");
+static const u8 sText_StarterTreecko[] = _("TREECKO / GRASS");
+static const u8 sText_StarterCharmander[] = _("CHARMANDER / FIRE");
+static const u8 sText_StarterMudkip[] = _("MUDKIP / WATER");
+static const struct MenuAction sMultichoiceList_StarterEngland[] = {
+    {sText_StarterBulbasaur}, {sText_StarterCyndaquil}, {sText_StarterTotodile}
+};
+static const struct MenuAction sMultichoiceList_StarterFrance[] = {
+    {sText_StarterChikorita}, {sText_StarterTorchic}, {sText_StarterSquirtle}
+};
+static const struct MenuAction sMultichoiceList_StarterGermany[] = {
+    {sText_StarterTreecko}, {sText_StarterCharmander}, {sText_StarterMudkip}
+};
+
+static const u8 sText_EuropeRefuge[] = _("REFUGE");
+static const u8 sText_EuropeLeHavre[] = _("LE HAVRE");
+static const struct MenuAction sMultichoiceList_EuropePast[] = {
+    { sText_EuropeRefuge }, { sText_EuropeLeHavre }, { gOtherText_Exit }
+};
+
+static const u8 sText_EuropeSouthampton[] = _("SOUTHAMPTON");
+static const struct MenuAction sMultichoiceList_EuropePastSouth[] = {
+    { sText_EuropeRefuge }, { sText_EuropeLeHavre },
+    { sText_EuropeSouthampton }, { gOtherText_Exit }
+};
+
 static const struct MultichoiceListStruct sMultichoiceLists[] = {
+    [MULTICHOICE_EUROPE_PAST_SOUTH] = MULTICHOICE(sMultichoiceList_EuropePastSouth),
+    [MULTICHOICE_EUROPE_PAST] = MULTICHOICE(sMultichoiceList_EuropePast),
+    [MULTICHOICE_EUROPE_STARTER_ENGLAND] = MULTICHOICE(sMultichoiceList_StarterEngland),
+    [MULTICHOICE_EUROPE_STARTER_FRANCE] = MULTICHOICE(sMultichoiceList_StarterFrance),
+    [MULTICHOICE_EUROPE_STARTER_GERMANY] = MULTICHOICE(sMultichoiceList_StarterGermany),
+    [MULTICHOICE_EUROPE_COUNTRY]                             = MULTICHOICE(sMultichoiceList_EuropeCountry),
+    [MULTICHOICE_EUROPE_TRAIN]                               = MULTICHOICE(sMultichoiceList_EuropeTrain),
     [MULTICHOICE_YES_NO]                                     = MULTICHOICE(sMultichoiceList_YesNo),
     [MULTICHOICE_EEVEELUTIONS]                               = MULTICHOICE(sMultichoiceList_Eeveelutions),
     [MULTICHOICE_TRAINER_CARD_ICON_TINT]                     = MULTICHOICE(sMultichoiceList_TrainerCardIconTint),

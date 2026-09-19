@@ -339,7 +339,7 @@ static const u32 *const sUnused_Tilemaps[] = {
     sUnused_Tilemap6,
 };
 
-void CB2_InitTitleScreen(void)
+void CB2_InitFireRedTitleScreen(void)
 {
     switch (gMain.state)
     {

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "europe_map.h"
 #include "gflib.h"
 #include "battle.h"
 #include "berry_pouch.h"
@@ -695,7 +696,7 @@ void FieldUseFunc_FameChecker(u8 taskId)
 
 static void UseFameCheckerFromBag(void)
 {
-    UseFameChecker(CB2_BagMenuFromStartMenu);
+    OpenEuropeWorldOptions(CB2_BagMenuFromStartMenu);
 }
 
 static void Task_UseFameCheckerFromField(u8 taskId)
@@ -704,7 +705,7 @@ static void Task_UseFameCheckerFromField(u8 taskId)
     {
         CleanupOverworldWindowsAndTilemaps();
         SetFieldCallback2ForItemUse();
-        UseFameChecker(CB2_ReturnToField);
+        OpenEuropeWorldOptions(CB2_ReturnToField);
         DestroyTask(taskId);
     }
 }

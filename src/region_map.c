@@ -6,6 +6,7 @@
 #include "overworld.h"
 #include "event_data.h"
 #include "region_map.h"
+#include "europe_map.h"
 #include "party_menu.h"
 #include "field_effect.h"
 #include "new_menu_helpers.h"
@@ -986,6 +987,12 @@ static void InitRegionMap(u8 type)
 
 void InitRegionMapWithExitCB(u8 type, MainCallback cb)
 {
+    if (type != REGIONMAP_TYPE_FLY
+        && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON))
+    {
+        OpenEuropeMap(cb);
+        return;
+    }
     sRegionMap = AllocZeroed(sizeof(struct RegionMap));
     if (sRegionMap == NULL)
     {
@@ -1032,7 +1039,9 @@ static void InitRegionMapType(void)
     if (gMapHeader.regionMapSectionId >= SEVII_MAPSEC_START)
     {
         // Mapsec is in Sevii Islands, determine which map to use
-        while (region == REGIONMAP_KANTO)
+        // Custom regions may have no entry in the original Sevii map lists.
+        // Keep the placeholder Kanto view instead of reading past the lists.
+        while (region == REGIONMAP_KANTO && j < ARRAY_COUNT(sSeviiMapsecs))
         {
             for (i = 0; sSeviiMapsecs[j][i] != MAPSEC_NONE; i++)
             {

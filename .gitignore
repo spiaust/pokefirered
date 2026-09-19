@@ -65,5 +65,10 @@ prefabs.json
 *.sym
 build-cmake-*/
 .cache/
+.local-tools/
+test-output/
+artifacts/
+__pycache__/
+*.pyc
 CMakeLists.txt
 compile_commands.json

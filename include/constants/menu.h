@@ -69,6 +69,15 @@
 #define MULTICHOICE_62                                         62
 #define MULTICHOICE_JOIN_OR_LEAD                               63
 #define MULTICHOICE_TRAINER_TOWER_MODE                         64
+#define MULTICHOICE_EUROPE_COUNTRY                             65
+#define MULTICHOICE_EUROPE_TRAIN                               66
+#define MULTICHOICE_EUROPE_STARTER_ENGLAND                     67
+#define MULTICHOICE_EUROPE_STARTER_FRANCE                      68
+#define MULTICHOICE_EUROPE_STARTER_GERMANY                     69
+
+#define MULTICHOICE_EUROPE_PAST                               70
+
+#define MULTICHOICE_EUROPE_PAST_SOUTH                         71
 
 #define MULTICHOICE_NONE                                      255
 

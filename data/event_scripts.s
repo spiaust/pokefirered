@@ -1360,3 +1360,117 @@ Text_TestMsg::
 	.include "data/text/save.inc"
 	.include "data/text/new_game_intro.inc"
 	.include "data/text/pokedude.inc"
+
+	.include "data/maps/EuropeLondon/scripts.inc"
+
+	.include "data/maps/EuropeLondonCountryside/scripts.inc"
+
+	.include "data/maps/EuropeLondonStation/scripts.inc"
+
+	.include "data/maps/EuropeLondonCenter/scripts.inc"
+
+	.include "data/maps/EuropeParis/scripts.inc"
+
+	.include "data/maps/EuropeParisCountryside/scripts.inc"
+
+	.include "data/maps/EuropeParisStation/scripts.inc"
+
+	.include "data/maps/EuropeParisCenter/scripts.inc"
+
+	.include "data/maps/EuropeBerlin/scripts.inc"
+
+	.include "data/maps/EuropeBerlinCountryside/scripts.inc"
+
+	.include "data/maps/EuropeBerlinStation/scripts.inc"
+
+	.include "data/maps/EuropeBerlinCenter/scripts.inc"
+	.include "data/scripts/europe_train.inc"
+	.include "data/scripts/europe_tour.inc"
+	.include "data/scripts/europe_trails.inc"
+	.include "data/scripts/europe_supplies.inc"
+	.include "data/scripts/europe_navigation.inc"
+
+	.include "data/maps/EuropeOxford/scripts.inc"
+
+	.include "data/maps/EuropeOxfordTrail/scripts.inc"
+
+	.include "data/maps/EuropeOxfordStation/scripts.inc"
+
+	.include "data/maps/EuropeOxfordCenter/scripts.inc"
+
+	.include "data/maps/EuropeChantilly/scripts.inc"
+
+	.include "data/maps/EuropeChantillyTrail/scripts.inc"
+
+	.include "data/maps/EuropeChantillyStation/scripts.inc"
+
+	.include "data/maps/EuropeChantillyCenter/scripts.inc"
+
+	.include "data/maps/EuropeOranienburg/scripts.inc"
+
+	.include "data/maps/EuropeOranienburgTrail/scripts.inc"
+
+	.include "data/maps/EuropeOranienburgStation/scripts.inc"
+
+	.include "data/maps/EuropeOranienburgCenter/scripts.inc"
+
+	.include "data/scripts/europe_challenges.inc"
+
+	.include "data/scripts/europe_story.inc"
+
+	.include "data/maps/EuropeOxfordGym/scripts.inc"
+
+	.include "data/scripts/europe_france_story.inc"
+
+	.include "data/maps/EuropeChantillyGym/scripts.inc"
+
+	.include "data/scripts/europe_germany_story.inc"
+
+	.include "data/maps/EuropeOranienburgGym/scripts.inc"
+
+	.include "data/scripts/europe_ferry.inc"
+
+	.include "data/scripts/europe_ride.inc"
+
+	.include "data/scripts/europe_coast.inc"
+	.include "data/maps/EuropeDoverPort/scripts.inc"
+	.include "data/maps/EuropeCalaisPort/scripts.inc"
+
+	.include "data/scripts/europe_celebi.inc"
+
+	.include "data/maps/EuropeChantillyPast/scripts.inc"
+	.include "data/scripts/europe_time.inc"
+
+	.include "data/maps/EuropeChantillyPastPost/scripts.inc"
+	.include "data/scripts/europe_departure.inc"
+
+	.include "data/maps/EuropeBeauvaisPast/scripts.inc"
+	.include "data/scripts/europe_evac.inc"
+
+	.include "data/scripts/europe_message.inc"
+	.include "data/scripts/europe_relief.inc"
+	.include "data/maps/EuropeBeauvaisGarden/scripts.inc"
+	.include "data/maps/EuropeAmiensPast/scripts.inc"
+	.include "data/scripts/europe_reunion.inc"
+
+	.include "data/scripts/europe_amiens_account.inc"
+
+	.include "data/scripts/europe_amiens_news.inc"
+
+	.include "data/maps/EuropeRouenPast/scripts.inc"
+
+	.include "data/scripts/europe_rouen_book.inc"
+
+	.include "data/maps/EuropeLeHavrePast/scripts.inc"
+
+	.include "data/scripts/europe_dock_check.inc"
+
+	.include "data/scripts/europe_port_account.inc"
+
+	.include "data/maps/EuropeSouthamptonPast/scripts.inc"
+
+	.include "data/scripts/europe_luggage.inc"
+
+	.include "data/scripts/europe_south_account.inc"
+
+	.include "data/maps/EuropeLondonPast/scripts.inc"

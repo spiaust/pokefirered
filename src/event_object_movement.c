@@ -1887,6 +1887,8 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
 
     objectEvent = &gObjectEvents[objectEventId];
     objectEvent++;objectEvent--; // fakematch
+    if (objectEvent->isPlayer)
+        objectEvent->graphicsId = GetEuropeAvatarGraphicsId(objectEvent->graphicsId);
     subspriteTables = NULL;
     graphicsInfo = GetObjectEventGraphicsInfo(objectEvent->graphicsId);
     spriteFrameImage.size = graphicsInfo->size;

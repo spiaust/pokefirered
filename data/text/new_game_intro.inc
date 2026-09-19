@@ -187,25 +187,25 @@ gPikachuIntro_Text_Page3::
     .string "adventure begin!$"
 
 gOakSpeech_Text_WelcomeToTheWorld::
-    .string "Hello, there!\n"
+    .string "Hello, traveler!\n"
     .string "Glad to meet you!\p"
-    .string "Welcome to the world of POKéMON!\p"
-    .string "My name is OAK.\p"
-    .string "People affectionately refer to me\n"
-    .string "as the POKéMON PROFESSOR.\p$"
+    .string "Welcome to the EUROPEAN TOUR!\p"
+    .string "I'm PROFESSOR OAK.\p"
+    .string "I study POKéMON and the places\n"
+    .string "they call home across Europe.\p$"
 
 gOakSpeech_Text_ThisWorld::
-    .string "This world…$"
+    .string "From city parks to country paths…$"
 
 gOakSpeech_Text_IsInhabitedFarAndWide::
-    .string "…is inhabited far and wide by\n"
-    .string "creatures called POKéMON.\p$"
+    .string "…POKéMON live all around us!\n"
+    .string "Each country has its own wildlife.\p$"
 
 gOakSpeech_Text_IStudyPokemon::
-    .string "For some people, POKéMON are pets.\n"
-    .string "Others use them for battling.\p"
-    .string "As for myself…\p"
-    .string "I study POKéMON as a profession.\p$"
+    .string "Explore on foot or by BICYCLE.\n"
+    .string "Ride trains between our cities.\p"
+    .string "Make friends along the way!\p"
+    .string "Your first partner is waiting.\p$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
     .string "But first, tell me a little about\n"
@@ -220,13 +220,13 @@ gOakSpeech_Text_SoYourNameIsPlayer::
     .string "So your name is {PLAYER}.$"
 
 gOakSpeech_Text_WhatWasHisName::
-    .string "This is my grandson.\p"
-    .string "He's been your rival since you both\n"
-    .string "were babies.\p"
-    .string "…Erm, what was his name now?$"
+    .string "This is another young traveler.\p"
+    .string "You share a love of POKéMON\n"
+    .string "and a taste for adventure.\p"
+    .string "What is your friend's name?$"
 
 gOakSpeech_Text_YourRivalsNameWhatWasIt::
-    .string "Your rival's name, what was it now?$"
+    .string "What is your friend's name?$"
 
 gOakSpeech_Text_ConfirmRivalName::
     .string "…Er, was it {RIVAL}?$"
@@ -237,7 +237,7 @@ gOakSpeech_Text_RememberRivalsName::
 
 gOakSpeech_Text_LetsGo::
     .string "{PLAYER}!\p"
-    .string "Your very own POKéMON legend is\n"
-    .string "about to unfold!\p"
-    .string "A world of dreams and adventures\n"
-    .string "with POKéMON awaits! Let's go!$"
+    .string "Choose your home country, then\n"
+    .string "choose a regional first partner!\p"
+    .string "Meet each city's guide and collect\n"
+    .string "tour stamps. Europe awaits!$"

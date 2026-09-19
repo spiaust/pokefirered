@@ -1,0 +1,6 @@
+EuropeChantillyPastPost_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, EuropeChantillyPastPost_OnTransition
+	.byte 0
+EuropeChantillyPastPost_OnTransition::
+	setrespawn HEAL_LOCATION_EUROPE_CHANTILLY
+	end

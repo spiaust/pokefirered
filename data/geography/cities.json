@@ -1,0 +1,13 @@
+{
+  "description": "Approximate city-centre WGS84 coordinates. Display projection preserves relative positions; labels use a separate legend.",
+  "cities": [
+    {"name":"London", "latitude":51.5074, "longitude":-0.1278},
+    {"name":"Paris", "latitude":48.8566, "longitude":2.3522},
+    {"name":"Berlin", "latitude":52.5200, "longitude":13.4050},
+    {"name":"Oxford", "latitude":51.7520, "longitude":-1.2578},
+    {"name":"Chantilly", "latitude":49.1932, "longitude":2.4654},
+    {"name":"Oranienburg", "latitude":52.7536, "longitude":13.2360},
+    {"name":"Dover", "latitude":51.1279, "longitude":1.3134},
+    {"name":"Calais", "latitude":50.9513, "longitude":1.8587}
+  ]
+}
