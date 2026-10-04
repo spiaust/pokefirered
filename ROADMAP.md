@@ -3,6 +3,87 @@
 The project grows in playable releases. Build and test each gameplay change
 before adding the next; preserve the previous ROM in `artifacts/releases`.
 
+## v0.70: London Eye visitor gallery
+
+A window-lined visitor gallery now opens from the wheel's southern base.
+An attendant and garden/bridge displays connect the gallery to the South
+Bank walking routes. Both front exit tiles return to the same approach.
+The outdoor London map and prior indoor map IDs are retained.
+Next: additional landmark areas and broader street detail, followed by
+remaining World Options and character customization.
+
+## v0.69: Eiffel visitor room
+
+A compact fictional visitor room now opens from the Eiffel Tower's south
+base. A guide and garden/river exhibits connect observation to shared care.
+Both front exit tiles return to the same landmark approach. Existing Paris
+terrain and prior map IDs remain unchanged. Next: more landmark rooms and
+broader street detail, then remaining World Options/customization work.
+
+## v0.68: Berlin courtyard roof variety
+
+The sitting room keeps its terracotta roof; the reading room has a green
+roof and the garden workroom a slate roof. These native-tile variants
+make the three visitor doors easier to recognize. The change preserves
+all collision, elevation, behavior, door positions and indoor map IDs.
+Next: broader street detail and additional landmark interiors.
+
+## v0.67: Berlin garden workroom
+
+The eastern courtyard building now contains a gardener, shared tool notes
+and a planting plan. Two side benches leave a clear central passage.
+All three courtyard doors now admit visitors: sitting room, reading room
+and garden workroom. Earlier indoor map IDs are retained.
+Next: facade variety, additional street detail and landmark interiors.
+
+## v0.66: Berlin neighborhood reading room
+
+The middle courtyard building now opens into a reading room. A librarian,
+garden log and neighborhood memories extend the theme of shared care.
+A compact reading table gives this room a different layout from the home.
+The eastern home remains private scenery. Previous map IDs are retained.
+Next: facade variety, further neighborhood detail and landmark rooms.
+
+## v0.65: first enterable Berlin courtyard home
+
+The western courtyard home now opens into a furnished sitting room with
+an inviting host and a garden notebook. The entrance offers Yes/No;
+both floor tiles of the front exit return to the courtyard. Existing
+map IDs and outdoor terrain are retained. Other homes remain scenery.
+Next: more facade variety, neighborhood rooms and landmark interiors.
+
+## v0.64: Berlin courtyard residents
+
+Two residents now bring the courtyard to life: a gardener tending flowers
+with ODDISH and a neighbor explaining the public lanes and nearby landmarks.
+Both conversations are repeatable and give no rewards or story flags.
+Next: facade variety, enterable neighborhood buildings and landmark rooms.
+
+## v0.63: Berlin street block delivered
+
+A compact residential court now extends east of the Brandenburg Gate's
+boulevard approach. Three building fronts, side lanes, flower beds and
+a southern loop begin the neighborhood-building pass. Two signs give
+local directions. New buildings lie outside the old map footprint.
+
+Existing landmark routes and the Reichstag case remain available. The
+supporting homes use native art and are fictional private residences;
+more authentic facade variety and enterable neighborhood buildings remain
+next steps, alongside additional landmark rooms and World Options work.
+See data/geography/BERLIN-NEIGHBORHOOD.md for the layout and save limits.
+
+## v0.62: London waterfront and bridge detail delivered
+
+Modern Westminster Bridge now has green rail details and the southern
+Lambeth crossing has red rails. A connected garden loop joins the South
+Bank paths beside the London Eye. Existing signs explain the crossings.
+All v0.61 collision, elevation and land/water cells remain unchanged.
+The interior generator now retains exterior event ordering on regeneration.
+
+Next: street/building infill, additional landmark rooms, and remaining
+World Options/customization. Historical London retains its separate map.
+See data/geography/LONDON-WATERFRONT.md for design and references.
+
 ## v0.61: Paris garden and promenade detail delivered
 
 Added connected paved loops around the Champ de Mars flower beds, two

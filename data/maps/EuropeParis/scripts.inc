@@ -59,9 +59,9 @@ EuropeParis_RealismEiffel::
 
 EuropeParis_RealismEiffelText::
 	.string "EIFFEL TOWER / CHAMP DE MARS\n"
-	.string "The SEINE lies to the north.\p"
-	.string "Garden paths circle the flower beds.\n"
-	.string "The riverside walk continues east.$"
+	.string "Visitor room: face the south base.\p"
+	.string "Press A to ask about visiting.\n"
+	.string "The SEINE lies to the north.$"
 
 EuropeParis_RealismNotreDame::
 	msgbox EuropeParis_RealismNotreDameText, MSGBOX_SIGN

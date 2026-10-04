@@ -4450,7 +4450,7 @@
     {
       "id": "LAYOUT_EUROPE_BERLIN",
       "name": "EuropeBerlin_Layout",
-      "width": 40,
+      "width": 64,
       "height": 44,
       "border_width": 2,
       "border_height": 2,
@@ -4698,6 +4698,66 @@
       "secondary_tileset": "gTileset_PokemonTower",
       "border_filepath": "data/layouts/EuropeReichstag/border.bin",
       "blockdata_filepath": "data/layouts/EuropeReichstag/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_BERLIN_HOME",
+      "name": "EuropeBerlinHome_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeBerlinHome/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeBerlinHome/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_BERLIN_LIBRARY",
+      "name": "EuropeBerlinLibrary_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeBerlinLibrary/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeBerlinLibrary/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_BERLIN_GARDEN_ROOM",
+      "name": "EuropeBerlinGardenRoom_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeBerlinGardenRoom/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeBerlinGardenRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_EIFFEL_VISITOR",
+      "name": "EuropeEiffelVisitor_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeEiffelVisitor/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeEiffelVisitor/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_LONDON_EYE_GALLERY",
+      "name": "EuropeLondonEyeGallery_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeLondonEyeGallery/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeLondonEyeGallery/map.bin"
     }
   ]
 }

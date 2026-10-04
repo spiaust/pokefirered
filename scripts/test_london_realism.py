@@ -1,5 +1,5 @@
 """Walk the London district via real input, including old saves and cold saves."""
-import json,struct
+import json,struct,re
 from collections import deque
 from emulator import Emulator,ROOT
 from test_celebi import load_checkpoint
@@ -34,6 +34,22 @@ def save(e,name):
  for _ in range(5):e.press('A',150)
  e.battery(ROOT/f'test-output/{name}.sav')
 
+def assert_walk_preserved(before,after):
+ # Walking can award friendship after 128 steps. Verify that this is the
+ # only permitted party change, rather than ignoring the party snapshot.
+ assert before[1:]==after[1:]
+ count,old=before[0];new_count,new=after[0];assert count==new_count
+ slots={int(n):int(slot) for n,slot in re.findall(r'SUBSTRUCT_CASE\(\s*(\d+),\s*(\d+),',(ROOT/'src/pokemon.c').read_text())}
+ for i in range(count):
+  a=bytearray(old[i*100:(i+1)*100]);b=bytearray(new[i*100:(i+1)*100])
+  personality,trainer=struct.unpack_from('<II',a)
+  offset=32+slots[personality%24]*12+9;key=((personality^trainer)>>8)&255
+  first,last=a[offset]^key,b[offset]^key
+  assert 0<=last-first<=5,('unexpected friendship change',first,last)
+  if last!=first:print(f'Walking friendship: {first} -> {last}',flush=True)
+  for j in (28,29,offset):a[j]=b[j]=0
+  assert a==b,'walking changed other party data'
+
 e=Emulator(ROOT/'pokefirered.gba')
 try:
  load_checkpoint(e,'world-options-custom',True);assert_map(e);before=preserved(e)
@@ -46,7 +62,7 @@ try:
   e.screenshot(ROOT/f'test-output/london-bridge-{label}.png')
  for p in [(27,31),(33,31),(33,36),(29,36),(27,37)]:go(e,p)
  e.screenshot(ROOT/'test-output/london-garden-loop.png')
- assert preserved(e)==before
+ assert_walk_preserved(before,preserved(e))
  print('PASS: v0.50 battery continues; walking loop reaches Parliament, both banks, bridges and Eye without changing progress',flush=True)
  for point,d in [((14,27),'UP'),((19,30),'LEFT'),((25,27),'RIGHT'),((28,36),'UP')]:
   go(e,point);e.press(d);e.press('A',180);e.finish_dialogue();assert not e.read('sLockFieldControls',1)

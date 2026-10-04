@@ -662,6 +662,11 @@
     "EuropeLondonPast",
     "EuropeNotreDame",
     "EuropeWestminster",
-    "EuropeReichstag"
+    "EuropeReichstag",
+    "EuropeBerlinHome",
+    "EuropeBerlinLibrary",
+    "EuropeBerlinGardenRoom",
+    "EuropeEiffelVisitor",
+    "EuropeLondonEyeGallery"
   ]
 }

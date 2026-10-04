@@ -439,6 +439,13 @@ static void LoadSaveblockObjEventScripts(void)
     const struct ObjectEventTemplate * src = gMapHeader.events->objectEvents;
     struct ObjectEventTemplate * savObjTemplates = gSaveBlock1Ptr->objectEventTemplates;
 
+    // v0.64 Berlin saves need the two new stationary courtyard residents.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_BERLIN)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_BERLIN)
+        && gMapHeader.events->objectEventCount >= 4)
+        for (i = 2; i < 4; i++)
+            savObjTemplates[i] = src[i];
+
     // v0.21 refuge saves predate its fourth, stationary station-post guide.
     // Restore that template so it can spawn without leaving/reentering the map.
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_CHANTILLY_PAST)

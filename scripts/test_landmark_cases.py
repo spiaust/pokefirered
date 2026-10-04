@@ -12,7 +12,7 @@ DATA=[('NotreDame','Paris','france',4,38,(28,35),0x40c0,1),('Westminster','Londo
 layouts={l.get('id'):l for l in json.loads((ROOT/'data/layouts/layouts.json').read_text())['layouts']}
 def go(e,target):
  group,index,x,y=e.location();groups=json.loads((ROOT/'data/maps/map_groups.json').read_text());name=groups['gMapGroup_Europe'][index];m=json.loads((ROOT/f'data/maps/{name}/map.json').read_text());l=layouts[m['layout']];w,h=l['width'],l['height'];t=struct.unpack('<%dH'%(w*h),(ROOT/l['blockdata_filepath']).read_bytes());blocked={(v['x'],v['y']) for v in m['object_events']+m['warp_events']+m['coord_events']}
- primary='building' if l['primary_tileset']=='gTileset_Building' else 'general';secondary='pokemon_tower' if primary=='building' else 'europe_'+name[6:].lower();attrs=(ROOT/f'data/tilesets/primary/{primary}/metatile_attributes.bin').read_bytes()+(ROOT/f'data/tilesets/secondary/{secondary}/metatile_attributes.bin').read_bytes()
+ primary='building' if l['primary_tileset']=='gTileset_Building' else 'general';secondary=('generic_building_1' if l['secondary_tileset']=='gTileset_GenericBuilding1' else 'pokemon_tower') if primary=='building' else 'europe_'+name[6:].lower();attrs=(ROOT/f'data/tilesets/primary/{primary}/metatile_attributes.bin').read_bytes()+(ROOT/f'data/tilesets/secondary/{secondary}/metatile_attributes.bin').read_bytes()
  def valid(p):
   xx,yy=p
   if not(0<=xx<w and 0<=yy<h) or p in blocked:return False

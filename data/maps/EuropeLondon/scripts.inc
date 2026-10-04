@@ -81,8 +81,9 @@ EuropeLondon_RealismEye::
 
 EuropeLondon_RealismTextEye::
 	.string "LONDON EYE\n"
-	.string "The wheel overlooks the THAMES.\p"
-	.string "PARLIAMENT stands across the river.$"
+	.string "Visitor gallery: face the south base.\p"
+	.string "Press A to ask about visiting.\n"
+	.string "The THAMES flows to the west.$"
 
 EuropeLondon_RealismGardens::
 	msgbox EuropeLondon_RealismTextGardens, MSGBOX_SIGN

@@ -27,5 +27,12 @@ for tag,region,city,dx,dy,music in DATA:
  m=dict(id=mid,name=name,layout=lid,music=music,region_map_section='MAPSEC_EUROPE_'+region,requires_flash=False,weather='WEATHER_NONE',map_type='MAP_TYPE_INDOOR',allow_cycling=False,allow_escaping=False,allow_running=False,show_map_name=False,floor_number=0,battle_scene='MAP_BATTLE_SCENE_INDOOR_1',connections=None,object_events=[obj('OBJ_EVENT_GFX_GENTLEMAN',8,14,'EuropeCase_'+tag+'_Curator'),obj('OBJ_EVENT_GFX_POKEDEX',4,5,'EuropeCase_'+tag+'_ClueA'),obj('OBJ_EVENT_GFX_POKEDEX',15,7,'EuropeCase_'+tag+'_ClueB'),obj('OBJ_EVENT_GFX_OLD_MAN_1' if tag=='NotreDame' else 'OBJ_EVENT_GFX_WORKER_M',10,4,'EuropeCase_'+tag+'_Resolve'),obj('OBJ_EVENT_GFX_SIGN',12,15,'EuropeCase_Ledger')],warp_events=[],coord_events=[dict(type='trigger',x=10,y=16,elevation=3,var='VAR_TEMP_0',var_value='0',script='EuropeCase_'+tag+'_Exit')],bg_events=[dict(type='sign',x=10,y=16,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='EuropeCase_'+tag+'_Exit')])
  dest=R/f'data/maps/{name}';dest.mkdir(exist_ok=True);(dest/'map.json').write_text(json.dumps(m,indent=2)+'\n');(dest/'scripts.inc').write_text(name+'_MapScripts::\n\t.byte 0\n')
  if name not in groups['gMapGroup_Europe']:groups['gMapGroup_Europe'].append(name)
- p=R/f'data/maps/Europe{city}/map.json';m=json.loads(p.read_text());m['bg_events']=[v for v in m['bg_events'] if v['script']!='EuropeCase_'+tag+'_Enter'];m['bg_events'].append(dict(type='sign',x=dx,y=dy,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='EuropeCase_'+tag+'_Enter'));p.write_text(json.dumps(m,indent=2)+'\n')
+ p=R/f'data/maps/Europe{city}/map.json';m=json.loads(p.read_text())
+ entrance=dict(type='sign',x=dx,y=dy,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='EuropeCase_'+tag+'_Enter')
+ # Update in place so running the interior generator does not reorder
+ # exterior signs that the town generator already placed.
+ found=next((i for i,v in enumerate(m['bg_events']) if v['script']==entrance['script']),None)
+ if found is None:m['bg_events'].append(entrance)
+ else:m['bg_events'][found]=entrance
+ p.write_text(json.dumps(m,indent=2)+'\n')
 (R/'data/maps/map_groups.json').write_text(json.dumps(groups,indent=2)+'\n');(R/'data/layouts/layouts.json').write_text(json.dumps(layouts,indent=2)+'\n')

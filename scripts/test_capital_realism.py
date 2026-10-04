@@ -38,6 +38,18 @@ def run(city):
    e.screenshot(ROOT/'test-output/paris-promenade-east.png')
    go(e,(9,40));e.screenshot(ROOT/'test-output/paris-garden-loop.png')
   if city=='Berlin':
+   for p in [(39,38),(48,38),(60,38),(60,40),(48,40),(48,33),(43,32),(51,32),(58,32),(60,33)]:
+    go(e,p)
+    if p in [(43,32),(51,32),(58,32)]:e.screenshot(ROOT/f'test-output/berlin-facade-{p[0]}.png')
+   e.screenshot(ROOT/'test-output/berlin-residential-court.png')
+   for x,y,label in [(45,37,'gardener'),(53,37,'neighbor')]:
+    go(e,(x,y));e.press('UP');e.press('A',180)
+    assert e.read('sLockFieldControls',1)
+    e.screenshot(ROOT/f'test-output/berlin-court-{label}.png')
+    e.finish_dialogue();assert not e.read('sLockFieldControls',1)
+   go(e,(43,32));e.walk('UP',1);assert e.location()==(43,index,43,32)
+   for p in [(40,37),(56,35)]:
+    go(e,p);e.press('UP');e.press('A',180);e.finish_dialogue();assert not e.read('sLockFieldControls',1)
    for p in [(4,32),(12,32),(12,36),(4,36),(4,32),(16,32)]:go(e,p)
    e.screenshot(ROOT/'test-output/berlin-garden-paths.png')
    go(e,(21,37));e.walk('UP',4);assert e.location()==(43,index,21,33)
@@ -45,7 +57,7 @@ def run(city):
    go(e,(x,y));e.press(d);e.press('A',180);e.screenshot(ROOT/f'test-output/{city.lower()}-realism-sign-{x}-{y}.png');e.finish_dialogue();assert not e.read('sLockFieldControls',1)
   assert preserved(e)[1:]==before
   print(f'PASS: {city} old battery terrain, landmark approaches, river crossings, signs and unchanged quest/inventory',flush=True)
-  x,y,_=points[1];go(e,(x,y));before=preserved(e)
+  x,y=(48,33) if city=='Berlin' else points[1][:2];go(e,(x,y));before=preserved(e)
   start_action(e,4)
   for _ in range(5):e.press('A',150)
   e.battery(ROOT/f'test-output/{city.lower()}-realism-save.sav')

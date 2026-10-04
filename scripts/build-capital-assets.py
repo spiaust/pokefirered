@@ -41,6 +41,9 @@ def build(city,specs,source="capitals-source.png",mask_palette=False,base_name="
  tiles.save(dest/'tiles.png');(dest/'metatiles.bin').write_bytes(meta);(dest/'metatile_attributes.bin').write_bytes(attrs)
  (R/f'data/geography/{city.lower()}-landmark-blocks.json').write_text(json.dumps(ids,indent=2)+'\n')
  print(city,n,'tiles;',len(attrs)//4,'secondary metatiles')
+ if city=='Berlin':
+  from berlin_facades import build as build_facades
+  build_facades()
 if __name__=='__main__':
  import sys
  cities=sys.argv[1:] or ['Paris','Berlin']

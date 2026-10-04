@@ -1,5 +1,137 @@
 # Prototype verification — 2026-09-18
 
+## v0.70 London Eye gallery verification - 2026-10-04
+
+61 focused PASS results: 46 map/path checks, 3 capital layout checks,
+3 static dialogue/tree/regeneration checks, 2 gallery terrain/generation
+checks, 2 gallery visit/save checks, 3 London walking/save checks and
+2 Westminster investigation/save checks. Gallery No/B cancellation,
+attendant, both displays, both exits, re-entry and indoor Save/cold Continue
+use emulator button input. The outdoor London map is byte-identical to
+v0.69. The new gallery is appended after the Eiffel visitor room, retaining
+prior map IDs. The newly added entrance event was normalized into the
+London generator's existing ordering; repeated generation is stable.
+Windows, open floor, exhibits and dialogue were inspected in-game.
+Packaging retains v0.69 and verifies user artifact save hashes.
+
+## v0.69 Eiffel visitor room verification - 2026-10-04
+
+59 focused PASS results: 45 map/path checks, 3 capital layout checks,
+3 static dialogue/tree/regeneration checks, 2 Eiffel terrain/generation
+checks, 2 Eiffel visit/save checks, 2 Paris walking/save checks and
+2 Notre-Dame investigation/save checks. Eiffel No/B cancellation,
+guide, both exhibits, front exits, re-entry and indoor Save/cold Continue
+use emulator button input. Progress and inventory remain unchanged.
+The Paris outdoor map is byte-identical to v0.68, including every saved
+position and landmark approach. The new map is appended after existing
+indoor rooms. Generators retain both Paris visitor entrances. In-game
+room and dialogue images were inspected. Packaging retains v0.68 and
+verifies user artifact save hashes.
+
+## v0.68 Berlin roof variety verification - 2026-10-04
+
+66 focused PASS results: 44 map/path checks, 3 capital layout checks,
+3 static dialogue/tree/regeneration checks, 2 neighborhood checks,
+2 roof compatibility/generation checks, 2 Berlin walking/save checks,
+3 home checks, 3 reading-room checks, 2 workroom checks and 2 Reichstag
+case/save checks. Exactly 30 solid roof cells change; every tile's
+collision, elevation and behavior is identical to the v0.67 fixture.
+The three door tiles are unchanged. The green palette slot was unused
+in the previous map. Regeneration is byte-stable and the tileset stays
+within hardware limits. Terracotta, green and slate roof colors were
+inspected in-game. All three room visits, old indoor saves, courtyard
+walking and save reloads are exercised. Packaging retains v0.67 and
+verifies user artifact save hashes.
+
+## v0.67 Berlin garden workroom verification - 2026-10-04
+
+64 focused PASS results: 44 map/path checks, 3 capital layout checks,
+3 static dialogue/tree/regeneration checks, 2 neighborhood checks,
+2 Berlin walking/save checks, 2 Reichstag case/save checks, 3 home checks,
+3 reading-room checks and 2 workroom checks. Workroom entrance No/B,
+gardener, tool notes, planting plan, both front exits, re-entry and indoor
+Save/cold Continue use emulator button input. Older v0.65 sitting-room and
+v0.66 reading-room battery saves retain their map IDs and progress.
+All three rooms return to their own courtyard doorway and onward routes.
+The workroom benches, dialogue and records were inspected in-game.
+Outdoor terrain and resident positions are unchanged; generator results
+are repeatable. Packaging retains v0.66 and verifies artifact save hashes.
+
+## v0.66 Berlin reading room verification - 2026-10-04
+
+60 focused PASS results: 43 map/path checks, 3 capital layout checks,
+3 static dialogue/tree/regeneration checks, 2 neighborhood checks,
+2 Berlin walking/save checks, 2 Reichstag case/save checks, 3 sitting-room
+checks and 2 reading-room checks. Both reading-room records and the
+librarian open dialogue and release controls. Entrance No/B, both exits,
+re-entry, indoor Save/cold Continue and countryside return use emulator
+button input. A retained v0.65 sitting-room battery save loads at its
+original position, preserves progress, and supports conversation, exit
+and re-entry. Existing map IDs and exterior terrain are unchanged.
+The new room and dialogue images were inspected. Room generation is
+repeatable. Packaging retains v0.65 and verifies artifact save hashes.
+
+## v0.65 Berlin sitting room verification - 2026-10-04
+
+56 focused PASS results: 42 map/path checks, 3 capital layout checks,
+3 static dialogue/tree/regeneration checks, 2 neighborhood checks,
+2 Berlin walking/save checks, 2 Reichstag case/save checks and 2 home
+visit/save checks. Entrance No/B cancellation, host and notebook dialogue,
+exit/re-entry and both southern exit tiles use real emulator input.
+A save inside the room cold-loads with matching progress and inventory,
+then exits through Berlin to the countryside. Room generation is stable;
+all previous map IDs and exterior tile data are retained. Dialogue fits
+the text window. Final room and conversation images were inspected; unused
+stair artwork was replaced with matching wall and floor tiles and the
+home checks rerun. Packaging preserves v0.64 and artifact saves by SHA256.
+
+## v0.64 Berlin courtyard residents verification - 2026-10-04
+
+53 focused PASS results: 41 map/path checks, 3 capital layout checks,
+3 static dialogue/tree/regeneration checks, 2 neighborhood checks,
+2 Berlin emulator walking/save checks and 2 Reichstag case/save checks.
+Neighborhood assertions cover both resident positions, unique scripts,
+lock/faceplayer/release behavior and generator stability. Emulator input
+opens and closes both conversations from an older Berlin battery save,
+then saves in the court and cold-loads before returning to the countryside.
+The old-save template refresh restores only the two new stationary NPCs.
+Existing quest progress and inventory remain unchanged. Dialogue screenshots
+were inspected. Packaging retains v0.63 and verifies artifact save hashes.
+
+## v0.63 Berlin neighborhood verification - 2026-10-04
+
+53 focused PASS results: 41 map/path checks, 3 capital layout checks,
+3 dialogue/tree/regeneration checks, 2 neighborhood compatibility checks,
+2 Berlin emulator walking/save checks and 2 Reichstag investigation/save
+checks. The new courtyard, both side lanes, southern loop, signs and a
+solid residential doorway are exercised with button input. A save made
+inside the extension cold-loads at the same position with its progress,
+then returns through the original hub to the countryside.
+
+The full v0.62 Berlin footprint is checked: old walkable tiles are unchanged
+except for the paved grass approach, and only the boundary opening loses
+collision. New buildings are outside that footprint. The map buffer fits
+hardware limits. The previous v0.62 ROM and all artifact saves are checked
+by SHA256 during packaging. In-game street artwork was inspected.
+
+## v0.62 London waterfront verification - 2026-10-04
+
+57 focused PASS results: 41 map checks, 3 capital layout checks, 3 static
+text/tree/generator checks, 2 waterfront preservation/generation checks,
+1 historical layout check, 3 modern London walking/save checks, 2
+Westminster case/save checks and 2 historical London walking/save checks.
+
+Both rows of each bridge are crossed in both directions with real emulator
+input. The garden loop, four signs, clinic, station, map menu and cold saves
+are exercised. The longer walking loop correctly increases friendship;
+the test verifies that only friendship and its checksum can change in the
+party, while inventory and story progress stay identical. The Westminster
+case is completed and reloaded. Historical London is tested separately.
+
+The town/interior generator ordering issue was corrected and regeneration
+is byte-stable. In-game rail and garden images were inspected. Packaging
+checks the previous v0.61 hash and preserves every user artifact save.
+
 ## v0.61 Paris promenade verification - 2026-09-19
 
 53 focused PASS results on the updated build and its generated map data:

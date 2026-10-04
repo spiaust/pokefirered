@@ -3,7 +3,7 @@ from pathlib import Path
 import json,struct,sys
 R=Path(__file__).resolve().parents[1]
 def build(city):
- W,H=40,46 if city=='Paris' else 44
+ W,H=(40,46) if city=='Paris' else (64,44)
  old=struct.unpack('<768H',(R/f'data/geography/{city.lower()}-v050.bin').read_bytes())
  a=[[0x3010 for x in range(W)] for y in range(H)]
  for y in range(22):a[y][:32]=old[y*32:(y+1)*32]
@@ -31,7 +31,7 @@ def build(city):
   rect(3,36,19,1,0x3165);rect(3,42,12,2,0x3165)
   rect(14,38,21,2,0x3165)
   places=[('eiffel',7,31),('notredame',25,31)]
-  signs=[('Eiffel',6,37,['EIFFEL TOWER / CHAMP DE MARS','The SEINE lies to the north.','Garden paths circle the flower beds.','The riverside walk continues east.']),('NotreDame',24,35,['NOTRE-DAME / ILE DE LA CITE','The cathedral stands on an island.','Undercroft: face the south door.','Press A to ask about visiting.']),('Seine',18,26,['RIVES DE SEINE','Cross the bridges to the LEFT BANK.','Follow the promenade east for','the bridge to NOTRE-DAME.'])]
+  signs=[('Eiffel',6,37,['EIFFEL TOWER / CHAMP DE MARS','Visitor room: face the south base.','Press A to ask about visiting.','The SEINE lies to the north.']),('NotreDame',24,35,['NOTRE-DAME / ILE DE LA CITE','The cathedral stands on an island.','Undercroft: face the south door.','Press A to ask about visiting.']),('Seine',18,26,['RIVES DE SEINE','Cross the bridges to the LEFT BANK.','Follow the promenade east for','the bridge to NOTRE-DAME.'])]
  else:
   rect(14,22,4,3,0x3165);rect(3,23,34,2,0x3165)
   for x in range(2,38):
@@ -65,6 +65,27 @@ def build(city):
  for y in range(H):
   for x in range(W):
    if x<2 or x>=W-2 or y>=H-2 or (y<2 and x>=32):a[y][x]=0x400|((0x14 if y%2 else 0x1c)+x%2)
+ if city=='Berlin':
+  # Preserve the old eastern edge, opening only a ground-level street.
+  for y in range(H):
+   for x in (38,39):a[y][x]=0x400|((0x14 if y%2 else 0x1c)+x%2)
+  for y in range(25):
+   for x in range(40,62):a[y][x]=0x400|((0x14 if y%2 else 0x1c)+x%2)
+  rect(36,37,26,3,0x3165)
+  rect(40,32,22,2,0x3165);rect(47,32,2,9,0x3165);rect(55,32,2,9,0x3165)
+  rect(40,40,22,2,0x3165)
+  rect(41,34,5,2,0x3004);rect(50,34,4,2,0x3004);rect(58,34,3,2,0x3004)
+  # Native residential fronts: fictional supporting buildings, not landmarks.
+  pallet=struct.unpack('<480H',(R/'data/layouts/PalletTown/map.bin').read_bytes())
+  for bx in (42,50,57):
+   for dy in range(5):
+    for dx in range(5):a[27+dy][bx+dx]=0x400|(pallet[(3+dy)*24+5+dx]&1023)
+  facades=json.loads((R/'data/geography/berlin-facade-blocks.json').read_text())
+  for bx,label in [(42,'home'),(50,'library'),(57,'workroom')]:
+   for dy,row in enumerate(facades[label]):
+    for dx,t in enumerate(row):a[27+dy][bx+dx]=0x400|t
+  signs += [('Boulevard',40,36,['UNTER DEN LINDEN APPROACH','West: BRANDENBURG GATE.','East: the residential court.','Use the side lanes to circle it.']),('Court',56,34,['COURTYARD VISITOR ROOMS','West: home. Middle: reading room.','East: the garden workroom.','Face a door and press A to visit.'])]
+  for _,x,y,_ in signs:a[y][x]=0x402
  original=[r[:] for r in a];forestids={0x14,0x15,0x1c,0x1d}
  def forest(x,y):return x<0 or y<0 or x>=W or y>=H or original[y][x]&1023 in forestids
  for y in range(H):
@@ -85,12 +106,21 @@ def build(city):
   if l.get('id')==f'LAYOUT_EUROPE_{city.upper()}':l.update(width=W,height=H,secondary_tileset=f'gTileset_Europe{city}')
  p.write_text(json.dumps(j,indent=2)+'\n')
  p=R/f'data/maps/Europe{city}/map.json';j=json.loads(p.read_text());j['bg_events']=[e for e in j['bg_events'] if not e['script'].startswith(f'Europe{city}_Realism')]
+ if city=='Berlin':
+  j['object_events']=[e for e in j['object_events'] if not e['script'].startswith('EuropeBerlin_Court')]
+  for gfx,x,y,label in [('OBJ_EVENT_GFX_WOMAN_1',45,36,'Gardener'),('OBJ_EVENT_GFX_OLD_MAN_1',53,36,'Neighbor')]:
+   j['object_events'].append(dict(type='object',graphics_id=gfx,x=x,y=y,elevation=3,movement_type='MOVEMENT_TYPE_FACE_DOWN',movement_range_x=0,movement_range_y=0,trainer_type='TRAINER_TYPE_NONE',trainer_sight_or_berry_tree_id='0',script='EuropeBerlin_Court'+label,flag='0'))
  for suffix,x,y,lines in signs:j['bg_events'].append(dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=f'Europe{city}_Realism{suffix}'))
  p.write_text(json.dumps(j,indent=2)+'\n')
  p=R/f'data/maps/Europe{city}/scripts.inc';s=p.read_text();s=s.split(f'\nEurope{city}_Realism')[0]
  for suffix,x,y,lines in signs:
   label=f'Europe{city}_Realism{suffix}';s+=f'\n{label}::\n\tmsgbox {label}Text, MSGBOX_SIGN\n\tend\n\n{label}Text::\n'
   for i,line in enumerate(lines):s+='\t.string "'+line+('$' if i==len(lines)-1 else '\\p' if i%2 else '\\n')+'"\n'
+ if city=='Berlin':
+  for label,lines in [('Gardener',['I tend these flowers with my ODDISH.','Care makes a place feel like home.','The lane south of us loops back','to the BRANDENBURG GATE.']),('Neighbor',['All three doors welcome visitors.','West: home. Middle: reading room.','East: the garden workroom.','Face a door and press A to visit.'])]:
+   name='EuropeBerlin_Court'+label
+   s+=f'\n{name}::\n\tlock\n\tfaceplayer\n\tmsgbox {name}Text, MSGBOX_DEFAULT\n\trelease\n\tend\n\n{name}Text::\n'
+   for i,line in enumerate(lines):s+='\t.string "'+line+('$' if i==len(lines)-1 else '\\p' if i%2 else '\\n')+'"\n'
  p.write_text(s)
  print(city,W,H,'landmark district generated')
 if __name__=='__main__':

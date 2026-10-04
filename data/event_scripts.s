@@ -1482,3 +1482,8 @@ Text_TestMsg::
 	.include "data/maps/EuropeWestminster/scripts.inc"
 
 	.include "data/maps/EuropeReichstag/scripts.inc"
+	.include "data/maps/EuropeBerlinHome/scripts.inc"
+	.include "data/maps/EuropeBerlinLibrary/scripts.inc"
+	.include "data/maps/EuropeBerlinGardenRoom/scripts.inc"
+	.include "data/maps/EuropeEiffelVisitor/scripts.inc"
+	.include "data/maps/EuropeLondonEyeGallery/scripts.inc"

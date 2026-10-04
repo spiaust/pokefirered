@@ -3,6 +3,77 @@
 A FireRed-based prototype of a journey through real European countries.
 
 
+## London Eye visitor gallery (v0.70)
+
+Cross Westminster Bridge to the South Bank. Stand directly south of the
+London Eye, face north and press A, then choose YES to visit the gallery.
+Speak to the attendant and read the garden and bridge displays. Walk
+south through the front exit to return outside. Indoor saves use normal
+CONTINUE. Westminster's visitor archive remains open across the river.
+
+## Eiffel visitor room (v0.69)
+
+From the CHAMP DE MARS, stand directly south of the Eiffel Tower's base,
+face north and press A. Choose YES to enter the visitor room. Speak to
+the guide and read the garden and river exhibits. Walk south through the
+front exit to return outside. You can save inside and use normal CONTINUE.
+Notre-Dame's undercroft and investigation remain available farther east.
+
+## Berlin courtyard roof colors (v0.68)
+
+The west sitting room has a terracotta roof, the middle reading room has
+a green roof, and the east garden workroom has a slate roof. Face north
+below any door and press A to visit. Existing saves use normal CONTINUE.
+
+## Berlin garden workroom (v0.67)
+
+All three courtyard buildings now welcome visitors. The western door
+opens the sitting room, the middle door opens the reading room, and the
+eastern door opens the garden workroom. Face north beneath a door and
+press A, then choose YES. In the workroom, speak to the gardener and
+read the tool notes and planting plan. Walk south through the front
+exit to return outside. Indoor saves use normal CONTINUE.
+
+## Berlin reading room (v0.66)
+
+The middle courtyard building now welcomes readers. Face north from the
+pavement beneath its door and press A, then choose YES. Speak to the
+librarian and read the two records. Walk through either front exit tile
+to return outside. The western sitting room remains open, including for
+existing indoor saves. The eastern home remains private.
+
+## Berlin sitting room (v0.65)
+
+Walk east from Brandenburg Gate to the residential court. At the western
+house, face north from the pavement directly below its door and press A.
+Choose YES to visit. Speak to the host and read the garden notebook;
+walk south through the front exit to return to the courtyard. You can
+save inside and resume with normal CONTINUE. Other homes remain private.
+
+## Berlin courtyard residents (v0.64)
+
+Follow the boulevard east from Brandenburg Gate. Speak to the gardener
+and neighbor beside the flower beds for local directions. The houses
+remain exterior scenery. Use normal CONTINUE with your existing save.
+
+## Berlin residential court (v0.63)
+
+From the Brandenburg Gate, follow the boulevard EAST through the former
+tree boundary. Explore the residential court, flower beds and side lanes;
+the southern path loops back to the boulevard. The three homes are exterior
+scenery, with signs marking the public routes. Continue west for the Gate,
+Tiergarten and Reichstag. Normal CONTINUE retains existing progress and
+also supports saves made in the new block.
+
+## London waterfront and bridges (v0.62)
+
+Walk south from London's original square to Westminster. The green-railed
+bridge leads across the Thames; the red-railed Lambeth crossing is farther
+south. A new paved loop connects the gardens beside the London Eye to the
+South Bank paths. Read the Parliament and garden signs for directions.
+Westminster's visitor room remains accessible from its south entrance.
+Use normal CONTINUE with your existing battery save after reopening the ROM.
+
 ## Paris garden and riverside paths (v0.61)
 
 Walk south from Paris's original square to the Eiffel Tower. Paved side
