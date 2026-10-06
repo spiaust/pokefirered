@@ -44,7 +44,7 @@ def build(city):
   rect(4,32,13,1,0x3165);rect(4,36,13,1,0x3165)
   rect(4,30,1,7,0x3165);rect(12,30,1,7,0x3165)
   places=[('reichstag',18,29),('gate',18,34)]
-  signs=[('Reichstag',25,31,['REICHSTAG','The SPREE runs north of here.','Visitor archive: face the south door.','Press A to speak to the curator.']),('Gate',25,36,['BRANDENBURG GATE','UNTER DEN LINDEN leads east.']),('Tiergarten',13,34,['TIERGARTEN','Garden paths west of the GATE.'])]
+  signs=[('Reichstag',25,31,['REICHSTAG','The SPREE runs north of here.','Visitor archive: face the south door.','Press A to speak to the curator.']),('Gate',25,36,['BRANDENBURG GATE','UNTER DEN LINDEN leads east.','Visitor room: face the west pillar.','Press A from the path to visit.']),('Tiergarten',13,34,['TIERGARTEN','Garden paths west of the GATE.'])]
  for x,y in water:
   l=(x-1,y) in water;r=(x+1,y) in water;u=(x,y-1) in water;d=(x,y+1) in water
   t=0x12b
@@ -108,7 +108,7 @@ def build(city):
  p=R/f'data/maps/Europe{city}/map.json';j=json.loads(p.read_text());j['bg_events']=[e for e in j['bg_events'] if not e['script'].startswith(f'Europe{city}_Realism')]
  if city=='Berlin':
   j['object_events']=[e for e in j['object_events'] if not e['script'].startswith('EuropeBerlin_Court')]
-  for gfx,x,y,label in [('OBJ_EVENT_GFX_WOMAN_1',45,36,'Gardener'),('OBJ_EVENT_GFX_OLD_MAN_1',53,36,'Neighbor')]:
+  for gfx,x,y,label in [('OBJ_EVENT_GFX_WOMAN_1',45,36,'Gardener'),('OBJ_EVENT_GFX_OLD_MAN_1',53,36,'Neighbor'),('OBJ_EVENT_GFX_PIKACHU',54,36,'Pikachu')]:
    j['object_events'].append(dict(type='object',graphics_id=gfx,x=x,y=y,elevation=3,movement_type='MOVEMENT_TYPE_FACE_DOWN',movement_range_x=0,movement_range_y=0,trainer_type='TRAINER_TYPE_NONE',trainer_sight_or_berry_tree_id='0',script='EuropeBerlin_Court'+label,flag='0'))
  for suffix,x,y,lines in signs:j['bg_events'].append(dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=f'Europe{city}_Realism{suffix}'))
  p.write_text(json.dumps(j,indent=2)+'\n')
@@ -117,10 +117,12 @@ def build(city):
   label=f'Europe{city}_Realism{suffix}';s+=f'\n{label}::\n\tmsgbox {label}Text, MSGBOX_SIGN\n\tend\n\n{label}Text::\n'
   for i,line in enumerate(lines):s+='\t.string "'+line+('$' if i==len(lines)-1 else '\\p' if i%2 else '\\n')+'"\n'
  if city=='Berlin':
-  for label,lines in [('Gardener',['I tend these flowers with my ODDISH.','Care makes a place feel like home.','The lane south of us loops back','to the BRANDENBURG GATE.']),('Neighbor',['All three doors welcome visitors.','West: home. Middle: reading room.','East: the garden workroom.','Face a door and press A to visit.'])]:
+  for label,lines in [('Gardener',['I tend these flowers with my ODDISH.','Care makes a place feel like home.','The lane south of us loops back','to the BRANDENBURG GATE.']),('Neighbor',['PIKACHU keeps me company here.','All three doors welcome visitors.','West: home. Middle: reading room.','East: the garden workroom.'])]:
    name='EuropeBerlin_Court'+label
    s+=f'\n{name}::\n\tlock\n\tfaceplayer\n\tmsgbox {name}Text, MSGBOX_DEFAULT\n\trelease\n\tend\n\n{name}Text::\n'
    for i,line in enumerate(lines):s+='\t.string "'+line+('$' if i==len(lines)-1 else '\\p' if i%2 else '\\n')+'"\n'
+ if city=='Berlin':
+  s+='\nEuropeBerlin_CourtPikachu::\n\tlock\n\tfaceplayer\n\twaitse\n\tplaymoncry SPECIES_PIKACHU, CRY_MODE_NORMAL\n\tmsgbox EuropeBerlin_CourtPikachuText, MSGBOX_DEFAULT\n\twaitmoncry\n\trelease\n\tend\n\nEuropeBerlin_CourtPikachuText::\n\t.string "PIKACHU: Pika! Pika!$"\n'
  p.write_text(s)
  print(city,W,H,'landmark district generated')
 if __name__=='__main__':

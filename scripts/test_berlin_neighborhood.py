@@ -11,13 +11,18 @@ for i,a in enumerate(old):
 assert (64+15)*(44+14)<=0x2800
 events=json.loads((R/'data/maps/EuropeBerlin/map.json').read_text())
 residents=[o for o in events['object_events'] if o['script'].startswith('EuropeBerlin_Court')]
-assert len(residents)==2
-assert {(o['x'],o['y']) for o in residents}=={(45,36),(53,36)}
+assert len(residents)==3
+assert {(o['x'],o['y']) for o in residents}=={(45,36),(53,36),(54,36)}
 script=(R/'data/maps/EuropeBerlin/scripts.inc').read_text()
 for o in residents:
  assert not new[o['y']*64+o['x']]&0xc00
  assert script.count(o['script']+'::')==1
- assert '\tlock\n\tfaceplayer\n\tmsgbox '+o['script']+'Text, MSGBOX_DEFAULT\n\trelease\n\tend' in script
+ if o['script'].endswith('Pikachu'):
+  assert o['graphics_id']=='OBJ_EVENT_GFX_PIKACHU'
+  assert '\tplaymoncry SPECIES_PIKACHU, CRY_MODE_NORMAL' in script
+  assert '\twaitmoncry\n\trelease\n\tend' in script
+ else:
+  assert '\tlock\n\tfaceplayer\n\tmsgbox '+o['script']+'Text, MSGBOX_DEFAULT\n\trelease\n\tend' in script
 for bx in (42,50,57):
  for y in range(27,32):
   for x in range(bx,bx+5):assert new[y*64+x]&0xc00

@@ -249,7 +249,9 @@
 #define VAR_0x40C2                 0x40C2
 #define VAR_EUROPE_CASE_REICHSTAG   VAR_0x40C2
 #define VAR_0x40C3                 0x40C3
+#define VAR_EUROPE_HIDE_FLOWERS VAR_0x40C3 // 0 flowers; 1 plain lawn (rendering only)
 #define VAR_0x40C4                 0x40C4
+#define VAR_EUROPE_OUTFIT_COLOR VAR_0x40C4 // 0 classic; 1 blue; 2 green
 #define VAR_0x40C5                 0x40C5
 #define VAR_0x40C6                 0x40C6
 #define VAR_0x40C7                 0x40C7

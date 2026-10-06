@@ -86,3 +86,18 @@ Regenerate with scripts/berlin_facades.py, then the Berlin capital map.
 The capital asset generator also invokes the roof compiler after Berlin
 landmark generation. Verify with scripts/test_berlin_facades.py and the
 existing room and walking checks. These remain fictional native facades.
+
+## Courtyard companion (v0.76)
+
+Native PIKACHU stands at (54,36), immediately east of the neighbor.
+Approach from (54,37) for its normal cry and repeatable greeting. The
+existing neighbor introduces it. Tiles, visitor door positions, prior
+object IDs and map IDs remain unchanged; the companion appends as the
+fifth object. Side lanes and all three visitor approaches remain open.
+Older Berlin saves restore stationary templates 2 through 4 on Continue,
+including the companion, without replacing the original city NPCs.
+
+Use test_berlin_companion.py for an older courtyard battery, blocked
+companion cell, repeated greetings, visitor lanes, normal Save/cold
+Continue and countryside return. Neighborhood regeneration, capital
+walking routes, the garden room and Reichstag case are also rechecked.

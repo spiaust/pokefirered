@@ -3,6 +3,65 @@
 The project grows in playable releases. Build and test each gameplay change
 before adding the next; preserve the previous ROM in `artifacts/releases`.
 
+## v0.77: Brandenburg Gate visitor room
+
+A compact fictional visitor room opens from the Gate's west pillar.
+A guide and garden/courtyard displays connect the landmark passage to
+nearby walks and shared neighborhood care. Two front exit tiles return
+to the same approach. Outdoor terrain and all previous map IDs are
+retained, and the indoor regional map identifies Germany. Next: further
+street detail and remaining landmark areas.
+
+## v0.76: Berlin courtyard companion
+
+A native PIKACHU now keeps the courtyard neighbor company. Its repeatable
+cry and greeting add life beside the flower beds; the neighbor introduces
+it and still identifies the visitor rooms. Older Berlin saves restore the
+new stationary companion on Continue. Street tiles, doors and map IDs are
+retained. Next: more street detail and remaining landmark areas.
+
+## v0.75: walking and cycling avatar preview
+
+SELECT in WORLD OPTIONS toggles the preview between native walking and
+cycling poses. Avatar and outfit changes update either pose immediately.
+The preview starts in walking mode each time the menu opens; this display
+choice does not change the player's field movement or saved preferences.
+Next: street detail and remaining landmark areas.
+
+## v0.74: live avatar preview and indoor map labels
+
+WORLD OPTIONS displays the selected Red/Leaf avatar and outfit immediately.
+The preview updates when choices change and after Restore Defaults. It is
+hidden during reset confirmation and removed on returning to the field or
+regional map. Eiffel and Berlin visitor-room map labels now identify their
+correct countries instead of falling back to London. Next: further avatar
+polish, street detail and remaining landmark areas.
+
+## v0.73: saved avatar outfit colors
+
+WORLD OPTIONS adds CLASSIC, BLUE and GREEN outfit colors for Red and Leaf.
+The change recolors three clothing entries in the player's overworld
+palette and corresponding reflection shades. Skin, hair, other sprite
+colors and trainer identity retain their original values. Walking and
+cycling use the existing sprite frames. Restore Defaults includes the
+new outfit preference. Next: further customization and broader street detail.
+
+## v0.72: confirmed World Options defaults
+
+WORLD OPTIONS adds RESTORE DEFAULTS as a fifth row. Press A to open a
+confirmation, then A to restore simple map detail, the original avatar,
+natural map colors and flowers on. B/START cancels the confirmation.
+No trainer identity, inventory or journey progress is reset. Save normally
+to retain the defaults. Next: further customization and broader street detail.
+
+## v0.71: saved flower decoration option
+
+WORLD OPTIONS now includes FLOWERS: ON/OFF. Turning flowers off renders
+European outdoor flower beds as plain lawn. This is a visual-only option:
+the map grid, collision, gameplay attributes, encounters and quest triggers
+are retained. Old saves default to flowers on. The preference is saved
+with normal Save/Continue. Next: further customization and street detail.
+
 ## v0.70: London Eye visitor gallery
 
 A window-lined visitor gallery now opens from the wheel's southern base.

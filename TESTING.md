@@ -1,5 +1,106 @@
 # Prototype verification — 2026-09-18
 
+## v0.77 Gate visitor-room verification - 2026-10-05
+
+81 focused PASS results: 47 map/path, 3 capital layout, 3 static checks,
+2 World Options, 1 movement, 2 flower, 2 defaults, 2 outfit, 1 live preview,
+4 earlier indoor map locations, 2 neighborhood generation, 2 companion,
+2 Berlin walking/save, 2 garden-room, 2 Reichstag case, 2 Gate static and
+2 Gate visit/save checks. No/B decline the invitation at the west pillar.
+The guide and both displays release controls without changing progress,
+inventory or party; both front exits return to the same approach. Normal
+Save/cold Continue retains the indoor position, and the regional map shows
+Germany. The complete v0.76 Berlin tile map and every preceding Europe map
+ID are identical. Gate/Capital regeneration is stable and the central
+passage remains open. Interior and country-map screenshots were inspected.
+Packaging retains v0.76 and verifies user artifact save hashes.
+
+## v0.76 Berlin companion verification - 2026-10-05
+
+76 focused PASS results: 46 map/path, 3 capital layout, 3 static checks,
+2 World Options, 1 movement, 2 flower, 2 defaults, 2 outfit, 1 live preview,
+4 indoor map locations, 2 neighborhood generation, 2 companion, 2 Berlin
+capital walking/save, 2 garden-room and 2 Reichstag case checks. An older
+courtyard battery spawns the new companion immediately. Its occupied cell
+blocks entry, three greetings release controls and preserve party,
+inventory and progress, and all visitor approaches remain reachable.
+Normal Save/cold Continue retains the player location; another greeting
+and countryside return pass. The new stationary save-template restoration
+leaves the original city NPCs intact. Outdoor tiles and IDs are retained.
+Courtyard and dialogue screenshots were inspected. Packaging retains
+v0.75 and verifies user artifact save hashes.
+
+## v0.75 walking/cycling preview verification - 2026-10-05
+
+66 focused PASS results: 46 map/path, 3 capital layout, 3 static checks,
+2 World Options, 1 movement, 2 flower, 2 defaults, 2 outfit, 1 live preview
+and 4 indoor map location checks. SELECT displays the native bicycle pose
+with green Leaf clothing and retains every saved preference. Twelve avatar
+changes preserve the cycling preview and clothing colors. SELECT returns
+to WALK; closing and reopening begins at WALK with field position and
+progress unchanged. Reset confirmation and regional map cleanup still pass.
+The cycling preview screenshot was inspected. Packaging retains v0.74
+and verifies user artifact save hashes.
+
+## v0.74 live preview and indoor map verification - 2026-10-05
+
+66 focused PASS results: 46 map/path checks, 3 capital layout checks,
+3 static dialogue/tree/regeneration checks, 2 World Options checks,
+1 registered/cycling control check, 2 flower checks, 2 defaults checks,
+2 outfit checks, 1 live preview check and 4 indoor map location checks.
+The preview displays blue Red and green Leaf and survives twelve repeated
+avatar changes with the selected clothing palette. Restore confirmation
+hides it, cancellation restores it, and confirmation displays defaults.
+Closing options destroys the preview; opening the regional map afterward
+leaves no preview sprite. Existing Eiffel visitor and three Berlin room
+saves select the correct country and return with location and progress
+unchanged. Preview, confirmation and Eiffel map screenshots were inspected.
+Packaging retains v0.73 and verifies user artifact save hashes.
+
+## v0.73 outfit color verification - 2026-10-05
+
+61 focused PASS results: 46 map/path checks, 3 capital layout checks,
+3 static dialogue/tree/regeneration checks, 2 World Options checks,
+1 registered/cycling control check, 2 flower checks, 2 defaults checks
+and 2 outfit checks. Real input selects blue Red and green Leaf outfits.
+Tests compare all sixteen player palette entries: only clothing entries
+8, 11 and 12 change. Cycling and dismount retain the chosen palette.
+Normal Save/cold Continue retains both avatar and outfit; A wraps from
+green to the exact classic palette. Trainer identity, party, inventory,
+progress and location remain unchanged. Restore Defaults clears the new
+outfit preference along with the original settings. Six-row menu and
+both outfit/cycling screenshots were inspected. Packaging retains v0.72
+and verifies user artifact save hashes.
+
+## v0.72 World Options defaults verification - 2026-10-05
+
+59 focused PASS results: 46 map/path checks, 3 capital layout checks,
+3 static dialogue/tree/regeneration checks, 2 World Options checks,
+1 registered/cycling control check, 2 flower-decoration checks and
+2 restore-defaults checks. The fifth row wraps from the first via UP.
+Left/Right on the restore row leave preferences unchanged. B and START
+both cancel the confirmation without leaving the options menu. A confirms
+all four defaults. Field return restores the original avatar while trainer
+identity, party, inventory, story progress and position remain identical.
+A normal save cold-loads with all defaults and progress intact. Original
+option controls, cycling continuity and flower restoration still pass.
+Confirmation and five-row menu screenshots were inspected. Packaging
+retains v0.71 and verifies user artifact save hashes.
+
+## v0.71 flower decoration verification - 2026-10-05
+
+57 focused PASS results: 46 map/path checks, 3 capital layout checks,
+3 static dialogue/tree/regeneration checks, 2 World Options checks,
+1 registered/cycling control check and 2 flower-decoration checks.
+The fourth menu row wraps from the first via UP and accepts Left/Right/A.
+The test compares the complete loaded map grid before and after toggling,
+walks across the flower beds, saves the lawn preference and cold-loads at
+the same location with matching party, inventory, progress and identity.
+Restoring flowers leaves the grid and progress identical. The original
+avatar, map settings, registration and cycling behavior still pass.
+Menu, flowers-on, lawn, cold-load and restored-flower screenshots were
+inspected. Packaging retains v0.70 and verifies user artifact save hashes.
+
 ## v0.70 London Eye gallery verification - 2026-10-04
 
 61 focused PASS results: 46 map/path checks, 3 capital layout checks,

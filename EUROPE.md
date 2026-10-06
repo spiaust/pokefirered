@@ -3,6 +3,61 @@
 A FireRed-based prototype of a journey through real European countries.
 
 
+## Gate visitor room (v0.77)
+
+At the Brandenburg Gate, stand on the southern path facing the west
+pillar and press A. Accept the invitation to enter a small fictional
+visitor room. Speak to the guide and read the garden and courtyard
+displays; leave by the front doorway to return to the same approach.
+Normal Save/Continue works inside, and the regional map shows Germany.
+The Gate's central passage remains open.
+
+## Berlin courtyard companion (v0.76)
+
+East of the Brandenburg Gate, PIKACHU sits beside the courtyard neighbor.
+Face it from the southern lane and press A for a cry and greeting. The
+neighbor introduces it and gives directions to the three visitor rooms.
+The greeting is repeatable. Older city saves show PIKACHU on Continue.
+
+## Walking and cycling preview (v0.75)
+
+In WORLD OPTIONS, press SELECT to switch the avatar preview between WALK
+and BIKE. Change AVATAR or OUTFIT to check the selected look in either pose.
+The preview begins at WALK when reopened. Your field movement and saved
+preferences are unaffected by SELECT.
+
+## Live avatar preview (v0.74)
+
+WORLD OPTIONS now previews your selected walking avatar and outfit on the
+right side. Change AVATAR or OUTFIT to see the result immediately, then
+return to the game and save normally to retain your choices. Restore
+Defaults also updates the preview. The regional map now correctly shows
+France from the Eiffel room and Germany from Berlin's courtyard rooms.
+
+## Avatar outfit colors (v0.73)
+
+Open WORLD OPTIONS, select OUTFIT, and use LEFT, RIGHT or A to choose
+CLASSIC, BLUE or GREEN. This changes your walking avatar's clothing colors
+in Europe. You can choose Red or Leaf separately on the AVATAR row.
+Save normally to keep both choices. RESTORE DEFAULTS returns the outfit
+to CLASSIC along with the other cosmetic settings.
+
+## Restore World Options defaults (v0.72)
+
+In WORLD OPTIONS, select RESTORE DEFAULTS and press A. Press A again to
+confirm, or B/START to cancel. Confirmation restores SIMPLE map detail,
+ORIGINAL avatar, NATURAL map colors and FLOWERS ON. Your party, inventory,
+trainer identity and journey progress stay intact. Save normally to keep
+the restored choices. Left/Right do nothing on the restore row.
+
+## Flower decoration setting (v0.71)
+
+Open WORLD OPTIONS from the Bag, or with SELECT if registered. Select
+FLOWERS using UP/DOWN, then press LEFT, RIGHT or A to toggle. OFF displays
+plain lawn in place of decorative flower beds on European outdoor maps.
+Paths, encounters and quest interactions work as before. Save normally
+to keep the preference. Older saves begin with flowers ON.
+
 ## London Eye visitor gallery (v0.70)
 
 Cross Westminster Bridge to the South Bank. Stand directly south of the

@@ -4758,6 +4758,18 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/EuropeLondonEyeGallery/border.bin",
       "blockdata_filepath": "data/layouts/EuropeLondonEyeGallery/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_GATE_VISITOR",
+      "name": "EuropeGateVisitor_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeGateVisitor/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeGateVisitor/map.bin"
     }
   ]
 }

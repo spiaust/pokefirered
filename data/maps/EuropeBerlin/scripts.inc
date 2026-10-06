@@ -65,7 +65,9 @@ EuropeBerlin_RealismGate::
 
 EuropeBerlin_RealismGateText::
 	.string "BRANDENBURG GATE\n"
-	.string "UNTER DEN LINDEN leads east.$"
+	.string "UNTER DEN LINDEN leads east.\p"
+	.string "Visitor room: face the west pillar.\n"
+	.string "Press A from the path to visit.$"
 
 EuropeBerlin_RealismTiergarten::
 	msgbox EuropeBerlin_RealismTiergartenText, MSGBOX_SIGN
@@ -116,7 +118,20 @@ EuropeBerlin_CourtNeighbor::
 	end
 
 EuropeBerlin_CourtNeighborText::
-	.string "All three doors welcome visitors.\n"
-	.string "West: home. Middle: reading room.\p"
-	.string "East: the garden workroom.\n"
-	.string "Face a door and press A to visit.$"
+	.string "PIKACHU keeps me company here.\n"
+	.string "All three doors welcome visitors.\p"
+	.string "West: home. Middle: reading room.\n"
+	.string "East: the garden workroom.$"
+
+EuropeBerlin_CourtPikachu::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_PIKACHU, CRY_MODE_NORMAL
+	msgbox EuropeBerlin_CourtPikachuText, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+EuropeBerlin_CourtPikachuText::
+	.string "PIKACHU: Pika! Pika!$"

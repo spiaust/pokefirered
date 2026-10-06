@@ -16,6 +16,7 @@
 #include "trainer_see.h"
 #include "trig.h"
 #include "constants/maps.h"
+#include "constants/vars.h"
 #include "constants/event_object_movement.h"
 #include "constants/event_objects.h"
 #include "constants/trainer_types.h"
@@ -2173,8 +2174,37 @@ static u8 TryLoadObjectPalette(const struct SpritePalette *spritePalette)
 void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
 {
     u8 paletteIndex = FindObjectEventPaletteIndexByTag(paletteTag);
+    u16 outfit = VarGet(VAR_EUROPE_OUTFIT_COLOR);
+    bool8 reflection = paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION
+        || paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION;
 
-    LoadPalette(sObjectEventSpritePalettes[paletteIndex].data, OBJ_PLTT_ID(paletteSlot), PLTT_SIZE_4BPP);
+    if (outfit > 0 && outfit < 3
+        && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON)
+        && (reflection || (paletteSlot == PALSLOT_PLAYER
+            && (paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_RED || paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_GREEN))))
+    {
+        u16 colors[16];
+        u8 i;
+        for (i = 0; i < 16; i++)
+            colors[i] = sObjectEventSpritePalettes[paletteIndex].data[i];
+        // Only the three clothing-ramp entries change; skin, hair and other
+        // sprite colors retain their native palette entries.
+        if (outfit == 1)
+        {
+            colors[8] = reflection ? RGB(15, 17, 22) : RGB(5, 7, 13);
+            colors[11] = reflection ? RGB(21, 28, 31) : RGB(11, 22, 29);
+            colors[12] = reflection ? RGB(17, 22, 29) : RGB(8, 13, 24);
+        }
+        else
+        {
+            colors[8] = reflection ? RGB(14, 21, 16) : RGB(4, 11, 6);
+            colors[11] = reflection ? RGB(25, 31, 25) : RGB(14, 26, 16);
+            colors[12] = reflection ? RGB(17, 26, 19) : RGB(7, 18, 10);
+        }
+        LoadPalette(colors, OBJ_PLTT_ID(paletteSlot), PLTT_SIZE_4BPP);
+    }
+    else
+        LoadPalette(sObjectEventSpritePalettes[paletteIndex].data, OBJ_PLTT_ID(paletteSlot), PLTT_SIZE_4BPP);
     ApplyGlobalFieldPaletteTint(paletteSlot);
 }
 

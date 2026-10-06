@@ -6,6 +6,10 @@
 #include "event_object_movement.h"
 #include "new_menu_helpers.h"
 #include "overworld.h"
+#include "event_data.h"
+#include "constants/maps.h"
+#include "constants/map_types.h"
+#include "constants/vars.h"
 
 EWRAM_DATA bool8 gBikeCameraAheadPanback = FALSE;
 
@@ -225,7 +229,19 @@ void DrawDoorMetatileAt(int x, int y, const u16 *tiles)
 static void DrawMetatileAt(const struct MapLayout *mapLayout, u16 offset, int x, int y)
 {
     u16 metatileId = MapGridGetMetatileIdAt(x, y);
+    u8 layerType = MapGridGetMetatileLayerTypeAt(x, y);
     const u16 *metatiles;
+
+    // Cosmetic lawn rendering leaves the map grid and all gameplay attributes
+    // untouched. Indoor maps and maps outside Europe retain their native art.
+    if (metatileId == 0x004
+        && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON)
+        && (gMapHeader.mapType == MAP_TYPE_TOWN || gMapHeader.mapType == MAP_TYPE_ROUTE)
+        && VarGet(VAR_EUROPE_HIDE_FLOWERS) == 1)
+    {
+        metatileId = 0x010;
+        layerType = 0;
+    }
 
     if (metatileId > NUM_METATILES_TOTAL)
         metatileId = 0;
@@ -236,7 +252,7 @@ static void DrawMetatileAt(const struct MapLayout *mapLayout, u16 offset, int x,
         metatiles = mapLayout->secondaryTileset->metatiles;
         metatileId -= NUM_METATILES_IN_PRIMARY;
     }
-    DrawMetatile(MapGridGetMetatileLayerTypeAt(x, y), metatiles + metatileId * NUM_TILES_PER_METATILE, offset);
+    DrawMetatile(layerType, metatiles + metatileId * NUM_TILES_PER_METATILE, offset);
 }
 
 static void DrawMetatile(s32 metatileLayerType, const u16 *tiles, u16 offset)

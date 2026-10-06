@@ -6,6 +6,8 @@
 #include "scanline_effect.h"
 #include "europe_map.h"
 #include "europe_tour_journal.h"
+#include "event_object_movement.h"
+#include "field_player_avatar.h"
 #include "event_data.h"
 #include "constants/flags.h"
 #include "constants/vars.h"
@@ -67,6 +69,9 @@ static const u8 sRailHint[] = _("Change trains at intermediate stops.");
 static const u8 sHelpHint[] = _("A: TRAVEL INFO");
 #include "data/europe_geography.h"
 static EWRAM_DATA bool8 sWorldOptions = FALSE;
+static EWRAM_DATA bool8 sWorldPreviewBike = FALSE;
+static EWRAM_DATA u8 sWorldPreviewSpriteId = MAX_SPRITES;
+static EWRAM_DATA struct SpriteTemplate sWorldPreviewTemplate = {};
 static const u8 *const sCityNames[] = {sLondon, sParis, sBerlin, sOxford, sChantilly, sOranienburg, sDover, sCalais};
 
 enum { JOURNAL_MAP, JOURNAL_LEAD, JOURNAL_RECORDS };
@@ -413,6 +418,8 @@ static void DrawEuropeMap(bool8 info)
 
 static void MapVBlank(void)
 {
+    LoadOam();
+    ProcessSpriteCopyRequests();
     TransferPlttBuffer();
 }
 
@@ -425,6 +432,53 @@ static const u8 sWorldOptionText5[] = _("Cosmetic choices. Your trainer ID stays
 static const u8 sWorldOptionText6[] = _("Saved with your normal game save.");
 static const u8 sWorldOptionText7[] = _("UP/DOWN: ROW  LEFT/RIGHT: CHANGE");
 static const u8 sWorldOptionText8[] = _("A: CHANGE  B/START: BACK");
+static const u8 sFlowersOn[] = _("FLOWERS: ON");
+static const u8 sFlowersOff[] = _("FLOWERS: OFF");
+static const u8 sRestoreDefaults[] = _("RESTORE DEFAULTS: PRESS A");
+static const u8 sRestoreHeading[] = _("RESTORE DEFAULTS?");
+static const u8 sRestoreInfo[] = _("All cosmetic settings will reset.");
+static const u8 sOutfitClassic[] = _("OUTFIT: CLASSIC");
+static const u8 sOutfitBlue[] = _("OUTFIT: BLUE");
+static const u8 sOutfitGreen[] = _("OUTFIT: GREEN");
+static const u8 sRestoreSafe[] = _("Your journey and trainer ID stay.");
+static const u8 sRestoreControls[] = _("A: RESTORE  B/START: CANCEL");
+static const u8 sPreviewHeading[] = _("PREVIEW");
+static const u8 sPreviewWalk[] = _("WALK");
+static const u8 sPreviewBike[] = _("BIKE");
+static const u8 sPreviewSelect[] = _("SELECT");
+
+static void DestroyWorldPreview(void)
+{
+    if (sWorldPreviewSpriteId != MAX_SPRITES)
+    {
+        DestroySpriteAndFreeResources(&gSprites[sWorldPreviewSpriteId]);
+        sWorldPreviewSpriteId = MAX_SPRITES;
+    }
+}
+
+static void UpdateWorldPreview(void)
+{
+    u8 gfxId = GetPlayerAvatarGraphicsIdByStateIdAndGender(sWorldPreviewBike ? PLAYER_AVATAR_GFX_BIKE : PLAYER_AVATAR_GFX_NORMAL, GetEuropeAvatarGender());
+    const struct ObjectEventGraphicsInfo *info = GetObjectEventGraphicsInfo(gfxId);
+    const struct SubspriteTable *subsprites;
+    DestroyWorldPreview();
+    // A persistent template allows safe cleanup on repeated menu changes.
+    // The menu owns OBJ palette slot zero, independently of field reservations.
+    CopyObjectGraphicsInfoToSpriteTemplate(gfxId, SpriteCallbackDummy, &sWorldPreviewTemplate, &subsprites);
+    sWorldPreviewTemplate.paletteTag = TAG_NONE;
+    sWorldPreviewSpriteId = CreateSprite(&sWorldPreviewTemplate, 214, 58, 0);
+    if (sWorldPreviewSpriteId != MAX_SPRITES)
+    {
+        if (subsprites != NULL)
+        {
+            SetSubspriteTables(&gSprites[sWorldPreviewSpriteId], subsprites);
+            gSprites[sWorldPreviewSpriteId].subspriteMode = SUBSPRITES_IGNORE_PRIORITY;
+        }
+        gSprites[sWorldPreviewSpriteId].oam.priority = 0;
+        gSprites[sWorldPreviewSpriteId].oam.paletteNum = 0;
+        PatchObjectPalette(info->paletteTag, 0);
+    }
+}
 
 static void DrawWorldOptions(u8 row)
 {
@@ -432,16 +486,37 @@ static void DrawWorldOptions(u8 row)
     static const u8 sRed[] = _("AVATAR: RED");
     static const u8 sLeaf[] = _("AVATAR: LEAF");
     u16 style = VarGet(VAR_EUROPE_AVATAR_STYLE);
+    u16 outfit = VarGet(VAR_EUROPE_OUTFIT_COLOR);
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
     MapText(sWorldOptionText0, 7, 4, sGold);
     MapRect(4, 7, 20, 226, 1);
-    MapText(VarGet(VAR_EUROPE_MAP_DETAIL) ? sWorldOptionText1 : sWorldOptionText2, 12, 32, row == 0 ? sGold : sWhite);
-    MapText(style == 1 ? sRed : style == 2 ? sLeaf : sOriginal, 12, 55, row == 1 ? sGold : sWhite);
-    MapText(VarGet(VAR_EUROPE_MAP_CONTRAST) ? sWorldOptionText3 : sWorldOptionText4, 12, 78, row == 2 ? sGold : sWhite);
-    MapText(sWorldOptionText5, 7, 106, sWhite);
-    MapText(sWorldOptionText6, 7, 119, sWhite);
+    MapText(VarGet(VAR_EUROPE_MAP_DETAIL) ? sWorldOptionText1 : sWorldOptionText2, 12, 25, row == 0 ? sGold : sWhite);
+    MapText(style == 1 ? sRed : style == 2 ? sLeaf : sOriginal, 12, 39, row == 1 ? sGold : sWhite);
+    MapText(VarGet(VAR_EUROPE_MAP_CONTRAST) ? sWorldOptionText3 : sWorldOptionText4, 12, 53, row == 2 ? sGold : sWhite);
+    MapText(VarGet(VAR_EUROPE_HIDE_FLOWERS) == 1 ? sFlowersOff : sFlowersOn, 12, 67, row == 3 ? sGold : sWhite);
+    MapText(outfit == 1 ? sOutfitBlue : outfit == 2 ? sOutfitGreen : sOutfitClassic, 12, 81, row == 4 ? sGold : sWhite);
+    MapText(sRestoreDefaults, 12, 95, row == 5 ? sGold : sWhite);
+    MapText(sPreviewHeading, 191, 25, sGold);
+    MapText(sWorldPreviewBike ? sPreviewBike : sPreviewWalk, 199, 80, sWhite);
+    MapText(sPreviewSelect, 191, 94, sGold);
+    MapText(sWorldOptionText5, 7, 108, sWhite);
+    MapText(sWorldOptionText6, 7, 121, sWhite);
     MapText(sWorldOptionText7, 7, 135, sGold);
     MapText(sWorldOptionText8, 7, 147, sGold);
+    PutWindowTilemap(0);
+    CopyWindowToVram(0, COPYWIN_FULL);
+    UpdateWorldPreview();
+}
+
+static void DrawRestoreDefaults(void)
+{
+    if (sWorldPreviewSpriteId != MAX_SPRITES)
+        gSprites[sWorldPreviewSpriteId].invisible = TRUE;
+    FillWindowPixelBuffer(0, PIXEL_FILL(1));
+    MapText(sRestoreHeading, 7, 12, sGold);
+    MapText(sRestoreInfo, 7, 42, sWhite);
+    MapText(sRestoreSafe, 7, 62, sWhite);
+    MapText(sRestoreControls, 7, 110, sGold);
     PutWindowTilemap(0);
     CopyWindowToVram(0, COPYWIN_FULL);
 }
@@ -450,9 +525,31 @@ static void Task_EuropeMap(u8 taskId)
 {
     if (gPaletteFade.active)
         return;
+    if (sWorldOptions && gTasks[taskId].data[2])
+    {
+        if (JOY_NEW(B_BUTTON | START_BUTTON))
+        {
+            gTasks[taskId].data[2] = 0;
+            PlaySE(SE_SELECT);
+            DrawWorldOptions(5);
+        }
+        else if (JOY_NEW(A_BUTTON))
+        {
+            VarSet(VAR_EUROPE_MAP_DETAIL, 0);
+            VarSet(VAR_EUROPE_AVATAR_STYLE, 0);
+            VarSet(VAR_EUROPE_MAP_CONTRAST, 0);
+            VarSet(VAR_EUROPE_HIDE_FLOWERS, 0);
+            VarSet(VAR_EUROPE_OUTFIT_COLOR, 0);
+            gTasks[taskId].data[2] = 0;
+            PlaySE(SE_SELECT);
+            DrawWorldOptions(5);
+        }
+        return;
+    }
     if (gTasks[taskId].data[0])
     {
         SetVBlankCallback(NULL);
+        DestroyWorldPreview();
         FreeAllWindowBuffers();
         DestroyTask(taskId);
         SetMainCallback2(sEuropeMapReturn);
@@ -466,17 +563,32 @@ static void Task_EuropeMap(u8 taskId)
     else if (sWorldOptions)
     {
         u8 row = gTasks[taskId].data[1];
-        if (JOY_NEW(DPAD_UP | DPAD_DOWN))
+        if (JOY_NEW(SELECT_BUTTON))
         {
-            row = (row + (JOY_NEW(DPAD_UP) ? 2 : 1)) % 3;
+            sWorldPreviewBike = !sWorldPreviewBike;
+            PlaySE(SE_SELECT);
+            DrawWorldOptions(row);
+        }
+        else if (JOY_NEW(DPAD_UP | DPAD_DOWN))
+        {
+            row = (row + (JOY_NEW(DPAD_UP) ? 5 : 1)) % 6;
             gTasks[taskId].data[1] = row;
             PlaySE(SE_SELECT);
             DrawWorldOptions(row);
         }
+        else if (row == 5)
+        {
+            if (JOY_NEW(A_BUTTON))
+            {
+                gTasks[taskId].data[2] = 1;
+                PlaySE(SE_SELECT);
+                DrawRestoreDefaults();
+            }
+        }
         else if (JOY_NEW(A_BUTTON | DPAD_LEFT | DPAD_RIGHT))
         {
-            u16 var = row == 0 ? VAR_EUROPE_MAP_DETAIL : row == 1 ? VAR_EUROPE_AVATAR_STYLE : VAR_EUROPE_MAP_CONTRAST;
-            u8 count = row == 1 ? 3 : 2;
+            u16 var = row == 0 ? VAR_EUROPE_MAP_DETAIL : row == 1 ? VAR_EUROPE_AVATAR_STYLE : row == 2 ? VAR_EUROPE_MAP_CONTRAST : row == 3 ? VAR_EUROPE_HIDE_FLOWERS : VAR_EUROPE_OUTFIT_COLOR;
+            u8 count = row == 1 || row == 4 ? 3 : 2;
             VarSet(var, (VarGet(var) + (JOY_NEW(DPAD_LEFT) ? count - 1 : 1)) % count);
             PlaySE(SE_SELECT);
             DrawWorldOptions(row);
@@ -547,6 +659,8 @@ static void Task_EuropeMap(u8 taskId)
 static void CB2_EuropeMap(void)
 {
     RunTasks();
+    AnimateSprites();
+    BuildOamBuffer();
     UpdatePaletteFade();
 }
 
@@ -560,8 +674,11 @@ static void CB2_InitEuropeMap(void)
     SetGpuReg(REG_OFFSET_BLDALPHA, 0);
     SetGpuReg(REG_OFFSET_BLDY, 0);
     ResetTasks();
+    sWorldPreviewBike = FALSE;
     ResetSpriteData();
+    sWorldPreviewSpriteId = MAX_SPRITES;
     FreeAllSpritePalettes();
+    gReservedSpritePaletteCount = 0;
     ResetPaletteFade();
     DmaClearLarge16(3, (void *)VRAM, VRAM_SIZE, 0x1000);
     ResetBgsAndClearDma3BusyFlags(FALSE);
@@ -581,6 +698,8 @@ static void CB2_InitEuropeMap(void)
     if (sWorldOptions) DrawWorldOptions(0);
     else DrawEuropeMap(FALSE);
     ShowBg(0);
+    if (sWorldOptions)
+        SetGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     CreateTask(Task_EuropeMap, 0);
     SetVBlankCallback(MapVBlank);
@@ -609,6 +728,7 @@ void OpenEuropeMap(MainCallback callback)
         sEuropeMapCurrent = 0;
         break;
     case MAP_NUM(MAP_EUROPE_PARIS):
+    case MAP_NUM(MAP_EUROPE_EIFFEL_VISITOR):
     case MAP_NUM(MAP_EUROPE_NOTREDAME):
     case MAP_NUM(MAP_EUROPE_PARIS_COUNTRYSIDE):
     case MAP_NUM(MAP_EUROPE_PARIS_STATION):
@@ -616,6 +736,10 @@ void OpenEuropeMap(MainCallback callback)
         sEuropeMapCurrent = 1;
         break;
     case MAP_NUM(MAP_EUROPE_BERLIN):
+    case MAP_NUM(MAP_EUROPE_BERLIN_HOME):
+    case MAP_NUM(MAP_EUROPE_BERLIN_LIBRARY):
+    case MAP_NUM(MAP_EUROPE_BERLIN_GARDEN_ROOM):
+    case MAP_NUM(MAP_EUROPE_GATE_VISITOR):
     case MAP_NUM(MAP_EUROPE_REICHSTAG):
     case MAP_NUM(MAP_EUROPE_BERLIN_COUNTRYSIDE):
     case MAP_NUM(MAP_EUROPE_BERLIN_STATION):
