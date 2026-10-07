@@ -9,3 +9,15 @@ EuropeParisStation_OnTransition::
 EuropeParisStation_Clerk::
 	setvar VAR_0x8004, 1
 	goto Europe_Train
+
+EuropeParisStation_LocalBoard::
+ lockall
+ msgbox EuropeParisStation_LocalBoardText, MSGBOX_DEFAULT
+ releaseall
+ end
+
+EuropeParisStation_LocalBoardText::
+ .string "LOCAL WALKS / PARIS\n"
+ .string "Exit south for the SEINE paths.\p"
+ .string "Follow the east lane for both homes.\n"
+ .string "West: sketches. East: garden plans.$"

@@ -1,0 +1,20 @@
+{
+  "London": [
+    "LOCAL WALKS / LONDON",
+    "Exit south for the THAMES paths.",
+    "Follow the east lane for both homes.",
+    "West: album. East: reading room."
+  ],
+  "Paris": [
+    "LOCAL WALKS / PARIS",
+    "Exit south for the SEINE paths.",
+    "Follow the east lane for both homes.",
+    "West: sketches. East: garden plans."
+  ],
+  "Berlin": [
+    "LOCAL WALKS / BERLIN",
+    "Exit south for the GATE approach.",
+    "The east courtyard has three rooms.",
+    "Home, reading room, garden workroom."
+  ]
+}

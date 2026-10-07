@@ -124,3 +124,52 @@ while the map is open and its enabled/R-toggle states are restored on exit.
 Physical L is handled before A to support L=A saves. test_map_rooms.py checks
 retained batteries from all three capitals, controls and exact state on
 exit. test_map_places_static.py checks 50 strings against native widths.
+
+## v1.05 rail-clerk booking cues
+
+The shared rail welcome explains previewing, B/Exit and booking only on
+boarding. The same-station response explains how to choose another stop.
+Routing, transfers, saved booking and cancellation commands are unchanged.
+rail-clerk-v104.inc retains the complete prior script; rail_compatibility.py
+normalizes only the two changed text blocks for older byte-hash checks.
+The dedicated static test requires every other command/text block to match.
+
+Native-input coverage uses retained arrival batteries at all six stations
+and a genuine pre-change rail-clerk-transfer-v104 battery created in London
+during an Oxford-to-Oranienburg trip. It checks menu cancellation, preview
+No/B, saved-transfer keep/cancel and completion through Paris and Berlin.
+Each stationary cancellation checks exact party, inventory and progress.
+
+## v1.06 intermediate rail guidance
+
+Only Europe_Train_Text_Board changes. It names the final destination, points
+to local wall notices and explains retained bookings during exploration.
+rail-transfer-v105.inc preserves the full prior source; before_transfer_cues
+restores only that text for exact command compatibility checks. Runtime
+coverage follows a genuine old transfer through a Paris garden visit, a
+cold Save/Continue, Berlin and final Oranienburg arrival.
+
+## v1.07 returning rail passengers
+
+Only Europe_Train_Text_Resume changes. Three pages show the saved route,
+retained booking during exploration, and the boarding/cancellation choice.
+rail-resume-v106.inc preserves the previous source; before_resume_cues
+restores only this dialogue for exact compatibility checks. Cold battery
+tests cover London transfer and Paris exploration, keeping and boarding.
+
+## v1.08 booked arrivals on foot
+
+Only Europe_Train_Text_Completed changes. It names the reached destination,
+confirms the cleared booking and invites a new trip. The v1.07 full source
+is retained in rail-completion-v107.inc. Compatibility restoration replaces
+exact dialogue byte blocks so mixed line endings remain intact. Genuine
+v1.07 walking-arrival saves cover all three branch towns; runtime checks
+verify completion, fresh menus, cold Continue and return journeys.
+
+## v1.09 walking detours and route origin
+
+One Resume dialogue line now explains the route begins at the current
+station. rail-detour-v108.inc retains the previous complete script; exact
+byte restoration proves every command remains unchanged. Old-ROM batteries
+cover Oxford and Chantilly detours with Oranienburg booked, rejoining the
+main line, cold Continue and final arrival.

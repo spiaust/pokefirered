@@ -120,3 +120,30 @@ the capital-arrival-signs.json source retains the original trail text.
 Compatibility hashes are in capital-arrival-v100.json. Emulator checks
 cover old batteries, both northern crossings, repeated reads and cold
 Continue. Each reading checks exact party and progress before/after.
+
+## v1.03 station approach guidance
+
+The existing London station sign at (22,11), read from (22,12),
+keeps its ticket-office page and adds two pages of neighborhood guidance.
+The route is south along the city paths, then east to the visitor rooms.
+The sign also explains the travel-map R: Places / L: Rooms shortcut.
+No terrain, events, IDs, station staff or train logic changes. Rebuild
+with scripts/build-capital-station-signs.py; source text is retained in
+capital-station-signs.json, compatibility hashes in capital-station-v102.json.
+Focused emulator checks cover normal and side exit approaches, sign repeats, every
+room approach and cold Continue. Earlier full regressions are archived
+with v1.02; v1.03 records 23 freshly run checks for the changed guidance.
+
+## v1.04 local walks inside the station
+
+The London station framed wall picture at (9,1), read from (9,2),
+holds local walking guidance. It describes the south paths and east
+neighborhood rooms. The solid furniture tile 0x585 and all room terrain,
+staff, service scripts, exits and IDs stay unchanged. A background event
+works in retained v1.03 indoor saves without cached-object changes.
+
+Build with scripts/build-station-boards.py. Source notes are stored in
+station-boards.json; station-boards-v103.json retains prior maps/scripts
+and the room-grid hash. Focused tests cover genuine earlier indoor saves,
+repeat readings, exits, re-entry, new cold saves, outdoor signs and Rooms
+controls. Each read checks exact party and progress before and after.

@@ -38,7 +38,11 @@ EuropeParis_Text_Clinic::
 	.string "POKEMON CLINIC\nFree care for traveling partners.$"
 
 EuropeParis_Text_Station::
-	.string "PARIS STATION\nEuropean rail ticket office.$"
+	.string "PARIS STATION\nEuropean rail ticket office.\p"
+	.string "PARIS: SKETCHES AND GARDEN ROOM\n"
+	.string "Follow the south paths, then east.\p"
+	.string "Travel map: select this city.\n"
+	.string "Press R for Places, then L for Rooms.$"
 
 EuropeParis_Text_Route::
 	.string "NORTH: FRENCH GARDENS\nThen CHANTILLY FOREST and town.\p"

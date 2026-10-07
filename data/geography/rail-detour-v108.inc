@@ -124,7 +124,7 @@ Europe_Train_Text_Preview::
 
 Europe_Train_Text_Resume::
 	.string "Saved trip: {STR_VAR_1}\nNext stop: {STR_VAR_2}\p"
-	.string "Trains remaining: {STR_VAR_3}.\nRoute starts from this station.\p"
+	.string "Trains remaining: {STR_VAR_3}.\nYour booking stays while you explore.\p"
 	.string "Board the next train?\nNO opens the cancellation choice.$"
 
 Europe_Train_Text_Cancel::

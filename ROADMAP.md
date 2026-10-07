@@ -3,6 +3,75 @@
 The project grows in playable releases. Build and test each gameplay change
 before adding the next; preserve the previous ROM in `artifacts/releases`.
 
+## To do: complete game walkthrough
+
+- [ ] Write an exact, step-by-step walkthrough from a new game through the
+  final completion sequence, covering each starting-country choice.
+- [ ] Include required quest order, prerequisites, locations, travel routes,
+  NPC interactions, menu choices, battles, rewards and completion checks.
+- [ ] Clearly label optional activities and explain how to resume after saving.
+- [ ] Verify the instructions against the current playable ROM from fresh
+  saves, and record the release version the walkthrough covers.
+
+## v1.09: route guidance after walking detours
+
+The saved-trip prompt explains that the route starts at the current station.
+Only one dialogue line changes. Genuine v1.08 saves after walking detours to
+Oxford and Chantilly verify recalculated connections and remaining trains,
+kept bookings, cold Continue after rejoining and final Oranienburg arrival.
+Next: review the local walking guidance in branch-town stations.
+
+## v1.08: walking-arrival completion guidance
+
+Reaching a booked destination on foot now names the destination, confirms
+the cleared booking and explains how to choose another trip. Rail commands
+remain exact. Genuine v1.07 saves cover Oxford, Chantilly and Oranienburg,
+then cold Continue and return bookings. Compatibility helpers now preserve
+mixed source line endings when restoring individual dialogue blocks.
+Next: review guidance for walking detours to a different rail station.
+
+## v1.07: returning passenger choices
+
+Saved-trip guidance explains that bookings stay during exploration and
+that NO opens a separate cancellation choice. YES boards the next train.
+Only resume dialogue changes; all rail commands remain exact. Old transfer
+and Paris exploration saves exercise every page and both decision paths.
+Next: improve final-arrival guidance for travelers exploring on foot.
+
+## v1.06: intermediate rail exploration guidance
+
+Intermediate boarding shows both the next stop and final destination.
+It points to the station wall notice and explains that the booking stays
+while exploring. Only this dialogue changes; all rail commands remain exact.
+Focused checks cover a Paris garden visit, Save/Continue and onward travel.
+Next: review arrival guidance for passengers returning from local walks.
+
+## v1.05: clear rail-clerk booking cues
+
+The welcome message explains that selecting a stop previews a journey,
+B/Exit closes the list and booking starts only when boarding. Selecting
+the current station explains how to choose another stop. Existing routing,
+preview, transfer, saved-journey and cancellation commands remain exact.
+Focused checks cover all six stations and a genuine v1.04 saved transfer.
+Next: review guidance at intermediate rail stops before local exploration.
+
+## v1.04: station local-walk notices
+
+Each capital station's existing framed wall picture is a readable local
+walking notice. It points to the river/Gate paths and describes the east
+neighborhood rooms. Background interactions work in genuine v1.03 indoor
+saves. No furniture, terrain, staff, service scripts, exits or IDs change.
+Next: review the station clerk's destination cues and cancellation flow.
+
+## v1.03: station-to-neighborhood guidance
+
+Each capital's station sign retains its ticket-office page and adds the
+visitor-room names, south-then-east approach and travel-map Rooms shortcut.
+Station staff, train scripts, terrain, events and map IDs remain exact.
+Focused checks cover normal and side approaches to the station exit, every room approach, repeat reads,
+cold Continue, northern arrival guidance and Rooms controls.
+Next: review destination cues inside the three stations.
+
 ## v1.02: visible Berlin northern sign
 
 Berlin's northern route-sign event now has native sign artwork and solid

@@ -3,6 +3,54 @@
 A FireRed-based prototype of a journey through real European countries.
 
 
+## Detour to another station (v1.09)
+
+Your booking stays active when you walk to a different town. Speak to its
+rail clerk: the next stop and trains remaining are calculated from that
+station. YES boards that connection. Decline cancellation to keep the trip
+for later; your final destination stays the same.
+
+## Finish a journey on foot (v1.08)
+
+You can walk the final leg of a booked journey. Speak to the rail clerk
+at your destination to complete it and clear the booking. The clerk names
+the destination and explains how to choose another trip. Speak again to
+open the stop list; your completed booking stays cleared after Continue.
+
+## Resume after exploring (v1.07)
+
+The rail clerk shows your saved destination, next stop and trains remaining.
+YES boards the next train. NO (or B) opens the cancellation choice;
+choose NO there to keep your booking and continue exploring.
+
+## Explore during a rail journey (v1.06)
+
+Intermediate boarding names your next stop and the trip's final destination.
+At intermediate stops, read the station wall notice for local walks.
+Your booking stays while you explore, including through Save/Continue.
+Return to the rail clerk and confirm continuing your journey to travel on.
+
+## Rail booking cues (v1.05)
+
+The rail clerk now explains the booking controls before opening the stop
+list. Choose a stop to preview the route; B or Exit leaves the list.
+Declining the preview does not book or board a train. A saved journey
+can be kept for later by declining cancellation, or canceled explicitly.
+
+## Local walks inside stations (v1.04)
+
+Inside LONDON, PARIS or BERLIN station, face the framed notice on the back
+wall and press A. It describes the south walking paths and east visitor
+rooms. The ticket clerk, supplies counter and existing exits still work.
+Older indoor saves can read it immediately.
+
+## Directions from the station (v1.03)
+
+Outside LONDON, PARIS or BERLIN station, face the sign beside the entrance
+and press A. After the ticket-office page, it lists the neighborhood rooms
+and points you along the south paths, then east. Select the capital on
+the travel map, press R for Places and L for more room directions.
+
 ## Visible Berlin route sign (v1.02)
 
 Berlin's northern route sign is now visible beside the main approach.

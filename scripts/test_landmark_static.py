@@ -10,7 +10,14 @@ for path,labels in [('data/maps/EuropeParis/scripts.inc',['EuropeParis_RealismNo
  s=(R/path).read_text(encoding='utf-8')
  for label in labels:texts.append(re.search(re.escape(label)+r'::\n((?:[ \t]*\.string[^\n]*\n)+)',s).group(1))
 for city in ['London','Paris','Berlin']:
- s=(R/f'data/maps/Europe{city}/scripts.inc').read_text();texts.append(re.search(re.escape(f'Europe{city}_Text_Route')+r'::\n((?:[ \t]*\.string[^\n]*\n)+)',s).group(1))
+ s=(R/f'data/maps/Europe{city}/scripts.inc').read_text()
+ for label in ['Route','Station']:texts.append(re.search(re.escape(f'Europe{city}_Text_{label}')+r'::\n((?:[ \t]*\.string[^\n]*\n)+)',s).group(1))
+texts += [(R/f'data/maps/Europe{city}Station/scripts.inc').read_text() for city in ['London','Paris','Berlin']]
+s=(R/'data/scripts/europe_train.inc').read_text()
+for label in ['Destination','AlreadyHere']:texts.append(re.search(re.escape('Europe_Train_Text_'+label)+r'::\n((?:[ \t]*\.string[^\n]*\n)+)',s).group(1))
+for label in ['Board','Resume','Completed']:
+ body=re.search(re.escape('Europe_Train_Text_'+label)+r'::\n((?:[ \t]*\.string[^\n]*\n)+)',s).group(1)
+ texts.append(body.replace('{STR_VAR_1}','ORANIENBURG').replace('{STR_VAR_2}','ORANIENBURG').replace('{STR_VAR_3}','4'))
 for text in texts:
  for line in re.findall(r'\.string "(.*?)"',text):
   for part in re.split(r'\\[npl]|\$',line):

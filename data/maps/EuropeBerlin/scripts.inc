@@ -34,7 +34,11 @@ EuropeBerlin_Text_Clinic::
 	.string "POKEMON CLINIC\nFree care for traveling partners.$"
 
 EuropeBerlin_Text_Station::
-	.string "BERLIN STATION\nEuropean rail ticket office.$"
+	.string "BERLIN STATION\nEuropean rail ticket office.\p"
+	.string "BERLIN: THREE COURTYARD ROOMS\n"
+	.string "Follow the south paths, then east.\p"
+	.string "Travel map: select this city.\n"
+	.string "Press R for Places, then L for Rooms.$"
 
 EuropeBerlin_Text_Route::
 	.string "NORTH: GERMAN WOODLAND\nThen HAVEL TRAIL to ORANIENBURG.\p"

@@ -10,6 +10,9 @@ for city in ('London','Paris','Berlin'):
  layout=layouts[f'LAYOUT_EUROPE_{city.upper()}'];w,h=layout['width'],layout['height'];new=struct.unpack('<%dH'%(w*h),(R/layout['blockdata_filepath']).read_bytes());old=struct.unpack('<768H',(R/f'data/geography/{city.lower()}-v050.bin').read_bytes());base=R/f'data/tilesets/secondary/europe_{city.lower()}';attrs=primary+(base/'metatile_attributes.bin').read_bytes()
  for i,b in enumerate(old):
   n=new[(i//32)*w+i%32]
+  if city=='Berlin' and i==4*32+14:
+   assert not b&0xc00 and n==0x402
+   continue  # The dedicated old-on-tile battery test verifies safe escape.
   if not b&0xc00:
    assert not n&0xc00,(city,i,'old traversable position obstructed')
    assert water(b,legacy_attrs)==water(n,attrs),(city,i,'old land/water changed')
@@ -17,4 +20,4 @@ for city in ('London','Paris','Berlin'):
  meta=struct.unpack('<%dH'%((base/'metatiles.bin').stat().st_size//2),(base/'metatiles.bin').read_bytes())
  assert max(t&1023 for t in meta)<1024 and max(t>>12 for t in meta)<13
  assert max(t&1023 for t in new)<len(attrs)//4
- print(f'PASS: {city}: all old traversable coordinates keep land/water and elevation; tileset fits hardware limits')
+ print(f'PASS: {city}: old traversable coordinates keep land/water and elevation apart from the documented Berlin sign; tileset fits hardware limits')

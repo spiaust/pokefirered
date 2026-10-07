@@ -114,9 +114,7 @@ Europe_Train_Exit::
 
 Europe_Train_Text_Destination::
 	.string "Welcome to EUROPEAN RAIL!\n"
-	.string "Choose a stop to preview your trip.\p"
-	.string "B or EXIT closes the stop list.\n"
-	.string "No booking is made until you board.$"
+	.string "Where would you like to travel?$"
 
 Europe_Train_Text_Preview::
 	.string "Destination: {STR_VAR_1}\nNext stop: {STR_VAR_2}\p"
@@ -124,8 +122,7 @@ Europe_Train_Text_Preview::
 
 Europe_Train_Text_Resume::
 	.string "Saved trip: {STR_VAR_1}\nNext stop: {STR_VAR_2}\p"
-	.string "Trains remaining: {STR_VAR_3}.\nRoute starts from this station.\p"
-	.string "Board the next train?\nNO opens the cancellation choice.$"
+	.string "Trains remaining: {STR_VAR_3}.\nContinue your journey?$"
 
 Europe_Train_Text_Cancel::
 	.string "Cancel your saved journey?\nChoose NO to keep it for later.$"
@@ -134,23 +131,18 @@ Europe_Train_Text_Canceled::
 	.string "Your saved journey is canceled.\nTalk to me to choose another trip.$"
 
 Europe_Train_Text_Completed::
-	.string "Destination: {STR_VAR_1}\nYour saved journey is complete.\p"
-	.string "Your booking is cleared.\nTalk to me to choose another trip.$"
+	.string "You've reached your destination!\nYour saved journey is complete.$"
 
 Europe_Train_Text_Board::
-	.string "Next stop: {STR_VAR_2}!\n"
-	.string "Trip ends: {STR_VAR_1}.\p"
+	.string "Next stop: {STR_VAR_2}!\p"
 	.string "At intermediate stops, explore or\n"
-	.string "speak to the rail clerk to continue.\p"
-	.string "Read the wall notice for local walks.\n"
-	.string "Your booking stays while you explore.$"
+	.string "speak to the rail clerk to continue.$"
 
 Europe_Train_Text_FinalBoard::
 	.string "All aboard!\nNext stop: {STR_VAR_2}!$"
 
 Europe_Train_Text_AlreadyHere::
-	.string "You're already at that station!\n"
-	.string "Talk to me to choose another stop.$"
+	.string "You're already at that station!$"
 
 
 

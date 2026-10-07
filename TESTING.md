@@ -1,5 +1,127 @@
 # Prototype verification — 2026-09-18
 
+## v1.09 walking-detour verification - 2026-10-07
+
+34 fresh focused PASS results: detour static (1), detour runtime (4),
+completion static (1), walking arrivals/return trips (6), resume static (1),
+transfer static (2), clerk compatibility (2), station compatibility (2),
+native widths/landmark generation (3), resume choices (2), exploration and
+Continue (2), and clerk runtime (8). Restoring the Resume text block gives
+the complete v1.08 source byte-for-byte; only one dialogue line changed.
+Genuine v1.08 batteries were created by walking to Oxford and Chantilly
+with Oranienburg still booked. Cold Continue shows the correct next capital
+and remaining train count from the independent route graph. Keeping the
+booking preserves exact party, money, inventory, flags, progress and location.
+Boarding rejoins the capital line; another Save/Continue retains exact state,
+then the trip completes at Oranienburg and clears only the booking. Native
+font checks and screenshots verify the revised prompt. All focused rail
+regressions run anew. Packaging retains v1.08 and all three user saves.
+The broad v1.02 baseline remains retained, not counted as newly run.
+
+## v1.08 walking-arrival verification - 2026-10-06
+
+29 fresh focused PASS results: completion static (1), walking arrivals and
+cold Continue/return trips (6), resume static (1), transfer static (2),
+clerk compatibility (2), station compatibility (2), native widths and
+landmark generation (3), resume decisions (2), exploration/Continue (2),
+and prior clerk runtime checks (8). Restoring only completion dialogue
+reproduces the complete v1.07 rail source byte-for-byte. The compatibility
+helper now restores exact byte blocks, including mixed line endings.
+Three genuine v1.07 batteries were created through normal train travel,
+walking and Save at Oxford, Chantilly and Oranienburg. Each cold Continues,
+shows the correct destination and zero trains remaining, clears only the
+booking, stays at the clerk and releases controls. Speaking again opens
+the fresh stop list. Saving completion and cold Continuing preserves exact
+state and permits a normal return train. Native-width checks include the
+longest destination name; completion screenshots are visually checked.
+All prior focused rail checks run anew. Packaging preserves v1.07 and all
+three user saves. The broad v1.02 baseline is retained, not counted anew.
+
+## v1.07 saved-trip choices verification - 2026-10-06
+
+22 fresh focused PASS results: resume text/static (1), transfer static (2),
+clerk compatibility (2), station compatibility (2), native widths and
+landmark generation (3), resume decisions (2), exploration/cold Continue
+(2), and prior clerk runtime checks (8). Restoring only resume dialogue
+reproduces the complete v1.06 rail script byte-for-byte. All commands,
+routing, booking state, cancellation and warps remain exact.
+Genuine old London transfer and saved Paris exploration batteries cold
+Continue and show all three resume pages. NO and B open cancellation;
+NO there retains exact party, money, inventory, flags and progress. YES
+boards the expected train. The Paris garden/save/resume/final-arrival
+journey and six-station previews/cancellations also pass anew.
+Native font widths include maximum station-name substitutions; screenshots
+verify the resume pages. Packaging preserves v1.06 and all three user saves.
+The broad v1.02 baseline is retained, not counted among fresh checks.
+
+## v1.06 intermediate rail guidance verification - 2026-10-06
+
+19 fresh focused PASS results: transfer text/static (2), clerk compatibility
+(2), station compatibility (2), native widths/landmark generation (3),
+exploration and cold Continue (2), and existing clerk runtime checks (8).
+Restoring only the intermediate boarding text reproduces v1.05 byte-for-byte.
+The independent route graph confirms every intermediate stop has a wall notice.
+A genuine v1.04 saved London transfer visits the Paris notice and garden room,
+saves outside, cold Continues, then resumes via Berlin to Oranienburg.
+Final arrival clears the booking; money, inventory, quest state and home country
+remain intact. Stationary decisions also preserve exact party data.
+Native text widths include the longest destination substitution. Screenshots
+cover all three boarding pages and local exploration. Packaging retains v1.05
+and verifies all three user saves unchanged. These are focused checks; the
+previous broad v1.02 release baseline is retained, not counted as newly run.
+
+## v1.05 rail-clerk cue verification - 2026-10-06
+
+17 focused PASS results: rail cue static (2), station compatibility (2),
+wall-notice compatibility (2), native widths/landmark generation (3),
+six-station cancellation checks (6), retained-transfer decisions (1),
+and retained-transfer completion (1). Only the welcome and same-station
+text blocks change. Every booking, cancellation, routing and warp command,
+and every preview/resume/boarding text block, matches the v1.04 source.
+Retained arrival batteries at all six stations exercise B, Exit, selecting
+the current station, and No/B on a route preview. Exact party, money,
+inventory, progress and location remain unchanged. Preview next-stop and
+remaining-train values are checked against the independent route graph.
+A genuine v1.04 London-to-Oranienburg transfer keeps its booking on No/B,
+clears it only on confirmed cancellation, and can instead complete through
+Paris and Berlin. Final arrival clears the booking and retains inventory,
+quest state and home country. Native cue screenshots were checked.
+Packaging retains v1.04 and verifies all three user saves unchanged.
+
+## v1.04 station wall-notice verification - 2026-10-06
+
+25 focused PASS results: notice static (2), station-sign static (2), arrival
+static (2), Places widths (1), native dialogue/landmark generation (3),
+wall-notice old saves and cold Continue (6), station sign visits/saves (6),
+and Rooms controls in retained capital saves (3). Genuine v1.03 batteries
+were created beside the existing framed wall picture in all three stations.
+They read the new notice twice, exit/re-enter, read again and create new
+saves. Cold Continue retains position and progress, rereads and exits.
+Each read retains exact party/progress data; walks retain inventory, money
+and quest state. Exact room grids, staff, service scripts, exits and IDs
+are retained. Existing station compatibility checks permit only the new
+background event and appended notice script; the dedicated static check
+independently requires those additions. Native widths and notice screenshots
+were checked. The broader v1.02 baseline remains archived. Packaging retains
+v1.03 and verifies all three user saves unchanged.
+
+## v1.03 station-sign verification - 2026-10-06
+
+23 focused PASS results: station static (2), northern arrival static (2),
+Places widths (1), native dialogue/landmark generation (3), station visits
+and cold saves (6), northern arrival visits/saves (6), and Rooms controls
+in retained capital saves (3). The broader 190-check v1.02 baseline remains
+archived; this release changes only three station-sign text blocks.
+Each city enters its station at native threshold (4,8), steps inward and
+uses the two-step exit. New cold saves read the sign again and use the
+side approach to the marked station exit. All sign pages are read twice,
+and every neighborhood
+room approach is reachable. Each reading retains exact party/progress;
+walks retain money, inventory and quest state. Full outdoor maps, station
+maps/scripts, staff, warps, map IDs and shared train script match v1.02.
+Source generation and native widths pass; all three station-sign screenshots
+were checked. Packaging retains v1.02 and verifies three user saves unchanged.
+
 ## v1.02 visible Berlin-marker verification - 2026-10-06
 
 190 focused PASS results: the preceding 184 plus two marker static checks,

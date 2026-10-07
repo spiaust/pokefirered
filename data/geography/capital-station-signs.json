@@ -1,0 +1,29 @@
+{
+  "London": {
+    "base": "\t.string \"LONDON STATION\\nEuropean rail ticket office.$\"\n",
+    "notes": [
+      "LONDON: HOME AND READING ROOM",
+      "Follow the south paths, then east.",
+      "Travel map: select this city.",
+      "Press R for Places, then L for Rooms."
+    ]
+  },
+  "Paris": {
+    "base": "\t.string \"PARIS STATION\\nEuropean rail ticket office.$\"\n",
+    "notes": [
+      "PARIS: SKETCHES AND GARDEN ROOM",
+      "Follow the south paths, then east.",
+      "Travel map: select this city.",
+      "Press R for Places, then L for Rooms."
+    ]
+  },
+  "Berlin": {
+    "base": "\t.string \"BERLIN STATION\\nEuropean rail ticket office.$\"\n",
+    "notes": [
+      "BERLIN: THREE COURTYARD ROOMS",
+      "Follow the south paths, then east.",
+      "Travel map: select this city.",
+      "Press R for Places, then L for Rooms."
+    ]
+  }
+}
