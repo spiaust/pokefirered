@@ -31,6 +31,18 @@ EuropeBerlinHome_Notebook::
  release
  end
 
+EuropeBerlinHome_Guestbook::
+ lockall
+ msgbox EuropeBerlinHome_GuestbookText, MSGBOX_DEFAULT
+ releaseall
+ end
+
+EuropeBerlinHome_GuestbookText::
+ .string "A guestbook of courtyard memories.\n"
+ .string "Visitors sketch the flowers and trees.\p"
+ .string "One recalls a quiet walk by the GATE.\n"
+ .string "Another thanks the garden neighbors.$"
+
 EuropeBerlinHome_End::
  releaseall
  end
@@ -43,7 +55,7 @@ EuropeBerlinHome_HostText::
  .string "Welcome! Rest your feet a moment.\n"
  .string "Our garden is a shared little joy.\p"
  .string "Neighbors take turns tending it.\n"
- .string "Small acts of care add up.$"
+ .string "The guestbook is on the table.$"
 
 EuropeBerlinHome_NotebookText::
  .string "A notebook of garden observations.\n"

@@ -37,6 +37,30 @@ def build(city,specs,source="capitals-source.png",mask_palette=False,base_name="
     row.append(640+len(attrs)//4);meta+=struct.pack('<8H',*under,*entries);attrs+=struct.pack('<I',0)
    blocks.append(row)
   ids[label]=blocks
+ if city=='Paris':
+  # Copy native roof tiles into the existing blue-gray palette 8.
+  # No shared palette is altered. Preserve transparent index zero.
+  sourcepal=[tuple(map(int,line.split())) for line in (R/'data/tilesets/primary/general/palettes/02.pal').read_text().splitlines()[3:]]
+  targetpal=[tuple(map(int,line.split())) for line in (base/'palettes/08.pal').read_text().splitlines()[3:]]
+  for index,color in {11:(156,180,205),12:(115,148,180),13:(82,115,148),14:(49,74,106)}.items():sourcepal[index]=color
+  remap=[0]+[min(range(1,16),key=lambda j:sum((sourcepal[i][c]-targetpal[j][c])**2 for c in range(3))) for i in range(1,16)]
+  remap[11:15]=[3,4,6,7]  # Four ordered native blue-gray roof shades.
+  primary=Image.open(R/'data/tilesets/primary/general/tiles.png')
+  house={};tilecopies={}
+  pallet=struct.unpack('<480H',(R/'data/layouts/PalletTown/map.bin').read_bytes())
+  for old in sorted({pallet[y*24+x]&1023 for y in range(3,6) for x in range(5,10)}):
+   entries=list(struct.unpack_from('<8H',meta,(old-640)*16))
+   for i,v in enumerate(entries):
+    if v>>12!=2:continue
+    tileid=v&1023
+    if tileid not in tilecopies:
+     image=primary.crop(((tileid%16)*8,(tileid//16)*8,(tileid%16)*8+8,(tileid//16)*8+8))
+     image.putdata([remap[c] for c in image.getdata()])
+     tiles.paste(image,((n%16)*8,(n//16)*8));tilecopies[tileid]=640+n;n+=1
+    entries[i]=0x8000|(v&0xc00)|tilecopies[tileid]
+   house[str(old)]=640+len(attrs)//4
+   meta+=struct.pack('<8H',*entries);attrs+=attrs[(old-640)*4:(old-640+1)*4]
+  ids.update(garden_roof=house,roof_tiles=tilecopies,roof_remap=remap)
  assert n<=384
  tiles.save(dest/'tiles.png');(dest/'metatiles.bin').write_bytes(meta);(dest/'metatile_attributes.bin').write_bytes(attrs)
  (R/f'data/geography/{city.lower()}-landmark-blocks.json').write_text(json.dumps(ids,indent=2)+'\n')

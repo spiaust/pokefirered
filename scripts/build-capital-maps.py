@@ -3,7 +3,7 @@ from pathlib import Path
 import json,struct,sys
 R=Path(__file__).resolve().parents[1]
 def build(city):
- W,H=(40,46) if city=='Paris' else (64,44)
+ W,H=(64,46) if city=='Paris' else (64,44)
  old=struct.unpack('<768H',(R/f'data/geography/{city.lower()}-v050.bin').read_bytes())
  a=[[0x3010 for x in range(W)] for y in range(H)]
  for y in range(22):a[y][:32]=old[y*32:(y+1)*32]
@@ -66,6 +66,8 @@ def build(city):
   for x in range(W):
    if x<2 or x>=W-2 or y>=H-2 or (y<2 and x>=32):a[y][x]=0x400|((0x14 if y%2 else 0x1c)+x%2)
  if city=='Berlin':
+  # Restore the native northern sign; the three adjacent lane columns stay open.
+  a[4][14]=0x402
   # Preserve the old eastern edge, opening only a ground-level street.
   for y in range(H):
    for x in (38,39):a[y][x]=0x400|((0x14 if y%2 else 0x1c)+x%2)
@@ -84,7 +86,26 @@ def build(city):
   for bx,label in [(42,'home'),(50,'library'),(57,'workroom')]:
    for dy,row in enumerate(facades[label]):
     for dx,t in enumerate(row):a[27+dy][bx+dx]=0x400|t
-  signs += [('Boulevard',40,36,['UNTER DEN LINDEN APPROACH','West: BRANDENBURG GATE.','East: the residential court.','Use the side lanes to circle it.']),('Court',56,34,['COURTYARD VISITOR ROOMS','West: home. Middle: reading room.','East: the garden workroom.','Face a door and press A to visit.'])]
+  signs += [('Boulevard',40,36,['UNTER DEN LINDEN APPROACH','West: BRANDENBURG GATE.','East: the residential court.','Use the side lanes to circle it.']),('Court',56,34,['COURTYARD VISITOR ROOMS','West: home. Middle: reading room.','East: the garden workroom.','Face a door and press A to visit.','COURTYARD NOTES','Seed and watering notes: workroom.','Garden log: middle reading room.','Share a memory in the western home.'])]
+  for _,x,y,_ in signs:a[y][x]=0x402
+ if city=='Paris':
+  # Retain the former eastern tree boundary, opening a short lane mouth.
+  for y in range(H):
+   for x in (38,39):a[y][x]=0x400|((0x14 if y%2 else 0x1c)+x%2)
+  for y in range(32):
+   for x in range(40,62):a[y][x]=0x400|((0x14 if y%2 else 0x1c)+x%2)
+  rect(34,40,28,2,0x3165);rect(40,39,22,2,0x3165)
+  for y in (40,41):a[y][37]=0x3010  # Retain the old grass approach.
+  rect(49,39,2,5,0x3165);rect(59,39,2,5,0x3165);rect(40,43,22,1,0x3165)
+  rect(43,42,5,1,0x3004);rect(54,42,5,1,0x3004)
+  pallet=struct.unpack('<480H',(R/'data/layouts/PalletTown/map.bin').read_bytes())
+  for bx in (44,54):
+   for dy in range(5):
+    for dx in range(5):a[34+dy][bx+dx]=0x400|(pallet[(3+dy)*24+5+dx]&1023)
+  for y in range(34,37):
+   for x in range(54,59):
+    t=a[y][x];a[y][x]=(t&0xfc00)|blocks['garden_roof'][str(t&1023)]
+  signs += [('Lane',43,41,['PROMENADE SIDE LANE','West: the river and EIFFEL gardens.','The south path circles the flowers.','Both homes welcome visitors.']),('Homes',55,41,['NEIGHBORHOOD HOMES','West: sketches. East: garden room.','Face either door and press A.','Return west for the island bridge.'])]
   for _,x,y,_ in signs:a[y][x]=0x402
  original=[r[:] for r in a];forestids={0x14,0x15,0x1c,0x1d}
  def forest(x,y):return x<0 or y<0 or x>=W or y>=H or original[y][x]&1023 in forestids
@@ -110,6 +131,12 @@ def build(city):
   j['object_events']=[e for e in j['object_events'] if not e['script'].startswith('EuropeBerlin_Court')]
   for gfx,x,y,label in [('OBJ_EVENT_GFX_WOMAN_1',45,36,'Gardener'),('OBJ_EVENT_GFX_OLD_MAN_1',53,36,'Neighbor'),('OBJ_EVENT_GFX_PIKACHU',54,36,'Pikachu')]:
    j['object_events'].append(dict(type='object',graphics_id=gfx,x=x,y=y,elevation=3,movement_type='MOVEMENT_TYPE_FACE_DOWN',movement_range_x=0,movement_range_y=0,trainer_type='TRAINER_TYPE_NONE',trainer_sight_or_berry_tree_id='0',script='EuropeBerlin_Court'+label,flag='0'))
+ if city=='Paris':
+  j['object_events']=[e for e in j['object_events'] if not e['script'].startswith(('EuropeParis_Garden','EuropeParis_Promenade'))]
+  for gfx,x,y,label in [('OBJ_EVENT_GFX_WOMAN_2',6,40,'Observer'),('OBJ_EVENT_GFX_PSYDUCK',7,40,'Psyduck')]:
+   j['object_events'].append(dict(type='object',graphics_id=gfx,x=x,y=y,elevation=3,movement_type='MOVEMENT_TYPE_FACE_DOWN',movement_range_x=0,movement_range_y=0,trainer_type='TRAINER_TYPE_NONE',trainer_sight_or_berry_tree_id='0',script='EuropeParis_Garden'+label,flag='0'))
+ if city=='Paris':
+  j['object_events'].append(dict(type='object',graphics_id='OBJ_EVENT_GFX_GENTLEMAN',x=30,y=42,elevation=3,movement_type='MOVEMENT_TYPE_FACE_DOWN',movement_range_x=0,movement_range_y=0,trainer_type='TRAINER_TYPE_NONE',trainer_sight_or_berry_tree_id='0',script='EuropeParis_PromenadeArtist',flag='0'))
  for suffix,x,y,lines in signs:j['bg_events'].append(dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=f'Europe{city}_Realism{suffix}'))
  p.write_text(json.dumps(j,indent=2)+'\n')
  p=R/f'data/maps/Europe{city}/scripts.inc';s=p.read_text();s=s.split(f'\nEurope{city}_Realism')[0]
@@ -123,6 +150,11 @@ def build(city):
    for i,line in enumerate(lines):s+='\t.string "'+line+('$' if i==len(lines)-1 else '\\p' if i%2 else '\\n')+'"\n'
  if city=='Berlin':
   s+='\nEuropeBerlin_CourtPikachu::\n\tlock\n\tfaceplayer\n\twaitse\n\tplaymoncry SPECIES_PIKACHU, CRY_MODE_NORMAL\n\tmsgbox EuropeBerlin_CourtPikachuText, MSGBOX_DEFAULT\n\twaitmoncry\n\trelease\n\tend\n\nEuropeBerlin_CourtPikachuText::\n\t.string "PIKACHU: Pika! Pika!$"\n'
+ if city=='Paris':
+  s+='\nEuropeParis_GardenObserver::\n\tlock\n\tfaceplayer\n\tmsgbox EuropeParis_GardenObserverText, MSGBOX_DEFAULT\n\trelease\n\tend\n\nEuropeParis_GardenObserverText::\n\t.string "PSYDUCK rests beside these flowers.\\n"\n\t.string "I watch quietly and make notes.\\p"\n\t.string "The EIFFEL visitor room has sketches.\\n"\n\t.string "Follow the path north to visit.$"\n'
+  s+='\nEuropeParis_GardenPsyduck::\n\tlock\n\tfaceplayer\n\twaitse\n\tplaymoncry SPECIES_PSYDUCK, CRY_MODE_NORMAL\n\tmsgbox EuropeParis_GardenPsyduckText, MSGBOX_DEFAULT\n\twaitmoncry\n\trelease\n\tend\n\nEuropeParis_GardenPsyduckText::\n\t.string "PSYDUCK: Psy? Psyduck!$"\n'
+ if city=='Paris':
+  s+='\nEuropeParis_PromenadeArtist::\n\tlock\n\tfaceplayer\n\tmsgbox EuropeParis_PromenadeArtistText, MSGBOX_DEFAULT\n\trelease\n\tend\n\nEuropeParis_PromenadeArtistText::\n\t.string "I sketch the river from this bank.\\n"\n\t.string "The light changes as people pass.\\p"\n\t.string "I leave the path clear for walkers.\\n"\n\t.string "A little space lets us all enjoy it.$"\n'
  p.write_text(s)
  print(city,W,H,'landmark district generated')
 if __name__=='__main__':

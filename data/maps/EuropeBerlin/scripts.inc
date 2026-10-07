@@ -39,7 +39,11 @@ EuropeBerlin_Text_Station::
 EuropeBerlin_Text_Route::
 	.string "NORTH: GERMAN WOODLAND\nThen HAVEL TRAIL to ORANIENBURG.\p"
 	.string "Cycle along the clear middle path.\n"
-	.string "Wild POKEMON live in the tall grass.$"
+	.string "Wild POKEMON live in the tall grass.\p"
+	.string "BERLIN VISITOR ROOMS\n"
+	.string "East courtyard: three visitor rooms.\p"
+	.string "Travel map: select this city.\n"
+	.string "Press R for Places, then L for Rooms.$"
 
 EuropeBerlin_Landmark::
 	msgbox EuropeBerlin_Text_Landmark, MSGBOX_SIGN
@@ -95,7 +99,11 @@ EuropeBerlin_RealismCourtText::
 	.string "COURTYARD VISITOR ROOMS\n"
 	.string "West: home. Middle: reading room.\p"
 	.string "East: the garden workroom.\n"
-	.string "Face a door and press A to visit.$"
+	.string "Face a door and press A to visit.\p"
+	.string "COURTYARD NOTES\n"
+	.string "Seed and watering notes: workroom.\p"
+	.string "Garden log: middle reading room.\n"
+	.string "Share a memory in the western home.$"
 
 EuropeBerlin_CourtGardener::
 	lock

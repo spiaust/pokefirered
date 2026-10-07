@@ -1,6 +1,7 @@
 #include "global.h"
 #include "gflib.h"
 #include "menu.h"
+#include "help_system.h"
 #include "task.h"
 #include "overworld.h"
 #include "scanline_effect.h"
@@ -18,6 +19,7 @@ static EWRAM_DATA MainCallback sEuropeMapReturn = NULL;
 static EWRAM_DATA u8 sEuropeMapSelection = 0;
 static EWRAM_DATA u8 sEuropeMapCurrent = 0;
 static EWRAM_DATA bool8 sEuropeMapPast = FALSE;
+static EWRAM_DATA bool8 sEuropePlacesRooms = FALSE;
 static const struct BgTemplate sMapBg[] = {
     {.bg = 0, .charBaseIndex = 0, .mapBaseIndex = 31, .priority = 0}
 };
@@ -66,10 +68,14 @@ static const u8 sDover[] = _("DOVER");
 static const u8 sCalais[] = _("CALAIS");
 static const u8 *const sDetails[] = {sLondonInfo, sParisInfo, sBerlinInfo, sOxfordInfo, sChantillyInfo, sOranienburgInfo, sDoverInfo, sCalaisInfo};
 static const u8 sRailHint[] = _("Change trains at intermediate stops.");
-static const u8 sHelpHint[] = _("A: TRAVEL INFO");
+static const u8 sHelpHint[] = _("A: INFO  R: PLACES");
 #include "data/europe_geography.h"
 static EWRAM_DATA bool8 sWorldOptions = FALSE;
+static EWRAM_DATA bool8 sEuropeMapHelpRDisabled = FALSE;
+static EWRAM_DATA bool8 sEuropeMapHelpEnabled = FALSE;
 static EWRAM_DATA bool8 sWorldPreviewBike = FALSE;
+static EWRAM_DATA u8 sWorldPreviewFacing = 0;
+static const u8 sPreviewDirections[] = {DIR_SOUTH, DIR_WEST, DIR_NORTH, DIR_EAST};
 static EWRAM_DATA u8 sWorldPreviewSpriteId = MAX_SPRITES;
 static EWRAM_DATA struct SpriteTemplate sWorldPreviewTemplate = {};
 static const u8 *const sCityNames[] = {sLondon, sParis, sBerlin, sOxford, sChantilly, sOranienburg, sDover, sCalais};
@@ -409,9 +415,80 @@ static void DrawEuropeMap(bool8 info)
     MapRect(3, x + 2, y - 1, 1, 3);
     MapText(sNorthLabel, 225, 18, sWhite);
     MapText(GetEuropeMapLocation(), 7, 111, sWhite);
-    MapText(sHelpHint, 163, 111, sGold);
+    MapText(sHelpHint, 130, 111, sGold);
     MapText(sEuropeMapPast ? sPastHint : (info ? (sEuropeMapSelection >= 6 ? sCoastHint : sRailHint) : sDetails[sEuropeMapSelection]), 7, 127, sWhite);
     MapText(sControls, 7, 145, sGold);
+    PutWindowTilemap(0);
+    CopyWindowToVram(0, COPYWIN_FULL);
+}
+
+static const u8 sPlacesHeading[] = _("PLACES / PRESENT-DAY");
+static const u8 sRoomsHeading[] = _("ROOMS / PRESENT-DAY");
+static const u8 sRoomsBrowse[] = _("D-PAD: STOP  L: PLACES");
+static const u8 sPlacesRoomBrowse[] = _("D-PAD: STOP  L: ROOMS");
+static const u8 sPlacesBrowse[] = _("D-PAD: STOP");
+static const u8 sPlacesControls[] = _("R/B: MAP  A: ROUTES  SELECT: STORY");
+static const u8 sPlacesLines[][4][44] = {
+    {_("WESTMINSTER: face the south door."),
+     _("EYE gallery: face the southern base."),
+     _("Garden visitors: south of the EYE."),
+     _("Homes: both doors in east lane.")},
+    {_("NOTRE-DAME: face the south door."),
+     _("EIFFEL room: face the southern base."),
+     _("Garden visitors: south garden loop."),
+     _("Homes: both doors in east side lane.")},
+    {_("REICHSTAG: face the south door."),
+     _("GATE room: face the west pillar."),
+     _("Courtyard rooms: follow the road east."),
+     _("Home, books and garden workroom.")},
+    {_("Explore the OXFORD TRAIL."),
+     _("Ask the city guide about tour stamps."),
+     _("Visit the clinic before a walk."),
+     _("Station: onward rail travel.")},
+    {_("Explore the CHANTILLY FOREST."),
+     _("Ask the city guide about tour stamps."),
+     _("Visit the clinic before a forest walk."),
+     _("Station: onward rail travel.")},
+    {_("Explore the HAVEL TRAIL."),
+     _("Ask the city guide about tour stamps."),
+     _("Visit the clinic before a walk."),
+     _("Station: onward rail travel.")},
+    {_("DOVER: ferry across to CALAIS."),
+     _("Take the coach to LONDON."),
+     _("Ask the transport staff to travel."),
+     _("City rooms are listed by stop.")},
+    {_("CALAIS: ferry across to DOVER."),
+     _("Take the coach to PARIS."),
+     _("Ask the transport staff to travel."),
+     _("City rooms are listed by stop.")}
+};
+
+static const u8 sRoomsLines[][4][44] = {
+    {_("Follow the east lane to both homes."),
+     _("West: sitting room and photo album."),
+     _("East: reading room and back cabinet."),
+     _("Face either door and press A.")},
+    {_("East side lane: both homes."),
+     _("West: sketches on the back display."),
+     _("East: garden plans on both benches."),
+     _("Face either door and press A.")},
+    {_("Follow the road east to the courtyard."),
+     _("West: guestbook. Middle: garden log."),
+     _("East: seed and watering bench notes."),
+     _("Face any of the three doors; press A.")}
+};
+
+static void DrawEuropePlaces(void)
+{
+    u8 i;
+    FillWindowPixelBuffer(0, PIXEL_FILL(1));
+    MapText(sEuropePlacesRooms ? sRoomsHeading : sPlacesHeading, 7, 4, sGold);
+    MapRect(4, 7, 20, 226, 1);
+    MapText(sCityNames[sEuropeMapSelection], 12, 27, sGold);
+    for (i = 0; i < 4; i++)
+        MapText(sEuropePlacesRooms ? sRoomsLines[sEuropeMapSelection][i] : sPlacesLines[sEuropeMapSelection][i], 12, 50 + i * 18, sWhite);
+    MapText(sEuropePlacesRooms ? sRoomsBrowse : (sEuropeMapSelection < ARRAY_COUNT(sRoomsLines) ? sPlacesRoomBrowse : sPlacesBrowse), 7, 130, sWhite);
+    MapText(sPlacesControls, 7, 147, sGold);
     PutWindowTilemap(0);
     CopyWindowToVram(0, COPYWIN_FULL);
 }
@@ -429,7 +506,7 @@ static const u8 sWorldOptionText2[] = _("MAP DETAIL: SIMPLE");
 static const u8 sWorldOptionText3[] = _("MAP COLORS: HIGH CONTRAST");
 static const u8 sWorldOptionText4[] = _("MAP COLORS: NATURAL");
 static const u8 sWorldOptionText5[] = _("Cosmetic choices. Your trainer ID stays.");
-static const u8 sWorldOptionText6[] = _("Saved with your normal game save.");
+static const u8 sWorldOptionText6[] = _("Save normally. SELECT: WALK/BIKE.");
 static const u8 sWorldOptionText7[] = _("UP/DOWN: ROW  LEFT/RIGHT: CHANGE");
 static const u8 sWorldOptionText8[] = _("A: CHANGE  B/START: BACK");
 static const u8 sFlowersOn[] = _("FLOWERS: ON");
@@ -440,12 +517,13 @@ static const u8 sRestoreInfo[] = _("All cosmetic settings will reset.");
 static const u8 sOutfitClassic[] = _("OUTFIT: CLASSIC");
 static const u8 sOutfitBlue[] = _("OUTFIT: BLUE");
 static const u8 sOutfitGreen[] = _("OUTFIT: GREEN");
+static const u8 sOutfitPurple[] = _("OUTFIT: PURPLE");
 static const u8 sRestoreSafe[] = _("Your journey and trainer ID stay.");
 static const u8 sRestoreControls[] = _("A: RESTORE  B/START: CANCEL");
 static const u8 sPreviewHeading[] = _("PREVIEW");
 static const u8 sPreviewWalk[] = _("WALK");
 static const u8 sPreviewBike[] = _("BIKE");
-static const u8 sPreviewSelect[] = _("SELECT");
+static const u8 sPreviewTurn[] = _("R:TURN");
 
 static void DestroyWorldPreview(void)
 {
@@ -476,6 +554,7 @@ static void UpdateWorldPreview(void)
         }
         gSprites[sWorldPreviewSpriteId].oam.priority = 0;
         gSprites[sWorldPreviewSpriteId].oam.paletteNum = 0;
+        StartSpriteAnim(&gSprites[sWorldPreviewSpriteId], GetFaceDirectionAnimNum(sPreviewDirections[sWorldPreviewFacing]));
         PatchObjectPalette(info->paletteTag, 0);
     }
 }
@@ -494,11 +573,11 @@ static void DrawWorldOptions(u8 row)
     MapText(style == 1 ? sRed : style == 2 ? sLeaf : sOriginal, 12, 39, row == 1 ? sGold : sWhite);
     MapText(VarGet(VAR_EUROPE_MAP_CONTRAST) ? sWorldOptionText3 : sWorldOptionText4, 12, 53, row == 2 ? sGold : sWhite);
     MapText(VarGet(VAR_EUROPE_HIDE_FLOWERS) == 1 ? sFlowersOff : sFlowersOn, 12, 67, row == 3 ? sGold : sWhite);
-    MapText(outfit == 1 ? sOutfitBlue : outfit == 2 ? sOutfitGreen : sOutfitClassic, 12, 81, row == 4 ? sGold : sWhite);
+    MapText(outfit == 1 ? sOutfitBlue : outfit == 2 ? sOutfitGreen : outfit == 3 ? sOutfitPurple : sOutfitClassic, 12, 81, row == 4 ? sGold : sWhite);
     MapText(sRestoreDefaults, 12, 95, row == 5 ? sGold : sWhite);
     MapText(sPreviewHeading, 191, 25, sGold);
     MapText(sWorldPreviewBike ? sPreviewBike : sPreviewWalk, 199, 80, sWhite);
-    MapText(sPreviewSelect, 191, 94, sGold);
+    MapText(sPreviewTurn, 191, 94, sGold);
     MapText(sWorldOptionText5, 7, 108, sWhite);
     MapText(sWorldOptionText6, 7, 121, sWhite);
     MapText(sWorldOptionText7, 7, 135, sGold);
@@ -546,10 +625,20 @@ static void Task_EuropeMap(u8 taskId)
         }
         return;
     }
+    if (!sWorldOptions && gTasks[taskId].data[7] && JOY_NEW(B_BUTTON | START_BUTTON))
+    {
+        gTasks[taskId].data[7] = 0;
+        sEuropePlacesRooms = FALSE;
+        PlaySE(SE_SELECT);
+        DrawEuropeMap(FALSE);
+        return;
+    }
     if (gTasks[taskId].data[0])
     {
         SetVBlankCallback(NULL);
         DestroyWorldPreview();
+        gHelpSystemToggleWithRButtonDisabled = sEuropeMapHelpRDisabled;
+        gHelpSystemEnabled = sEuropeMapHelpEnabled;
         FreeAllWindowBuffers();
         DestroyTask(taskId);
         SetMainCallback2(sEuropeMapReturn);
@@ -566,6 +655,12 @@ static void Task_EuropeMap(u8 taskId)
         if (JOY_NEW(SELECT_BUTTON))
         {
             sWorldPreviewBike = !sWorldPreviewBike;
+            PlaySE(SE_SELECT);
+            DrawWorldOptions(row);
+        }
+        else if (JOY_NEW(R_BUTTON))
+        {
+            sWorldPreviewFacing = (sWorldPreviewFacing + 1) % ARRAY_COUNT(sPreviewDirections);
             PlaySE(SE_SELECT);
             DrawWorldOptions(row);
         }
@@ -588,7 +683,7 @@ static void Task_EuropeMap(u8 taskId)
         else if (JOY_NEW(A_BUTTON | DPAD_LEFT | DPAD_RIGHT))
         {
             u16 var = row == 0 ? VAR_EUROPE_MAP_DETAIL : row == 1 ? VAR_EUROPE_AVATAR_STYLE : row == 2 ? VAR_EUROPE_MAP_CONTRAST : row == 3 ? VAR_EUROPE_HIDE_FLOWERS : VAR_EUROPE_OUTFIT_COLOR;
-            u8 count = row == 1 || row == 4 ? 3 : 2;
+            u8 count = row == 4 ? 4 : row == 1 ? 3 : 2;
             VarSet(var, (VarGet(var) + (JOY_NEW(DPAD_LEFT) ? count - 1 : 1)) % count);
             PlaySE(SE_SELECT);
             DrawWorldOptions(row);
@@ -596,6 +691,8 @@ static void Task_EuropeMap(u8 taskId)
     }
     else if (JOY_NEW(SELECT_BUTTON))
     {
+        gTasks[taskId].data[7] = 0;
+        sEuropePlacesRooms = FALSE;
         PlaySE(SE_SELECT);
         if (gTasks[taskId].data[1] != JOURNAL_MAP)
         {
@@ -640,18 +737,44 @@ static void Task_EuropeMap(u8 taskId)
             DrawEuropeJournal(taskId);
         }
     }
+    else if (JOY_NEW(R_BUTTON))
+    {
+        gTasks[taskId].data[7] ^= 1;
+        sEuropePlacesRooms = FALSE;
+        PlaySE(SE_SELECT);
+        if (gTasks[taskId].data[7])
+            DrawEuropePlaces();
+        else
+            DrawEuropeMap(FALSE);
+    }
+    else if (JOY_NEW(L_BUTTON))
+    {
+        // Consume physical L before A, including saves using L=A.
+        if (gTasks[taskId].data[7] && sEuropeMapSelection < ARRAY_COUNT(sRoomsLines))
+        {
+            sEuropePlacesRooms ^= 1;
+            PlaySE(SE_SELECT);
+            DrawEuropePlaces();
+        }
+    }
     else if (JOY_NEW(DPAD_LEFT | DPAD_UP | DPAD_RIGHT | DPAD_DOWN))
     {
+        sEuropePlacesRooms = FALSE;
         if (JOY_NEW(DPAD_LEFT | DPAD_UP))
             sEuropeMapSelection = (sEuropeMapSelection + ARRAY_COUNT(sCityX) - 1) % ARRAY_COUNT(sCityX);
         else
             sEuropeMapSelection = (sEuropeMapSelection + 1) % ARRAY_COUNT(sCityX);
         PlaySE(SE_SELECT);
-        DrawEuropeMap(FALSE);
+        if (gTasks[taskId].data[7])
+            DrawEuropePlaces();
+        else
+            DrawEuropeMap(FALSE);
     }
     else if (JOY_NEW(A_BUTTON))
     {
         PlaySE(SE_SELECT);
+        gTasks[taskId].data[7] = 0;
+        sEuropePlacesRooms = FALSE;
         DrawEuropeMap(TRUE);
     }
 }
@@ -673,8 +796,14 @@ static void CB2_InitEuropeMap(void)
     SetGpuReg(REG_OFFSET_BLDCNT, 0);
     SetGpuReg(REG_OFFSET_BLDALPHA, 0);
     SetGpuReg(REG_OFFSET_BLDY, 0);
+    sEuropeMapHelpRDisabled = gHelpSystemToggleWithRButtonDisabled;
+    sEuropeMapHelpEnabled = gHelpSystemEnabled;
+    gHelpSystemEnabled = FALSE;
+    gHelpSystemToggleWithRButtonDisabled = TRUE;
     ResetTasks();
+    sEuropePlacesRooms = FALSE;
     sWorldPreviewBike = FALSE;
+    sWorldPreviewFacing = 0;
     ResetSpriteData();
     sWorldPreviewSpriteId = MAX_SPRITES;
     FreeAllSpritePalettes();
@@ -727,7 +856,13 @@ void OpenEuropeMap(MainCallback callback)
     case MAP_NUM(MAP_EUROPE_SOUTHAMPTON_PAST):
         sEuropeMapCurrent = 0;
         break;
+    case MAP_NUM(MAP_EUROPE_LONDON_HOME):
+    case MAP_NUM(MAP_EUROPE_LONDON_READING_ROOM):
+        sEuropeMapCurrent = 0;
+        break;
     case MAP_NUM(MAP_EUROPE_PARIS):
+    case MAP_NUM(MAP_EUROPE_PARIS_HOME):
+    case MAP_NUM(MAP_EUROPE_PARIS_GARDEN_ROOM):
     case MAP_NUM(MAP_EUROPE_EIFFEL_VISITOR):
     case MAP_NUM(MAP_EUROPE_NOTREDAME):
     case MAP_NUM(MAP_EUROPE_PARIS_COUNTRYSIDE):

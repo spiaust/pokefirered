@@ -3,6 +3,185 @@
 A FireRed-based prototype of a journey through real European countries.
 
 
+## Visible Berlin route sign (v1.02)
+
+Berlin's northern route sign is now visible beside the main approach.
+Face it from below and press A for countryside and visitor-room directions.
+The lane beside it remains open. A save made on its former pavement tile
+can step down safely and continue playing.
+
+## Northern arrival signs (v1.01)
+
+When returning from the countryside to LONDON, PARIS or BERLIN, read the
+route sign near the northern entrance. Face it from below and press A.
+Its first pages retain trail and wild-POKEMON guidance; the later pages
+point toward the visitor rooms and explain the travel-map Rooms shortcut.
+
+## Finding the capital rooms (v1.00)
+
+Open the travel map, select LONDON, PARIS or BERLIN and press R for Places.
+Press L for Rooms: this page lists the neighborhood approach, room order
+and details to read inside. Press L to return to Places. Changing stops
+also returns to Places. R or B returns to the map; A shows routes.
+The Rooms pages describe present-day locations, including when browsing
+from a historical save. They do not move the player.
+
+## Berlin courtyard notice (v0.99)
+
+Face the courtyard sign at (56,34) from (56,35) and press A. Its first
+pages give room directions; the later notice points to the workbench
+observations, reading-room garden log and western home's guestbook.
+Press A to advance through the pages and return to walking.
+
+## Berlin garden notes (v0.98)
+
+Enter the eastern courtyard garden workroom at Berlin (58,31), approaching
+from (58,32). Face either side workbench and press A: the left holds seed
+notes and the right holds watering observations. Both are readable from
+above or below. The gardener, tools and planting plan remain available.
+
+## Berlin library catalog (v0.97)
+
+Enter the middle courtyard reading room at Berlin (51,31), approaching
+from (51,32). Face the central table from above or below and press A to
+browse its catalog. The librarian and both record books remain available.
+
+## Berlin guestbook (v0.96)
+
+Enter the western courtyard sitting room at Berlin (43,31), approaching
+from (43,32). Face the central table from above or below and press A to
+read the shared guestbook. The host and notebook remain available.
+
+## Paris garden plans (v0.95)
+
+Visit the slate-roofed eastern workroom and face either side bench. Press
+A to read: the left bench has a planting plan, and the right has a shared
+care rota. Both can be read from above or below. The gardener and notebook
+remain available. Older indoor saves and normal Save/Continue still work.
+
+## Paris river sketches (v0.94)
+
+Visit the red-roofed western sketch room and face the display cabinet on
+the back wall. Press A to read about three river views in changing light.
+The host and sketchbook remain available. Older indoor saves refresh the
+display on Continue at the same position; normal saves and both exits work.
+
+## Finding the Paris rooms (v0.93)
+
+The red-roofed western home is the sketch room. The slate-blue-roofed
+eastern home is the garden workroom. Both welcome visitors through their
+front doors in the lane east of the promenade. Older saves keep their
+positions, including indoor saves. Face a door and press A to visit.
+
+## Paris garden workroom (v0.92)
+
+Both homes in the lane east of the promenade now welcome visitors. Face
+the eastern door and press A to meet the gardener and read the shared
+planning notebook. The western door still opens the sketch room.
+Save/Continue works indoors; both front exits return to the eastern path.
+The signs and Places guide now point to both doors.
+
+## Paris sketch room (v0.91)
+
+In the lane east of the promenade, face the western home's door and press
+A. Accept the invitation to meet the host and browse the sketchbook near
+the wall. Leave through the front exit. Save/Continue works indoors.
+The eastern garden workroom opens in v0.92. The Places guide points to the door.
+
+## Paris neighborhood lane (v0.90)
+
+Follow the south-bank promenade east, past the route to the island bridge,
+and through the opening in the trees. Two home fronts and flower beds
+face a public lane with a southern walking loop. The western sketch room opens in v0.91; the eastern garden workroom opens in v0.92. Read the signs for the way back; the Places guide also
+points to the lane. Older saves retain their coordinates.
+
+## Paris promenade sketcher (v0.89)
+
+Follow the left-bank promenade east toward the island bridge. A sketcher
+stands on the grass south of the path, east of the Eiffel garden. Approach
+from the south and press A to talk. Older Paris saves show the sketcher
+on Continue. The garden observer, PSYDUCK and landmark visits remain.
+
+## London photo album (v0.88)
+
+Visit the red-roofed western sitting room and examine the red album on
+the table from its north side. It shows the neighbors bringing their
+garden to life. The host points it out; the garden notebook remains.
+Older indoor saves and normal Save/Continue work as before.
+
+## Shared books in London (v0.87)
+
+The slate-roofed eastern reading room now has a compact reading table and
+a cabinet of shared books. Face the cabinet on the back wall and press A.
+The neighbor and walking notebook remain available. Older indoor saves
+continue at the same positions; Save/Continue and both front exits work.
+
+## Finding the London homes (v0.86)
+
+The red-roofed western home is the sitting room. The slate-blue-roofed
+eastern home is the reading room. Both are in the lane east of the Eye
+garden. Face a front door and press A to visit. Older saves continue at
+the same positions, including saves inside either room.
+
+## London reading room (v0.85)
+
+Both homes in the lane east of the Eye garden welcome visitors. Face the
+eastern door and press A to visit the reading room, meet the neighbor and
+read the riverside walking notebook. The western door still leads to the
+sitting room. Save/Continue works in both. Exit through either front tile.
+
+## London sitting room (v0.84)
+
+In the lane east of the Eye garden, face the western home's door from
+the path and press A. Accept the invitation to meet the host and read
+the garden notebook. Leave through the front exit. Save/Continue works
+indoors. The eastern reading room opens in v0.85. The Places guide points to the door.
+
+## London residential lane (v0.83)
+
+From the garden loop south of the Eye, follow the path east into the new
+residential lane. Two home fronts, flower beds and a southern loop extend
+the walking district. Read the signs for the route back to the Eye.
+The western home opens in v0.84; the eastern reading room opens in v0.85. Existing saves
+continue at the same coordinates, including saves inside visitor rooms.
+
+## Purple outfit (v0.82)
+
+WORLD OPTIONS now cycles OUTFIT through CLASSIC, BLUE, GREEN and PURPLE.
+Use Left/Right or A to select it, R to turn the preview, and SELECT to
+check WALK/BIKE. Save normally to retain the color. Restore Defaults
+returns to CLASSIC. Existing saved outfit colors keep their meaning.
+
+## Turn the avatar preview (v0.81)
+
+In WORLD OPTIONS, press R to turn the avatar preview through all four
+views. SELECT switches WALK/BIKE. Avatar and outfit changes retain the
+preview direction; reopening begins facing forward. This display choice
+does not change your character's field direction or saved preferences.
+
+## Finding places from the travel map (v0.80)
+
+Open the travel map and press R for PLACES. Browse stops with the D-pad to
+find visitor-room entrances, garden interactions, country walks and port
+connections. Capital pages include the Eiffel room, Eye gallery, Gate room
+and Berlin courtyard. B, START or R returns to the map; A shows route
+information and SELECT opens the story journal. Places describes the
+present-day tour, including when opened from a historical save.
+
+## London garden visitors (v0.79)
+
+Near the London Eye, a visitor and JIGGLYPUFF sit beside the flower beds.
+Speak from the garden path south of them. The visitor points toward the
+Eye gallery; JIGGLYPUFF answers with its cry. Both conversations repeat,
+and both visitors appear when continuing an older London save.
+
+## Paris garden visitors (v0.78)
+
+South of the Eiffel visitor room, an observer and PSYDUCK sit beside the
+flower beds. Approach from the southern garden loop and press A to speak
+to either. The observer points toward the visitor-room sketches; PSYDUCK
+answers with its cry. Both appear immediately in older Paris saves.
+
 ## Gate visitor room (v0.77)
 
 At the Brandenburg Gate, stand on the southern path facing the west
@@ -95,7 +274,7 @@ The middle courtyard building now welcomes readers. Face north from the
 pavement beneath its door and press A, then choose YES. Speak to the
 librarian and read the two records. Walk through either front exit tile
 to return outside. The western sitting room remains open, including for
-existing indoor saves. The eastern home remains private.
+existing indoor saves. The eastern garden workroom opens in v0.92.
 
 ## Berlin sitting room (v0.65)
 

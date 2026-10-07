@@ -24,7 +24,7 @@ p=R/'data/maps/map_groups.json';groups=json.loads(p.read_text())
 if name not in groups['gMapGroup_Europe']:groups['gMapGroup_Europe'].append(name)
 p.write_text(json.dumps(groups,indent=2)+'\n')
 m=json.loads((R/'data/maps/EuropeBerlinLibrary/map.json').read_text())
-m.update(id='MAP_EUROPE_BERLIN_GARDEN_ROOM',name=name,layout=lid)
+m.update(id='MAP_EUROPE_BERLIN_GARDEN_ROOM',name=name,layout=lid,bg_events=[dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=name+('_SeedNotes' if x<4 else '_WateringNotes')) for x in (2,3,10,11) for y in (5,6)])
 labels={'Librarian':'Gardener','GardenBook':'Tools','HistoryBook':'PlantingPlan'}
 for o in m['object_events']:
  label=labels[o['script'].split('_')[-1]];o['script']=name+'_'+label
@@ -33,12 +33,17 @@ for e in m['coord_events']:e['script']=name+'_Exit'
 d=R/f'data/maps/{name}';d.mkdir(exist_ok=True);(d/'map.json').write_text(json.dumps(m,indent=2)+'\n')
 s=(R/'data/maps/EuropeBerlinLibrary/scripts.inc').read_text().replace('EuropeBerlinLibrary',name).replace('MAP_EUROPE_BERLIN_LIBRARY','MAP_EUROPE_BERLIN_GARDEN_ROOM').replace('51, 32','58, 32')
 for old,new in labels.items():s=s.replace(name+'_'+old,name+'_'+new)
-texts={'Entry':['COURTYARD GARDEN WORKROOM','Come in and see how we tend it?'],'Gardener':['Welcome to our garden workroom!','We share tools and planting plans.','Watch the beds, then make notes.','Good care starts with noticing.'],'Tools':['Clean tools are ready on the bench.','Use a light touch around the roots.','Return each tool when you finish,','so the next neighbor can use it.'],'PlantingPlan':['A sketch of the courtyard beds.','Keep the shaded patches for ODDISH.','Leave the lanes open for visitors.','The reading room keeps our records.']}
+texts={'Entry':['COURTYARD GARDEN WORKROOM','Come in and see how we tend it?'],'Gardener':['Welcome to our garden workroom!','We share tools and planting plans.','Watch the beds, then make notes.','Read the notes on our workbenches.'],'Tools':['Clean tools are ready on the bench.','Use a light touch around the roots.','Return each tool when you finish,','so the next neighbor can use it.'],'PlantingPlan':['A sketch of the courtyard beds.','Keep the shaded patches for ODDISH.','Leave the lanes open for visitors.','The reading room keeps our records.']}
 for label,lines in texts.items():
  text=name+'_'+label+'Text';block=text+'::\n'
  for i,line in enumerate(lines):block+=' .string "'+line+('$' if i==len(lines)-1 else '\\p' if i%2 else '\\n')+'"\n'
  pattern=re.escape(text)+r'::\n(?:[ \t]*\.string[^\n]*\n)+'
  s,n=re.subn(pattern,lambda _:block,s);assert n==1,text
+# Keep each room's interactions independent of the template room.
+s=s.split(name+'_Catalog::')[0]
+for label,lines in [('SeedNotes',['A page of seed observations.','Mark each tray before sowing.','Leave space for the roots to spread.','Watch for new shoots in the spring.']),('WateringNotes',['A page of watering observations.','Check the soil beneath the surface.','Shaded beds may dry more slowly.','Record what changes after rain.'])]:
+ s+=f'\n{name}_{label}::\n lockall\n msgbox {name}_{label}Text, MSGBOX_DEFAULT\n releaseall\n end\n\n{name}_{label}Text::\n'
+ for i,line in enumerate(lines):s+=' .string "'+line+('$' if i==len(lines)-1 else '\\p' if i%2 else '\\n')+'"\n'
 (d/'scripts.inc').write_text(s)
 p=R/'data/maps/EuropeBerlin/map.json';m=json.loads(p.read_text())
 event=dict(type='sign',x=58,y=31,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=name+'_Enter')

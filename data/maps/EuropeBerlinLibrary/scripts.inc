@@ -37,7 +37,7 @@ EuropeBerlinLibrary_LibrarianText::
  .string "Welcome! These are local records.\n"
  .string "People write down what they notice.\p"
  .string "A garden, a journey, a helping hand:\n"
- .string "small stories deserve a place too.$"
+ .string "The table catalog lists our records.$"
 
 EuropeBerlinLibrary_GardenBook::
  lock
@@ -64,3 +64,15 @@ EuropeBerlinLibrary_HistoryBookText::
  .string "Visitors once brought field notes\p"
  .string "from journeys across EUROPE.\n"
  .string "Care connected one place to another.$"
+
+EuropeBerlinLibrary_Catalog::
+ lockall
+ msgbox EuropeBerlinLibrary_CatalogText, MSGBOX_DEFAULT
+ releaseall
+ end
+
+EuropeBerlinLibrary_CatalogText::
+ .string "A catalog of neighborhood records.\n"
+ .string "GARDEN LOG: notes from the courtyard.\p"
+ .string "FIELD NOTES: journeys across EUROPE.\n"
+ .string "Each small story has a place here.$"

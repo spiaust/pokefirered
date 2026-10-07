@@ -1,0 +1,29 @@
+{
+  "London": {
+    "base": "\t.string \"NORTH: ENGLISH MEADOW\\nContinue along the trail to OXFORD.\\p\"\n\t.string \"Wild POKEMON live in the tall grass.\\n\"\n\t.string \"The middle path is clear for bikes.$\"\n",
+    "notes": [
+      "LONDON VISITOR ROOMS",
+      "East lane: home and reading room.",
+      "Travel map: select this city.",
+      "Press R for Places, then L for Rooms."
+    ]
+  },
+  "Paris": {
+    "base": "\t.string \"NORTH: FRENCH GARDENS\\nThen CHANTILLY FOREST and town.\\p\"\n\t.string \"Cycle along the clear middle path.\\n\"\n\t.string \"Wild POKEMON live in the tall grass.$\"\n",
+    "notes": [
+      "PARIS VISITOR ROOMS",
+      "East lane: sketches and garden room.",
+      "Travel map: select this city.",
+      "Press R for Places, then L for Rooms."
+    ]
+  },
+  "Berlin": {
+    "base": "\t.string \"NORTH: GERMAN WOODLAND\\nThen HAVEL TRAIL to ORANIENBURG.\\p\"\n\t.string \"Cycle along the clear middle path.\\n\"\n\t.string \"Wild POKEMON live in the tall grass.$\"\n",
+    "notes": [
+      "BERLIN VISITOR ROOMS",
+      "East courtyard: three visitor rooms.",
+      "Travel map: select this city.",
+      "Press R for Places, then L for Rooms."
+    ]
+  }
+}

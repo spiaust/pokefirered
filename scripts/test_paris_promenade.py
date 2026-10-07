@@ -4,15 +4,17 @@ import json,struct,subprocess,sys,hashlib
 R=Path(__file__).resolve().parents[1]
 p=R/'data/layouts/EuropeParis/map.bin'
 old=struct.unpack('<1840H',(R/'data/geography/paris-v060.bin').read_bytes())
-new=struct.unpack('<1840H',p.read_bytes())
+new=struct.unpack('<2944H',p.read_bytes())
 attrs=(R/'data/tilesets/primary/general/metatile_attributes.bin').read_bytes()+(R/'data/tilesets/secondary/europe_paris/metatile_attributes.bin').read_bytes()
 water=lambda t:struct.unpack_from('<I',attrs,(t&1023)*4)[0]&511 in (0x10,0x11,0x12,0x13,0x15,0x19,0x1a,0x1b)
-for i,(a,b) in enumerate(zip(old,new)):
+for i,a in enumerate(old):
+ x,y=i%40,i//40;b=new[y*64+x]
+ if x in (38,39) and y in (40,41):assert b==0x3165;continue
  assert (a&0xfc00)==(b&0xfc00),(i,'collision/elevation')
  assert water(a)==water(b),(i,'land/water')
 for x,y in [(4,32),(4,36),(4,42),(13,42),(13,36),(17,32),(21,38),(26,38),(33,38)]:
- assert new[y*40+x]==0x3165,(x,y,'missing pavement')
-print('PASS: every v0.60 Paris collision, elevation and land/water cell retained; promenade paths paved')
+ assert new[y*64+x]==0x3165,(x,y,'missing pavement')
+print('PASS: v0.60 Paris collision, elevation and land/water retained outside the lane mouth; promenade paths paved')
 paths=[p,R/'data/maps/EuropeParis/map.json',R/'data/maps/EuropeParis/scripts.inc',R/'data/layouts/layouts.json',R/'data/layouts/EuropeBerlin/map.bin']
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 before={p:sha(p) for p in paths}

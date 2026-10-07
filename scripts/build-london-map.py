@@ -4,7 +4,7 @@ The v0.50 hub's walkable tiles and event coordinates remain compatible.
 from pathlib import Path
 import json,struct
 R=Path(__file__).resolve().parents[1]
-W,H=40,44
+W,H=64,44
 old=struct.unpack('<768H',(R/'data/geography/london-v050.bin').read_bytes())
 a=[[0x3010 for x in range(W)] for y in range(H)]
 for y in range(22):a[y][:32]=old[y*32:(y+1)*32]
@@ -56,6 +56,24 @@ for x,y in [(14,26),(18,30),(26,27),(28,35)]:a[y][x]=0x402
 for y in range(H):
  for x in range(W):
   if x<2 or x>=W-2 or y>=H-2 or (y<2 and x>=32):a[y][x]=0x400|((0x14 if y%2 else 0x1c)+x%2)
+# Retain the former eastern tree edge, with a two-row lane to new homes.
+for y in range(H):
+ for x in (38,39):a[y][x]=0x400|((0x14 if y%2 else 0x1c)+x%2)
+for y in range(26):
+ for x in range(40,62):a[y][x]=0x400|((0x14 if y%2 else 0x1c)+x%2)
+rect(34,36,28,2,0x3165)
+rect(40,33,22,2,0x3165);rect(49,33,2,9,0x3165);rect(59,33,2,9,0x3165)
+rect(40,40,22,2,0x3165)
+rect(42,38,5,2,0x3004);rect(53,38,5,2,0x3004)
+pallet=struct.unpack('<480H',(R/'data/layouts/PalletTown/map.bin').read_bytes())
+for bx in (44,54):
+ for dy in range(5):
+  for dx in range(5):a[28+dy][bx+dx]=0x400|(pallet[(3+dy)*24+5+dx]&1023)
+# Eastern reading-room roof keeps all native collision/elevation bits.
+for y in range(28,31):
+ for x in range(54,59):
+  t=a[y][x];a[y][x]=(t&0xfc00)|blocks['reading_roof'][str(t&1023)]
+for x,y in ((43,35),(55,35)):a[y][x]=0x402
 original=[r[:] for r in a];forestids={0x14,0x15,0x1c,0x1d}
 def forest(x,y):return x<0 or y<0 or x>=W or y>=H or original[y][x]&0x3ff in forestids
 for y in range(H):
@@ -76,7 +94,19 @@ for l in j['layouts']:
  if l.get('id')=='LAYOUT_EUROPE_LONDON':l.update(width=W,height=H,secondary_tileset='gTileset_EuropeLondon')
 p.write_text(json.dumps(j,indent=2)+'\n')
 p=R/'data/maps/EuropeLondon/map.json';j=json.loads(p.read_text());j['bg_events']=[e for e in j['bg_events'] if not e['script'].startswith('EuropeLondon_Realism')]
-for suffix,x,y in [('Whitehall',14,26),('Parliament',18,30),('Eye',26,27),('Gardens',28,35)]:
+j['object_events']=[e for e in j['object_events'] if not e['script'].startswith('EuropeLondon_Garden')]
+for gfx,x,y,label in [('OBJ_EVENT_GFX_LITTLE_GIRL',30,34,'Visitor'),('OBJ_EVENT_GFX_JIGGLYPUFF',31,34,'Jigglypuff')]:
+ j['object_events'].append(dict(type='object',graphics_id=gfx,x=x,y=y,elevation=3,movement_type='MOVEMENT_TYPE_FACE_DOWN',movement_range_x=0,movement_range_y=0,trainer_type='TRAINER_TYPE_NONE',trainer_sight_or_berry_tree_id='0',script='EuropeLondon_Garden'+label,flag='0'))
+for suffix,x,y in [('Whitehall',14,26),('Parliament',18,30),('Eye',26,27),('Gardens',28,35),('SideStreet',43,35),('Homes',55,35)]:
  j['bg_events'].append(dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='EuropeLondon_Realism'+suffix))
 p.write_text(json.dumps(j,indent=2)+'\n')
 print('London:',W,'x',H,'with Westminster landmarks and two new crossings')
+
+p=R/'data/maps/EuropeLondon/scripts.inc';s=p.read_text().split('\nEuropeLondon_Garden')[0]
+s+='\nEuropeLondon_GardenVisitor::\n\tlock\n\tfaceplayer\n\tmsgbox EuropeLondon_GardenVisitorText, MSGBOX_DEFAULT\n\trelease\n\tend\n\nEuropeLondon_GardenVisitorText::\n\t.string "JIGGLYPUFF likes this quiet garden.\\n"\n\t.string "We give resting POKEMON room.\\p"\n\t.string "The EYE gallery has garden sketches.\\n"\n\t.string "Follow the riverside path north.$"\n'
+s+='\nEuropeLondon_GardenJigglypuff::\n\tlock\n\tfaceplayer\n\twaitse\n\tplaymoncry SPECIES_JIGGLYPUFF, CRY_MODE_NORMAL\n\tmsgbox EuropeLondon_GardenJigglypuffText, MSGBOX_DEFAULT\n\twaitmoncry\n\trelease\n\tend\n\nEuropeLondon_GardenJigglypuffText::\n\t.string "JIGGLYPUFF: Jiggly! Puff!$"\n'
+for label,lines in [('SideStreet',['GARDEN SIDE LANE','West: the EYE and riverside paths.','Follow the southern loop around','the flower beds and homes.']),('Homes',['RESIDENTIAL LANE','West: open sitting room.','East: open reading room.','Face either door and press A.'])]:
+ name='EuropeLondon_Realism'+label
+ s+=f'\n{name}::\n\tmsgbox {name}Text, MSGBOX_SIGN\n\tend\n\n{name}Text::\n'
+ for i,line in enumerate(lines):s+='\t.string "'+line+('$' if i==len(lines)-1 else '\\p' if i%2 else '\\n')+'"\n'
+p.write_text(s)

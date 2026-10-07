@@ -37,7 +37,7 @@ EuropeBerlinGardenRoom_GardenerText::
  .string "Welcome to our garden workroom!\n"
  .string "We share tools and planting plans.\p"
  .string "Watch the beds, then make notes.\n"
- .string "Good care starts with noticing.$"
+ .string "Read the notes on our workbenches.$"
 
 EuropeBerlinGardenRoom_Tools::
  lock
@@ -64,3 +64,28 @@ EuropeBerlinGardenRoom_PlantingPlanText::
  .string "Keep the shaded patches for ODDISH.\p"
  .string "Leave the lanes open for visitors.\n"
  .string "The reading room keeps our records.$"
+
+
+EuropeBerlinGardenRoom_SeedNotes::
+ lockall
+ msgbox EuropeBerlinGardenRoom_SeedNotesText, MSGBOX_DEFAULT
+ releaseall
+ end
+
+EuropeBerlinGardenRoom_SeedNotesText::
+ .string "A page of seed observations.\n"
+ .string "Mark each tray before sowing.\p"
+ .string "Leave space for the roots to spread.\n"
+ .string "Watch for new shoots in the spring.$"
+
+EuropeBerlinGardenRoom_WateringNotes::
+ lockall
+ msgbox EuropeBerlinGardenRoom_WateringNotesText, MSGBOX_DEFAULT
+ releaseall
+ end
+
+EuropeBerlinGardenRoom_WateringNotesText::
+ .string "A page of watering observations.\n"
+ .string "Check the soil beneath the surface.\p"
+ .string "Shaded beds may dry more slowly.\n"
+ .string "Record what changes after rain.$"

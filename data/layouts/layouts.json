@@ -4402,7 +4402,7 @@
     {
       "id": "LAYOUT_EUROPE_LONDON",
       "name": "EuropeLondon_Layout",
-      "width": 40,
+      "width": 64,
       "height": 44,
       "border_width": 2,
       "border_height": 2,
@@ -4426,7 +4426,7 @@
     {
       "id": "LAYOUT_EUROPE_PARIS",
       "name": "EuropeParis_Layout",
-      "width": 40,
+      "width": 64,
       "height": 46,
       "border_width": 2,
       "border_height": 2,
@@ -4770,6 +4770,54 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/EuropeGateVisitor/border.bin",
       "blockdata_filepath": "data/layouts/EuropeGateVisitor/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_LONDON_HOME",
+      "name": "EuropeLondonHome_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeLondonHome/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeLondonHome/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_LONDON_READING_ROOM",
+      "name": "EuropeLondonReadingRoom_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeLondonReadingRoom/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeLondonReadingRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_PARIS_HOME",
+      "name": "EuropeParisHome_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeParisHome/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeParisHome/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_PARIS_GARDEN_ROOM",
+      "name": "EuropeParisGardenRoom_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeParisGardenRoom/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeParisGardenRoom/map.bin"
     }
   ]
 }

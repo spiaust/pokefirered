@@ -41,7 +41,11 @@ EuropeLondon_Text_Station::
 EuropeLondon_Text_Route::
 	.string "NORTH: ENGLISH MEADOW\nContinue along the trail to OXFORD.\p"
 	.string "Wild POKEMON live in the tall grass.\n"
-	.string "The middle path is clear for bikes.$"
+	.string "The middle path is clear for bikes.\p"
+	.string "LONDON VISITOR ROOMS\n"
+	.string "East lane: home and reading room.\p"
+	.string "Travel map: select this city.\n"
+	.string "Press R for Places, then L for Rooms.$"
 
 EuropeLondon_Landmark::
 	msgbox EuropeLondon_Text_Landmark, MSGBOX_SIGN
@@ -94,3 +98,49 @@ EuropeLondon_RealismTextGardens::
 	.string "Follow the SOUTH BANK riverside path.\p"
 	.string "The garden loop rejoins the walk\n"
 	.string "toward the red LAMBETH crossing.$"
+
+EuropeLondon_GardenVisitor::
+	lock
+	faceplayer
+	msgbox EuropeLondon_GardenVisitorText, MSGBOX_DEFAULT
+	release
+	end
+
+EuropeLondon_GardenVisitorText::
+	.string "JIGGLYPUFF likes this quiet garden.\n"
+	.string "We give resting POKEMON room.\p"
+	.string "The EYE gallery has garden sketches.\n"
+	.string "Follow the riverside path north.$"
+
+EuropeLondon_GardenJigglypuff::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_JIGGLYPUFF, CRY_MODE_NORMAL
+	msgbox EuropeLondon_GardenJigglypuffText, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+EuropeLondon_GardenJigglypuffText::
+	.string "JIGGLYPUFF: Jiggly! Puff!$"
+
+EuropeLondon_RealismSideStreet::
+	msgbox EuropeLondon_RealismSideStreetText, MSGBOX_SIGN
+	end
+
+EuropeLondon_RealismSideStreetText::
+	.string "GARDEN SIDE LANE\n"
+	.string "West: the EYE and riverside paths.\p"
+	.string "Follow the southern loop around\n"
+	.string "the flower beds and homes.$"
+
+EuropeLondon_RealismHomes::
+	msgbox EuropeLondon_RealismHomesText, MSGBOX_SIGN
+	end
+
+EuropeLondon_RealismHomesText::
+	.string "RESIDENTIAL LANE\n"
+	.string "West: open sitting room.\p"
+	.string "East: open reading room.\n"
+	.string "Face either door and press A.$"

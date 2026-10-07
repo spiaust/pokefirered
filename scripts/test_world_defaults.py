@@ -14,13 +14,13 @@ try:
  load_checkpoint(e,'world-flowers-save',True)
  assert prefs(e)==(1,2,1,1,0)
  before=preserved(e);identity=who(e);loc=e.location()
- open_key_item(e,363);wait_task(e,'Task_EuropeMap');e.press('UP',60);e.press('UP',60);e.press('RIGHT',60);e.press('DOWN',60)
- e.press('LEFT',60);e.press('RIGHT',60);assert prefs(e)==(1,2,1,1,1)
+ open_key_item(e,363);wait_task(e,'Task_EuropeMap');e.press('UP',60);e.press('UP',60);e.press('LEFT',60);e.press('DOWN',60)
+ e.press('LEFT',60);e.press('RIGHT',60);assert prefs(e)==(1,2,1,1,3)
  for cancel in ('B','START'):
   e.press('A',60);e.press(cancel,60)
-  assert e.task_active('Task_EuropeMap') and prefs(e)==(1,2,1,1,1)
+  assert e.task_active('Task_EuropeMap') and prefs(e)==(1,2,1,1,3)
  e.press('A',60);e.screenshot(ROOT/'test-output/world-defaults-confirm.png')
- assert prefs(e)==(1,2,1,1,1)
+ assert prefs(e)==(1,2,1,1,3)
  e.press('A',60);assert prefs(e)==(0,0,0,0,0)
  e.screenshot(ROOT/'test-output/world-defaults-menu.png');close(e)
  assert e.location()==loc and preserved(e)==before and who(e)==identity

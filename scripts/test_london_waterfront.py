@@ -2,17 +2,20 @@
 from pathlib import Path
 import json,struct,hashlib,subprocess,sys
 R=Path(__file__).resolve().parents[1]
-p=R/'data/layouts/EuropeLondon/map.bin';old=struct.unpack('<1760H',(R/'data/geography/london-v061.bin').read_bytes());new=struct.unpack('<1760H',p.read_bytes())
+p=R/'data/layouts/EuropeLondon/map.bin';old=struct.unpack('<1760H',(R/'data/geography/london-v061.bin').read_bytes());new=struct.unpack('<%dH'%(p.stat().st_size//2),p.read_bytes())
+w=next(l['width'] for l in json.loads((R/'data/layouts/layouts.json').read_text())['layouts'] if l.get('id')=='LAYOUT_EUROPE_LONDON')
 attrs=(R/'data/tilesets/primary/general/metatile_attributes.bin').read_bytes()+(R/'data/tilesets/secondary/europe_london/metatile_attributes.bin').read_bytes()
 water=lambda t:struct.unpack_from('<I',attrs,(t&1023)*4)[0]&511 in (0x10,0x11,0x12,0x13,0x15,0x19,0x1a,0x1b)
-for i,(a,b) in enumerate(zip(old,new)):
+for i,a in enumerate(old):
+ x,y=i%40,i//40;b=new[y*w+x]
+ if x in (38,39) and y in (36,37):assert b==0x3165;continue
  assert a&0xfc00==b&0xfc00,(i,'collision/elevation')
  assert water(a)==water(b),(i,'land/water')
 bridges=json.loads((R/'data/geography/london-landmark-blocks.json').read_text())['bridges']
 for name,x,y in [('westminster',20,28),('lambeth',22,38)]:
  for dy,t in enumerate(bridges[name]):
-  for dx in range(4):assert new[(y+dy)*40+x+dx]==0x3000|t
-print('PASS: all v0.61 London collision/elevation and water retained; both bridge overlays remain walkable')
+  for dx in range(4):assert new[(y+dy)*w+x+dx]==0x3000|t
+print('PASS: v0.61 London collision/elevation and water retained outside the new lane opening; both bridge overlays remain walkable')
 base=R/'data/tilesets/secondary/europe_london'
 paths=[p,R/'data/layouts/EuropeLondonPast/map.bin',R/'data/maps/EuropeLondon/map.json',R/'data/geography/london-landmark-blocks.json',base/'tiles.png',base/'metatiles.bin',base/'metatile_attributes.bin']+list((base/'palettes').glob('*.pal'))
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();before={p:sha(p) for p in paths}

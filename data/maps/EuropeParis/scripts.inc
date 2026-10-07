@@ -43,7 +43,11 @@ EuropeParis_Text_Station::
 EuropeParis_Text_Route::
 	.string "NORTH: FRENCH GARDENS\nThen CHANTILLY FOREST and town.\p"
 	.string "Cycle along the clear middle path.\n"
-	.string "Wild POKEMON live in the tall grass.$"
+	.string "Wild POKEMON live in the tall grass.\p"
+	.string "PARIS VISITOR ROOMS\n"
+	.string "East lane: sketches and garden room.\p"
+	.string "Travel map: select this city.\n"
+	.string "Press R for Places, then L for Rooms.$"
 
 EuropeParis_Landmark::
 	msgbox EuropeParis_Text_Landmark, MSGBOX_SIGN
@@ -82,3 +86,62 @@ EuropeParis_RealismSeineText::
 	.string "Cross the bridges to the LEFT BANK.\p"
 	.string "Follow the promenade east for\n"
 	.string "the bridge to NOTRE-DAME.$"
+
+EuropeParis_RealismLane::
+	msgbox EuropeParis_RealismLaneText, MSGBOX_SIGN
+	end
+
+EuropeParis_RealismLaneText::
+	.string "PROMENADE SIDE LANE\n"
+	.string "West: the river and EIFFEL gardens.\p"
+	.string "The south path circles the flowers.\n"
+	.string "Both homes welcome visitors.$"
+
+EuropeParis_RealismHomes::
+	msgbox EuropeParis_RealismHomesText, MSGBOX_SIGN
+	end
+
+EuropeParis_RealismHomesText::
+	.string "NEIGHBORHOOD HOMES\n"
+	.string "West: sketches. East: garden room.\p"
+	.string "Face either door and press A.\n"
+	.string "Return west for the island bridge.$"
+
+EuropeParis_GardenObserver::
+	lock
+	faceplayer
+	msgbox EuropeParis_GardenObserverText, MSGBOX_DEFAULT
+	release
+	end
+
+EuropeParis_GardenObserverText::
+	.string "PSYDUCK rests beside these flowers.\n"
+	.string "I watch quietly and make notes.\p"
+	.string "The EIFFEL visitor room has sketches.\n"
+	.string "Follow the path north to visit.$"
+
+EuropeParis_GardenPsyduck::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_PSYDUCK, CRY_MODE_NORMAL
+	msgbox EuropeParis_GardenPsyduckText, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+EuropeParis_GardenPsyduckText::
+	.string "PSYDUCK: Psy? Psyduck!$"
+
+EuropeParis_PromenadeArtist::
+	lock
+	faceplayer
+	msgbox EuropeParis_PromenadeArtistText, MSGBOX_DEFAULT
+	release
+	end
+
+EuropeParis_PromenadeArtistText::
+	.string "I sketch the river from this bank.\n"
+	.string "The light changes as people pass.\p"
+	.string "I leave the path clear for walkers.\n"
+	.string "A little space lets us all enjoy it.$"

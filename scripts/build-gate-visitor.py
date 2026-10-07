@@ -26,7 +26,7 @@ p=R/'data/maps/map_groups.json';groups=json.loads(p.read_text())
 if name not in groups['gMapGroup_Europe']:groups['gMapGroup_Europe'].append(name)
 p.write_text(json.dumps(groups,indent=2)+'\n')
 m=json.loads((R/'data/maps/EuropeBerlinLibrary/map.json').read_text())
-m.update(id='MAP_EUROPE_GATE_VISITOR',name=name,layout=lid)
+m.update(id='MAP_EUROPE_GATE_VISITOR',name=name,layout=lid,bg_events=[])
 labels={'Librarian':'Guide','GardenBook':'GardenPanel','HistoryBook':'CourtPanel'}
 for o in m['object_events']:
  label=labels[o['script'].split('_')[-1]];o['script']=name+'_'+label
@@ -41,6 +41,7 @@ for label,lines in texts.items():
  for i,line in enumerate(lines):block+=' .string "'+line+('$' if i==len(lines)-1 else '\\p' if i%2 else '\\n')+'"\n'
  pattern=re.escape(text)+r'::\n(?:[ \t]*\.string[^\n]*\n)+'
  s,n=re.subn(pattern,lambda _:block,s);assert n==1,text
+s=s.split(name+'_Catalog::')[0]
 (d/'scripts.inc').write_text(s)
 p=R/'data/maps/EuropeBerlin/map.json';m=json.loads(p.read_text())
 event=dict(type='sign',x=19,y=36,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=name+'_Enter')

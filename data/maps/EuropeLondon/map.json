@@ -76,6 +76,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EuropeRide_London",
       "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "x": 30,
+      "y": 34,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EuropeLondon_GardenVisitor",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_JIGGLYPUFF",
+      "x": 31,
+      "y": 34,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EuropeLondon_GardenJigglypuff",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -162,6 +190,22 @@
     },
     {
       "type": "sign",
+      "x": 45,
+      "y": 32,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeLondonHome_Enter"
+    },
+    {
+      "type": "sign",
+      "x": 55,
+      "y": 32,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeLondonReadingRoom_Enter"
+    },
+    {
+      "type": "sign",
       "x": 14,
       "y": 26,
       "elevation": 0,
@@ -191,6 +235,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EuropeLondon_RealismGardens"
+    },
+    {
+      "type": "sign",
+      "x": 43,
+      "y": 35,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeLondon_RealismSideStreet"
+    },
+    {
+      "type": "sign",
+      "x": 55,
+      "y": 35,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeLondon_RealismHomes"
     }
   ]
 }

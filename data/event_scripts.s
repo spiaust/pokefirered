@@ -1488,3 +1488,7 @@ Text_TestMsg::
 	.include "data/maps/EuropeEiffelVisitor/scripts.inc"
 	.include "data/maps/EuropeLondonEyeGallery/scripts.inc"
 	.include "data/maps/EuropeGateVisitor/scripts.inc"
+	.include "data/maps/EuropeLondonHome/scripts.inc"
+	.include "data/maps/EuropeParisHome/scripts.inc"
+	.include "data/maps/EuropeParisGardenRoom/scripts.inc"
+	.include "data/maps/EuropeLondonReadingRoom/scripts.inc"

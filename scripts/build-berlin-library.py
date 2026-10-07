@@ -26,6 +26,7 @@ def obj(gfx,x,y,label):
  return dict(type='object',graphics_id=gfx,x=x,y=y,elevation=3,movement_type='MOVEMENT_TYPE_FACE_DOWN',movement_range_x=0,movement_range_y=0,trainer_type='TRAINER_TYPE_NONE',trainer_sight_or_berry_tree_id='0',script=name+'_'+label,flag='0')
 m=json.loads((R/'data/maps/EuropeBerlinHome/map.json').read_text())
 m.update(id='MAP_EUROPE_BERLIN_LIBRARY',name=name,layout=lid,object_events=[obj('OBJ_EVENT_GFX_GENTLEMAN',8,3,'Librarian'),obj('OBJ_EVENT_GFX_POKEDEX',3,3,'GardenBook'),obj('OBJ_EVENT_GFX_POKEDEX',11,3,'HistoryBook')])
+m['bg_events']=[dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=name+'_Catalog') for y in (4,5) for x in (6,7)]
 for event in m['coord_events']:event['script']=name+'_Exit'
 d=R/f'data/maps/{name}';d.mkdir(exist_ok=True);(d/'map.json').write_text(json.dumps(m,indent=2)+'\n')
 s='''EuropeBerlinLibrary_MapScripts::
@@ -56,9 +57,22 @@ EuropeBerlinLibrary_EntryText::
  .string "NEIGHBORHOOD READING ROOM\\n"
  .string "Come in and browse the records?$"
 '''
-for label,lines in [('Librarian',['Welcome! These are local records.','People write down what they notice.','A garden, a journey, a helping hand:','small stories deserve a place too.']),('GardenBook',['A shared garden log.','ODDISH rests in the shaded beds.','Each neighbor tends a small patch.','Together, they keep the court green.']),('HistoryBook',['A notebook of neighborhood memories.','Visitors once brought field notes','from journeys across EUROPE.','Care connected one place to another.'])]:
+for label,lines in [('Librarian',['Welcome! These are local records.','People write down what they notice.','A garden, a journey, a helping hand:','The table catalog lists our records.']),('GardenBook',['A shared garden log.','ODDISH rests in the shaded beds.','Each neighbor tends a small patch.','Together, they keep the court green.']),('HistoryBook',['A notebook of neighborhood memories.','Visitors once brought field notes','from journeys across EUROPE.','Care connected one place to another.'])]:
  s+=f'\n{name}_{label}::\n lock\n faceplayer\n msgbox {name}_{label}Text, MSGBOX_DEFAULT\n release\n end\n\n{name}_{label}Text::\n'
  for i,line in enumerate(lines):s+=' .string "'+line+('$' if i==len(lines)-1 else '\\p' if i%2 else '\\n')+'"\n'
+s+='''
+EuropeBerlinLibrary_Catalog::
+ lockall
+ msgbox EuropeBerlinLibrary_CatalogText, MSGBOX_DEFAULT
+ releaseall
+ end
+
+EuropeBerlinLibrary_CatalogText::
+ .string "A catalog of neighborhood records.\\n"
+ .string "GARDEN LOG: notes from the courtyard.\\p"
+ .string "FIELD NOTES: journeys across EUROPE.\\n"
+ .string "Each small story has a place here.$"
+'''
 (d/'scripts.inc').write_text(s)
 p=R/'data/maps/EuropeBerlin/map.json';m=json.loads(p.read_text())
 event=dict(type='sign',x=51,y=31,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=name+'_Enter')

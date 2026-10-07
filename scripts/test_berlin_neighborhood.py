@@ -5,6 +5,7 @@ R=Path(__file__).resolve().parents[1]
 p=R/'data/layouts/EuropeBerlin/map.bin';old=struct.unpack('<1760H',(R/'data/geography/berlin-v062.bin').read_bytes());new=struct.unpack('<2816H',p.read_bytes())
 for i,a in enumerate(old):
  x,y=i%40,i//40;b=new[y*64+x]
+ if (x,y)==(14,4):assert a==0x3165 and b==0x402;continue
  if x in (38,39) and y in (37,38,39):assert not b&0xc00;continue
  assert a&0xfc00==b&0xfc00,(x,y,'collision/elevation')
  if not a&0xc00:assert a==b or (x==37 and y in (37,38,39) and b==0x3165),(x,y,'old walkable terrain changed')

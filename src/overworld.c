@@ -446,6 +446,20 @@ static void LoadSaveblockObjEventScripts(void)
         for (i = 2; i < 5; i++)
             savObjTemplates[i] = src[i];
 
+    // Restore the Paris garden visitors and promenade sketcher in old saves.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_PARIS)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_PARIS)
+        && gMapHeader.events->objectEventCount >= 5)
+        for (i = 2; i < 5; i++)
+            savObjTemplates[i] = src[i];
+
+    // v0.79 London saves predate the stationary South Bank garden visitors.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LONDON)
+        && gMapHeader.events->objectEventCount >= 6)
+        for (i = 4; i < 6; i++)
+            savObjTemplates[i] = src[i];
+
     // v0.21 refuge saves predate its fourth, stationary station-post guide.
     // Restore that template so it can spawn without leaving/reentering the map.
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_CHANTILLY_PAST)
@@ -626,8 +640,8 @@ static void LoadSaveblockMapHeader(void)
         gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutId;
         CpuFill16(0, gSaveBlock2Ptr->mapView, sizeof(gSaveBlock2Ptr->mapView));
     }
-    // These European outdoor maps have no persistent dynamic tiles. Discard
-    // cached forests so older saves also load the corrected tree silhouettes.
+    // These European maps have no persistent dynamic tiles. Refresh cached
+    // views for corrected outdoor art and the Paris sketch-room display.
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON)
         && (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LONDON)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LONDON_COUNTRYSIDE)
@@ -637,6 +651,7 @@ static void LoadSaveblockMapHeader(void)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_BERLIN_COUNTRYSIDE)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_ORANIENBURG_TRAIL)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_PARIS)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_PARIS_HOME)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_BERLIN)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_OXFORD)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_CHANTILLY)

@@ -1,5 +1,319 @@
 # Prototype verification — 2026-09-18
 
+## v1.02 visible Berlin-marker verification - 2026-10-06
+
+190 focused PASS results: the preceding 184 plus two marker static checks,
+two marker emulator checks and two retained Gate static checks. Berlin (14,4) alone changes from pavement
+0x3165 to native solid sign 0x402. All other terrain, event definitions,
+objects, IDs and encounters are retained. Three adjacent lane columns
+remain open. Older terrain checks explicitly normalize only this one
+known tile before comparison; the marker check independently requires it.
+A genuine v1.01 battery saved on (14,4) cold-loads at the same position,
+refreshes the sign tile, steps down safely, reads twice, circles the sign
+and retains progress. A new save cold-loads, rereads and crosses both ways
+between Berlin and its countryside. The Gate generator explicitly owns its background events and excludes
+the library catalog inherited through its template. Native sign screenshots
+were checked.
+Packaging retains v1.01 and verifies all three user saves unchanged.
+
+## v1.01 northern arrival-sign verification - 2026-10-06
+
+184 focused PASS results: the preceding 176 plus two arrival static checks
+and six arrival emulator checks. Old starting batteries walk north into
+each countryside and back, read all four arrival-sign pages twice, save,
+cold Continue, reread and return to the countryside. Each reading retains
+exact party and progress data. Walking retains inventory, money and quest
+state. Full capital/countryside terrain, events, IDs and wild encounter
+data match the v1.00 fixtures. Existing countryside text remains first.
+All three signs regenerate identically and the native font check covers
+the added lines. Arrival-page screenshots were checked. Packaging retains
+v1.00 and verifies all three user saves unchanged.
+
+## v1.00 capital Rooms-page verification - 2026-10-06
+
+176 focused PASS results: the preceding 173 plus three Rooms emulator
+checks. Retained London, Paris and Berlin batteries browse the new pages,
+toggle L, reset on stop changes, ignore L at noncapital stops and preserve
+R/B/START/A/story controls. Exact party, money, inventory, quest state,
+preferences, player location and native Help enabled/R-toggle states are retained on exit.
+The Places font check covers all 50 strings, including the new headings,
+shortcut hints and room lines. Screenshots of all three room pages and
+noncapital fallback were checked. Existing map/event generators and all
+city interactions remain covered. Packaging retains v0.99 and verifies
+all three user saves unchanged. The display state is transient; no new
+save variables, map IDs, terrain or events are introduced.
+
+## v0.99 Berlin courtyard-notice verification - 2026-10-06
+
+173 focused PASS results: the preceding 169 plus two notice static checks
+and two notice emulator checks. The retained v0.98 courtyard battery reads
+all four pages twice, walks to each room approach and loops around the
+courtyard. A new save cold-loads at the sign, reads again and returns to
+the countryside. Each read preserves exact party and progress data; the
+walking route preserves money, inventory, quest variables and flags.
+The full Berlin map, event definitions, objects and map IDs stay exact.
+Generator stability, native font widths and sign screenshots were checked.
+Packaging retains v0.98 and verifies all three user saves unchanged.
+
+## v0.98 Berlin garden-note verification - 2026-10-06
+
+169 focused PASS results: the preceding 166 plus two bench static checks
+and one retained v0.97 garden-room battery check. The old indoor save reads
+both workbenches from north and south and exits without changing progress.
+Each read checks exact party bytes and progress before/after dialogue.
+Walking can trigger the native friendship step update; the full walking
+route separately checks money, inventory, quest variables and flags.
+Normal visits read both notes; cold Continue and both exits remain covered.
+All eight existing solid bench cells support background interactions. Exact
+room terrain, objects, exits and map IDs are retained. Generator stability,
+native font widths and screenshots were checked. The garden generator also
+removes the unused catalog script copied from its library template.
+Packaging retains v0.97 and verifies all three user saves unchanged.
+
+## v0.97 Berlin library catalog verification - 2026-10-06
+
+166 focused PASS results: the preceding 164 plus two catalog static checks.
+Normal visits and the retained v0.66 indoor save read the catalog; the old
+save reads from north and south without changing progress. Cold Continue,
+both exits and countryside return remain covered. Exact room terrain,
+objects and map IDs are retained. Library background events belong to the
+catalog and the garden workroom has no inherited sitting-room events.
+Native font widths and catalog screenshots were checked. Packaging retains
+v0.96 and verifies all three user saves unchanged.
+
+## v0.96 Berlin guestbook verification - 2026-10-06
+
+164 focused PASS results: the preceding 144 plus guestbook static (2),
+Berlin neighborhood static (2), facades (2), sitting room (3), library (3),
+garden workroom (2), companion (2), Berlin (2) and Reichstag (2).
+Normal visits and retained v0.65 indoor saves read the table from north
+and south; normal Save/Continue and both exits remain covered. Exact room
+terrain, objects, exits and map IDs are retained. Native dialogue widths
+and room screenshots were checked. Packaging retains v0.95 and verifies
+all three user saves unchanged.
+
+## v0.95 Paris workbench-plan verification - 2026-10-06
+
+144 focused PASS results: the preceding 141 checks plus two plan static
+checks and one pre-change workroom battery check. The v0.94 battery reads
+both benches from north and south and exits without changing progress.
+Normal visits also read both plans. All eight existing solid bench cells
+support background interactions, while exact room terrain, walking space,
+objects, exits and map IDs stay unchanged. Font widths and screenshots
+were checked. Packaging retains v0.94 and verifies all three user saves.
+
+## v0.94 Paris sketch-display verification - 2026-10-06
+
+141 focused PASS results: the preceding 138 checks plus two display static
+checks and one pre-change indoor battery check. Only four solid wall cells
+change artwork; every walking cell and existing object/exit stays intact.
+The v0.93 battery refreshes the complete indoor grid at its original saved
+position, reads the display and exits without changing progress. Normal
+visit and cold-save checks include the display and full-grid comparison.
+Native dialogue widths and screenshots were inspected. Packaging retains
+v0.93 and verifies all three user artifact saves unchanged.
+
+## v0.93 Paris roof-detail verification - 2026-10-06
+
+138 focused PASS results: the preceding 136 checks plus two Paris facade
+static checks. Only the eastern roof art changes. Native artwork copies
+retain flip bits, transparency and behavior; four roof shades map to an
+existing blue-gray palette. Shared palettes and every other outdoor tile
+are unchanged. Assets regenerate identically. The full-grid lane old-save
+and cold-save checks and both room checks pass. Roof screenshots were
+inspected. Packaging retains v0.92 and verifies all three user saves.
+
+## v0.92 Paris garden-workroom verification - 2026-10-06
+
+136 focused PASS results: the preceding 131 checks plus the appended map,
+two workroom static and two interaction/save checks. No/B cancellation,
+entry, gardener/notebook, reentry, both exits and normal Save/cold Continue
+pass. The indoor map identifies France; return to the countryside works.
+All earlier map IDs and exact outdoor terrain remain unchanged. Generation
+and dialogue-width checks pass. Workroom and travel-map screenshots were
+inspected. Packaging retains v0.91 and verifies three user saves unchanged.
+
+## v0.91 Paris sketch-room verification - 2026-10-06
+
+131 focused PASS results: the previous 126 checks plus the appended map,
+two sketch-room static and two interaction/save checks. No/B cancellation,
+entry, host/sketchbook, reentry, both exits and normal Save/cold Continue
+pass. The indoor travel map identifies France; return to the countryside
+works. Exact outdoor terrain and every preceding map ID are retained.
+Generation and native dialogue-width checks pass. Interior and travel-map
+screenshots were inspected. Packaging retains v0.90 and verifies all three
+user artifact saves unchanged.
+
+## v0.90 Paris side-lane verification - 2026-10-06
+
+126 focused PASS results: the previous 122 checks plus two side-lane static
+and two walking/save checks. Paris grows to 64x46 within the map buffer.
+Old walkable tiles, objects, entrances and IDs are retained; only the lane
+mouth opens the previous tree boundary. Both private home approaches,
+flower-bed circuit and signs are reachable from an older battery. The
+complete loaded grid matches generated terrain. Save/cold Continue at
+(60,43) retains position and progress; return through the old district to
+the countryside works. Native front/sign screenshots and text widths were
+checked. Packaging retains v0.89 and verifies three user saves unchanged.
+
+## v0.89 Paris promenade sketcher verification - 2026-10-06
+
+122 focused PASS results: the previous 107 checks plus two sketcher static,
+two sketcher interaction/save, one Paris garden static, two garden, two
+promenade static, two Paris walking/save, two Eiffel visitor and two
+Notre-Dame case checks. An old Paris battery restores the sketcher without
+reentry. Three greetings, collision, promenade routes, normal Save/cold
+Continue and countryside return retain progress. All Paris tiles, earlier
+objects, entrances and map IDs are unchanged. Sketcher screenshots were
+inspected; native dialogue-width checks pass. Packaging retains v0.88 and
+verifies all three user artifact saves unchanged.
+
+## v0.88 London photo album verification - 2026-10-06
+
+107 focused PASS results: the previous 104 checks plus two album static
+checks and one pre-change sitting-room battery check. The album occupies
+an existing solid table tile. Exact indoor/outdoor grids, prior objects,
+exits and map IDs are retained. The v0.87 battery reaches the album and
+exits without changing progress; normal visit checks read it alongside
+the host and notebook. Both home cold-save checks, generation and dialogue
+width checks pass. Album screenshots were inspected. Packaging retains
+v0.87 and verifies all three user artifact saves unchanged.
+
+## v0.87 London reading-room furnishings - 2026-10-06
+
+104 focused PASS results: the previous 101 checks plus two furnishings
+static checks and one pre-change indoor battery check. Every old walkable
+position remains open at the same elevation. Objects, exits, map IDs and
+the full outdoor district remain unchanged. A v0.86 battery reaches the
+new cabinet and exits while retaining progress. The normal visit checks
+read the cabinet alongside the host and notebook. Both exit tiles and
+Save/cold Continue pass. Interior and cabinet-dialogue screenshots were
+inspected. Packaging retains v0.86 and verifies all three user saves.
+
+## v0.86 London home roof verification - 2026-10-06
+
+101 focused PASS results: the previous 99 checks plus two facade static
+checks. Only the eastern roof metatiles change; each copy preserves native
+artwork, flip bits and behavior attributes. Four roof shades map to slate
+blue using existing palette 8; shared palettes remain unchanged. All paths,
+doors, map IDs and interiors are intact.
+Both homes retain invitation, conversation, exit and cold-save behavior.
+The lane test checks the complete loaded grid and its cold-save refresh.
+Roof screenshots are inspected. Packaging retains v0.85 and verifies all
+three user artifact saves unchanged.
+
+## v0.85 London reading room verification - 2026-10-06
+
+99 focused PASS results: the previous 94 checks plus the appended map,
+2 reading-room static and 2 interaction/save checks. Declining with No/B,
+entry, both conversations, reentry, both front exits, indoor Save/cold
+Continue, London country and return to the countryside pass. All prior map
+IDs and outdoor tiles are unchanged. The western home checks also pass.
+Dialogue widths and screenshots are checked. Packaging retains v0.84 and
+verifies all three user artifact saves unchanged.
+
+## v0.84 London sitting room verification - 2026-10-06
+
+94 focused PASS results: the previous 89 checks plus the appended map,
+2 home static and 2 home interaction/save checks. Yes/No and B cancellation,
+conversations, reentry, both exits, indoor Save/cold Continue, London map
+country and countryside return pass. Every outdoor tile and previous map
+ID is unchanged. Generation and dialogue-width checks pass. Interior and
+travel-map screenshots were inspected. Packaging retains v0.83 and
+verifies all three user artifact saves unchanged.
+
+## v0.83 London lane verification - 2026-10-06
+
+89 focused PASS results: the prior 71 focused checks plus 2 street static,
+2 street walking/save, 3 London walking/save, 2 waterfront generation,
+2 Eye static, 2 Westminster case, 2 Eye gallery, 1 garden static and
+2 garden interaction/save checks. The v0.82 footprint retains old walkable
+positions and terrain except four grass-to-paving cells. Only the new
+lane mouth removes old boundary collision. Both homes are solid and both
+approaches, the full public circuit and signs are reachable from an older
+battery save. Save/cold Continue at x60 retains player position, full map
+grid and progress; return to the Eye, both bridges and countryside works.
+Earlier entrances, objects, map IDs and historical London are retained.
+Generation is stable and the expanded grid fits hardware limits. Native
+building fronts and residential sign screenshots were inspected. Packaging
+retains v0.82 and verifies user artifact save hashes.
+
+## v0.82 Purple outfit verification - 2026-10-06
+
+71 focused PASS results: the 69 previous focused checks plus 2 Purple
+outfit checks. Red and Leaf use the selected Purple ramp while every
+non-clothing palette entry matches the native Classic palette. Walking,
+cycling and dismount retain the color. A turned cycling preview was
+inspected along with the Purple menu. Normal Save/cold Continue retains
+Purple and avatar selection with identity, party, inventory, progress and
+location unchanged. A wraps Purple to the exact Classic palette. Existing
+Blue and Green coverage passes with Green-to-Purple-to-Classic cycling.
+Restore confirmation cancellation preserves Purple; confirmation restores
+all defaults. Four-direction preview, Places, field Help restoration and
+older indoor map labels still pass. Packaging retains v0.81 and verifies
+user artifact save hashes.
+
+## v0.81 avatar direction verification - 2026-10-06
+
+69 focused PASS results: 47 map/path, 3 capital layout, 3 static checks,
+2 World Options, 1 movement, 1 live preview, 4 indoor map locations,
+2 Places navigation, 1 font-fit, 1 preview-facing, 2 defaults and 2 outfit
+checks. R cycles all four native standing animations for every avatar in
+both walking and cycling poses. Four turns wrap; pose/avatar changes
+retain direction. Restore confirmation ignores R, cancellation restores
+the view, and reopening resets to front. Party, inventory, progress,
+preferences and field location remain unchanged. The previous native Help
+R-button reservation is restored after options close. Side-view bicycle
+and back-view walking screenshots were inspected. Both preview control
+hints fit the native font. Packaging retains v0.80 and verifies user
+artifact save hashes.
+
+## v0.80 Places guide verification - 2026-10-06
+
+64 focused PASS results: 47 map/path, 3 capital layout, 3 static checks,
+2 World Options, 1 movement, 1 live preview, 4 indoor map locations,
+2 Places navigation and 1 Places font-fit check. Present-day and historical
+battery saves browse all eight stops with wrapped D-pad selection. R/B/START
+return to the map, A shows routes, and SELECT opens the journal. Journal
+navigation ignores R. The native Help R-button reservation is restored on
+exit. Party, inventory, story progress, cosmetic preferences and location
+remain unchanged. All 35 Places lines and the map shortcut hint fit the
+actual native font and screen margins. Berlin directions and returned map
+screenshots were inspected. Packaging retains v0.79 and verifies user
+artifact save hashes.
+
+## v0.79 London garden verification - 2026-10-06
+
+104 focused PASS results: the prior 92 release checks plus 1 London resident
+static check, 2 garden interaction/save, 2 waterfront generation, 3 London
+walking/save, 2 Westminster case and 2 Eye gallery checks. Every v0.78
+London tile and all four original city objects are unchanged. An older
+London battery immediately restores the visitor and Jigglypuff. Repeated
+dialogue releases controls and preserves the full party across each
+interaction, with inventory and story progress unchanged throughout the
+walk. Garden loops, gallery approach and bridge routes remain reachable.
+Normal Save/cold Continue retains location and party, supports another
+greeting and returns to the countryside. Waterfront artwork regenerates
+identically using the bundled image-enabled Python runtime; generated JSON
+line endings are normalized. Visitor and companion screenshots were
+inspected. Packaging retains v0.78 and verifies user artifact save hashes.
+
+## v0.78 Paris garden verification - 2026-10-06
+
+92 focused PASS results: the prior 81 release checks plus 1 Paris resident
+static check, 2 garden interaction/save, 2 promenade generation, 2 Paris
+walking/save, 2 Notre-Dame case and 2 Eiffel visitor-room checks. Every
+v0.77 Paris tile and both original city objects are unchanged. An older
+Paris battery restores the observer and Psyduck immediately. Three rounds
+of dialogue release controls and preserve the complete party across each
+interaction, with inventory and progress unchanged throughout the walk.
+Normal walking friendship gains are allowed between interactions. Existing
+promenade loops and landmark approaches remain reachable. Normal Save/cold
+Continue retains the location and party, supports another greeting and
+returns to the countryside. New dialogue fits the window; garden dialogue
+screenshots were inspected. Packaging retains v0.77 and verifies user
+artifact save hashes.
+
 ## v0.77 Gate visitor-room verification - 2026-10-05
 
 81 focused PASS results: 47 map/path, 3 capital layout, 3 static checks,

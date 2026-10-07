@@ -64,3 +64,4 @@ EuropeGateVisitor_CourtPanelText::
  .string "The courtyard shares books and tools.\p"
  .string "Walk the lanes and visit the rooms.\n"
  .string "Small acts of care connect neighbors.$"
+

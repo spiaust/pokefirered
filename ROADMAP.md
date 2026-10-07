@@ -3,6 +3,209 @@
 The project grows in playable releases. Build and test each gameplay change
 before adding the next; preserve the previous ROM in `artifacts/releases`.
 
+## v1.02: visible Berlin northern sign
+
+Berlin's northern route-sign event now has native sign artwork and solid
+collision at (14,4). The three adjacent north/south lane columns remain
+open. A v1.01 battery saved directly on the former pavement retains its
+position and can step off, read the sign and continue through the city.
+Only this tile changes; events, objects, IDs and encounters are retained.
+Next: improve the station-to-neighborhood directions.
+
+## v1.01: northern arrival guidance
+
+Each capital's existing northern route sign retains its countryside pages
+and adds directions to the visitor rooms and travel-map Rooms shortcut.
+London points to the east home/reading lane, Paris to sketches/garden rooms,
+and Berlin to its three-room courtyard. Terrain, events, encounters and
+map IDs stay exact. Next: review visible northern markers and station-to-neighborhood directions.
+
+## v1.00: capital Rooms pages
+
+The travel map's Places view offers L: Rooms for London, Paris and Berlin.
+Four lines explain each neighborhood's approach, room order and readable
+details. Existing landmark guidance stays on the Places page. L switches
+back, changing stops resets to Places, and R/B/START/A/story controls retain
+their behavior. No map, event or save-format changes.
+Next: review the countryside approaches to the capital neighborhoods.
+
+## v0.99: Berlin courtyard notice
+
+The existing courtyard sign keeps its room directions and adds a notice
+linking the workbench observations, reading-room garden log and western
+home guestbook. It is readable in retained v0.98 outdoor saves. Terrain,
+objects, events and map IDs stay exact. Next: review the three capital
+neighborhoods together and improve any remaining navigation gaps.
+
+## v0.98: Berlin garden observations
+
+The garden workroom's left bench holds seed observations and the right
+bench holds watering observations. Both are readable from north and south,
+including in retained v0.97 indoor saves. The gardener points to the notes.
+All room terrain, walking space, objects, exits and map IDs remain.
+Next: a local detail along Berlin's residential courtyard.
+
+## v0.97: Berlin library catalog
+
+The reading-room table lists the garden log and travel field notes. Its
+four existing solid cells are readable from north and south, including
+in retained v0.66 indoor saves. Each room owns its background events;
+the garden workroom no longer inherits the sitting-room guestbook.
+Terrain, objects, exits and map IDs remain. Next: Berlin garden detail.
+
+## v0.96: Berlin courtyard guestbook
+
+The sitting-room table holds shared memories of the courtyard flowers,
+trees and a quiet walk by the Gate. All four existing solid table cells
+are readable, including from retained v0.65 indoor saves. Terrain, objects,
+exits and map IDs are unchanged. Next: a detail for the Berlin library.
+
+## v0.95: Paris workbench plans
+
+The garden workroom's left bench holds a planting plan and the right bench
+holds a shared care rota. Both are readable from their exposed sides,
+including in pre-change indoor saves. The gardener points to the benches.
+All room/outdoor tiles, walking space, objects, exits and map IDs remain.
+Next: more local detail in the Berlin neighborhood rooms.
+
+## v0.94: Paris sketch display
+
+A back-wall display in the western sketch room describes three river views
+in changing light. The host points visitors toward it. Only four existing
+solid wall tiles change; every walking tile, object and exit is retained.
+Older indoor saves refresh the artwork on Continue without moving players.
+Next: a local planning detail inside the Paris garden workroom.
+
+## v0.93: distinct Paris neighborhood roofs
+
+The eastern garden workroom has a slate-blue native roof; the western
+sketch room retains its red roof. Copied roof tiles use an existing
+blue-gray palette, preserving all shared palette colors. Paths, walls,
+doors, interiors, collision and earlier map IDs remain unchanged.
+Next: local display details inside the Paris sketch room.
+
+## v0.92: Paris eastern garden workroom
+
+The eastern home opens a garden workroom with two side benches, a gardener
+and a shared-planning notebook. A clear central passage reaches both front
+exits. Normal Save/Continue and the France map label work indoors. The room
+appends after all 50 prior Europe maps; outdoor tiles and earlier IDs stay
+unchanged. Next: visually distinguish the two Paris neighborhood fronts.
+
+## v0.91: Paris western home sketch room
+
+The western lane door opens a native visitor room with a host and a
+river/garden sketchbook. Both front exits return to its own approach,
+and normal Save/Continue works indoors. The room appends after the 49
+previous Europe maps. All outdoor tiles and earlier IDs remain unchanged.
+Next: a complementary room in the eastern Paris home.
+
+## v0.90: Paris promenade side lane
+
+A fictional neighborhood lane extends east from the promenade, with two
+native home fronts, flower beds, signs and a southern walking loop. Both
+homes remain private scenery. Paris expands to 64x46 without moving old
+walking coordinates, objects, entrances or map IDs. Only the lane mouth
+opens the old tree boundary. Next: a visitor room in the western home.
+
+## v0.89: Paris promenade sketcher
+
+A stationary sketcher stands on the grass south of the paved promenade,
+sharing a short observation about the river and keeping public paths clear.
+Older Paris saves restore the new template without leaving the city. All
+outdoor tiles, earlier objects, entrances and map IDs remain unchanged.
+Next: Paris neighborhood fronts beyond the landmark district.
+
+## v0.88: London sitting-room photo album
+
+A photo album on the western home's table tells a short neighborhood
+garden story. The host points visitors toward it. Indoor/outdoor tiles,
+existing objects, exits and map IDs stay unchanged. A pre-change indoor
+battery reaches the album and exits normally. Next: neighborhood detail
+along the Paris promenade.
+
+## v0.87: London reading-room furnishings
+
+The eastern home has a compact reading table and shared-book cabinet,
+with the sitting-room rug and chairs removed. The cabinet adds a short
+reading interaction. Every previously walkable indoor tile stays open;
+existing objects, exits, map IDs and the outdoor district are unchanged.
+Next: more local character in the western sitting room.
+
+## v0.86: distinct London home roofs
+
+The eastern reading room has a slate-blue native roof; the western sitting
+room retains its red roof. Only the eastern roof art changes. Paths, door
+positions, collision, elevation, existing map IDs and interiors remain.
+Next: distinctive interior furnishings for the reading room.
+
+## v0.85: London eastern home reading room
+
+The eastern door now opens a reading room with a neighbor and a notebook
+of local walks. Both homes support normal Save/Continue and return to
+their own front paths. All earlier IDs and outdoor tiles remain unchanged.
+Next: more distinctive neighborhood facades and interior furnishings.
+
+## v0.84: London western home sitting room
+
+The western home opens through a front-door invitation. A host and garden
+notebook add an indoor stop with two exits and normal Save/Continue.
+The eastern home stays private. Previous map IDs and every outdoor tile
+remain unchanged. Next: the eastern home and distinctive facades.
+
+## v0.83: London residential side lane
+
+A small fictional residential lane extends east from the South Bank garden
+loop. Two native home fronts face public paths, with flower beds and a
+southern walking circuit. Signs point back to the Eye and explain that
+the homes remain private scenery. London expands east without moving old
+coordinates or map IDs; only the lane mouth opens the former tree boundary.
+Next: distinctive facades and enterable neighborhood rooms.
+
+## v0.82: saved Purple outfit
+
+World Options adds PURPLE after GREEN in the outfit cycle. The native
+walking/cycling sprites and four-direction preview use the new clothing
+ramp, including corresponding reflection shades. Only the same three
+clothing palette entries change. Old Classic/Blue/Green values retain
+their meaning, normal Save/Continue retains Purple, and Restore Defaults
+returns to Classic. Next: street and building detail across the districts.
+
+## v0.81: four-direction avatar preview
+
+R turns the World Options avatar preview through front, left, back and
+right views. SELECT retains walking/cycling switching; avatar and outfit
+changes retain the preview direction. Reopening begins facing forward.
+Confirmation ignores rotation, and native R-button Help behavior returns
+on closing. No saved movement or direction is changed. Next: street and
+building detail across the tour districts.
+
+## v0.80: travel-map Places guide
+
+R opens a Places page for the selected travel-map stop. Capital pages give
+visitor-room and garden directions; country towns and ports list useful
+walks and transport. Browse all eight stops with the D-pad. B/START/R
+returns to the map, A shows route information, and SELECT opens the story.
+The guide labels its information as present-day when viewed from a past
+save. Native R-button Help behavior is restored on exit. Next: street and
+building detail across the tour districts.
+
+## v0.79: London garden visitor and Jigglypuff
+
+A visitor and native JIGGLYPUFF now rest beside the South Bank flower beds.
+Repeatable dialogue and a cry connect the garden loop to the Eye gallery.
+Older London saves restore both stationary visitors on Continue. Every
+outdoor tile, original city object and map ID is retained. Next: more
+street and building detail across the tour districts.
+
+## v0.78: Paris garden observer and Psyduck
+
+A stationary observer and native PSYDUCK now rest beside the garden flower
+beds. Repeatable conversation and a cry connect quiet observation with
+the Eiffel visitor room. Older Paris saves restore both residents on
+Continue. All outdoor tiles, original city objects and map IDs are retained.
+Next: additional street detail and remaining landmark areas.
+
 ## v0.77: Brandenburg Gate visitor room
 
 A compact fictional visitor room opens from the Gate's west pillar.

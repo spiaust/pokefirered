@@ -6,8 +6,8 @@ from test_landmark_cases import go,talk,save
 from test_time import preserved
 groups=json.loads((ROOT/'data/maps/map_groups.json').read_text())
 inside=groups['gMapGroup_Europe'].index('EuropeBerlinHome')
-def read(e,point,label):
- go(e,point);e.press('UP');e.press('A',180)
+def read(e,point,label,facing='UP'):
+ go(e,point);e.press(facing);e.press('A',180)
  assert e.read('sLockFieldControls',1),label
  e.screenshot(ROOT/f'test-output/berlin-home-{label}.png')
  e.finish_dialogue();assert not e.read('sLockFieldControls',1)
@@ -18,7 +18,7 @@ try:
   talk(e,(43,32),choice=choice);assert e.location()==(43,8,43,32)
  talk(e,(43,32),choice='YES');assert e.location()==(43,inside,5,7)
  e.screenshot(ROOT/'test-output/berlin-home-interior.png')
- read(e,(8,5),'host');read(e,(3,4),'notebook')
+ read(e,(6,3),'guestbook','DOWN');read(e,(8,5),'host');read(e,(3,4),'notebook')
  assert not e.read('sLockFieldControls',1) and preserved(e)[1:]==before
  go(e,(5,7));e.walk('DOWN',1);e.frames(180)
  assert e.location()==(43,8,43,32)
@@ -41,7 +41,7 @@ try:
  load_checkpoint(e,'berlin-home-v065',True)
  assert e.location()==(43,inside,9,7)
  before=preserved(e)
- read(e,(8,5),'host-old-save')
+ read(e,(6,3),'guestbook-old-save','DOWN');read(e,(6,6),'guestbook-south-old-save');read(e,(8,5),'host-old-save')
  assert preserved(e)==before
  go(e,(5,7));e.walk('DOWN',1);e.frames(180)
  assert e.location()==(43,8,43,32)
