@@ -1,0 +1,72 @@
+[
+  {
+    "id": 347,
+    "symbol": "mus_europe_london",
+    "title": "Thames Lanterns",
+    "tempo": 108,
+    "bars": 8,
+    "ticks": 768,
+    "tracks": 4,
+    "map": "EuropeLondon"
+  },
+  {
+    "id": 348,
+    "symbol": "mus_europe_paris",
+    "title": "Garden Waltz",
+    "tempo": 96,
+    "bars": 8,
+    "ticks": 768,
+    "tracks": 4,
+    "map": "EuropeParis"
+  },
+  {
+    "id": 349,
+    "symbol": "mus_europe_berlin",
+    "title": "Linden Steps",
+    "tempo": 120,
+    "bars": 8,
+    "ticks": 768,
+    "tracks": 4,
+    "map": "EuropeBerlin"
+  },
+  {
+    "id": 350,
+    "symbol": "mus_europe_oxford",
+    "title": "Scholars by the River",
+    "tempo": 88,
+    "bars": 8,
+    "ticks": 768,
+    "tracks": 4,
+    "map": "EuropeOxford"
+  },
+  {
+    "id": 351,
+    "symbol": "mus_europe_chantilly",
+    "title": "Forest Porcelain",
+    "tempo": 100,
+    "bars": 8,
+    "ticks": 768,
+    "tracks": 4,
+    "map": "EuropeChantilly"
+  },
+  {
+    "id": 352,
+    "symbol": "mus_europe_oranienburg",
+    "title": "Havel Reflections",
+    "tempo": 92,
+    "bars": 8,
+    "ticks": 768,
+    "tracks": 4,
+    "map": "EuropeOranienburg"
+  },
+  {
+    "id": 353,
+    "symbol": "mus_europe_title",
+    "title": "Celebi Across Europe",
+    "tempo": 112,
+    "bars": 8,
+    "ticks": 768,
+    "tracks": 4,
+    "map": null
+  }
+]

@@ -181,7 +181,9 @@ def generate(city, country, route_name, species):
 \t.string "by the station for a train.$"
 
 {name}_Text_Clinic::
-\t.string "POKEMON CLINIC\\nFree care for traveling partners.$"
+\t.string "POKEMON CLINIC\\nFree care for traveling partners.\\p"
+\t.string "Enter the door beside this sign.\\n"
+\t.string "Talk to the nurse to heal your team.$"
 
 {name}_Text_Station::
 \t.string "{city.upper()} STATION\\nEuropean rail ticket office.$"

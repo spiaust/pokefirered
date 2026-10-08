@@ -37,7 +37,9 @@ EuropeOxford_Text_Welcome::
 	.string "visits LONDON, PARIS, and BERLIN.$"
 
 EuropeOxford_Text_Station::
-	.string "OXFORD STATION\nEuropean rail ticket office.$"
+	.string "OXFORD STATION\nEuropean rail ticket office.\p"
+	.string "GYM: north of the town square.\n"
+	.string "ADA waits east of the town guide.$"
 
 EuropeOxford_Text_Route::
 	.string "SOUTH: OXFORD TRAIL\nThen ENGLISH MEADOW and LONDON.$"
@@ -52,6 +54,8 @@ EuropeChallenge_Oxford::
 	call_if_defeated TRAINER_EUROPE_ALICE, EuropeTour_CountStamp
 	goto_if_eq VAR_0x8005, 2, EuropeChallenge_Oxford_Reward
 	buffernumberstring STR_VAR_1, VAR_0x8005
+	goto_if_defeated TRAINER_EUROPE_OLIVER, EuropeChallenge_Oxford_NeedExtended
+	goto_if_defeated TRAINER_EUROPE_ALICE, EuropeChallenge_Oxford_NeedLocal
 	msgbox EuropeChallenge_Oxford_Progress
 	release
 	end
@@ -70,7 +74,7 @@ EuropeChallenge_Oxford_Progress::
 	.string "return here for one RARE CANDY!$"
 
 EuropeOxford_GymSign::
-	msgbox EuropeOxfordGym_Text_Statue, MSGBOX_SIGN
+	msgbox EuropeOxford_Text_GymSign, MSGBOX_SIGN
 	end
 
 EuropeOxford_RealismRadcliffe::
@@ -96,3 +100,31 @@ EuropeOxford_RealismMeadow::
 EuropeOxford_RealismMeadowText::
 	.string "CHERWELL MEADOW PATH\n"
 	.string "Follow the river back to HIGH STREET.$"
+
+EuropeOxford_Text_GymSign::
+	.string "OXFORD GYM\nLEADER: ELLIS\p"
+	.string "A firm foundation for every team.\p"
+	.string "Finish OAK's field study, then\n"
+	.string "report to his LONDON aide.$"
+
+EuropeChallenge_Oxford_NeedExtended::
+	msgbox EuropeChallenge_Oxford_NeedExtendedText
+	release
+	end
+EuropeChallenge_Oxford_NeedExtendedText::
+	.string "Regional trail wins: {STR_VAR_1} of 2.\p"
+	.string "Next: ALICE in OXFORD TRAIL.\p"
+	.string "Follow the clear path south of town.\p"
+	.string "Win that match, then return here.\n"
+	.string "Both wins earn one RARE CANDY.$"
+EuropeChallenge_Oxford_NeedLocal::
+	msgbox EuropeChallenge_Oxford_NeedLocalText
+	release
+	end
+EuropeChallenge_Oxford_NeedLocalText::
+	.string "Regional trail wins: {STR_VAR_1} of 2.\p"
+	.string "Next: OLIVER in ENGLISH MEADOW.\p"
+	.string "Go south through this town's trail.\n"
+	.string "Continue south into the countryside.\p"
+	.string "Win that match, then return here.\n"
+	.string "Both wins earn one RARE CANDY.$"

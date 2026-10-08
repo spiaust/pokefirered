@@ -2,7 +2,7 @@
   "id": "MAP_EUROPE_ORANIENBURG",
   "name": "EuropeOranienburg",
   "layout": "LAYOUT_EUROPE_ORANIENBURG",
-  "music": "MUS_PEWTER",
+  "music": "MUS_EUROPE_ORANIENBURG",
   "region_map_section": "MAPSEC_EUROPE_ORANIENBURG",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

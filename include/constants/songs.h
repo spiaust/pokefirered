@@ -353,6 +353,14 @@
 #define MUS_SLOW_PALLET           345 // MUS_SLOWMASARA
 #define MUS_TEACHY_TV_MENU        346 // MUS_TVNOIZE
 
+#define MUS_EUROPE_LONDON          347
+#define MUS_EUROPE_PARIS           348
+#define MUS_EUROPE_BERLIN          349
+#define MUS_EUROPE_OXFORD          350
+#define MUS_EUROPE_CHANTILLY       351
+#define MUS_EUROPE_ORANIENBURG     352
+#define MUS_EUROPE_TITLE           353
+
 #define MUS_NONE                    0xFFFF
 
 #endif  // GUARD_CONSTANTS_SONGS_H

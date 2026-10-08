@@ -19,7 +19,9 @@ EuropeTrail_Congratulate::
 
 EuropeTrail_Text_Decline::
 	.string "No hurry! Heal at the city clinic,\n"
-	.string "then come back when you're ready.$"
+	.string "then come back when you're ready.\p"
+	.string "Follow the clear path south to town.\n"
+	.string "Free clinic: west side of the square.$"
 
 EuropeTrail_Text_Progress::
 	.string "Trail victories: {STR_VAR_1} of 3.\p"

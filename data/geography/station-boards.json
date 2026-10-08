@@ -16,5 +16,23 @@
     "Exit south for the GATE approach.",
     "The east courtyard has three rooms.",
     "Home, reading room, garden workroom."
+  ],
+  "Oxford": [
+    "LOCAL WALKS / OXFORD",
+    "GYM: north of the town square.",
+    "ADA waits east of the town guide.",
+    "South: OXFORD TRAIL, then LONDON."
+  ],
+  "Chantilly": [
+    "LOCAL WALKS / CHANTILLY",
+    "GYM: north of the town square.",
+    "REMY waits west of the town guide.",
+    "South: CHANTILLY FOREST, then PARIS."
+  ],
+  "Oranienburg": [
+    "LOCAL WALKS / ORANIENBURG",
+    "GYM: north of the town square.",
+    "KARL waits west of the town guide.",
+    "South: HAVEL TRAIL, then BERLIN."
   ]
 }

@@ -173,3 +173,24 @@ station. rail-detour-v108.inc retains the previous complete script; exact
 byte restoration proves every command remains unchanged. Old-ROM batteries
 cover Oxford and Chantilly detours with Oranienburg booked, rejoining the
 main line, cold Continue and final arrival.
+
+## v1.10 branch-station wall notices
+
+The shared station-boards.json generator now includes Oxford, Chantilly
+and Oranienburg. Each adds one readable background event at (9,1) on
+existing solid furniture, with two pages of Gym/contact/south-walk directions.
+branch-station-v109.json retains complete old maps/scripts and map groups.
+No room grid, staff, service or shared rail command changes. Runtime checks
+use genuine v1.09 indoor batteries plus new cold Continue saves.
+
+## v1.11 branch-town exterior station signs
+
+Only the existing station entrance text blocks gain a second page naming
+the Gym direction and local quest contact. Route signs already identify
+the complete southbound walks. Baseline: branch-signs-v110.json.
+
+## v1.12 exterior Gym guidance
+
+The exterior signs add a regional quest hand-in page. Indoor statues remain
+exact; the existing leader challenge gates are unchanged. Baseline:
+gym-signs-v111.json.

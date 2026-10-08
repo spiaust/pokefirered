@@ -19,4 +19,8 @@ EuropeNavigation_Open::
 EuropeNavigation_Text_Board::
 	.string "EUROPEAN TRAVEL MAP\p"
 	.string "Browse cities with LEFT and RIGHT.\n"
-	.string "Press B to return to your journey.$"
+	.string "Press B to return to your journey.\p"
+	.string "In BAG, choose KEY ITEMS and\n"
+	.string "TOWN MAP, then REGISTER.\p"
+	.string "SELECT opens your map in the field.\n"
+	.string "On the map, SELECT opens STORY.$"

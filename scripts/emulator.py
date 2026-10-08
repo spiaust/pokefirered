@@ -17,8 +17,8 @@ KEYS = {"A": 1, "B": 2, "SELECT": 4, "START": 8,
 
 
 class Emulator:
-    def __init__(self, rom):
-        self.lib = ctypes.CDLL(str(ROOT / ".local-tools/emulator_bridge.so"))
+    def __init__(self, rom, bridge=None):
+        self.lib = ctypes.CDLL(str(bridge or ROOT / ".local-tools/emulator_bridge.so"))
         self.lib.emulator_read.restype = ctypes.c_uint32
         self.symbols = {}
         for line in Path(rom).with_suffix(".sym").read_text().splitlines():

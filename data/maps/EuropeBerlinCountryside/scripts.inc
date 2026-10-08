@@ -16,6 +16,8 @@ EuropeTrail_Felix_After::
 
 EuropeTrail_Felix_Ask::
 	.string "I'm FELIX, a local trail trainer.\p"
+	.string "You can say No and come back later.\n"
+	.string "The town clinic heals teams for free.\p"
 	.string "Would you like a friendly battle?\n"
 	.string "My two partners are ready!$"
 
@@ -28,4 +30,8 @@ EuropeTrail_Felix_Lose::
 EuropeTrail_Felix_Done::
 	.string "Well battled! Our match is recorded.\p"
 	.string "Look for another trail trainer in\n"
-	.string "each country's countryside.$"
+	.string "each country's countryside.\p"
+	.string "Head north to HAVEL TRAIL.\n"
+	.string "Meet OTTO for an optional match.\p"
+	.string "ORANIENBURG guide: one RARE CANDY.\n"
+	.string "Win both matches to claim the reward.$"

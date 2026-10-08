@@ -99,7 +99,9 @@ EuropeParisGardenRoom_HostText::
  .string "Welcome to our garden workroom.\\n"
  .string "We plan the flower beds together.\\p"
  .string "Both benches hold our garden plans.\\n"
- .string "Take a look; everyone can help.$"
+ .string "Take a look; everyone can help.\\p"
+ .string "Leave south; follow the lane west.\\n"
+ .string "The promenade leads to the EIFFEL.$"
 
 EuropeParisGardenRoom_NotebookText::
  .string "A notebook of shared garden plans.\\n"

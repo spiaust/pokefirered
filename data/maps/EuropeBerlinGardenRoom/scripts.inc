@@ -37,7 +37,9 @@ EuropeBerlinGardenRoom_GardenerText::
  .string "Welcome to our garden workroom!\n"
  .string "We share tools and planting plans.\p"
  .string "Watch the beds, then make notes.\n"
- .string "Read the notes on our workbenches.$"
+ .string "Read the notes on our workbenches.\p"
+ .string "Leave south and follow the road west.\n"
+ .string "The GATE has a visitor room to browse.$"
 
 EuropeBerlinGardenRoom_Tools::
  lock

@@ -2,7 +2,7 @@
   "id": "MAP_EUROPE_BERLIN",
   "name": "EuropeBerlin",
   "layout": "LAYOUT_EUROPE_BERLIN",
-  "music": "MUS_CELADON",
+  "music": "MUS_EUROPE_BERLIN",
   "region_map_section": "MAPSEC_EUROPE_BERLIN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

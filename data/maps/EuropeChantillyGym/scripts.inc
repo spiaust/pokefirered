@@ -55,6 +55,8 @@ EuropeChantillyGym_Winner::
 	releaseall
 	end
 EuropeChantillyGym_Text_Offer::
+	.string "You can say No and come back later.\n"
+	.string "The town clinic heals teams for free.\p"
 	.string "I'm MARINE, CHANTILLY's GYM LEADER.\n"
 	.string "Your survey explored our habitats.\p"
 	.string "Now meet my WATER-type partners!\n"
@@ -81,17 +83,26 @@ EuropeChantillyGym_Text_NotReady::
 	.string "First, finish CELINE's garden survey.\n"
 	.string "She waits west of PARIS's guide.\p"
 	.string "Let REMY review both study notes,\n"
-	.string "then collect your reward in PARIS.$"
+	.string "then collect your reward in PARIS.\p"
+	.string "REMY: west of CHANTILLY's guide.\p"
+	.string "Exit the GYM; station east of square.\n"
+	.string "Take a train to PARIS.\p"
+	.string "Find CELINE west of the guide.$"
 EuropeChantillyGym_Text_Decline::
 	.string "Prepare your team. I'll wait here.\n"
-	.string "The clinic offers free healing.$"
+	.string "The clinic offers free healing.\p"
+	.string "Follow the path back to the exit.\p"
+	.string "Free clinic: west side of the square.$"
 EuropeChantillyGym_Text_Advice::
 	.string "MARINE uses WATER-type partners:\n"
 	.string "PSYDUCK Lv.12 and HORSEA Lv.14.\p"
 	.string "GRASS and ELECTRIC moves work well.\n"
 	.string "Raise a team and bring POTIONS.\p"
 	.string "First, complete CELINE's survey\n"
-	.string "and collect her reward in PARIS.$"
+	.string "and collect her reward in PARIS.\p"
+	.string "Free clinic: west side of the square.\p"
+	.string "POTIONS: shop inside the station.\n"
+	.string "Station: east side of the square.$"
 EuropeChantillyGym_Text_Statue::
 	.string "CHANTILLY GYM\n"
 	.string "LEADER: MARINE\p"

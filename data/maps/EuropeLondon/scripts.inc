@@ -33,7 +33,9 @@ EuropeLondon_Text_Welcome::
 	.string "Ask about his ENGLAND field study.$"
 
 EuropeLondon_Text_Clinic::
-	.string "POKEMON CLINIC\nFree care for traveling partners.$"
+	.string "POKEMON CLINIC\nFree care for traveling partners.\p"
+	.string "Enter the door beside this sign.\n"
+	.string "Talk to the nurse to heal your team.$"
 
 EuropeLondon_Text_Station::
 	.string "LONDON STATION\nEuropean rail ticket office.\p"
@@ -46,6 +48,10 @@ EuropeLondon_Text_Route::
 	.string "NORTH: ENGLISH MEADOW\nContinue along the trail to OXFORD.\p"
 	.string "Wild POKEMON live in the tall grass.\n"
 	.string "The middle path is clear for bikes.\p"
+	.string "Look for OLIVER on the north route.\n"
+	.string "Battles are optional. You can say No.\p"
+	.string "Free clinic: west side of the square.\n"
+	.string "Supplies: shop inside the station.\p"
 	.string "LONDON VISITOR ROOMS\n"
 	.string "East lane: home and reading room.\p"
 	.string "Travel map: select this city.\n"
@@ -147,4 +153,6 @@ EuropeLondon_RealismHomesText::
 	.string "RESIDENTIAL LANE\n"
 	.string "West: open sitting room.\p"
 	.string "East: open reading room.\n"
-	.string "Face either door and press A.$"
+	.string "Face either door and press A.\p"
+	.string "Return west along the garden lane.\n"
+	.string "The EYE gallery welcomes visitors.$"

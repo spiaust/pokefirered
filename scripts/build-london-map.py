@@ -105,7 +105,7 @@ print('London:',W,'x',H,'with Westminster landmarks and two new crossings')
 p=R/'data/maps/EuropeLondon/scripts.inc';s=p.read_text().split('\nEuropeLondon_Garden')[0]
 s+='\nEuropeLondon_GardenVisitor::\n\tlock\n\tfaceplayer\n\tmsgbox EuropeLondon_GardenVisitorText, MSGBOX_DEFAULT\n\trelease\n\tend\n\nEuropeLondon_GardenVisitorText::\n\t.string "JIGGLYPUFF likes this quiet garden.\\n"\n\t.string "We give resting POKEMON room.\\p"\n\t.string "The EYE gallery has garden sketches.\\n"\n\t.string "Follow the riverside path north.$"\n'
 s+='\nEuropeLondon_GardenJigglypuff::\n\tlock\n\tfaceplayer\n\twaitse\n\tplaymoncry SPECIES_JIGGLYPUFF, CRY_MODE_NORMAL\n\tmsgbox EuropeLondon_GardenJigglypuffText, MSGBOX_DEFAULT\n\twaitmoncry\n\trelease\n\tend\n\nEuropeLondon_GardenJigglypuffText::\n\t.string "JIGGLYPUFF: Jiggly! Puff!$"\n'
-for label,lines in [('SideStreet',['GARDEN SIDE LANE','West: the EYE and riverside paths.','Follow the southern loop around','the flower beds and homes.']),('Homes',['RESIDENTIAL LANE','West: open sitting room.','East: open reading room.','Face either door and press A.'])]:
+for label,lines in [('SideStreet',['GARDEN SIDE LANE','West: the EYE and riverside paths.','Follow the southern loop around','the flower beds and homes.']),('Homes',['RESIDENTIAL LANE','West: open sitting room.','East: open reading room.','Face either door and press A.','Return west along the garden lane.','The EYE gallery welcomes visitors.'])]:
  name='EuropeLondon_Realism'+label
  s+=f'\n{name}::\n\tmsgbox {name}Text, MSGBOX_SIGN\n\tend\n\n{name}Text::\n'
  for i,line in enumerate(lines):s+='\t.string "'+line+('$' if i==len(lines)-1 else '\\p' if i%2 else '\\n')+'"\n'

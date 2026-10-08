@@ -55,7 +55,9 @@ EuropeBerlinHome_HostText::
  .string "Welcome! Rest your feet a moment.\n"
  .string "Our garden is a shared little joy.\p"
  .string "Neighbors take turns tending it.\n"
- .string "The guestbook is on the table.$"
+ .string "The guestbook is on the table.\p"
+ .string "Walk east along the courtyard.\n"
+ .string "The middle door is the reading room.$"
 
 EuropeBerlinHome_NotebookText::
  .string "A notebook of garden observations.\n"

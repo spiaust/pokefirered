@@ -2,7 +2,7 @@
   "id": "MAP_EUROPE_OXFORD",
   "name": "EuropeOxford",
   "layout": "LAYOUT_EUROPE_OXFORD",
-  "music": "MUS_PALLET",
+  "music": "MUS_EUROPE_OXFORD",
   "region_map_section": "MAPSEC_EUROPE_OXFORD",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

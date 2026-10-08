@@ -37,7 +37,11 @@ EuropeGateVisitor_GuideText::
  .string "Welcome to our GATE visitor room!\n"
  .string "Our walks connect places and people.\p"
  .string "The garden lies west of the GATE.\n"
- .string "The courtyard rooms lie east.$"
+ .string "The courtyard rooms lie east.\p"
+ .string "Leave through the south doorway.\n"
+ .string "Follow paths north to the square.\p"
+ .string "Station: east side of the square.\n"
+ .string "Free clinic: west side of the square.$"
 
 EuropeGateVisitor_GardenPanel::
  lock

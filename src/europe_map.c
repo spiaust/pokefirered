@@ -467,15 +467,15 @@ static const u8 sRoomsLines[][4][44] = {
     {_("Follow the east lane to both homes."),
      _("West: sitting room and photo album."),
      _("East: reading room and back cabinet."),
-     _("Face either door and press A.")},
+     _("Door: press A. Exit: south doorway.")},
     {_("East side lane: both homes."),
      _("West: sketches on the back display."),
      _("East: garden plans on both benches."),
-     _("Face either door and press A.")},
+     _("Door: press A. Exit: south doorway.")},
     {_("Follow the road east to the courtyard."),
      _("West: guestbook. Middle: garden log."),
      _("East: seed and watering bench notes."),
-     _("Face any of the three doors; press A.")}
+     _("Door: press A. Exit: south doorway.")}
 };
 
 static void DrawEuropePlaces(void)

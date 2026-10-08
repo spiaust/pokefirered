@@ -140,6 +140,8 @@ Europe_Text_Starter::
 	.string "{STR_VAR_1} will be your first partner!\p"
 	.string "Your BAG has POKE BALLS, POTIONS,\n"
 	.string "a BICYCLE, and a TOWN MAP.\p"
+	.string "In KEY ITEMS, REGISTER the BICYCLE.\n"
+	.string "SELECT lets you ride or walk outside.\p"
 	.string "Welcome to the European Tour!$"
 
 Europe_Text_ChooseCountry::

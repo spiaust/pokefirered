@@ -2,7 +2,7 @@
   "id": "MAP_EUROPE_LONDON",
   "name": "EuropeLondon",
   "layout": "LAYOUT_EUROPE_LONDON",
-  "music": "MUS_VERMILLION",
+  "music": "MUS_EUROPE_LONDON",
   "region_map_section": "MAPSEC_EUROPE_LONDON",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

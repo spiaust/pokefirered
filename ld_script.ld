@@ -1040,6 +1040,7 @@ SECTIONS {
         src/*.o(.text);
         src/*.o(.rodata);
         data/*.o(.rodata);
+        sound/songs/mus_europe_*.o(.rodata);
     } > ROM =0
 
     /* DWARF debug sections.

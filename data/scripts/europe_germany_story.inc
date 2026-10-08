@@ -70,8 +70,8 @@ EuropeGermany_Text_Accepted::
 EuropeGermany_Text_Directions::
 	.string "KARL waits west of ORANIENBURG's\n"
 	.string "town guide with the damaged beacon.\p"
-	.string "Take the train, or walk north\n"
-	.string "through BERLIN WOODLAND and HAVEL.\p"
+	.string "Walk north: GERMAN WOODLAND,\n"
+	.string "then HAVEL TRAIL. Or take a train.\p"
 	.string "Your repair parcel is packed.\n"
 	.string "Bring his report back to me!$"
 
@@ -118,13 +118,15 @@ EuropeGermany_Text_Return::
 	.string "Take my report to LENA in BERLIN.\n"
 	.string "She waits west of the city guide.\p"
 	.string "Use the train, or walk south along\n"
-	.string "HAVEL TRAIL and BERLIN WOODLAND.$"
+	.string "HAVEL TRAIL and GERMAN WOODLAND.$"
 
 EuropeGermany_Text_NotStarted::
 	.string "I'm KARL. I maintain trail beacons.\n"
 	.string "This one needs a replacement coil.\p"
 	.string "LENA in BERLIN is preparing parts.\n"
-	.string "Ask her west of the city guide.$"
+	.string "Ask her west of the city guide.\p"
+	.string "First, earn the OXFORD and\n"
+	.string "CHANTILLY GYM badges.$"
 
 EuropeGermany_Text_KarlComplete::
 	.string "KARL: LENA received my report.\n"

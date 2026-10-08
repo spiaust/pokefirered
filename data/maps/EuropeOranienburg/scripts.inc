@@ -38,7 +38,9 @@ EuropeOranienburg_Text_Welcome::
 	.string "LONDON, PARIS, and BERLIN.$"
 
 EuropeOranienburg_Text_Station::
-	.string "ORANIENBURG STATION\nEuropean rail ticket office.$"
+	.string "ORANIENBURG STATION\nEuropean rail ticket office.\p"
+	.string "GYM: north of the town square.\n"
+	.string "KARL waits west of the town guide.$"
 
 EuropeOranienburg_Text_Route::
 	.string "SOUTH: HAVEL TRAIL\nThen GERMAN WOODLAND and BERLIN.$"
@@ -53,6 +55,8 @@ EuropeChallenge_Oranienburg::
 	call_if_defeated TRAINER_EUROPE_OTTO, EuropeTour_CountStamp
 	goto_if_eq VAR_0x8005, 2, EuropeChallenge_Oranienburg_Reward
 	buffernumberstring STR_VAR_1, VAR_0x8005
+	goto_if_defeated TRAINER_EUROPE_FELIX, EuropeChallenge_Oranienburg_NeedExtended
+	goto_if_defeated TRAINER_EUROPE_OTTO, EuropeChallenge_Oranienburg_NeedLocal
 	msgbox EuropeChallenge_Oranienburg_Progress
 	release
 	end
@@ -71,7 +75,7 @@ EuropeChallenge_Oranienburg_Progress::
 	.string "return here for one RARE CANDY!$"
 
 EuropeOranienburg_GymSign::
-	msgbox EuropeOranienburgGym_Text_Statue, MSGBOX_SIGN
+	msgbox EuropeOranienburg_Text_GymSign, MSGBOX_SIGN
 	end
 
 EuropeOranienburg_RealismPalace::
@@ -97,3 +101,32 @@ EuropeOranienburg_RealismHavel::
 EuropeOranienburg_RealismHavelText::
 	.string "HAVEL RIVERSIDE\n"
 	.string "Cross the bridges to SCHLOSSPLATZ.$"
+
+EuropeOranienburg_Text_GymSign::
+	.string "ORANIENBURG GYM\n"
+	.string "LEADER: CONRAD\p"
+	.string "Teamwork makes strong connections.\p"
+	.string "Finish LENA's delivery, then\n"
+	.string "collect her reward in BERLIN.$"
+
+EuropeChallenge_Oranienburg_NeedExtended::
+	msgbox EuropeChallenge_Oranienburg_NeedExtendedText
+	release
+	end
+EuropeChallenge_Oranienburg_NeedExtendedText::
+	.string "Regional trail wins: {STR_VAR_1} of 2.\p"
+	.string "Next: OTTO in HAVEL TRAIL.\p"
+	.string "Follow the clear path south of town.\p"
+	.string "Win that match, then return here.\n"
+	.string "Both wins earn one RARE CANDY.$"
+EuropeChallenge_Oranienburg_NeedLocal::
+	msgbox EuropeChallenge_Oranienburg_NeedLocalText
+	release
+	end
+EuropeChallenge_Oranienburg_NeedLocalText::
+	.string "Regional trail wins: {STR_VAR_1} of 2.\p"
+	.string "Next: FELIX in GERMAN WOODLAND.\p"
+	.string "Go south through this town's trail.\n"
+	.string "Continue south into the countryside.\p"
+	.string "Win that match, then return here.\n"
+	.string "Both wins earn one RARE CANDY.$"

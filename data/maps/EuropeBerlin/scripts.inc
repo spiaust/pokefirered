@@ -31,7 +31,9 @@ EuropeBerlin_Text_Welcome::
 	.string "trains and traveling supplies.$"
 
 EuropeBerlin_Text_Clinic::
-	.string "POKEMON CLINIC\nFree care for traveling partners.$"
+	.string "POKEMON CLINIC\nFree care for traveling partners.\p"
+	.string "Enter the door beside this sign.\n"
+	.string "Talk to the nurse to heal your team.$"
 
 EuropeBerlin_Text_Station::
 	.string "BERLIN STATION\nEuropean rail ticket office.\p"
@@ -44,6 +46,10 @@ EuropeBerlin_Text_Route::
 	.string "NORTH: GERMAN WOODLAND\nThen HAVEL TRAIL to ORANIENBURG.\p"
 	.string "Cycle along the clear middle path.\n"
 	.string "Wild POKEMON live in the tall grass.\p"
+	.string "Look for FELIX on the north route.\n"
+	.string "Battles are optional. You can say No.\p"
+	.string "Free clinic: west side of the square.\n"
+	.string "Supplies: shop inside the station.\p"
 	.string "BERLIN VISITOR ROOMS\n"
 	.string "East courtyard: three visitor rooms.\p"
 	.string "Travel map: select this city.\n"
@@ -107,7 +113,9 @@ EuropeBerlin_RealismCourtText::
 	.string "COURTYARD NOTES\n"
 	.string "Seed and watering notes: workroom.\p"
 	.string "Garden log: middle reading room.\n"
-	.string "Share a memory in the western home.$"
+	.string "Share a memory in the western home.\p"
+	.string "Return west along the main road.\n"
+	.string "The GATE visitor room is on the west.$"
 
 EuropeBerlin_CourtGardener::
 	lock

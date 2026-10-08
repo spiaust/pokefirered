@@ -86,7 +86,7 @@ def build(city):
   for bx,label in [(42,'home'),(50,'library'),(57,'workroom')]:
    for dy,row in enumerate(facades[label]):
     for dx,t in enumerate(row):a[27+dy][bx+dx]=0x400|t
-  signs += [('Boulevard',40,36,['UNTER DEN LINDEN APPROACH','West: BRANDENBURG GATE.','East: the residential court.','Use the side lanes to circle it.']),('Court',56,34,['COURTYARD VISITOR ROOMS','West: home. Middle: reading room.','East: the garden workroom.','Face a door and press A to visit.','COURTYARD NOTES','Seed and watering notes: workroom.','Garden log: middle reading room.','Share a memory in the western home.'])]
+  signs += [('Boulevard',40,36,['UNTER DEN LINDEN APPROACH','West: BRANDENBURG GATE.','East: the residential court.','Use the side lanes to circle it.']),('Court',56,34,['COURTYARD VISITOR ROOMS','West: home. Middle: reading room.','East: the garden workroom.','Face a door and press A to visit.','COURTYARD NOTES','Seed and watering notes: workroom.','Garden log: middle reading room.','Share a memory in the western home.','Return west along the main road.','The GATE visitor room is on the west.'])]
   for _,x,y,_ in signs:a[y][x]=0x402
  if city=='Paris':
   # Retain the former eastern tree boundary, opening a short lane mouth.
@@ -105,7 +105,7 @@ def build(city):
   for y in range(34,37):
    for x in range(54,59):
     t=a[y][x];a[y][x]=(t&0xfc00)|blocks['garden_roof'][str(t&1023)]
-  signs += [('Lane',43,41,['PROMENADE SIDE LANE','West: the river and EIFFEL gardens.','The south path circles the flowers.','Both homes welcome visitors.']),('Homes',55,41,['NEIGHBORHOOD HOMES','West: sketches. East: garden room.','Face either door and press A.','Return west for the island bridge.'])]
+  signs += [('Lane',43,41,['PROMENADE SIDE LANE','West: the river and EIFFEL gardens.','The south path circles the flowers.','Both homes welcome visitors.']),('Homes',55,41,['NEIGHBORHOOD HOMES','West: sketches. East: garden room.','Face either door and press A.','Return west for EIFFEL and bridges.'])]
   for _,x,y,_ in signs:a[y][x]=0x402
  original=[r[:] for r in a];forestids={0x14,0x15,0x1c,0x1d}
  def forest(x,y):return x<0 or y<0 or x>=W or y>=H or original[y][x]&1023 in forestids

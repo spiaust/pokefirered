@@ -37,7 +37,11 @@ EuropeLondonEyeGallery_AttendantText::
  .string "Welcome to our riverside gallery!\n"
  .string "The SOUTH BANK paths link gardens\p"
  .string "and bridges. Look at the displays,\n"
- .string "then explore the walks outside.$"
+ .string "then explore the walks outside.\p"
+ .string "Leave through the south doorway.\n"
+ .string "Follow paths north to the square.\p"
+ .string "Station: east side of the square.\n"
+ .string "Free clinic: west side of the square.$"
 
 EuropeLondonEyeGallery_GardenPanel::
  lock

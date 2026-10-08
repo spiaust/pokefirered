@@ -83,7 +83,9 @@ EuropeParisHome_HostText::
  .string "Welcome! I collect local sketches.\\n"
  .string "The river gives us new views daily.\\p"
  .string "The display holds three river views.\\n"
- .string "Take a look before your next walk.$"
+ .string "Take a look before your next walk.\\p"
+ .string "The blue-roofed home to the east\\n"
+ .string "has a garden workroom to visit.$"
 
 EuropeParisHome_NotebookText::
  .string "A sketchbook of the river and gardens.\\n"

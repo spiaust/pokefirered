@@ -347,5 +347,13 @@ gSongTable::
 	song mus_slow_pallet, 0, 0
 	song mus_teachy_tv_menu, 0, 0
 
+	song mus_europe_london, 0, 0
+	song mus_europe_paris, 0, 0
+	song mus_europe_berlin, 0, 0
+	song mus_europe_oxford, 0, 0
+	song mus_europe_chantilly, 0, 0
+	song mus_europe_oranienburg, 0, 0
+	song mus_europe_title, 0, 0
+
 dummy_song_header:
 	.byte 0, 0, 0, 0

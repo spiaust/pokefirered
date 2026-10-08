@@ -35,7 +35,9 @@ EuropeParis_Text_Welcome::
 	.string "on its south side. Try the door.$"
 
 EuropeParis_Text_Clinic::
-	.string "POKEMON CLINIC\nFree care for traveling partners.$"
+	.string "POKEMON CLINIC\nFree care for traveling partners.\p"
+	.string "Enter the door beside this sign.\n"
+	.string "Talk to the nurse to heal your team.$"
 
 EuropeParis_Text_Station::
 	.string "PARIS STATION\nEuropean rail ticket office.\p"
@@ -48,6 +50,10 @@ EuropeParis_Text_Route::
 	.string "NORTH: FRENCH GARDENS\nThen CHANTILLY FOREST and town.\p"
 	.string "Cycle along the clear middle path.\n"
 	.string "Wild POKEMON live in the tall grass.\p"
+	.string "Look for CAMILLE on the north route.\n"
+	.string "Battles are optional. You can say No.\p"
+	.string "Free clinic: west side of the square.\n"
+	.string "Supplies: shop inside the station.\p"
 	.string "PARIS VISITOR ROOMS\n"
 	.string "East lane: sketches and garden room.\p"
 	.string "Travel map: select this city.\n"
@@ -109,7 +115,7 @@ EuropeParis_RealismHomesText::
 	.string "NEIGHBORHOOD HOMES\n"
 	.string "West: sketches. East: garden room.\p"
 	.string "Face either door and press A.\n"
-	.string "Return west for the island bridge.$"
+	.string "Return west for EIFFEL and bridges.$"
 
 EuropeParis_GardenObserver::
 	lock

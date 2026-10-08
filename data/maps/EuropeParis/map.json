@@ -2,7 +2,7 @@
   "id": "MAP_EUROPE_PARIS",
   "name": "EuropeParis",
   "layout": "LAYOUT_EUROPE_PARIS",
-  "music": "MUS_FUCHSIA",
+  "music": "MUS_EUROPE_PARIS",
   "region_map_section": "MAPSEC_EUROPE_PARIS",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

@@ -3,15 +3,461 @@
 The project grows in playable releases. Build and test each gameplay change
 before adding the next; preserve the previous ROM in `artifacts/releases`.
 
-## To do: complete game walkthrough
+## v1.37: completed regional challenge travel help complete
 
-- [ ] Write an exact, step-by-step walkthrough from a new game through the
+Eleven fresh checks cover exact text scope/font, completed-guide repeats and
+cold Continue, normal trains to both other guide towns, and return journeys
+from all three origins. Walkthrough, town music and animated splash remain
+complete and included. Next: continue reviewing game progression and hints.
+
+## v1.36: pending regional reward Bag help complete
+
+Twenty fresh checks cover exact shared-text scope/font, six pending-message
+and cold Continue cases, six native Bag Toss cancellation/confirmation and
+room-state Continue cases, and six one-time claims/repeats/Continue cases.
+Both full pockets and capped Candy stacks are covered at all three guides.
+Next: review completed regional challenge messages for clear onward travel.
+Walkthrough, custom music and animated splash remain complete and included.
+
+## v1.35: remaining regional trainer guidance complete
+
+Seventeen fresh checks cover source scope/font and all three guides at
+zero wins, genuine local-first wins, newly earned extended-first wins,
+normal reverse-order second victories, one-time Candy claims and claimed
+repeat/cold Continue. The new read-only branches identify the actual
+remaining trainer without advancing progress. Next: review pending reward
+messages for practical Bag room-making guidance. Walkthrough, music and
+animated splash remain complete and included.
+
+## v1.34: extended-victory return guidance complete
+
+Eleven fresh checks cover exact text/font, earned-victory messages with
+repeat/cold Continue, clear north paths to clinic and square guide,
+one-time regional claims/repeat/cold Continue, then defeated-trainer
+revisits and another guide return without duplicated prizes or rewards.
+Next: review the town guides' regional progress messages for clear next
+steps when only one of the two trainers has been defeated. Walkthrough,
+custom music and animated splash remain complete and included.
+
+## v1.33: local-victory onward guidance complete
+
+Eleven fresh checks cover exact text/font, earned-victory advice with
+repeat/cold Continue, northward routes to named optional opponents and
+branch-town clinic preparation/Continue, correct extended battles and
+one-time regional Rare Candy claims after both wins. Next: review extended
+trainer victory messages for clear return directions to the reward guide.
+Music, animated splash and walkthrough remain complete and included.
+
+## v1.32: country entrance training guidance complete
+
+Eleven fresh checks cover exact sign text/font, all six sign pages with
+repeat/cold Continue, normal walks to the named local trainer and safe
+B-declined returns, free capital clinic care and real station Potion
+purchases retained through indoor Continue and return to the sign.
+Next: review post-victory local trainer guidance toward the longer trails
+and regional rewards. Walkthrough, music and animated splash are complete.
+
+## v1.31: countryside trail signs and service routes complete
+
+Eleven fresh checks cover exact sign text/font, both signs on all three
+trails with repeats/cold Continue, north-town clinic and station-shop
+routes with real Potion purchases/Continue, and southward countryside
+crossings to capital clinics with retained supplies/progress. Next:
+review country-side route entrances for clear destinations and optional
+training guidance. Walkthrough, music and animated splash remain complete.
+
+## v1.30: Gym guide preparation routes complete
+
+Eleven fresh checks cover exact text scope/font, full guide advice and
+repeat/cold Continue, free clinic routes, and station-shop cancellation,
+normal Potion purchases at the exact price, indoor Continue and return.
+Next: review the route signs between the capital and branch towns for
+clear onward travel and preparation guidance. The walkthrough, custom
+music and animated Celebi splash remain complete and included.
+
+## v1.29: Gym readiness directions complete
+
+Locked Gym messages now explain the exit, station, capital and story
+contact; Chantilly also names REMY's location. Eleven checks cover exact
+text scope/font, unstarted and report-ready gates with cold Continue,
+normal trains/contact approaches, one-time earned report hand-ins and
+optional leader offers after returning and continuing. Next: review the
+Gym guides' type advice and preparation routes for first-time players.
+The walkthrough, music and animated splash remain complete.
+
+## v1.28: Gym preparation help complete
+
+Oxford, Chantilly and Oranienburg leaders introduce optional battles and
+free care, with exit/clinic directions when declined. Eleven fresh checks
+cover scope/font, No/B, clinic walks with indoor cold Continue and return,
+correct accepted battles and normal badge/TM victories with repeat and
+cold Continue protection. Next: review Gym readiness guidance before the
+regional story requirements are complete. Music, animated splash and
+walkthrough remain complete and included.
+
+## v1.27 Gym reward capacity and UI checks complete
+
+Twelve checks cover real victories with saturated TM stacks or full Key
+Items pockets, badge retention, pending and claimed cold Continue,
+one-time TM claims, Trainer Card badges and TM Case access at all Gyms.
+Next: return to gameplay improvements by reviewing Gym preparation and
+clinic directions before accepting a leader battle. Music, animated
+splash and the walkthrough remain complete.
+
+## v1.27 Gym recovery checks complete
+
+Oxford, Chantilly and Oranienburg pass natural loss, local clinic HP/PP
+recovery, exact badge-dependent money loss, recovered cold Continue,
+optional retry, normal victory and one-time badge/TM reward checks.
+Next: review Gym reward capacity recovery and TM Case access on the
+current ROM. Music, animated splash and walkthrough remain complete.
+
+## v1.27 regional reward capacity checks complete
+
+Nine isolated inventory-boundary checks cover all three branch guides:
+42 occupied item slots without Rare Candy, a capped 999-Candy stack even
+with empty slots, and a full pocket whose 998-Candy stack still has room.
+Pending and claimed states survive cold Continue without duplicate rewards.
+Six further checks verify native Bag Toss cancellation, making room,
+Save/Continue and claiming the pending reward. Next: review Gym challenge
+recovery and continuity. Music, animated splash and the walkthrough remain complete.
+
+## v1.27 longer-trail defeat recovery complete
+
+Natural losses, branch-town clinic recovery, exact money loss, full HP/PP,
+recovered cold Continue, optional retry, normal victory and prize-once
+repeat/cold Continue passed in all three branches. Next: check branch
+regional rewards when the item pocket is full and the reward is pending.
+Music, animated splash and the walkthrough are complete.
+
+## v1.27: longer countryside challenges reviewed
+
+Extended trail trainers now introduce optional battles and point north to
+the nearer branch-town clinics. Fourteen checks pass: scope/font, all three
+No/B exchanges, named clinic routes with Continue, normal challenge wins
+and one-time regional Rare Candy rewards across repeated guides/Continue.
+Next: verify natural defeat and retry on the longer countryside trails,
+including recovery in the last visited branch town. Music, splash and
+walkthrough remain complete and included.
+
+## v1.26 natural battle-defeat recovery complete
+
+Nine checks cover normal losses in all three countries, exact money loss,
+local clinic HP/PP recovery, recovered-state cold Continue, optional retry,
+normal retry victory, prize-once repeats and won-state cold Continue.
+No fix was needed. Next: review the longer countryside trainer challenges
+and their clinic return routes. Music, splash and walkthrough are complete.
+
+## v1.26 route training recovery complete
+
+Nine checks verify naturally damaged teams and depleted PP after normal
+victories, cold Continue before healing, free full nurse recovery, repeat
+care, healed-state Continue and outdoor return in all three countries.
+No game fix was needed. Next: verify natural battle-defeat recovery and
+retrying a trail trainer without receiving an unearned victory or prize.
+Music, animated splash and walkthrough remain complete and included.
+
+## v1.26: countryside training introduction complete
+
+All three local trail trainers introduce No/return-later and free clinic
+care before offering the battle. Seventeen checks pass, including three
+normal victories, prize-once repeats, Save/Continue and clinic returns.
+Next: review route training recovery after a battle, including nurse care
+for naturally damaged teams. Music, animated splash and walkthrough are
+complete and remain included.
+
+## v1.25 game playtesting resumed: music transitions complete
+
+After completing the requested original soundtrack and animated Celebi
+splash, verified all six towns' stations, clinics and countryside routes.
+Nineteen additional checks pass, including eighteen indoor/route cold
+Continues, nurse fanfare recovery and custom town music restoration.
+No fix was needed. Next: review the countryside training introduction
+before players accept their first trail battle. Walkthrough is finished.
+
+## v1.25: town soundtrack and animated splash complete
+
+Delivered the requested six unique town themes and a separate Celebi
+title theme, with a native animated splash cycling all six towns. Twenty-
+seven checks cover score generation/loop alignment, actual native audio,
+animation, menu return cycles, six-town train travel, cold Continue and
+all nine starters. The finished walkthrough remains included.
+Next: review music transitions between towns, stations, clinics and routes.
+The earlier countryside training introduction review remains on the list.
+
+## v1.24: countryside return directions complete
+
+One shared trainer decline page explains the southward return to town and
+west-side clinic. All three routes and No/B replies pass normal-control
+tests. The walkthrough remains finished. Next: review the countryside
+training introduction before players accept their first trail battle.
+
+## v1.23: new-player clinic directions complete
+
+One page on each capital clinic sign explains entering and talking to the
+nurse. Nine checks passed, including all three fresh country starts and
+indoor Continue. The finished walkthrough remains included.
+Next: review countryside training directions and routes back to clinics.
+
+## v1.22: Bicycle shortcut introduced with starter supplies
+
+One page now introduces REGISTER and SELECT during starter confirmation.
+All starter and item-grant commands remain exact. Seventeen focused checks
+cover all nine starter choices, cancellation, and fresh shortcut use with
+riding Continue in all three countries. The walkthrough remains finished.
+Next: review route training and clinic directions for new players.
+
+## v1.21: Town Map shortcut discoverable at travel boards
+
+Two help pages now introduce normal REGISTER and the field/map meanings
+of SELECT at all six travel boards. Existing item grants and map-opening
+commands remain exact. Eleven checks cover all towns, registration and new
+Continue. The walkthrough remains finished. Next: review the starting
+travel supplies introduction for Bicycle shortcut guidance.
+
+## v1.20 Town Map SELECT and shortcut replacement verified
+
+Six fresh checks verify registered Town Map field return, map controls,
+riding/indoor Continue, Bicycle replacement and map DESELECT persistence.
+No fix was needed. Next: improve the travel-board introduction so players
+can discover the verified Town Map REGISTER shortcut in the game itself.
+
+## v1.20 Bicycle SELECT shortcut verified
+
+Six normal-control checks cover REGISTER, SELECT mount/dismount, riding
+Continue, indoor refusal and Continue, outdoor recovery, retained ending
+and DESELECT persistence. No fix was needed. Next: check Town Map SELECT
+registration and switching the registered item between map and Bicycle.
+
+## v1.20 Bicycle landmark-case review complete
+
+Seven fresh checks verify all three completed case interiors, mounted
+entrance declines, automatic dismount, curator/ledger repeats, indoor
+Continue, exits and Ada's retained conclusion. No game fix was needed.
+Together with the prior ten visitor rooms, all thirteen optional capital
+interiors now have completed-save Bicycle coverage. Next: review normal
+Bicycle registration and SELECT use across indoor visits.
+
+## v1.20 Bicycle visitor-room review complete
+
+Eleven fresh checks verify all ten visitor interiors, mounted declines,
+automatic dismount, indoor Continue, exits and retained Ada conclusion.
+No game fix was needed; v1.20 remains the current ROM. Next: check Bicycle
+entry and exits in the three optional landmark-case interiors.
+
+## v1.20: landmark guides point back to stations and clinics
+
+Three guides now describe the south exit and northward return to the
+square, with station and free-clinic directions. Nine checks cover exact
+scope, font fit, old indoor saves, repeated talks, actual service visits
+and new Continue. The walkthrough remains finished. Next: review visitor
+entrance and exit handling while riding the Bicycle.
+
+## v1.19: outdoor neighborhood landmark-return signs
+
+Three capital signs now consistently name the nearby landmark return
+route while keeping visitor-room listings. Nine checks cover text scope,
+font fit, retained completed saves, actual return walks and new Continue.
+The walkthrough remains finished. Next: review landmark-room guides for
+clear routes back to stations and city services.
+
+## v1.18: eastern visitor-host landmark directions
+
+Three eastern-room hosts now explain leaving south and returning west to
+an outdoor landmark and visitor room. Nine checks verify old indoor saves,
+repeat conversations, actual landmark visits and new Continue. The
+walkthrough remains finished. Next: review capital outdoor neighborhood
+signs for consistent landmark-return guidance.
+
+## v1.17: neighboring-room directions from existing hosts
+
+Three western-room hosts now suggest another nearby room after their
+original dialogue. Eleven focused checks preserve old indoor saves,
+repeat talks, all completed activities and new Continue. The walkthrough
+remains finished. Next: review eastern-room hosts for the return route and
+nearby outdoor landmarks.
+
+## v1.16: back to game development with Rooms exit directions
+
+The completed walkthrough is delivered. Three capital Rooms help lines
+now explain both entering and leaving visitor interiors. Nine focused
+checks cover native font, exact scope, map controls, older saves and new
+Continue with the main conclusion retained. Next: review room hosts for
+useful local exploration directions without adding quest requirements.
+
+## Walkthrough finished; resume game development
+
+The exact main route and optional activity instructions are complete.
+Twenty-two fresh checks close the remaining seven visitor interiors,
+including readings, cold Continue and both exits. Existing coverage includes
+all three western homes, optional cases, stamps, Bicycle, coast, riverboat,
+Lapras and Gastly. Other six starter teams remain outside full-run coverage.
+Next game change: show the south-door exit in capital Rooms map guidance.
+
+## v1.15 western visitor-home walkthrough verified
+
+Ten fresh checks cover three capital western homes, their displays and
+hosts, interior Continue, both exits, re-entry and return to Ada. The
+walkthrough now lists exact door and reading approaches. Next: review the
+eastern reading and garden rooms for matching visitor instructions.
+
+## v1.15 Bicycle walkthrough instructions verified
+
+Three fresh completed-save checks verify normal Key Items use, movement,
+riding Save/Continue, dismounting and the retained Ada conclusion. Added
+exact Bicycle controls to the optional walkthrough. ROM and user saves
+remain unchanged. Next: review the optional visitor-room directions for
+any missing player instructions.
+
+## v1.15 walkthrough consistency and evidence review complete
+
+Reviewed the current guide and all nine versioned evidence manifests.
+Archived guide hashes match; clean logs record 72 prior PASS results.
+Corrected German Woodland's name and the current station-notice version.
+Eight later suites have matching archived scripts; the original England
+suite has logs/hashes but lacks its two exact historical script copies.
+TESTING.md and the final audit JSON explicitly record that limitation.
+The walkthrough task is complete for the documented prototype route.
+
+## Completed game walkthrough
+
+- [x] Write an exact, step-by-step walkthrough from a new game through the
   final completion sequence, covering each starting-country choice.
-- [ ] Include required quest order, prerequisites, locations, travel routes,
+- [x] Include required quest order, prerequisites, locations, travel routes,
   NPC interactions, menu choices, battles, rewards and completion checks.
-- [ ] Clearly label optional activities and explain how to resume after saving.
-- [ ] Verify the instructions against the current playable ROM from fresh
+- [x] Clearly label optional activities and explain how to resume after saving.
+- [x] Verify the instructions against the current playable ROM from fresh
   saves, and record the release version the walkthrough covers.
+
+The guide is in WALKTHROUGH.md and artifacts/WALKTHROUGH.md for v1.15.
+Separate full fresh runs cover England/Bulbasaur, France/Chikorita and
+Germany/Mudkip, including ending Continue and deferred accounts. Additional
+completed-save runs verify landmark cases, stamps, coastal/river travel,
+rental Lapras and normal Gastly capture.
+TESTING.md and versioned manifests record exact scope. The other six starter
+choices are not separate full playthroughs.
+
+## v1.15 optional Gastly capture verified normally
+
+Five fresh checks buy normal Poke Balls, decline the encounter safely,
+start level-12 Gastly, capture with two earned Great Balls, cold Continue
+and return to Ada. The guide now explains the optional encounter and normal
+capture preparation. No catch-rate, item or Pokemon edits were needed.
+Final consistency and evidence review completed; see the audit above.
+
+## v1.15 completed-save rental Lapras verified
+
+Eight fresh checks cover both rental landings, declines, identical party,
+water Continue, free steering, shore return, repeat rental, Bicycle boarding
+and Ada's ending afterward. The guide includes exact boarding and dismount
+steps. Next: verify the optional Notre Dame Gastly encounter without edited
+capture items or catch rates.
+
+## v1.15 completed-save riverboat verified
+
+Six fresh checks cover both London/Oxford riverboat directions, No/B
+declines, landing Continue, correct city maps, Bicycle boarding and Ada's
+ending afterward. The guide now gives captain approaches and return steps.
+Next: verify rental Lapras boarding, steering and shore return.
+
+## v1.15 present-day coast walkthrough verified
+
+Nine fresh checks cover both Dover/Calais coach/ferry routes, No/B declines,
+per-arrival cold Continue, named port maps, capital return exits and Ada's
+ending afterward. The guide now includes exact station and port approaches.
+Next: verify the London/Oxford riverboat from the completed save.
+
+## v1.15 completed-save tour stamps verified
+
+Nine fresh checks collect Berlin, London and Paris stamps after the main
+ending and optional cases. They verify one Exp. Share, repeat guide safety,
+per-stamp Continue, completed journal milestones and Ada's ending afterward.
+The guide now gives the exact approach and pending-reward recovery steps.
+Next: verify optional present-day port crossings from the completed save.
+
+## v1.15 optional-case walkthrough checked
+
+All three optional landmark cases now pass sequentially from the fresh
+Germany ending save. Nine checks cover exact rewards, repeat safety,
+Continue, ledger synthesis and Ada synthesis. Corrected the guide's reversed
+curator/attendant coordinates and Reichstag reward (three Great Balls).
+Next: verify optional tour stamps and the Exp. Share on a completed save.
+
+## v1.15 all starting countries complete one fresh route
+
+Germany/Mudkip now passes a full fresh walkthrough, ending Continue and
+both deferred accounts (eight additional checks). England/Bulbasaur and
+France/Chikorita remain separately verified. All three starting countries
+have one full checked team; the other six starter choices are not separate
+complete runs. No game changes were needed.
+Next: verify the optional landmark cases from a fresh completed save.
+
+## v1.15 second full starting-team verification
+
+France/Chikorita now completes the full walkthrough from a fresh game,
+including ending Continue and deferred accounts (eight additional checks).
+England/Bulbasaur remains separately verified. Germany/Mudkip currently
+covers its starting connection only. The battle verifier now selects Razor
+Leaf through normal controls; no game code changes were needed.
+Next: verify a complete fresh Germany/Mudkip route.
+
+## v1.15 walkthrough revalidation and route-direction review
+
+English/French quest directions agree with their route signs. The current
+v1.15 release also passes ten fresh walkthrough checks: full England/
+Bulbasaur completion and ending Continue, France/Chikorita and Germany/
+Mudkip starting connections, and deferred ending accounts. Exact scope
+is recorded in TESTING.md and the versioned verification manifest.
+Next: broaden full fresh completion coverage to another starting team.
+
+## v1.15: consistent German delivery route names
+
+LENA's active directions name GERMAN WOODLAND followed by HAVEL TRAIL for
+the northbound walk. KARL's return directions use the same official names
+in southbound order. Train travel remains an alternative. Only three text
+lines change; quest state, cargo, rewards and travel commands remain exact.
+Next: review English and French quest directions against route signage.
+
+## v1.14: inactive regional quest contact directions
+
+Before quest acceptance, the Oxford rival identifies OAK's London aide west
+of the town guide. REMY names the required Oxford badge, and KARL names the
+Oxford and Chantilly badges before directing travelers to CELINE or LENA.
+Only inactive dialogue changes; all quest commands and active text remain.
+Next: review country-route naming in German delivery directions.
+
+## v1.13: regional journal hand-in guidance
+
+The three report-back leads now say to collect the NPC reward before
+battling ELLIS, MARINE or CONRAD. The existing Bag-space reminder remains.
+Only three display lines change; lead selection, saved milestones, reward
+logic and quest requirements remain exact.
+Next: review regional quest contacts for useful directions before acceptance.
+
+## v1.12: exterior Gym quest guidance
+
+The three branch-town Gym signs retain their leader and motto pages, then
+explain which regional quest to finish and where to report for its reward.
+Gym entry is already open; the quest gates the leader challenge. Indoor
+statues, leader scripts, badges, rewards and map events remain unchanged.
+Next: review the travel journal's regional quest hand-in guidance.
+
+## v1.11: branch-town exterior station directions
+
+Oxford, Chantilly and Oranienburg station entrance signs now retain the
+ticket-office page and add the Gym direction and named local quest contact.
+The southbound route signs already name both country paths and the capital.
+Only three text blocks change; maps, events and rail commands stay exact.
+Next: review Gym entrance guidance for regional quest prerequisites.
+
+## v1.10: branch-town station walking notices
+
+Oxford, Chantilly and Oranienburg now have matching local-walk notices on
+the existing framed station wall picture. They identify the Gym, local
+quest contact and southbound country walk. Room grids, staff, services,
+rail commands, exits and map IDs remain exact. Genuine v1.09 indoor saves
+and new Save/Continue checks cover both pages, repeats and local approaches.
+Next: review branch-town exterior signs for consistent quest directions.
 
 ## v1.09: route guidance after walking detours
 

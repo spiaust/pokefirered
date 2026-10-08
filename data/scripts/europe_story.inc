@@ -86,7 +86,8 @@ EuropeStory_Text_Decline::
 EuropeStory_Text_NotStarted::
 	.string "{RIVAL}: Hey, {PLAYER}! OAK sent\n"
 	.string "me to meet traveling trainers.\p"
-	.string "Talk to his aide in LONDON's square.\n"
+	.string "Talk to OAK's aide in LONDON.\n"
+	.string "He waits west of the town guide.\p"
 	.string "Then we'll compare our teams!$"
 EuropeStory_Text_MeetOliver::
 	.string "{RIVAL}: First, try OLIVER's match\n"

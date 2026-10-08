@@ -3,6 +3,407 @@
 A FireRed-based prototype of a journey through real European countries.
 
 
+## v1.37: completed regional challenges point onward
+
+After claiming a regional Rare Candy, the guide names Oxford, Chantilly and
+Oranienburg and directs players to the east-side station to visit another
+guide town. Existing trainer requirements and one-time rewards are unchanged.
+
+## v1.36: pending regional rewards explain making Bag room
+
+When inventory capacity blocks a regional Rare Candy, the guide now explains
+opening BAG's ITEMS pocket, using/giving/tossing an unneeded item, then
+returning. Earned wins and the unclaimed reward remain safe. Existing
+capacity and one-time reward rules are unchanged.
+
+## v1.35: regional guides name the remaining trainer
+
+With one regional win, the Oxford, Chantilly and Oranienburg guides now
+name the unbeaten trainer and explain its route. Winning the nearby
+extended match first points south through the trail to the local opponent;
+winning locally first points to the nearby extended opponent. Zero-win,
+two-win, full-bag and already-claimed reward rules remain unchanged.
+
+## v1.34: extended victories explain the return to town
+
+ALICE, LUCIE and OTTO now point north along the clear path to the town
+square's reward guide after their match. They explain that both regional
+wins earn one Rare Candy and point to free care west of the square.
+Existing opponents, battles and reward eligibility remain unchanged.
+
+## v1.33: local victories point to the next regional challenge
+
+After a local trainer victory, OLIVER, CAMILLE and FELIX now name the
+northward trail and its optional opponent ALICE, LUCIE or OTTO. They also
+identify the Oxford, Chantilly or Oranienburg guide and explain that both
+wins earn one Rare Candy. Existing matches, reports and rewards are unchanged.
+
+## v1.32: countryside entrance signs explain optional training
+
+London, Paris and Berlin route signs now name OLIVER, CAMILLE or FELIX
+on the north route, explain that battles are optional, and point to the
+free west-square clinic and station supply shop. Existing onward-town,
+clear-path and visitor-room directions remain included.
+
+## v1.31: trail signs point to nearby healing and supplies
+
+Both ends of the Oxford, Chantilly and Oranienburg trails retain their
+north/south destinations and clear-path advice, then name the northern
+town for free healing, its west-square clinic and station supply shop.
+Trainers, battles and rewards are unchanged.
+
+## v1.30: Gym guides point to healing and Potions
+
+All three Gym guides retain their type, team and story advice, then add
+directions to free clinic care west of the square and the Potion shop
+inside the station on the east side. Battles and rewards are unchanged.
+
+## v1.29: locked Gyms explain where to continue the story
+
+Leaders now add exit, east-side station and capital/contact directions
+when the regional story is unfinished. Oxford points to OAK's aide in
+LONDON, Chantilly to CELINE in PARIS, and Oranienburg to LENA in BERLIN.
+Chantilly also places REMY west of its town guide. Existing requirements,
+optional battle help, battles and rewards remain unchanged.
+
+## v1.28: Gym preparation and free-clinic directions
+
+All three Gym leaders now explain before asking that you can say No and
+return later, and that the town clinic heals for free. Declining also
+points back along the Gym path to the exit and to the clinic west of the
+square. Existing story requirements, battles and rewards are unchanged.
+
+## v1.27 Gym pending-TM recovery verified
+
+All three Gyms preserve the earned badge when inventory limits block the
+TM. Pending rewards survive Continue, can be claimed once after making
+room, and open in the TM Case. Trainer Cards show the earned badges.
+These boundary checks use isolated inventory fixtures; no ROM fix was needed.
+
+## v1.27 Gym defeat and retry verified
+
+Nine additional checks cover natural losses at all three Gyms, local
+clinic recovery, Save/Continue, declining a retry, then normal victories.
+Losing awards no badge or TM. Successful retries award each badge and TM
+once. No ROM fix was needed.
+
+## v1.27 regional reward capacity verified
+
+All three branch guides retain an unclaimed Rare Candy when the items
+pocket has no room. After room is available, the reward can be claimed
+once, including after Save/Continue. Native Bag Toss cancellation and
+confirmation also passed. No game fix was needed.
+
+## v1.27 longer-trail defeat and retry verified
+
+Nine additional checks cover natural losses to the Oxford, Chantilly and
+Oranienburg trail trainers, recovery at the last visited branch-town
+clinic, Save/Continue, declining a retry, then a normal retry victory and
+one prize. No ROM fix was needed; v1.27 remains the current game.
+
+## v1.27: longer trails point to the nearer northern clinics
+
+ALICE, LUCIE and OTTO now explain that battles are optional and town
+clinics heal for free. Declining directs you north along the clear path
+to OXFORD, CHANTILLY or ORANIENBURG, then to the clinic west of the square.
+Local trainers retain their southward directions. Fourteen focused checks
+cover exact scope/font, No/B, all three named clinic routes and indoor
+Continue, normal challenge victories and regional Rare Candy rewards.
+
+## v1.26 natural defeat and retry verified
+
+Nine additional checks verify naturally losing to each local trail
+trainer, local clinic recovery with full HP/PP and the correct money loss,
+Save/Continue, declining a retry, then earning a normal retry victory and
+one prize. Losing awards no trainer completion or prize. No ROM fix was
+needed; v1.26 remains the current game.
+
+## v1.26 post-battle clinic recovery verified
+
+Nine additional checks verify genuine post-battle HP damage and spent move
+PP in all three countries, saving and continuing those worn-down teams,
+walking back to the clinic, free full recovery and retaining the earned
+trainer victories. Repeated care and healed-state Continue also pass.
+No ROM fix was needed; v1.26 remains the current game.
+
+## v1.26: trail trainers explain that battles are optional
+
+OLIVER, CAMILLE and FELIX now explain before asking for a battle that you
+can say No and return later, and that the town clinic heals for free.
+Their original introduction, two-partner question, battle teams and prizes
+remain unchanged. Seventeen focused checks cover text scope/font, No/B,
+normal Yes battles and victories, one-time prizes, cold Continue and all
+three return routes to the clinics. The v1.25 music and Celebi splash stay
+included, along with the finished walkthrough.
+
+## v1.25 music transitions verified
+
+Nineteen additional normal-control checks cover all six towns' station,
+clinic and countryside round trips. Each restores its custom town theme;
+all eighteen destinations retain the correct music after cold Continue.
+Nurse fanfares return to clinic music. Completed activities and user saves
+remain intact. No ROM change was needed; v1.25 remains the current game.
+
+## v1.25: original town music and animated Celebi splash
+
+Each of the six present-day towns now has its own original eight-bar,
+four-track native soundtrack: London (Thames Lanterns), Paris (Garden
+Waltz), Berlin (Linden Steps), Oxford (Scholars by the River), Chantilly
+(Forest Porcelain) and Oranienburg (Havel Reflections). The new title theme
+is Celebi Across Europe. Clinics, stations, routes and historical scenes
+retain their existing music. The native title screen shows green Celebi
+floating above changing town silhouettes, twinkling lights and a blinking
+Start prompt. A or Start opens the normal menu; B from the menu returns
+to the splash. New Game and existing Continue remain supported.
+
+Twenty-seven focused checks passed. The release includes an emulator-
+recorded animated preview and seven stereo WAV previews. Scores use the
+existing GBA instruments and are composed in scripts/build-europe-music.py.
+
+## v1.24: trail trainers explain the way back to free care
+
+Declining OLIVER, CAMILLE or FELIX now gives directions south along the
+clear path to town, then to the clinic west of the square. The original
+decline message remains. Eight focused checks cover scope/font, No/B,
+walking each return route, normal nurse care and indoor cold Continue.
+
+## v1.23: clinic signs explain how to get free care
+
+London, Paris and Berlin clinic signs now direct players through the nearby
+door to the nurse. Original free-care text remains. Nine focused checks
+cover exact scope/font, fresh starts in each country, normal nurse visits,
+indoor cold Continue and an older completed-game battery.
+
+## v1.22: starter supplies explain the Bicycle shortcut
+
+The starter welcome keeps its partner and supplies messages, then explains
+REGISTERing the Bicycle in Key Items and using SELECT to ride or walk.
+Seventeen focused checks cover exact scope/font, all nine starter choices,
+country-menu cancellation and fresh shortcut/Continue use in each country.
+
+## v1.21: travel boards introduce the Town Map shortcut
+
+The six town travel boards retain their browsing instructions and add
+how to REGISTER Town Map in Bag Key Items, use SELECT in the field, and
+open STORY with SELECT inside the map. Eleven focused checks cover text fit,
+all six boards, the normal one-time World Options grant, registration
+and new Save/Continue.
+
+## Town Map SELECT shortcut checked (v1.20)
+
+Open BAG, KEY ITEMS, choose TOWN MAP, then REGISTER. SELECT opens it in
+the field; inside the map, SELECT opens the story journal. Registering a
+different Key Item replaces the field shortcut. Six normal-control checks
+verify riding/indoor use, Continue and replacement with the Bicycle.
+No ROM change was needed. The finished walkthrough remains unchanged.
+
+## Bicycle SELECT shortcut checked (v1.20)
+
+Open BAG, KEY ITEMS, select BICYCLE and choose REGISTER. Outside, SELECT
+mounts or dismounts it. Use DESELECT on the same item to remove the shortcut.
+Six normal-control checks verify registration, riding and indoor Continue,
+indoor cycling refusal and restored outdoor use. No ROM change was needed.
+
+## Landmark-case Bicycle travel checked (v1.20)
+
+Westminster, Notre Dame and Reichstag support mounted entrance declines,
+automatic indoor dismount, Save/Continue and outdoor return. Seven checks
+retain completed case rewards, synthesis and Ada's main conclusion. No
+ROM change was needed. The walkthrough remains finished.
+
+## Visitor-room Bicycle travel checked (v1.20)
+
+All ten capital visitor interiors support Bicycle entrance declines,
+automatic dismount on entry, indoor Save/Continue and outdoor return.
+Eleven completed-save checks preserve quests, items and the captured party.
+No game changes were required. The finished walkthrough is unchanged.
+
+## v1.20: landmark guides explain the return to city services
+
+Eye, Eiffel and Gate visitor-room guides retain their original dialogue
+and add directions through the south exit, north to the square, east to
+the station and west to the free clinic. Nine focused checks verify old
+indoor saves, both new pages, actual station/clinic visits and new Continue.
+
+## v1.19: neighborhood signs name the return landmarks
+
+London's residential-lane sign and Berlin's courtyard sign keep their
+room listings and add westward directions to the Eye or Gate visitor
+room. Paris's home sign explicitly names the Eiffel and bridge return.
+Nine fresh checks verify text fit, exact scope, old completed saves,
+repeat reading, all three landmark routes and new Save/Continue.
+
+## v1.18: eastern hosts point back to nearby landmarks
+
+The London reading-room host, Paris garden-workroom host and Berlin
+gardener retain their original dialogue and add a final page describing
+the south exit and westward walk to the Eye, Eiffel or Gate visitor room.
+Nine focused checks cover font fit, exact source scope, old indoor saves,
+repeat talks, following all three routes and new Save/Continue.
+
+## v1.17: hosts point toward neighboring visitor rooms
+
+The western sitting/sketch-room hosts keep their original conversations
+and add a final page with nearby exploration directions. London points
+to the eastern reading room, Paris to the eastern garden workroom, and
+Berlin to the middle courtyard reading room. Eleven fresh focused checks
+cover text scope, native font, older indoor saves, repeat conversations,
+following all three routes and new Save/Continue.
+
+## v1.16: visitor-room entry and exit guidance
+
+The capital Town Map Rooms pages now say to press A at a door and leave
+through the south doorway. Existing room listings and map controls remain.
+Nine focused checks cover exact text-only scope, font fit, older indoor
+saves, the completed v1.15 walkthrough save and new v1.16 Save/Continue.
+The walkthrough is finished and included with the playable ROM.
+
+## Walkthrough finished (v1.15)
+
+WALKTHROUGH.md now includes the main ending and exact optional activity
+and visitor-room instructions. Seven remaining interiors passed twenty-two
+completed-save checks. Full story runs cover one starter per country;
+TESTING.md records the exact scope. Development now returns to the game.
+
+## Western visitor-home walkthrough checked (v1.15)
+
+The guide now gives exact approaches for London's sitting room, Paris's
+sketch room and Berlin's courtyard sitting room, including displays,
+Save/Continue and both front exits. Ten fresh completed-save checks retain
+all activities and the captured party. Other interiors remain separate.
+
+## Bicycle walkthrough instructions checked (v1.15)
+
+The walkthrough now explains how to use the starting Bicycle, dismount
+and Save/Continue while riding. Three fresh checks retain all completed
+activities and the captured party. See TESTING.md for the exact scope.
+
+## Walkthrough final review complete (v1.15)
+
+WALKTHROUGH.md covers the main ending and checked optional cases, stamps,
+coastal trips, riverboat, rental Lapras and Gastly capture. Three full fresh
+routes cover one starter per country. The final evidence audit reconciles
+nine archived guides and 72 prior passing checks; TESTING.md records scope
+and the original England suite's missing historical script copies.
+
+## Optional Notre Dame capture checked (v1.15)
+
+After collecting the Quiet Bells reward, Notre Dame's attendant offers an
+optional level-12 Gastly encounter. A normal capture with earned Great
+Balls, followed by cold Continue and return to Ada, has been checked on the
+completed walkthrough save. See WALKTHROUGH.md for the exact approach.
+
+## Rental Lapras walkthrough checked (v1.15)
+
+At London or Oxford, approach the rental attendant from (26,16), facing
+south. Thunderbadge holders borrow Lapras for free without changing the
+party. Both rentals, water Save/Continue, steering and clear-bank dismount
+have been checked. See WALKTHROUGH.md for exact movement steps.
+
+## Riverboat walkthrough checked (v1.15)
+
+London and Oxford captains at the riverboat landings offer free travel to
+Thunderbadge holders. Both directions, declines, saved landings, map labels
+and Bicycle boarding have been checked on the completed walkthrough save.
+The captain approach is (24,16), facing south; arrival uses the same point.
+
+## Present-day coastal travel checked (v1.15)
+
+After earning the Thunderbadge, London and Paris station coaches reach
+Dover and Calais. The present-day ferry links those two ports. Both routes,
+No/B declines, saved arrivals, map labels and return exits were checked on
+the completed walkthrough save. See WALKTHROUGH.md for exact approaches.
+
+## Completed-save stamp tour checked (v1.15)
+
+The three-city stamp tour works after the main ending and landmark cases.
+Approach each London, Paris or Berlin guide at (16,14), facing south, in any
+order. The third stamp awards one Exp. Share if the Items pocket has room.
+Repeated guide talks do not duplicate it. Save/Continue and the completed
+tour journal have been checked on the fresh completed Germany save.
+
+## Optional-case guide checked (v1.15)
+
+All three landmark case instructions have now been played from a completed
+fresh walkthrough save. The curator approach is (8,15), facing north;
+the peaceful-resolution attendant approach is (10,5), facing north. The
+Reichstag reward is three Great Balls. The guide also covers the combined
+case synthesis in the ledger and Ada's repeatable ending conversation.
+
+## All starting countries fully checked (v1.15)
+
+The complete walkthrough now has separate fresh completion checks for
+England/Bulbasaur, France/Chikorita and Germany/Mudkip, including ending
+Continue and deferred accounts. Other starter teams and optional cases
+are outside those full runs. See TESTING.md for the precise coverage.
+
+## France walkthrough fully checked (v1.15)
+
+A fresh France/Chikorita game now completes the entire documented route,
+including the ending, cold Continue and deferred accounts. England/Bulbasaur
+is also fully checked. Germany/Mudkip currently has starting-connection
+coverage. See TESTING.md for exact scope.
+
+## Walkthrough rechecked on v1.15
+
+The complete walkthrough has been replayed from a fresh England/Bulbasaur
+game through the ending on v1.15, including cold Continue and deferred
+accounts. France/Chikorita and Germany/Mudkip starting connections were
+also checked. See WALKTHROUGH.md and TESTING.md for the exact coverage.
+
+## German delivery walking directions (v1.15)
+
+LENA and KARL now use the same GERMAN WOODLAND name as the map and signs.
+North from Berlin, cross GERMAN WOODLAND and then HAVEL TRAIL to reach
+Oranienburg. Return south through HAVEL TRAIL and GERMAN WOODLAND. Trains
+remain available, and the delivery's quest steps and rewards are unchanged.
+
+## Early quest-contact directions (v1.14)
+
+Before starting the regional quests, the Oxford rival directs you to OAK's
+aide west of London's town guide. REMY in Chantilly points to CELINE in
+Paris and reminds you to earn the Oxford Gym badge first. KARL in
+Oranienburg points to LENA in Berlin and names the Oxford and Chantilly
+badge prerequisites. These conversations do not accept quests for you.
+
+## Journal report-back guidance (v1.13)
+
+The regional tour journal now explicitly connects each quest reward to its
+next leader battle. REPORT TO OAK'S AIDE, REPORT TO CELINE and REPORT TO LENA
+retain their town locations and Bag-space reminders. Collect the reward
+before returning to ELLIS, MARINE or CONRAD. Reading the journal grants no
+reward and does not advance the quest.
+
+## Gym entrance quest guidance (v1.12)
+
+Read each branch-town Gym sign from (14,12), facing north. Its third page
+explains the leader's prerequisite: finish OAK's field study and report to
+his London aide; complete CELINE's survey and collect her Paris reward; or
+finish LENA's delivery and collect her Berlin reward. You can enter a Gym
+before that hand-in, but the leader will not accept your challenge yet.
+
+## Branch-town entrance signs (v1.11)
+
+Read the existing station sign from (22,12), facing north, in Oxford,
+Chantilly or Oranienburg. Its second page points north to the Gym and names
+ADA east of the town guide, or REMY/KARL west of the guide. Regional quest
+requirements still apply before challenging the Gym leader. Southbound route signs retain
+the full country walking route to London, Paris or Berlin.
+
+## Branch-town station walks (v1.10)
+
+Inside OXFORD, CHANTILLY or ORANIENBURG station, face the framed picture
+on the back wall and press A. Read both pages for the Gym, local quest
+contact and walking route south. Oxford points to ADA, Chantilly to REMY
+and Oranienburg to KARL. The Gym leader still requires the regional quest.
+
+## Complete walkthrough
+
+Read [the complete v1.09 walkthrough](WALKTHROUGH.md) for the route from
+a new game through all three badges, the historical story and Ada's
+conclusion. It includes starting-country routes, exact interactions,
+required hand-ins, optional cases and help when progress seems stuck.
+
 ## Detour to another station (v1.09)
 
 Your booking stays active when you walk to a different town. Speak to its

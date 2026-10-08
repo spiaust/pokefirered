@@ -144,7 +144,8 @@ EuropeFrance_Text_NeedReview::
 EuropeFrance_Text_NotStarted::
 	.string "I'm REMY, a gardener. CELINE in\n"
 	.string "PARIS is organizing a field survey.\p"
-	.string "Speak to her west of the city guide.$"
+	.string "Speak to her west of the city guide.\n"
+	.string "First, earn the OXFORD GYM badge.$"
 EuropeFrance_Text_Review::
 	.string "REMY: The garden and forest offer\n"
 	.string "different kinds of shelter. The\p"

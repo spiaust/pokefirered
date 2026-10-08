@@ -1,5 +1,888 @@
 # Prototype verification — 2026-09-18
 
+## v1.37 completed regional challenge travel (2026-10-07)
+
+Eleven fresh PASS results: exact shared-text addition/font fit (two), claimed
+guide repeats and cold Continue (three), normal trains/interchanges visiting
+both other guide towns with cold Continue (three), and return journeys with
+claimed-guide repeat/Continue (three). Starting batteries contain genuinely
+earned v1.35 trainer victories and a single claimed regional reward. No party,
+inventory, wins or progress are injected. Other guides grant no unearned
+Candy or completion; revisiting the original guide duplicates no reward.
+Stationary conversations preserve exact state; travel comparisons permit
+normal party friendship changes from walking. Instruction pages are visually
+inspected. Removing the added text restores the previous shared script exactly.
+All three user saves and archived v1.36 ROM remain unchanged. Fresh battles
+and a full new-game story run are not part of this text/navigation suite;
+full-story evidence remains v1.15 and music/splash evidence remains v1.25.
+
+## v1.36 pending regional reward Bag instructions (2026-10-07)
+
+Twenty fresh PASS results: exact shared-text addition and font fit (two),
+pending message/repeat/cold Continue (six), native Bag Toss cancellation,
+confirmation and room-state cold Continue (six), one-time claims/repeats
+and claimed-state cold Continue (six). All three branch guides are tested
+with a full 42-slot Items pocket lacking Candy and a capped 999-Candy stack.
+Existing v1.27 reward-capacity pending batteries are explicit synthetic
+inventory fixtures built on genuinely earned trainer victories. These are
+not claims of naturally obtaining all items. This new test performs no
+memory writes: all room-making uses actual Bag controls, and wins, money,
+party and progress are never injected. Canceling Toss retains exact tested
+state; confirming discards exactly one Potion or Candy. Party, money, story
+and badges remain unchanged, and the pending reward stays unclaimed until
+normal guide talk can grant it. The claim adds exactly one Candy, records
+completion and cannot repeat through the tested visits/Continues. The text
+also mentions Use/Give, but those actions are not new runtime coverage in
+this suite. Native instruction pages are visually inspected. All previous
+shared commands and text restore byte-for-byte after removing the additions.
+All three user saves and archived v1.35 ROM remain unchanged. Full-story
+runtime evidence remains v1.15; music/splash remains v1.25.
+
+## v1.35 remaining regional trainer guidance (2026-10-07)
+
+Seventeen fresh PASS results: source-scope/reward-gate preservation and
+native font fit (two), zero-win guides with repeat/cold Continue (three),
+normal extended-first wins and missing-local messages (three), genuine
+local-first states and missing-extended messages (three), normal reverse-
+order second victories and one Candy (three), claimed repeats/cold Continue
+(three). Genuine country-specific training-intro ready and training-recovery
+healed batteries are loaded through Continue. Extended-first victories and
+subsequent local wins use normal battle controls and existing Potions if
+needed. No trainer flags, items, party stats, money or progress are injected;
+no savestates are used. Normal walking follows the guide's southward path
+through the extended trail into the local countryside. One-win messages
+are visually checked for the correct missing opponent and count, repeat
+without grants and survive cold Continue. Both earned wins still trigger
+the original reward branch first, and already-claimed rewards still skip
+all progress branches. Full-bag handling is preserved by source restoration;
+its earlier v1.27 capacity suite is not a fresh runtime check here. All
+original script bytes restore exactly after removing only the two new
+read-only branch instructions and dialogue blocks. Native lines fit the
+message window. All three user saves and archived v1.34 ROM remain unchanged.
+Full-story evidence remains v1.15; music/splash remains v1.25.
+
+## v1.34 extended-victory reward return (2026-10-07)
+
+Eleven fresh PASS results: exact additions and native font fit (two),
+earned-victory text/repeat/cold Continue without prizes or changes (three),
+clear north walks to free clinic care and square guides with one Candy,
+repeat and cold Continue protection (three), defeated-trainer revisits,
+revisit cold Continue and another guide return without duplicated rewards
+(three). Genuine long-trail won batteries from the v1.27 normal-battle
+suite contain both earned wins and an unclaimed regional reward. They are
+loaded through Continue, with no party, inventory, money or progress
+injections and no savestates. These runs test the already-won trainer's
+native after-battle dialogue; accepted extended battles were last rerun
+on v1.33 and are not counted as fresh battle checks here. Clinic care
+restores full HP and clear status while money/items/story remain unchanged.
+Normal guide talk grants exactly one Candy, records completion, and never
+duplicates it through the tested visits/Continues. Source restoration
+proves original text, opponents, battle commands and reward eligibility
+are unchanged. Native new pages are visually inspected. All three user
+saves and archived v1.33 ROM remain unchanged. Full-story evidence remains
+v1.15; music/splash remains v1.25.
+
+## v1.33 local-victory onward directions (2026-10-07)
+
+Eleven fresh PASS results: exact text additions and font fit (two),
+post-victory advice/repeat/cold Continue (three), walking north to named
+extended opponents, B-declined matches, branch guide withholding rewards
+before the second win, free clinic preparation and cold Continue (three),
+correct extended teams with normal victory, prize-once repeat and one
+regional Rare Candy through guide repeats/cold Continue (three). Genuine
+country-specific training-intro won batteries are loaded through Continue.
+No party, item, money or progress injection and no savestates are used.
+The real post-local-battle team receives native clinic care before the
+extended match; existing Potions are used through the Bag if needed.
+New advice never repeats trainer prize money. Named paths reach the stated
+trainer and branch town through normal walking. Native messages are
+visually inspected. Source restoration proves previous text, teams,
+battle commands, reports, gates and rewards are unchanged. All three user
+saves and archived v1.32 ROM remain unchanged. Full-story runtime evidence
+remains v1.15; music/splash remains v1.25.
+
+## v1.32 route entrance training and services (2026-10-07)
+
+Eleven fresh PASS results: exact source additions and font fit (two),
+six-page entrance signs/repeats/cold Continue (three), reaching the named
+local trainer via the clear north route, B decline and safe southward
+return (three), free clinic care and station Potion purchases with indoor
+Continue and return to the sign (three). Genuine country-specific
+training-intro ready batteries are loaded through Continue; the player
+walks south from the undecided trainer to read its city's sign. No party,
+item, money or progress injection and no savestates are used. The trainer
+stays unbeaten, and declining grants no battle, victory or prize. Walking
+may change friendship. Free nurse care preserves already prepared teams;
+naturally damaged healing is prior separate evidence. Normal shop inputs
+add one Potion and deduct exactly 300; indoor cold Continue retains it.
+All new sign pages are visually inspected. Exact source restoration proves
+prior destinations, visitor-room advice, gates, battles and rewards are
+unchanged. All three user saves and archived v1.31 ROM remain unchanged.
+Full-story evidence remains v1.15; music/splash remains v1.25.
+
+## v1.31 trail signs and service routes (2026-10-07)
+
+Eleven fresh PASS results: exact additions and font fit (two), both ends'
+four-page signs with repeats and cold Continue (three), normal north-town
+walks to free clinic care and station-shop Potion purchases with indoor
+Continue (three), southward trail/countryside crossings to each capital's
+free clinic and cold Continue (three). Genuine v1.26 country-specific
+post-local-trainer healed batteries are loaded through Continue. No party,
+item, money or progress injection and no savestates are used. Central clear
+paths and adjacent sign approaches avoid random battles in these runs.
+Already healed teams remain prepared through free nurse care; naturally
+damaged healing is earlier evidence, not claimed anew. Normal shop input
+buys one Potion for exactly 300 and saves it through indoor Continue.
+Southward travel retains supplies, money, badges and story progress;
+walking may legitimately change friendship. Source restoration proves all
+prior messages, trainers, battles and rewards are unchanged. Native signs
+are visually inspected. All three user saves and archived v1.30 ROM remain
+unchanged. Full-story evidence remains v1.15; music/splash remains v1.25.
+
+## v1.30 Gym guide preparation routes (2026-10-07)
+
+Eleven fresh PASS results: exact text additions and native font fit (two),
+complete advice/repeat/indoor cold Continue (three), west-square free clinic
+care with indoor cold Continue (three), east-side station-shop cancellation,
+one-Potion purchase for exactly 300, indoor cold Continue and return to the
+guide (three). The genuine v1.26 healed London local-trainer battery is
+loaded through Continue for each branch visit; trains, walks, conversations,
+shop inputs and saves use normal controls. No inventory, party, money or
+story injection and no savestates are used. The already prepared team stays
+at full HP/PP during nurse care and money is unchanged; healing naturally
+damaged teams is earlier separate evidence, not claimed anew here. Canceling
+a purchase leaves tested state unchanged, a confirmed purchase adds exactly
+one Potion and deducts 300, while party, story variables and badges remain
+unchanged. Native advice pages and purchase screens are visually inspected.
+Exact source restoration proves type/story advice, gates, battles and
+rewards are unchanged. All three user saves and archived v1.29 ROM remain
+unchanged. Full-story evidence remains v1.15, music/splash v1.25, accepted
+Gym battles v1.28 and readiness hand-ins v1.29.
+
+## v1.29 locked-Gym story directions (2026-10-07)
+
+Eleven fresh PASS results: exact additions and native font fit (two),
+unstarted locked Gyms/cold Continue plus named capital/contact approaches
+(three), report-ready locks/repeated dialogue/cold Continue (three), and
+normal earned report hand-ins, one-time rewards and unlocked optional
+leader offers after return/cold Continue (three). Genuine v1.26 healed
+local-trainer batteries and existing story-report-ready, france-report and
+germany-report batteries are loaded through Continue. No inventory, party,
+stat, money or story fixtures and no savestates are used. Early visits grant
+no battle, badge or TM; walking out and taking normal trains reaches each
+named contact west of its capital's guide. The unstarted England offer is
+declined, while France/Germany retain their prior-badge gates. Report-ready
+states still require actual hand-in; each normal hand-in awards its story
+item once and permits the leader's optional offer. Declining that offer
+and cold Continue grant no unearned badge. Chantilly's added REMY location
+is text/scope/font checked; this suite does not repeat the full survey route.
+Native pages are visually inspected. Exact source restoration proves gates,
+battles, rewards and prior text are unchanged. All three user saves and the
+archived v1.28 ROM remain unchanged. Full-story runtime evidence remains
+v1.15, music/splash v1.25, and accepted-Gym-battle evidence v1.28.
+
+## v1.28 Gym preparation and clinic help (2026-10-07)
+
+Eleven fresh PASS results: exact text-only scope and font fit (two), three
+No/B and introduction checks, three clinic route/indoor Continue/return
+checks, and three correct leader/team battles with normal victory, badge,
+one TM, prize-once repeat and cold Continue. Genuine recovered batteries
+from the v1.27 Gym defeat suite are loaded through Continue; no inventory,
+party, money or progress injections and no savestates are used. Normal
+walking follows each Gym's exit path, including Chantilly's winding route,
+and reaches the free clinic west of the square. Existing Potions are used
+through the Bag if needed during normal accepted battles. The source-scope
+check reconstructs all three original v1.27 Gym scripts byte-for-byte after
+removing only the new text. Native messages are visually inspected, and
+matching ROM symbols are built explicitly. All three user saves and the
+archived v1.27 ROM remain unchanged. Full-story walkthrough evidence remains
+v1.15; music/splash evidence remains v1.25. Earlier v1.27 defeat and capacity
+checks are separate evidence, not new checks on this release.
+
+## v1.27 Gym reward capacity and UI (2026-10-07)
+
+Twelve additional PASS results on the unchanged ROM: two inventory-boundary
+wins and two corresponding UI checks per Gym. Genuine recovered batteries
+from test_gym_defeat_recovery.py are loaded through Continue and the player
+walks back to each leader. Only inventory capacity is arranged artificially:
+a 999-stack of the target TM with a TM Case, or thirty distinct valid Key
+Items excluding the TM Case. These are synthetic inventories, not claims
+that every item was naturally acquired or that all related item side effects
+are initialized. No story/trainer/badge flags, party stats or money are
+injected. The existing party wins each battle through normal controls and
+uses existing Potions if needed. Each victory awards its badge and money
+but leaves the blocked TM unclaimed; repeat leader visits and pending-state
+cold Continue retain exact progress and inventory. A separate inventory
+fixture edit reduces the stack to 998 or frees a Key Item slot; native
+room-making UI is not claimed. Normal leader talk awards the TM and supplies
+the TM Case if missing, then records completion. Repeat talk and claimed-state
+cold Continue cannot duplicate rewards. The Trainer Card displays exactly
+the earned badges, and normal Bag controls open/close the TM Case with the
+expected TM quantity. TM Case slot sorting is allowed while all item
+quantities, party, money, badges and story progress must stay unchanged.
+All three user saves and canonical/archived ROMs remain
+unchanged. Full-story runtime evidence remains v1.15; music/splash v1.25.
+
+## v1.27 natural Gym defeat and retry (2026-10-07)
+
+Nine additional PASS results on the unchanged ROM: natural loss and clinic
+recovery (three), recovered cold Continue and declined retry (three), normal
+retry victory with one-time badge/TM and won-state cold Continue (three).
+The existing story-complete, water-gym-entrance and electric-gym-entrance
+batteries are loaded through Continue. Normal walking and clinic care
+prepare each battle. The starter selects its existing Growl until the
+opponent wins, without stat/HP/item injections or savestates. Zero, one and
+two earned prior badges give native loss multipliers 2, 4 and 6; exact loss
+is highest party level times four times that multiplier, capped by money.
+The single-partner batteries recover full HP/PP and clear status at their
+local branch clinic. Losing grants no target badge, TM, reward variable or
+trainer victory; inventory, existing badges and story variables stay intact.
+Fainting can change friendship. Recovered-state Save/Continue preserves the
+exact tested state. Walking back allows B to decline a retry safely. Normal
+retry battles use existing Potions through the Bag if needed and earn the
+badge, one TM and prize money. Repeat leader talk and won-state cold
+Continue cannot duplicate rewards. User saves and canonical/archived ROMs
+remain unchanged. Scope is these three prepared single-partner batteries;
+all possible party compositions or last-heal locations are not claimed.
+Full-story evidence remains v1.15; music/splash remains v1.25.
+
+## v1.27 regional reward capacity fixtures (2026-10-07)
+
+Nine additional PASS results on the unchanged ROM, three per branch guide.
+The base batteries contain genuinely earned local and extended trainer
+victories from test_long_trail.py, with each regional reward still unclaimed.
+Only the 42-slot items pocket is edited in isolated emulator instances to
+arrange capacity boundaries. These are synthetic inventory fixtures, not
+claims of naturally acquiring 42 items or using the Bag UI to make room.
+No trainer/story flags, money or party stats are injected; user saves are
+never loaded or modified. All pocket contents use native quantity encryption.
+Full pockets without Candy and capped 999-Candy stacks retain their exact
+inventory/progress on repeated guide visits and pending-state cold Continue.
+A separate fixture edit frees one slot or reduces the stack to 998. The
+normal guide interaction grants one Candy and records completion. Repeated
+visits and claimed-state cold Continue cannot duplicate it. A full pocket
+with a 998-Candy stack grants the reward directly, proving empty slots are
+not required when the existing stack has room. Earned trainer wins remain
+set throughout. Native pending dialogue is visually inspected. Six additional normal-control checks load the explicit capacity-fixture
+batteries and perform no memory writes: canceling Toss leaves inventory
+unchanged, confirming Toss removes exactly one item, and room-making
+persists through Save/Continue. The guide then awards one Candy, with
+repeat and claimed-state cold Continue protection. Party, money, story
+variables and badges are preserved while tossing. All three
+user saves and canonical/archived v1.27 ROMs remain unchanged. These nine
+checks are separate from prior release and defeat suites. Full-story
+runtime evidence remains v1.15; music/splash evidence remains v1.25.
+
+## v1.27 natural longer-trail defeat and retry (2026-10-07)
+
+Nine additional PASS results on the unchanged v1.27 ROM: natural loss and
+branch-town clinic recovery (three), recovered cold Continue and B-declined
+retry (three), normal retry victory/prize-once repeat and won-state cold
+Continue (three). Genuine long-trail clinic batteries from the v1.27 route
+suite are loaded through Continue. The player walks back to the trainer
+and selects the starter's existing Growl or Leer until the opponent wins.
+No HP/stat/item writes, artificial knockout fixtures or savestates are used.
+The exact native zero-badge money loss is checked against starter level
+(level times eight, capped by current money). Full HP and the original full
+PP are restored, status is clear, and no victory, prize or items are granted
+for losing. Story variables, inventory and badges are preserved; fainting
+may change friendship. Cold Continue preserves the exact tested state.
+Normal retry battles use existing Potions through the Bag if needed. A real
+victory earns one prize; repeat talk and another cold Continue cannot grant
+another. The clinic was deliberately visited before battle; recovery from
+every possible last-heal location is not claimed. All three user saves and
+both canonical/archived ROMs remain unchanged. These nine checks are
+separate from the fourteen release checks. Full-story evidence remains
+v1.15 and music/splash evidence remains v1.25.
+
+## v1.27 longer trail help, clinics and rewards (2026-10-07)
+
+Fourteen fresh PASS results: exact intended source scope and font fit
+(two); optional help/No/B (three), northward clinic route/indoor Continue
+and return (three), correct accepted battle/normal victory/prize-once
+repeat/cold Continue (three), and one regional Rare Candy after both local
+and extended wins with repeat/cold Continue protection (three). Genuine
+v1.26 post-local-victory healed batteries are loaded through Continue.
+Normal trains reach the branch towns, and normal walking follows their
+clear paths. Supplied Potions are used through the real Bag if needed;
+no memory or item edits, artificial damage or savestates are used. Guides
+award nothing before the second victory. Battle teams, prizes and reward
+commands remain unchanged. Native texts are visually checked and matching
+ROM symbols are generated explicitly. All three user saves and archived
+v1.26 ROM remain unchanged. Full story evidence remains v1.15; music/splash
+evidence remains v1.25. Natural extended-trainer loss is a separate next
+check, not a claim made by this suite.
+
+## v1.26 natural trainer defeat and retry (2026-10-07)
+
+Nine additional PASS results on the unchanged v1.26 ROM: each country's
+natural loss and local clinic recovery (three), recovered cold Continue
+and B-declined retry (three), normal retry victory/prize-once repeat plus
+won-state cold Continue (three). Genuine ready-for-battle batteries from
+test_training_intro.py are loaded with Continue. Normal Fight menu inputs
+select the starter's existing Growl or Leer until the opponent wins; no
+HP/stat/item writes, artificial knockout fixtures or savestates are used.
+The trainer remains unbeaten and no prize/items are awarded for losing.
+With level-eight starters and zero badges, the native loss formula charges
+exactly 64 money; clinic recovery restores full HP, status clear and each
+move's original full PP. Story variables, inventory and badges remain
+unchanged. Fainting may legitimately change friendship. Cold Continue
+itself retains exact tested party/state. A normal retry battle uses the
+existing supplied Potions through the Bag if needed, earns a real victory
+and one prize, and repeat talk cannot duplicate it. All three user saves,
+canonical ROM and archived v1.26 ROM remain unchanged. These nine checks
+are separate from the original 17 release checks and the nine post-battle
+healing checks; full story walkthrough evidence remains v1.15.
+
+## v1.26 natural post-battle recovery (2026-10-07)
+
+Nine additional PASS results on the unchanged v1.26 ROM: genuine worn-down
+victory teams and cold Continue (three), normal clinic recovery and repeat
+care (three), healed-state cold Continue and clinic exit (three). Sources
+are the normal battles saved by test_training_intro.py: Bulbasaur,
+Chikorita and Treecko. Each begins this suite below maximum HP and with at
+least one move below maximum PP. Only reads decrypt the Pokemon's ordered
+substructures; no memory or item writes, stat fixtures or savestates are
+used. Maximum PP comes from the actual move table and native PP-Up formula.
+Nurse care restores full HP and every move's PP; status is clear afterward.
+The test does not induce a status ailment or claim to verify curing one.
+Species, personality, trainer ID, held item, experience, moves, PP bonuses,
+EVs and other boxed data remain exact across healing. Earned defeat flags,
+money, inventory and story state persist. Every cold Continue retains the
+exact tested party/state. Repeating care changes none of that state.
+All three user saves, canonical ROM and archived v1.26 ROM are unchanged.
+The release's original 17 checks and v1.15 full-story evidence remain
+separate; this suite verifies recovery after genuine normal battles.
+
+## v1.26 optional training introduction (2026-10-07)
+
+Seventeen fresh PASS results: exact one-page scope and native font fit
+(two); each country's new introduction with No/B, cold Continue followed
+by Yes/correct two-partner battle, and normal victory/prize-once repeat
+plus won-state cold Continue (nine); existing No/B clinic-return and
+indoor Continue suite on the new ROM (six). Genuine fresh-start batteries
+are loaded through Continue. Battles use normal controls and, if needed,
+the supplied Potions through the Bag; no memory/item edits are used. The
+three first-choice starters are Bulbasaur, Chikorita and Treecko at level
+eight before battle. All battle, decline, report and reward commands are
+byte-identical; only the added help page changes. Matching ROM symbols
+are explicitly built. All three user saves and the archived v1.25 ROM
+remain unchanged. Full story runtime evidence remains v1.15; soundtrack
+and splash evidence remains the separate v1.25 verification.
+
+## v1.25 music transitions (2026-10-07)
+
+Nineteen additional PASS results on the unchanged v1.25 ROM: station,
+clinic and countryside round trips in each of six towns (eighteen), plus
+final cold Continue (one). Every destination is saved through the normal
+menu and cold-continued; actual M4A song headers, active tracks and clock
+progress match each map. Station/clinic/route music restores the correct
+custom town theme outdoors; nurse fanfares return to clinic music. Towns
+and routes are reached by normal trains and walking on the clear paths.
+Completed story variables, money, inventory and badges remain exact;
+walking can legitimately change party friendship, and nurse care can
+restore health/PP, so those are not compared as unchanged across visits.
+Each Save/Continue itself retains exact party and state. No memory/item
+edits or emulator-state fixtures are used. All three user saves, canonical
+ROM and archived v1.25 ROM hashes remain unchanged. The original v1.25
+release's 27 checks and the v1.15 full-story evidence remain separate.
+
+## v1.25 original soundtrack and animated splash (2026-10-07)
+
+Twenty-seven fresh PASS results on the final ROM with matching symbols:
+three static checks, twelve presentation checks and twelve country checks.
+Static checks preserve all 347 existing song IDs, change only music fields
+on six town maps, verify exact score regeneration and 768-tick alignment
+for all 28 tracks, and check native title text fit and entry points.
+Presentation checks run one complete six-town 24-second animation cycle,
+verify Celebi motion, record seven native stereo scores for roughly fifty
+seconds each, check nonzero unclipped samples and active playback beyond
+two loop boundaries, verify Start and three B/A menu return cycles, travel
+by normal trains through all six themes, and cold Continue at Oranienburg.
+The twelve country checks cover all nine starter choices and No/B retries
+plus country-menu cancellation. Genuine completed-game batteries preserve
+party, money, inventory, badges and story progress. No memory/item edits.
+All three user saves and the archived v1.24 ROM remain unchanged. Full
+story walkthrough runs remain the v1.15 evidence; no full story rerun is
+claimed here. Audio signal checks do not substitute for listening review.
+Save-clear and Berry Fix entry points remain in source but are not invoked
+by these runtime checks. Matching symbols are explicitly generated with
+make pokefirered.gba pokefirered.sym for this release.
+
+## v1.24 trail-to-clinic directions (2026-10-07)
+
+Eight fresh PASS results: exact text-only scope and native font fit (two),
+No/B decline with the new page and exact saved state retained in all three
+countries (three), and each clear southward route to the west-side clinic
+with indoor cold Continue, nurse care and outdoor return (three). Genuine
+v1.23 fresh-start batteries are loaded with Continue; no memory or item
+edits. All three starter/country choices, inventory, money and progress
+remain correct and no trainer defeat is awarded by declining. The teams
+begin at full health; this verifies access and service results rather than
+restoration of battle damage. No battle/reward commands change. All three
+user saves and the archived v1.23 ROM remain unchanged. Full story runtime
+evidence remains v1.15; this is focused route and dialogue verification.
+
+## v1.23 clinic directions (2026-10-07)
+
+Nine fresh PASS results: text-only scope and generator/font checks (two),
+fresh country sign/repeat checks (three), following each sign to the nurse
+with indoor cold Continue, free care and outdoor return (three), and an
+older completed-game battery reading the new page with exact retained
+state (one). Screenshots show the added page in each capital. All input
+uses normal controls and genuine saves; no memory or item edits. Fresh
+starters already have full health; these checks verify service access and
+full-health/status results, not restoration of battle damage. All three
+user saves and the archived v1.22 ROM remain unchanged. Full story runs
+remain the v1.15 evidence, not a new full-story run for this release.
+
+## v1.22 new-player Bicycle shortcut (2026-10-07)
+
+Seventeen fresh PASS results: exact one-page change and native font fit
+(two), full country-selection suite (twelve: all nine starters plus three
+country-menu cancellation checks), and new shortcut instructions from
+three fresh country starts (three). Screenshots show the added help page.
+Normal Bag REGISTER and field SELECT work; riding cold Continue retains
+registration, exact party/items, country and starter. Each fresh start
+has exactly ten Poke Balls, five Potions, one Bicycle and one Town Map.
+Starter level eight, preview/No/B retry, National Dex and capital arrival
+remain correct. No memory/item edits are used. All user saves and archived
+v1.21 ROM remain unchanged. Full story runs remain the v1.15 evidence;
+this release reruns the new-game flow, not all historical chapters.
+
+## v1.21 travel-board shortcut introduction (2026-10-07)
+
+Eleven fresh PASS results: exact text-only scope and native font fit (two),
+normal missing World Options item grant (one), all six town-board
+dialogues/map returns (six), following normal REGISTER
+and field/map SELECT instructions (one), and new v1.21 cold Continue (one).
+Screenshots show both new pages at each board. Correct current-town maps,
+field callbacks, existing registration, party, inventory and completed
+story/case/stamp variables remain intact. The source checkpoint is the
+completed map-select save; no memory edits are used. Board item-grant and
+map-opening commands are byte-identical. The missing World Options item is granted normally once; repeat
+boards grant no duplicate. Full-pocket grants are outside this run. All user saves and archived
+v1.20 ROM remain unchanged; full walkthrough runtime evidence remains v1.15.
+
+## v1.20 Town Map registration and SELECT (2026-10-07)
+
+Six fresh checks register Town Map through normal Bag controls from
+bicycle-select-complete.sav. Field SELECT opens the European map, including
+Rooms and story controls, and exits directly to the field with exact state.
+Riding map use and cold Continue retain Bicycle mode and map registration.
+Indoor map use and Continue retain the correct London label, party and
+progress. Registering Bicycle replaces the map shortcut; indoor cycling
+refusal and outdoor SELECT work after Continue. Registering map again,
+then DESELECTing, retains no registered item after cold Continue. No memory
+or item edits are used. ROM and three user saves remain unchanged. Scope
+is Oxford outdoors and London sitting room, not every map or registered item.
+
+## v1.20 Bicycle registration and SELECT (2026-10-07)
+
+Six fresh checks use normal Bag REGISTER/DESELECT actions and field SELECT
+from the completed case-bike save. REGISTER assigns Bicycle without changing
+party/items/quests; SELECT mounts and dismounts; riding cold Continue keeps
+registration and functional dismount. Indoor SELECT cannot mount and leaves
+registration intact; interior Continue retains exact state. Outdoor SELECT
+works after exiting; normal Oxford return retains Ada's conclusion and all
+completed activities. DESELECT sets the registered item to none, retained
+by cold Continue. Registration is read at native SaveBlock1 offset 0x296;
+no memory writes or item injection are used. No defect was found. ROM and
+three user saves are unchanged. This run covers one indoor restriction,
+not every no-cycling area or other registered Key Items.
+
+## v1.20 Bicycle landmark-case compatibility (2026-10-07)
+
+Seven fresh normal-control checks use visitor-bike-complete.sav and normal
+trains to Westminster, Notre Dame and Reichstag. Each verifies mounted
+No/B entrance declines, automatic dismount, completed curator and ledger
+repeat safety, exact indoor cold Continue and the south exit. Rewards,
+case synthesis variables, inventory and main-story progress remain intact.
+Normal return to Oxford, final cold Continue and Ada's conclusion retain
+the captured party and all completed activities. No memory edits are used.
+No defect was found; ROM v1.20 and all three user saves remain unchanged.
+This run does not test unfinished cases or pending rail bookings.
+
+## v1.20 Bicycle visitor-room compatibility (2026-10-07)
+
+Eleven fresh normal-control checks cover all ten capital visitor interiors:
+London sitting/reading rooms and Eye gallery; Paris sketch/garden rooms
+and Eiffel room; Berlin sitting/reading/garden rooms and Gate room. Each
+checks mounted No/B declines, automatic indoor dismount, exact cold
+Continue indoors, outdoor exit and continued controllable walking.
+Money, items and all completed story/case/stamp variables remain intact.
+Normal return to Oxford retains Ada's conclusion. Source checkpoints are
+the genuine completed western-room saves; no memory or item edits are used.
+No gameplay defect was found, so ROM v1.20 is unchanged. User saves are
+unchanged. These checks do not cover optional case-room interiors or
+pending rail bookings. The finished walkthrough remains unchanged.
+
+## v1.20 landmark-guide city-service directions (2026-10-07)
+
+Nine fresh PASS results: exact three-guide source/generator scope and
+native font fit (two), old completed-save guide talks and service routes
+with new cold Continue (seven). Original two-page dialogue is retained,
+followed by exit/return and station/clinic pages. Screenshots verify both
+new pages in each capital. Each actual south exit and northward walk
+reaches the station, then free clinic. Healing restores party HP while
+money, inventory and completed story/case/stamp variables remain intact.
+Repeated guide talks preserve exact party/state; new v1.20 Continue
+retains exact post-healing state. User saves and archived v1.19 ROM stay
+unchanged. Full walkthrough evidence remains v1.15 with focused later checks.
+
+## v1.19 neighborhood landmark-return signs (2026-10-07)
+
+Nine fresh PASS results: exact sign/generator scope and native font fit
+(two), old completed-save sign reading, repeat safety, actual landmark
+visits and new cold Continue (seven). London and Berlin add a final page;
+Paris's existing final line now names Eiffel and bridges. Earlier room
+listings and native commands remain intact. Screenshots show each return
+page; normal walking reaches Eye, Eiffel and Gate visitor rooms and their
+exits. Party, inventory and completed case/story/stamp state remain intact.
+All three user saves and the v1.18 archived ROM remain unchanged. The full
+walkthrough is finished with its v1.15 full-run evidence retained.
+
+## v1.18 eastern host landmark directions (2026-10-07)
+
+Nine fresh PASS results: exact source/generator scope and native font fit
+(two), old completed-save host conversations and actual landmark visits
+(seven). The original two host pages remain intact before a new third page.
+London reaches the Eye gallery, Paris the Eiffel visitor room, Berlin the
+Gate visitor room. Repeat dialogue, reading and exits retain party, items
+and all completed case/story/stamp variables. New v1.18 cold Continue
+retains exact state. Screenshots verify all three added direction pages.
+Commands, maps and rewards remain unchanged; full walkthrough evidence
+remains on v1.15 with later focused checks. All three user saves and the
+archived v1.17 ROM remain unchanged.
+
+## v1.17 host exploration directions (2026-10-07)
+
+Eleven fresh PASS results: exact host-page/generator scope (one), existing
+native dialogue/tree/interior static checks (three), and actual host
+conversations with neighboring-room visits on old indoor saves (seven).
+Each original two-page conversation remains intact before the new third
+page. London directions reach the reading room, Paris the garden workroom,
+and Berlin the middle reading room. Repeats, reading and exits retain
+party, inventory and all completed case/story/stamp variables. A new v1.17
+save cold Continues with exact state. Screenshots check all three new pages.
+Commands, maps and rewards remain unchanged; the full walkthrough remains
+verified on v1.15, with later focused compatibility checks. Three user saves
+and archived v1.16 ROM remain unchanged.
+
+## v1.16 Rooms entry/exit guidance (2026-10-07)
+
+Nine fresh focused PASS results: exact three-line source change (one),
+native font fit (one), existing Rooms control/old indoor-save suite (three),
+and completed v1.15 save guidance/new v1.16 cold Continue (four). Three
+capital screenshots verify readable entry and south-door exit instructions.
+L, B, map selection, help controls, location, party, inventory and quest
+state remain intact; new Continue retains the repeatable Ada conclusion.
+All map/input/save logic is byte-identical to the v1.15 source snapshot.
+The full story and optional walkthrough suites were run on v1.15; they
+were not rerun wholesale for this three-line display change. The current
+guide retains those versioned evidence limits. Three user saves and the
+archived v1.15 ROM remain unchanged.
+
+## v1.15 remaining visitor interiors and walkthrough closure (2026-10-07)
+
+Twenty-two fresh checks cover seven remaining optional interiors: London
+reading room and Eye gallery, Paris garden workroom and Eiffel room,
+Berlin reading room, garden workroom and Gate room. Normal controls check
+No/B, entry, every listed reading, exact interior cold Continue, both exits,
+re-entry and normal return to Ada. Captured party and completed activities
+remain intact. No ROM or user saves changed. Together with the earlier
+western-home checks, every capital visitor interior now has exact guide
+instructions and completed-save runtime coverage. The walkthrough is done;
+future game changes receive focused regression checks, not more walkthrough
+expansion unless needed for changed behavior. Prior audit snapshots remain
+unchanged; this suite is separately recorded.
+
+## v1.15 completed-save western visitor homes (2026-10-07)
+
+Ten fresh checks visit London sitting room, Paris sketch room and Berlin
+sitting room using normal trains and controls from the Bicycle completion
+save. Each covers No/B declines, entrance approach, host, notebook, local
+display, exact-state interior cold Continue, both exit tiles and re-entry.
+A normal train return to Oxford retains Ada's conclusion, captured party,
+items, money and completed story/case/stamp history. No ROM or user saves
+change. This run covers three western homes, not every visitor interior.
+The prior final audit remains a snapshot; these checks are separate.
+
+## v1.15 completed-save Bicycle walkthrough (2026-10-07)
+
+Three fresh checks use walkthrough-gastly-complete.sav with normal controls.
+Key Items Bicycle use mounts in Oxford, movement remains controllable,
+cold Continue retains riding and exact saved party/inventory/progress,
+and using the item again restores walking. A second cold Continue and
+Ada's repeatable conclusion retain the captured party and all completed
+activities. The initial diagnostic used walking-speed timing and overshot;
+the clean rerun uses the existing tile-aware movement helper. No ROM or
+user saves changed. This run does not test every terrain or indoor gate.
+The earlier final audit remains a snapshot of its nine preceding suites;
+these three new runtime checks are recorded separately.
+
+## v1.15 final walkthrough evidence audit (2026-10-07)
+
+All nine versioned walkthrough guides match their recorded SHA256 hashes
+and the same v1.15 ROM. Their clean logs contain 72 PASS results in total;
+this is an aggregate of previously run checks, not new emulator runs or
+72 independent playthroughs. Full fresh routes cover England/Bulbasaur,
+France/Chikorita and Germany/Mudkip. Completed-save checks cover cases,
+stamps, coast, riverboat, rental Lapras and normal Gastly capture.
+
+Eight later manifests have matching archived verification script copies.
+The original England manifest retains logs and script hashes but its two
+exact script versions were not archived and no matching copies were found.
+Current scripts have since changed; they do not replace that missing
+historical source evidence. Older guide snapshots remain unchanged.
+
+Corrected the current guide's route label to German Woodland, matching the
+in-game map, and its station-notice version reference to v1.15. No ROM or
+user save changes. The final audit JSON indexes manifests, logs, script
+copies and the missing historical sources.
+
+## v1.15 optional Gastly with normal capture items (2026-10-07)
+
+Five fresh checks use the completed Germany save after optional rentals.
+The Paris shop sells ten Poke Balls for exactly 2000; three Great Balls
+from the Reichstag reward are retained. Completed Notre Dame's attendant
+honors No/B declines, then offers a real level-12 Gastly. Normal battle Bag
+inputs catch it with two earned Great Balls at full HP; no Master Ball,
+catch-rate edit, stat edit or inventory injection is used. The capture adds
+Gastly to the party while all case/story variables and money remain intact.
+Cold Continue retains exact captured party/inventory, and returning to Ada
+shows the main conclusion again. This is one real capture run, not a catch
+probability guarantee or full-party/PC transfer test. No ROM or user saves
+change during verification.
+
+## v1.15 completed-save rental Lapras walkthrough (2026-10-07)
+
+Eight fresh checks use the completed Germany save after optional travel.
+London and Oxford rentals honor No/B declines and board free with the exact
+party/inventory/progress retained. Water saves at (26,19) cold Continue with
+surfing active and controllable steering. Both clear-bank dismounts restore
+walking, and repeat rentals preserve rewards. Bicycle boarding clears the
+bike state and returns to walking on shore. Final shore Continue retains
+all cases, stamps, inventory and Ada's ending. This run has no pending rail
+booking and does not retest pre-badge gates. No ROM or user saves change.
+
+## v1.15 completed-save riverboat walkthrough (2026-10-07)
+
+Six fresh checks use the completed Germany save after cases, stamps and
+coast trips. Both London/Oxford captains honor No/B declines without state
+changes, and free sailings preserve the exact party/inventory/progress.
+Each landing cold Continues with exact state, correct present-day map and
+controllable movement. Boarding with the Bicycle also permits a round trip
+and subsequent movement. A final Oxford cold Continue retains all case
+stages, rewards and Ada's ending. This run has no pending rail booking and
+does not retest the pre-badge gate or rental Lapras. No ROM or user saves
+change during verification.
+
+## v1.15 present-day coast walkthrough checks (2026-10-07)
+
+Nine fresh checks use the completed Germany save after all cases and tour
+stamps. Actual travel covers London coach to Dover, Dover ferry to Calais,
+Calais north return to Paris, Paris coach to Calais, reverse ferry to Dover
+and north return to London. No/B declines preserve exact state. Each coach
+and ferry arrival cold Continues with exact party/inventory/progress, and
+both port map anchors are correct and present-day. All trips are free, case
+stages remain rewarded, and the final cold Continue retains Ada's ending.
+The fresh run starts with no pending rail booking and does not test a
+booking detour or pre-badge gates. No ROM bytes or user saves change.
+
+## v1.15 optional tour stamps after completion (2026-10-07)
+
+Nine fresh checks use the genuine completed Germany walkthrough save after
+all landmark cases. Actual train journeys collect Berlin, London and Paris
+stamps in that order. Each stamp is unique, the third guide grants exactly
+one Exp. Share, repeated talks grant nothing further, and each save cold
+Continues with exact party/inventory/progress. The tour journal shows its
+completed lead and all seven milestones. Revisits to all three guides are
+safe. A final cold Continue retains stamps, Exp. Share, historical ending,
+all cases and Ada's repeatable conclusion. This run does not fill the Items
+pocket; full-pocket recovery is prior test coverage, not fresh here. No ROM
+bytes or artifact user saves change.
+
+## v1.15 optional-case walkthrough verification (2026-10-07)
+
+Nine fresh checks use the completed Germany/Mudkip walkthrough's genuine
+all-accounts battery, then visit all three cases sequentially by normal
+train travel. They verify curator acceptance at (8,15), both side clues,
+peaceful attendant resolution at (10,5), exact one-time rewards, case cold
+Continue and exit/re-entry, all four combined synthesis pages in the ledger,
+Ada's ending plus synthesis, and final cold Continue with all case stages
+and historical progress retained. Exact rewards are Spell Tag, Rare Candy
+and three Great Balls. The prior optional guide had swapped curator and
+attendant approaches and incorrectly listed the Reichstag reward as Magnet;
+those guide errors are now corrected. This run does not test the optional
+Gastly encounter or full reward pockets. No ROM bytes or user saves change.
+
+## v1.15 Germany/Mudkip full walkthrough (2026-10-07)
+
+Eight additional fresh checks complete the documented route from a new
+Germany/Mudkip game: London field-study acceptance, all three regional
+quests and report-backs, rival and leader battles, historical chapters,
+Rose's London ending, Ada's conclusion, cold Continue with Germany still
+recorded as home, and both deferred accounts. All three starting countries
+now have one separately completed fresh team: England/Bulbasaur,
+France/Chikorita and Germany/Mudkip. This does not cover all nine starter
+teams or optional cases. The Germany verification manifest records script
+and ROM hashes. Country-specific checkpoints retain earlier evidence.
+The initial level-14 Mudkip attempt lost to Conrad. The clean fresh rerun
+trains in Havel Trail grass to level 16, evolves normally to Marshtomp,
+returns to the free clinic every six encounters to restore HP and PP,
+then uses Mud-Slap with ordinary Potions. The training verifier handles
+depleted PP and returns via the clear central lane. No Pokemon stats,
+experience, inventory or quest variables are edited. No ROM or user saves
+change during this verification.
+
+## v1.15 France/Chikorita full walkthrough (2026-10-07)
+
+Eight additional fresh checks complete the documented route from a new
+France/Chikorita game: London study acceptance, all three regional quests
+and report-backs, all three leader battles, historical chapters, Rose's
+London ending, Ada's conclusion, exact home-country cold Continue, and
+both deferred accounts. These add a second complete starting team to the
+prior England/Bulbasaur run. Germany/Mudkip remains a starting-connection
+check, not a complete run; optional cases and other teams are not added.
+An initial diagnostic run lost to Ellis because the test's battle chooser
+omitted Razor Leaf and selected Tackle. Adding Razor Leaf to the normal
+button-driven move priorities enabled a clean fresh rerun. No battle stats,
+quest variables or inventory were edited. Country-specific checkpoints keep
+the prior England evidence intact. The ROM and all three user saves remain
+unchanged. See the France verification manifest for scripts and ROM hashes.
+
+## v1.15 walkthrough revalidation (2026-10-07)
+
+Ten additional fresh walkthrough checks passed on the released v1.15 ROM.
+A fresh England/Bulbasaur route completes all three regional studies,
+required report-backs, rival/leader battles, historical chapters, Rose's
+London welcome and Ada's conclusion. The ending cold Continues with all
+three badges. Deferred Le Havre and Southampton accounts can then be
+filed, and Ada's conclusion repeats. Fresh France/Chikorita and Germany/
+Mudkip starts reach London and accept the field study; they are not separate
+full story playthroughs. Optional landmark cases and other starter teams
+are outside this fresh run. The verification manifest records exact scope.
+English/French route names and directional order were also checked against
+the route and town signs; no text correction was needed. No ROM bytes or
+user saves change during this documentation and verification update.
+
+## v1.15 German route-name consistency (2026-10-07)
+
+Fourteen fresh focused checks: one exact-change static check, three dialogue/
+tree/landmark checks, four delivery-direction compatibility checks and six
+inactive-contact regressions. Genuine v1.14 saves at LENA's active delivery
+and KARL's delivered-report stage cover every direction page, repeated talks,
+new Save/cold Continue and station entry. Stationary reads retain exact
+party/inventory/progress and grant no rewards. Only three text lines change;
+quest commands, cargo tracking, gates and rewards remain exact. This tests
+the revised dialogue and compatibility, not a fresh full walking delivery.
+The v1.14 ROM and all three user saves are retained. Walkthrough playthrough
+evidence remains v1.09.
+
+## v1.14 inactive quest contacts (2026-10-07)
+
+Sixteen fresh focused checks: one exact-change static check, three dialogue/
+tree/landmark checks, six inactive-contact compatibility checks and six
+journal hand-in regressions. Preparation uses the retained v1.13 ROM,
+cold-loads an England start and takes actual trains to each branch town
+before saving by its contact. Old batteries and new cold Continue checks
+cover all dialogue pages, repeats, unchanged quest stages/inventory/party,
+no battle or automatic acceptance, and normal station entry afterward.
+The rival's substituted seven-character player/rival names fit the text
+window. Only three inactive text blocks change; quest gates, acceptance,
+active dialogue, battles and rewards remain exact. The v1.13 ROM and all
+three user saves are retained. Walkthrough playthrough evidence stays v1.09.
+
+## v1.13 regional journal hand-ins (2026-10-07)
+
+Thirty-seven fresh focused checks: one exact-change/font-width check, six
+old-save and cold Continue report-back checks, and thirty regional journal
+checks. Genuine v1.12 batteries cover the England rival report, reviewed
+French survey and delivered German parcel; each lead is read repeatedly,
+then saved and cold loaded with exact state. The regional suite cold-loads
+28 legacy checkpoint batteries, including full-pocket pending rewards and
+all three starter countries. Two additional tests use explicitly targeted
+trainer-win and stamp fixtures to distinguish intermediate leads. Journal
+reads and topic/record switching preserve inventory, progress and location.
+Only three text lines change. The v1.12 ROM is retained and all three user
+saves are unchanged. The walkthrough's v1.09 playthrough is prior evidence.
+
+## v1.12 exterior Gym guidance (2026-10-07)
+
+Sixteen fresh focused checks: one exact-change static check, three font/tree/
+landmark checks, six Gym-sign emulator checks and six station entrance sign
+regressions. Genuine v1.11 outdoor batteries exercise all three Gym signs,
+three pages, repeated reads, station entry/exit, local approaches and new
+cold Continue saves. Exact-change checks retain indoor statue text, leader
+quest gates, badge/reward scripts, maps and rail commands. Stationary reads
+preserve exact state; walking preserves inventory/progress. The v1.11 ROM
+is retained and all three artifact user saves are unchanged. Prior walkthrough
+playthrough evidence remains v1.09; it was not rerun for these text changes.
+
+## v1.11 branch-town exterior signs (2026-10-07)
+
+Sixteen fresh focused checks: one exact-change static check, three font/tree/
+landmark checks, six exterior-sign emulator checks and six station-notice
+regressions. Genuine v1.09 indoor batteries cover all three towns, both sign
+pages, repeat reads, station entry/exit, Gym/contact approaches and new cold
+Continue saves. Stationary reads preserve exact party/inventory/progress;
+walking preserves inventory/progress. Only three text blocks change.
+The v1.10 ROM is retained and all three artifact user saves are unchanged.
+The walkthrough's ten v1.09 checks remain prior evidence, not fresh v1.11 runs.
+
+## v1.10 branch-station verification - 2026-10-07
+
+19 fresh focused PASS results: branch static (2), retained capital-board
+static (2), native widths/landmark generation (3), branch old-save and
+cold Continue runtime (6), and capital old-save/Continue runtime (6).
+Each branch notice adds exactly one background event on the existing
+solid framed wall picture. The complete prior map data and staff scripts
+are retained in branch-station-v109.json; terrain, staff, services, exits,
+shared rail script and map IDs remain unchanged. The generator is stable.
+Genuine v1.09 indoor batteries were made before the change using normal
+Save. Each reads both pages twice, exits, reaches the Gym and named-contact
+approaches, re-enters, saves, cold Continues with exact state and reads again.
+Stationary reads preserve exact party, money, inventory and progress;
+walking checks preserve all inventory and progress. No booking is lost.
+The three capital-board batteries repeat the same existing regression checks.
+All six stations' notice lines pass native-font width checks. Screenshots
+verify new notice pages. Packaging retains v1.09 and all three user saves.
+The walkthrough's ten v1.09 checks remain prior evidence, not fresh v1.10
+checks; v1.10 only adds these optional wall notices to the same story route.
+
+## Complete walkthrough verification - 2026-10-07
+
+WALKTHROUGH.md covers the unchanged v1.09 ROM, SHA256
+`a564453864fc43991120195b6af0847cde4489fa0c3a33f947e7aeee86372ff8`.
+Run `python3 scripts/test_walkthrough.py` then
+`python3 scripts/test_walkthrough_ending.py` through the existing WSL mGBA
+bridge. Ten fresh PASS results cover three newly initialized country starts,
+the full England/Bulbasaur main route and the ending account follow-up.
+France/Chikorita and Germany/Mudkip starts independently reach London and
+accept the study. The England party then wins Oliver, Alice, the rival and
+all three Gym leaders using real battles and normal clinic/shop controls.
+It completes every regional report, the Celebi vision, refuge blanket,
+departure news, Beauvais message/account, care supplies, Pidgey reunion,
+Amiens reception/reunion/account/bulletin, Rouen book, dock instructions,
+Southampton luggage, Rose welcome and Ada conclusion. No quest variables,
+party stats, money or battle outcomes are fabricated. Normal in-game saves
+are made at each badge, the first account and the ending; cold Continue
+checks the completed ending. Deferred port and Southampton accounts are
+filed after Rose and Ada's conclusion is read again. Its screenshot shows
+"Your account is complete." The conclusion test allows more dialogue inputs
+than the short-conversation helper because it also offers a deferred report.
+The first diagnostic run's helper timeout is retained separately; the final
+full run and ending follow-up must both finish cleanly before packaging.
+
+Other starter teams and complete France/Germany battle playthroughs are not
+separate fresh runs in this check. The guide supplies their starting routes
+and shared quest order. Optional landmark case instructions are checked
+against current scripts and map events, not counted as fresh runtime checks.
+The package includes exact coverage, script hashes and guide/ROM hashes in
+`artifacts/releases/v1.09-WALKTHROUGH-VERIFICATION.json`, clean logs and the
+conclusion screenshot. The ROM and all three artifact user saves stay exact.
+
 ## v1.09 walking-detour verification - 2026-10-07
 
 34 fresh focused PASS results: detour static (1), detour runtime (4),

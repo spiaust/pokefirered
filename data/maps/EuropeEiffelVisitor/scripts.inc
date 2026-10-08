@@ -37,7 +37,11 @@ EuropeEiffelVisitor_GuideText::
  .string "Welcome to our visitor room!\n"
  .string "The garden and river are nearby.\p"
  .string "Our exhibits show how field notes\n"
- .string "begin with careful observation.$"
+ .string "begin with careful observation.\p"
+ .string "Leave through the south doorway.\n"
+ .string "Follow paths north to the square.\p"
+ .string "Station: east side of the square.\n"
+ .string "Free clinic: west side of the square.$"
 
 EuropeEiffelVisitor_GardenExhibit::
  lock

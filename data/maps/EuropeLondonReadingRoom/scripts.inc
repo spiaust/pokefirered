@@ -55,7 +55,9 @@ EuropeLondonReadingRoom_HostText::
  .string "Welcome to our reading room.\n"
  .string "I collect notes about local walks.\p"
  .string "The bridges link both riverbanks.\n"
- .string "Take your time and enjoy the view.$"
+ .string "Take your time and enjoy the view.\p"
+ .string "Leave south, then follow the lane\n"
+ .string "west to the EYE and its gallery.$"
 
 EuropeLondonReadingRoom_NotebookText::
  .string "A notebook of riverside walks.\n"

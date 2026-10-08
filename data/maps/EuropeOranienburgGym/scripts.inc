@@ -55,6 +55,8 @@ EuropeOranienburgGym_Winner::
 	releaseall
 	end
 EuropeOranienburgGym_Text_Offer::
+	.string "You can say No and come back later.\n"
+	.string "The town clinic heals teams for free.\p"
 	.string "I'm CONRAD, this town's GYM LEADER.\n"
 	.string "LENA told me about your delivery.\p"
 	.string "Reliable partners make connections!\n"
@@ -82,10 +84,15 @@ EuropeOranienburgGym_Text_NotReady::
 	.string "First, finish LENA's delivery.\n"
 	.string "She waits west of BERLIN's guide.\p"
 	.string "Bring KARL's report back to her\n"
-	.string "and collect your MAGNET reward.$"
+	.string "and collect your MAGNET reward.\p"
+	.string "Exit the GYM; station east of square.\n"
+	.string "Take a train to BERLIN.\p"
+	.string "Find LENA west of the guide.$"
 EuropeOranienburgGym_Text_Decline::
 	.string "Prepare your team. I'll wait here.\n"
-	.string "The clinic offers free healing.$"
+	.string "The clinic offers free healing.\p"
+	.string "Follow the path back to the exit.\p"
+	.string "Free clinic: west side of the square.$"
 EuropeOranienburgGym_Text_Advice::
 	.string "CONRAD uses ELECTRIC partners:\n"
 	.string "VOLTORB Lv.14 and PIKACHU Lv.16.\p"
@@ -94,7 +101,10 @@ EuropeOranienburgGym_Text_Advice::
 	.string "WATER and FLYING partners beware!\n"
 	.string "Raise a team and bring POTIONS.\p"
 	.string "First, finish LENA's delivery\n"
-	.string "and collect her reward in BERLIN.$"
+	.string "and collect her reward in BERLIN.\p"
+	.string "Free clinic: west side of the square.\p"
+	.string "POTIONS: shop inside the station.\n"
+	.string "Station: east side of the square.$"
 EuropeOranienburgGym_Text_Statue::
 	.string "ORANIENBURG GYM\n"
 	.string "LEADER: CONRAD\p"

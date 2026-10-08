@@ -9,3 +9,15 @@ EuropeChantillyStation_OnTransition::
 EuropeChantillyStation_Clerk::
 	setvar VAR_0x8004, 4
 	goto Europe_Train
+
+EuropeChantillyStation_LocalBoard::
+ lockall
+ msgbox EuropeChantillyStation_LocalBoardText, MSGBOX_DEFAULT
+ releaseall
+ end
+
+EuropeChantillyStation_LocalBoardText::
+ .string "LOCAL WALKS / CHANTILLY\n"
+ .string "GYM: north of the town square.\p"
+ .string "REMY waits west of the town guide.\n"
+ .string "South: CHANTILLY FOREST, then PARIS.$"

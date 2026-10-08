@@ -57,7 +57,9 @@ EuropeLondonHome_HostText::
  .string "Welcome! Rest your feet a moment.\n"
  .string "Our photo album is on the table.\p"
  .string "We take turns looking after the beds.\n"
- .string "Small acts of care add up.$"
+ .string "Small acts of care add up.\p"
+ .string "The blue-roofed home to the east\n"
+ .string "has a reading room. Visitors welcome!$"
 
 EuropeLondonHome_NotebookText::
  .string "A notebook of garden observations.\n"

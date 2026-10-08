@@ -9,10 +9,19 @@ texts=[(R/'data/scripts/europe_landmarks.inc').read_text()]+[(R/f'data/maps/{nam
 for path,labels in [('data/maps/EuropeParis/scripts.inc',['EuropeParis_RealismNotreDameText','EuropeParis_RealismEiffelText','EuropeParis_RealismSeineText','EuropeParis_GardenObserverText','EuropeParis_GardenPsyduckText','EuropeParis_PromenadeArtistText','EuropeParis_RealismLaneText','EuropeParis_RealismHomesText']),('data/maps/EuropeBerlin/scripts.inc',['EuropeBerlin_RealismReichstagText','EuropeBerlin_RealismBoulevardText','EuropeBerlin_RealismCourtText']),('data/maps/EuropeLondon/scripts.inc',['EuropeLondon_RealismTextParliament','EuropeLondon_RealismTextGardens','EuropeLondon_GardenVisitorText','EuropeLondon_GardenJigglypuffText','EuropeLondon_RealismSideStreetText','EuropeLondon_RealismHomesText']),('data/maps/EuropeSouthamptonPast/scripts.inc',['EuropeSouthampton_Text_Locked']),('data/maps/EuropeLondonPast/scripts.inc',['EuropeLondonPast_Text_Locked']),('data/text/new_game_intro.inc',['gOakSpeech_Text_WelcomeToTheWorld','gOakSpeech_Text_IStudyPokemon']),('data/scripts/europe_story.inc',['EuropeStory_Text_Offer']),('data/scripts/europe_france_story.inc',['EuropeFrance_Text_Review']),('data/scripts/europe_germany_story.inc',['EuropeGermany_Text_Reward']),('data/scripts/europe_celebi.inc',['EuropeCelebi_Text_Offer','EuropeCelebi_Text_Report','EuropeCelebi_Text_Complete','EuropeCelebi_ConclusionText']),('data/scripts/europe_time.inc',['EuropeTime_Text_Depart']),('data/maps/EuropeLondonPast/scripts.inc',['EuropeLondonPast_Text_Welcome','EuropeLondonPast_Text_Welcomed'])]:
  s=(R/path).read_text(encoding='utf-8')
  for label in labels:texts.append(re.search(re.escape(label)+r'::\n((?:[ \t]*\.string[^\n]*\n)+)',s).group(1))
-for city in ['London','Paris','Berlin']:
+for path,label in [('europe_story.inc','EuropeStory_Text_NotStarted'),('europe_france_story.inc','EuropeFrance_Text_NotStarted'),('europe_germany_story.inc','EuropeGermany_Text_NotStarted')]:
+ s=(R/'data/scripts'/path).read_text()
+ texts.append(re.search(re.escape(label)+r'::\n((?:[ \t]*\.string[^\n]*\n)+)',s).group(1).replace('{RIVAL}','ABCDEFG').replace('{PLAYER}','ABCDEFG'))
+s=(R/'data/scripts/europe_germany_story.inc').read_text()
+for label in ['EuropeGermany_Text_Directions','EuropeGermany_Text_Return']:
+ texts.append(re.search(re.escape(label)+r'::\n((?:[ \t]*\.string[^\n]*\n)+)',s).group(1))
+for city in ['London','Paris','Berlin','Oxford','Chantilly','Oranienburg']:
  s=(R/f'data/maps/Europe{city}/scripts.inc').read_text()
  for label in ['Route','Station']:texts.append(re.search(re.escape(f'Europe{city}_Text_{label}')+r'::\n((?:[ \t]*\.string[^\n]*\n)+)',s).group(1))
-texts += [(R/f'data/maps/Europe{city}Station/scripts.inc').read_text() for city in ['London','Paris','Berlin']]
+for city in ['Oxford','Chantilly','Oranienburg']:
+ s=(R/f'data/maps/Europe{city}/scripts.inc').read_text()
+ texts.append(re.search(re.escape(f'Europe{city}_Text_GymSign')+r'::\n((?:[ \t]*\.string[^\n]*\n)+)',s).group(1))
+texts += [(R/f'data/maps/Europe{city}Station/scripts.inc').read_text() for city in ['London','Paris','Berlin','Oxford','Chantilly','Oranienburg']]
 s=(R/'data/scripts/europe_train.inc').read_text()
 for label in ['Destination','AlreadyHere']:texts.append(re.search(re.escape('Europe_Train_Text_'+label)+r'::\n((?:[ \t]*\.string[^\n]*\n)+)',s).group(1))
 for label in ['Board','Resume','Completed']:
@@ -29,7 +38,7 @@ for l in json.loads((R/'data/layouts/layouts.json').read_text())['layouts']:
  assert tuple(t for row in a for t in row)==v,l['name']
 print('PASS: all European outdoor tree arrangements are stable complete silhouettes')
 paths=[R/'data/maps/map_groups.json',R/'data/layouts/layouts.json',R/'data/scripts/europe_landmarks.inc']
-paths += [R/f'data/maps/Europe{city}/map.json' for city in ['London','Paris','Berlin']]
+paths += [R/f'data/maps/Europe{city}/map.json' for city in ['London','Paris','Berlin','Oxford','Chantilly','Oranienburg']]
 for name in ['NotreDame','Westminster','Reichstag']:
  paths += list((R/f'data/maps/Europe{name}').glob('*'))+list((R/f'data/layouts/Europe{name}').glob('*'))
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();before={p:sha(p) for p in paths if p.suffix in ('.json','.inc','.bin')}

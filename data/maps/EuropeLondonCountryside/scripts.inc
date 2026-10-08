@@ -16,6 +16,8 @@ EuropeTrail_Oliver_After::
 
 EuropeTrail_Oliver_Ask::
 	.string "I'm OLIVER, a local trail trainer.\p"
+	.string "You can say No and come back later.\n"
+	.string "The town clinic heals teams for free.\p"
 	.string "Would you like a friendly battle?\n"
 	.string "My two partners are ready!$"
 
@@ -28,4 +30,8 @@ EuropeTrail_Oliver_Lose::
 EuropeTrail_Oliver_Done::
 	.string "Well battled! Our match is recorded.\p"
 	.string "Look for another trail trainer in\n"
-	.string "each country's countryside.$"
+	.string "each country's countryside.\p"
+	.string "Head north to OXFORD TRAIL.\n"
+	.string "Meet ALICE for an optional match.\p"
+	.string "OXFORD guide: one RARE CANDY.\n"
+	.string "Win both matches to claim the reward.$"

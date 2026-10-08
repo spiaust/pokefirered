@@ -9,3 +9,15 @@ EuropeOranienburgStation_OnTransition::
 EuropeOranienburgStation_Clerk::
 	setvar VAR_0x8004, 5
 	goto Europe_Train
+
+EuropeOranienburgStation_LocalBoard::
+ lockall
+ msgbox EuropeOranienburgStation_LocalBoardText, MSGBOX_DEFAULT
+ releaseall
+ end
+
+EuropeOranienburgStation_LocalBoardText::
+ .string "LOCAL WALKS / ORANIENBURG\n"
+ .string "GYM: north of the town square.\p"
+ .string "KARL waits west of the town guide.\n"
+ .string "South: HAVEL TRAIL, then BERLIN.$"

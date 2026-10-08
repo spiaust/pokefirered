@@ -2,7 +2,7 @@
   "id": "MAP_EUROPE_CHANTILLY",
   "name": "EuropeChantilly",
   "layout": "LAYOUT_EUROPE_CHANTILLY",
-  "music": "MUS_LAVENDER",
+  "music": "MUS_EUROPE_CHANTILLY",
   "region_map_section": "MAPSEC_EUROPE_CHANTILLY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

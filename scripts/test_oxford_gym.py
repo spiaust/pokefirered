@@ -50,7 +50,7 @@ def gym_fight(emu):
                 emu.press('UP');emu.press('LEFT')
             elif fn==move:
                 moves=[emu.read(mon+0xC+i*2,2) for i in range(4)]
-                priorities=[22,71,145,55]
+                priorities=[22,75,71,145,55]
                 if not emu.read(emu.symbols['gStatuses3']+4)&4:
                     priorities.append(73)
                 priorities.append(33)

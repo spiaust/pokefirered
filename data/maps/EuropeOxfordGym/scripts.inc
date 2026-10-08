@@ -55,6 +55,8 @@ EuropeOxfordGym_Winner::
 	releaseall
 	end
 EuropeOxfordGym_Text_Offer::
+	.string "You can say No and come back later.\n"
+	.string "The town clinic heals teams for free.\p"
 	.string "I'm ELLIS, OXFORD's GYM LEADER.\p"
 	.string "OAK's study taught you to travel\n"
 	.string "and grow alongside your partners.\p"
@@ -82,10 +84,15 @@ EuropeOxfordGym_Text_NotReady::
 	.string "Before this match, finish OAK's\n"
 	.string "ENGLAND field study.\p"
 	.string "His aide waits in LONDON's square.\n"
-	.string "Return after delivering your report.$"
+	.string "Return after delivering your report.\p"
+	.string "Exit the GYM; station east of square.\n"
+	.string "Take a train to LONDON.\p"
+	.string "Find OAK's aide west of the guide.$"
 EuropeOxfordGym_Text_Decline::
 	.string "Prepare your team. I'll wait here.\n"
-	.string "The clinic offers free healing.$"
+	.string "The clinic offers free healing.\p"
+	.string "Follow the path back to the exit.\p"
+	.string "Free clinic: west side of the square.$"
 EuropeOxfordGym_Text_Advice::
 	.string "ELLIS uses ROCK-type partners:\n"
 	.string "GEODUDE Lv.10 and ONIX Lv.12.\p"
@@ -94,7 +101,10 @@ EuropeOxfordGym_Text_Advice::
 	.string "ODDISH lives on the English trails.\n"
 	.string "Raise a team and bring POTIONS.\p"
 	.string "First, finish OAK's field study\n"
-	.string "and report to his LONDON aide.$"
+	.string "and report to his LONDON aide.\p"
+	.string "Free clinic: west side of the square.\p"
+	.string "POTIONS: shop inside the station.\n"
+	.string "Station: east side of the square.$"
 EuropeOxfordGym_Text_Statue::
 	.string "OXFORD GYM\nLEADER: ELLIS\p"
 	.string "A firm foundation for every team.$"
