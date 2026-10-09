@@ -1,0 +1,17 @@
+"""Report-return additions preserve all country progression logic."""
+from pathlib import Path
+import re
+r=Path(__file__).resolve().parents[1];texts=[]
+for country,tag,end,lines in [('France','ReturnReport','Reward',['Station: east side of town square.\\n','Take a train to PARIS.\\p','CELINE: west of the PARIS guide.\\n','Your reviewed report is ready.$']),('Germany','Return','NotStarted',['Station: east side of town square.\\n','Take a train to BERLIN.$'])]:
+ b=(r/f'data/scripts/europe_{country.lower()}_story.inc').read_bytes();old=(r/f'data/geography/quest-report-{country.lower()}-v140.inc').read_bytes()
+ start=f'Europe{country}_Text_{tag}::'.encode();stop=f'Europe{country}_Text_{end}::'.encode();a=b.index(start);z=b.index(stop,a);oa=old.index(start);oz=old.index(stop,oa)
+ assert b[:a]+old[oa:oz]+b[z:]==old
+ extra=''.join(f'\t.string "{line}"\r\n' for line in lines).encode()
+ assert b[a:z]==old[oa:oz].replace(b'.$"',b'.\\p"')+extra
+ texts+=re.findall(rb'\.string "([^"]+)"',extra)
+print('PASS: exact report-return text additions preserve original country scripts, gates, observations, delivery and one-time rewards')
+font=(r/'src/text.c').read_text();widths=list(map(int,re.findall(r'\b\d+\b',re.search(r'sFontNormalLatinGlyphWidths\[\]\s*=\s*\{(.*?)\};',font,re.S)[1])))
+chars={m[1]:int(m[2],16) for m in re.finditer(r"^'(.)'\s*=\s*([0-9A-F]{2})\s*$",(r/'charmap.txt').read_text(),re.M)};chars["'"]=0xB4
+for text in texts:
+ for line in re.split(r'\\[npl]|\$',text.decode()):assert sum(widths[chars[c]] for c in line)<=216,line
+print('PASS: report station, train and named-contact instructions fit the native font and message window')

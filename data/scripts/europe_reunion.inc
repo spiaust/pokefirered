@@ -114,7 +114,9 @@ EuropeReunion_Text_Reminder::
 	.string "Speak to MIRA on the north path\n"
 	.string "and the porter on the east side.\p"
 	.string "You can visit them in either order.\n"
-	.string "Bring both descriptions back to me.$"
+	.string "Bring both descriptions back to me.\p"
+	.string "MIRA waits east of NORA.\n"
+	.string "The porter is southeast of MIRA.$"
 EuropeReunion_Text_Decline::
 	.string "NORA: That's all right. Ask again\n"
 	.string "when you are ready.$"
@@ -141,7 +143,9 @@ EuropeReunion_Text_Verify::
 	.string "over while you give MIRA the news.$"
 EuropeReunion_Text_Verified::
 	.string "NORA: Speak to MIRA on the north\n"
-	.string "path. We have checked both reports.$"
+	.string "path. We have checked both reports.\p"
+	.string "MIRA waits east of me.\n"
+	.string "Tell her both reports are checked.$"
 EuropeReunion_Text_Reunite::
 	.string "MIRA: You found my partner?\n"
 	.string "The porter brings MEOWTH over.\p"
@@ -152,7 +156,13 @@ EuropeReunion_Text_MiraDone::
 	.string "Thank you for checking carefully.\p"
 	.string "We'll wait together from now on.\p"
 	.string "NORA can help your team rest.\n"
-	.string "Please take care of yourselves too.$"
+	.string "Please take care of yourselves too.\p"
+	.string "CELEBI waits beside the south guide.\n"
+	.string "Ask to return to your own time.\p"
+	.string "Go north to CHANTILLY station.\n"
+	.string "Take the OXFORD train to ADA.\p"
+	.string "ADA waits east of the OXFORD guide.\n"
+	.string "Tell her about this reunion.$"
 EuropeReunion_Text_PorterDone::
 	.string "MEOWTH is back with MIRA.\n"
 	.string "I'm glad we checked before moving.$"

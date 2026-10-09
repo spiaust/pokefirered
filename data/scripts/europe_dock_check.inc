@@ -60,7 +60,9 @@ EuropeDockCheck_Text_Offer::
 	.string "and check them with the captain?$"
 EuropeDockCheck_Text_Reminder::
 	.string "Read the notice at the closed door.\n"
-	.string "Then speak to the captain below.$"
+	.string "Then speak to the captain below.\p"
+	.string "Notice: closed door north of captain.\n"
+	.string "Read it, then return to him.$"
 EuropeDockCheck_Text_Decline::
 	.string "All right. Ask again if you\n"
 	.string "have time to help.$"
@@ -73,7 +75,9 @@ EuropeDockCheck_Text_Notice::
 	.string "The ROUEN return service stays open.$"
 EuropeDockCheck_Text_Ready::
 	.string "Check the instructions with the\n"
-	.string "captain below the pier.$"
+	.string "captain below the pier.\p"
+	.string "Captain waits south of closed door.\n"
+	.string "Speak to him to check your notes.$"
 EuropeDockCheck_Text_Confirm::
 	.string "That's correct. I will call groups\n"
 	.string "when it is time to move.\p"
@@ -84,7 +88,13 @@ EuropeDockCheck_Text_Confirm::
 EuropeDockCheck_Text_Unlocked::
 	.string "The dockworker can help your team\n"
 	.string "rest while you wait.\p"
-	.string "Speak to him for free party care.$"
+	.string "Speak to him for free party care.\p"
+	.string "CELEBI waits beside the captain.\n"
+	.string "Ask to return to your own time.\p"
+	.string "Go north to CHANTILLY station.\n"
+	.string "Take the OXFORD train to ADA.\p"
+	.string "ADA waits east of the OXFORD guide.\n"
+	.string "Tell her about the port reception.$"
 EuropeDockCheck_Text_Rest::
 	.string "Thank you for checking the notice.\n"
 	.string "We have a quiet spot for your team.\p"

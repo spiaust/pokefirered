@@ -106,14 +106,22 @@ EuropeCelebi_Text_Vision::
 	.string "Your feet have never left the path.$"
 EuropeCelebi_Text_Return::
 	.string "You record the vision in your notes.\n"
-	.string "ADA in OXFORD should hear about this.$"
+	.string "ADA in OXFORD should hear about this.\p"
+	.string "Walk north to CHANTILLY square.\n"
+	.string "Station: east side of the square.\p"
+	.string "Take a train to OXFORD.\n"
+	.string "ADA waits east of the town guide.$"
 EuropeCelebi_Text_Quiet::
 	.string "The little POKEMON watches quietly.\n"
 	.string "Someone in OXFORD may know why.$"
 EuropeCelebi_Text_Remember::
 	.string "CELEBI waits beside the path.\n"
 	.string "You remember the platform from 1940.\p"
-	.string "ADA in OXFORD is studying the vision.$"
+	.string "ADA in OXFORD is studying the vision.\p"
+	.string "Walk north to CHANTILLY square.\n"
+	.string "Station: east side of the square.\p"
+	.string "Take a train to OXFORD.\n"
+	.string "ADA waits east of the town guide.$"
 EuropeCelebi_Text_Leave::
 	.string "You step back. The POKEMON waits\n"
 	.string "patiently beside the forest path.$"
@@ -132,12 +140,20 @@ EuropeCelebi_Text_Complete::
 	.string "at each arrival point to bring you\p"
 	.string "home. We are helping companions\n"
 	.string "stay together, not trying to\p"
-	.string "change the war.$"
+	.string "change the war.\p"
+	.string "Return to CELEBI in the forest.\n"
+	.string "Say Yes to visit the refuge.\p"
+	.string "To come home, speak to CELEBI.\n"
+	.string "It waits beside the arrival point.$"
 EuropeCelebi_Text_Full::
 	.string "ADA: Your report is safe. Make room\n"
 	.string "in ITEMS for one RARE CANDY, then\p"
-	.string "return so we can review your notes.$"
+	.string "return so we can review your notes.\p"
 
+	.string "Open BAG, then the ITEMS pocket.\n"
+	.string "Use, give or toss an unneeded item.\p"
+	.string "Come back after making room.\n"
+	.string "Your vision report stays safe.$"
 EuropeCelebi_Conclusion::
  msgbox EuropeCelebi_ConclusionText
  call EuropeCase_Synthesis

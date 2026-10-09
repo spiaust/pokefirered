@@ -22,6 +22,11 @@ In v1.16, the capital Rooms map pages also explain entry with A and the
 south-door exit. The story route and room controls are unchanged; the full
 playthrough evidence above is from v1.15, with focused v1.16 map/save checks.
 
+Focused v1.71 checks verify the saved final journey, all twenty historical
+journal records, both clue orders in all three optional cases, their combined
+ending, and native Bag recovery for pending landmark rewards. These checks
+continue genuine saved journeys; the full fresh-game evidence remains v1.15.
+
 ## Controls and directions
 
 Use the D-pad to move, A to speak, read and confirm, and B to back out. Keep
@@ -394,6 +399,29 @@ from (10,5), facing north, and choose YES for the peaceful resolution. Return
 to the curator for the reward. Read the case ledger from (12,14), facing south.
 After all three rewards have been collected, the ledger and Ada can give the
 combined case synthesis. The post-case Gastly battle at Notre Dame is optional.
+
+### Make room for a pending landmark reward
+
+A resolved case stays resolved if the curator cannot give its reward.
+Open START, BAG and use the appropriate pocket:
+
+| Reward | Pocket | Room needed |
+| --- | --- | --- |
+| Spell Tag | ITEMS | One free slot, or room for one in its existing stack |
+| Rare Candy | ITEMS | One free slot, or room for one in its existing stack |
+| Three Great Balls | POKE BALLS | Three spaces in the Great Ball stack |
+
+Use or give an item you choose to remove, or select TOSS. Choose the
+quantity and confirm YES; B cancels without removing anything. To free a
+slot in a full Items pocket, remove the entire unwanted stack. A capped
+stack contains 999. For Great Balls, reduce it to 996 or fewer before
+claiming three. An empty slot alone does not bypass a capped reward stack.
+
+Return to the curator at (8,15), facing north. You can save before making
+room or before returning; Continue retains the pending reward. Once claimed,
+the reward is given only once. Spell Tag and Rare Candy full-pocket and
+capped-stack recovery, plus Great Ball capped-stack recovery, were checked
+through normal Bag controls on isolated inventory-boundary test saves.
 
 ### Optional Gastly capture at Notre Dame
 

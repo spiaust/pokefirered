@@ -3,6 +3,157 @@
 A FireRed-based prototype of a journey through real European countries.
 
 
+## v1.71: Landmark reward pocket recovery and Gastly choices
+
+Pending landmark rewards now explain which Bag pocket to use: Items for Spell Tag or Rare Candy, Poke Balls for three Great Balls. Resolved cases remain safe while players make room and return to the curator.
+
+## v1.70: Historical London arrival and report return directions
+
+Historical London journey directions locate Rose northwest of the south guide for arrival registration. Her completed reminder explains returning with Celebi, heading north to Chantilly station and taking the Oxford train to Ada east of its guide for the final report.
+
+## v1.69: Southampton account and direct-return directions
+
+After Southampton luggage hand-in, directions explain using Celebi to return to the present, taking the Oxford train from Chantilly station and telling Ada about both receptions. Ada's recorded Southampton account explains choosing SOUTHAMPTON from forest Celebi's destination menu.
+
+## v1.68: Port account and direct Le Havre return directions
+
+After dock confirmation, directions explain using Celebi to return to the present and traveling north to Chantilly station, then Oxford and Ada east of its guide. Ada's recorded port account explains speaking to forest Celebi and choosing LE HAVRE for a direct revisit.
+
+## v1.67: Southampton luggage recovery directions
+
+Southampton luggage reminders explain walking north from the host to the closed entrance and looking west along the quay. Pickup directions locate the worker east of the entrance for the green-labeled bag hand-in.
+
+## v1.66: Southampton crossing and arrival directions
+
+The Southampton crossing locates the reception host south of arrival and explains speaking to him before the worker. His welcome locates the luggage worker northeast by the closed entrance and introduces the missing bag.
+
+## v1.65: Le Havre dock-notice directions
+
+The Le Havre dock-task reminder locates the notice at the closed door north of the captain. After reading, the reminder explicitly directs players south to the captain to confirm their notes.
+
+## v1.64: Le Havre departure and arrival directions
+
+Le Havre journey directions locate the captain south of arrival and explain speaking to him before the dockworker. The captain welcome locates the dockworker northeast by the closed door and introduces the posted notice.
+
+## v1.63: Rouen route-book recovery directions
+
+Leon explains heading east from the south guide, north to the paved crossing, east across the river and north along the far bank for the wrapped book. The pickup reminder explains crossing back west, heading south and finding Leon northwest of the south guide.
+
+## v1.62: Rouen onward journey and arrival directions
+
+The Rouen journey now locates Leon northwest of the south guide and asks players to register their arrival. His first welcome invites another conversation about the missing route book, keeping the search optional.
+
+## v1.61: Amiens bulletin and checked-news directions
+
+The active Amiens bulletin reminder locates the northeast board and directs players back to the east-side porter. After verification, the reminder locates Nora northwest of the south guide for delivery of the checked instructions.
+
+## v1.60: Amiens reunion account and news unlock
+
+After the Meowth reunion, Mira explains using Celebi to return to the present, walking north to Chantilly station and taking the Oxford train to Ada east of its guide. After recording the account, Ada directs the player back to the Amiens porter for travel news.
+
+## v1.59: Amiens Meowth reunion directions
+
+Amiens Meowth reunion reminders now locate Mira east of Nora and the porter southeast of Mira. After verification, Nora explicitly directs the player east to Mira with the checked reports.
+
+## v1.58: Amiens arrival and meeting directions
+
+The Amiens arrival now locates Nora northwest of the south guide and asks the player to speak to her before reading the notice. Copied meeting instructions now locate Nora by the west path for confirmation.
+
+## v1.57: Garden reunion and onward directions
+
+After finding Pidgey, the garden reminder now locates Luc northwest of the south guide. After reunion, Luc explains returning through reception's south service to the station post and asking the dispatcher about Amiens.
+
+## v1.56: Beauvais relief directions
+
+The Beauvais relief task now locates the Chantilly dispatcher east of the return guide, and the boarding board northeast of the dispatcher. The parcel reminder explicitly sends players back to the Beauvais host, whose completed care corner offers repeatable free rest.
+
+## v1.55: Pending Luxury Ball guidance
+
+When Ada's first historical account reward cannot fit, she now names the Poke Balls pocket and explains giving or tossing a ball, including making room in a capped Luxury Ball stack. The completed account remains safe until the reward can be added.
+
+## v1.54: Elise message and reply directions
+
+Elise's optional message now gives explicit routes to the refuge keeper, back to Beauvais with her reply, and home through Celebi to Ada in Oxford. Two newer refuge instructions now correctly refer to the keeper as her, matching the original dialogue and character.
+
+## v1.53: Beauvais boarding directions
+
+After the verified departure report, the refuge keeper now directs players to the southeast station-post guide, the boarding board and the Beauvais reception host. The train remains optional and the return routes remain available.
+
+## v1.52: Departure-news directions
+
+The copied station notice now points southwest to the dispatcher. After verification, his reminder identifies the return guide west of him and the refuge keeper north of Celebi's arrival. Confirmed news still must be carried back through the normal task sequence.
+
+## v1.51: Refuge task reminders
+
+Refuge reminders now identify Elise east of the keeper, the keeper west of Elise, and the blanket's return to Elise. Helping still follows the normal conversation sequence, and Celebi remains available to return home.
+
+## v1.50: Ada onward-refuge directions
+
+After the vision report, Ada now explicitly directs players back to forest Celebi to choose the refuge visit, and explains speaking to Celebi beside the arrival point to return home. Optional choices and historical progress are unchanged.
+
+## v1.49: Ada pending report reward guidance
+
+When Ada cannot give the vision-report Candy, she now explains opening the Items pocket, using, giving or tossing an unneeded item, then returning. The earned vision report stays pending until the reward fits.
+
+## v1.48: Celebi report-return directions
+
+After Celebi's vision, the first report-return message and repeated forest reminder now identify the northward route to Chantilly square, its east-side station, the Oxford train and Ada east of the town guide. Her one-time report reward and optional time-travel offer are unchanged.
+
+## v1.47: Third-Gym lead to Ada
+
+After the third Gym, Conrad now points to Ada in Oxford, east of the town guide, and mentions her Chantilly lead. This connects the badge journey to the next story chapter while keeping the existing river-boat directions and optional choices.
+
+## v1.46: Oxford rival preparation
+
+Before the Oxford rival match, the battle offer now explains choosing No to prepare and finding the clinic west of the square. Declining gives explicit free-healing and return directions. Both trail wins remain required, and the battle waits for the player's consent.
+
+## v1.45: England active-study reminders
+
+England's active-study reminder now names the northward routes to Oliver and Alice. When a required match is missing, the Oxford rival explains walking south and finding that trainer east of the path. Existing wins, optional battles and report rewards are unchanged.
+
+## v1.44: England accepted-study directions
+
+Oak's aide now gives a complete northward route after study acceptance: Oliver east of the English Meadow path, Alice east of the Oxford Trail path, then the rival west of Oxford's town guide. Earlier wins still count and all battles remain optional.
+
+## v1.43: England report-return directions
+
+England's victorious rival now identifies the east-side station, London train and Oak's aide west of the town guide. The report can still be returned on foot through both southern routes. Oxford Gym unlocks after the aide receives it.
+
+## v1.42: pending country rewards explain Bag room
+
+Oak's aide, Celine and Lena now explain opening the Items pocket, using,
+giving or tossing an unneeded item, then returning for the safe report
+reward. Earned reports remain pending until Soothe Bell, Miracle Seed or
+Magnet can be added. Existing one-time reward rules are unchanged.
+
+## v1.41: reviewed reports explain the return train
+
+Remy now identifies the east-side station, the train to Paris and Celine's
+location west of the city guide. Karl now identifies the east-side station
+and train to Berlin, alongside his existing walking and Lena directions.
+Existing report requirements and one-time rewards are unchanged.
+
+## v1.40: accepted survey and courier route directions
+
+Celine now explains that French Gardens lies north of Paris, Chantilly
+Forest lies south of Chantilly, and each study marker stands west of its
+main path. Lena now points to Berlin's east-side station and the train to
+Oranienburg, with walking as an alternative. Existing quest rules and
+one-time rewards are unchanged.
+
+## v1.39: completed Gyms explain onward travel
+
+Completed Oxford and Chantilly leaders explain the east-side station and
+trains to the next country's contact. Conrad explains trains to London or
+Oxford and the east-side river landing for the unlocked free riverboat.
+Existing move advice, badges and one-time TM rewards are unchanged.
+
+## v1.38: pending Gym rewards explain TM stack space
+
+Gym leaders now point to the Bag's Key Items pocket and TM Case, explain
+using or giving an existing copy when that TM's stack is full, and confirm
+that the waiting reward needs no rematch. Earned badges remain safe.
+
 ## v1.37: completed regional challenges point onward
 
 After claiming a regional Rare Candy, the guide names Oxford, Chantilly and
@@ -1125,14 +1276,19 @@ The countryside rosters are:
 
 See [ROADMAP.md](ROADMAP.md) for completed releases and the next milestones.
 
-The twenty-four maps are a functional prototype with shared building/interior art,
-not finished recreations of the six towns/cities. The title is a native pixel-art
-rail motif with stylized landmarks. The professor portrait, character and
-Pokemon sprites and controls guide still come from FireRed. Train
-travel uses confirmed station-to-station journeys with saved destinations,
-without a moving train sequence. Custom landmark architecture, detailed geographic map art,
-more countries, Gyms/story progression, Pokemon riding, additional
-generations, and Celebi's WWII storyline remain future work.
+The six towns/cities and their visitor interiors remain functional prototypes
+with shared FireRed building/interior art. Character and Pokemon sprites,
+professor portrait and controls guide also reuse FireRed assets. The title
+now includes an animated Celebi sequence and rotating town scenes, and all
+six towns have custom music. Three country stories and Gyms, optional landmark
+cases, riverboat travel, Lapras rentals and the twenty-record historical
+journey through London 1940 are playable. See WALKTHROUGH.md for the ending.
+
+Remaining work includes more detailed town geography and landmark architecture,
+additional countries and Pokemon generations, expanded avatar customization
+and a moving train sequence. Train journeys currently use confirmed, saved
+station-to-station travel. Lapras rentals currently use generic Surf graphics.
+WORLD OPTIONS map detail changes the regional screen only.
 
 ## Development on this Windows PC
 
@@ -1233,7 +1389,7 @@ battle prize or TM. Save normally to retain both rewards.
 
 This prototype uses an existing Gym interior, building tiles, leader artwork,
 and the original first-badge graphics and engine effects. Ellis and the Oxford
-progression are new. Chantilly now adds the second Gym; later country Gyms remain planned.
+progression are new. Chantilly and Oranienburg now complete the three-country Gym circuit.
 
 ## France: the garden survey (v0.13)
 
@@ -1765,7 +1921,7 @@ report later. The journal guides you to Ada and marks the finished account.
 The report preserves your party, items and previous quest progress. You can
 save before or after it, revisit Le Havre and continue using dockworker
 care. Existing completed dock-task saves can report immediately. This closes
-the port reception chapter; onward sailing remains a future story step.
+the port reception chapter. The later Southampton crossing and London 1940 chapters are now playable.
 
 
 ## Direct port revisits (v0.43)

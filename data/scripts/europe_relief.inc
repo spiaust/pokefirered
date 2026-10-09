@@ -54,7 +54,9 @@ EuropeRelief_Text_Directions::
 	.string "Take the south return service.\n"
 	.string "Ask the station dispatcher for it.\p"
 	.string "Then read the board to return here.\n"
-	.string "I'll keep a place for the supplies.$"
+	.string "I'll keep a place for the supplies.\p"
+	.string "Dispatcher: east of the return guide.\n"
+	.string "Ask for the BEAUVAIS care parcel.$"
 EuropeRelief_Text_Decline::
 	.string "Of course. Speak to me when\n"
 	.string "you are ready to help.$"
@@ -65,7 +67,9 @@ EuropeRelief_Text_Collect::
 	.string "getting it to the people waiting.$"
 EuropeRelief_Text_Parcel::
 	.string "The parcel is ready for the host.\n"
-	.string "Read the board to ride to BEAUVAIS.$"
+	.string "Read the board to ride to BEAUVAIS.\p"
+	.string "Board: northeast of the dispatcher.\n"
+	.string "At BEAUVAIS, speak to the host.$"
 EuropeRelief_Text_DispatcherDone::
 	.string "The care corner is open? Good news!\n"
 	.string "You can rest at BEAUVAIS now.\p"

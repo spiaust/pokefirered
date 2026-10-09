@@ -68,7 +68,9 @@ EuropeLuggage_Text_Offer::
 	.string "Will you look for it?$"
 EuropeLuggage_Text_Reminder::
 	.string "Look left of the closed entrance.\n"
-	.string "Bring the green-labeled bag here.$"
+	.string "Bring the green-labeled bag here.\p"
+	.string "From host, go north to the entrance.\n"
+	.string "Look west along the quay.$"
 EuropeLuggage_Text_Later::
 	.string "All right. I will keep looking.\n"
 	.string "Ask again if you have time.$"
@@ -76,7 +78,9 @@ EuropeLuggage_Text_Found::
 	.string "You find the green-labeled bag.\n"
 	.string "Its clasp is still fastened.\p"
 	.string "You carry it carefully without\n"
-	.string "opening it. Return it to the worker.$"
+	.string "opening it. Return it to the worker.\p"
+	.string "Worker waits east of closed entrance.\n"
+	.string "Give him the green-labeled bag.$"
 EuropeLuggage_Text_Return::
 	.string "That is the missing bag!\n"
 	.string "I will bring it to its owner.\p"
@@ -86,7 +90,13 @@ EuropeLuggage_Text_Unlocked::
 	.string "We can help your team rest here.\n"
 	.string "Speak to me whenever they need care.\p"
 	.string "There is no charge. CELEBI can now\n"
-	.string "bring you straight back here, too.$"
+	.string "bring you straight back here, too.\p"
+	.string "CELEBI waits beside the host.\n"
+	.string "Ask to return to your own time.\p"
+	.string "Go north to CHANTILLY station.\n"
+	.string "Take the OXFORD train to ADA.\p"
+	.string "ADA waits east of the OXFORD guide.\n"
+	.string "Tell her about the two receptions.$"
 EuropeLuggage_Text_Rest::
 	.string "The traveler has their bag again.\n"
 	.string "Now let us help your team.\p"

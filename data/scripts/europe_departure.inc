@@ -96,7 +96,9 @@ EuropeDeparture_Text_Notice::
 	.string "news before moving to a platform.$"
 EuropeDeparture_Text_Noted::
 	.string "You copy the instructions.\n"
-	.string "Now check with the dispatcher.$"
+	.string "Now check with the dispatcher.\p"
+	.string "Dispatcher: southwest of the notice.\n"
+	.string "Ask him to check these instructions.$"
 EuropeDeparture_Text_ReadFirst::
 	.string "Please read the notice northeast\n"
 	.string "of me. Then we can check your notes.$"
@@ -109,7 +111,11 @@ EuropeDeparture_Text_Confirm::
 	.string "Nobody should wait alone outside.$"
 EuropeDeparture_Text_Carry::
 	.string "Please take that message back\n"
-	.string "to the keeper at the refuge.$"
+	.string "to the keeper at the refuge.\p"
+	.string "Return guide: west of the dispatcher.\n"
+	.string "Ask him to take you to the refuge.\p"
+	.string "Keeper: north of CELEBI's arrival.\n"
+	.string "Tell her the confirmed station news.$"
 EuropeDeparture_Text_DispatcherDone::
 	.string "A train to BEAUVAIS is now ready.\n"
 	.string "Read the board to join the journey.$"
@@ -122,7 +128,11 @@ EuropeDeparture_Text_RefugeDone::
 	.string "ELISE and EEVEE can stay together.\n"
 	.string "We know where to wait safely now.\p"
 	.string "Your green friend is waiting too.\n"
-	.string "Go home whenever you need to.$"
+	.string "Go home whenever you need to.\p"
+	.string "Station-post guide: southeast corner.\n"
+	.string "Return there and read the board.\p"
+	.string "A train to BEAUVAIS is ready.\n"
+	.string "Speak to the host when you arrive.$"
 EuropeDeparture_Text_ChildDone::
 	.string "ELISE: The keeper told me your news.\n"
 	.string "We'll wait here together.\p"

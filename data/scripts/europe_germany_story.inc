@@ -65,8 +65,12 @@ EuropeGermany_Text_Accepted::
 	.string "You packed LENA's repair parcel!\n"
 	.string "Mission cargo stays outside the BAG.\p"
 	.string "Find KARL west of ORANIENBURG's\n"
-	.string "town guide, then bring his report.$"
+	.string "town guide, then bring his report.\p"
 
+	.string "Station: east side of BERLIN square.\n"
+	.string "Take a train to ORANIENBURG.\p"
+	.string "Or walk north through the two routes.\n"
+	.string "KARL waits west of the town guide.$"
 EuropeGermany_Text_Directions::
 	.string "KARL waits west of ORANIENBURG's\n"
 	.string "town guide with the damaged beacon.\p"
@@ -104,8 +108,12 @@ EuropeGermany_Text_Full::
 	.string "Your report is delivered, but your\n"
 	.string "BAG's ITEMS pocket is full.\p"
 	.string "Make room and speak to me again.\n"
-	.string "I'll keep your MAGNET safe.$"
+	.string "I'll keep your MAGNET safe.\p"
 
+	.string "Open BAG, then the ITEMS pocket.\n"
+	.string "Use, give or toss an unneeded item.\p"
+	.string "Return here after making room.\n"
+	.string "Your report and reward stay safe!$"
 EuropeGermany_Text_Delivered::
 	.string "KARL: The repair parts from LENA!\n"
 	.string "Now I can fix this trail beacon.\p"
@@ -118,8 +126,10 @@ EuropeGermany_Text_Return::
 	.string "Take my report to LENA in BERLIN.\n"
 	.string "She waits west of the city guide.\p"
 	.string "Use the train, or walk south along\n"
-	.string "HAVEL TRAIL and GERMAN WOODLAND.$"
+	.string "HAVEL TRAIL and GERMAN WOODLAND.\p"
 
+	.string "Station: east side of town square.\n"
+	.string "Take a train to BERLIN.$"
 EuropeGermany_Text_NotStarted::
 	.string "I'm KARL. I maintain trail beacons.\n"
 	.string "This one needs a replacement coil.\p"

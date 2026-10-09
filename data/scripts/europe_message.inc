@@ -54,7 +54,9 @@ EuropeMessage_Text_Directions::
 	.string "Take the south return service, then\n"
 	.string "ask the guide to go to the refuge.\p"
 	.string "Tell its keeper we're safe here.\n"
-	.string "Please bring back her reply.$"
+	.string "Please bring back her reply.\p"
+	.string "Return guide: west of the dispatcher.\n"
+	.string "Keeper: north of CELEBI's arrival.$"
 EuropeMessage_Text_Decline::
 	.string "ELISE: That's all right. Ask me\n"
 	.string "again when you have time.$"
@@ -67,7 +69,11 @@ EuropeMessage_Text_KeeperDone::
 	.string "Please take my reply back to ELISE\n"
 	.string "at BEAUVAIS reception.\p"
 	.string "Knowing they have shelter gives\n"
-	.string "everyone here a little more hope.$"
+	.string "everyone here a little more hope.\p"
+	.string "Station-post guide: southeast corner.\n"
+	.string "Read the board to reach BEAUVAIS.\p"
+	.string "ELISE: east of reception entrance.\n"
+	.string "Speak to her to deliver my reply.$"
 EuropeMessage_Text_Reply::
 	.string "ELISE: I'm glad she knows.\n"
 	.string "I'll remember what she said.\p"
@@ -80,7 +86,11 @@ EuropeMessage_Text_KeeperReplied::
 	.string "Rest when you need to.$"
 EuropeMessage_Text_Report::
 	.string "You record the keeper's reply.\n"
-	.string "ADA in OXFORD should hear the story.$"
+	.string "ADA in OXFORD should hear the story.\p"
+	.string "CELEBI by the entrance leads home.\n"
+	.string "Then take a train to OXFORD.\p"
+	.string "ADA waits east of the town guide.\n"
+	.string "Tell her about both messages.$"
 EuropeMessage_Text_EliseDone::
 	.string "ELISE: EEVEE and I are resting here.\n"
 	.string "Thank you for carrying our message.$"
@@ -102,4 +112,8 @@ EuropeMessage_Text_Archived::
 EuropeMessage_Text_Full::
 	.string "ADA: Your account is safe. Make room\n"
 	.string "in POKE BALLS for one LUXURY BALL,\p"
-	.string "then return to collect it.$"
+	.string "then return to collect it.\p"
+	.string "BAG: open the POKE BALLS pocket.\n"
+	.string "Give or toss one unneeded ball.\p"
+	.string "If LUXURY BALLS are at the limit,\n"
+	.string "make room in that stack and return.$"

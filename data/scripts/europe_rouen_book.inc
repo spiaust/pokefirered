@@ -61,7 +61,11 @@ EuropeRouenBook_Text_Reminder::
 	.string "Follow the east path to the water.\n"
 	.string "Use the crossing, then turn north.\p"
 	.string "Bring the wrapped book back to me.\n"
-	.string "Please stay on the bank.$"
+	.string "Please stay on the bank.\p"
+	.string "From south guide, head east.\n"
+	.string "Turn north to the paved crossing.\p"
+	.string "Cross east, then follow bank north.\n"
+	.string "Look for the wrapped book.$"
 EuropeRouenBook_Text_Decline::
 	.string "LEON: Take your time. I will stay\n"
 	.string "here if you decide to help.$"
@@ -69,7 +73,9 @@ EuropeRouenBook_Text_Found::
 	.string "You find a book in a waxed cover.\n"
 	.string "Its pages are dry and intact.\p"
 	.string "You keep it with your journey notes.\n"
-	.string "Return it to LEON on the west path.$"
+	.string "Return it to LEON on the west path.\p"
+	.string "Cross back west, then head south.\n"
+	.string "LEON waits northwest of south guide.$"
 EuropeRouenBook_Text_Return::
 	.string "LEON: That's our route book!\n"
 	.string "The cover kept the pages dry.\p"

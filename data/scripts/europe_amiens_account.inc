@@ -27,7 +27,9 @@ EuropeAmiensAccount_Text_Archived::
 	.string "ADA: The AMIENS account is recorded.\n"
 	.string "Thank you for sharing their story.\p"
 	.string "CELEBI can take you back to visit.\n"
-	.string "NORA's care corner remains open.$"
+	.string "NORA's care corner remains open.\p"
+	.string "Back in AMIENS, ask the porter\n"
+	.string "on the east side about travel news.$"
 EuropeAmiensAccount_Text_Later::
 	.string "ADA: Of course. Come back when\n"
 	.string "you are ready to tell the story.$"

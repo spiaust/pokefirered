@@ -55,7 +55,9 @@ EuropeRouen_Text_Journey::
 	.string "You board the onward train.\n"
 	.string "Fields pass beyond the window.\p"
 	.string "At ROUEN, a guide leads you into\n"
-	.string "a quiet reception courtyard.$"
+	.string "a quiet reception courtyard.\p"
+	.string "LEON waits northwest of south guide.\n"
+	.string "Speak to him to record your arrival.$"
 EuropeRouen_Text_Return::
 	.string "I can take you back to AMIENS.\n"
 	.string "NORA's care corner is still open.\p"
@@ -71,7 +73,9 @@ EuropeRouen_Text_Welcomed::
 	.string "LEON: Your arrival is recorded.\n"
 	.string "The south guide returns to AMIENS.\p"
 	.string "Your green companion is waiting\n"
-	.string "beside the path where you arrived.$"
+	.string "beside the path where you arrived.\p"
+	.string "Speak to me again if you can help.\n"
+	.string "Our route book is still missing.$"
 EuropeRouen_Text_Notice::
 	.string "ROUEN RECEPTION - 1940\p"
 	.string "Report to LEON on the west path.\n"

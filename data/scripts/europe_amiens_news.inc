@@ -38,7 +38,9 @@ EuropeAmiensNews_Text_Offer::
 	.string "and check it with me first?$"
 EuropeAmiensNews_Text_Reminder::
 	.string "Read the northeast noticeboard.\n"
-	.string "Bring the exact instructions here.$"
+	.string "Bring the exact instructions here.\p"
+	.string "The board stands by northeast trees.\n"
+	.string "Return to me on the east side.$"
 EuropeAmiensNews_Text_Decline::
 	.string "All right. I will be here\n"
 	.string "when you are ready.$"
@@ -59,7 +61,9 @@ EuropeAmiensNews_Text_Check::
 	.string "together here until they are called.$"
 EuropeAmiensNews_Text_Checked::
 	.string "Take the checked news to NORA\n"
-	.string "beside the west courtyard path.$"
+	.string "beside the west courtyard path.\p"
+	.string "NORA waits northwest of south guide.\n"
+	.string "Tell her the checked instructions.$"
 EuropeAmiensNews_Text_Deliver::
 	.string "NORA: Thank you for checking.\n"
 	.string "I will keep the groups together.\p"

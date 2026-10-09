@@ -29,7 +29,9 @@ EuropeSouthAccount_Text_Archived::
 	.string "ADA: The SOUTHAMPTON account\n"
 	.string "is recorded. Thank you.\p"
 	.string "CELEBI can take you back directly.\n"
-	.string "The reception's care remains open.$"
+	.string "The reception's care remains open.\p"
+	.string "In the forest, speak to CELEBI.\n"
+	.string "Choose SOUTHAMPTON to return there.$"
 EuropeSouthAccount_Text_Later::
 	.string "ADA: Of course. Come back when\n"
 	.string "you are ready to tell the story.$"

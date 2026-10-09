@@ -129,7 +129,9 @@ EuropeGarden_Text_Found::
 	.string "It settles on your shoulder.$"
 EuropeGarden_Text_Carry::
 	.string "Bring PIDGEY back to LUC\n"
-	.string "on the west side of the garden.$"
+	.string "on the west side of the garden.\p"
+	.string "LUC waits northwest of south guide.\n"
+	.string "Speak to him with PIDGEY beside you.$"
 EuropeGarden_Text_Reunite::
 	.string "LUC: There you are!\n"
 	.string "PIDGEY flutters down beside him.\p"
@@ -139,7 +141,11 @@ EuropeGarden_Text_LucDone::
 	.string "LUC: We'll stay near reception.\n"
 	.string "It feels better to wait together.\p"
 	.string "The CHANTILLY dispatcher knows\n"
-	.string "about an onward train to AMIENS.$"
+	.string "about an onward train to AMIENS.\p"
+	.string "South guide: return to reception.\n"
+	.string "Take its south service to the post.\p"
+	.string "Dispatcher: east of return guide.\n"
+	.string "Ask about the AMIENS train.$"
 EuropeGarden_Text_PidgeyHome::
 	.string "PIDGEY chirps along with LUC's tune.\n"
 	.string "It looks calm beside its friend.$"

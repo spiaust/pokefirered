@@ -29,7 +29,9 @@ EuropePortAccount_Text_Archived::
 	.string "ADA: The port account is recorded.\n"
 	.string "Thank you for sharing what you saw.\p"
 	.string "CELEBI now offers a direct port visit.\n"
-	.string "The dockworker's care remains open.$"
+	.string "The dockworker's care remains open.\p"
+	.string "In the forest, speak to CELEBI.\n"
+	.string "Choose LE HAVRE to revisit the port.$"
 EuropePortAccount_Text_Later::
 	.string "ADA: Of course. Come back when\n"
 	.string "you are ready to tell the story.$"

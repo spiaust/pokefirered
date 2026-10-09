@@ -113,7 +113,11 @@ EuropeFrance_Text_Accepted::
 	.string "One is in FRENCH GARDENS. The other\n"
 	.string "is in CHANTILLY FOREST's clearing.\p"
 	.string "Then meet REMY in CHANTILLY's square.\n"
-	.string "Bring his reviewed report to me.$"
+	.string "Bring his reviewed report to me.\p"
+	.string "FRENCH GARDENS: leave PARIS north.\n"
+	.string "Study marker: west of the main path.\p"
+	.string "CHANTILLY FOREST: south of town.\n"
+	.string "Its study marker is west of the path.$"
 EuropeFrance_Text_FirstBadge::
 	.string "I'm CELINE. I study the gardens\n"
 	.string "and forests of FRANCE.\p"
@@ -155,7 +159,11 @@ EuropeFrance_Text_Review::
 	.string "report is ready for CELINE.$"
 EuropeFrance_Text_ReturnReport::
 	.string "Take the reviewed report to CELINE\n"
-	.string "in PARIS. Walk south or use the train.$"
+	.string "in PARIS. Walk south or use the train.\p"
+	.string "Station: east side of town square.\n"
+	.string "Take a train to PARIS.\p"
+	.string "CELINE: west of the PARIS guide.\n"
+	.string "Your reviewed report is ready.$"
 EuropeFrance_Text_Reward::
 	.string "CELINE: REMY's report is excellent!\n"
 	.string "Thank you for visiting both sites.\p"
@@ -173,7 +181,11 @@ EuropeFrance_Text_BagFull::
 	.string "Your survey is complete, but your\n"
 	.string "BAG's ITEMS pocket is full.\p"
 	.string "Make room and return to CELINE.\n"
-	.string "Your MIRACLE SEED will be waiting!$"
+	.string "Your MIRACLE SEED will be waiting!\p"
+	.string "Open BAG, then the ITEMS pocket.\n"
+	.string "Use, give or toss an unneeded item.\p"
+	.string "Return here after making room.\n"
+	.string "Your report and reward stay safe!$"
 EuropeFrance_Text_Gardens::
 	.string "FRENCH GARDENS STUDY MARKER\p"
 	.string "Light reaches the low plants here.\n"

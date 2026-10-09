@@ -70,7 +70,9 @@ EuropeAmiens_Text_Journey::
 	.string "The train carries you to AMIENS.\n"
 	.string "You step into a reception courtyard.\p"
 	.string "Travelers wait beside a noticeboard.\n"
-	.string "A volunteer waves you over.$"
+	.string "A volunteer waves you over.\p"
+	.string "NORA waits northwest of south guide.\n"
+	.string "Speak to her before reading the board.$"
 EuropeAmiens_Text_Stay::
 	.string "You stay where you are.\n"
 	.string "Ask again when you are ready.$"
@@ -99,7 +101,9 @@ EuropeAmiens_Text_Notice::
 	.string "Ask before leaving to search alone.$"
 EuropeAmiens_Text_Noted::
 	.string "You copy the meeting instructions.\n"
-	.string "Return to NORA to confirm them.$"
+	.string "Return to NORA to confirm them.\p"
+	.string "NORA waits by the west path.\n"
+	.string "Speak to her to check your notes.$"
 EuropeAmiens_Text_Confirm::
 	.string "NORA: That's right. Wait together,\n"
 	.string "and tell me if someone is missing.\p"

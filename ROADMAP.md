@@ -3,6 +3,266 @@
 The project grows in playable releases. Build and test each gameplay change
 before adding the next; preserve the previous ROM in `artifacts/releases`.
 
+## London architecture: next facade scope and baseline
+
+Next architecture pass scoped to the western London neighborhood home. data/geography/LONDON-FACADE-NEXT.md specifies the exact wall footprint, preserved doorway and paths, append-only asset pipeline, tile/palette limits, old-save compatibility and native runtime acceptance. Two current facade baseline checks pass. Artwork has not changed; playable ROM remains v1.71. Next: implement the western-wall asset mapping, inspect the in-game result and complete compatibility checks before packaging a new version.
+
+## v1.71: player-save compatibility and current limitations
+
+Current player save verified on v1.71: Austin, Chikorita level10, money3176 and original Paris location load through native Continue. Party/Bag and normal save/cold Continue work on a separate copy. Four original saves and ROM remain unchanged. Corrected superseded release limitations in EUROPE.md: historical journey, three Gyms, animated Celebi title, custom music and Lapras rentals are complete; shared art, geographic detail, moving train animation, preset avatars and generic Surf graphics remain prototype limitations. Next: assess town geography and landmark architecture priorities from existing map plans before implementing the next game improvement.
+
+## v1.71: completed map and journal navigation verification
+
+Completed-save map and journal review finished on v1.71. All six modern towns and four historical locations retain correct map location/era, all twenty historical records, completed tour checklist, read-only journal controls, registered Town Map exits and saved location. Native return to Ada preserves the cumulative journey. Next: review current player-save compatibility again against v1.71 and document any remaining release limitations.
+
+## v1.71: completed station shops and clinics verification
+
+Completed-save station shop and clinic review finished on v1.71. All six town stations support purchase cancellation, exact two-Poke-Ball/one-Potion transactions, saved purchases and normal exits. All six clinics support indoor Continue, free care, saved healing and normal town return without resetting historical/case/stamp progress. Next: review optional journal navigation and saved map behavior across present-day and historical destinations.
+
+## v1.71: completed Bicycle and visitor interiors verification
+
+Completed-save Bicycle and visitor interiors review finished on v1.71. Native Bicycle mount/movement/saved riding/dismount and ten capital visitor interiors preserve the completed historical journey, landmark cases, stamps and rewards. Each home/gallery/reading/garden room supports No/B entry cancellation, normal readings, interior cold Continue, both front exit tiles and re-entry. Next: review remaining post-ending shops and clinic interactions using the cumulative journey.
+
+## v1.71: completed stamp tour and transport verification
+
+Optional stamp-tour and post-ending transport compatibility complete on v1.71. The genuine all-cases-complete journey collects all three stamps and exactly one Exp. Share, then completes both Channel crossings, London/Oxford riverboat trips and both Lapras rentals. Saved water travel, mounted boarding, cancellations, map locations and repeatable Ada ending retain completed progress. Next: review remaining optional visitor-room and Bicycle interactions against this cumulative saved journey.
+
+## v1.71: cumulative ending and walkthrough recovery verification
+
+Cumulative v1.71 ending and optional-case verification complete. Ten fresh runtime checks cover genuine final Ada report/twenty journal records/post-ending travel and all three landmark investigations/both clue orders/one-time rewards/shared synthesis on the updated ROM. Walkthrough now documents exact reward pockets, capped-stack room, Toss cancellation and saved recovery, with current focused evidence clearly separated from full v1.15 playthrough evidence. Next: review optional stamp-tour completion and post-ending transport compatibility.
+
+## v1.71: Landmark reward pocket recovery and Gastly choices
+
+Landmark reward-capacity recovery and optional Gastly choice review complete. Nineteen fresh checks cover exact text scope/font, two Items full/capped boundaries each, capped Great Ball stack with three-item room, saved native Toss/reward recovery and optional Gastly declines/actual encounter/ordinary escape. Next: review cumulative optional-case ending and walkthrough coverage on the updated ROM.
+
+## v1.70: optional landmark completion and ending verification
+
+Optional landmark completion review complete on unchanged v1.70. Seven fresh runtime checks complete Notre-Dame, Westminster and Reichstag on one genuine post-ending journey, verifying both clue orders, saved evidence, optional resolution, one-time rewards, field-notes ledger, shared synthesis at Ada and the final twenty historical journal records. Existing investigation directions remain suitable. Next: review landmark reward-capacity recovery and optional Gastly encounter choices.
+
+## v1.70: final journey ending and player-save verification
+
+Final Oxford report and post-ending verification complete on unchanged v1.70. Three fresh runtime checks cover the genuine current London journey returning to Ada, five conclusion pages, twenty historical journal milestones and saved repeat/post-ending travel. The original player save also passes current-ROM native Continue, Party, Bag and native save/cold Continue on a copy. Next: review optional landmark investigations and their final journal integration.
+
+## v1.70: Historical London arrival and report return directions
+
+Historical London arrival and final-report return directions complete. Five fresh checks cover exact text scope/font, luggage prerequisite, optional boarding, saved arrival and actual Southampton round trip, real Rose registration, six completed reminder pages and saved repeated talks. Next: verify the final Oxford report and ending from the genuine saved London journey. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.69: Southampton account and direct-return directions
+
+Southampton account and direct-return directions complete. Five fresh checks cover exact text scope/font, native luggage hand-in and Oxford journey, Le Havre-before-Southampton report order, optional reports, saved accounts, all three destination choices and cancellations, and saved direct Southampton care. Next: review the historical London onward journey directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.68: Port account and direct Le Havre return directions
+
+Historical port account and direct Le Havre return directions complete. Five fresh checks cover exact text scope/font, native captain confirmation and Oxford report journey, optional archive, saved account, destination menu cancellations, refuge/direct port travel and saved free care. Next: review Southampton account and direct-return directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.67: Southampton luggage recovery directions
+
+Southampton luggage recovery directions complete. Five fresh checks cover exact text scope/font, absent luggage before request, optional search, saved acceptance and pickup, native hand-in, optional and actual free care and an actual saved Le Havre round trip. Next: review the historical port account and direct-return directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.66: Southampton crossing and arrival directions
+
+Southampton crossing and arrival directions complete. Five fresh checks cover exact text scope/font, dock-confirmation prerequisite, optional crossing, saved arrival, host welcome/early luggage gate, optional search and return choices, and an actual saved Le Havre round trip. Next: review the Southampton luggage recovery directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.65: Le Havre dock-notice directions
+
+Le Havre dock-notice directions complete. Five fresh checks cover exact text scope/font, early notice/captain gates, optional request, saved acceptance and reading, real confirmation, optional and actual free care and an actual saved Rouen round trip. Next: review the Southampton onward journey directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.64: Le Havre departure and arrival directions
+
+Le Havre departure and arrival directions complete. Five fresh checks cover exact text scope/font, route-book prerequisite, optional boarding, saved arrival, captain welcome/early worker gate, optional dock request and return choices, and an actual saved Rouen round trip. Next: review the Le Havre dock-notice directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.63: Rouen route-book recovery directions
+
+Rouen route-book recovery directions complete. Five fresh checks cover exact text scope/font, optional request and saved acceptance, actual crossing and pickup, saved removed object, real return to Leon, optional and actual free care, saved completion and an actual Amiens round trip. Next: review the Le Havre onward journey directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.62: Rouen onward journey and arrival directions
+
+Rouen onward journey and arrival directions complete. Five fresh checks cover exact text scope/font, bulletin delivery prerequisite, departure notice and optional boarding, saved arrival and actual return trip, first Leon welcome and optional route-book declines. Next: review the Rouen route-book recovery directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.61: Amiens bulletin and checked-news directions
+
+Active Amiens bulletin and checked-news delivery directions complete. Five fresh checks cover exact text scope/font, real board reading, early Nora gates, saved porter verification, native delivery, optional return choices and an actual saved station round trip. Next: review the Rouen onward journey directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.60: Amiens reunion account and news unlock
+
+Amiens reunion account return and bulletin-unlock directions complete. Five fresh checks cover exact text scope/font, native return to Ada, optional archive and saved acceptance, actual trip back to Amiens and bulletin prerequisite/acceptance. Next: review the active Amiens bulletin and checked-news delivery directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.59: Amiens Meowth reunion directions
+
+Amiens Meowth reunion directions complete. Five fresh checks cover exact text scope/font, optional acceptance, both real witness orders with saved intermediate stages, native verification, reunion and persistent relocated Meowth. Next: review the Amiens news delivery directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.58: Amiens arrival and meeting directions
+
+Amiens arrival and meeting-note return directions complete. Five fresh checks cover exact text scope/font, native boarding and saved arrival, early-notice gate, actual welcome/notice/confirmation and optional return choices with a saved round trip. Next: review the Amiens Meowth reunion directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.57: Garden reunion and onward directions
+
+Garden Pidgey return and onward Amiens directions complete. Six fresh checks cover exact text scope/font, optional garden/search choices, saved found/reunited bird states, six carry/onward instruction pages, normal route to dispatcher and optional Amiens declines. Next: review the Amiens arrival and meeting-news directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.56: Beauvais relief directions
+
+Beauvais relief collection and delivery directions complete. Five fresh checks cover exact text scope/font, optional acceptance and saved request, actual dispatcher parcel collection and saved carrying state, then native boarding/host delivery and optional repeatable free rest with saved full HP/PP. Next: review the Elise garden task unlocked by the relief delivery. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.55: Pending Luxury Ball guidance
+
+Pending Luxury Ball recovery directions complete. Five fresh checks cover exact text scope/font, capped-stack pending message/repeats/cold Continue, native Toss cancellation/confirmation and saved room, then one-time account reward claim. Next: review the Beauvais host's next optional relief task. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.54: Elise message and reply directions
+
+Beauvais message/reply/account directions complete. Six fresh checks cover exact text/pronoun scope and font, native optional acceptance, delivery and saved reply, actual return to Elise and saved account, then Ada's one-time Luxury Ball. Next: review the pending Luxury Ball reward and onward Beauvais host task. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.53: Beauvais boarding directions
+
+Confirmed-news transition to Beauvais complete. Five fresh checks cover exact text scope/font, four completed-report pages, saved boarding readiness and No/B choices, actual train/check-in, optional Elise follow-up and native return service/refuge/Celebi journey home. Next: review Elise's optional message and reply directions from Beauvais. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.52: Departure-news directions
+
+Departure-news verification and report-return directions complete. Five fresh checks cover exact text scope/font, actual notice and dispatcher gates, saved notes and confirmation reminders, optional guide declines, and native return/report completion. Next: review the transition from confirmed refuge news to the Beauvais journey. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.51: Refuge task reminders
+
+First-refuge task reminders complete. Five fresh checks cover exact text scope/font, welcome/request/carry instruction pages, stage-specific repeats and cold Continue, native blanket delivery and Celebi return. Next: review the refuge's station-post guide and departure-news task directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.50: Ada onward-refuge directions
+
+Ada onward-refuge directions complete. Six fresh checks cover exact text scope/font, six Ada instruction pages, saved optional departure, actual refuge arrival and return choices, genuine child/keeper help and safe return to Ada. Next: review refuge task reminders and onward chapter directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.49: Ada pending report reward guidance
+
+Ada pending vision-report reward Bag guidance complete. Eight fresh checks cover exact text scope/font, full-pocket and capped-stack pending reminders and saved reloads, native Toss cancellation/confirmation, saved room, and one-time reward claims. Next: review onward directions from Ada to the historical refuge chapter. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.48: Celebi report-return directions
+
+Celebi vision report-return guidance complete. Five fresh checks cover exact text scope/font, first and repeated message pages, saved report readiness, actual walking/train hand-in with one Candy, and completed forest revisits with optional time-travel declines. Next: review Ada's pending report reward and Bag-room recovery guidance. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.47: Third-Gym lead to Ada
+
+Third-Gym transition to Ada complete. Six fresh checks cover exact text scope/font, seven completed-Gym pages, normal train route to the named researcher, optional offer/sighting declines, actual chapter acceptance and Celebi vision, and one-time report Candy across saved reloads. Next: review the Celebi report-return and pending-reward guidance. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.46: all three Gym defeat and retry verification
+
+Current-ROM Gym recovery review complete. Nine fresh runtime checks cover genuine defeat, free local clinic recovery, saved optional retries and actual retry victories with one-time badge/TM rewards in Oxford, Chantilly and Oranienburg. Existing preparation and onward directions remain suitable; v1.46 stays current. Next: continue checking chapter transitions and optional completion paths.
+
+## v1.46: genuine rival defeat and retry verification
+
+Oxford rival defeat recovery verified with four fresh checks: real loss and local recovery, saved optional retry, real retry victory, then one-time report hand-in. No ROM change was needed; v1.46 remains current. Next: continue reviewing progression and recovery guidance across the other chapters.
+
+## v1.46: Oxford rival preparation
+
+Oxford rival preparation directions complete. Five fresh checks cover exact text scope/font, the three-page offer and decline messages, native No/B with saved journal state, normal free-clinic round trip, and actual Yes starting the correct rival team. Next: review remaining chapter navigation and recovery guidance. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.45: England active-study reminders
+
+England active-study and missing-match reminder directions complete. Eight fresh checks cover exact text scope/font, aide/missing-Oliver/missing-Alice reminder pages, saved journals and normal walking routes to each required trainer with optional declines. Next: review the rival-ready battle offer and clinic preparation directions. Walkthrough, custom town music and animated splash remain complete and included.
+
+## v1.44: England accepted-study directions
+
+England accepted-study route guidance complete. Six fresh checks cover text scope/font, native acceptance/declines, six accepted-message pages, saved active-study journal, walking to both named trainers and the gated rival. Next: review England's active-study and missing-Alice reminders. Walkthrough, custom town music and animated splash remain complete and included.
+
+## v1.43: England report-return directions
+
+England report-return directions complete. Six fresh checks cover text scope/font, repeat and saved reminders, the locked Gym, train and walking hand-ins, one-time Bell rewards and optional unlocked Gym declines. Next: review England's accepted-study and missing-match directions. Walkthrough, town music and animated splash remain complete and included.
+
+## v1.42: country item reward Bag recovery complete
+
+Twenty fresh checks cover exact text scope/font, six pending-message and
+cold Continue cases, six native Bag Toss cancellation/confirmation and
+saved-room cases, then six one-time claims/repeats/cold Continue cases.
+All three report rewards are covered with full pockets and capped stacks.
+Next: review the England study's report-return directions and confirm its
+completed reminders lead clearly to Oxford Gym. Walkthrough, custom music
+and animated splash remain complete and included.
+
+## v1.41 completed country-to-Gym guidance review complete
+
+Eight fresh runtime checks cover completed reminders from Celine, Remy,
+Lena and Karl, correct journal objectives, normal travel to their unlocked
+Gyms, and safe B/No declines across cold Continue. Earned quest rewards
+remain intact and no unearned battle, badge or TM occurs. No fix was needed;
+v1.41 remains current. Next: review country item reward capacity recovery
+after earned reports, including native Bag room-making and saved claims.
+
+## v1.41: reviewed-report return guidance complete
+
+Eight fresh checks cover exact text scope/font, earned report reminders
+and journal with repeat/cold Continue, actual capital hand-ins by train,
+one-time rewards and saved completion, then return visits to the original
+report contacts without duplicate rewards. Next: review completed-quest
+directions to the unlocked Gyms and pending item reward recovery.
+Walkthrough, custom music and animated splash remain complete and included.
+
+## v1.40 saved partial-quest reminder review complete
+
+Six fresh runtime checks cover Celine and Remy after each possible first
+survey observation, Lena with the packed parcel, and Karl with the completed
+delivery. Repeats, cold Continue and read-only journals retain the correct
+next objective without premature rewards. No fix was needed; v1.40 remains
+current. Next: review reviewed-report and completed-quest reminders, including
+directions to the unlocked Gyms and pending item rewards.
+
+## v1.40: accepted country quest route guidance complete
+
+Ten fresh checks cover exact text scope/font, normal acceptance and saved
+journal leads, both French survey orders with real marker visits/review/
+hand-in, and normal German train delivery plus southward walking report
+return. Next: review contact reminders after the first survey observation
+or delivery so players can recover their next step after a break.
+Walkthrough, custom music and animated splash remain complete and included.
+
+## v1.39 post-Gym regional journal review complete
+
+Fifteen fresh runtime checks cover claimed and pending TM journal priorities,
+earned stamp/badge checklists, read-only topic switching, cold Continue,
+normal next-country task acceptance and optional London stamp collection.
+The existing journal agrees with the leaders; no fix was needed and v1.39
+remains current. Next: review accepted country quest guidance and routes to
+the actual survey markers or courier destination.
+
+## v1.39: completed Gym onward directions complete
+
+Eleven fresh checks cover exact text scope/font, completed leader messages
+and repeats/cold Continue, next-country contact routes and task cancellation,
+unlocked free riverboat round trip, then return journeys and another leader
+cold Continue. Next: review regional journal hints after Gym completion so
+the menu and spoken directions agree. Walkthrough, music and splash remain
+complete and included.
+
+## v1.38: pending Gym TM guidance complete
+
+Fourteen fresh checks cover exact text scope/font, pending messages and
+cold Continue at all three Gyms under both capacity modes, native TM Give
+cancellation/confirmation and saved room, then one-time waiting reward
+claims with repeat/cold Continue. Next: review completed Gym reward messages
+for useful directions to the next country or newly unlocked transport.
+Walkthrough, custom town music and animated splash remain complete.
+
+## v1.37 Rock Tomb and Water Pulse battle review complete
+
+Six fresh runtime checks cover taught moves in real wild battles, spent PP
+and consumed-TM persistence through cold Continue, then free London clinic
+HP/PP restoration and another cold Continue. Both moves work on the genuine
+Marshtomp teaching batteries. No game fix was needed; v1.37 remains current.
+Next: resume progression improvements by reviewing Gym reward collection
+and practical guidance when the TM reward is pending.
+
+## v1.37 Shock Wave teaching and battle review complete
+
+Four fresh runtime checks cover naturally catching Mareep on the London
+countryside route, canceling compatible selection, teaching the earned
+Shock Wave TM into an empty move slot, and using it in a real wild battle.
+Teaching and battle PP persist through cold Continue. No game fix was
+needed; v1.37 remains current. Next: check battle use of the previously
+taught Rock Tomb and Water Pulse moves.
+
+## v1.37 Gym TM teaching review complete
+
+Nine new runtime checks cover three incompatible Bulbasaur attempts and
+cold Continue, native party/replacement cancellation for Rock Tomb and
+Water Pulse, normal teaching to Marshtomp with exactly one TM consumed,
+and persistence of learned moves/PP after saving and cold Continue.
+No game fix was needed; v1.37 remains current. Next: earn a compatible
+team normally and check Shock Wave teaching and battle use of taught moves.
+
 ## v1.37: completed regional challenge travel help complete
 
 Eleven fresh checks cover exact text scope/font, completed-guide repeats and

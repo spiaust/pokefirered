@@ -147,19 +147,25 @@ EuropeTime_Text_Child::
 	.string "I promised we would stay together.$"
 EuropeTime_Text_AskKeeper::
 	.string "Could you ask the refuge keeper\n"
-	.string "beside me for something warm?$"
+	.string "beside me for something warm?\p"
+	.string "The keeper stands just west of me.\n"
+	.string "Please speak to her about EEVEE.$"
 EuropeTime_Text_Welcome::
 	.string "This courtyard is a station refuge.\n"
 	.string "Families and POKEMON wait here.\p"
 	.string "The little girl beside me seems\n"
-	.string "worried. Please speak with her.$"
+	.string "worried. Please speak with her.\p"
+	.string "ELISE waits just east of me.\n"
+	.string "Speak to her about her EEVEE.$"
 EuropeTime_Text_Blanket::
 	.string "A blanket for EEVEE? Of course.\n"
 	.string "Take this one to ELISE.\p"
 	.string "You fold the blanket into your arms.$"
 EuropeTime_Text_Carry::
 	.string "ELISE is beside me. Please take\n"
-	.string "the blanket to her and EEVEE.$"
+	.string "the blanket to her and EEVEE.\p"
+	.string "I have given you EEVEE's blanket.\n"
+	.string "Please bring it to ELISE, east of me.$"
 EuropeTime_Text_Deliver::
 	.string "ELISE wraps EEVEE in the blanket.\n"
 	.string "It snuggles close and settles down.$"

@@ -422,7 +422,11 @@ EuropeCase_Reichstag_OpenText::
 EuropeCase_FullText::
 	.string "Your case is resolved. Make room\n"
 	.string "in the BAG for your reward, then\p"
-	.string "speak to me again.$"
+	.string "speak to me again.\p"
+	.string "Open ITEMS for SPELL TAG or CANDY.\n"
+	.string "Use, give or toss an unneeded item.\p"
+	.string "For GREAT BALLS, open POKE BALLS.\n"
+	.string "Make room for three, then return.$"
 EuropeCase_NeedCluesText::
 	.string "Speak to the curator near the\n"
 	.string "entrance, then read both records\p"

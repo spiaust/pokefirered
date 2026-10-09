@@ -1,5 +1,416 @@
 # Prototype verification — 2026-09-18
 
+## London architecture: next facade scope and baseline
+
+Two fresh baseline PASS results from test_london_facade_static.py confirm the current eastern roof remap retains every tile attribute/native artwork and shared palettes, with distinct roof shades and transparency. This is pre-change baseline evidence for the planned western-home facade, not verification of new artwork. Four original player saves and the canonical v1.71 ROM remain unchanged.
+
+## v1.71: player-save compatibility and current limitations
+
+Current v1.71 player-save compatibility revalidated with test_current_user_save.py. Original 131088-byte battery copied into test-output only; native Continue loads Austin in Paris at (43,4,10,42), Chikorita species152 level10 and money3176. Party and Bag menus preserve state; normal Save and cold Continue retain exact party, inventory, money and location on the isolated copy. Original SHA256 remains 6d5d0a61107e998cc71da49570f3db09de562dc00822a16d2155e092ef76a674. All four protected original saves and all current ROM copies retain their hashes. This confirms emulator-core compatibility and normal save pairing; it does not claim a desktop emulator is currently running. Documentation limitations reconciled with completed releases; no gameplay changes or rebuild.
+
+## v1.71: completed map and journal navigation verification
+
+21 fresh runtime PASS results in test_current_navigation.py. Genuine current-services-complete travels normally through all six modern towns, then Celebi refuge, Le Havre, Southampton and London 1940. Ten sites check current map selection and era, map selection after eight LEFT/RIGHT inputs, complete historical lead58/mask1048575, both history pages, completed tour lead24/checklist, topic switching/reset and read-only exits. Registered SELECT shortcut opens the map and exits journal records with both B and START while restoring field controls. Native saves/cold Continue retain exact party, inventory, money, variables 40C0..40FF and location at each site; modern site checks explicitly retain registered item361, and historical shortcut behavior is exercised after preceding reloads. Final native historical return, saved Ada ending and complete cumulative state remain intact. No memory writes, inventory edits, progression injection or emulator state loads. ROM, symbols and four original player saves remain unchanged. Full fresh-game walkthrough evidence remains v1.15.
+
+## v1.71: completed station shops and clinics verification
+
+19 fresh runtime PASS results in test_current_services.py. The genuine current-interiors-complete journey travels normally through London, Paris, Berlin, Oxford, Chantilly and Oranienburg. Each station verifies purchase-confirmation B leaves exact saved state unchanged; two Poke Balls cost 400 and one Potion costs 300, with exact inventory deltas and unchanged party and variables 40C0..40FF. Each shop purchase saves/cold Continues indoors and exits to the correct town. Each clinic saves/cold Continues indoors, provides free full-HP/status care while retaining party identity, money, inventory and completed progress, saves/cold Continues after healing and exits correctly. Final native rail return to Oxford, saved Continue and repeated Ada conclusion retain the cumulative purchases and completed activities. No memory writes, inventory edits, progression injections or emulator state loads. This checks native care on the genuine current party; it does not inject damage/status or claim a new battle-recovery test. ROM, symbols and four original player saves remain unchanged. Full fresh-game walkthrough evidence remains v1.15.
+
+## v1.71: completed Bicycle and visitor interiors verification
+
+35 fresh runtime PASS results: Bicycle 3, capital homes 10 and remaining visitor interiors 22. Genuine current-lapras-complete continues through current-bicycle-complete, current-rooms-complete and current-interiors-complete, with native controls and battery cold Continue only. Bicycle riding persists after saving; normal Key Items use dismounts and saves walking correctly. Three capital homes and seven reading/garden/landmark visitor rooms retain exact saved location, party, inventory and all variables 40C0..40FF. Entry No/B, host/notebook/display readings, both front exit tiles and re-entry are checked. Each suite returns normally to Oxford and repeats Ada conclusion without changing completed progress. Stationary checks compare exact party; walking may legitimately change friendship. No memory writes, progress injections, inventory edits or emulator state loads. ROM, symbols and four original player saves remain unchanged. Full fresh-game walkthrough evidence remains v1.15.
+
+## v1.71: completed stamp tour and transport verification
+
+32 fresh runtime PASS results: stamps 9, coast 9, riverboat 6, Lapras 8. Native controls continue current-landmarks-all-complete through current-stamps-complete, current-coast-complete, current-riverboat-complete and current-lapras-complete without state loads, memory writes, inventory edits or progression injections. All three city stamps save/cold Continue; the third grants one Exp. Share and repeats grant none. Journal tour checklist is read-only. Both coach/Channel-ferry directions retain progress and report correct port maps; both London/Oxford riverboat directions retain exact state and permit mounted boarding. Both Lapras rentals preserve party identity, remain surfing after cold Continue, allow steering/shore dismount/repeated rental and handle Bicycle boarding. Every transport suite verifies all variables 40C0..40FF after final native save/cold Continue and repeat Ada ending; stamps guard every variable except the four intentionally advanced stamp/reward variables. Walking may legitimately change friendship; stationary checks compare exact party bytes. Four original player saves, ROM and symbols are unchanged. Full fresh-game walkthrough evidence remains v1.15.
+
+## v1.71: cumulative ending and walkthrough recovery verification
+
+Ten fresh runtime PASS results rerun test_current_journey_ending.py (three) and test_current_landmark_completion.py (seven) on unchanged v1.71. Genuine saved final journey reaches Ada through native travel, retains all twenty historical journal milestones (mask1048575), and remains playable through direct Southampton and historical London revisits/free care/cold Continue. The same cumulative player then completes all three optional cases with native rail travel, both clue orders, No/B, exact one-time Spell Tag/Rare Candy/three Great Balls rewards, repeated ledger/curator and saved state. Shared synthesis appears at curator/ledger/Ada without resetting completed historical progress. No memory writes, inventory edits, party substitutions or progress injections occur in these cumulative suites. Walkthrough reward-recovery section is based on separately archived v1.71 boundary-fixture native Bag tests; full New Game evidence remains v1.15. Current ending/synthesis screenshots visually inspected. ROM, symbols, four user saves and all previously archived release evidence remain unchanged.
+
+## v1.71: Landmark reward pocket recovery and Gastly choices
+
+Nineteen fresh PASS results: exact shared pending-reward text addition/native font width (two), fifteen native recovery checks across five boundaries (Notre-Dame and Westminster Items full and reward stack999, Reichstag Great Ball stack999 requiring three spaces), and two native optional Gastly checks (No/B/cold Continue and actual level12 encounter/ordinary Run/saved repeat). Separate fixture generator explicitly edits only the named pocket on genuinely resolved current-landmarks case batteries, preserving all other pockets, party, money and progression. Five fixtures are labelled FIXTURE rather than PASS; no earned stages are injected. Runtime capacity and Gastly scripts perform no memory writes. Each capacity case checks four help pages, unchanged pending reward/repeats/cold Continue, native Toss B cancellation, exact removal of one or three, saved room and actual one-time reward without duplication. Great Ball test covers stack capacity; no full unique-ball pocket is claimed. Gastly is encountered and escaped normally; no capture is claimed. New help and battle screens visually inspected. Full historical ending evidence remains v1.15; fresh cumulative ending/landmark evidence remains v1.70, and music/splash evidence remains v1.25. All four user saves and archived v1.70 ROM remain unchanged.
+
+## v1.70: optional landmark completion and ending verification
+
+Seven fresh runtime PASS results in test_current_landmark_completion.py use genuine current-ending-revisited battery and native rail travel to all three landmarks. Each case tests entry/request No/B, early attendant gates, both real clue orders (with a saved accepted baseline for the alternative branch), repeated clues and cold Continue. Native peaceful resolution No/B then Yes earns one Spell Tag, one Rare Candy or three Great Balls, with only the expected pocket count change and exact stationary party/money/progress. Saved curator/ledger repetitions and exit/re-entry duplicate no reward. The same final player journey retains all three completed cases, shared synthesis at curator/ledger/Ada and read-only final journal lead 58/mask1048575 with page/topic controls. Native Oxford return and cold Continue preserve all historical variables and the ending. No memory writes, inventory edits, party substitutions or progress injections. Optional cases are recorded in the landmark field-notes ledger; the separate historical journal retains its twenty completed records. This is cumulative post-ending optional-case verification, not a new full New Game run. Synthesis and Ada ending screenshots visually inspected. Current/archived v1.70 ROM, matching symbols and all four user saves remain unchanged.
+
+## v1.70: final journey ending and player-save verification
+
+Three fresh runtime PASS results in test_current_journey_ending.py use genuine v1.70 london-directions-report-ready battery, both port accounts already normally recorded. Actual Celebi return/Chantilly/Oxford travel reaches Ada; five conclusion pages repeat after native Save/cold Continue with exact party/items/money and all variables 40C0..40FF unchanged. Journal lead 58 and all twenty historical milestones (mask 1048575) pass read-only page/topic controls and cold Continue. Native direct Southampton return, free care and historical London revisit remain playable; actual return to Ada and cold Continue preserve the ending. No memory writes, inventory edits, party substitutions or progress injections. This is final-chapter verification from the genuine cumulative journey, not a new full New Game run. Additionally test_current_user_save.py loads a copy of the original player battery on v1.70, verifies native Continue/Party/Bag, saves the copy and cold-continues with exact state; original remains unchanged. Ending and player-save screenshots visually inspected. Current/archived v1.70 ROM, matching symbols and all four user saves remain unchanged.
+
+## v1.70: Historical London arrival and report return directions
+
+Five fresh PASS results: exact London journey/completed reminder additions and native font width (two), actual missing-luggage travel gate and completed luggage boarding No/B/cold Continue (one), three journey pages and actual London arrival/saved state/return No/B and actual Southampton round trip before registration (one), actual Rose welcome/saved registration/six completed reminder pages/exact stationary party-items-money/saved repeated talks (one). Sources are genuine v1.66 south-directions-returned and v1.69 south-account-directions-returned batteries. No memory writes, inventory edits, party substitutions or progress injections. New instruction pages visually inspected. The final Oxford report is the next milestone; no full historical ending rerun is claimed here. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25. All four user saves and archived v1.69 ROM remain unchanged.
+
+## v1.69: Southampton account and direct-return directions
+
+Five fresh PASS results: exact luggage-unlocked/account reminder additions and native font width (two), real luggage hand-in/seven hand-in-care-report pages/native Oxford trip/optional Le Havre report then Southampton No/B/cold Continue (one), native Southampton report/eight record-reminder pages/exact stationary party-items-money/saved repeated archive (one), Celebi initial No/B/menu B-Exit/all three destinations/actual free care/repeated direct Southampton/cold Continue with luggage absent (one). Source is genuine v1.67 luggage-directions-found battery, with neither port account recorded. No memory writes, inventory edits, party substitutions or progress injections. Care validates identity, full HP/status/PP and unchanged inventory/money/progress without tired-party fixtures. New instruction pages visually inspected. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.68 ROM remain unchanged.
+
+## v1.68: Port account and direct Le Havre return directions
+
+Five fresh PASS results: exact dock-unlocked/account reminder additions and native font width (two), real captain confirmation/eight confirmation-care-return pages/native Oxford trip/archive No/B/cold Continue (one), native Ada report/seven record-reminder pages/exact stationary party-items-money/saved repeated archive (one), unlocked Celebi initial No/B/menu B-Exit/refuge/direct Le Havre/actual free care/repeated direct travel/cold Continue (one). Source is genuine v1.65 dock-directions-noted battery, before Southampton/luggage. No memory writes, inventory edits, party substitutions or progress injections. Care validates identity, full HP/status/PP and unchanged inventory/money/progress without tired-party fixtures. New instruction pages visually inspected. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.67 ROM remain unchanged.
+
+## v1.67: Southampton luggage recovery directions
+
+Five fresh PASS results: exact two luggage reminder additions and native font width (two), absent luggage/No/B/actual acceptance/two active pages/cold Continue (one), actual west-quay pickup/three return pages/exact stationary inventory/saved removed object (one), actual worker hand-in, care/return No/B, actual free care and saved repeated care plus Le Havre round trip with luggage absent (one). Source is genuine v1.66 south-directions-returned battery. No memory writes, inventory edits, party substitutions or progress injections. Care validates identity, full HP/status/PP and unchanged inventory/money/progress without tired-party fixtures. New instruction pages visually inspected. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.66 ROM remain unchanged.
+
+## v1.66: Southampton crossing and arrival directions
+
+Five fresh PASS results: exact crossing/welcome additions and native font width (two), actual unconfirmed dock gate and confirmed crossing No/B/cold Continue (one), three crossing pages and actual arrival/saved host prerequisite with early worker and absent bag (one), four host welcome pages and return B, saved welcome, luggage search/return No/B, actual Le Havre round trip and cold Continue without forced luggage acceptance (one). Sources are genuine v1.65 dock-directions-active and dock-directions-rested batteries. No memory writes, inventory edits, party substitutions or progress injections. Exact stationary party/items/money comparisons accompany crossing and welcome. New instruction pages visually inspected. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.65 ROM remain unchanged.
+
+## v1.65: Le Havre dock-notice directions
+
+Five fresh PASS results: exact two dock reminder additions and native font width (two), early notice/No/B/actual request/two active direction pages/cold Continue and early captain gate (one), actual posted-notice reading/six notice-ready pages/repeated worker and notice/cold Continue (one), actual captain confirmation, care/return No/B, actual free care and saved repeated care plus Rouen round trip (one). Source is genuine v1.64 havre-directions-returned battery. No memory writes, inventory edits, party substitutions or progress injections. Exact stationary party/items/money comparisons accompany request and notice; care validates identity, full HP/status/PP and unchanged inventory/money/progress without tired-party fixtures. New instruction pages visually inspected. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.64 ROM remain unchanged.
+
+## v1.64: Le Havre departure and arrival directions
+
+Five fresh PASS results: exact journey/welcome additions and native font width (two), actual unreturned-book travel gate and completed-book boarding No/B/cold Continue (one), three journey pages and actual arrival/saved captain prerequisite with early worker and notice (one), four captain welcome pages and return B, saved welcome, dock request/return No/B, actual Rouen round trip and cold Continue without forced dock acceptance (one). Sources are genuine v1.63 book-directions-active and book-directions-rested batteries. No memory writes, inventory edits, party substitutions or progress injections. Exact stationary party/items/money comparisons accompany journey and welcome. New instruction pages visually inspected. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.63 ROM remain unchanged.
+
+## v1.63: Rouen route-book recovery directions
+
+Five fresh PASS results: exact search/pickup reminder additions and native font width (two), absent book before request, optional No/B, real acceptance/four search pages/cold Continue (one), actual paved crossing/far-bank pickup/three return pages/exact stationary inventory and saved removal (one), native Leon hand-in, rest No/B, actual free care/repeated care after cold Continue, saved completion and actual Amiens round trip with book absent (one). Source is genuine v1.62 rouen-directions-book-offer battery. No memory writes, inventory edits, party substitutions or progress injections; native care checks identity, full health/PP and unchanged inventory/money/progress without tiring-party fixtures. New instruction pages visually inspected. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.62 ROM remain unchanged.
+
+## v1.62: Rouen onward journey and arrival directions
+
+Five fresh PASS results: exact journey/welcomed text additions and native font width (two), real checked-but-undelivered bulletin gate plus delivered departure notice/No/B/cold Continue (one), three journey pages and actual boarding/saved arrival/return No/B and actual Amiens round trip before registration (one), six Leon welcome pages registering arrival and introducing the book, repeated optional search No/B and cold Continue without acceptance (one). Sources are genuine v1.61 news-directions-checked and news-directions-returned batteries. No memory writes, inventory edits, party substitutions or progress injections. Exact stationary party/items/money comparisons accompany journey and welcome. New instruction pages visually inspected. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.61 ROM remain unchanged.
+
+## v1.61: Amiens bulletin and checked-news directions
+
+Five fresh PASS results: exact two reminder-only additions and native font width (two), two active reminder pages/early Nora gate/cold Continue (one), actual notice reading/saved copied instructions/early Nora gate/four verification-reminder pages/saved repeated checked news (one), actual Nora delivery with optional rest and return declines, persistent reunited Meowth, actual station round trip and cold Continue (one). Source is genuine v1.60 account-directions-news-active battery. No memory writes, inventory edits, party substitutions or progress injections. Exact stationary party/items/money comparisons accompany reminder and verification. New instruction pages visually inspected. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.60 ROM remain unchanged.
+
+## v1.60: Amiens reunion account and news unlock
+
+Five fresh PASS results: exact two completion/reminder-only additions and native font width (two), six Mira completion pages and actual Celebi/Chantilly/Oxford journey with archive No/B and cold Continue (one), native Ada acceptance and six record/reminder pages plus repeated saved archive with exact stationary party/items/money (one), actual return to Amiens, persistent relocated Meowth, account prerequisite, porter No/B and actual bulletin acceptance with cold Continue (one). Source is genuine v1.59 reunion-directions-complete-mira battery. No memory writes, inventory edits, party substitutions or progress injections. New instruction pages visually inspected. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.59 ROM remain unchanged.
+
+## v1.59: Amiens Meowth reunion directions
+
+Five fresh PASS results: exact two reminder-only additions and native font width (two), optional reunion No/B, real acceptance/three direction pages and cold Continue (one), Mira-first (one) and porter-first (one) native reports, repeated witnesses, saved intermediate and verified stages, two verified-reminder pages, actual Mira reunion and cold Continue with relocated Meowth. Completed Nora rest is declined. Source is genuine v1.58 amiens-directions-returned battery. No memory writes, inventory edits, party substitutions or progress injections. New instruction pages visually inspected. A too-long line was shortened before building; final static check passes. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.58 ROM remain unchanged.
+
+## v1.58: Amiens arrival and meeting directions
+
+Five fresh PASS results: exact two text-block-only additions and native font width (two), optional boarding plus three arrival pages and saved early-notice gate (one), actual Nora welcome and six meeting-notice pages including return reminder with saved notes (one), actual Nora confirmation and optional return choices, round trip and cold Continue (one). Source is genuine v1.57 garden-directions-amiens-offer battery. No memory writes, inventory edits, party substitutions or progress injections. Original task stages and gates remain intact; repeated completed Nora conversations decline the separate reunion offer. New instruction pages visually inspected. Full historical ending evidence remains v1.15 and music/splash evidence remains v1.25; neither full suite rerun is claimed. All four user saves and archived v1.57 ROM remain unchanged.
+
+## v1.57: Garden reunion and onward directions
+
+Six fresh PASS results: exact garden carry/completed-reminder-only text additions and native font width (two), optional garden/Luc No/B with actual search acceptance/repeats/cold Continue (one), genuine northeast Pidgey interaction/two carry pages/saved carrying state and removed wild object (one), native return to Luc/four onward pages/repeated Luc and home-bird interactions/cold Continue with reunited object present and wild object absent (one), normal garden guide/reception return service to dispatcher and Amiens No/B/cold Continue (one). Source is genuine v1.56 relief-directions-rested battery. No memory writes, inventory edits, party substitutions or progress injections. Garden stages 1, 2 and 3 follow acceptance, actual bird interaction and Luc reunion. Onward journey stays unstarted on declines. An initial driver checked an offscreen bird from the entrance; checks now inspect bird visibility at the tree and beside Luc. Walking comparisons permit native friendship changes while other progression state stays exact; stationary and saved checks remain exact. Final runtime reran from the genuine source. All six instruction pages visually inspected. No full historical ending rerun is claimed; full-story evidence remains v1.15 and music/splash evidence remains v1.25. All four user saves and archived v1.56 ROM remain unchanged.
+
+## v1.56: Beauvais relief directions
+
+Five fresh PASS results: exact two-relief-direction text additions and native font width (two), normal travel back to Beauvais with host No/B/real acceptance and three route pages/repeats/cold Continue (one), actual south return service/dispatcher collection with two boarding-and-host pages/repeats/cold Continue (one), normal board/train/host delivery and care-corner No/B/native Yes/repeated free full-HP/PP rest/cold Continue (one). Source is genuine v1.54 message-directions-claimed battery. No memory writes, inventory edits, health fixtures, party substitutions or progress injections. Relief stage 1 follows acceptance, 2 follows parcel collection, and 3 follows actual host delivery. Native rest preserves non-health identity, money, items, badges and present story state; healed state saves exactly. The parcel is carried through the existing quest stage with no Bag addition or charge. All five instruction pages visually inspected. This suite does not rerun the full historical ending; full-story evidence remains v1.15 and music/splash evidence remains v1.25. All four user saves and archived v1.55 ROM remain unchanged.
+
+## v1.55: Pending Luxury Ball guidance
+
+Five fresh PASS results: exact pending-Luxury-Ball-only text addition and native font width (two), capped-stack four-page reminder/repeats/cold Continue (one), native Poke Balls pocket Toss cancellation/confirmation and saved room (one), actual Ada reward claim/stage completion/repeats/cold Continue (one). Separate fixture generator starts from genuine v1.54 message-directions-account, returns normally through Celebi and the Oxford train, then explicitly edits only 13 Poke Balls slots to Luxury Ball 999 with other ball slots empty. All other pockets, account stage, party, money and badges remain unchanged. This is an isolated inventory boundary fixture, not naturally collecting 999 balls. Runtime recovery performs no memory writes. Native Toss B cancellation preserves the stack; confirming removes one ball, and stage 3 plus space survive saved reload. Actual Ada talk returns the stack to 999 and sets message stage 4; repeats/reloads add no duplicate. Text mentions Give, but this suite exercises Toss. Four message pages visually inspected. No full-pocket or full-ending claim is made. All four user saves and archived v1.54 ROM remain unchanged. Full-story evidence remains v1.15 and music/splash evidence remains v1.25.
+
+## v1.54: Elise message and reply directions
+
+Six fresh PASS results: exact three message-direction additions plus two keeper-pronoun corrections and native font width (two), native Elise No/B/real acceptance with three delivery pages/repeats/cold Continue (one), normal return service/guide and actual keeper delivery with four reply-route pages/repeats/cold Continue (one), normal boarding back to Elise and actual reply handoff with three Ada-return pages/repeats/cold Continue (one), native Celebi return/Oxford train to Ada and one-time Luxury Ball/repeats/cold Continue (one). Source is genuine v1.53 beauvais-directions-checked-in battery. No memory writes, inventory edits, party substitutions or progress injections. Message stages 1, 2, 3 and 4 are earned normally; no early Ball is granted. All ten instruction pages visually inspected. The keeper is an old-woman character and original message dialogue uses she/her; two recently added him instructions were corrected. Current player save remains protected by hash checks; the separate v1.53 validation previously confirmed Austin's level-10 Chikorita save can Continue, use Party/Bag and save/reload a copy. No new full historical ending run is claimed; full-story evidence remains v1.15 and music/splash evidence remains v1.25. All four user saves and archived v1.53 ROM remain unchanged.
+
+## v1.53: Beauvais boarding directions
+
+Five fresh PASS results: exact keeper completed-report-only text addition and native font width (two), four-page keeper boarding lead/repeats/cold Continue (one), normal station guide/boarding board with No/B and saved readiness followed by actual Beauvais arrival, host-gated check-in/repeats/cold Continue and optional Elise follow-up decline (one), normal south-exit train return, refuge guide, Celebi return and saved home state (one). Source is genuine v1.52 departure-directions-reported battery. No memory writes, inventory edits, party substitutions or progress injections. Evacuation stage 0 remains unchanged on declines, actual boarding sets stage 1 and host check-in sets 2. Elise's follow-up stays unaccepted. Refuge help and confirmed news remain complete. Walking comparisons permit native friendship changes; money, inventory, badges and present report state remain exact. All four keeper instruction pages visually inspected. No full historical ending rerun is claimed; full-story evidence remains v1.15 and music/splash evidence remains v1.25. All four user saves and archived v1.52 ROM remain unchanged.
+
+## v1.52: Departure-news directions
+
+Five fresh PASS results: exact two-message-only scope and native font width (two), native guide arrival and dispatcher-before-notice gate followed by actual notice/two new instruction pages/saved notes/repeat reading (one), actual dispatcher confirmation/three reminder pages/repeats/cold Continue and return-guide No/B (one), native guide return and keeper report/repeats/cold Continue (one). Source is the genuine v1.51 refuge-reminder-complete battery. No memory writes, inventory edits, party substitutions or progress injections. Departure stages 1, 2, 3 and 4 are earned by guide travel, reading, verification and delivery. Historical refuge help remains completed. Walking comparisons permit native friendship changes while money, inventory, badges and present report state remain exact; saved and stationary state checks remain exact. All five new instruction pages visually inspected. This suite does not board the Beauvais train or rerun the full ending; full-story evidence remains v1.15 and music/splash evidence remains v1.25. All four user saves and archived v1.51 ROM remain unchanged.
+
+## v1.51: Refuge task reminders
+
+Five fresh PASS results: exact three-reminder-only text additions and native font width (two), three welcome pages and keeper repeats/cold Continue without skipping child request (one), actual Elise/Eevee request with two keeper-direction pages/repeats/cold Continue (one), actual keeper blanket with two delivery-direction pages/saved carrying state, native Elise delivery, repeats/completion cold Continue and Celebi return (one). Uses genuine v1.50 celebi-refuge-arrived battery. No memory writes, inventory edits, party substitutions or progress injections. Past-stage assertions verify 1 before child request, 2 after request, 3 while carrying and 4 after delivery. Money, inventory, badges and report state remain exact throughout. Walking repeat comparisons permit native party friendship changes; stationary dialogue, cold Continue and portal comparisons remain exact. An initial strict walking comparison observed that native change; a separate read-only audit confirmed friendship increased while other growth fields stayed unchanged, and the final suite reran from the genuine source. The blanket is handled by the existing quest stage rather than added to Bag. All seven reminder pages visually inspected. This suite covers first refuge help, not departure news or full ending; full-story evidence remains v1.15 and music/splash evidence remains v1.25. All four user saves and archived v1.50 ROM remain unchanged.
+
+## v1.50: Ada onward-refuge directions
+
+Six fresh PASS results: exact Ada completed-report-only text addition and native font width (two), six-page onward message/repeats/cold Continue (one), normal forest route with No/B departure and cold Continue (one), actual Yes refuge arrival with optional return No/B/cold Continue and keeper-before-child gate (one), normal child/keeper/child completion, saved help, native Celebi return to present and normal return to Ada/repeats/cold Continue (one). Uses the genuine v1.48 celebi-return-claimed battery. No memory writes, inventory edits, party substitutions or progress injections. First native arrival sets past stage 1; child request, keeper blanket and child delivery advance it to 2, 3 and 4. Present-day party, money, inventory, badges and report state remain preserved across portal travel. Ada does not duplicate the vision reward. Six instruction pages visually inspected. This suite covers the first refuge help, not the whole historical ending; full-story evidence remains v1.15 and music/splash evidence remains v1.25. All four user saves and archived v1.49 ROM remain unchanged.
+
+## v1.49: Ada pending report reward guidance
+
+Eight fresh PASS results: exact Ada pending-message-only scope and native font width (two), pending four-page messages/repeats/cold Continue (two), native Bag Toss cancellation/confirmation and saved room (two), actual one-time Candy claims/completion/repeats/cold Continue (two). Separate fixture generation loads the genuine v1.48 celebi-return-ready battery and walks/travels normally to Ada. It then explicitly changes only the 42 Items slots: either 42 distinct valid items excluding Candy, or a 999-Candy stack with other Items slots empty. These are isolated inventory capacity fixtures, not naturally collected inventories; earned vision, party, money and badges are unchanged. Runtime recovery performs no memory writes. Cancelling Toss keeps state intact; confirming removes one Potion from the full pocket or one Candy from the capped stack. Pending stage 2 and room survive native Save/cold Continue. Normal Ada talk adds exactly one Candy and advances to stage 3; repeats/reloads duplicate nothing. Text mentions Use/Give, but this fresh suite exercises Toss. All pending instruction pages visually inspected. All four user saves and archived v1.48 ROM remain unchanged. Full-story evidence remains v1.15 and music/splash evidence remains v1.25.
+
+## v1.48: Celebi report-return directions
+
+Five fresh PASS results: exact first/repeated forest return text additions and native font width (two), genuine vision with three first-return pages and four repeated reminder pages/repeats/cold Continue (one), normal northward forest walk/train route to Ada with one-time Candy/repeats/cold Continue (one), normal completed-story forest revisit and optional time-travel No/B plus cold Continue (one). Uses the genuine gym-ada-forest battery from v1.47. No memory writes, inventory edits, party substitutions or progress injections. Native sighting sets report-ready stage 2 without a battle or early reward; actual Ada hand-in sets stage 3 and adds exactly one Candy. Post-report forest interaction offers optional departure; declines remain in the present and preserve the earned reward. All seven instruction pages visually inspected. This suite does not rerun the historical journey or full ending; full-story evidence remains v1.15 and music/splash evidence remains v1.25. All four user saves and archived v1.47 ROM remain unchanged.
+
+## v1.47: Third-Gym lead to Ada
+
+Six fresh PASS results: exact completed-third-Gym-only text scope and native font width (two), seven-page leader reminder/repeats/cold Continue (one), normal station/train route to Ada east of Oxford guide and No/B offer declines/cold Continue (one), genuine acceptance and normal Chantilly train/forest route with sighting No/B and saved active state (one), actual Celebi vision and saved sighting followed by normal return to Ada and exactly one report Candy with repeats/cold Continue (one). Source is the genuine gym-defeat-Oranienburg-retry-won battery, refreshed by the v1.46 native Gym defeat/retry suite. No memory writes, item edits, party substitutions or progress injections. Both the researcher task and forest sighting remain optional; early declines grant no progress or reward. Seven leader pages visually inspected. Full historical story ending is not rerun by this suite; full-story evidence remains v1.15 and music/splash evidence remains v1.25. All four user saves and archived v1.46 ROM remain unchanged.
+
+## v1.46: all three Gym defeat and retry verification
+
+Nine fresh runtime PASS results rerun test_gym_defeat_recovery.py on v1.46. Genuine story-complete, water-gym-entrance and electric-gym-entrance batteries provide normally earned chapter readiness. Normal clinic visits prepare the team, and native non-damaging move choices cause actual losses against Ellis, Marine and Conrad. Each loss applies the expected badge/level-based fee, restores party HP/status and first-mon move PP in the local clinic, preserves quest/inventory state, and grants no badge, TM or trainer victory. Normal Save/cold Continue and walking back retain the optional B-declined retry. Actual accepted retry battles earn each badge and one TM; repeat leader dialogue and cold Continue duplicate neither reward. No memory writes, inventory edits, party substitutions or progress injections occur. These are fresh current-ROM repetitions of the established genuine defeat suite, not a new full-story run. Existing Chantilly preparation, clinic, shop and Paris report directions were reviewed and need no text change. Recovery screenshots visually inspected. Current and archived v1.46 ROM, matching symbols and all four user saves remain unchanged.
+
+## v1.46: genuine rival defeat and retry verification
+
+Four fresh runtime PASS results on v1.46 use the genuine rival-prep-returned battery. Normal non-damaging battle commands cause a real defeat without changing stats, party or progress artificially. Native blackout returns to Oxford clinic, restores HP/status and first party member moves/PP, applies a loss fee and grants no rival win, report or Bell. Both earlier trail victories remain earned. Cold Continue, normal return, No/B and journal preserve readiness. Actual retry victory uses earned Potions through the native Bag, pays prize money once, and unlocks report journal lead 4. Repeats/cold Continue preserve completion. Normal train return to London and Oak aide grants one Soothe Bell, stage 2 and Gym journal lead 5; repeats/cold Continue duplicate nothing. No memory writes, inventory edits or progress injections occur. An initial strict slot comparison caught normal Bag compaction after the final Potion was consumed; the victory comparison now checks identical item/quantity multisets and all other state exactly. The final suite reran from the genuine source. No new ROM build or full-story run is claimed. Current and archived v1.46 ROM, symbols and all four user saves remain unchanged.
+
+## v1.46: Oxford rival preparation
+
+Five fresh PASS results: exact offer/decline text scope and native font width (two), genuinely earned two-trail-win readiness plus No/B/read-only repeats/cold Continue/journal (one), normal clinic walk/free healing/cold Continue/return (one), actual accepted rival battle against Pidgey and Eevee (one). Uses the genuine regional-guide-Oxford-claimed battery and accepts Oak's study normally if not already active, preserving earlier victories. No memory writes, inventory edits, trainer-win or progress injections. Clinic verifies all party members have full HP and no status, and retains money, items and progress. Battle-start check verifies trainer 749 and species 16/133 without granting a premature victory or Bell. This suite does not claim a fresh completed rival victory or full-story run. Offer/decline pages visually inspected. All preserved user saves and archived v1.45 ROM remain unchanged. Full-story evidence remains v1.15; music/splash evidence remains v1.25.
+
+## v1.45: England active-study reminders
+
+Eight fresh PASS results: exact three-message-only scope and native font width (two), aide/missing-Oliver/missing-Alice full-page reminders with repeats/journals/cold Continue (three), actual walking directions to the corresponding required trainer with B declines/cold Continue (three). Uses genuine v1.44 active-study and rival batteries and v1.26 training-intro-London-won; the last contains a real Oliver victory, and the test accepts the study normally if needed before travelling to Oxford. No memory writes, item edits or trainer-win/progress injections. No fresh accepted trainer battle or report hand-in is claimed. A static check initially caught exclamation-ending message terminators before the new rival pages; these were corrected before the final scope check and runtime verification. All reminder pages visually inspected. All four user saves and archived v1.44 ROM remain unchanged. Full-story evidence remains v1.15; music/splash evidence remains v1.25.
+
+## v1.44: England accepted-study directions
+
+Six fresh PASS results: exact accepted-text-only scope and native font width (two), native unstarted-study B/No declines and real Yes acceptance with six message pages plus active-study repeat/journal/cold Continue (one), actual northward walking route to Oliver and native B decline/reload (one), onward walking route to Alice and native B decline/reload (one), onward walk to Oxford rival with missing-Oliver gate/repeat/journal/cold Continue (one). Uses the genuine start-england battery. No memory writes, inventory changes, trainer-win or progress injections. No fresh accepted trainer battles or report hand-ins are claimed by this suite. Accepted instructions are visually inspected. Four user saves and archived v1.43 ROM remain unchanged. Full-story evidence remains v1.15; music/splash evidence remains v1.25.
+
+## v1.43: England report-return directions
+
+Six fresh PASS results: exact text-only scope and font width (two), four-page earned-report reminder/repeat/cold Continue and journal (one), locked Gym plus actual train hand-in/repeat/cold Continue (one), completed rival and unlocked Gym B/No declines across cold Continue (one), actual walking return through Oxford Trail and English Meadow with one-time hand-in/repeat/cold Continue (one). Uses the genuine story-report-ready battery, originally in London; the test travels normally to Oxford before reading the rival. An initial driver assumed the source was already Oxford and was corrected; final runtime reran all cases. No memory writes, inventory edits, progress injections or fresh accepted Gym battle. Four new message pages visually checked. Full-story evidence remains v1.15; music/splash evidence remains v1.25. Three user saves and archived v1.42 ROM remain unchanged.
+
+## v1.42 country reward Bag recovery (2026-10-08)
+
+Twenty fresh PASS results: exact pending-text-only scope/font (two), pending
+message/repeat/cold Continue (six), native Toss cancellation/confirmation
+and room-state cold Continue (six), one-time claims/repeats/claimed-state
+cold Continue (six). England's Soothe Bell, France's Miracle Seed and
+Germany's Magnet each use two explicit inventory fixtures: 42 distinct
+valid Items excluding the reward, or one reward stack of 999 with other
+Items slots empty. The separate fixture generator edits only those 42
+Items slots, based on genuinely earned report-ready batteries. Reports,
+wins, party, money and badges are never injected. These are capacity
+fixtures, not claims of naturally collecting all those items. The runtime
+recovery test performs no memory writes. Native Toss B cancellation keeps
+tested state intact; confirming removes one Potion from a full pocket or
+one reward item from a capped stack. The saved room and pending report
+survive normal Save/cold Continue. Normal contact talk then adds one earned
+reward and completes the report, with repeats/cold Continue unable to
+duplicate it. Party, money and badges remain unchanged during room-making.
+Use/Give are mentioned by the text, but this new capacity suite exercises
+Toss specifically. Four instruction pages per country are visually inspected.
+An initial runtime check caught the old French message terminator before
+the added pages; it was corrected and the final build reran all cases.
+Removing the additions restores previous scripts byte-for-byte. All three
+user saves and archived v1.41 ROM remain unchanged. Full-story evidence
+remains v1.15; music/splash evidence remains v1.25.
+
+## v1.41 completed country quest-to-Gym routes (2026-10-08)
+
+Eight fresh runtime PASS results use genuinely earned v1.41 French/German
+report-claimed and returned-contact batteries. No memory writes, item edits,
+party substitutions or progress injections occur. Celine and Remy completed
+reminders identify Marine at Chantilly Gym; Lena and Karl identify Conrad
+at Oranienburg Gym. Each reminder repeats and cold Continues without
+changing tested state; the read-only journal names the correct Gym (13/18).
+Normal town paths and, where needed, station trains/interchanges reach the
+north-square Gym and its leader. The earned report reward has unlocked
+the optional battle offer. Native B cancellation retains exact arrival
+state. After normal Save/cold Continue, native No selection likewise keeps
+all tested state and does not begin battle, grant the next badge or record
+its TM reward. Travel comparisons permit native party friendship changes.
+Screenshots are inspected. Fresh accepted Gym victories and pre-hand-in
+gates are separate earlier evidence, not new claims in this suite. No ROM
+fix was needed. Current and archived v1.41 ROMs, matching symbols and all
+three user saves remain unchanged.
+
+## v1.41 reviewed-report return routes (2026-10-08)
+
+Eight fresh PASS results: exact report-return text-only scope/font (two),
+earned report reminder/repeat/cold Continue and journal (two), normal train
+return to capital with actual one-time hand-in/repeat/cold Continue (two),
+and return to original report contact/repeat/cold Continue (two). France
+starts from a genuinely played v1.40 Gardens-first battery, visits the
+forest normally and obtains Remy's actual review before checking the new
+reminder. Germany starts from the genuine v1.40 Karl delivery battery.
+No memory writes, item edits, party substitutions or progress injections
+occur. Three report pages are visually inspected in each country. New
+directions reach Celine in Paris and Lena in Berlin; actual hand-ins award
+one Miracle Seed/Magnet and advance the corresponding journal to the Gym.
+Repeat hand-ins, cold Continue and normal train returns to Remy/Karl grant
+no duplicate rewards. Stationary reminders and journals retain exact tested
+state; travel comparisons permit native party friendship changes. Removing
+the additions restores previous scripts byte-for-byte. No fresh accepted
+Gym battles or full-story run are claimed; full-story evidence remains
+v1.15 and music/splash evidence remains v1.25. All three user saves and
+archived v1.40 ROM remain unchanged.
+
+## v1.40 saved partial-quest reminders (2026-10-08)
+
+Six fresh runtime PASS results use genuinely played v1.40 partial survey
+and courier batteries. No memory writes, inventory edits, party substitutions
+or progress injections occur. Both Celine and Remy are visited normally after
+the Gardens-first and Forest-first observations. Each three-page reminder
+names the missing site; repeat talk and normal Save/cold Continue preserve
+exact tested state and do not skip the second observation or grant review
+or Miracle Seed. The regional journal selects the corresponding missing
+observation (9 or 10), and topic/checklist switching remains read-only.
+Lena's three-page packed-parcel reminder names Karl and northward walking/
+train options. Karl's two-page delivered-report reminder names Lena and
+the southward Havel Trail/German Woodland route. Repeats and normal Save/
+cold Continue preserve stages 1/2 and grant no premature Magnet. Journals
+retain delivery/return leads 16/17. Screenshots are visually inspected.
+Actual remaining-route completion has separate v1.40 release evidence;
+this suite verifies recovery reminders and state preservation. No ROM
+change was needed. Current and archived v1.40 ROMs, matching symbols and
+all three user saves are verified unchanged.
+
+## v1.40 accepted survey/courier routes (2026-10-08)
+
+Ten fresh PASS results: exact accepted-text-only scope/native font (two),
+French acceptance/repeat/cold Continue and journal (one), first observation
+and withheld review/reward for both orders (two), second observation with
+actual Remy review/Celine hand-in and saved completion for both orders
+(two), German acceptance/repeat/cold Continue/journal (one), actual Karl
+delivery by train with saved report (one), and walking return through
+Havel Trail/German Woodland with one Magnet and saved completion (one).
+Sources are genuine earned-Gym contact batteries from v1.39. No memory
+writes, inventory edits, party substitutions or progress injections occur.
+French marker paths are walked normally, with no encounter manipulation.
+Repeating first markers and visiting both contacts cannot skip the second
+observation or award a reward. Both observations still require Remy's review
+before Celine grants exactly one Miracle Seed. German cargo remains outside
+the Bag; the train reaches Karl west of the Oranienburg guide, and clear
+southward paths return his report to Lena for one Magnet. Repeat contacts
+and normal Save/cold Continue preserve one-time rewards. Read-only journal
+checks follow each milestone and name the proper next objective or Gym.
+Instruction pages are visually inspected. Removing additions restores the
+previous scripts byte-for-byte. No fresh accepted Gym battles or full-story
+run are claimed; full-story evidence remains v1.15 and music/splash remains
+v1.25. All three user saves and archived v1.39 ROM remain unchanged.
+
+## v1.39 post-Gym journal compatibility (2026-10-08)
+
+Fifteen fresh runtime PASS results: claimed/pending regional journal lead,
+earned checklist and read-only topic switching (six), normal Save/cold
+Continue of each state (six), and actual next-step journal transitions with
+another cold Continue (three). Claimed sources are genuinely earned v1.27
+retry victories revisited in v1.39. Pending sources are explicit v1.27
+999-TM capacity fixtures revisited in v1.38; their victories are genuine,
+but their inventories are synthetic. No memory writes or inventory, party,
+wins or progress injections occur in this new suite. Oxford's claimed TM
+points to Celine (lead 7), while the pending TM takes priority (lead 6).
+Chantilly selects Lena (15) or Water Pulse collection (14). Oranienburg
+selects optional London stamp collection (20) or Shock Wave collection (19).
+Saved badges/stamps are checked independently of the menu's checklist.
+Normal train routes reach Celine and Lena; accepting their tasks through
+native Yes advances the journal to both survey habitats (8) or Karl's
+delivery (16). Each acceptance, correct journal and tested saved state
+survive cold Continue. After Oranienburg, native London guide talk records
+its optional stamp once; the journal then names the missing Paris stamp
+(21). Repeating guide talk and cold Continue grant no duplicate reward.
+Map/lead/records and Celebi-topic switching retain tested state, allowing
+native Bag compaction/sorting without item loss. Screenshots are inspected.
+No new Gym battles, full-story run, or completion of newly accepted tasks
+is claimed. No ROM fix was needed. Current and archived v1.39 ROMs, symbols
+and all three user saves remain unchanged.
+
+## v1.39 completed Gym onward travel (2026-10-08)
+
+Eleven fresh PASS results: exact completed-text-only scope/font (two),
+claimed leader message/repeat/cold Continue (three), normal onward travel
+and destination cold Continue (three), then return journeys and claimed
+leader cold Continue (three). Genuine v1.27 recovered/retry-victory batteries
+contain normally earned badges, TMs and prizes; no party, inventory, wins
+or progress are injected. Oxford directions reach Celine in Paris; Chantilly
+directions reach Lena in Berlin. B-declining each next task, repeating and
+cold Continuing grant no unearned story progress. Oranienburg directions
+reach Oxford's river landing by normal trains/interchanges. Captain B
+cancellation, free Oxford-London-Oxford sailing and a cold Continue at each
+landing retain exact tested state. Returning by normal trains and revisiting
+all three leaders duplicates no badge, TM or prize. Stationary dialogue and
+boat comparisons are exact; walking comparisons permit native friendship
+changes. Instruction pages are visually inspected. Removing the additions
+restores previous scripts byte-for-byte. No fresh accepted Gym battles or
+full new-game runs are claimed; full-story evidence remains v1.15 and
+music/splash evidence remains v1.25. Three user saves and archived v1.38
+ROM remain unchanged.
+
+## v1.38 pending Gym TM instructions (2026-10-08)
+
+Fourteen fresh PASS results: exact text-only scope/font (two), four-page
+pending message/repeat/cold Continue at all Gyms in TM-stack and Key Items
+capacity modes (six), native Give cancellation/confirmation and room-state
+cold Continue (three), then exactly one reward claim/repeat/claimed-state
+cold Continue (three). Source batteries are explicit v1.27 inventory
+capacity fixtures: 999 copies of the target TM, or thirty distinct Key Items
+without a TM Case. Their Gym wins were earned in real battles. This suite
+performs no memory writes or inventory, party or progress injections.
+The Key Items fixtures verify pending text and preservation only; they do
+not claim native Key Items room-making. In capped-stack cases native TM
+Case Give transfers exactly one existing copy to an empty-handed Bulbasaur,
+leaving 998 bag copies; cancellation leaves exact tested state unchanged.
+After normal Save/cold Continue, leader talk grants exactly one waiting
+copy, records collection, retains the held copy and starts no rematch.
+Repeats/cold Continue grant nothing further. Money, story and badges stay
+unchanged during room-making. The text mentions Use as well as Give; normal
+Use teaching has separate v1.37 compatibility evidence, not a new capped-
+stack Use case here. All four message pages are visually inspected. Removing
+the additions restores the previous scripts byte-for-byte. All three user
+saves and archived v1.37 ROM remain unchanged. Full-story evidence remains
+v1.15; music/splash evidence remains v1.25. No fresh Gym victories are
+claimed by this text/recovery suite.
+
+## v1.37 taught Rock Tomb/Water Pulse battle compatibility (2026-10-08)
+
+Six fresh runtime PASS results load the genuine Marshtomp teaching batteries
+from the previous v1.37 TM suite. Those batteries inherit a normally played
+Germany/Mudkip full story and normally consumed earned Gym rewards. No
+memory writes, item edits, party substitutions or progress injections occur.
+Normal train/walking routes reach London countryside grass. Each taught move
+executes against a real wild Rattata and reduces its HP. Rock Tomb spends
+two PP before first observed damage; Water Pulse spends one. Other move
+slots and their PP remain unchanged. This is not a claim that Rock Tomb
+always hits, nor a measurement of its secondary effect. Natural battle HP
+and experience changes are allowed. Money, inventory, story and badges
+remain unchanged, and the consumed TM remains absent. Normal Save/cold
+Continue retains learned moves and spent PP. Clear paths lead back to the
+London clinic; native free care restores full HP and all move PP without
+charging money or returning either TM. A further normal Save/cold Continue
+retains healed PP and consumed rewards. Screenshots are inspected. This
+suite does not isolate Water Pulse confusion, Rock Tomb speed reduction,
+type-matchup balance, or accuracy probabilities. No ROM change was needed.
+Current and archived v1.37 ROMs, matching symbols and three user saves are
+verified unchanged.
+
+## v1.37 Shock Wave compatible teaching and battle (2026-10-08)
+
+Four fresh runtime PASS results start from the genuine v1.15 Germany/Mudkip
+full-story battery with its earned TM34 and existing ball supplies. Normal
+train travel reaches London, then normal walking through countryside grass
+finds Mareep on the third wild encounter. The first two encounters are
+escaped normally. Four normal ball throws catch a level-three Mareep and
+add it to the party; no catch rates, RNG, items, party or progress are edited.
+Money and saved journey variables remain unchanged through the capture.
+The native Save/cold Continue retains the captured partner. Canceling the
+compatible partner selection retains exact tested state, including TM34.
+Accepting teaching fills Mareep's first empty move slot with Shock Wave
+and 20 PP; other moves and their PP stay unchanged. Exactly one earned
+TM34 is consumed, while money, journey variables and badges stay unchanged.
+Normal teaching friendship changes are allowed. A normal Save/cold Continue
+retains the learned move, PP and consumption. Native party switching puts
+Mareep in the lead; a real wild Oddish battle executes move 351, decreases
+the target's HP and spends exactly one PP. The battle is escaped normally;
+a further Save/cold Continue retains 19 PP and the consumed TM. Screenshots
+are inspected. This does not cover Shock Wave accuracy under evasion boosts,
+Ground immunity, or competitive balance. Rock Tomb and Water Pulse battle
+use remain separate follow-up coverage. No ROM fix was needed; current and
+archived v1.37 ROMs, symbols and all three user saves remain unchanged.
+
+## v1.37 Gym TM teaching compatibility (2026-10-08)
+
+Nine fresh runtime PASS results use genuinely earned v1.27 Gym-retry
+victory batteries and the v1.15 Germany/Mudkip full-walkthrough battery.
+No memory writes, party substitutions, inventory edits or progress
+injections occur. Bulbasaur rejects Rock Tomb, Water Pulse and Shock Wave
+without consuming the TM or changing tested party, money, story, badges
+or inventory; each rejected attempt survives a normal Save/cold Continue.
+Native TM Case sorting is allowed while item quantities remain identical.
+Marshtomp party-selection cancellation and declining four-move replacement
+both preserve exact tested state for Rock Tomb and Water Pulse. Accepted
+teaching replaces only slot zero, preserves the other three moves and PP,
+assigns the new move's native full PP and consumes exactly one earned TM.
+Money, story and badges stay unchanged; native teaching friendship changes
+are allowed. Learned moves, PP and consumption persist through normal
+Save/cold Continue. This suite does not yet cover teaching Shock Wave to
+a compatible partner, teaching into an empty move slot, or battle use of
+these newly taught moves. Diagnostic failures were test-driver assumptions
+about a freed menu pointer and advancing multi-page native prompts; final
+coverage uses active tasks and normal A presses. Screenshots are inspected.
+No ROM change was needed. The current and archived v1.37 ROMs, matching
+symbols and all three user saves are verified unchanged.
+
 ## v1.37 completed regional challenge travel (2026-10-07)
 
 Eleven fresh PASS results: exact shared-text addition/font fit (two), claimed
