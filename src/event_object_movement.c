@@ -2178,7 +2178,7 @@ void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
     bool8 reflection = paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION
         || paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION;
 
-    if (outfit > 0 && outfit < 4
+    if (outfit > 0 && outfit < 5
         && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON)
         && (reflection || (paletteSlot == PALSLOT_PLAYER
             && (paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_RED || paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_GREEN))))
@@ -2201,11 +2201,17 @@ void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
             colors[11] = reflection ? RGB(25, 31, 25) : RGB(14, 26, 16);
             colors[12] = reflection ? RGB(17, 26, 19) : RGB(7, 18, 10);
         }
-        else
+        else if (outfit == 3)
         {
             colors[8] = reflection ? RGB(20, 14, 24) : RGB(10, 4, 14);
             colors[11] = reflection ? RGB(31, 25, 31) : RGB(25, 15, 29);
             colors[12] = reflection ? RGB(28, 18, 31) : RGB(18, 8, 23);
+        }
+        else
+        {
+            colors[8] = reflection ? RGB(22, 17, 12) : RGB(12, 7, 2);
+            colors[11] = reflection ? RGB(31, 31, 18) : RGB(31, 26, 8);
+            colors[12] = reflection ? RGB(31, 25, 13) : RGB(24, 15, 3);
         }
         LoadPalette(colors, OBJ_PLTT_ID(paletteSlot), PLTT_SIZE_4BPP);
     }

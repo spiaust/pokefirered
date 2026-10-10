@@ -10,13 +10,15 @@ def assert_old_london(raw,old_raw,width):
    assert a==b or (x in (36,37) and y in (36,37) and b==0x3165),(x,y,'old walkable terrain')
 
 def assert_london_facade(raw,old_raw):
- """Only the eastern roof may use alternate art; all tile attributes stay."""
+ """Only the eastern roof and western walls use alternate art."""
  import json
  from pathlib import Path
  r=Path(__file__).resolve().parents[1]
  mapping=json.loads((r/'data/geography/london-landmark-blocks.json').read_text())['reading_roof']
+ walls=json.loads((r/'data/geography/london-landmark-blocks.json').read_text()).get('western_wall',{})
  old=struct.unpack('<2816H',old_raw);new=struct.unpack('<2816H',raw)
  for i,(a,b) in enumerate(zip(old,new)):
   x,y=i%64,i//64
   expected=(a&0xfc00)|mapping[str(a&1023)] if 54<=x<59 and 28<=y<31 else a
+  if 44<=x<49 and 31<=y<33 and str(a&1023) in walls:expected=(a&0xfc00)|walls[str(a&1023)]
   assert b==expected,(x,y,hex(a),hex(b))

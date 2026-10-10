@@ -122,7 +122,11 @@ EuropeFrance_Text_FirstBadge::
 	.string "I'm CELINE. I study the gardens\n"
 	.string "and forests of FRANCE.\p"
 	.string "Earn your first badge at OXFORD GYM,\n"
-	.string "then help with our field survey!$"
+	.string "then help with our field survey!\p"
+	.string "Begin with OAK's aide in LONDON.\n"
+	.string "He waits west of the town guide.\p"
+	.string "Finish his study and report to him.\n"
+	.string "That unlocks ELLIS at OXFORD GYM.$"
 EuropeFrance_Text_Decline::
 	.string "Come back when you're ready.\n"
 	.string "There is always more to observe!$"

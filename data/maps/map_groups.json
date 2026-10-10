@@ -672,6 +672,11 @@
     "EuropeLondonHome",
     "EuropeLondonReadingRoom",
     "EuropeParisHome",
-    "EuropeParisGardenRoom"
+    "EuropeParisGardenRoom",
+    "EuropeChateauVisitor",
+    "EuropePalaceVisitor",
+    "EuropeRadcliffeVisitor",
+    "EuropeStablesVisitor",
+    "EuropeMagdalenVisitor"
   ]
 }

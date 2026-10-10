@@ -1,4 +1,4 @@
-"""Roof-only changes retain every collision, behavior, door and old palette."""
+"""Roof and western wall changes retain every collision, behavior, door and old palette."""
 from pathlib import Path
 import struct,json,hashlib,subprocess,sys
 R=Path(__file__).resolve().parents[1]
@@ -12,13 +12,13 @@ for i,(a,b) in enumerate(zip(old,new)):
  assert a&0xfc00==b&0xfc00
  assert attrs[(a&1023)*4:(a&1023)*4+4]==attrs[(b&1023)*4:(b&1023)*4+4]
  if a!=b:
-  x,y=i%64,i//64;assert 27<=y<=29 and (50<=x<=54 or 57<=x<=61)
+  x,y=i%64,i//64;assert (27<=y<=29 and (50<=x<=54 or 57<=x<=61)) or (30<=y<=31 and 42<=x<=46 and (x,y)!=(43,31))
   changed.add((x,y))
-assert len(changed)==30
+assert len(changed)==39
 used={v>>12 for t in set(old) for v in struct.unpack_from('<8H',meta,(t&1023)*16)}
 assert 12 not in used
 for x in (43,51,58):assert old[31*64+x]==new[31*64+x]
-print('PASS: two roofs and the documented northern sign change; all other terrain behavior, collision, elevations and doors retained')
+print('PASS: two roofs, nine western wall cells and the documented northern sign change; all other terrain behavior, collision, elevations and doors retained')
 paths=[R/'data/tilesets/secondary/europe_berlin'/p for p in ['tiles.png','metatiles.bin','metatile_attributes.bin','palettes/12.pal']]+[R/'data/geography/berlin-facade-blocks.json',R/'data/layouts/EuropeBerlin/map.bin']
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();before={p:sha(p) for p in paths}
 for script,args in [('berlin_facades.py',[]),('build-capital-maps.py',['Berlin'])]:subprocess.run([sys.executable,str(R/'scripts'/script),*args],check=True,stdout=subprocess.DEVNULL)

@@ -9,3 +9,9 @@ for city in sys.argv[1:] or ['Amiens','Rouen']:
  split=1100 if city=='Amiens' else 950
  specs=[('cathedral',(0,0,split,h),(96,96)),('houses' if city=='Amiens' else 'clock',(split,0,w,h),(96,48) if city=='Amiens' else (64,80))]
  build(city,specs,source,mask_palette=True)
+ if city=='Rouen':
+  from rouen_bridges import build as build_bridges
+  build_bridges()
+ if city=='Amiens':
+  from amiens_bridges import build as build_bridges
+  build_bridges()

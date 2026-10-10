@@ -55,3 +55,12 @@ Source artwork and exact built-in image-tool prompt:
 [SOUTHAMPTON-PROMPT.md](../../graphics/europe/landmarks/SOUTHAMPTON-PROMPT.md).
 Generators: `scripts/build-southampton-assets.py` and
 `scripts/build-southampton-map.py`. Next: historical London.
+
+## v2.10: Town Quay rail detail
+
+Eight edge cells at x48/x50,y35..38 use stone rail overlays. All three
+walking lanes retain their terrain, behavior and elevation. The original
+terminal, landmarks, events and palettes remain intact. Eight tiles/two
+metatiles append, reaching 381 secondary tiles. Full generation reproduces
+current outputs byte-for-byte. Native checks cross all lanes both ways,
+cold-load a normal tip save, read four signs/map and use Le Havre/Celebi.

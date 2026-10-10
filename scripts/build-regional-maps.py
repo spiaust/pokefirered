@@ -1,6 +1,6 @@
 """Add east-side landmark districts, preserving each town's southern route edge."""
 from pathlib import Path
-import json,struct,sys
+import json,struct,sys,re
 R=Path(__file__).resolve().parents[1]
 def build(city):
  W,H=(72 if city=='Chantilly' else 64),24
@@ -58,6 +58,59 @@ def build(city):
   a[y][x]=0x1000|t
  for x,y,w,h in bridges:rect(x,y,w,h,0x3165)
  blocks=json.loads((R/f'data/geography/{city.lower()}-landmark-blocks.json').read_text())
+ a[11][5]=0x400|blocks['clinic_sign']
+ a[11][22]=0x400|blocks['station_sign']
+ a[11][14]=0x400|blocks['gym_sign']
+ if city=='Oxford':
+  for y in (8,9):
+   for x in range(20,27):
+    t=a[y][x];replacement=blocks['station_wall'].get(str(t&1023))
+    if replacement is not None:a[y][x]=(t&0xfc00)|replacement
+  for y in (8,9):
+   for x in range(5,10):
+    t=a[y][x];replacement=blocks['clinic_wall'].get(str(t&1023))
+    if replacement is not None:a[y][x]=(t&0xfc00)|replacement
+  for y in (6,7):
+   for x in range(20,27):
+    t=a[y][x];a[y][x]=(t&0xfc00)|blocks['station_roof'][str(t&1023)]
+  for y in (6,7):
+   for x in range(12,19):
+    t=a[y][x];a[y][x]=(t&0xfc00)|blocks['gym_roof'][str(t&1023)]
+  for x,y in [(56,12),(55,19)]:
+   for dy,t in enumerate(blocks['bridge_rails']):rect(x,y+dy,3,1,0x3000|t)
+ if city=='Chantilly':
+  for y in (8,9):
+   for x in range(20,27):
+    t=a[y][x];replacement=blocks['station_wall'].get(str(t&1023))
+    if replacement is not None:a[y][x]=(t&0xfc00)|replacement
+  for y in (8,9):
+   for x in range(5,10):
+    t=a[y][x];replacement=blocks['clinic_wall'].get(str(t&1023))
+    if replacement is not None:a[y][x]=(t&0xfc00)|replacement
+  for y in (6,7):
+   for x in range(20,27):
+    t=a[y][x];a[y][x]=(t&0xfc00)|blocks['station_roof'][str(t&1023)]
+  for y in (6,7):
+   for x in range(12,19):
+    t=a[y][x];a[y][x]=(t&0xfc00)|blocks['gym_roof'][str(t&1023)]
+  for dx,t in enumerate(blocks['bridge_rails']):rect(50+dx,11,1,5,0x3000|t)
+ if city=='Oranienburg':
+  for y in (8,9):
+   for x in range(20,27):
+    t=a[y][x];replacement=blocks['station_wall'].get(str(t&1023))
+    if replacement is not None:a[y][x]=(t&0xfc00)|replacement
+  for y in (8,9):
+   for x in range(5,10):
+    t=a[y][x];replacement=blocks['clinic_wall'].get(str(t&1023))
+    if replacement is not None:a[y][x]=(t&0xfc00)|replacement
+  for y in (6,7):
+   for x in range(20,27):
+    t=a[y][x];a[y][x]=(t&0xfc00)|blocks['station_roof'][str(t&1023)]
+  for y in (6,7):
+   for x in range(12,19):
+    t=a[y][x];a[y][x]=(t&0xfc00)|blocks['gym_roof'][str(t&1023)]
+  for x,y in [(55,12),(55,19)]:
+   for dy,t in enumerate(blocks['bridge_rails']):rect(x,y+dy,3,1,0x3000|t)
  for label,x,y in places:
   for dy,row in enumerate(blocks[label]):
    for dx,t in enumerate(row):
@@ -85,15 +138,25 @@ def build(city):
  p=R/'data/layouts/layouts.json';j=json.loads(p.read_text())
  for l in j['layouts']:
   if l.get('id')==f'LAYOUT_EUROPE_{city.upper()}':l.update(width=W,height=H,secondary_tileset=f'gTileset_Europe{city}')
- p.write_text(json.dumps(j,indent=2)+'\n')
+ layout_newline='\r\n' if b'\r\n' in p.read_bytes() else '\n'
+ p.write_bytes((json.dumps(j,indent=2)+'\n').replace('\n',layout_newline).encode())
  p=R/f'data/maps/Europe{city}/map.json';j=json.loads(p.read_text());j['bg_events']=[e for e in j['bg_events'] if not e['script'].startswith(f'Europe{city}_Realism')]
  for suffix,x,y,lines in signs:j['bg_events'].append(dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=f'Europe{city}_Realism{suffix}'))
  p.write_text(json.dumps(j,indent=2)+'\n')
- p=R/f'data/maps/Europe{city}/scripts.inc';s=p.read_text();s=s.split(f'\nEurope{city}_Realism')[0]
+ p=R/f'data/maps/Europe{city}/scripts.inc';s=p.read_bytes().decode()
+ start=s.index(f'\nEurope{city}_Realism');rest=s[start:]
+ following=re.search(rf'\n(?!Europe{city}_Realism)[A-Za-z_]\w*::',rest)
+ preserved_scripts=rest[following.start():] if following else ''
+ existing_landmarks=rest[:following.start()] if following else rest
+ s=s[:start]
+ script_prefix=s
  for suffix,x,y,lines in signs:
   label=f'Europe{city}_Realism{suffix}';s+=f'\n{label}::\n\tmsgbox {label}Text, MSGBOX_SIGN\n\tend\n\n{label}Text::\n'
   for i,line in enumerate(lines):s+='\t.string "'+line+('$' if i==len(lines)-1 else '\\n')+'"\n'
- p.write_text(s)
+ generated_landmarks=s[len(script_prefix):]
+ if existing_landmarks.replace('\r\n','\n')==generated_landmarks:
+  generated_landmarks=existing_landmarks
+ p.write_bytes((script_prefix+generated_landmarks+preserved_scripts).encode())
  print(city,W,H,'east district generated; original south connection retained')
 if __name__=='__main__':
  for city in sys.argv[1:] or ['Oxford','Chantilly','Oranienburg']:build(city)

@@ -21,7 +21,7 @@ try:
  loc=e.location();before=preserved(e);identity=who(e);classic=palette(e)
  options(e);e.press('DOWN',60);e.press('LEFT',60);assert e.var(0x40d3)==1
  for _ in range(3):e.press('DOWN',60)
- e.press('LEFT',60);assert e.var(0x40c4)==3
+ e.press('LEFT',60);e.press('LEFT',60);assert e.var(0x40c4)==3
  e.screenshot(ROOT/'test-output/world-purple-menu.png');close(e);check(e,3,classic)
  assert e.read(e.symbols['gPlayerAvatar']+7,1)==0
  e.screenshot(ROOT/'test-output/world-purple-purple-red.png')
@@ -49,7 +49,7 @@ try:
  check(e,3,classic);e.screenshot(ROOT/'test-output/world-purple-reloaded.png')
  options(e)
  for _ in range(4):e.press('DOWN',60)
- e.press('A',60);assert e.var(0x40c4)==0;close(e);assert palette(e)==classic
+ e.press('A',60);assert e.var(0x40c4)==4;e.press('A',60);assert e.var(0x40c4)==0;close(e);assert palette(e)==classic
  assert preserved(e)==saved and e.location()==loc
  print('PASS: outfit cold Continue retains color and avatar; A wraps to the exact classic palette without changing progress',flush=True)
 finally:e.close()

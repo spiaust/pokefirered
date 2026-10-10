@@ -65,3 +65,24 @@ validate all 38 European maps, terminal preservation, palette/tile limits,
 path connectivity, sign widths and byte-for-byte regeneration.
 
 Historical town redesigns and finer modern neighborhood detail remain next.
+
+## v2.03: Calais pier side rails
+
+Twelve paving cells at x50/x52, y5..10 now have stone rail overlays. All three
+lanes remain walkable; collision, terrain behavior, terminal, transport and
+events are preserved. Eight tiles/two metatiles append after the landmark art
+using the existing palette3, bringing Calais to 353 secondary tiles. The helper
+calais_pier.py and both port generators include the rails. Native checks use
+an earned coastal save for lane walks, saved tip/district positions, signs,
+ferry round trip, Paris coach exit and saved Oxford ending return.
+
+## v2.04: Dover harbor arm rails
+
+Twenty-four paving cells at x27..38, y31/y33 now use stone rail overlays. All
+three rows remain walkable; terminal, transport, collision, terrain behavior,
+events and palettes remain exact. One 8x8 rail tile is reused and flipped
+vertically, with an existing transparent tile for the unused overlay slots.
+Dover now uses 382 secondary tiles. dover_arm.py and both port generators
+include the rails; the full two-port pipeline reproduces outputs exactly.
+Native checks use an earned Dover save for walks, saved tip/district positions,
+landmark signs, ferry round trip, London exit and saved Oxford ending return.

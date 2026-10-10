@@ -147,3 +147,14 @@ station-boards.json; station-boards-v103.json retains prior maps/scripts
 and the room-grid hash. Focused tests cover genuine earlier indoor saves,
 repeat readings, exits, re-entry, new cold saves, outdoor signs and Rooms
 controls. Each read checks exact party and progress before and after.
+
+## v1.72: warm western-home walls
+
+Nine wall cells at x44-48, y31-32 use appended native tile variants in existing
+palette8. Native window art, flips and attributes are retained. The door at
+(45,32), red roof, neighboring slate roof, paths and all events stay intact.
+Build assets with build-london-assets.py; apply-london-facade.py updates the
+current grid without regenerating its events/scripts. build-london-map.py
+also includes the wall mapping for full regeneration. Baseline assets are in
+london-facade-v171. Verify test_london_western_static.py and the two native
+runtime suites before replacing the playable ROM.

@@ -4818,6 +4818,66 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/EuropeParisGardenRoom/border.bin",
       "blockdata_filepath": "data/layouts/EuropeParisGardenRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_CHATEAU_VISITOR",
+      "name": "EuropeChateauVisitor_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeChateauVisitor/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeChateauVisitor/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_PALACE_VISITOR",
+      "name": "EuropePalaceVisitor_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropePalaceVisitor/border.bin",
+      "blockdata_filepath": "data/layouts/EuropePalaceVisitor/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_RADCLIFFE_VISITOR",
+      "name": "EuropeRadcliffeVisitor_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeRadcliffeVisitor/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeRadcliffeVisitor/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_STABLES_VISITOR",
+      "name": "EuropeStablesVisitor_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeStablesVisitor/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeStablesVisitor/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_MAGDALEN_VISITOR",
+      "name": "EuropeMagdalenVisitor_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeMagdalenVisitor/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeMagdalenVisitor/map.bin"
     }
   ]
 }

@@ -1,5 +1,393 @@
 # Prototype verification — 2026-09-18
 
+## v2.27: Eiffel observation room layout
+
+The Eiffel visitor room now has two rear windows, two left-side observation desks and an open right aisle. The guide and displays keep their positions and controls. Enter from Paris (9,37), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit. Seven checks verify unchanged IDs/events/other rooms, every former floor position can reach both exits, exact generation including all five unchanged regional floor-plan generators, native room conversations/entry/declines/exit/inside Continue/return to the countryside, plus two genuine v2.26 saves at new side-desk positions that can traverse their cached floor plan, save, exit and re-enter the exact new layout. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.26: London Eye gallery display tables
+
+The London Eye visitor gallery now has two native side display tables and a clear central aisle. Existing windows, attendant and displays keep their positions and controls. Enter from London (29,29), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit. Six checks verify unchanged IDs/events/other rooms, every former floor position can reach both exits, exact generation, native room conversations/entry/declines/exit/inside Continue/return to the countryside, plus two genuine v2.25 saves at new side-desk positions that can traverse their cached floor plan, save, exit and re-enter the exact new layout. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.25: Combined landmark visitor tour
+
+11 fresh combined v2.25 landmark-tour PASS results: two per room across all five regional visitor rooms, plus saved Ada ending. One earned battery travels Oxford to Chantilly to Oranienburg and back to Oxford, without memory writes or state loads. Every room supports No/B declines, guide and both displays, native saved interior Continue, correct Places town/era, both south exits and re-entry. All persistent journey variables, money, inventory and completed activities remain intact. ROM, symbols and four original saves unchanged; existing Austin-copy validation remains applicable. Full fresh-game story evidence remains v1.15.
+
+## v2.25: Palace visitor gallery layout
+
+The Oranienburg palace visitor room now has a gallery layout with two back-wall windows, two side display desks and a clear central aisle. The guide and displays keep their positions and controls. Enter from Oranienburg (48,9), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit. Eight checks verify unchanged IDs/events/other rooms, every former floor position can reach both exits, exact generation, native room conversations/entry/declines/exit/inside Continue/Places and saved Ada ending, plus two genuine v2.24 saves at new side-desk positions that can traverse their cached floor plan, save, exit and re-enter the exact new layout. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.24: Great Stables caretaker workroom layout
+
+The Great Stables visitor room now has a caretaker workroom layout with care-reference shelves, a back-wall window, two left-side care benches and a clear right aisle. The guide and displays keep their positions and controls. Enter from Chantilly (38,19), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit. Eight checks verify unchanged IDs/events/other rooms, every former floor position can reach both exits, exact generation, native room conversations/entry/declines/exit/inside Continue/Places and saved Ada ending, plus two genuine v2.23 saves at new table positions that can traverse their cached floor plan, save, exit and re-enter the exact new layout. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.23: Magdalen study-room layout
+
+Magdalen now has a study-room layout with two back-wall windows, one side study desk and an open central floor. The guide and displays keep their positions and controls. Enter from Oxford (51,11), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit. Eight checks verify unchanged IDs/events/other rooms, every former floor position can reach both exits, exact generation, native room conversations/entry/declines/exit/inside Continue/Places and saved Ada ending, plus two genuine v2.22 saves at new table positions that can traverse their cached floor plan, save, exit and re-enter the exact new layout. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.22: Chateau gallery layout
+
+Chateau now has a gallery layout with two central native map desks, clean wall panels and open side aisles. The guide and displays keep their positions and controls. Enter from Chantilly (51,11), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit. Eight checks verify unchanged IDs/events/other rooms, every former floor position can reach both exits, exact generation, native room conversations/entry/declines/exit/inside Continue/Places and saved Ada ending, plus two genuine v2.21 saves at new table positions that can traverse their cached floor plan, save, exit and re-enter the exact new layout. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.21: Radcliffe reading-room layout
+
+Radcliffe now has a reading-room layout with two native bookcase pairs, two side tables and a clear central aisle. The guide and displays keep their positions and controls. Enter from Oxford (38,10), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit. Eight checks verify unchanged IDs/events/other rooms, every former floor position can reach both exits, exact generation, native room conversations/entry/declines/exit/inside Continue/Places and saved Ada ending, plus two genuine v2.20 saves at new table positions that can traverse their cached floor plan, save, exit and re-enter the exact new layout. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.20: Combined landmark visitor tour
+
+11 fresh combined v2.20 landmark-tour PASS results: two per room across all five regional visitor rooms, plus saved Ada ending. One earned battery travels Oxford to Chantilly to Oranienburg and back to Oxford, without memory writes or state loads. Every room supports No/B declines, guide and both displays, native saved interior Continue, correct Places town/era, both south exits and re-entry. All persistent journey variables, money, inventory and completed activities remain intact. ROM, symbols and four original saves unchanged; existing Austin-copy validation remains applicable. Full fresh-game story evidence remains v1.15.
+
+## v2.20: Enterable Magdalen visitor room
+
+Oxford now has a free Magdalen visitor room. From the town square, head east past Radcliffe Square to Magdalen, stand at (51,11), face north, press A and choose YES. Inside, a guide and two displays describe a tower drawing and Cherwell paths. Leave by walking south from (4,7) or (5,7); both exits return to (51,11). This optional room does not change story progress or give rewards. It is a visitor room, rather than the full college grounds. Eleven checks verify unchanged exterior art/collision and old map/layout IDs, deterministic generation, entry/declines, all displays, both exits, Town Map, saved interiors and Oxford ending, plus a repeat Radcliffe visit/save/exit check. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.19: Enterable Great Stables visitor room
+
+Chantilly now has a free Great Stables visitor room. From the town square, head east to the Great Stables, stand at (38,19), face north, press A and choose YES. Inside, a caretaker and two displays describe the POKEMON care and estate paths. Leave by walking south from (4,7) or (5,7); both exits return to (38,19). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete stable complex. Eleven checks verify unchanged exterior art/collision and old map/layout IDs, deterministic generation, entry/declines, all displays, both exits, Town Map, saved interiors and Oxford ending, plus a repeat château visit/save/exit check. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.18: Exact landmark-room map directions
+
+The Town Map Places pages now give exact landmark-room approaches: Oxford RADCLIFFE (38,10), Chantilly CHATEAU (51,11), and Oranienburg PALACE (48,9). At each tile, face UP, press A and choose YES. Open Town Map and press R for Places; L still toggles the existing service directions. Exit visitor rooms through the south doorway. Ten native checks follow all three directions through entry, saved interior Continue, Town Map and exit, plus regional Places/Services controls, browsing, saved page restoration and Ada ending. Austin save copy passes Continue/Party/Bag/Save/cold Continue. Four originals unchanged. Full fresh-game evidence remains v1.15.
+
+## v2.17: Enterable Radcliffe Camera visitor room
+
+Oxford now has a free Radcliffe Camera visitor room. From the town square, head east to Radcliffe Square, stand at (38,10), face north, press A and choose YES. Inside, a guide and two displays describe field notes and Cherwell bridges. Leave by walking south from (4,7) or (5,7); both exits return to (38,10). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete library interior. Fifteen checks verify unchanged exterior art/collision and old map/layout IDs, deterministic generation, entry/declines, all displays, both exits, Town Map, saved interiors and Oxford ending, plus repeat château and palace visit/save/exit checks. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.16: Enterable palace visitor room
+
+Oranienburg now has a free palace visitor room. From the town square, head east to the palace court, stand at (48,9), face north, press A and choose YES. Inside, a guide and two displays describe the park and Havel. Leave by walking south from (4,7) or (5,7); both exits return to (48,9). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete palace interior. Eleven checks verify unchanged exterior art/collision and old map/layout IDs, deterministic generation, entry/declines, all displays, both exits, Town Map, saved interiors and Oxford ending, plus a repeat château visit/save/exit check. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.15: Completed regional services review
+
+16 fresh native compatibility PASS results on unchanged v2.15: station three, clinic three, Gym three, Places/Services seven. Earned batteries verify station sign repeats and map grids, station entry/interior cold Continue/exit, capital rail round trips, clinic care, Gym readiness and leader declines, saved interiors, map browsing/toggles and final saved Ada ending. Tests use ordinary native Save/cold Continue, without state loads or memory writes. ROM, symbols and four original save files remain byte-identical to the start of this review. The prior château and Austin-copy validation remain applicable; full fresh-game story evidence remains v1.15.
+
+## v2.15: Enterable château visitor room
+
+Chantilly now has a free château visitor room. From the town square, cross the east-side moat bridge, stand at (51,11), face north, press A and choose YES. Inside, a guide and two displays describe the garden and moat. Leave by walking south from (4,7) or (5,7); both exits return to (51,11). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete castle interior. Seven checks verify unchanged exterior art/collision and old map/layout IDs, deterministic generation, entry/declines, all displays, both exits, Town Map, saved interiors and Oxford ending. Austin Continue/Party/Bag/Save/cold Continue passes on a copy; four original saves remain unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.14: Oranienburg station stone walls
+
+6 fresh v2.14 PASS results: two station wall preservation/palette/behavior/determinism checks, one exact full three-town asset/map generation check and three native station/sign/save/travel checks. Thirteen Oranienburg wall cells x20..26,y8/9 change except the door at (23,9); original roof/train marker/windows and every upper collision/elevation bit remain intact. Sixteen copied palette-9 wall tiles remap indices 2/3/4 to red brick indices 11/12/13 in existing palette 2. Thirteen metatiles append with exact other entries and behavior; original indexed art and all palettes stay intact, reaching 271 secondary tiles. Earned batteries verify native sign reads/repeats, exterior/interior cold Continue, doors, capital rail round trips and final saved Oxford return. Austin copy passes Continue/Party/Bag/Save/cold Continue; four original saves unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.13: Chantilly station stone walls
+
+6 fresh v2.13 PASS results: two station wall preservation/palette/behavior/determinism checks, one exact full three-town asset/map generation check and three native station/sign/save/travel checks. Thirteen Chantilly wall cells x20..26,y8/9 change except the door at (23,9); original roof/train marker/windows and every upper collision/elevation bit remain intact. Sixteen copied palette-9 wall tiles remap indices 2/3/4 to cream stone indices 1/8/9 in existing palette 3. Thirteen metatiles append with exact other entries and behavior; original indexed art and all palettes stay intact, reaching 335 secondary tiles. Earned batteries verify native sign reads/repeats, exterior/interior cold Continue, doors, capital rail round trips and final saved Oxford return. Austin copy passes Continue/Party/Bag/Save/cold Continue; four original saves unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.12: Regional service compatibility
+
+13 fresh native v2.12 compatibility PASS results: clinic markers/care three, Gym signs/readiness/door/leader decline/interior and returned saves three, and regional Places/Services controls seven. Every regional town preserves readable service markers, clinic and Gym entry/exit, service-map toggles/browsing, completed journey, saved reloads and final Oxford Ada dialogue. Tests use earned batteries and ordinary native Save/cold Continue without state loads or memory writes. ROM/symbols and four original saves unchanged. Existing v2.12 station travel and Austin-copy validation apply; full fresh-game story evidence remains v1.15.
+
+## v2.12: Oxford station stone walls
+
+6 fresh v2.12 PASS results: two station wall preservation/palette/behavior/determinism checks, one exact full three-town asset/map generation check and three native station/sign/save/travel checks. Thirteen Oxford wall cells x20..26,y8/9 change except the door at (23,9); original roof/train marker/windows and every upper collision/elevation bit remain intact. Sixteen copied palette-9 wall tiles remap indices 2/3/4 to warm stone indices 8/8/9 in existing palette 3. Thirteen metatiles append with exact other entries and behavior; original indexed art and all palettes stay intact, reaching 267 secondary tiles. Earned batteries verify native sign reads/repeats, exterior/interior cold Continue, doors, capital rail round trips and final saved Oxford return. Austin copy passes Continue/Party/Bag/Save/cold Continue; four original saves unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.11: All outfit colors verified
+
+12 fresh native v2.11 compatibility PASS results: ten avatar/color combinations plus two prior blue/green outfit checks. Every Red/Leaf and Classic/Blue/Green/Purple/Gold combination checks the live preview, L/R turns, bicycle preview, clean field exit, walking, mount/dismount and native Save/cold Continue; all non-clothing palette entries, trainer identity, location and journey remain intact. The older outfit regression now includes gold between purple and classic. Scripts use earned battery saves without state loads or memory writes. ROM/symbols and four original saves unchanged. Existing v2.11 Austin-copy validation applies; full fresh-game story evidence remains v1.15.
+
+## v2.11: Gold trainer outfit
+
+8 fresh native v2.11 PASS results: gold outfits two, purple compatibility two, live preview one, facing controls one and Restore Defaults two. Gold is fifth outfit value 4 and changes only palette entries 8/11/12; Red and Leaf retain skin/hair and all other palette entries. Gold menu/field/cycling/dismount and cold Continue checked; A cycles gold to classic, and existing purple traverses gold before classic. Previous colors keep their saved numeric values. Native defaults cancellation/reset and preview control tests pass with five colors. Austin copy passes Continue/Party/Bag/Save/cold Continue; four original saves unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.10: Southampton quay compatibility
+
+10 fresh native v2.10 compatibility PASS results: Southampton arrival/return directions three, luggage quest two, genuine v0.43 ferry-clerk migration one, genuine v0.44 luggage-worker migration one and onward London directions three. Quest tests use earned batteries and ordinary Save/cold Continue between stages. Luggage visibility/pickup/return, repeat interactions, journal leads/paging, Le Havre/Celebi returns and London boarding/welcome remain available. Executed scripts use no memory writes or state loads; the full-Bag fixture is outside this focused review. ROM/symbols and four original saves unchanged. Existing v2.10 Austin-copy validation applies; full fresh-game story evidence remains v1.15.
+
+## v2.10: Southampton Town Quay rails
+
+6 fresh v2.10 PASS results: two static preservation/art/capacity/determinism checks, one exact Southampton regeneration check and three native quay/save/sign/map/return checks. Eight edge cells x48/x50,y35..38 receive rails; every original terrain/collision/elevation/behavior and all events/palettes/terminal artwork remain intact. Eight tiles/two metatiles append, reaching 381 of 384 secondary tiles. All three columns traverse y34..38 both ways; ordinary tip Save/cold Continue retains exact grid/location/progress. Native checks use an earned completed-arrival battery without state loads or memory writes. Austin copy passes Continue/Party/Bag/Save/cold Continue; four original saves unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.09: Le Havre saved-route compatibility
+
+7 fresh native v2.09 compatibility PASS results: Le Havre arrival/return directions three, dock instructions two, genuine v0.38 adjacent transport-clerk migration one and genuine v0.39 adjacent dockworker migration one. Quest tests use earned battery checkpoints and ordinary Save/cold Continue between stages. Boarding gates, saved captain welcome, dock request/notice/confirmation, repeat interactions, journal leads/paging and Rouen/Celebi return routes remain available. Executed scripts use no memory writes or state loads. ROM/symbols and four original saves unchanged. Existing v2.09 Austin-copy validation applies; full fresh-game story evidence remains v1.15.
+
+## v2.09: Le Havre harbor crossing rails
+
+7 fresh v2.09 PASS results: two static preservation/art/capacity/determinism checks, one exact Le Havre regeneration check and four native crossing/save/sign/map/return checks. Eighteen edge cells at x39..44,y18/19 and x41..43,y29/30 receive rails; all terrain/collision/elevation/behavior/events/palettes/terminal and Rouen remain exact. Eight tiles/two metatiles append, reaching 349 of 384 secondary tiles. Both lanes cross x38..45 and x40..44 both directions, with exact grid/location/progress after ordinary Save/cold Continue. Native checks use an earned completed-arrival battery without state loads or memory writes. Austin copy passes Continue/Party/Bag/Save/cold Continue; four original saves unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.08: Historical return-map heading
+
+11 fresh native v2.08 PASS results: nine historical contexts (Chantilly refuge/post, Beauvais town/garden, Amiens, Rouen, Le Havre, Southampton and London), plus two modern mixed-page checks. Every historical context uses earned battery saves, reads the correct era/anchor, browses stops, toggles Places/secondary pages/story, exits cleanly, saves and cold-loads with exact party/items/money/history/location preservation. Only the historical heading string changes; source preservation and native text width checked during packaging. Austin copy passes Continue/Party/Bag/Save/cold Continue. Four original saves unchanged. Full fresh-game story evidence remains v1.15.
+
+## v2.07: Historical crossing compatibility
+
+6 fresh native v2.07 compatibility PASS results: Amiens bulletin two, Rouen route book two, genuine v0.29 adjacent-Mira migration one and v0.35 adjacent-Leon/book migration one. Quest tests use earned battery checkpoints and ordinary Save/cold Continue between stages; no memory writes or state loads. Original quest crossings, repeats, journal leads and return routes remain usable with the newer bridge scenery. The full-Bag scenario is outside this focused review. ROM/symbols and four original player saves unchanged. Existing v2.07 Austin-copy validation applies; full fresh-game story evidence remains v1.15.
+
+## v2.07: Amiens river/canal bridge rails
+
+8 fresh v2.07 PASS results: two static preservation/art/capacity/determinism checks, one exact Amiens/Rouen generation check, and five native bridge/save/sign/map/train/Celebi checks. Amiens bridge edges x30/x32 and x53/x55,y10..12; x39..41,y6/y7 use sixteen appended tiles/four metatiles, reaching 308 secondary tiles. River lanes traverse y9..14; canal lanes traverse x38..42, both ways. Original quest hub/collision/events/palettes and Rouen remain exact. Generator now preserves shared layout newline style. Native checks use an earned older Rouen-arrival battery followed by native train travel to Amiens without memory writes/state loads. Austin copy passes Continue/Party/Bag/Save/cold Continue; four original saves unchanged. Full fresh-game evidence remains v1.15.
+
+## v2.06: Rouen Seine bridge rails
+
+7 fresh v2.06 PASS results: two static preservation/art/capacity/determinism checks, one exact Amiens/Rouen generation check, and four native bridge/save/sign/map/train/Celebi checks. Rouen bridge edges x43/x45 and x71/x73,y25..27 use eight appended tiles/two metatiles, reaching 308 secondary tiles. All three columns on each crossing traverse y24..29 both ways. Original book-search hub/collision/events/palettes and Amiens remain exact. Generator now preserves shared layout newline style. Native checks use an earned older Rouen-arrival battery without memory writes/state loads. Austin copy passes Continue/Party/Bag/Save/cold Continue; four original saves unchanged. Full fresh-game evidence remains v1.15.
+
+## v2.05: London bridge compatibility
+
+7 fresh native v2.05 compatibility PASS results: modern London scenery/routes/save/services three, historical arrival/return guidance three, and genuine v0.48 adjacent-clerk migration one. Both modern green/red bridge lanes cross in both directions. Historical checks use earned prerequisite and arrived/welcomed batteries with No/B declines, Save/cold Continue, Southampton return and repeated Rose talks. Migration creates an ordinary native v0.48 battery beside the clerk, loads it on v2.05, boards to London and records Rose welcome. Executed scripts use no memory writes/state loads. ROM/symbols and four original player saves unchanged. Existing v2.05 Austin copy verification applies; full fresh-game story evidence remains v1.15.
+
+## v2.05: Historical London bridge rails
+
+7 fresh v2.05 PASS results: two static preservation/art/determinism checks, one exact historical map generation check (palace present, modern wheel absent), and four native bridge/save/sign/map/story/transport checks. Rail overlays occupy river cells x52..57,y15..16 and x54..59,y32..33, retaining native paving attributes. Four metatiles append while every prior tile/palette/mapping stays exact. Native checks continue an earned London-completed battery without memory writes/state loads. Austin copy passes Continue/Party/Bag/Save/cold Continue; four original saves unchanged. Full fresh-game evidence remains v1.15.
+
+## v2.04: Combined coastal railings
+
+15 fresh v2.04 native PASS results on one earned completed journey through Dover and Calais. Each port checks three railing lanes both directions, five landmark paths, three reachable/read-only signs, exact tip Save/cold Continue and full authored grid, correct present-day Town Map/Places controls and clean field return, ferry round trip and capital coach exit. Final saved Oxford ending retains all completed activities. Executed script uses native controls without memory writes/state loads. Screens inspected in both ports. ROM, symbols and four original saves unchanged. Existing v2.04 player-copy validation applies; full fresh-game evidence remains v1.15.
+
+## v2.04: Dover harbor railings
+
+7 fresh v2.04 PASS results: two static art/preservation/capacity/determinism checks, one exact two-port asset/map generation check, and four native row/save/sign/ferry/coach/ending checks. Dover uses 382 of 384 secondary tiles, appending one rail tile and two metatiles with vertical flip and an existing transparent tile. Rows y31,32,33 remain walkable across x27..38. Native checks continue an earned earlier Dover battery without memory writes/state loads. Austin copy passes Continue/Party/Bag/Save/cold Continue; four original saves unchanged. Full fresh-game evidence remains v1.15.
+
+## v2.03: Exact port regeneration
+
+1 fresh full-pipeline PASS on unchanged v2.03. Both port asset and map generators reproduce all captured map grids/borders, landmark metadata, tiles/metatiles/attributes/palettes, map events/scripts and shared layouts byte-for-byte. Initial mismatch affected only layouts.json newline style; generator now preserves it. Test restores original outputs on failure. ROM, symbols and four original saves unchanged; existing v2.03 native pier/transport/player-copy evidence remains valid.
+
+## v2.03: Calais pier railings
+
+6 fresh v2.03 PASS results: two static pier preservation/art/capacity/determinism checks and four native lane/cold Continue/sign/ferry/coach/ending checks. Calais uses 353 secondary tiles after appending eight tiles and two metatiles. Native checks use an earned older Calais district battery without memory writes or state loads. All three lanes x50,51,52 traverse y5..10 both ways. Native Save/cold Continue preserves exact tip/district state. Austin copy passes Continue/Party/Bag/Save/cold Continue; four original saves unchanged. Full fresh-game evidence remains v1.15.
+
+## v2.02: Services marker directions
+
+11 fresh v2.02 PASS results: four exact source/font-fit checks and seven native regional Services/navigation/cold Continue/ending checks. Only the three regional Services text entries change; capital Rooms, other pages and navigation code remain exact. Screens inspected in all three towns. Native tests continue earned completed batteries without memory writes or state loads. Austin copy passes Continue/Party/Bag/Save/cold Continue, retaining Paris location, level-10 Chikorita and money3176. Four original saves unchanged. Full fresh-game evidence remains v1.15.
+
+## v2.01: Combined regional service markers
+
+16 fresh native PASS results on unchanged v2.01: clinic markers/care three, station markers/rail three, Gym markers/readiness/declines three, and regional map Services controls seven. Existing earned completed and Gym-ready batteries use native button input, Save and cold Continue. Screens inspected across all three towns. Executed scripts use no memory writes/state loads. ROM/symbols and four original saves remain unchanged. Austin compatibility evidence is the existing v2.01 player-copy run; full fresh-game evidence remains v1.15.
+
+## v2.01: Regional Gym signs
+
+7 fresh v2.01 PASS results: three static checks, three native Gym marker/read/save/entry/readiness/decline/exit checks, and one exact regional generation check. Four tiles and one metatile append per town. Earned Gym-ready batteries use native controls without memory writes or state loads. Austin player copy passes Continue/Party/Bag/Save/cold Continue; four original saves remain unchanged. Full New Game evidence remains v1.15.
+
+## v2.00: Regional station signs
+
+7 fresh v2.00 PASS results: three static preservation checks and three native sign/read/cold Continue/station/rail checks and one full regional generation check. Four tiles and one metatile append per regional tileset; no palette/event/collision changes. Genuine completed native batteries read signs from (22,12), save/reload, enter stations from (23,10), cold-load interiors and complete capital rail round trips. No memory writes/state loads. Austin player copy validates Continue/Party/Bag/Save/cold Continue; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.99: Regional clinic signs
+
+7 fresh v1.99 PASS results: three static preservation checks and three native sign/read/cold Continue/care checks and one full regional generation check. Four tiles and one metatile append per regional tileset; no palette/event/collision changes. Genuine completed native batteries read signs from5,12, save/reload and enter clinic at6,10 for repeatable care. No memory writes/state loads. Austin player copy validates Continue/Party/Bag/Save/cold Continue; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.98: mixed modern map browsing
+
+2 fresh native v1.98 PASS results use genuine regional-services-complete battery. One session visits all eight modern stops: L selects Rooms for capitals, Services for regional towns and stays Places for ports. Stop changes clear secondary pages; A routes and SELECT story reset them. Native Save/cold Continue repeats the traversal without changes to completed party/money/items/progress/location. No memory writes/state loads. ROM/symbols and four original saves unchanged.
+
+## v1.98: map page compatibility
+
+17 fresh v1.98 native PASS results: capital Rooms four and coastal Places/sightseeing thirteen. Genuine completed batteries retain capital L toggles/B exits, Dover/Calais R Places controls and stop browsing, authored sightseeing paths/signs, native coach/ferry travel, cold Continue and repeatable Ada ending. Services expansion leaves these existing controls usable. No memory writes/state loads. ROM/symbols and four original saves unchanged; no new full-game claims.
+
+## v1.98: Oranienburg clinic roof
+
+7 fresh v1.98 native PASS results: current regional Places/Services toggles and saved pages in all three towns plus completed Ada return. Genuine completed battery uses native travel and L toggles; new service text names current roofs and entry/supplies. No memory writes/state loads. Austin save validates Continue/Party/Bag/Save/cold Continue on copy; four original saves unchanged. Full New Game evidence remains v1.15.
+
+## v1.97: exact regional regeneration
+
+One full three-city regeneration PASS on v1.97: all Gym/station/clinic/bridge tiles, metatiles, attributes, palettes, mappings, maps, layouts and events match captured originals byte-for-byte. The audit found script suffix truncation and line-ending rewriting; corrected build-regional-maps.py retains later quest scripts and unchanged landmark formatting. Failed audit outputs were restored automatically; final full regeneration has zero changed files. Native ROM/symbols and four original player saves unchanged; no new runtime claims.
+
+## v1.97: combined clinic exterior review
+
+6 fresh native PASS results on unchanged v1.97: two per regional clinic. Genuine completed batteries load current authored grids, native clinic doors and exact exterior/interior cold Continue work; repeated free care restores full HP/status and changes no money or inventory. Nearby service/landmark paths and saved Ada ending remain usable. These checks use existing completed parties, not injected damage fixtures. No memory writes/state loads. ROM/symbols and four original saves unchanged; full fresh-game evidence remains v1.15.
+
+## v1.97: Oranienburg clinic roof
+
+4 fresh v1.97 PASS results: two static preservation/determinism checks and two native earlier-save/map/clinic/rail/cold Continue checks. Nine metatile variants and copied native wall tiles append after prior artwork; palettes unchanged. Native completed Oranienburg battery refreshes authored grid, uses unchanged door and services/landmark paths, saves and repeats Ada ending without rewards. No memory writes/state loads. Austin save validates on copy; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.96: Chantilly clinic roof
+
+4 fresh v1.96 PASS results: two static preservation/determinism checks and two native earlier-save/map/clinic/rail/cold Continue checks. Nine metatile variants and copied native wall tiles append after prior artwork; palettes unchanged. Native completed Chantilly battery refreshes authored grid, uses unchanged door and services/landmark paths, saves and repeats Ada ending without rewards. No memory writes/state loads. Austin save validates on copy; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.95: Oxford clinic roof
+
+4 fresh v1.95 PASS results: two static preservation/determinism checks and two native earlier-save/map/clinic/rail/cold Continue checks. Nine metatile variants and copied native wall tiles append after prior artwork; palettes unchanged. Native completed Oxford battery refreshes authored grid, uses unchanged door and services/landmark paths, saves and repeats Ada ending without rewards. No memory writes/state loads. Austin save validates on copy; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.94: combined station exterior review
+
+12 fresh native PASS results on unchanged v1.94: station exteriors/routes two each plus six branch notice/old indoor save checks. Current grids load correctly, door entry/exit, native capital round trips and exact cold Continue preserve progress. Genuine v1.09 indoor batteries retain notice reads, exits, Gym/contact approaches and saved re-entry. No memory writes/state loads in executed native checks. ROM/symbols and four original saves unchanged; full fresh-game evidence remains v1.15.
+
+## v1.94: Oranienburg station roof
+
+4 fresh v1.94 PASS results: two static preservation/determinism checks and two native earlier-save/map/station/rail/cold Continue checks. Eight metatile variants and nine roof tile copies append after prior artwork; palettes unchanged. Native completed Oranienburg battery refreshes authored grid, uses unchanged door and services/landmark paths, saves and repeats Ada ending without rewards. No memory writes/state loads. Austin save validates on copy; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.93: Chantilly station roof
+
+4 fresh v1.93 PASS results: two static preservation/determinism checks and two native earlier-save/map/station/rail/cold Continue checks. Eight metatile variants and nine roof tile copies append after prior artwork; palettes unchanged. Native completed Chantilly battery refreshes authored grid, uses unchanged door and services/landmark paths, saves and repeats Ada ending without rewards. No memory writes/state loads. Austin save validates on copy; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.92: Oxford station roof
+
+4 fresh v1.92 PASS results: two static preservation/determinism checks and two native earlier-save/map/station/rail/cold Continue checks. Eight metatile variants and nine roof tile copies append after prior artwork; palettes unchanged. Native completed Oxford battery refreshes authored grid, uses unchanged door and services/landmark paths, saves and repeats Ada ending without rewards. No memory writes/state loads. Austin save validates on copy; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.91: combined regional roof review
+
+21 fresh native PASS results on unchanged v1.91: each regional roof two, Gym doors nine and Oxford bridges six. Earlier earned batteries load current authored grids, native Gym doors and service/landmark routes work, exact saved approaches and read-only leader declines retain progress. Both Oxford bridge rows cross and cold Continue; saved Ada ending remains read-only. No memory writes/state loads or new battle-victory claims. ROM/symbols and four original saves unchanged.
+
+## v1.91: Oranienburg Gym roof
+
+4 fresh v1.91 PASS results: two static preservation/determinism checks and two native earlier-save/map/Gym/path/cold Continue checks. Eight metatile variants and nine roof tile copies append after prior artwork; palettes unchanged. Native completed Oranienburg battery refreshes authored grid, uses unchanged door and services/landmark paths, saves and repeats Ada ending without rewards. No memory writes/state loads. Austin save validates on copy; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.90: Chantilly Gym roof
+
+4 fresh v1.90 PASS results: two static preservation/determinism checks and two native earlier-save/map/Gym/path/cold Continue checks. Eight metatile variants and nine roof tile copies append after prior artwork; palettes unchanged. Native completed Chantilly battery refreshes authored grid, uses unchanged door and services/landmark paths, saves and repeats Ada ending without rewards. No memory writes/state loads. Austin save validates on copy; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.89: Oxford Gym roof
+
+4 fresh v1.89 PASS results: two static preservation/determinism checks and two native earlier-save/map/Gym/path/cold Continue checks. Eight metatile variants and nine roof tile copies append after prior artwork; palettes unchanged. Native completed Oxford battery refreshes authored grid, uses unchanged door and services/landmark paths, saves and repeats Ada ending without rewards. No memory writes/state loads. Austin save validates on copy; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.88: combined customization review
+
+7 fresh native PASS results on unchanged v1.88: reverse preview one, live preview colors one, registered/cycling movement one, outfits two and flowers two. Real controls cover all avatars/poses, restore confirmation, menu cleanup, trainer identity, field cycling, saved clothing and flower preferences. No memory writes/state loads. ROM/symbols and four original saves unchanged; full New Game evidence remains v1.15.
+
+## v1.88: Complete preview restore
+
+Fresh v1.88 native restore check covers customized avatar/outfit, bicycle/back-facing preview, confirmation isolation, B cancellation preserving view/settings, confirmed default preferences and front-facing walk, clean field return and cold Continue. No memory writes/state loads. Original player copy passes Continue/Party/Bag/Save/cold Continue; four originals unchanged. Full New Game evidence remains v1.15.
+
+## v1.87: Bidirectional avatar preview
+
+Fresh v1.87 native preview PASS covers all three avatar styles and walk/bike poses, four L and R turns, L/R cancellation, confirmation ignore/cancel and field continuity. Visual hint inspected. Player save validates native Continue/Party/Bag/Save/cold Continue on a copy; original four saves unchanged. Full New Game evidence remains v1.15.
+
+## v1.86: Pending Gym TM recovery
+
+12 fresh v1.86 PASS results on isolated existing Gym capacity fixtures: each city checks TM-stack and key-pocket pending instructions/repeats/cold Continue, native TM Case Give cancel/transfer and one-time leader claim. Full-pocket inputs are synthetic fixtures; current recovery interactions use native controls, no memory writes/state loads in this script. All badges, eligibility, held copies and completed repeat state remain correct. No ordinary-play full-pocket or new full-game claims. ROM/symbols and four original saves unchanged.
+
+## v1.86: Oak/Celine report-to-Gym journals
+
+8 fresh native PASS results on unchanged v1.86 using earned story-rival-won and celine-survey-gardens-forest-review batteries. Native capital return reaches contact10,14, report leads4/12 survive exact cold Continue; normal hand-ins grant one Soothe Bell/Miracle Seed and switch to Gym leads5/13. Repeats are read-only. Native door and indoor routes reach Ellis/Marine; exact saved readiness and B declines retain rewards without new badges. No memory writes/state loads or new battle claims. ROM/symbols and four original saves unchanged.
+
+## v1.86: German report-to-Gym journal
+
+4 fresh native PASS results on unchanged v1.86 using genuine lena-delivery-delivered battery. Native rail return reaches Lena10,14 with lead17 and exact saved state; normal reward grants exactly one Magnet, switches to lead18 and repeats read-only. Native travel and Gym door lead to Conrad6,6, saved cold Continue retains readiness; B declines without battle or badge/reward changes. No memory writes/state loads or new battle-victory claims. ROM/symbols and four original saves unchanged.
+
+## v1.86: German delivery and Gym approaches
+
+16 fresh native PASS results on unchanged v1.86: German delivery seven and Gym entry nine. Native earned two-badge checkpoint covers unaccepted Karl talk, Lena No/B, parcel acceptance, Karl hand-in, Lena one-time Magnet, repeat talks and cold Continue. Earned unlocked Gym checkpoints cover Oxford/Chantilly/Oranienburg doors, indoor journal leads, exact saved entries, leader B declines and normal exits. No memory writes/state loads or new battle-victory claims. ROM/symbols and all four original saves unchanged; full New Game evidence remains v1.15.
+
+## v1.86: combined French direction review
+
+19 fresh native PASS results on unchanged v1.86: marker journal four, branch journal six and French survey nine. Both observation orders retain required Remy review and exactly one Miracle Seed. Marker and contact approaches survive native Save/cold Continue; repeat observations, journal controls and completed survey talks preserve expected state. Branch suite also checks Karl delivery. Earned checkpoints use native buttons, without memory writes or state loads. ROM/symbols and all four original saves remain unchanged. Full New Game evidence remains v1.15.
+
+## v1.86: French marker journal directions
+
+6 fresh v1.86 PASS results: two static text-only/font checks plus four native habitat route/observation/cold Continue checks. Four changed lines retain exact lead selection, milestones and other text. Earned celine-survey-active battery follows paved Paris/Chantilly approaches; combined lead8 shows new directions before UP/A records1->2/3, remaining leads9/10 name the unvisited habitat. Repeat reads/journal controls and exact cold Continue preserve recorded state/location. Updated pages inspected. No memory writes/state loads or new full-game claims. Austin save validates native Continue/Party/Bag/Save/cold Continue on a copy. Four original saves and archived v1.85 ROM unchanged. Full New Game evidence remains v1.15.
+
+## v1.85: French study marker approaches
+
+4 fresh native PASS results on unchanged v1.85. Genuine celine-survey-active battery walks Paris16,14 LEFT1 UP15 through transition UP6 LEFT2 to13,17, and normal rail to Chantilly then16,14 LEFT1 DOWN10 through transition DOWN21 LEFT2 to13,21. UP/A records active survey1->2 or3 without money/item changes; repeat reads preserve exact state. Journal leads9/10 name the remaining habitat, and native cold Continue retains exact observation/location/state and read-only controls. No memory writes/state loads or new full-game claims. Original saves and ROM/symbol hashes unchanged; full New Game evidence remains v1.15.
+
+## v1.85: combined early-country journal directions
+
+26 fresh native PASS results on unchanged v1.85: trainer leads four, branch contacts six, survey nine and delivery seven. Earned checkpoints retain updated Oliver/Alice leads1/2 and Remy/Karl leads11/16, exact native cold Continue and read-only journal controls. Normal Remy/Karl hand-ins advance only expected report/delivery stages without item grants. Both survey orders retain gates and one Miracle Seed; Lena delivery retains declines, parcel/report progression and one Magnet. Completed historical journey repeat talks remain read-only. No memory writes/state loads or new full New Game/capacity claims. ROM/symbols and all four original player saves unchanged; full fresh-game evidence remains v1.15.
+
+## v1.85: English trainer journal directions
+
+6 fresh v1.85 PASS results: two static scope/font checks plus four native trail-lead/cold Continue checks. Only two direction lines change; all lead selection, milestones and other text remain exact. Genuine england-accepted-Oliver and england-reminder-Alice-trainer batteries show leads1/2 at17,19, exercise normal topic/records/exit controls and cold Continue with exact state/location. Pages inspected in-game. No memory writes/state loads or new trainer victories claimed. Austin save validates native Continue/Party/Bag/Save/cold Continue on a copy. Four original saves and archived v1.84 ROM unchanged. Full New Game evidence remains v1.15.
+
+## v1.84: English trail approach directions
+
+4 fresh native PASS results on unchanged v1.84. Genuine early-contact-england-accepted battery walks London15,14 UP15 through transition UP4 RIGHT2 to Oliver; normal rail travel to Oxford then15,14 DOWN10 through transition DOWN19 RIGHT2 reaches Alice. Both approaches17,19 preserve items/money/story; UP/A reaches normal offer, No/B and exact cold Continue retain unbeaten trainers. No memory writes/state loads or new victory claims. Original saves and ROM/symbol hashes unchanged; full New Game evidence remains v1.15.
+
+## v1.84: combined three-country journal and quest review
+
+24 fresh native PASS results on unchanged v1.84: approach guidance eight, Celine survey nine, Lena delivery seven. Earned checkpoints read updated rival/Gym leads3/5/13/18 and cold Continue at exact approaches. Both French observation orders retain missing-site/review gates and exactly one Miracle Seed; German delivery retains offer declines, parcel/report stages and exactly one Magnet. Saved active, reviewed, delivered, rewarded and completed states remain correct; completed historical journey repeat talks remain read-only. No memory writes/state loads, new capacity-fixture claims or full New Game runs. Walkthrough verification introduction condensed without changing route steps; detailed historical evidence retained here and in archives. ROM/symbols and four original player saves unchanged; full fresh-game evidence remains v1.15.
+
+## v1.84: branch contact journal directions
+
+8 fresh v1.84 PASS results: two static text-only/font checks plus six native branch-contact checks. Three changed lines preserve all lead selection, milestones and other text. Earned france-both and lena-delivery-active batteries reach branch squares normally, walk LEFT six to10,14, read updated leads11/16 and cold Continue with exact state. DOWN/A normally advances Remy review4->5 and Karl delivery1->2 without item/money changes. Updated pages inspected. No memory writes/state loads or new rewards claimed. Austin save validates native Continue/Party/Bag/Save/cold Continue on a copy. Four original saves and archived v1.83 ROM unchanged. Full New Game evidence remains v1.15.
+
+## v1.83: branch contact approaches
+
+6 fresh native PASS results on unchanged v1.83. Earned celine-survey-gardens-forest-review and lena-delivery-active batteries use normal town rail travel; LEFT six from16,14 reaches10,14. Correct Tour leads12/16 and cold Continue retain exact state/location. Remy repeats reviewed report without change; Karl normally advances delivery1->2 without item/money changes, then saves. No memory writes/state loads or new rewards claimed. All four original saves and ROM/symbol hashes unchanged; full New Game evidence remains v1.15.
+
+## v1.83: native Gym doors and saved entry
+
+9 fresh native PASS results on unchanged v1.83. Genuine tour-approach Oxford/Chantilly/Oranienburg unlocked batteries walk UP from15,10 into correct Gym arrivals6,14/8,18/6,14. Tour leads5/13/18 remain read-only. Exact native indoor Save/cold Continue restores party/items/money/progress/position. Normal paths reach leaders, B declines avoid battle and south exits restore town15,10; saved returned positions remain correct. No memory writes/state loads, new Gym victories or capacity fixtures. Walking friendship may change normally. ROM/symbols and all four original saves unchanged; full New Game evidence remains v1.15.
+
+## v1.83: rival and Gym journal directions
+
+10 fresh v1.83 PASS results: two static scope/font/array checks plus eight native approach/journal/cold Continue checks. Only four direction lines change; lead selection, milestones and other text remain exact. Genuine rival-prep-ready and three gym-ready unlocked batteries reach their approach tiles, read leads3/5/13/18, exercise normal topic/records/exit controls and cold Continue with exact state/location. Updated pages inspected in-game. No memory writes/state loads or new battle claims. Original Austin battery passes native Continue/Party/Bag/Save/cold Continue on a copy. Four original saves and archived v1.82 ROM unchanged. Full New Game evidence remains v1.15.
+
+## v1.82: unlocked delivery and reward compatibility
+
+7 fresh native PASS results on unchanged v1.82. Genuine water-gym-complete battery leaves the Gym and travels normally to Karl/Lena. Karl cannot start the unaccepted mission. Lena No/B and native cold Continue preserve stage0; native acceptance stage1, Karl hand-in stage2 and Lena report stage3 retain normal quest progression. Exactly one Magnet, repeated NPC conversations and saved active/delivered/reward/completed locations retain state. Completed historical journey Lena repeat remains read-only. No memory writes or state loads; no capacity-fixture or full New Game claim. ROM/symbols and four original saves unchanged; full fresh-game evidence remains v1.15.
+
+## v1.82: Lena early badge directions
+
+9 fresh v1.82 PASS results: two static text-only/font checks and seven native early-contact checks. Only Lena's badge-gate help appends; all script commands, gates, rewards and other text restore exactly to v1.81 baseline. Saved first-starter country openings repeat early contacts and cold Continue with exact party/items/money/all story variables/position; normal Oak acceptance remains saved. New Lena pages inspected in-game; Celine's recent directions remain included. No memory writes/state loads. Original Austin battery passes native Continue/Party/Bag/Save/cold Continue on a separate copy. Four original saves and archived v1.81 ROM unchanged. Full New Game evidence remains v1.15.
+
+## v1.81: unlocked survey and reward compatibility
+
+9 fresh native PASS results on unchanged v1.81. Genuine gym-complete battery travels normally to Celine; No/B preserves exact state, native acceptance saves stage1. Both marker orders progress1->2/3->4->5->6, with first-marker repeats, no early Remy review or Celine reward, required Remy review, one normal Miracle Seed and repeat/save/cold Continue safety. Completed current-navigation journey repeats Celine with all items/story unchanged. No memory writes or emulator state loads; no new capacity-fixture or full New Game claim. ROM/symbols and all four original player saves unchanged; full fresh-game evidence remains v1.15.
+
+## v1.81: Celine first-badge directions
+
+9 fresh v1.81 PASS results: two static text-only/font checks and seven native early-contact checks. Only Celine first-badge help appends; all quest gates, rewards and other text restore exactly to v1.80 baseline. Saved first-starter openings repeat early contact gates/refusals, native cold Continue with exact party/items/money/all story variables/position, and accept/save Oak's study normally. Celine's new directions inspected in-game. No memory writes or state loads. Original Austin battery passes native Continue/Party/Bag/Save/cold Continue on a separate copy. Four original saves and archived v1.80 ROM unchanged. Full New Game evidence remains v1.15.
+
+## v1.80: early quest-contact review
+
+7 fresh native PASS results on unchanged v1.80: three early contact repeat/refusal/gate checks, three exact cold Continue checks and one normal Oak acceptance/save check. Saved first-starter country openings reach10,14 and face DOWN. Oak No/B preserves all state; France/Germany badge-gated talks preserve party, money/items, all story variables and position. Native Yes advances England study to1 and cold Continue retains it. Screenshots of Celine/Lena gate text inspected. No memory writes/state loads. Original saves and ROM/symbol hashes unchanged; full fresh-game evidence remains v1.15.
+
+## v1.80: completed travel boards and historical navigation
+
+34 fresh native PASS results on unchanged v1.80: completed boards thirteen plus saved navigation twenty-one. Board suite starts from completed-board-London, a genuine native save following the normal first grant of missing key item363 (Fame Checker/World Options). Initial current-navigation-complete lacked that item; the first visit legitimately added it, without story-variable changes. Repeat checks then visit each of six modern boards twice, cold Continue at the board and repeat again; stationary party, money, items, all story variables and position remain exact. Gifts stay gated and each board opens the correct present-day map. Navigation retains six modern towns/four historical sites, era/selection, map wrap, full historical/tour journals, topics/pages, registered B/START exits, exact cold Continue and final Ada ending. No memory writes or state loads. ROM/symbols and all four original saves unchanged. Full New Game evidence remains v1.15.
+
+## v1.80: travel-board journal onboarding
+
+11 fresh v1.80 PASS results: two static text-only/font checks plus nine native opening checks. Board script commands, gift gates, map transition and original text remain exact with appended help pages. Genuine saved first-starter openings in England/France/Germany read the new pages, receive normal map gifts, use Tour topic lead zero, save/cold Continue at exact board position and reach London aide through normal walking/rail. Screenshots of new board help inspected. Stationary journal controls preserve full state; initial story variables remain zero through travel. No memory writes or emulator state loads in the suite. Original Austin/Chikorita10/money3176 battery passes native Continue/Party/Bag/Save/cold Continue on a separate copy. Four original saves and archived v1.79 ROM unchanged. Focused saved-opening checks; full New Game evidence remains v1.15.
+
+## v1.79: opening journal guidance
+
+9 fresh native PASS results on unchanged v1.79: England/France/Germany first-starter saved openings each acquire/open Town Map through the board, show Tour lead zero without advancing story, native Save/cold Continue with exact board position/state, and walk/travel normally to London aide at10,14. Topic/records controls are read-only; board grants normal key items. No memory writes or emulator state loads in this suite. Focused saved-opening coverage, not three new full New Game runs. Walkthrough adds exact Europe Tour topic controls and first objective. ROM/symbols and four original player saves unchanged; full New Game evidence remains v1.15.
+
+## v1.79: combined map guidance and saved navigation
+
+34 fresh PASS results on unchanged v1.79: combined source/font checks six, regional Places native controls/save checks seven, modern/historical navigation twenty-one. Five Places entries are the only europe_map.c changes since v1.77; capital pages and all navigation code remain exact. Oxford/Chantilly/Oranienburg pages retain browsing/A/R/B controls and cold Continue. Six modern towns plus historical Chantilly refuge, Le Havre, Southampton and London1940 retain correct map era/selection, eight-stop wrap, completed historical and tour journals, read-only topics/pages, registered map B/START exits and exact cold Continue state. Final native Ada return preserves purchases/rewards/story. Coastal page/path coverage is the separate initial v1.79 thirteen-check suite, not counted again here. No memory writes/state loads. ROM and matching symbols retain release hashes; all four original saves unchanged. Full New Game evidence remains v1.15.
+
+## v1.79: coastal landmark map directions
+
+16 fresh v1.79 PASS results: three static scope/font/array checks plus thirteen native coastal checks. Only the two coastal Places entries change; navigation code and other pages restore exactly to v1.78 baseline. Genuine regional-map-complete battery takes normal rail/coach journeys, walks ten path points, reads all six signs, saves inside each district and cold Continues with exact authored map tiles/location/state. New Places pages browse next/back, return through A/R and close with B while preserving stationary full party, items, money and all story variables. Ferry round trips, capital exits and saved Ada ending retain completed activities. Walking friendship may change normally. In-game new pages inspected. Original Austin battery passes native Continue/Party/Bag/Save/cold Continue on a copy. Four original saves and v1.78 ROM unchanged. Full New Game evidence remains v1.15.
+
+## v1.78: present-day coastal sightseeing review
+
+13 fresh native PASS results on unchanged v1.78: two coach/quay/landmark-path checks, six read-only signs, two district cold Continue/map checks, two ferry/capital return checks and one saved Ada ending. Genuine regional-map-complete battery reaches ports using normal rail and coach travel. Every loaded port tile matches authored layout; stationary interactions retain full party/state/location; walks retain exact money/items and all story variables (friendship may change normally). Full sign text screenshots inspected. No memory writes or state loads. Original four player saves and ROM/symbol hashes unchanged. Full fresh-game evidence remains v1.15.
+
+## v1.78: regional directions and district review
+
+32 fresh native PASS results on unchanged v1.78: current regional signs 15, Oxford bridges six, Chantilly moat five and Oranienburg bridges six. Earned completed batteries retain stationary sign/map state, completed story variables, exact inventory/money, authored loaded tiles, saved locations and journal through native walking and cold Continue. Includes service approaches, southern trail round trips, historical Chantilly revisit and Ada ending repeat. Walking friendship may change normally. Walkthrough and geography descriptions reconciled with actual district routes; all regional landmarks are exterior scenery. ROM/symbol hashes and all four original player saves unchanged. Full New Game evidence remains v1.15.
+
+## v1.78: regional landmark map directions
+
+11 fresh v1.78 PASS results: four static scope/font/array checks and seven native page/save/ending checks. Only three regional sPlacesLines entries change; all other text and navigation code restore exactly to v1.77 baseline. Each town opens its Places page, browses the adjacent stop and back, returns through A/R and exits with B without changing stationary party, inventory, money, all story variables or position. Cold Continue reopens each page and retains the completed journey. Native Oxford return and saved Ada ending preserve rewards. In-game pages inspected for layout. Original player battery passes native Continue, Party/Bag, Save/cold Continue on a separate copy. Four original saves and v1.77 ROM unchanged. Full fresh-game evidence remains v1.15.
+
+## v1.77: regional landmark sign review
+
+15 fresh native PASS results on unchanged v1.77: nine reachable, readable, read-only scenery signs; three correct present-day Town Map selections with walking restored; three exact cold Continue checks. Source is the genuine completed Oranienburg bridge journey. No memory writes or emulator state loads. All completed story variables, inventory and money preserved; stationary sign/map interactions preserve the full party. Screenshots confirm sign identities, with some captured during text reveal. Walkthrough gains nine exact approach/facing directions. ROM and four original saves retain their hashes.
+
+## v1.77: combined regional bridges and walkthrough
+
+23 fresh PASS results on unchanged v1.77: six static checks plus Oxford runtime six, Chantilly runtime five and Oranienburg runtime six. Native earned batteries retain authored map tiles, location, inventory, story progress and completed journal through bridge walking, Save/cold Continue, service/trail approaches and Ada return; Chantilly includes a saved historical revisit. No emulator memory writes or state loads. Exact optional routes added to walkthrough. Full New Game evidence remains v1.15. Canonical/release ROM and symbols retain their hashes; four original player saves remain byte-identical.
+
+## v1.77: Oranienburg bridge parapets
+
+Nine fresh v1.77 PASS results: two static checks, one deterministic generation/application check and six native runtime checks. Genuine chantilly-bridge-complete journey travels normally to Oranienburg. Both rows on both Havel crossings are walked east/west; native bridge saves cold Continue with exact state/location and every loaded map tile matching the authored grid. Complete journal remains read-only. Palace court, park, Havel bank, actual Gym approach15,10, station/clinic and southern trail round trip retain exact items/money/progression; native rail return to Oxford and saved Ada ending repeat safely. Walking may legitimately change friendship. Twelve deck cells change while collision/elevation/terrain behavior, other grid cells, events/scripts/map/layout IDs and prior art/mappings remain exact. Eight tiles/two metatiles append within212 secondary tiles using existing primary palette3. New bridge artwork inspected in-game. Original Austin/Chikorita10/money3176 save passes native Continue, Party/Bag, Save/cold Continue on a separate copy. Four original saves and archived v1.76 ROM unchanged. Full fresh-game evidence remains v1.15; music/splash evidence remains v1.25.
+
+## v1.76: Chantilly bridge parapets
+
+Eight fresh v1.76 PASS results: static compatibility2, deterministic generation/application1 and native runtime5. Genuine oxford-bridges-complete journey travels normally to Chantilly. Both columns of the moat bridge are crossed north/south; a bridge battery cold Continues with exact location/state and every loaded tile matching the authored map. Complete journal remains read-only. Château, stables, gardens, canal, actual Gym approach15,10, station/clinic and south trail round trip remain usable with exact inventory/money/progression. Native historical Chantilly visit saves/cold Continues then returns to Ada for saved repeat ending. Walking may change friendship; stationary saved checks retain exact party. Ten deck cells change while collision/elevation/behavior, other terrain/events/scripts/map/layout IDs and older art/mappings remain exact. Eight tiles/two metatiles append within276 secondary tiles using existing primary palette3; both bridge columns stay clear. Updated crossing visually inspected in-game. Separate copy of original Austin/Chikorita10/money3176 save passes Continue, Party, Bag, native Save/cold Continue. Four original saves and archived v1.75 ROM unchanged. Full fresh-game evidence remains v1.15; music/splash evidence remains v1.25.
+
+## v1.75: Oxford bridge parapets
+
+Nine fresh v1.75 PASS results: two static compatibility checks, one deterministic generation/application check and six native runtime checks. Genuine current-navigation-complete battery cold-loads the changed Oxford map; every loaded map tile matches the authored layout. Both rows of High Street and meadow crossings are walked east/west. Both bridge checkpoints native-save/cold Continue with exact state/location and complete read-only journal. Landmark paths, Gym/station/clinic approaches, south trail round trip and saved repeat Ada ending retain party identity, money, inventory and all variables40C0..40FF; walking may legitimately change friendship. Exactly twelve deck cells change, retaining their collision/elevation/terrain behavior; all other map cells and events/scripts/IDs remain exact. Two metatiles/eight tiles append, retaining prior artwork and mappings within208 secondary tiles. Stone overlays use existing primary palette3. Visual bridge inspection completed in-game. Separate copy of original Austin/Chikorita10/money3176 save passes native Continue, Party, Bag, normal Save and cold Continue. The earlier route diagnostic hit the map-board approach and granted WORLD OPTIONS on both v1.74 and this build; the final service route uses the actual Gym approach and leaves inventory exact. Four original saves and archived v1.74 ROM unchanged. Full fresh-game evidence remains v1.15; music/splash evidence remains v1.25.
+
+## v1.74: combined capital facade and navigation verification
+
+27 fresh PASS results on unchanged v1.74: two exact footprint/append-only asset checks per capital (six) plus current-navigation native runtime (21). Six modern towns and four historical sites retain correct map/era, complete historical and tour journals, read-only page/topic controls, registered Town Map B/START exits, exact cold-Continue location/state and final Ada ending. London/Paris/Berlin wall changes coexist with unchanged entrances, paths, prior art and map events. Walkthrough wall-color descriptions and current focused evidence updated; full New Game playthrough evidence remains v1.15. ROM and matching symbols retain the v1.74 hashes; four original player saves remain unchanged.
+
+## v1.74: Berlin western-home facade
+
+Fifteen fresh v1.74 PASS results: exact footprint/append-only assets 2, deterministic generation/application 1, genuine older capital homes and cold Continue 10, Berlin library/garden/Gate/Reichstag and saved Ada return 2. Exactly nine western Berlin wall cells at x42-46,y30-31 change; door43,31 and every other grid cell, event, script and map/layout ID remain exact. Copied native wall/window tiles preserve flips/transparency/attributes; palette8 supplies cool stone shades and retained blue glass. Earlier artwork/mappings are retained within 272 secondary tiles. Genuine paris-western-complete battery continues into homes, saves indoors and uses both exit tiles; nearby visitor invitations cancel safely and completed Reichstag repeats give no duplicate reward. New exterior visually inspected in-game. Separate copy of original Austin/Chikorita10/money3176 save passes native Continue, Party, Bag, normal Save and cold Continue. Four original saves and archived v1.73 ROM unchanged. Full fresh-game evidence remains v1.15; music/splash evidence remains v1.25.
+
+## v1.73: Paris western-home facade
+
+Fifteen fresh v1.73 PASS results: exact footprint/append-only assets 2, deterministic generation/application 1, genuine older capital homes and cold Continue 10, Paris garden/Eiffel/Notre-Dame and saved Ada return 2. Exactly nine western Paris wall cells at x44-48,y37-38 change; door45,38 and every other grid cell, event, script and map/layout ID remain exact. Copied native wall/window tiles preserve flips/transparency/attributes; palette3 supplies sandstone shades and original glass colors. Earlier artwork/mappings are retained within 296 secondary tiles. Genuine london-western-complete battery continues into homes, saves indoors and uses both exit tiles; nearby visitor invitations cancel safely and completed Notre-Dame repeats give no duplicate reward. New exterior visually inspected in-game. Separate copy of original Austin/Chikorita10/money3176 save passes native Continue, Party, Bag, normal Save and cold Continue. Four original saves and archived v1.72 ROM unchanged. Full fresh-game evidence remains v1.15; music/splash evidence remains v1.25.
+
+## v1.72: London western-home facade
+
+v1.72 has fifteen fresh PASS results: static footprint/asset compatibility 2, deterministic source regeneration/application 1, genuine earlier saved capital home interactions and cold Continue 10, London nearby routes and historical revisit 2. Native controls load current-navigation-London from v1.71, traverse both bridges, visit unchanged reading/Eye interiors, repeat completed Westminster without duplicate rewards, cold-save historical London and return normally to Ada. Exactly nine wall cells change while the original doorway, all other map cells/events/scripts/map/layout IDs retain exact bytes. Appended native wall tiles keep original flips/transparency/attributes and remain within secondary capacity at344 tiles. All previous used artwork and block mappings remain exact; existing palette8 supplies terracotta and glass colors. This reuses native architecture rather than adding new landmark replicas. Updated home exterior visually inspected in the emulator. Separate actual player-save validation loads Austin/Chikorita10/money3176 and checks Party/Bag/native Save/cold Continue on a copy. Four original player saves and archived v1.71 ROM unchanged. Full fresh-game evidence remains v1.15; music/splash evidence remains v1.25.
+
 ## London architecture: next facade scope and baseline
 
 Two fresh baseline PASS results from test_london_facade_static.py confirm the current eastern roof remap retains every tile attribute/native artwork and shared palettes, with distinct roof shades and transparency. This is pre-change baseline evidence for the planned western-home facade, not verification of new artwork. Four original player saves and the canonical v1.71 ROM remain unchanged.

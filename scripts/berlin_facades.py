@@ -46,6 +46,21 @@ def build():
     out.append(ids[t])
    rows.append(out)
   variants[label]=rows
+ western={};walltiles={};wallremap=[0,1,2,4,5,5,6,7,11,14,8,8,9,10,7,15]
+ for old in (0x298,0x299,0x29a,0x29b,0x29c,0x2a0,0x2a1,0x2a2,0x2a4):
+  entries=list(struct.unpack_from('<8H',meta,(old-640)*16))
+  for i,v in enumerate(entries):
+   if v>>12!=3:continue
+   tileid=v&1023
+   if tileid not in walltiles:
+    image=general.crop(((tileid%16)*8,(tileid//16)*8,(tileid%16)*8+8,(tileid//16)*8+8))
+    image.putdata([wallremap[c] for c in image.getdata()])
+    tiles.paste(image,((n%16)*8,(n//16)*8));walltiles[tileid]=640+n;n+=1
+   entries[i]=0x8000|(v&0xc00)|walltiles[tileid]
+  western[str(old)]=640+len(attrs)//4
+  meta+=struct.pack('<8H',*entries);attrs+=attrs[(old-640)*4:(old-640+1)*4]
+ variants.update(western_wall=western,wall_tiles=walltiles,wall_remap=wallremap)
+ assert n<=384
  assert len(attrs)//4<=384
  tiles.save(dest/'tiles.png');(dest/'metatiles.bin').write_bytes(meta);(dest/'metatile_attributes.bin').write_bytes(attrs)
  (R/'data/geography/berlin-facade-blocks.json').write_text(json.dumps(variants,indent=2)+'\n')

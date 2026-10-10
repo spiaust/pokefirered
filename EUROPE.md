@@ -3,6 +3,230 @@
 A FireRed-based prototype of a journey through real European countries.
 
 
+## v2.27: Eiffel observation room layout
+
+The Eiffel visitor room now has two rear windows, two left-side observation desks and an open right aisle. The guide and displays keep their positions and controls. Enter from Paris (9,37), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.26: London Eye gallery display tables
+
+The London Eye visitor gallery now has two native side display tables and a clear central aisle. Existing windows, attendant and displays keep their positions and controls. Enter from London (29,29), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.25: Palace visitor gallery layout
+
+The Oranienburg palace visitor room now has a gallery layout with two back-wall windows, two side display desks and a clear central aisle. The guide and displays keep their positions and controls. Enter from Oranienburg (48,9), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.24: Great Stables caretaker workroom layout
+
+The Great Stables visitor room now has a caretaker workroom layout with care-reference shelves, a back-wall window, two left-side care benches and a clear right aisle. The guide and displays keep their positions and controls. Enter from Chantilly (38,19), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.23: Magdalen study-room layout
+
+Magdalen now has a study-room layout with two back-wall windows, one side study desk and an open central floor. The guide and displays keep their positions and controls. Enter from Oxford (51,11), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.22: Chateau gallery layout
+
+Chateau now has a gallery layout with two central native map desks, clean wall panels and open side aisles. The guide and displays keep their positions and controls. Enter from Chantilly (51,11), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.21: Radcliffe reading-room layout
+
+Radcliffe now has a reading-room layout with two native bookcase pairs, two side tables and a clear central aisle. The guide and displays keep their positions and controls. Enter from Oxford (38,10), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.20: Enterable Magdalen visitor room
+
+Oxford now has a free Magdalen visitor room. From the town square, head east past Radcliffe Square to Magdalen, stand at (51,11), face north, press A and choose YES. Inside, a guide and two displays describe a tower drawing and Cherwell paths. Leave by walking south from (4,7) or (5,7); both exits return to (51,11). This optional room does not change story progress or give rewards. It is a visitor room, rather than the full college grounds.
+
+## v2.19: Enterable Great Stables visitor room
+
+Chantilly now has a free Great Stables visitor room. From the town square, head east to the Great Stables, stand at (38,19), face north, press A and choose YES. Inside, a caretaker and two displays describe the POKEMON care and estate paths. Leave by walking south from (4,7) or (5,7); both exits return to (38,19). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete stable complex.
+
+## v2.18: Exact landmark-room map directions
+
+The Town Map Places pages now give exact landmark-room approaches: Oxford RADCLIFFE (38,10), Chantilly CHATEAU (51,11), and Oranienburg PALACE (48,9). At each tile, face UP, press A and choose YES. Open Town Map and press R for Places; L still toggles the existing service directions. Exit visitor rooms through the south doorway.
+
+## v2.17: Enterable Radcliffe Camera visitor room
+
+Oxford now has a free Radcliffe Camera visitor room. From the town square, head east to Radcliffe Square, stand at (38,10), face north, press A and choose YES. Inside, a guide and two displays describe field notes and Cherwell bridges. Leave by walking south from (4,7) or (5,7); both exits return to (38,10). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete library interior.
+
+## v2.16: Enterable palace visitor room
+
+Oranienburg now has a free palace visitor room. From the town square, head east to the palace court, stand at (48,9), face north, press A and choose YES. Inside, a guide and two displays describe the park and Havel. Leave by walking south from (4,7) or (5,7); both exits return to (48,9). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete palace interior.
+
+## v2.15: Enterable château visitor room
+
+Chantilly now has a free château visitor room. From the town square, cross the east-side moat bridge, stand at (51,11), face north, press A and choose YES. Inside, a guide and two displays describe the garden and moat. Leave by walking south from (4,7) or (5,7); both exits return to (51,11). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete castle interior.
+
+## v2.14: Oranienburg station stone walls
+
+Oranienburg station now has red brick walls beneath its terracotta roof. The train marker, windows, door and existing station travel remain available.
+
+## v2.13: Chantilly station stone walls
+
+Chantilly station now has lighter cream stone walls beneath its terracotta roof. The train marker, windows, door and existing station travel remain available.
+
+## v2.12: Oxford station stone walls
+
+Oxford station now has warmer stone walls beneath its terracotta roof. The train marker, windows, door and existing station travel remain available.
+
+## v2.11: Gold trainer outfit
+
+World Options now offers a fifth outfit color: GOLD. Classic, blue, green and purple remain available. Gold works with Red/Leaf, walking/bicycle preview and normal saves.
+
+## v2.10: Southampton Town Quay rails
+
+Historical Southampton Town Quay now has stone edge rails along its southern extension. All three lanes remain open; the original terminal, quests and transport remain available.
+
+## v2.09: Le Havre harbor crossing rails
+
+Historical Le Havre now has stone edge rails on its two harbor crossings. Both lanes remain open, and the original terminal, transport and quest routes remain available.
+
+## v2.08: Historical return-map heading
+
+Historical Town Map heading now reads "1940: MODERN RETURN MAP", clarifying that its listed stops are modern return destinations while the location line identifies the current 1940 town.
+
+## v2.07: Amiens river/canal bridge rails
+
+Amiens historical landmark district now has stone railings on its three Somme/canal crossings. All three river lanes and both canal lanes remain open; the original quest hub and story hub are unchanged.
+
+## v2.06: Rouen Seine bridge rails
+
+Rouen historical landmark district now has stone railings on its two Seine crossings. All three lanes on each bridge remain open; the original book-search crossing and story hub are unchanged.
+
+## v2.05: Historical London bridge rails
+
+Historical London now reuses the established Westminster and Lambeth rail artwork over its original river-crossing paving. Both lanes and the reception/story/return routes remain open.
+
+## v2.04: Dover harbor railings
+
+Dover harbor arm now has stone railings along its north and south edges. All three walking rows, ferry terminal, coach exit, castle and cliff approaches remain open.
+
+## v2.03: Calais pier railings
+
+Calais northern pier now has stone side railings. Its three walking lanes, lighthouse approach, ferry terminal and coach exit remain available.
+
+## v2.02: Services marker directions
+
+The regional Town Map Services pages now identify the POKE BALL Gym sign, TRAIN station sign and RED CROSS clinic sign. Directions also specify walking UP into the doors; station supplies remain listed.
+
+## v2.01: Regional Gym signs
+
+Oxford, Chantilly and Oranienburg now have Poke Ball Gym sign markers beside their north-square entrances. Existing sign messages, quest readiness, doors and Gym challenges are preserved.
+
+## v2.00: Regional station signs
+
+Regional stations now have train-symbol sign markers beside their preserved entrances. Existing station messages, doors and rail services remain available.
+
+## v1.99: Regional clinic signs
+
+Regional clinics now have red-cross sign markers beside their preserved entrances. Existing sign messages, collision and free care remain available.
+
+## v1.98: Oranienburg clinic roof
+
+Regional Places pages now offer L: SERVICES for Oxford, Chantilly and Oranienburg. The new page identifies Gym roofs, terracotta stations, red-roof/blue-wall clinics, walking entry and station supplies.
+
+## v1.97: Oranienburg clinic roof
+
+Oranienburg clinic now has a distinct pale-blue wall detail using appended native tile variants. Existing walls, doorway, paths, landmarks and saves remain compatible.
+
+## v1.96: Chantilly clinic roof
+
+Chantilly clinic now has a distinct pale-blue wall detail using appended native tile variants. Existing walls, doorway, paths, landmarks and saves remain compatible.
+
+## v1.95: Oxford clinic roof
+
+Oxford clinic now has a distinct pale-blue wall detail using appended native tile variants. Existing walls, doorway, paths, landmarks and saves remain compatible.
+
+## v1.94: Oranienburg station roof
+
+Oranienburg station now has a distinct terracotta roof using appended native tile variants. Existing walls, doorway, paths, landmarks and saves remain compatible.
+
+## v1.93: Chantilly station roof
+
+Chantilly station now has a distinct terracotta roof using appended native tile variants. Existing walls, doorway, paths, landmarks and saves remain compatible.
+
+## v1.92: Oxford station roof
+
+Oxford station now has a distinct terracotta roof using appended native tile variants. Existing walls, doorway, paths, landmarks and saves remain compatible.
+
+## v1.91: Oranienburg Gym roof
+
+Oranienburg Gym now has a distinct gold roof using appended native tile variants. Existing walls, doorway, paths, landmarks and saves remain compatible.
+
+## v1.90: Chantilly Gym roof
+
+Chantilly Gym now has a distinct blue roof using appended native tile variants. Existing walls, doorway, paths, landmarks and saves remain compatible.
+
+## v1.89: Oxford Gym roof
+
+Oxford Gym now has a distinct slate-blue roof using appended native tile variants. Existing walls, doorway, paths, landmarks and saves remain compatible.
+
+## v1.88: Complete preview restore
+
+Confirming World Options Restore Defaults now returns the avatar preview to front-facing walking as well as restoring cosmetic settings. Cancelling preserves settings and the current preview.
+
+## v1.87: Bidirectional avatar preview
+
+World Options avatar preview now turns both ways: L turns backward, R forward. Walking/bicycle previews and cosmetic preferences remain available.
+
+## v1.86: French marker journal directions
+
+French survey journal leads now identify the study markers west of their paths, keeping either-order observations and the Remy review instruction.
+
+## v1.85: English trainer journal directions
+
+Europe Tour now names Oliver and Alice's positions east of the main paths in English Meadow and Oxford Trail, retaining the directions north of London and south of Oxford.
+
+## v1.84: branch contact journal directions
+
+Europe Tour now places Remy west of Chantilly's guide and Karl west of Oranienburg's guide. Karl's lead still explains that the repair parcel needs no Bag slot.
+
+## v1.83: rival and Gym journal directions
+
+Europe Tour now places the Oxford rival west of the town guide and explicitly tells players to walk into the north-side Gym doors. The badge requirements and quest order are unchanged.
+
+## v1.82: Lena early badge directions
+
+Lena's early badge message now explains the preparation order: Oak's study and report in London, Ellis in Oxford, then Celine's survey and report in Paris before Marine. Her two-badge requirement remains intact.
+
+## v1.81: Celine first-badge directions
+
+Celine's first-badge dialogue now directs new players to Oak's aide in London and explains that finishing and reporting the study unlocks Ellis at Oxford Gym.
+
+## v1.80: travel-board journal onboarding
+
+Travel boards now explain UP/DOWN journal topics, Europe Tour badge tasks, Oak's London starting objective and Celebi Journey's later visits. Their original map/item gifts, registration help and map opening remain intact.
+
+## v1.79: coastal landmark map directions
+
+Dover and Calais Town Map Places pages now give coastal landmark directions as well as ferry destinations and coach returns. Dover names the castle, White Cliffs and harbor paths; Calais names the town hall, lighthouse, gardens, promenade and pier. Open the Town Map and press R for Places.
+
+## v1.78: regional landmark map directions
+
+Town Map Places pages now give landmark directions for Oxford, Chantilly and Oranienburg. Open the Town Map and press R for Places; use the D-pad to browse stops. A shows routes, and R returns to the map. Regional trail and station directions remain on each page.
+
+## v1.77: Oranienburg bridge parapets
+
+Oranienburg now has small stone parapet overlays on both Havel crossings. Both walking rows remain clear. Palace, park, river and service approaches retain their original positions; Oxford and Chantilly bridge details remain included.
+
+## v1.76: Chantilly bridge parapets
+
+Chantilly now has small stone parapet overlays on its château moat crossing. Both north/south walking columns stay clear. The château court, moat, Great Stables, gardens and canal paths retain their original positions; historical Chantilly remains independently playable.
+
+## v1.75: Oxford bridge parapets
+
+Oxford now has small stone parapet overlays on both Cherwell crossings. Both walking rows remain clear, and the river, landmark paths, bridge approaches and service entrances retain their original positions. These are stylized bridge details rather than replicas of real bridge arches.
+
+## v1.74: Berlin western-home facade
+
+The western Berlin neighborhood home now has cool stone walls and retained blue windows below its red roof. The door, public paths and visitor room remain usable; the adjacent library and garden workroom keep their green and slate roofs. London and Paris facade work remain included.
+
+## v1.73: Paris western-home facade
+
+The western Paris neighborhood home now has pale sandstone walls and retained blue windows below its red roof. The door, public paths and visitor room remain usable; the adjacent garden room keeps its slate-blue roof. London facade work from v1.72 remains included.
+
+## v1.72: London western-home facade
+
+The western London neighborhood home now has warm terracotta walls and blue windows beneath its retained red roof. Its original doorway, paths, rooms and invitation remain usable. The eastern reading room keeps its slate-blue roof; both modern landmarks and historical London retain their artwork.
+
 ## v1.71: Landmark reward pocket recovery and Gastly choices
 
 Pending landmark rewards now explain which Bag pocket to use: Items for Spell Tag or Rare Candy, Poke Balls for three Great Balls. Resolved cases remain safe while players make room and return to the curator.

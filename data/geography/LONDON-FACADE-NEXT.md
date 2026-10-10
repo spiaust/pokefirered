@@ -46,5 +46,6 @@ slate-blue roof. The first pass should not enlarge either building.
    usable; old capital map caches refresh through the existing Continue path.
 8. Preserve all four original player saves and archive the previous release.
 
-This specification does not claim that new facade artwork has been implemented.
-The current playable ROM remains v1.71 until the artwork and checks are complete.
+Implemented in v1.72: nine western wall cells now use warm terracotta native
+artwork variants with blue windows. The red roof and doorway are retained.
+Fifteen focused checks and a separate player-save validation are archived.

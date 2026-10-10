@@ -34,11 +34,14 @@ signs=[('Bargate',49,9,['BARGATE','The northern gate of the old town.']),('Tudor
 for _,x,y,_ in signs:a[y][x]=0x402
 from europe_trees import finish_trees
 finish_trees(a)
+for x,t in zip((48,50),blocks['bridge_rails']):
+ for y in range(35,39):a[y][x]=(a[y][x]&0xfc00)|t
 (R/'data/layouts/EuropeSouthamptonPast/map.bin').write_bytes(struct.pack('<%dH'%(W*H),*(v for row in a for v in row)))
 p=R/'data/layouts/layouts.json';j=json.loads(p.read_text())
 for l in j['layouts']:
  if l.get('id')=='LAYOUT_EUROPE_SOUTHAMPTON_PAST':l.update(width=W,height=H,secondary_tileset='gTileset_EuropeSouthamptonPast')
-p.write_text(json.dumps(j,indent=2)+'\n')
+layout_newline='\r\n' if b'\r\n' in p.read_bytes() else '\n'
+p.write_bytes((json.dumps(j,indent=2)+'\n').replace('\n',layout_newline).encode())
 p=R/'data/maps/EuropeSouthamptonPast/map.json';j=json.loads(p.read_text());j['bg_events']=[e for e in j['bg_events'] if not e['script'].startswith('EuropeSouthamptonPast_Realism')]
 for suffix,x,y,lines in signs:j['bg_events'].append(dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='EuropeSouthamptonPast_Realism'+suffix))
 p.write_text(json.dumps(j,indent=2)+'\n')

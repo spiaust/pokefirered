@@ -86,6 +86,10 @@ def build(city):
   for bx,label in [(42,'home'),(50,'library'),(57,'workroom')]:
    for dy,row in enumerate(facades[label]):
     for dx,t in enumerate(row):a[27+dy][bx+dx]=0x400|t
+  for y in range(30,32):
+   for x in range(42,47):
+    t=a[y][x];replacement=facades['western_wall'].get(str(t&1023))
+    if replacement is not None:a[y][x]=(t&0xfc00)|replacement
   signs += [('Boulevard',40,36,['UNTER DEN LINDEN APPROACH','West: BRANDENBURG GATE.','East: the residential court.','Use the side lanes to circle it.']),('Court',56,34,['COURTYARD VISITOR ROOMS','West: home. Middle: reading room.','East: the garden workroom.','Face a door and press A to visit.','COURTYARD NOTES','Seed and watering notes: workroom.','Garden log: middle reading room.','Share a memory in the western home.','Return west along the main road.','The GATE visitor room is on the west.'])]
   for _,x,y,_ in signs:a[y][x]=0x402
  if city=='Paris':
@@ -105,6 +109,10 @@ def build(city):
   for y in range(34,37):
    for x in range(54,59):
     t=a[y][x];a[y][x]=(t&0xfc00)|blocks['garden_roof'][str(t&1023)]
+  for y in range(37,39):
+   for x in range(44,49):
+    t=a[y][x];replacement=blocks['western_wall'].get(str(t&1023))
+    if replacement is not None:a[y][x]=(t&0xfc00)|replacement
   signs += [('Lane',43,41,['PROMENADE SIDE LANE','West: the river and EIFFEL gardens.','The south path circles the flowers.','Both homes welcome visitors.']),('Homes',55,41,['NEIGHBORHOOD HOMES','West: sketches. East: garden room.','Face either door and press A.','Return west for EIFFEL and bridges.'])]
   for _,x,y,_ in signs:a[y][x]=0x402
  original=[r[:] for r in a];forestids={0x14,0x15,0x1c,0x1d}

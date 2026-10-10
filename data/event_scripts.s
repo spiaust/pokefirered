@@ -1492,3 +1492,13 @@ Text_TestMsg::
 	.include "data/maps/EuropeParisHome/scripts.inc"
 	.include "data/maps/EuropeParisGardenRoom/scripts.inc"
 	.include "data/maps/EuropeLondonReadingRoom/scripts.inc"
+
+	.include "data/maps/EuropeChateauVisitor/scripts.inc"
+
+	.include "data/maps/EuropePalaceVisitor/scripts.inc"
+
+	.include "data/maps/EuropeRadcliffeVisitor/scripts.inc"
+
+	.include "data/maps/EuropeStablesVisitor/scripts.inc"
+
+	.include "data/maps/EuropeMagdalenVisitor/scripts.inc"

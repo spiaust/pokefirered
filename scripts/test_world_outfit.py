@@ -9,7 +9,7 @@ def who(e):
 def palette(e):return tuple(e.read(e.symbols['gPlttBufferUnfaded']+2*(256+i),2) for i in range(16))
 def rgb(r,g,b):return r|(g<<5)|(b<<10)
 def check(e,color,classic):
- p=palette(e);expected={1:(rgb(5,7,13),rgb(11,22,29),rgb(8,13,24)),2:(rgb(4,11,6),rgb(14,26,16),rgb(7,18,10)),3:(rgb(10,4,14),rgb(25,15,29),rgb(18,8,23))}[color]
+ p=palette(e);expected={1:(rgb(5,7,13),rgb(11,22,29),rgb(8,13,24)),2:(rgb(4,11,6),rgb(14,26,16),rgb(7,18,10)),3:(rgb(10,4,14),rgb(25,15,29),rgb(18,8,23)),4:(rgb(12,7,2),rgb(31,26,8),rgb(24,15,3))}[color]
  assert tuple(p[i] for i in (8,11,12))==expected,p
  assert all(p[i]==classic[i] for i in range(16) if i not in (8,11,12))
 def options(e):open_key_item(e,363);wait_task(e,'Task_EuropeMap')
@@ -48,7 +48,7 @@ try:
  options(e)
  for _ in range(4):e.press('DOWN',60)
  e.press('A',60);assert e.var(0x40c4)==3;check(e,3,classic)
- e.press('A',60);assert e.var(0x40c4)==0;close(e);assert palette(e)==classic
+ e.press('A',60);assert e.var(0x40c4)==4;check(e,4,classic);e.press('A',60);assert e.var(0x40c4)==0;close(e);assert palette(e)==classic
  assert preserved(e)==saved and e.location()==loc
  print('PASS: outfit cold Continue retains color and avatar; A wraps to the exact classic palette without changing progress',flush=True)
 finally:e.close()

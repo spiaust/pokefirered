@@ -57,3 +57,13 @@ Source artwork and built-in image-tool prompt:
 [LE-HAVRE-PROMPT.md](../../graphics/europe/landmarks/LE-HAVRE-PROMPT.md).
 Generators: `scripts/build-havre-assets.py`, `scripts/build-havre-map.py`.
 Next geographic passes: historical Southampton and London.
+
+## v2.09: Harbor crossing rail detail
+
+Eighteen edge cells at x39..44,y18/19 and x41..43,y29/30 use stone
+rail overlays. Both walking lanes retain their original terrain, behavior
+and elevation. The terminal, landmarks, events, palettes and Rouen remain
+intact. Eight tiles/two metatiles append, reaching 349 secondary tiles.
+Full asset/map generation reproduces all current outputs byte-for-byte.
+Native checks cross both lanes both directions, save and cold-load on
+each crossing, read four signs/map, use Rouen transport and Celebi.

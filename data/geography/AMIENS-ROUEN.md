@@ -53,3 +53,25 @@ Artwork sources and exact prompts: [NORTHERN-HISTORY-PROMPTS.md](../../graphics/
 Generators: `scripts/build-northern-history-assets.py` and
 `scripts/build-northern-history-map.py`. Immutable v0.55 map inputs preserve
 the original quest hubs. Next: historical Le Havre, Southampton and London.
+
+## v2.06: Rouen Seine bridge railings
+
+Twelve edge cells at x43/x45 and x71/x73,y25..27 have stone rail overlays.
+All three lanes on both crossings remain walkable. Original hub/book-search
+crossing, terrain/collision, events, palettes and Amiens remain intact. Eight
+tiles/two metatiles append, bringing Rouen to 308 secondary tiles. The helper
+rouen_bridges.py and both northern-history generators include the rails;
+full Amiens/Rouen generation reproduces current outputs byte-for-byte.
+Native checks use an earned Rouen-arrival battery for both-direction walks,
+bridge saves, three signs, era map, Amiens train and Celebi return paths.
+
+## v2.07: Amiens river and canal bridge railings
+
+Eighteen edge cells at x30/x32 and x53/x55,y10..12 and x39..41,y6/y7
+have stone rail overlays. All three river lanes and both canal lanes stay
+walkable. Original quest hub, collision, events, palettes and Rouen remain
+intact. Sixteen tiles/four metatiles append, reaching 308 secondary tiles.
+Both northern-history generators include the rails and reproduce all
+Amiens/Rouen outputs byte-for-byte. Native tests use earned Rouen arrival
+and ordinary train travel to Amiens, cross all lanes both directions,
+cold-load bridge saves, read signs/map and return by train and Celebi.

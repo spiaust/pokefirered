@@ -175,6 +175,22 @@
     },
     {
       "type": "sign",
+      "x": 38,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeRadcliffeVisitor_Enter"
+    },
+    {
+      "type": "sign",
+      "x": 51,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EuropeMagdalenVisitor_Enter"
+    },
+    {
+      "type": "sign",
       "x": 41,
       "y": 10,
       "elevation": 0,

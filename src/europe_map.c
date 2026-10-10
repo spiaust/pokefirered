@@ -35,7 +35,7 @@ static const u8 sWhite[] = {1, 2, 1};
 static const u8 sGold[] = {1, 3, 1};
 static const u8 sNorthLabel[] = _("N");
 static const u8 sHeading[] = _("EUROPEAN TRAVEL MAP");
-static const u8 sPastHeading[] = _("PRESENT-DAY TRAVEL MAP");
+static const u8 sPastHeading[] = _("1940: MODERN RETURN MAP");
 static const u8 sPastLocation[] = _("YOU: FRANCE, 1940");
 static const u8 sBeauvaisLocation[] = _("YOU: BEAUVAIS, 1940");
 static const u8 sLondonPastLocation[] = _("YOU: LONDON, 1940");
@@ -424,8 +424,10 @@ static void DrawEuropeMap(bool8 info)
 
 static const u8 sPlacesHeading[] = _("PLACES / PRESENT-DAY");
 static const u8 sRoomsHeading[] = _("ROOMS / PRESENT-DAY");
+static const u8 sServicesHeading[] = _("SERVICES / PRESENT-DAY");
 static const u8 sRoomsBrowse[] = _("D-PAD: STOP  L: PLACES");
 static const u8 sPlacesRoomBrowse[] = _("D-PAD: STOP  L: ROOMS");
+static const u8 sPlacesServiceBrowse[] = _("D-PAD: STOP  L: SERVICES");
 static const u8 sPlacesBrowse[] = _("D-PAD: STOP");
 static const u8 sPlacesControls[] = _("R/B: MAP  A: ROUTES  SELECT: STORY");
 static const u8 sPlacesLines[][4][44] = {
@@ -441,26 +443,26 @@ static const u8 sPlacesLines[][4][44] = {
      _("GATE room: face the west pillar."),
      _("Courtyard rooms: follow the road east."),
      _("Home, books and garden workroom.")},
-    {_("Explore the OXFORD TRAIL."),
-     _("Ask the city guide about tour stamps."),
-     _("Visit the clinic before a walk."),
-     _("Station: onward rail travel.")},
-    {_("Explore the CHANTILLY FOREST."),
-     _("Ask the city guide about tour stamps."),
-     _("Visit the clinic before a forest walk."),
-     _("Station: onward rail travel.")},
-    {_("Explore the HAVEL TRAIL."),
-     _("Ask the city guide about tour stamps."),
-     _("Visit the clinic before a walk."),
-     _("Station: onward rail travel.")},
-    {_("DOVER: ferry across to CALAIS."),
-     _("Take the coach to LONDON."),
-     _("Ask the transport staff to travel."),
-     _("City rooms are listed by stop.")},
-    {_("CALAIS: ferry across to DOVER."),
-     _("Take the coach to PARIS."),
-     _("Ask the transport staff to travel."),
-     _("City rooms are listed by stop.")}
+    {_("RADCLIFFE: (38,10), UP, A, YES."),
+     _("MAGDALEN: (51,11), UP, A, YES."),
+     _("Cross south bridge for meadow paths."),
+     _("South: OXFORD TRAIL. Rail: station.")},
+    {_("CHATEAU: (51,11), UP, A, YES."),
+     _("STABLES: (38,19), UP, A, YES."),
+     _("GARDENS / CANAL: east of the chateau."),
+     _("South: FOREST. Rail: town station.")},
+    {_("PALACE: (48,9), UP, A, YES."),
+     _("PARK: west of the palace court."),
+     _("HAVEL: bridges east of the palace."),
+     _("South: HAVEL TRAIL. Rail: station.")},
+    {_("EAST quay: CASTLE and WHITE CLIFFS."),
+     _("Follow seafront paths to the harbor."),
+     _("Ferry: CALAIS. Coach: LONDON."),
+     _("Captain: ferry. North exit: coach.")},
+    {_("EAST quay: HALL, LIGHTHOUSE, gardens."),
+     _("North seafront: promenade and pier."),
+     _("Ferry: DOVER. Coach: PARIS."),
+     _("Captain: ferry. North exit: coach.")}
 };
 
 static const u8 sRoomsLines[][4][44] = {
@@ -475,19 +477,31 @@ static const u8 sRoomsLines[][4][44] = {
     {_("Follow the road east to the courtyard."),
      _("West: guestbook. Middle: garden log."),
      _("East: seed and watering bench notes."),
-     _("Door: press A. Exit: south doorway.")}
+     _("Door: press A. Exit: south doorway.")},
+    {_("GYM: north square, POKE BALL sign."),
+     _("STATION: east square, TRAIN sign."),
+     _("CLINIC: west square, RED CROSS sign."),
+     _("Walk UP into doors. Supplies: station.")},
+    {_("GYM: north square, POKE BALL sign."),
+     _("STATION: east square, TRAIN sign."),
+     _("CLINIC: west square, RED CROSS sign."),
+     _("Walk UP into doors. Supplies: station.")},
+    {_("GYM: north square, POKE BALL sign."),
+     _("STATION: east square, TRAIN sign."),
+     _("CLINIC: west square, RED CROSS sign."),
+     _("Walk UP into doors. Supplies: station.")}
 };
 
 static void DrawEuropePlaces(void)
 {
     u8 i;
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
-    MapText(sEuropePlacesRooms ? sRoomsHeading : sPlacesHeading, 7, 4, sGold);
+    MapText(sEuropePlacesRooms ? (sEuropeMapSelection < 3 ? sRoomsHeading : sServicesHeading) : sPlacesHeading, 7, 4, sGold);
     MapRect(4, 7, 20, 226, 1);
     MapText(sCityNames[sEuropeMapSelection], 12, 27, sGold);
     for (i = 0; i < 4; i++)
         MapText(sEuropePlacesRooms ? sRoomsLines[sEuropeMapSelection][i] : sPlacesLines[sEuropeMapSelection][i], 12, 50 + i * 18, sWhite);
-    MapText(sEuropePlacesRooms ? sRoomsBrowse : (sEuropeMapSelection < ARRAY_COUNT(sRoomsLines) ? sPlacesRoomBrowse : sPlacesBrowse), 7, 130, sWhite);
+    MapText(sEuropePlacesRooms ? sRoomsBrowse : (sEuropeMapSelection < ARRAY_COUNT(sRoomsLines) ? (sEuropeMapSelection < 3 ? sPlacesRoomBrowse : sPlacesServiceBrowse) : sPlacesBrowse), 7, 130, sWhite);
     MapText(sPlacesControls, 7, 147, sGold);
     PutWindowTilemap(0);
     CopyWindowToVram(0, COPYWIN_FULL);
@@ -518,12 +532,13 @@ static const u8 sOutfitClassic[] = _("OUTFIT: CLASSIC");
 static const u8 sOutfitBlue[] = _("OUTFIT: BLUE");
 static const u8 sOutfitGreen[] = _("OUTFIT: GREEN");
 static const u8 sOutfitPurple[] = _("OUTFIT: PURPLE");
+static const u8 sOutfitGold[] = _("OUTFIT: GOLD");
 static const u8 sRestoreSafe[] = _("Your journey and trainer ID stay.");
 static const u8 sRestoreControls[] = _("A: RESTORE  B/START: CANCEL");
 static const u8 sPreviewHeading[] = _("PREVIEW");
 static const u8 sPreviewWalk[] = _("WALK");
 static const u8 sPreviewBike[] = _("BIKE");
-static const u8 sPreviewTurn[] = _("R:TURN");
+static const u8 sPreviewTurn[] = _("L/R:TURN");
 
 static void DestroyWorldPreview(void)
 {
@@ -573,7 +588,7 @@ static void DrawWorldOptions(u8 row)
     MapText(style == 1 ? sRed : style == 2 ? sLeaf : sOriginal, 12, 39, row == 1 ? sGold : sWhite);
     MapText(VarGet(VAR_EUROPE_MAP_CONTRAST) ? sWorldOptionText3 : sWorldOptionText4, 12, 53, row == 2 ? sGold : sWhite);
     MapText(VarGet(VAR_EUROPE_HIDE_FLOWERS) == 1 ? sFlowersOff : sFlowersOn, 12, 67, row == 3 ? sGold : sWhite);
-    MapText(outfit == 1 ? sOutfitBlue : outfit == 2 ? sOutfitGreen : outfit == 3 ? sOutfitPurple : sOutfitClassic, 12, 81, row == 4 ? sGold : sWhite);
+    MapText(outfit == 1 ? sOutfitBlue : outfit == 2 ? sOutfitGreen : outfit == 3 ? sOutfitPurple : outfit == 4 ? sOutfitGold : sOutfitClassic, 12, 81, row == 4 ? sGold : sWhite);
     MapText(sRestoreDefaults, 12, 95, row == 5 ? sGold : sWhite);
     MapText(sPreviewHeading, 191, 25, sGold);
     MapText(sWorldPreviewBike ? sPreviewBike : sPreviewWalk, 199, 80, sWhite);
@@ -619,6 +634,8 @@ static void Task_EuropeMap(u8 taskId)
             VarSet(VAR_EUROPE_MAP_CONTRAST, 0);
             VarSet(VAR_EUROPE_HIDE_FLOWERS, 0);
             VarSet(VAR_EUROPE_OUTFIT_COLOR, 0);
+            sWorldPreviewBike = FALSE;
+            sWorldPreviewFacing = 0;
             gTasks[taskId].data[2] = 0;
             PlaySE(SE_SELECT);
             DrawWorldOptions(5);
@@ -658,9 +675,9 @@ static void Task_EuropeMap(u8 taskId)
             PlaySE(SE_SELECT);
             DrawWorldOptions(row);
         }
-        else if (JOY_NEW(R_BUTTON))
+        else if (JOY_NEW(L_BUTTON | R_BUTTON))
         {
-            sWorldPreviewFacing = (sWorldPreviewFacing + 1) % ARRAY_COUNT(sPreviewDirections);
+            sWorldPreviewFacing = (sWorldPreviewFacing + (JOY_NEW(L_BUTTON) ? ARRAY_COUNT(sPreviewDirections) - 1 : 1)) % ARRAY_COUNT(sPreviewDirections);
             PlaySE(SE_SELECT);
             DrawWorldOptions(row);
         }
@@ -683,7 +700,7 @@ static void Task_EuropeMap(u8 taskId)
         else if (JOY_NEW(A_BUTTON | DPAD_LEFT | DPAD_RIGHT))
         {
             u16 var = row == 0 ? VAR_EUROPE_MAP_DETAIL : row == 1 ? VAR_EUROPE_AVATAR_STYLE : row == 2 ? VAR_EUROPE_MAP_CONTRAST : row == 3 ? VAR_EUROPE_HIDE_FLOWERS : VAR_EUROPE_OUTFIT_COLOR;
-            u8 count = row == 4 ? 4 : row == 1 ? 3 : 2;
+            u8 count = row == 4 ? 5 : row == 1 ? 3 : 2;
             VarSet(var, (VarGet(var) + (JOY_NEW(DPAD_LEFT) ? count - 1 : 1)) % count);
             PlaySE(SE_SELECT);
             DrawWorldOptions(row);
@@ -881,6 +898,8 @@ void OpenEuropeMap(MainCallback callback)
     case MAP_NUM(MAP_EUROPE_BERLIN_CENTER):
         sEuropeMapCurrent = 2;
         break;
+    case MAP_NUM(MAP_EUROPE_RADCLIFFE_VISITOR):
+    case MAP_NUM(MAP_EUROPE_MAGDALEN_VISITOR):
     case MAP_NUM(MAP_EUROPE_OXFORD):
     case MAP_NUM(MAP_EUROPE_OXFORD_TRAIL):
     case MAP_NUM(MAP_EUROPE_OXFORD_STATION):
@@ -888,6 +907,8 @@ void OpenEuropeMap(MainCallback callback)
     case MAP_NUM(MAP_EUROPE_OXFORD_GYM):
         sEuropeMapCurrent = 3;
         break;
+    case MAP_NUM(MAP_EUROPE_CHATEAU_VISITOR):
+    case MAP_NUM(MAP_EUROPE_STABLES_VISITOR):
     case MAP_NUM(MAP_EUROPE_CHANTILLY):
     case MAP_NUM(MAP_EUROPE_CHANTILLY_TRAIL):
     case MAP_NUM(MAP_EUROPE_CHANTILLY_STATION):
@@ -902,6 +923,7 @@ void OpenEuropeMap(MainCallback callback)
     case MAP_NUM(MAP_EUROPE_LE_HAVRE_PAST):
         sEuropeMapCurrent = 4;
         break;
+    case MAP_NUM(MAP_EUROPE_PALACE_VISITOR):
     case MAP_NUM(MAP_EUROPE_ORANIENBURG):
     case MAP_NUM(MAP_EUROPE_ORANIENBURG_TRAIL):
     case MAP_NUM(MAP_EUROPE_ORANIENBURG_STATION):

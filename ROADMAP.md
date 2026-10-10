@@ -3,6 +3,394 @@
 The project grows in playable releases. Build and test each gameplay change
 before adding the next; preserve the previous ROM in `artifacts/releases`.
 
+## v2.27: Eiffel observation room layout
+
+The Eiffel visitor room now has two rear windows, two left-side observation desks and an open right aisle. The guide and displays keep their positions and controls. Enter from Paris (9,37), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.26: London Eye gallery display tables
+
+The London Eye visitor gallery now has two native side display tables and a clear central aisle. Existing windows, attendant and displays keep their positions and controls. Enter from London (29,29), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.25: Combined landmark visitor tour
+
+Combined five-room review complete on unchanged v2.25. One earned journey visits Radcliffe, Magdalen, the château, Great Stables and palace, checks every conversation, No/B declines, native interior cold Continue, Places pages, both exits and re-entry, then returns to saved Ada ending. Eleven checks pass. Walkthrough entrance guide updated with the five current layouts and older-save re-entry instructions. All five individual room layouts are now refined and verified together. Next: continue developing the game beyond this visitor-room pass.
+
+## v2.25: Palace visitor gallery layout
+
+The Oranienburg palace visitor room now has a gallery layout with two back-wall windows, two side display desks and a clear central aisle. The guide and displays keep their positions and controls. Enter from Oranienburg (48,9), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.24: Great Stables caretaker workroom layout
+
+The Great Stables visitor room now has a caretaker workroom layout with care-reference shelves, a back-wall window, two left-side care benches and a clear right aisle. The guide and displays keep their positions and controls. Enter from Chantilly (38,19), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.23: Magdalen study-room layout
+
+Magdalen now has a study-room layout with two back-wall windows, one side study desk and an open central floor. The guide and displays keep their positions and controls. Enter from Oxford (51,11), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.22: Chateau gallery layout
+
+Chateau now has a gallery layout with two central native map desks, clean wall panels and open side aisles. The guide and displays keep their positions and controls. Enter from Chantilly (51,11), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.21: Radcliffe reading-room layout
+
+Radcliffe now has a reading-room layout with two native bookcase pairs, two side tables and a clear central aisle. The guide and displays keep their positions and controls. Enter from Oxford (38,10), facing north, pressing A and choosing YES; both south exits still return to that approach. Existing map IDs and visitor-room events stay intact. If an older save resumes inside the room, its cached furniture remains until you leave and re-enter; both layouts support the normal exit.
+
+## v2.20: Combined landmark visitor tour
+
+Combined five-room review complete on unchanged v2.20. One earned journey visits Radcliffe, Magdalen, the château, Great Stables and palace, checks every conversation, No/B declines, native interior cold Continue, Places pages, both exits and re-entry, then returns to saved Ada ending. Eleven checks pass. Walkthrough entrance directions consolidated. Next: refine the individual visitor-room layouts and presentation.
+
+## v2.20: Enterable Magdalen visitor room
+
+Oxford now has a free Magdalen visitor room. From the town square, head east past Radcliffe Square to Magdalen, stand at (51,11), face north, press A and choose YES. Inside, a guide and two displays describe a tower drawing and Cherwell paths. Leave by walking south from (4,7) or (5,7); both exits return to (51,11). This optional room does not change story progress or give rewards. It is a visitor room, rather than the full college grounds.
+
+## v2.19: Enterable Great Stables visitor room
+
+Chantilly now has a free Great Stables visitor room. From the town square, head east to the Great Stables, stand at (38,19), face north, press A and choose YES. Inside, a caretaker and two displays describe the POKEMON care and estate paths. Leave by walking south from (4,7) or (5,7); both exits return to (38,19). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete stable complex.
+
+## v2.18: Exact landmark-room map directions
+
+The Town Map Places pages now give exact landmark-room approaches: Oxford RADCLIFFE (38,10), Chantilly CHATEAU (51,11), and Oranienburg PALACE (48,9). At each tile, face UP, press A and choose YES. Open Town Map and press R for Places; L still toggles the existing service directions. Exit visitor rooms through the south doorway.
+
+## v2.17: Enterable Radcliffe Camera visitor room
+
+Oxford now has a free Radcliffe Camera visitor room. From the town square, head east to Radcliffe Square, stand at (38,10), face north, press A and choose YES. Inside, a guide and two displays describe field notes and Cherwell bridges. Leave by walking south from (4,7) or (5,7); both exits return to (38,10). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete library interior.
+
+## v2.16: Enterable palace visitor room
+
+Oranienburg now has a free palace visitor room. From the town square, head east to the palace court, stand at (48,9), face north, press A and choose YES. Inside, a guide and two displays describe the park and Havel. Leave by walking south from (4,7) or (5,7); both exits return to (48,9). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete palace interior.
+
+## v2.15: Completed regional services review
+
+The completed regional station facade set passes a combined service review on v2.15. Sixteen native checks cover Oxford, Chantilly and Oranienburg station signs and capital rail round trips, clinics, Gyms, saved interiors, service-map controls and the saved Oxford ending. The château room release remains current. Next: continue optional regional landmark interiors beyond Chantilly.
+
+## v2.15: Enterable château visitor room
+
+Chantilly now has a free château visitor room. From the town square, cross the east-side moat bridge, stand at (51,11), face north, press A and choose YES. Inside, a guide and two displays describe the garden and moat. Leave by walking south from (4,7) or (5,7); both exits return to (51,11). This optional room does not change story progress or give rewards. It is a visitor room, rather than a complete castle interior.
+
+## v2.14: Oranienburg station stone walls
+
+Oranienburg station wall palette refinement implemented in v2.14. Six checks cover thirteen art-only facade cells, exact door/roof/sign/collision/events/palettes/prior-art and other-town preservation, thirteen appended metatiles and sixteen copied/remapped wall tiles, full regional regeneration and native signs/station entries/saved interiors/capital rail trips across all three regional towns. Austin save validated on a copy. Next: verify the completed three-town station facade set alongside clinic and Gym services.
+
+## v2.13: Chantilly station stone walls
+
+Chantilly station wall palette refinement implemented in v2.13. Six checks cover thirteen art-only facade cells, exact door/roof/sign/collision/events/palettes/prior-art and other-town preservation, thirteen appended metatiles and sixteen copied/remapped wall tiles, full regional regeneration and native signs/station entries/saved interiors/capital rail trips across all three regional towns. Austin save validated on a copy. Next: refine Oranienburg station walls to complete the regional station facades.
+
+## v2.12: Regional service compatibility
+
+Oxford station shared-tileset compatibility review complete on unchanged v2.12. Thirteen native checks cover regional clinic reads/care/exits, Gym reads/readiness/saved interiors/leader declines/exits, service-page browsing and native saved Ada ending across Oxford, Chantilly and Oranienburg. Existing station travel checks from the release remain valid. Next: continue station facade refinement in Chantilly.
+
+## v2.12: Oxford station stone walls
+
+Oxford station wall palette refinement implemented in v2.12. Six checks cover thirteen art-only facade cells, exact door/roof/sign/collision/events/palettes/prior-art and other-town preservation, thirteen appended metatiles and sixteen copied/remapped wall tiles, full regional regeneration and native signs/station entries/saved interiors/capital rail trips across all three regional towns. Austin save validated on a copy. Next: review Oxford station appearance alongside its clinic and Gym.
+
+## v2.11: All outfit colors verified
+
+Full five-color outfit review complete on unchanged v2.11. Twelve native checks cover Classic/Blue/Green/Purple/Gold on Red and Leaf with live preview, facing changes, bicycle preview, field walking, mount/dismount and exact cold Continue for every combination. Non-clothing colors, trainer identity, location and journey remain intact. The prior blue/green test now follows five-color wrap. Next: continue customization and geographic detail.
+
+## v2.11: Gold trainer outfit
+
+Gold outfit implemented in v2.11. Eight native checks cover Red/Leaf gold clothing and live preview, unchanged non-clothing palette entries and trainer identity/progress, walking/bicycle field movement, cold Continue, five-color wrap, purple compatibility, preview facing and Restore Defaults. Austin save validated on a copy. Next: verify the full outfit palette set and its field transitions.
+
+## v2.10: Southampton quay compatibility
+
+Southampton quay compatibility review complete on unchanged v2.10. Ten native checks cover saved arrival/host welcome, optional luggage request/pickup/return, native saves between stages, No/B choices, journal paging, Le Havre/Celebi returns, genuine v0.43/v0.44 adjacent saves and onward London boarding/welcome/return guidance. Next: continue game geography and customization improvements.
+
+## v2.10: Southampton Town Quay rails
+
+Southampton quay railings implemented in v2.10. Six checks cover eight art-only edge cells, original terrain/collision/events/palettes/terminal preservation, eight appended tiles/two metatiles, exact generation, all three lanes both directions, native quay-tip Save/cold Continue, four signs/era map, Le Havre round trip and Celebi return. Austin save validated on a copy. Next: review Southampton saved arrival and luggage routes.
+
+## v2.09: Le Havre saved-route compatibility
+
+Le Havre saved-route compatibility review complete on unchanged v2.09. Seven native checks cover boarding prerequisites, captain welcome, optional dock request and No/B choices, native saves between stages, dock notice and confirmation, repeat interactions, journal paging, Rouen/Celebi returns and genuine adjacent saves created on v0.38/v0.39. Next: continue historical district scenery with Southampton.
+
+## v2.09: Le Havre harbor crossing rails
+
+Le Havre harbor crossing rails implemented in v2.09. Seven checks cover eighteen art-only edge cells, unchanged terrain/collision/events/palettes/terminal/Rouen, original art preservation, eight appended tiles/two metatiles, exact generation, both lanes both directions, native bridge Save/cold Continue, four signs/era map, Rouen transport and Celebi return. Austin save validated on a copy. Next: review Le Havre saved welcome and dockworker routes.
+
+## v2.08: Historical return-map heading
+
+Historical return-map heading clarified in v2.08. Nine historical contexts pass map/Places/secondary-page/story controls and exact Save/cold Continue checks; two modern mixed-map checks also pass. Austin save validated on a copy. Next: resume historical district scenery refinement.
+
+## v2.07: Historical crossing compatibility
+
+Historical crossing compatibility review complete on unchanged v2.07. Six fresh native checks cover Amiens bulletin prerequisites, No/B choices, notice/porter/Nora progression, Rouen route-book request, original far-bank collection and return, repeat interactions, train/Celebi returns, journal leads and native saves between quest stages. Genuine saves created beside Mira on v0.29 and Leon on v0.35 load with their interactions immediately available. Next: continue historical district scenery refinement.
+
+## v2.07: Amiens river/canal bridge rails
+
+Amiens river/canal bridge railings implemented in v2.07. Eight checks cover eighteen art-only edge cells, original collision/terrain/hub/events/Rouen preservation, sixteen appended tiles/four metatiles, exact two-town generation, all lanes on three bridges both directions, bridge cold Continue, three signs/era map, Rouen train round trip and saved Celebi return. Austin save validated on a copy. Next: review historical crossing compatibility and saved quest routes.
+
+## v2.06: Rouen Seine bridge rails
+
+Rouen Seine bridge railings implemented in v2.06. Seven checks cover twelve art-only edge cells, original collision/terrain/hub/events/Amiens preservation, eight appended tiles/two metatiles, exact two-town generation, all three lanes on both bridges both directions, bridge cold Continue, three signs/era map, Amiens train round trip and saved Celebi return. Austin save validated on a copy. Next: refine Amiens river/canal crossings while preserving its original quests and train routes.
+
+## v2.05: London bridge compatibility
+
+London shared-tileset compatibility review complete on unchanged v2.05. Seven fresh native checks cover both modern bridge lanes, landmark/sign routes, native district Save/Continue, clinic/station doors, historical boarding prerequisites and No/B choices, saved arrival/Rose welcome/return reminders, Southampton round trip, and an actual v0.48 adjacent-clerk save boarding on the current ROM. Next: continue historical scenery refinement beyond the completed London bridge pass.
+
+## v2.05: Historical London bridge rails
+
+Historical London bridge rail detail implemented in v2.05. Seven checks cover exactly twenty-four crossing cells, original collision/terrain/hub/events/modern London preservation, four appended metatiles with no new image tiles/palettes, exact historical map generation, both lanes both directions, bridge cold Continue, four signs/era map, repeated Rose welcome, Southampton round trip and saved Celebi return. Austin save validated on a copy. Next: review modern London bridge and saved historical-arrival compatibility after the shared tileset append.
+
+## v2.04: Combined coastal railings
+
+Combined coastal railing review complete on unchanged v2.04. Fifteen fresh native checks follow one earned saved journey through both ports: coach arrivals, every railing lane both directions, landmark approaches/signs, saved pier/harbor tips, read-only present-day Places pages, ferry round trips, capital exits and saved Ada ending. Walkthrough directions consolidated. Next: continue finer neighborhood and historical scenery development beyond the completed coastal railing pass.
+
+## v2.04: Dover harbor railings
+
+Dover harbor railings implemented in v2.04. Seven checks cover twenty-four art-only edge cells, original terrain/collision/events/palettes/terminal/Calais preservation, one mirrored appended tile, exact full two-port generation, all three rows both directions, native saved tip/district positions, signs, ferry/coach returns and saved Oxford ending. Austin save validated on a copy. Next: review the combined Calais/Dover coastal railing pass.
+
+## v2.03: Exact port regeneration
+
+Full port regeneration verified on unchanged v2.03. Dover and Calais assets, maps, borders, palettes, events and travel scripts reproduce byte-for-byte, including the Calais pier rails. The port generator now preserves the layout catalog newline style. Next: continue coastal scenery refinement with exact generation preservation verified.
+
+## v2.03: Calais pier railings
+
+Calais pier railings implemented in v2.03. Six checks cover exactly twelve art-only edge cells, unchanged collision/terrain/terminal/events/palettes/Dover, appended artwork and deterministic rail generation, all three lanes both directions, native tip/district saves, three landmark signs, Channel ferry/coach returns and saved Ada ending. Austin save validated on a copy. Next: review port generation preservation before extending coastal scenery.
+
+## v2.02: Services marker directions
+
+Regional Services marker directions implemented in v2.02. Eleven checks verify only the three regional text entries change, native text width/array limits, Places/Services toggles, stop browsing, route/story returns, exact native cold Continue and saved Ada ending. Austin save validated on a copy. Next: continue geographic and customization improvements beyond the completed service-marker pass.
+
+## v2.01: Combined regional service markers
+
+Combined regional service marker review complete on unchanged v2.01. Sixteen fresh native checks cover clinic reads/care/exits, station reads/entries/saved interiors/capital rail trips, earned Gym reads/readiness/saved interiors/leader declines/exits, and Places/Services map controls with saved ending return. Next: update in-game regional Services directions to identify the new marker symbols.
+
+## v2.01: Regional Gym signs
+
+Regional Gym markers implemented in v2.01. Seven checks cover exact prior artwork/palettes/events/collision, native sign reads and repeats, saved exterior/interior locations, earned journal readiness, leader declines, normal exits and exact regional regeneration. Player save validated on a copy. Next: review the completed clinic, station and Gym marker set together.
+
+## v2.00: Regional station signs
+
+Regional train-symbol station signs implemented in v2.00. Seven checks verify one changed cell per town, exact prior assets/behavior/events, native reads/repeats/cold Continue and station entries/exits and capital rail round trips. Player save validated on copy. Full regional generation also reproduces the updated artwork and maps byte-for-byte. Next: continue regional service identity with Gym markers.
+
+## v1.99: Regional clinic signs
+
+Regional red-cross clinic signs implemented in v1.99. Seven checks verify one changed cell per town, exact prior assets/behavior/events, native reads/repeats/cold Continue and normal clinic care/exits. Player save validated on copy. Full regional generation also reproduces the updated artwork and maps byte-for-byte. Next: continue regional geography improvements.
+
+## v1.98: mixed modern map browsing
+
+Mixed modern map browsing verified on unchanged v1.98. Two fresh native checks traverse all eight stops, capital Rooms, regional Services and coastal Places, confirming secondary-page resets, route/story returns, exact cold Continue and clean field control. Next: continue game geography development beyond the completed service-direction pass.
+
+## v1.98: map page compatibility
+
+Map page compatibility complete on unchanged v1.98. Seventeen fresh native checks retain three capital Rooms pages and two coastal Places pages with native routes, saved controls and completed-state continuity. Next: check mixed map-page browsing between Rooms, regional Services and coastal Places.
+
+## v1.98: Oranienburg clinic roof
+
+Regional Services pages implemented in v1.98. Seven native checks cover three towns, L toggles, stop browsing, route returns, read-only controls and exact cold Continue. Pages inspected; player save validated on copy. Next: verify capital Rooms/coastal Places pages retain their established controls.
+
+## v1.97: exact regional regeneration
+
+Full regional regeneration verified on unchanged v1.97. Generator now preserves later Gym sign/trail-guide script additions and existing mixed line endings. All three complete asset/map pipelines reproduce current outputs byte-for-byte. Next: continue geographical refinement with generator preservation now verified.
+
+## v1.97: combined clinic exterior review
+
+Combined regional clinic review complete on unchanged v1.97. Six fresh native checks cover all three clinic walls, saved entrances/interiors, repeated free care, normal exits and service/landmark routes. Walkthrough notes consolidated with exact care steps. Next: review deterministic regional asset/map regeneration across all Gym, station and clinic variants before further visual expansion.
+
+## v1.97: Oranienburg clinic roof
+
+Oranienburg clinic pale-blue wall detail implemented in v1.97. Four checks verify nine wall-only map cells, exact prior assets/palettes/events/collision, deterministic generation, native clinic entry/exit and free care, saved approaches and completed Ada return. Player save validated on copy. Next: review all regional clinic artwork and free care together.
+
+## v1.96: Chantilly clinic roof
+
+Chantilly clinic pale-blue wall detail implemented in v1.96. Four checks verify nine wall-only map cells, exact prior assets/palettes/events/collision, deterministic generation, native clinic entry/exit and free care, saved approaches and completed Ada return. Player save validated on copy. Next: continue regional clinic identity in Oranienburg.
+
+## v1.95: Oxford clinic roof
+
+Oxford clinic pale-blue wall detail implemented in v1.95. Four checks verify nine wall-only map cells, exact prior assets/palettes/events/collision, deterministic generation, native clinic entry/exit and free care, saved approaches and completed Ada return. Player save validated on copy. Next: continue regional clinic identity in Chantilly.
+
+## v1.94: combined station exterior review
+
+Combined station exterior review complete on unchanged v1.94. Twelve fresh checks cover all three roofs, doors, saved interiors/exteriors, capital-branch rail round trips and genuine older station notice saves. Walkthrough station roof notes consolidated. Next: refine regional clinic exterior identity while preserving free care.
+
+## v1.94: Oranienburg station roof
+
+Oranienburg station terracotta roof implemented in v1.94. Four checks verify fourteen roof-only map cells, exact prior assets/palettes/events/collision, deterministic generation, native station entry/exit and rail round trip, saved approaches and completed Ada return. Player save validated on copy. Next: review the three station exteriors and native rail services together.
+
+## v1.93: Chantilly station roof
+
+Chantilly station terracotta roof implemented in v1.93. Four checks verify fourteen roof-only map cells, exact prior assets/palettes/events/collision, deterministic generation, native station entry/exit and rail round trip, saved approaches and completed Ada return. Player save validated on copy. Next: refine the Oranienburg station exterior.
+
+## v1.92: Oxford station roof
+
+Oxford station terracotta roof implemented in v1.92. Four checks verify fourteen roof-only map cells, exact prior assets/palettes/events/collision, deterministic generation, native station entry/exit and rail round trip, saved approaches and completed Ada return. Player save validated on copy. Next: refine station exteriors in Chantilly and Oranienburg.
+
+## v1.91: combined regional roof review
+
+Combined regional roof review complete on unchanged v1.91. Twenty-one native checks verify all three roofs and saved approaches, nine Gym entry/exit/readiness checks and six Oxford bridge/path checks. Walkthrough roof notes consolidated. Next: refine regional station exteriors while preserving travel services.
+
+## v1.91: Oranienburg Gym roof
+
+Oranienburg Gym gold roof implemented in v1.91. Four checks verify fourteen roof-only map cells, exact prior assets/palettes/events/collision, deterministic generation, native Gym entry/exit, saved approaches and completed Ada return. Player save validated on copy. Next: review the three regional Gym roof identities together.
+
+## v1.90: Chantilly Gym roof
+
+Chantilly Gym blue roof implemented in v1.90. Four checks verify fourteen roof-only map cells, exact prior assets/palettes/events/collision, deterministic generation, native Gym entry/exit, saved approaches and completed Ada return. Player save validated on copy. Next: continue regional facade identity in Oranienburg.
+
+## v1.89: Oxford Gym roof
+
+Oxford Gym slate roof implemented in v1.89. Four checks verify fourteen roof-only map cells, exact prior assets/palettes/events/collision, deterministic generation, native Gym entry/exit, saved approaches and completed Ada return. Player save validated on copy. Next: continue regional facade identity in Chantilly.
+
+## v1.88: combined customization review
+
+Combined customization review complete on unchanged v1.88. Seven fresh native checks cover bidirectional previews, live colors, registered access, cycling/dismount, outfits and flowers with saved preferences. Walkthrough consolidates complete World Options instructions. Next: resume finer geographic artwork, starting with regional building facades.
+
+## v1.88: Complete preview restore
+
+Complete preview restore implemented in v1.88. Native checks cover custom bicycle/facing preview, B cancellation, ignored preview controls during confirmation, and confirmed reset to front-facing walking with original cosmetics. Player save validated on copy. Next: continue geographic/customization improvements.
+
+## v1.87: Bidirectional avatar preview
+
+Bidirectional avatar preview implemented in v1.87. Native check covers three avatars, both poses, reverse/forward wraps, opposite-turn cancellation and restore-confirmation isolation. Original save validated on a copy. Next: continue geographic and customization improvements.
+
+## v1.86: Pending Gym TM recovery
+
+Pending Gym TM recovery review complete on unchanged v1.86. Twelve fresh checks use isolated TM-stack/key-pocket capacity fixtures; native instructions, Give cancellation/transfer, waiting-TM claim and cold Continue retain badges and prevent duplicates. Walkthrough adds exact TM Case recovery steps. Next: resume game development from the remaining roadmap rather than extending routine direction checks.
+
+## v1.86: Oak/Celine report-to-Gym journals
+
+Oak/Celine report-to-Gym review complete on unchanged v1.86. Eight fresh native checks cover required return reports, one Soothe Bell/Miracle Seed, leads4/5 and12/13, normal Gym paths, exact leader cold Continue and challenge declines. Walkthrough adds report transitions. Next: review pending Gym TM collection directions and repeat reward handling.
+
+## v1.86: German report-to-Gym journal
+
+German report-to-Gym journal review complete on unchanged v1.86. Four fresh native checks follow earned Karl report through Lena reward to Conrad approach, verify leads17/18, exact cold Continue and safe challenge decline. Walkthrough records journal transition and exact indoor steps. Next: review equivalent return-report journal guidance for Oak and Celine.
+
+## v1.86: German delivery and Gym approaches
+
+German delivery and Gym approach review complete on unchanged v1.86. Sixteen fresh native checks cover Lena/Karl progression, one Magnet, saved quest stages, all three Gym doors and leader declines. Walkthrough German chapter now includes exact train-to-contact and Gym-entry steps. Next: review current Tour journal directions for returning to Lena and approaching Conrad after the delivery.
+
+## v1.86: combined French direction review
+
+Combined French direction review complete on unchanged v1.86. Nineteen fresh native checks cover both west-of-path marker approaches, combined/remaining-habitat journal leads, both observation orders, required Remy review, Celine reward and saved contact approaches. Next: review German delivery and Gym approach directions against the current walkthrough.
+
+## v1.86: French marker journal directions
+
+French marker journal directions implemented in v1.86. Four lines clarify west-of-path positions in the combined and remaining-habitat leads. Six checks cover exact text/font fit, earned active-survey paths, leads8/9/10, one-time observations and native cold Continue. Player save validates on a copy. Next: verify combined marker directions through both observation orders and Remy review on v1.86.
+
+## v1.85: French study marker approaches
+
+French habitat-marker route review complete on unchanged v1.85. Four native checks verify paved Paris/Chantilly approaches, markers west of the main paths, UP/A one-time observations, remaining-habitat journal leads and exact cold Continue. Walkthrough adds exact steps. Next: add west-of-main-path marker guidance to the French observation journal leads.
+
+## v1.85: combined early-country journal directions
+
+Combined early-country journal direction review complete on unchanged v1.85. Twenty-six fresh native checks cover Oliver/Alice and Remy/Karl leads, exact saved approaches, normal review/delivery hand-ins, both survey orders and one-time Miracle Seed/Magnet rewards. Walkthrough current verification summary updated. Next: review French habitat-marker directions in the Europe Tour journal against their paved approaches.
+
+## v1.85: English trainer journal directions
+
+English trainer journal directions implemented in v1.85. Two lines add east-of-main-path positions. Six checks cover exact source/font fit, earned Oliver/Alice journal leads and native cold Continue at trainer approaches. Player save validates on a copy. Next: review the combined early-country Tour directions and saved quest navigation.
+
+## v1.84: English trail approach directions
+
+English trail direction review complete on unchanged v1.84. Four native checks verify paved London-to-Oliver and Oxford-to-Alice routes, east-of-path approach17,19, UP/A offers, No/B refusals and native cold Continue without battles or quest changes. Walkthrough includes exact movement steps. Next: add east-of-main-path positions to Oliver and Alice Europe Tour leads.
+
+## v1.84: combined three-country journal and quest review
+
+Combined three-country contact/journal review complete on unchanged v1.84. Twenty-four fresh native checks cover rival/three-Gym leads and saved approaches, both French survey orders with required Remy review and one Miracle Seed, Lena/Karl delivery with one Magnet, and completed-story repeat talks. Walkthrough opening verification history condensed with evidence retained in TESTING.md and release archives. Next: review early English trail directions in the Tour journal for finding Oliver and Alice.
+
+## v1.84: branch contact journal directions
+
+Branch contact journal directions implemented in v1.84. Three text lines clarify Remy/Karl positions and retain parcel guidance. Eight checks cover exact source/font fit, native earned journal leads, contact approach cold Continue and normal review/delivery hand-ins. Player save validates on a copy. Next: review the Tour journal contact directions together across the three country quests.
+
+## v1.83: branch contact approaches
+
+Branch contact review complete on unchanged v1.83. Six native checks verify LEFT six from station arrival square to Remy/Karl, saved approaches and earned Tour leads, and DOWN/A contact interactions with normal report/delivery state. Walkthrough adds precise arrival directions. Next: add the west-of-guide contact positions to Remy and Karl Europe Tour journal leads.
+
+## v1.83: native Gym doors and saved entry
+
+Gym door guidance review complete on unchanged v1.83. Nine native checks cover three north-door entries, correct indoor journal leads, exact entry Save/cold Continue, normal leader B declines, south exits and saved town returns. Next: review the journal directions for finding Remy and Karl in their branch-town squares.
+
+## v1.83: rival and Gym journal directions
+
+Rival/Gym journal approach guidance implemented in v1.83. Four direction lines clarify rival position and Gym door entry. Ten checks cover exact text-only scope/font fit and native earned rival/three-Gym leads at their approaches, read-only journal controls and exact cold Continue. Player save validates on a copy. Next: verify native Gym entrances and exits with the updated journal guidance.
+
+## v1.82: unlocked delivery and reward compatibility
+
+Lena delivery compatibility review complete on unchanged v1.82. Seven native checks verify earned two-badge offer, No/B, parcel acceptance, Karl delivery, pending report, one normal Magnet, native cold Continue and completed historical journey repeat. Next: review the rival and Gym approach directions in the Europe Tour journal for precise player guidance.
+
+## v1.82: Lena early badge directions
+
+Lena early badge directions implemented in v1.82. Two added pages name Oak's London study/report and Celine's Paris survey/report, clarifying the first two Gym prerequisites. Nine checks cover text-only scope/font fit, all three early contacts, refusal/badge gates, exact cold Continue and Oak acceptance. Player save validates on a copy. Next: verify Lena's unlocked delivery and completed reward branches against the new early help.
+
+## v1.81: unlocked survey and reward compatibility
+
+Celine survey compatibility review complete on unchanged v1.81. Nine native checks cover earned first-badge offer, No/B, acceptance, both observation orders, missing-site gate, Remy review, normal one-time Miracle Seed, native cold Continue and completed historical journey repeat. Next: review Lena's early badge guidance for equally clear study/report prerequisites.
+
+## v1.81: Celine first-badge directions
+
+Celine first-badge directions implemented in v1.81. Two extra pages name Oak's aide west of London's guide and the study/report prerequisite for Ellis. Nine checks cover text-only scope/font fit, early contact refusals/badge gates, native cold Continue and normal Oak acceptance. Player save validates on a copy. Next: verify Celine's unlocked survey and completed reward branches on v1.81 remain compatible with the new early help.
+
+## v1.80: early quest-contact review
+
+Early quest-contact review complete on unchanged v1.80. Seven native checks verify all three capital contact approaches, Oak No/B refusals, Celine/Lena early badge gates, native cold Continue and normal Oak acceptance. Walkthrough clarifies how Paris/Berlin starters begin the required London study. Next: improve Celine's first-badge dialogue to name Oak's London study and report prerequisite before Oxford Gym.
+
+## v1.80: completed travel boards and historical navigation
+
+Completed-journey onboarding review complete on unchanged v1.80. Thirty-four fresh native checks verify repeat boards in six modern towns, exact cold Continue, no duplicate gifts, correct map/era and completed journal controls through four historical locations, and saved Ada ending. Walkthrough distinguishes the board's general introduction from the journal's saved current objective. Next: review early quest-contact directions for new players while preserving the completed journey.
+
+## v1.80: travel-board journal onboarding
+
+Travel-board journal onboarding implemented in v1.80. Two added pages introduce topic switching and the badge/history topics. Eleven checks cover text-only scope/font fit, three country opening batteries, board/map/Tour controls, exact cold Continue and native travel to London aide. Original Austin save validates on a copy. Next: verify repeated board use on completed modern and historical journeys so onboarding remains read-only after the normal gifts.
+
+## v1.79: opening journal guidance
+
+Opening guidance review complete on unchanged v1.79. Walkthrough now explains the board-to-map transition and SELECT/DOWN switch to Europe Tour, which names Oak's London field study as the first objective from every country. Nine native checks cover three saved first-starter starts, board/map/lead controls, exact cold Continue and normal routes to London aide. Next: review in-game travel-board onboarding text for explicitly introducing the Europe Tour topic.
+
+## v1.79: combined map guidance and saved navigation
+
+Combined map guidance and navigation review complete on unchanged v1.79. Thirty-four fresh checks cover the five bounded text changes, line fit, saved regional Places controls and navigation across six modern towns and four historical locations. The separately archived v1.79 coastal suite retains its thirteen native checks. Walkthrough evidence updated. Next: review first-time-player story guidance against the complete walkthrough and identify a concrete usability improvement.
+
+## v1.79: coastal landmark map directions
+
+Coastal landmark map directions implemented in v1.79. Only Dover/Calais Places entries change, retaining ferry/coach destinations and naming the coastal districts. Sixteen fresh checks cover exact text-only scope/font fit, ten native landmark path points, six signs, saved district tiles/state, new map pages and browsing/A/R/B controls, ferry round trips, correct capital exits and saved Ada ending. Original player save validates on a copy. Next: review the combined regional and coastal map guidance with saved navigation across modern and historical locations.
+
+## v1.78: present-day coastal sightseeing review
+
+Dover/Calais sightseeing review complete on v1.78. Thirteen native checks cover both coach arrivals, ten district path points, all six read-only signs, exact district cold Continue/loaded maps, present-day map selection, ferry round trips, correct capital exits and saved Ada return. Walkthrough now includes exact coastal path and sign directions. Next: add landmark directions to Dover/Calais Town Map Places pages while retaining their transport guidance.
+
+## v1.78: regional directions and district review
+
+Regional directions review complete on v1.78. Thirty-two fresh native checks revisit nine signs, correct map selection, both walking lanes on all five crossings, nearby services/trails, historical Chantilly return and saved Ada ending. Walkthrough now states how to reach the exterior districts from arrival squares; geography notes reflect completed bridge work and new map guidance. Next: review present-day Dover/Calais sightseeing directions and map guidance against their coastal routes.
+
+## v1.78: regional landmark map directions
+
+Regional landmark map guidance implemented in v1.78. Oxford names Radcliffe, Magdalen and meadow bridges; Chantilly names the chateau, stables and gardens/canal; Oranienburg names palace, park and Havel bridges. Eleven fresh checks cover exact text-only scope, native line fit, each page and browsing/return controls, saved journey reload and Ada return. Actual player-save validation passes on a copy. Next: verify the regional directions against district walks and review remaining sightseeing guidance.
+
+## v1.77: regional landmark sign review
+
+Regional landmark interaction review complete on v1.77: all nine scenery signs have verified approach/facing directions, and all three towns retain correct present-day map selection and native Save/cold Continue. Walkthrough includes the exact sign positions. Next: add regional landmark directions to Town Map information pages, which currently only describe trails and services.
+
+## v1.77: combined regional bridges and walkthrough
+
+Regional bridge pass verified together on v1.77. Twenty-three fresh checks cover Oxford, Chantilly and Oranienburg bridge artwork, both walking lanes/directions, native cold Continue, nearby services/trails and completed Ada return. Walkthrough now includes exact optional crossing directions and district path coordinates. Next: review regional town landmark interactions and their map guidance for the next gameplay improvement.
+
+## v1.77: Oranienburg bridge parapets
+
+Oranienburg bridge detail implemented in v1.77, completing the regional bridge pass. Twelve deck cells use appended stone rails while retaining terrain behavior, paths, events, IDs and earlier art. Nine fresh PASS checks cover static scope, deterministic generation, both rows/directions, exact saved maps, completed journal, palace/park/service approaches, south trail and saved Ada return. Actual player-save validation passes on a copy. Next: verify the three regional bridge updates together and update walkthrough directions for optional landmark walks.
+
+## v1.76: Chantilly bridge parapets
+
+Chantilly bridge detail implemented in v1.76. Ten deck cells use appended native stone rails without changing terrain behavior, paths, events, IDs or earlier art. Eight fresh PASS checks cover static scope, deterministic generation, both columns/directions, exact saved map restoration, completed journal, estate/service routes, south trail, historical Chantilly revisit and saved Ada ending. Actual player-save copy passes native Continue/menus/save/reload. Next: review Oranienburg river crossings to complete the regional bridge detail pass.
+
+## v1.75: Oxford bridge parapets
+
+Oxford bridge detail implemented in v1.75. Twelve deck cells use appended native-palette rail overlays; river terrain, collision/elevation/behavior, paths, events, IDs and earlier artwork remain intact. Nine fresh PASS checks cover static scope, deterministic generation, both rows/directions on both crossings, exact old-save map restoration, saved journal, service approaches, southern trail and final Ada return. Actual player-save validation passes on a copy. Next: review Chantilly landmark approaches for a similarly compatible scenery improvement.
+
+## v1.74: combined capital facade and navigation verification
+
+Combined three-capital facade and navigation review complete on unchanged v1.74. Twenty-seven fresh checks cover all three exact facade footprints/retained assets and map/journal behavior across six modern towns and four historical locations. Walkthrough now identifies the homes by their wall colors while retaining exact entrance coordinates and evidence limits. Next: review the regional town architecture for a compatible visual improvement after the capital facade pass.
+
+## v1.74: Berlin western-home facade
+
+Western Berlin facade implemented in v1.74. Nine wall cells use appended native cool stone variants without changing palettes, collision/elevation, doorway, routes, events or earlier art. Fifteen fresh PASS checks cover static scope, deterministic generation, saved capital homes, Berlin library/garden/Gate visitors and completed Reichstag reward safety. The actual player save also passes native Continue/menus/save/reload on a copy. Next: review the three-capital facade pass together with saved city navigation and the walkthrough.
+
+## v1.73: Paris western-home facade
+
+Western Paris facade implemented in v1.73. Nine wall cells use appended native sandstone variants without changing palettes, collision/elevation, doorway, routes, events or earlier art. Fifteen fresh PASS checks cover static scope, deterministic generation, saved capital homes, Paris garden/Eiffel visitors and completed Notre-Dame reward safety. The actual player save also passes native Continue/menus/save/reload on a copy. Next: review Berlin neighborhood architectural detail for a focused compatible improvement.
+
+## v1.72: London western-home facade
+
+Western London facade implemented and packaged in v1.72. Exactly nine wall cells use appended native artwork variants; shared palettes, collision/elevation, doorway, paths, events and earlier art remain intact. Fifteen fresh PASS checks cover static scope, deterministic generation, older saved capital homes, nearby bridges/rooms/Westminster and historical London return. The actual player save also passes native Continue/menus/save/reload on a separate copy. Next: review the Paris residential facade for a similarly focused architecture improvement.
+
 ## London architecture: next facade scope and baseline
 
 Next architecture pass scoped to the western London neighborhood home. data/geography/LONDON-FACADE-NEXT.md specifies the exact wall footprint, preserved doorway and paths, append-only asset pipeline, tile/palette limits, old-save compatibility and native runtime acceptance. Two current facade baseline checks pass. Artwork has not changed; playable ROM remains v1.71. Next: implement the western-wall asset mapping, inspect the in-game result and complete compatibility checks before packaging a new version.

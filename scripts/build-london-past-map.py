@@ -56,11 +56,15 @@ for y in range(H):
   a[y][x]=(original[y][x]&~1023)|t
 from europe_trees import finish_trees
 finish_trees(a)
+for name,x,y in [('westminster',52,15),('lambeth',54,32)]:
+ for dy,t in enumerate(blocks['past_bridges'][name]):
+  for dx in range(6):a[y+dy][x+dx]=(a[y+dy][x+dx]&0xfc00)|t
 (R/f'data/layouts/Europe{city}Past/map.bin').write_bytes(struct.pack('<%dH'%(W*H),*(v for row in a for v in row)))
 p=R/'data/layouts/layouts.json';j=json.loads(p.read_text())
 for l in j['layouts']:
  if l.get('id')==f'LAYOUT_EUROPE_{city.upper()}_PAST':l.update(width=W,height=H,secondary_tileset=f'gTileset_Europe{city}')
-p.write_text(json.dumps(j,indent=2)+'\n')
+layout_newline='\r\n' if b'\r\n' in p.read_bytes() else '\n'
+p.write_bytes((json.dumps(j,indent=2)+'\n').replace('\n',layout_newline).encode())
 p=R/f'data/maps/Europe{city}Past/map.json';j=json.loads(p.read_text());j['bg_events']=[e for e in j['bg_events'] if not e['script'].startswith(f'Europe{city}Past_Realism')]
 for suffix,x,y,lines in signs:j['bg_events'].append(dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=f'Europe{city}Past_Realism'+suffix))
 p.write_text(json.dumps(j,indent=2)+'\n')

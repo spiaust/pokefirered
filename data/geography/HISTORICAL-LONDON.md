@@ -16,8 +16,7 @@ The two maps have independent layouts.
 
 These are compressed exterior landmarks, not a full recreation of London.
 The palace footprint, square, river bend and distances are simplified, and
-the bridges currently use ordinary path tiles rather than unique structural
-art. Westminster Abbey, County Hall, surrounding streets, building interiors
+the bridges now reuse established rail artwork over their original paving. Westminster Abbey, County Hall, surrounding streets, building interiors
 and finer period details remain future work. The original reception is a
 fictional story hub retained for save compatibility.
 
@@ -55,3 +54,13 @@ Generator: `scripts/build-london-past-map.py`. Existing source artwork:
 This completes the first landmark passes for the currently playable historical
 destinations. Next: fuller streets and building infill, more distinctive bridge
 and waterfront details, then the remaining World Options/customization work.
+
+## v2.05: Bridge rail detail
+
+River cells x52..57,y15..16 (Westminster) and x54..59,y32..33 (Lambeth)
+use four appended metatiles, reusing existing modern bridge rail tiles over
+native historical paving. Earlier tiles, palettes, mappings, events, collision,
+terrain behavior and modern London are preserved. Both lanes remain open.
+The asset and historical map generators include the variants; native checks
+verify crossings, bridge saves, signs, era map, repeated Rose welcome,
+Southampton round trip and Celebi return on an earned completed battery.

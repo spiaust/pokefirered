@@ -13,8 +13,10 @@ def assert_paris_facade(raw,old_raw):
  from pathlib import Path
  r=Path(__file__).resolve().parents[1]
  mapping=json.loads((r/'data/geography/paris-landmark-blocks.json').read_text())['garden_roof']
+ walls=json.loads((r/'data/geography/paris-landmark-blocks.json').read_text()).get('western_wall',{})
  old=struct.unpack('<2944H',old_raw);new=struct.unpack('<2944H',raw)
  for i,(a,b) in enumerate(zip(old,new)):
   x,y=i%64,i//64
   expected=(a&0xfc00)|mapping[str(a&1023)] if 54<=x<59 and 34<=y<37 else a
+  if 44<=x<49 and 37<=y<39 and str(a&1023) in walls:expected=(a&0xfc00)|walls[str(a&1023)]
   assert b==expected,(x,y,hex(a),hex(b))

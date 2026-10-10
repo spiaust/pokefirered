@@ -74,6 +74,10 @@ for y in range(28,31):
  for x in range(54,59):
   t=a[y][x];a[y][x]=(t&0xfc00)|blocks['reading_roof'][str(t&1023)]
 for x,y in ((43,35),(55,35)):a[y][x]=0x402
+for y in range(31,33):
+ for x in range(44,49):
+  t=a[y][x];replacement=blocks['western_wall'].get(str(t&1023))
+  if replacement is not None:a[y][x]=(t&0xfc00)|replacement
 original=[r[:] for r in a];forestids={0x14,0x15,0x1c,0x1d}
 def forest(x,y):return x<0 or y<0 or x>=W or y>=H or original[y][x]&0x3ff in forestids
 for y in range(H):

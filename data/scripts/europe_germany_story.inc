@@ -83,7 +83,11 @@ EuropeGermany_Text_Badges::
 	.string "I need a courier for a trail repair.\n"
 	.string "First, earn two GYM badges.\p"
 	.string "Visit ELLIS in OXFORD, then MARINE\n"
-	.string "in CHANTILLY after their studies.$"
+	.string "in CHANTILLY after their studies.\p"
+	.string "Begin with OAK's aide in LONDON.\n"
+	.string "Finish his study and report to him.\p"
+	.string "After ELLIS, meet CELINE in PARIS.\n"
+	.string "Finish her survey and report to her.$"
 
 EuropeGermany_Text_Decline::
 	.string "No hurry. The main paths are open.\n"

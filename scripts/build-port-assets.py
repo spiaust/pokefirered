@@ -11,3 +11,9 @@ for city in sys.argv[1:] or ['Dover','Calais']:
  specs=([('castle',(0,0,split,h),(96,80)),('cliffs',(split,0,w,h),(128,48))]
         if city=='Dover' else [('hall',(0,0,split,h),(96,80)),('lighthouse',(split,0,w,h),(48,80))])
  build(city+'Port',specs,source,mask_palette=True,base_name='island_harbor',base_tiles=165)
+ if city=='Calais':
+  from calais_pier import build as build_pier
+  build_pier()
+ if city=='Dover':
+  from dover_arm import build as build_arm
+  build_arm()

@@ -39,11 +39,15 @@ signs=[('Church',34,27,['NOTRE-DAME CHURCH','The old church west of BASSIN DU RO
 for _,x,y,_ in signs:a[y][x]=0x402
 from europe_trees import finish_trees
 finish_trees(a)
+for start,stop,top in [(39,45,18),(41,44,29)]:
+ for y,t in zip((top,top+1),blocks['bridge_rails']):
+  for x in range(start,stop):a[y][x]=(a[y][x]&0xfc00)|t
 (R/'data/layouts/EuropeLeHavrePast/map.bin').write_bytes(struct.pack('<%dH'%(W*H),*(v for row in a for v in row)))
 p=R/'data/layouts/layouts.json';j=json.loads(p.read_text())
 for l in j['layouts']:
  if l.get('id')=='LAYOUT_EUROPE_LE_HAVRE_PAST':l.update(width=W,height=H,secondary_tileset='gTileset_EuropeLeHavrePast')
-p.write_text(json.dumps(j,indent=2)+'\n')
+layout_newline='\r\n' if b'\r\n' in p.read_bytes() else '\n'
+p.write_bytes((json.dumps(j,indent=2)+'\n').replace('\n',layout_newline).encode())
 p=R/'data/maps/EuropeLeHavrePast/map.json';j=json.loads(p.read_text());j['bg_events']=[e for e in j['bg_events'] if not e['script'].startswith('EuropeLeHavrePast_Realism')]
 for suffix,x,y,lines in signs:j['bg_events'].append(dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='EuropeLeHavrePast_Realism'+suffix))
 p.write_text(json.dumps(j,indent=2)+'\n')

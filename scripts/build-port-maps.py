@@ -41,6 +41,12 @@ def build(city):
  dest=R/f'data/layouts/Europe{name}';dest.mkdir(exist_ok=True)
  from europe_trees import finish_trees
  finish_trees(a)
+ if city=='Dover':
+  for y,t in zip((31,33),blocks['arm_rails']):
+   for x in range(27,39):a[y][x]=(a[y][x]&0xfc00)|t
+ if city=='Calais':
+  for x,t in zip((50,52),blocks['pier_rails']):
+   for y in range(5,11):a[y][x]=(a[y][x]&0xfc00)|t
  (dest/'map.bin').write_bytes(struct.pack('<%dH'%(W*H),*(v for row in a for v in row)))
  (dest/'border.bin').write_bytes(struct.pack('<4H',*[0x052b]*4))
  p=R/'data/layouts/layouts.json';j=json.loads(p.read_text());id=f'LAYOUT_EUROPE_{city.upper()}_PORT'
@@ -48,7 +54,8 @@ def build(city):
  found=next((i for i,v in enumerate(j['layouts']) if v.get('id')==id),None)
  if found is None:j['layouts'].append(l)
  else:j['layouts'][found]=l
- p.write_text(json.dumps(j,indent=2)+'\n')
+ layout_newline='\r\n' if b'\r\n' in p.read_bytes() else '\n'
+ p.write_bytes((json.dumps(j,indent=2)+'\n').replace('\n',layout_newline).encode())
  p=R/f'data/maps/Europe{name}/map.json';j=json.loads(p.read_text());j['layout']=id
  j['bg_events']=[e for e in j['bg_events'] if not e['script'].startswith(f'Europe{name}_Realism')]
  for suffix,x,y,lines in signs:j['bg_events'].append(dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=f'Europe{name}_Realism{suffix}'))
