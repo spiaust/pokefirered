@@ -127,6 +127,15 @@ swap. They are now freed and cleared after the animation's final use. A native
 party order after an even number of swaps, and restored field controls. Native
 storage access in shelters and both country eras also passes after the fix.
 
+The supplies test starts from the naturally earned third-badge save. Native
+shop scrolling and cancellation pass, and earned money buys Thunder and Moon
+Stones for exactly 2,100 each. A rescued shadow Pikachu refuses the stone
+without consuming it. Ordinary caretaker visits purify it; native item use
+then evolves it to Raichu and consumes one stone. Cold Continue preserves the
+evolution, purification, inventory and story progress. Storage access in a
+shelter and both country eras, plus earned Water Pulse teaching, also pass
+on this release.
+
 ## Reproduce
 
 Run the build, then the Python scripts in WSL with the base mGBA test bridge:
@@ -142,6 +151,7 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
 8. `scripts/test_eclipse_storage.py` and `scripts/test_eclipse_natural_paris.py`
 9. `scripts/test_eclipse_tm_rewards.py`, `scripts/test_eclipse_tm_teaching.py`,
    `scripts/test_eclipse_natural_brussels.py` and `scripts/test_eclipse_party_memory.py`
+10. `scripts/test_eclipse_supplies.py` (requires the natural third-badge save)
 
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
@@ -158,4 +168,4 @@ A full natural-level balancing playthrough and broad hardware/emulator testing
 remain outstanding before calling this a polished final release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `f39bd5a8423fad50cfc8809f83969263c36ebf635ca432d715a9dd6f450f15aa`
+SHA-256: `4909e71e95d84657487f0f6fe64c5a21d34f7dfdfda8118e5d7531189327ee97`

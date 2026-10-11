@@ -87,6 +87,13 @@ appearance and these gameplay settings at any time:
 Visible sprites cover all 62 species in the new encounter tables, using native
 sprites and original small adaptations of the base's Pokemon icons.
 
+## Supplies and evolution
+
+Every campaign shelter and country shop sells all six evolution stones at
+2,100 each, plus the complete set of status cures, Max Potions and Full Restores.
+Native item-use and evolution rules apply: a shadow partner refuses a stone
+without consuming it, and a purified partner can evolve normally.
+
 ## Shadow partners
 
 Six rescue rewards require a free party slot. Shadow status persists through
