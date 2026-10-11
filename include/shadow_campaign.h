@@ -25,6 +25,7 @@ void Eclipse_KrakowPrepare(void);
 void Eclipse_PolandMemory(void);
 void Eclipse_CircuitStatus(void);
 u8 Eclipse_GetHour(void);
+bool8 Eclipse_IsNight(void);
 u8 Eclipse_MapWeather(u8 original);
 void Eclipse_UpdateEnvironment(void);
 void Eclipse_TintFieldHardware(void);

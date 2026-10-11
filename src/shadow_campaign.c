@@ -431,6 +431,18 @@ u8 Eclipse_GetHour(void)
 {
     return sEclipseLocalMinute / 60;
 }
+bool8 Eclipse_IsNight(void)
+{
+    u16 mode = VarGet(VAR_ECLIPSE_TIME);
+    u8 hour;
+    if (mode == 1) return FALSE;
+    if (mode == 2) return TRUE;
+    // Battles and menus can cross a time boundary without field polling.
+    sEclipseRtcPoll = 0;
+    Eclipse_PollLocalTime();
+    hour = Eclipse_GetHour();
+    return hour < 6 || hour >= 20;
+}
 static bool8 Eclipse_IsOutdoor(void)
 {
     u8 group = gSaveBlock1Ptr->location.mapGroup;

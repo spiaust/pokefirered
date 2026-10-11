@@ -10,6 +10,8 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Pokédex level-up, TM and HM tabs with native compatibility and paging.
 - [x] All 1,025 National Dex base species through Pecharunt; credited RHH battle
   sprites/icons, country reserve encounters and additional post-League guardians.
+- [x] Restore Eevee day/night evolution and nine imported friendship routes;
+  retain nested source requirements and audit unsupported special evolutions.
 - [ ] Expand modern ability/move/evolution coverage and species-specific cries;
   tune reserve habitats and encounter balance across countries.
 

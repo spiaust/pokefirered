@@ -851,4 +851,28 @@ dialogue widths and weighted encounter tables.
 
 Final agbcc build: EWRAM 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768;
 ROM content 17,299,452 bytes, padded to 32 MiB. Both ROM aliases match.
-Current release SHA-256: `11eb4fa4b6f8df220087132422488b0aeabb5cf9a8e11f12d49054b566b535cb`.
+Previous journal release SHA-256: `11eb4fa4b6f8df220087132422488b0aeabb5cf9a8e11f12d49054b566b535cb`.
+
+
+## Friendship evolution and RTC conditions — 2026-10-11
+
+The native Rare Candy handler verifies all nine added friendship evolutions,
+Eevee's Espeon/Umbreon branches, opposite-time rejection, DAY/NIGHT overrides,
+low friendship, Everstone and shadow-state prevention. Fixtures explicitly set
+species, friendship, held item, cached level and one Rare Candy on an isolated
+copy of the earned circuit save. These cases verify evolution mechanics, not
+naturally earned friendship or captures. Every candy raises level 50 to 51.
+The boundary cases cover 05:00, 06:00, 19:00 and 20:00. Evolved Silvally survives
+native Save and cold Continue. Logs: test-eclipse-friendship.log and
+ test-eclipse-friendship-boundaries.log. A final RTC refresh was added after
+these cases; test-eclipse-friendship-final.log rechecks both overrides, shadow
+prevention and deliberately stale menu-time fixtures for day Riolu/night Snom.
+
+The parser regression rejects unsupported nested gender/item/move requirements
+instead of dropping their conditions. It verifies nine friendship routes and
+seven existing base-form aliases. Roster, campaign and continent static checks
+pass; title boot and saved Continue pass. No RAM or saved-data fields were added.
+
+Final ROM content: 17,299,532 bytes, padded to 32 MiB. EWRAM remains 261,196 /
+262,144 bytes, IWRAM 29,824 / 32,768. Both ROM aliases match.
+Current release SHA-256: `219bc65d5b509d28a81897fe2b30debd477c25de17c31f939d350be5f940c113`.

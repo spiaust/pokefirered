@@ -66,3 +66,17 @@ art was copied. `graphics/eclipse_villains/prompts.json` retains every final
 prompt; `source/` retains the generated sheets. `scripts/pack_eclipse_villains.py`
 performs only deterministic cropping, nearest-neighbor scaling, palette indexing
 and packing into native 64x64 battle and nine-frame 16x32 walking assets.
+
+### Nested evolution requirements
+
+The pinned RHH source now expresses many evolutions using EVOLUTION / CONDITIONS
+rather than separate friendship method names. scripts/eclipse_evolutions.py
+reads balanced braces and projects only supported condition combinations into
+the native FireRed table. The nine added friendship routes use this engine's
+220-point threshold. Day is 06:00–19:59 local RTC; World Gear overrides apply.
+Base-form aliases remain consistent with the existing roster projection.
+The generated audit records 203 supported rules and 150 omitted rules across
+639 imported species. Omitted rules include unavailable items, special methods,
+additional conditions and unavailable regional/form targets. This pass does
+not implement those methods or replace original species' cross-generation trees.
+Source: https://github.com/rh-hideout/pokeemerald-expansion/tree/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7

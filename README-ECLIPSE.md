@@ -335,3 +335,14 @@ explains Ho-Oh's three-purification and Mewtwo's six-purification requirements.
 The displayed rematch levels are for Normal; World Gear difficulty still applies.
 All thirteen circuit rematches and the unique Master Ball now have earned-party,
 native-input coverage through cold saved Continue. Broader balance work remains.
+
+## Friendship evolutions
+
+Raise friendship to 220, then level up. Budew and Riolu evolve during the day;
+Chingling and Snom evolve at night. Buneary, Munchlax, Woobat, Swadloon and
+Type: Null evolve with friendship at either time. Eevee can now become Espeon
+by day or Umbreon by night, alongside its existing stone evolutions.
+Evolution day runs from 06:00 through 19:59 on the local RTC. World Gear DAY
+and NIGHT override this requirement, including indoors and in the past.
+Everstone and the shadow state still prevent evolution. Special modern methods
+remain tracked in data/eclipse-evolution-projection.json for future production.

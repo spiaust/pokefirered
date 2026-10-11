@@ -7,6 +7,7 @@ from pathlib import Path
 import json,re,urllib.request,time
 from concurrent.futures import ThreadPoolExecutor
 from PIL import Image
+from eclipse_evolutions import project
 ROOT=Path(__file__).resolve().parents[1]; CACHE=ROOT/'.local-tools/roster'
 SHA='7b4344c7ee867c98c8fb9d6026791df4f8eaecf7'
 ENTRIES=json.loads((ROOT/'data/eclipse-roster-source.json').read_text())
@@ -90,7 +91,7 @@ def write(path,s):
 def inc(name,s):write('src/data/eclipse_roster/'+name+'.h',s+'\n')
 credit=(CACHE/'CREDITS.md').read_bytes();(ROOT/'data/RHH-ROSTER-CREDITS.md').write_bytes(credit)
 write('data/eclipse-roster.json',json.dumps({'source':'https://github.com/rh-hideout/pokeemerald-expansion','commit':SHA,'projection':'Gen III move/ability subset; original species unchanged','species':rows},indent=2)+'\n')
-gfx=[];decl=[];front=[];back=[];pal=[];shiny=[];icons=[];iconp=[];foot=[];stats=[];names=[];levels=[];ptrs=[];tms=[];dex=[];evo=[];coordsf=[];coordsb=[];elevation=[]
+gfx=[];decl=[];front=[];back=[];pal=[];shiny=[];icons=[];iconp=[];foot=[];stats=[];names=[];levels=[];ptrs=[];tms=[];dex=[];evo=[];evo_audit=[];coordsf=[];coordsb=[];elevation=[]
 source_to_token={r['source_token']:r['token'] for r in rows};existing_species=set(re.findall(r'#define (SPECIES_\w+)\s+\d+', (ROOT/'include/constants/species.h').read_text()))
 dextexts=[]
 for r in rows:
@@ -118,17 +119,13 @@ for r in rows:
  category=r['category'].upper()[:11];desc=f'GENERATION {r["generation"]} - {category}.\\nFind partners across Europe.\\nSELECT shows its learnable moves.'
  dex.append(f'[NATIONAL_DEX_{token[8:]}] = {{.categoryName = _("{category}"), .height = {r["height"]}, .weight = {r["weight"]}, .description = sEclipseDex{n}, .unusedDescription = sEclipseDex{n}, .pokemonScale = 256, .trainerScale = 256}},')
  dextexts.append(f'static const u8 sEclipseDex{n}[] = _("{desc}");')
- evos=[]
- for method,param,target in r['evolutions']:
-  target=source_to_token.get(target,target)
-  if target not in existing_species and target not in source_to_token.values():continue
-  # Preserve methods implemented by FireRed; later mechanics remain documented.
-  if method in ('EVO_LEVEL','EVO_FRIENDSHIP','EVO_FRIENDSHIP_DAY','EVO_FRIENDSHIP_NIGHT','EVO_TRADE','EVO_TRADE_ITEM','EVO_ITEM'):
-   if method in ('EVO_TRADE_ITEM','EVO_ITEM') and param not in (ROOT/'include/constants/items.h').read_text():continue
-   evos.append('{'+', '.join((method,param,target))+'}')
+ supported, omitted = project(ENTRIES[str(n)]['body'], existing_species | set(source_to_token.values()), set(re.findall(r'#define (ITEM_\w+)\s+', (ROOT/'include/constants/items.h').read_text())), source_to_token)
+ evo_audit.append(dict(species=token, supported=supported, omitted=omitted))
+ evos=['{'+', '.join(rule)+'}' for rule in supported]
  if evos:evo.append(f'[{token}] = {{'+', '.join(evos[:5])+'},')
  coordsf.append(f'[{token}] = {{MON_COORDS_SIZE(64, 64), {r["frontOffset"]}}},');coordsb.append(f'[{token}] = {{MON_COORDS_SIZE(64, 64), {r["backOffset"]}}},');elevation.append(f'[{token}] = 0,')
 for name,data in [('assets',gfx),('declarations',decl),('front',front),('back',back),('palette',pal),('shiny',shiny),('icons',icons),('icon_palette',iconp),('footprints',foot),('stats',stats),('names',names),('learnsets',levels),('learnset_pointers',ptrs),('machines',tms),('dex',dex),('dex_text',dextexts),('evolutions',evo),('front_coords',coordsf),('back_coords',coordsb),('elevation',elevation)]:inc(name,'\n'.join(data))
+(ROOT/'data/eclipse-evolution-projection.json').write_text(json.dumps(evo_audit,indent=2)+'\n',encoding='utf-8')
 # Each country has a reproducible 16-17 member reserve; guardians keep their own gates.
 guardians=[r['token'] for r in rows if re.search(r'\.is(?:RestrictedLegendary|SubLegendary|Mythical)\s*=\s*TRUE', ENTRIES[str(r['national'])]['body'])]
 old_legends = {'ARTICUNO','ZAPDOS','MOLTRES','MEWTWO','MEW','RAIKOU','ENTEI','SUICUNE','LUGIA','HO_OH','CELEBI','REGIROCK','REGICE','REGISTEEL','LATIAS','LATIOS','KYOGRE','GROUDON','RAYQUAZA','JIRACHI','DEOXYS'}
