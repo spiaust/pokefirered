@@ -373,6 +373,9 @@ static void DrawEuropeJournal(u8 taskId)
 static const u8 *GetEuropeMapLocation(void)
 {
     u8 map = gSaveBlock1Ptr->location.mapNum;
+    static const u8 sKrakowLocation[] = _("KRAKOW SANCTUARY");
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POSTGAME_KRAKOW))
+        return sKrakowLocation;
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_CONTINENT_LONDON))
         return Shadow_GetCountryMapName(gMapHeader.regionMapSectionId);
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SHADOW_OXFORD))

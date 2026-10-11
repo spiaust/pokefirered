@@ -147,7 +147,7 @@ Consequence: LEON: The council recognizes you. Your rival reached the champion's
 
 {RIVAL}: I used to think a champion stood alone. Now I know who helped me get here. No secrets, no stolen strength. One honest match between us. Ready?
 
-Consequence: {RIVAL}: You are the EUROPEAN CHAMPION! ADA records our journey: eight badges, partners rescued, a resistance network protected, and ECLIPSE defeated. CELEBI returns to its forest. The shelters remain open. We will keep traveling together. THE END.
+Consequence: {RIVAL}: You are the EUROPEAN CHAMPION! ADA records our journey: eight badges, partners rescued, a resistance network protected, and ECLIPSE defeated. CELEBI watches the timeways. ADA has a lead in Copenhagen. The shelters remain open. We will keep traveling together. THE END.
 
 ## The continental rescue network
 
@@ -205,9 +205,8 @@ Completed saves retain the hunt, reward and open League/travel facilities.
 ## Postgame production roadmap
 
 The ending leaves League shelters and repeatable training available. The
-Scandinavian remnant hunt and legendary guardians are now implemented.
-Remaining production includes sanctuary restoration in Krakow and a true
-champion rematch circuit. Detailed tasks are tracked in
+Scandinavian remnant hunt, legendary guardians and Krakow sanctuary restoration
+are now implemented. Remaining production includes a true champion rematch circuit. Detailed tasks are tracked in
 [TODO-ECLIPSE.md](TODO-ECLIPSE.md).
 
 | Destination | City | Landmark |
@@ -251,3 +250,20 @@ champion rematch circuit. Detailed tasks are tracked in
 | Latvia | Riga | HOUSE OF BLACKHEADS |
 | Estonia | Tallinn | TOWN HALL |
 | Turkey | Istanbul | HAGIA SOPHIA |
+
+## Krakow: the refuge remembers
+
+After becoming Champion, travel from Warsaw to the Wawel sanctuary in Krakow.
+Caretaker Zofia asks for repairs, medicine and restoration of the records or
+seed garden protected in Poland's historical chapter. Without that past choice,
+she points the player back to Warsaw's Celebi and keeper; time travel stays open.
+
+An Escape Rope secures access, two Super Potions stock the refuge clinic, and a
+Water Stone restores the garden spring or a Thunder Stone powers the archive.
+The player can complete these jobs in any order. Each changes a courtyard patch,
+uses its materials once and persists independently. All supplies are sold locally.
+The saved garden brings back Eevee; the saved archive brings back Voltorb.
+One level-30 returning partner can be adopted, and Zofia awards one Lucky Egg.
+Bag/storage capacity problems leave those rewards available for later collection.
+This refuge adds a present-day district; Poland's historical operations remain
+in Warsaw. Its compact castle artwork adapts the existing Polish landmark tiles.

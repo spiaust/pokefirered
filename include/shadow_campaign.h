@@ -21,4 +21,6 @@ void Shadow_NetworkStatus(void);
 struct Pokemon;
 void Shadow_RivalPartner(struct Pokemon *party, u8 count, bool8 opening);
 void Shadow_ShowCredits(void);
+void Eclipse_KrakowPrepare(void);
+void Eclipse_PolandMemory(void);
 #endif

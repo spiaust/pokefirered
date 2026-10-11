@@ -1508,3 +1508,5 @@ Text_TestMsg::
 	.include "data/maps/EuropeCouncilHall/scripts.inc"
 
 	.include "data/scripts/shadow_campaign.inc"
+
+ .include "data/maps/PostgameKrakow/scripts.inc"

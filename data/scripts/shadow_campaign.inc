@@ -63,7 +63,7 @@ Shadow_Shop::
  end
  .align 2
 Shadow_ShopItems::
- .2byte ITEM_POKE_BALL, ITEM_GREAT_BALL, ITEM_ULTRA_BALL, ITEM_POTION, ITEM_SUPER_POTION, ITEM_HYPER_POTION, ITEM_REVIVE, ITEM_ANTIDOTE, ITEM_PARALYZE_HEAL, ITEM_AWAKENING, ITEM_BURN_HEAL, ITEM_ICE_HEAL, ITEM_FULL_HEAL, ITEM_MAX_POTION, ITEM_FULL_RESTORE, ITEM_FIRE_STONE, ITEM_WATER_STONE, ITEM_THUNDER_STONE, ITEM_LEAF_STONE, ITEM_MOON_STONE, ITEM_SUN_STONE, ITEM_NONE
+ .2byte ITEM_POKE_BALL, ITEM_GREAT_BALL, ITEM_ULTRA_BALL, ITEM_POTION, ITEM_SUPER_POTION, ITEM_HYPER_POTION, ITEM_REVIVE, ITEM_ANTIDOTE, ITEM_PARALYZE_HEAL, ITEM_AWAKENING, ITEM_BURN_HEAL, ITEM_ICE_HEAL, ITEM_FULL_HEAL, ITEM_MAX_POTION, ITEM_FULL_RESTORE, ITEM_FIRE_STONE, ITEM_WATER_STONE, ITEM_THUNDER_STONE, ITEM_LEAF_STONE, ITEM_MOON_STONE, ITEM_SUN_STONE, ITEM_ESCAPE_ROPE, ITEM_NONE
 Shadow_WelcomeText::
 	.string "ADA: Join the ECLIPSE campaign?\nEight badges, a rival and a\pmystery across Europe await.\nThis journey has its own saved\pprogress. You can return to\nthese shelters after a defeat.$"
 Shadow_ResumeText::
@@ -6728,3 +6728,216 @@ EclipseNordic_DefeatedText::
  .string "This relay is silent. Its former\npartners are with the keepers.$"
 EclipseNordic_DefeatText::
  .string "The signal failed. We surrender.$"
+
+
+EclipseKrakow_Travel::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseKrakow_Locked
+ msgbox EclipseKrakow_TravelText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ warp MAP_POSTGAME_KRAKOW, 15, 29
+ waitstate
+ goto Shadow_End
+EclipseKrakow_Return::
+ lock
+ faceplayer
+ msgbox EclipseKrakow_ReturnText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ warp MAP_CONTINENT_WARSAW, 34, 13
+ waitstate
+ goto Shadow_End
+EclipseKrakow_Caretaker::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseKrakow_Locked
+ special Eclipse_PolandMemory
+ goto_if_eq VAR_RESULT, 0, EclipseKrakow_NoMemory
+ goto_if_eq VAR_ECLIPSE_KRAKOW, 0, EclipseKrakow_Start
+ goto_if_eq VAR_ECLIPSE_KRAKOW, 1, EclipseKrakow_CheckTasks
+ goto_if_eq VAR_ECLIPSE_KRAKOW, 2, EclipseKrakow_Reward
+ msgbox EclipseKrakow_CompleteText
+ goto Shadow_End
+EclipseKrakow_Start::
+ msgbox EclipseKrakow_StartText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ setvar VAR_ECLIPSE_KRAKOW, 1
+EclipseKrakow_CheckTasks::
+ goto_if_unset FLAG_0x8D6, EclipseKrakow_Instructions
+ goto_if_unset FLAG_0x8D7, EclipseKrakow_Instructions
+ goto_if_unset FLAG_0x8D8, EclipseKrakow_Instructions
+ setvar VAR_ECLIPSE_KRAKOW, 2
+EclipseKrakow_Reward::
+ goto_if_set FLAG_0x8D9, EclipseKrakow_RewardDone
+ msgbox EclipseKrakow_RewardText
+ giveitem ITEM_LUCKY_EGG, 1
+ goto_if_eq VAR_0x8007, FALSE, EclipseKrakow_RewardFull
+ setflag FLAG_0x8D9
+EclipseKrakow_RewardDone::
+ setvar VAR_ECLIPSE_KRAKOW, 3
+ msgbox EclipseKrakow_CompleteText
+ goto Shadow_End
+EclipseKrakow_Instructions::
+ msgbox EclipseKrakow_InstructionsText
+ goto Shadow_End
+EclipseKrakow_NoMemory::
+ msgbox EclipseKrakow_NoMemoryText
+ goto Shadow_End
+EclipseKrakow_Locked::
+ msgbox EclipseKrakow_LockedText
+ goto Shadow_End
+EclipseKrakow_Bridge::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_lt VAR_ECLIPSE_KRAKOW, 1, EclipseKrakow_NotStarted
+ goto_if_set FLAG_0x8D6, EclipseKrakow_WorkDone
+ msgbox EclipseKrakow_BridgeText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ checkitem ITEM_ESCAPE_ROPE, 1
+ goto_if_eq VAR_RESULT, FALSE, EclipseKrakow_NoMaterials
+ removeitem ITEM_ESCAPE_ROPE, 1
+ setflag FLAG_0x8D6
+ goto EclipseKrakow_Update
+EclipseKrakow_Medicine::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_lt VAR_ECLIPSE_KRAKOW, 1, EclipseKrakow_NotStarted
+ goto_if_set FLAG_0x8D7, EclipseKrakow_WorkDone
+ msgbox EclipseKrakow_MedicineText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ checkitem ITEM_SUPER_POTION, 2
+ goto_if_eq VAR_RESULT, FALSE, EclipseKrakow_NoMaterials
+ removeitem ITEM_SUPER_POTION, 2
+ setflag FLAG_0x8D7
+ goto EclipseKrakow_Update
+EclipseKrakow_Memory::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_lt VAR_ECLIPSE_KRAKOW, 1, EclipseKrakow_NotStarted
+ goto_if_set FLAG_0x8D8, EclipseKrakow_WorkDone
+ special Eclipse_PolandMemory
+ goto_if_eq VAR_RESULT, 1, EclipseKrakow_Garden
+ msgbox EclipseKrakow_ArchiveText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ checkitem ITEM_THUNDER_STONE, 1
+ goto_if_eq VAR_RESULT, FALSE, EclipseKrakow_NoMaterials
+ removeitem ITEM_THUNDER_STONE, 1
+ goto EclipseKrakow_MemoryDone
+EclipseKrakow_Garden::
+ msgbox EclipseKrakow_GardenText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ checkitem ITEM_WATER_STONE, 1
+ goto_if_eq VAR_RESULT, FALSE, EclipseKrakow_NoMaterials
+ removeitem ITEM_WATER_STONE, 1
+EclipseKrakow_MemoryDone::
+ setflag FLAG_0x8D8
+EclipseKrakow_Update::
+ special Eclipse_KrakowPrepare
+ goto_if_unset FLAG_0x8D6, EclipseKrakow_Draw
+ goto_if_unset FLAG_0x8D7, EclipseKrakow_Draw
+ goto_if_unset FLAG_0x8D8, EclipseKrakow_Draw
+ setvar VAR_ECLIPSE_KRAKOW, 2
+ special Eclipse_PolandMemory
+ goto_if_eq VAR_RESULT, 1, EclipseKrakow_ShowEevee
+ addobject 6
+ goto EclipseKrakow_Draw
+EclipseKrakow_ShowEevee::
+ addobject 5
+EclipseKrakow_Draw::
+ special DrawWholeMapView
+ msgbox EclipseKrakow_WorkDoneText
+ goto Shadow_End
+EclipseKrakow_NotStarted::
+ msgbox EclipseKrakow_NotStartedText
+ goto Shadow_End
+EclipseKrakow_NoMaterials::
+ msgbox EclipseKrakow_NoMaterialsText
+ goto Shadow_End
+EclipseKrakow_WorkDone::
+ msgbox EclipseKrakow_WorkDoneText
+ goto Shadow_End
+EclipseKrakow_Partner::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_set FLAG_0x8DC, EclipseKrakow_Adopted
+ goto_if_lt VAR_ECLIPSE_KRAKOW, 2, Shadow_End
+ msgbox EclipseKrakow_PartnerText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ special Eclipse_PolandMemory
+ goto_if_eq VAR_RESULT, 1, EclipseKrakow_GiveEevee
+ givemon SPECIES_VOLTORB, 30
+ goto EclipseKrakow_GiftResult
+EclipseKrakow_GiveEevee::
+ givemon SPECIES_EEVEE, 30
+EclipseKrakow_GiftResult::
+ goto_if_eq VAR_RESULT, MON_CANT_GIVE, EclipseKrakow_StorageFull
+ setflag FLAG_0x8DC
+ goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, EclipseKrakow_GiftPC
+ msgbox EclipseKrakow_GiftText
+ goto Shadow_End
+EclipseKrakow_GiftPC::
+ msgbox EclipseKrakow_GiftPCText
+ goto Shadow_End
+EclipseKrakow_StorageFull::
+ msgbox EclipseKrakow_StorageFullText
+ goto Shadow_End
+EclipseKrakow_Adopted::
+ msgbox EclipseKrakow_AdoptedText
+ goto Shadow_End
+EclipseKrakow_Landmark::
+ msgbox EclipseKrakow_LandmarkText, MSGBOX_SIGN
+ end
+EclipseKrakow_TravelText::
+ .string "Krakow's Wawel sanctuary needs\nhelp rebuilding. Travel there?$"
+EclipseKrakow_ReturnText::
+ .string "Return to Warsaw's station?\nYour restoration work is saved.$"
+EclipseKrakow_LockedText::
+ .string "The sanctuary will reopen after\nyour League journey is complete.$"
+EclipseKrakow_NoMemoryText::
+ .string "ZOFIA: Our plans need the records\nyou saved in Poland's past.\pReturn to Warsaw. Ask CELEBI to\ntake you back, then help the\pkeeper choose the garden or\narchive. Come back here after.$"
+EclipseKrakow_StartText::
+ .string "ZOFIA: Welcome to Wawel's refuge.\nWar and ECLIPSE left scars.\pThe future you protected gives\nus a way to rebuild without\perasing those memories. Will\nyou help restore this sanctuary?$"
+EclipseKrakow_InstructionsText::
+ .string "ZOFIA: Three keepers need help.\nBring one ESCAPE ROPE for access,\ptwo SUPER POTIONS for the clinic,\nand a stone for your saved\pgarden or archive. Our shop\nsells all these supplies.$"
+EclipseKrakow_BridgeText::
+ .string "We need one ESCAPE ROPE to secure\naccess for returning partners.\pDonate one to repair the path?$"
+EclipseKrakow_MedicineText::
+ .string "The refuge clinic needs two\nSUPER POTIONS for new arrivals.\pDonate two to stock the clinic?$"
+EclipseKrakow_GardenText::
+ .string "You protected Poland's garden.\nOne WATER STONE will restore\pits spring here. EEVEE can\nreturn to a green refuge.\pDonate one WATER STONE?$"
+EclipseKrakow_ArchiveText::
+ .string "You protected Poland's archive.\nOne THUNDER STONE will power\pits rescue records. VOLTORB can\nreturn to a working refuge.\pDonate one THUNDER STONE?$"
+EclipseKrakow_WorkDoneText::
+ .string "This part of the refuge is ready.\nWhen all three jobs are done,\preport to ZOFIA by the castle.$"
+EclipseKrakow_NotStartedText::
+ .string "Speak to ZOFIA by the castle\nbefore beginning restoration.$"
+EclipseKrakow_NoMaterialsText::
+ .string "You do not have enough supplies.\nOur shop can provide them.\pReturn when you are ready; no\nmaterials have been taken.$"
+EclipseKrakow_RewardText::
+ .string "ZOFIA: Paths, medicine and our\nsaved memories are ready. The\ppartners are returning! Take a\nLUCKY EGG for your next journey.$"
+EclipseKrakow_CompleteText::
+ .string "ZOFIA: Wawel's refuge is restored.\nA returning partner may choose\pto travel with you. Healing,\nstorage and supplies stay open.$"
+EclipseKrakow_PartnerText::
+ .string "One returning partner wants to\njoin your journey. Adopt it?$"
+EclipseKrakow_GiftText::
+ .string "A level 30 partner joined you!\nKeep building a kinder future.$"
+EclipseKrakow_GiftPCText::
+ .string "Your party is full. The level 30\npartner is waiting in your PC.$"
+EclipseKrakow_StorageFullText::
+ .string "Your party and PC are full.\nMake room, then come back.\pThe partner will wait safely.$"
+EclipseKrakow_AdoptedText::
+ .string "The returning partners are safe.\nYour adopted friend remembers\pthe refuge you helped restore.$"
+EclipseKrakow_LandmarkText::
+ .string "WAWEL SANCTUARY - KRAKOW\nA refuge beside the Vistula.\pThe castle preserves memories;\nthe courtyard welcomes partners.$"
+
+EclipseKrakow_RewardFull::
+ msgbox EclipseKrakow_RewardFullText
+ goto Shadow_End
+EclipseKrakow_RewardFullText::
+ .string "There is no room for LUCKY EGG.\nMake room, then return to ZOFIA.\pThe restored refuge and your\nreward will wait safely.$"

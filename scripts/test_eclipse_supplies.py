@@ -47,24 +47,24 @@ def main():
   go(e,(8,7));e.press('UP');e.press('A',180);wait_menu(e,'Task_ShopMenu');e.press('A',180);wait_menu(e,'Task_BuyMenu')
   stock=e.symbols['Shadow_ShopItems'];items=[]
   while e.read(stock+2*len(items),2):items.append(e.read(stock+2*len(items),2))
-  assert len(items)==21 and set(range(93,99)).issubset(items),items
+  assert len(items)==22 and set(range(93,99)).issubset(items),items
   shop=e.symbols['sShopData']
-  for item in (96,94):
+  for item,price in ((96,2100),(94,2100),(85,550)):
    index=items.index(item)
    for _ in range(60):
     cur=e.read(shop+12,2)+e.read(shop+14,2)
     if cur==index:break
     e.press('DOWN' if cur<index else 'UP',30)
    assert cur==index
-   before=money(e),count(e,item);assert before[0]>=2100
+   before=money(e),count(e,item);assert before[0]>=price
    confirm_purchase(e);e.press('B',90);wait_menu(e,'Task_BuyMenu')
    assert (money(e),count(e,item))==before
    confirm_purchase(e);e.press('A',180);wait_menu(e,'Task_ReturnToItemListAfterItemPurchase')
-   assert money(e)==before[0]-2100 and count(e,item)==before[1]+1
+   assert money(e)==before[0]-price and count(e,item)==before[1]+1
    e.press('A',90);wait_menu(e,'Task_BuyMenu')
   e.screenshot(ROOT/'test-output/eclipse-evolution-shop.png')
   e.press('B',180);wait_menu(e,'Task_ShopMenu');e.press('B',180);e.finish_dialogue()
-  print('PASS: scrolling shop, cancel, Thunder/Moon Stones at 2100 each using earned money.',flush=True)
+  print('PASS: scrolling shop, cancel, Thunder/Moon Stones at 2100 and restoration rope at 550 using earned money.',flush=True)
   use_stone(e)
   for _ in range(8):e.press('A',90)
   field(e)

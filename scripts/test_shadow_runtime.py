@@ -14,7 +14,7 @@ groups=json.loads((ROOT/'data/maps/map_groups.json').read_text())
 def go(e,target):
     g,idx,x,y=e.location()
     if g==43:return base_go(e,target)
-    n=groups['gMapGroup_Shadow' if g==44 else 'gMapGroup_Continent'][idx];m=json.loads((ROOT/f'data/maps/{n}/map.json').read_text());l=layouts[m['layout']];w,h=l['width'],l['height'];a=struct.unpack('<%dH'%(w*h),(ROOT/l['blockdata_filepath']).read_bytes());blocked={(o['x'],o['y']) for o in m['object_events']}
+    n=groups[{44:'gMapGroup_Shadow',45:'gMapGroup_Continent',46:'gMapGroup_Postgame'}[g]][idx];m=json.loads((ROOT/f'data/maps/{n}/map.json').read_text());l=layouts[m['layout']];w,h=l['width'],l['height'];a=struct.unpack('<%dH'%(w*h),(ROOT/l['blockdata_filepath']).read_bytes());blocked={(o['x'],o['y']) for o in m['object_events']}
     q=deque([(x,y)]);prev={(x,y):None}
     while q and target not in prev:
         x,y=q.popleft()
@@ -29,7 +29,7 @@ def go(e,target):
 def ensure_visible(e):
     # Rate-based spawn may initially be absent; walking lets the native field system retry.
     e.write('sWildEncountersDisabled',1,1)
-    g,idx,_,_=e.location();n=groups['gMapGroup_Shadow' if g==44 else 'gMapGroup_Continent'][idx]
+    g,idx,_,_=e.location();n=groups[{44:'gMapGroup_Shadow',45:'gMapGroup_Continent',46:'gMapGroup_Postgame'}[g]][idx]
     m=json.loads((ROOT/f'data/maps/{n}/map.json').read_text());local=next(i+1 for i,o in enumerate(m['object_events']) if o['graphics_id']=='OBJ_EVENT_GFX_VAR_0')
     target=(17,15) if g==44 else (40,25);go(e,target)
     for _ in range(48):

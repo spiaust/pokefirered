@@ -41,5 +41,43 @@
       "Oslo",
       "Stockholm"
     ]
+  },
+  "krakow_sanctuary": {
+    "progress_var": "0x40be",
+    "task_flags": [
+      "0x8d6",
+      "0x8d7",
+      "0x8d8"
+    ],
+    "reward_flag": "0x8d9",
+    "partner_hide_flags": [
+      "0x8da",
+      "0x8db"
+    ],
+    "adoption_flag": "0x8dc",
+    "reward": "LUCKY_EGG",
+    "materials": {
+      "bridge": [
+        "ESCAPE_ROPE",
+        1
+      ],
+      "medicine": [
+        "SUPER_POTION",
+        2
+      ],
+      "garden": [
+        "WATER_STONE",
+        1
+      ],
+      "archive": [
+        "THUNDER_STONE",
+        1
+      ]
+    },
+    "partners": {
+      "garden": "EEVEE",
+      "archive": "VOLTORB"
+    },
+    "partner_level": 30
   }
 }

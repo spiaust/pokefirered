@@ -10,6 +10,7 @@
 #include "shadow_campaign.h"
 #include "europe_map.h"
 #include "constants/maps.h"
+#include "constants/flags.h"
 #include "constants/vars.h"
 #include "constants/pokemon.h"
 #include "constants/species.h"
@@ -305,4 +306,25 @@ void Shadow_RivalPartner(struct Pokemon *party, u8 count, bool8 opening)
 void Shadow_ShowCredits(void)
 {
     OpenEuropeCredits(CB2_ReturnToFieldContinueScript);
+}
+
+// Krakow inherits Poland's saved choice, independently of this district's map number.
+void Eclipse_PolandMemory(void)
+{
+    u16 mask = 1 << 13;
+    gSpecialVar_Result = !(VarGet(VAR_0x40A5) & mask) ? 0 : (VarGet(VAR_0x40A2) & mask) ? 1 : 2;
+}
+void Eclipse_KrakowPrepare(void)
+{
+    u8 task, x, y;
+    u16 flags[] = {FLAG_0x8D6, FLAG_0x8D7, FLAG_0x8D8};
+    FlagSet(FLAG_0x8DA);
+    FlagSet(FLAG_0x8DB);
+    Eclipse_PolandMemory();
+    for (task = 0; task < 3; task++)
+        for (y = 15; y < 18; y++)
+            for (x = 6 + task * 15; x < 12 + task * 15; x++)
+                MapGridSetMetatileIdAt(x + 7, y + 7, !FlagGet(flags[task]) ? 0x300D : task == 2 && gSpecialVar_Result == 1 ? 0x3004 : 0x3165);
+    if (FlagGet(FLAG_0x8D6) && FlagGet(FLAG_0x8D7) && FlagGet(FLAG_0x8D8))
+        FlagClear(gSpecialVar_Result == 1 ? FLAG_0x8DA : FLAG_0x8DB);
 }

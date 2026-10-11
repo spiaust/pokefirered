@@ -149,7 +149,25 @@ Celebi remains the time-travel guide so catching a guardian cannot break travel.
 
 The postgame production roadmap is tracked in [TODO-ECLIPSE.md](TODO-ECLIPSE.md).
 It includes the Scandinavian Eclipse-remnant hunt, Krakow sanctuary restoration
-and a true champion rematch circuit. The hunt is implemented; Krakow restoration and the rematch circuit remain planned.
+and a true champion rematch circuit. The hunt and Krakow restoration are implemented; the rematch circuit remains planned.
+
+## Krakow sanctuary restoration
+
+After the League, meet the guide northeast of Warsaw's landmark to travel to
+Krakow. Zofia waits west of the sanctuary castle. If you have not made Poland's
+past decision, return to Warsaw, travel with Celebi and help the historical
+keeper protect its garden or archive before beginning restoration.
+
+Accept Zofia's project, then donate one Escape Rope to the western repairer,
+two Super Potions to the clinic keeper, and one Water Stone (garden) or Thunder
+Stone (archive) to the eastern keeper. The local shop sells every material.
+Each job changes the grounds and saves independently; repeat conversations
+never take more supplies. Completing all three brings back Eevee for the garden
+or Voltorb for the archive. You may adopt one level-30 partner, including with
+Nuzlocke enabled. A full party sends it to the PC; full storage leaves adoption
+pending. Return to Zofia for one Lucky Egg. A full bag leaves that reward pending.
+Healing, storage, the shop and return travel remain available after completion.
+The refuge's friendly partners stay visible independently of the wild toggle.
 
 ## Build and verification
 

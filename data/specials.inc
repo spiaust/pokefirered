@@ -467,4 +467,6 @@ gSpecials::
 	def_special Shadow_ApplyTimeline
 	def_special Shadow_NetworkStatus
 	def_special Shadow_ShowCredits
+	def_special Eclipse_KrakowPrepare
+	def_special Eclipse_PolandMemory
 gSpecialsEnd::

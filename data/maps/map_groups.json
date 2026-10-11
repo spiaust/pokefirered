@@ -45,7 +45,8 @@
     "gMapGroup_IndoorSevenIslandRoute",
     "gMapGroup_Europe",
     "gMapGroup_Shadow",
-    "gMapGroup_Continent"
+    "gMapGroup_Continent",
+    "gMapGroup_Postgame"
   ],
   "gMapGroup_Link": [
     "BattleColosseum_2P",
@@ -805,5 +806,8 @@
     "ContinentTallinnPast",
     "ContinentIstanbul",
     "ContinentIstanbulPast"
+  ],
+  "gMapGroup_Postgame": [
+    "PostgameKrakow"
   ]
 }

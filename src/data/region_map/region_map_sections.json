@@ -1483,6 +1483,14 @@
       "y": 5,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_POSTGAME_KRAKOW",
+      "name": "KRAKOW SANCTUARY",
+      "x": 8,
+      "y": 4,
+      "width": 1,
+      "height": 1
     }
   ]
 }

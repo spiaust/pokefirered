@@ -7,7 +7,7 @@ The original project's tracked source and player saves were preserved.
 
 - 21 chapters, eight badge battles, recurring counter-starter rival, Team
   Eclipse, WWII resistance missions, League council and champion ending.
-- 42 campaign shelter/route maps plus 78 country era maps: 39 independently
+- 42 campaign shelter/route maps, 78 country era maps and Krakow sanctuary: 39 independently
   authored compact districts, landmarks, a country passport and station menu.
 - 279 new trainer teams, repeatable practice, six shadow rescues, saved care,
   purification, evolution lock, damage modifiers and purple battle palettes.
@@ -187,6 +187,28 @@ with quest completion after cold Continue. The final-ROM natural Berlin and
 legendary Nuzlocke regressions also pass. The quest uses previously unused
 VAR_0x40BD and reward flag 0x8D5 without adding RAM allocations.
 
+The Krakow restoration passes both native saved-timeline branches: garden/EEVEE
+and archive/VOLTORB. Tests cover pre-League travel, declined travel/project/work,
+missing historical memory, work before acceptance, exact material deductions,
+repeat-work guards, missing materials and all three visible courtyard changes.
+Partial work survives cold Continue. Completing the jobs brings back only the
+appropriate partner, with adoption refusal, level-30 delivery and duplicate guards.
+A full item pocket leaves Lucky Egg pending; delivery succeeds once space exists.
+Quest, reward, partner and return travel persist after cold Continue in both branches.
+Explicit progress, memory and inventory fixtures isolate these rules; they do
+not assert a natural playthrough of the historical prerequisites or economy.
+
+Additional native full-party/storage fixtures confirm adoption remains pending
+when both are full. With room in the PC, the native gift goes there and survives
+cold Continue, including with Nuzlocke enabled and Poland's encounter allowance
+already used. Krakow uses the unused VAR_0x40BE and flags 0x8D6 through 0x8DC;
+it adds no persistent RAM allocations and keeps continental country indexing
+unchanged in a separate map group. The new city reuses Polish castle tiles in
+an independent courtyard layout. Static checks include every event approach.
+The updated scrolling shop also sells Escape Rope; its native purchase at 550,
+cancellation and the existing stone/purification/evolution flow pass using earned
+money. Both restoration branches have been replayed on the final built ROM.
+
 ## Reproduce
 
 Run the build, then the Python scripts in WSL with the base mGBA test bridge:
@@ -212,6 +234,10 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
 14. `scripts/test_eclipse_nordic.py` (uses the cold completed save; victory
     and bag-capacity fixtures are explicitly documented in the script)
 
+15. `scripts/test_eclipse_krakow.py`, then
+    `scripts/test_eclipse_krakow_capacity.py` (use cold completed checkpoints;
+    timeline, progress, materials and capacity fixtures are documented)
+
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
 the ROM changes. Preview capture: `scripts/preview_eclipse.py`.
@@ -227,4 +253,4 @@ A full natural-level balancing playthrough and broad hardware/emulator testing
 remain outstanding before calling this a polished final release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `0d11abbbfcc60ee272610dbe64478f3a33b6be0eac124ba7959412f948cbe78e`
+SHA-256: `32a3078109f0db2a88be4a6ba6b0286462ede84815914a536df214623ad6dace`

@@ -6078,6 +6078,18 @@
       "secondary_tileset": "gTileset_ContinentIstanbul",
       "border_filepath": "data/layouts/ContinentIstanbulPast/border.bin",
       "blockdata_filepath": "data/layouts/ContinentIstanbulPast/map.bin"
+    },
+    {
+      "id": "LAYOUT_POSTGAME_KRAKOW",
+      "name": "PostgameKrakow_Layout",
+      "width": 48,
+      "height": 36,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ContinentWarsaw",
+      "border_filepath": "data/layouts/PostgameKrakow/border.bin",
+      "blockdata_filepath": "data/layouts/PostgameKrakow/map.bin"
     }
   ]
 }
