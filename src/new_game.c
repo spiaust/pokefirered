@@ -70,6 +70,8 @@ static void SetDefaultOptions(void)
 
 static void ClearPokedexFlags(void)
 {
+    memset(gSaveBlock2Ptr->eclipseSeen, 0, sizeof(gSaveBlock2Ptr->eclipseSeen));
+    memset(gSaveBlock2Ptr->eclipseCaught, 0, sizeof(gSaveBlock2Ptr->eclipseCaught));
     memset(&gSaveBlock2Ptr->pokedex.owned, 0, sizeof(gSaveBlock2Ptr->pokedex.owned));
     memset(&gSaveBlock2Ptr->pokedex.seen, 0, sizeof(gSaveBlock2Ptr->pokedex.seen));
 }

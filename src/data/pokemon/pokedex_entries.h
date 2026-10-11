@@ -5030,4 +5030,5 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 337,
         .trainerOffset = 2,
     },
+#include "../eclipse_roster/dex.h"
 };

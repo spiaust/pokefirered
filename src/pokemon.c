@@ -929,6 +929,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(JIRACHI),
     SPECIES_TO_NATIONAL(DEOXYS),
     SPECIES_TO_NATIONAL(CHIMECHO),
+#include "data/eclipse_roster/national_mapping.h"
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -3897,7 +3898,7 @@ void GetSpeciesName(u8 *name, u16 species)
     // Hmm? FRLG has < while Ruby/Emerald has <=
     for (i = 0; i < POKEMON_NAME_LENGTH; i++)
     {
-        if (species > NUM_SPECIES)
+        if (species >= NUM_SPECIES)
             name[i] = gSpeciesNames[0][i];
         else
             name[i] = gSpeciesNames[species][i];
@@ -5250,6 +5251,7 @@ u16 HoennToNationalOrder(u16 hoennNum)
 
 u16 SpeciesToCryId(u16 species)
 {
+    if (species >= SPECIES_EGG) return SPECIES_UNOWN - 1;
     if (species < SPECIES_OLD_UNOWN_B - 1)
         return species;
 
@@ -5736,23 +5738,16 @@ bool8 TryIncrementMonLevel(struct Pokemon *mon)
     }
 }
 
+u32 CanSpeciesLearnTMHM(u16 species, u8 tm)
+{
+    if (species == SPECIES_NONE || species == SPECIES_EGG || species >= NUM_SPECIES || tm >= NUM_TECHNICAL_MACHINES + NUM_HIDDEN_MACHINES)
+        return 0;
+    return sTMHMLearnsets[species][tm / 32] & (1u << (tm % 32));
+}
+
 u32 CanMonLearnTMHM(struct Pokemon *mon, u8 tm)
 {
-    u16 species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG, NULL);
-    if (species == SPECIES_EGG)
-    {
-        return 0;
-    }
-    else if (tm < 32)
-    {
-        u32 mask = 1 << tm;
-        return sTMHMLearnsets[species][0] & mask;
-    }
-    else
-    {
-        u32 mask = 1 << (tm - 32);
-        return sTMHMLearnsets[species][1] & mask;
-    }
+    return CanSpeciesLearnTMHM(GetMonData(mon, MON_DATA_SPECIES_OR_EGG, NULL), tm);
 }
 
 u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
@@ -5922,7 +5917,7 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
 {
     u32 shinyValue;
 
-    if (species > SPECIES_EGG)
+    if (species >= NUM_SPECIES)
         return gMonPaletteTable[0].data;
 
     shinyValue = GET_SHINY_VALUE(otId, personality);

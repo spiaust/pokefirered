@@ -5705,3 +5705,5 @@ static const u16 sChimechoLevelUpLearnset[] = {
     LEVEL_UP_MOVE(46, MOVE_PSYCHIC),
     LEVEL_UP_END
 };
+
+#include "../eclipse_roster/learnsets.h"

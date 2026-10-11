@@ -204,7 +204,8 @@
 #define OBJ_EVENT_GFX_VULPIX 197
 #define OBJ_EVENT_GFX_WARTORTLE 198
 #define OBJ_EVENT_GFX_WEEZING 199
-#define NUM_OBJ_EVENT_GFX     200
+#define OBJ_EVENT_GFX_ECLIPSE_RESERVE 200
+#define NUM_OBJ_EVENT_GFX     201
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

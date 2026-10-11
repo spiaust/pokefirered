@@ -125,3 +125,10 @@ int emulator_battery(const char *path, int load)
     fclose(file);
     return ok;
 }
+
+// Test the cartridge RTC protocol with a fixed local-clock fixture.
+void emulator_rtc(long long epoch)
+{
+    core->rtc.override = RTC_FIXED;
+    core->rtc.value = epoch * 1000LL;
+}

@@ -49,6 +49,7 @@ static const u8 sChapters[][2] = {
 void Shadow_Resume(void)
 {
     u16 stage = VarGet(VAR_SHADOW_STAGE);
+    EnableNationalPokedex();
     if (stage >= ARRAY_COUNT(sChapters)) stage = ARRAY_COUNT(sChapters) - 1;
     SetWarpDestination(sChapters[stage][0], sChapters[stage][1], WARP_ID_NONE, 6, 7);
     DoWarp();
@@ -361,11 +362,74 @@ void Eclipse_CircuitStatus(void)
     }
 }
 
-// Portable saved clock: two minutes of play per game hour, starting at 08:00.
-// No RTC hardware or extra save/RAM allocation is required.
+// GPIO protocol follows pret/pokeemerald's siirtc.c. Never write/reset the RTC.
+// This signature also enables RTC detection in compatible GBA emulators.
+const char gEclipseRtcSignature[] = "SIIRTC_V001";
+static EWRAM_DATA u16 sEclipseLocalMinute = 480;
+static EWRAM_DATA u8 sEclipseRtcPoll = 0;
+#define ECLIPSE_GPIO_DATA (*(volatile u16 *)0x080000C4)
+#define ECLIPSE_GPIO_DIR (*(volatile u16 *)0x080000C6)
+#define ECLIPSE_GPIO_ENABLE (*(volatile u16 *)0x080000C8)
+static u8 Eclipse_ReadRtcByte(void)
+{
+    u8 i, value = 0;
+    for (i = 0; i < 8; i++)
+    {
+        ECLIPSE_GPIO_DATA = 4;
+        ECLIPSE_GPIO_DATA = 4;
+        ECLIPSE_GPIO_DATA = 4;
+        ECLIPSE_GPIO_DATA = 4;
+        ECLIPSE_GPIO_DATA = 4;
+        ECLIPSE_GPIO_DATA = 5;
+        value = (value >> 1) | ((ECLIPSE_GPIO_DATA & 2) << 6);
+    }
+    return value;
+}
+static void Eclipse_RtcCommand(u8 command)
+{
+    u8 i, pins;
+    ECLIPSE_GPIO_DATA = 1;
+    ECLIPSE_GPIO_DATA = 5;
+    ECLIPSE_GPIO_DIR = 7;
+    for (i = 0; i < 8; i++)
+    {
+        pins = 4 | (((command >> (7 - i)) & 1) << 1);
+        ECLIPSE_GPIO_DATA = pins;
+        ECLIPSE_GPIO_DATA = pins;
+        ECLIPSE_GPIO_DATA = pins;
+        ECLIPSE_GPIO_DATA = pins | 1;
+    }
+    ECLIPSE_GPIO_DIR = 5;
+}
+static void Eclipse_PollLocalTime(void)
+{
+    u8 status, hour, minute, second, hourBcd;
+    u16 ime;
+    if (sEclipseRtcPoll != 0) { sEclipseRtcPoll--; return; }
+    sEclipseRtcPoll = 59;
+    ime = REG_IME;
+    REG_IME = 0;
+    ECLIPSE_GPIO_ENABLE = 1;
+    Eclipse_RtcCommand(0x63);
+    status = Eclipse_ReadRtcByte();
+    ECLIPSE_GPIO_DATA = 1;
+    Eclipse_RtcCommand(0x67);
+    hourBcd = Eclipse_ReadRtcByte();
+    minute = Eclipse_ReadRtcByte();
+    second = Eclipse_ReadRtcByte();
+    ECLIPSE_GPIO_DATA = 1;
+    ECLIPSE_GPIO_ENABLE = 0;
+    REG_IME = ime;
+    hour = (hourBcd & 15) + 10 * ((hourBcd >> 4) & 7);
+    if (!(status & 0x40)) hour = hour % 12 + ((hourBcd & 0x80) ? 12 : 0);
+    if (status == 0 || status == 255 || hour >= 24
+        || (minute & 15) > 9 || (minute >> 4) > 5
+        || (second & 15) > 9 || (second >> 4) > 5) return;
+    sEclipseLocalMinute = hour * 60 + (minute & 15) + 10 * (minute >> 4);
+}
 u8 Eclipse_GetHour(void)
 {
-    return (8 + (gSaveBlock2Ptr->playTimeHours * 60u + gSaveBlock2Ptr->playTimeMinutes) / 2) % 24;
+    return sEclipseLocalMinute / 60;
 }
 static bool8 Eclipse_IsOutdoor(void)
 {
@@ -404,6 +468,10 @@ u8 Eclipse_MapWeather(u8 original)
 void Eclipse_UpdateEnvironment(void)
 {
     u8 weather;
+    Eclipse_PollLocalTime();
+    if (gSaveBlock1Ptr->location.mapGroup >= MAP_GROUP(MAP_EUROPE_LONDON)
+        && gSaveBlock1Ptr->location.mapGroup <= MAP_GROUP(MAP_POSTGAME_KRAKOW)
+        && !IsNationalPokedexEnabled()) EnableNationalPokedex();
     if (!Eclipse_IsOutdoor()) return;
     weather = Eclipse_MapWeather(gMapHeader.weather);
     if (GetSav1Weather() != weather) SetWeather(weather);
@@ -416,8 +484,7 @@ void Eclipse_TintFieldHardware(void)
     if (!Eclipse_IsOutdoor()) return;
     mode = VarGet(VAR_ECLIPSE_TIME);
     if (mode == 1) return;
-    minute = ((gSaveBlock2Ptr->playTimeHours * 60u + gSaveBlock2Ptr->playTimeMinutes) * 30
-        + gSaveBlock2Ptr->playTimeSeconds / 2 + 480) % 1440;
+    minute = sEclipseLocalMinute;
     darkness = mode == 2 ? 12 : minute < 300 || minute >= 1200 ? 12
         : minute < 480 ? (480 - minute) / 15 : minute < 1020 ? 0 : (minute - 1020) / 15;
     if (!darkness) return;

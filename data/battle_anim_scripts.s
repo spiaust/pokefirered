@@ -375,7 +375,12 @@ gBattleAnims_Moves::
 	.4byte Move_WATER_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
-	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
+	.4byte Move_SIGNAL_BEAM @ STRUGGLE_BUG
+	.4byte Move_GUST @ FAIRY_WIND
+	.4byte Move_MIST_BALL @ MOONBLAST
+	.4byte Move_DOUBLE_SLAP @ PLAY_ROUGH
+	.4byte Move_RAZOR_LEAF @ LEAFAGE
+	.4byte Move_COUNT
 
 	.align 2
 gBattleAnims_StatusConditions::

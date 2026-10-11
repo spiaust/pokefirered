@@ -1,5 +1,5 @@
 """Native World Gear, weather sprites, lighting composition and cold-save QA.
-Only clock fixtures are written; settings, travel and saving use game inputs.
+Only emulator RTC and weather-timing fixtures are written; settings, travel and saving use game inputs.
 """
 from emulator import Emulator, ROOT
 from test_celebi import load_checkpoint
@@ -23,7 +23,11 @@ def setting(e,row,ident,value):
     close(e);e.frames(300)
 def clock(e,minutes,seconds=0):
     p=e.read('gSaveBlock2Ptr');e.write(p+14,0,2);e.write(p+16,minutes,1);e.write(p+17,seconds,1);e.write(p+18,0,1)
-    e.frames(5)
+    from datetime import datetime, timezone
+    local_minute = (480 + minutes * 30 + seconds // 2) % 1440
+    e.rtc(int(datetime(2026,10,11,local_minute//60,local_minute%60,tzinfo=timezone.utc).timestamp()))
+    e.frames(90)
+    assert e.read('sEclipseLocalMinute',2) == local_minute
 def palettes(e):
     return ([e.read(e.symbols['gPlttBufferFaded']+i*2,2) for i in range(512)],
             [e.read(0x05000000+i*2,2) for i in range(512)])
@@ -32,7 +36,7 @@ def tint(c,d=12):
 def lighting(e,d=12):
     a,b=palettes(e)
     expect=[c if 208<=i<256 else tint(c,d) for i,c in enumerate(a)]
-    assert b==expect,[(i,x,y) for i,(x,y) in enumerate(zip(b,expect)) if x!=y][:8]
+    assert b==expect,(e.var(0x40d1), e.read('sEclipseLocalMinute',2),[(i,x,y) for i,(x,y) in enumerate(zip(b,expect)) if x!=y][:8])
     assert any(x!=y for x,y in zip(a,b)) if d else a==b
     e.frames(60)
     a,b=palettes(e);assert b==[c if 208<=i<256 else tint(c,d) for i,c in enumerate(a)]
@@ -68,13 +72,13 @@ try:
     load_checkpoint(e,'environment-settings',True)
     assert e.location()==location and e.var(0x40d0)==3 and e.var(0x40d1)==2,(e.location(),location,e.var(0x40d0),e.var(0x40d1))
     weather(e,4);lighting(e)
-    setting(e,11,0x40d0,0);setting(e,12,0x40d1,0)
+    setting(e,11,0x40d0,1);setting(e,12,0x40d1,0)
     clock(e,0);weather(e,2);lighting(e,0)
     clock(e,24);weather(e,2);lighting(e)
     clock(e,45);lighting(e,6)
     clock(e,21);lighting(e,6)
-    clock(e,23,59);e.frames(180);lighting(e)
-    clock(e,11,59);e.frames(180);weather(e,3)
+    clock(e,24);lighting(e)
+    setting(e,11,0x40d0,0);clock(e,12);weather(e,3)
     world(e,16);clock(e,0);weather(e,4)
     e.screenshot(ROOT/'test-output/environment-norway-regional.png')
     talk(e,(18,31),choice='YES');weather(e,4)

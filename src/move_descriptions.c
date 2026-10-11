@@ -356,6 +356,8 @@ const u8 gMoveDescription_WaterPulse[] = _("An attack with a\npulsing blast of\n
 const u8 gMoveDescription_DoomDesire[] = _("A move that attacks\nthe foe with a\nblast of light two\nturns after use.");
 const u8 gMoveDescription_PsychoBoost[] = _("An intense attack\nthat also sharply\nreduces the user's\nSP. ATK stat.");
 
+static const u8 sEclipseModernMoveDescription[] = _("An attack with\na modern partner's\nnatural power.");
+
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
     [MOVE_KARATE_CHOP   - 1] = gMoveDescription_KarateChop,
@@ -711,4 +713,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_WATER_PULSE   - 1] = gMoveDescription_WaterPulse,
     [MOVE_DOOM_DESIRE   - 1] = gMoveDescription_DoomDesire,
     [MOVE_PSYCHO_BOOST  - 1] = gMoveDescription_PsychoBoost,
+[MOVE_STRUGGLE_BUG - 1] = sEclipseModernMoveDescription,
+[MOVE_FAIRY_WIND - 1] = sEclipseModernMoveDescription,
+[MOVE_MOONBLAST - 1] = sEclipseModernMoveDescription,
+[MOVE_PLAY_ROUGH - 1] = sEclipseModernMoveDescription,
+[MOVE_LEAFAGE - 1] = sEclipseModernMoveDescription,
 };

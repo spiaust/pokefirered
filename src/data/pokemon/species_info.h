@@ -11254,4 +11254,5 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
+#include "../eclipse_roster/stats.h"
 };

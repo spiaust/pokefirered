@@ -1,4 +1,6 @@
 #include "global.h"
+#include "pokemon_icon.h"
+#include "constants/species.h"
 #include "gflib.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -498,6 +500,13 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Meteorite,               OBJ_EVENT_PAL_TAG_METEORITE},
     {gObjectEventPal_SSAnne,                  OBJ_EVENT_PAL_TAG_SS_ANNE},
     {gObjectEventPal_Seagallop,               OBJ_EVENT_PAL_TAG_SEAGALLOP},
+    {gMonIconPalettes[0], 0x1180},
+    {gMonIconPalettes[1], 0x1181},
+    {gMonIconPalettes[2], 0x1182},
+    {gMonIconPalettes[3], 0x1183},
+    {gMonIconPalettes[4], 0x1184},
+    {gMonIconPalettes[5], 0x1185},
+
     {},
 };
 
@@ -2040,11 +2049,38 @@ void PlayerObjectTurn(struct PlayerAvatar *playerAvatar, u8 direction)
     ObjectEventTurn(&gObjectEvents[playerAvatar->objectEventId], direction);
 }
 
+// One reserve actor exists per district; use its two icon frames for every
+// facing animation, preserving native movement/collision/reflection behavior.
+static EWRAM_DATA struct ObjectEventGraphicsInfo sEclipseReserveGraphics = {0};
+static EWRAM_DATA struct SpriteFrameImage sEclipseReserveFrames[9] = {0};
+static const struct ObjectEventGraphicsInfo *Eclipse_ReserveGraphics(void)
+{
+    u16 species = VarGet(VAR_SHADOW_WILD_SPECIES);
+    u8 i;
+    if (species == SPECIES_NONE || species >= NUM_SPECIES) species = SPECIES_BULBASAUR;
+    sEclipseReserveGraphics = gObjectEventGraphicsInfo_Eevee;
+    sEclipseReserveGraphics.width = 32;
+    sEclipseReserveGraphics.height = 32;
+    sEclipseReserveGraphics.size = 512;
+    sEclipseReserveGraphics.paletteTag = 0x1180 + gMonIconPaletteIndices[species];
+    sEclipseReserveGraphics.paletteSlot = PALSLOT_NPC_SPECIAL;
+    sEclipseReserveGraphics.oam = &gObjectEventBaseOam_32x32;
+    sEclipseReserveGraphics.subspriteTables = gObjectEventSpriteOamTables_32x32;
+    for (i = 0; i < ARRAY_COUNT(sEclipseReserveFrames); i++)
+    {
+        sEclipseReserveFrames[i].data = gMonIconTable[species] + (i % 2) * 512;
+        sEclipseReserveFrames[i].size = 512;
+    }
+    sEclipseReserveGraphics.images = sEclipseReserveFrames;
+    return &sEclipseReserveGraphics;
+}
+
 const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u8 graphicsId)
 {
     if (graphicsId >= OBJ_EVENT_GFX_VARS)
         graphicsId = VarGetObjectEventGraphicsId(graphicsId - OBJ_EVENT_GFX_VARS);
     
+    if (graphicsId == OBJ_EVENT_GFX_ECLIPSE_RESERVE) return Eclipse_ReserveGraphics();
     if (graphicsId >= NUM_OBJ_EVENT_GFX)
         graphicsId = OBJ_EVENT_GFX_LITTLE_BOY;
     

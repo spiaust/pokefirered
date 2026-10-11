@@ -4549,4 +4549,5 @@ extern const u16 gPokeStorageInterface_NoDisplayMon_Pal[];
 extern const u16 gDexScreen_TopMenuIconPals_AtoZ[];
 extern const u32 gDexScreen_TopMenuIconTiles_AtoZ[];
 
+#include "../src/data/eclipse_roster/declarations.h"
 #endif //GUARD_GRAPHICS_H

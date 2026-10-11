@@ -112,7 +112,8 @@
 #define TYPE_ICE            15
 #define TYPE_DRAGON         16
 #define TYPE_DARK           17
-#define NUMBER_OF_MON_TYPES 18
+#define TYPE_FAIRY          18
+#define NUMBER_OF_MON_TYPES 19
 
 // Pokemon egg groups
 #define EGG_GROUP_NONE         0
@@ -206,7 +207,7 @@
 #define LEVEL_UP_MOVE_LV   0xFE00
 #define LEVEL_UP_END       0xFFFF
 
-#define MAX_LEVEL_UP_MOVES       20
+#define MAX_LEVEL_UP_MOVES       40
 
 #define MON_MALE       0x00
 #define MON_FEMALE     0xFE

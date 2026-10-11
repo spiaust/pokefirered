@@ -417,6 +417,6 @@
 #define VAR_ECLIPSE_KRAKOW VAR_0x40BE
 #define VAR_ECLIPSE_CIRCUIT VAR_0x40BF
 #define VAR_ECLIPSE_WEATHER VAR_0x40D0 // 0 regional, 1 clear, 2 rain, 3 snow
-#define VAR_ECLIPSE_TIME VAR_0x40D1 // 0 clock, 1 daylight, 2 night
+#define VAR_ECLIPSE_TIME VAR_0x40D1 // 0 local RTC, 1 daylight, 2 night
 
 #endif // GUARD_CONSTANTS_VARS_H

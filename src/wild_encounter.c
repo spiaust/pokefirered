@@ -269,6 +269,33 @@ enum
     WILD_AREA_FISHING,
 };
 
+// Expanded partners rotate within a fixed country reserve. Original encounters
+// retain half the rolls; extra guardians appear only after the League ending.
+static const u16 sEclipseReserve[] = {
+#include "data/eclipse_roster/reserve_species.h"
+};
+static const u16 sEclipseGuardians[] = {
+#include "data/eclipse_roster/guardians.h"
+};
+static u16 Eclipse_ReserveSpecies(u16 original)
+{
+    u16 country, count, index;
+    const u16 *pool;
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_CONTINENT_LONDON)
+        || Random() % 2 == 0) return original;
+    country = gSaveBlock1Ptr->location.mapNum / 2;
+    pool = sEclipseReserve;
+    count = ARRAY_COUNT(sEclipseReserve);
+    if (VarGet(VAR_SHADOW_STAGE) >= 21 && Random() % 10 == 0)
+    {
+        pool = sEclipseGuardians;
+        count = ARRAY_COUNT(sEclipseGuardians);
+    }
+    if (country >= count) return original;
+    index = country + 39 * (Random() % (1 + (count - 1 - country) / 39));
+    return pool[index];
+}
+
 #define WILD_CHECK_REPEL    0x1
 #define WILD_CHECK_KEEN_EYE 0x2
 
@@ -293,7 +320,7 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo * info, u8 area, u8
     {
         return FALSE;
     }
-    GenerateWildMon(info->wildPokemon[slot].species, level, slot);
+    GenerateWildMon(area == WILD_AREA_LAND ? Eclipse_ReserveSpecies(info->wildPokemon[slot].species) : info->wildPokemon[slot].species, level, slot);
     return TRUE;
 }
 
@@ -880,7 +907,7 @@ static u16 Shadow_WildGraphics(u16 species)
     case SPECIES_VULPIX: return OBJ_EVENT_GFX_VULPIX;
     case SPECIES_WARTORTLE: return OBJ_EVENT_GFX_WARTORTLE;
     case SPECIES_WEEZING: return OBJ_EVENT_GFX_WEEZING;
-    default: return 0xFFFF;
+    default: return OBJ_EVENT_GFX_ECLIPSE_RESERVE;
     }
 }
 void Shadow_PrepareVisible(void)
@@ -902,6 +929,7 @@ void Shadow_PrepareVisible(void)
             if ((VarGet(VAR_0x40A5 + country / 16) & mask) && Random() % 4 == 0)
                 species = VarGet(VAR_0x40A2 + country / 16) & mask ? SPECIES_EEVEE : SPECIES_VOLTORB;
         }
+        species = Eclipse_ReserveSpecies(species);
         graphics = Shadow_WildGraphics(species);
         if (graphics == 0xFFFF) continue;
         VarSet(VAR_SHADOW_WILD_SPECIES, species);

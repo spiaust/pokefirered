@@ -70,6 +70,7 @@ static const struct MoveMenuInfoIcon sMenuInfoIcons[] =
     [TYPE_ICE + 1]      = { 32, 12, 0x4C },
     [TYPE_DRAGON + 1]   = { 32, 12, 0xA0 },
     [TYPE_DARK + 1]     = { 32, 12, 0x8C },
+    [TYPE_FAIRY + 1]    = { 32, 12, 0xA4 },
     [MENU_INFO_ICON_TYPE]      = { 40, 12, 0xA8 },
     [MENU_INFO_ICON_POWER]     = { 40, 12, 0xC0 },
     [MENU_INFO_ICON_ACCURACY]  = { 40, 12, 0xC8 },
@@ -754,5 +755,12 @@ void ListMenuLoadStdPalAt(u8 palOffset, u8 palId)
 
 void BlitMenuInfoIcon(u8 windowId, u8 iconId, u16 x, u16 y)
 {
+    if (iconId == TYPE_FAIRY + 1)
+    {
+        static const u8 colors[] = {0, 1, 2};
+        static const u8 name[] = _("FAIRY");
+        AddTextPrinterParameterized3(windowId, FONT_SMALL, x + 2, y, colors, 0, name);
+        return;
+    }
     BlitBitmapRectToWindow(windowId, &gMenuInfoElements_Gfx[sMenuInfoIcons[iconId].offset * TILE_SIZE_4BPP], 0, 0, 128, 128, x, y, sMenuInfoIcons[iconId].width, sMenuInfoIcons[iconId].height);
 }

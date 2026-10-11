@@ -30,6 +30,10 @@ class Emulator:
                     pass
         assert self.lib.emulator_open(str(rom).encode()), "Could not load ROM"
 
+    def rtc(self, epoch):
+        self.lib.emulator_rtc.argtypes = [ctypes.c_longlong]
+        self.lib.emulator_rtc(epoch)
+
     def address(self, value):
         return self.symbols[value] if value in self.symbols else int(value, 0)
 

@@ -14,7 +14,7 @@ The original project's tracked source and player saves were preserved.
 - Bidirectional era travel, sepia historical colors, 39 saved local decisions,
   two present-day outcomes, an all-country epilogue and one-time reward.
 - World Gear: Normal/Easy/Hard, independent optional Nuzlocke, and optional
-  rate-based visible encounters covering all 62 encounter-table species.
+  rate-based visible encounters and a 1,025-species country reserve roster.
 - Seven stationary legendary guardians: three before the League and four
   after the ending, native sprites/battles, story/care gates and saved catches.
 - Native credits and ordinary Start-menu saving.
@@ -23,8 +23,8 @@ The original project's tracked source and player saves were preserved.
 
 Static checks verify trainer IDs, all scripted references, dialogue widths,
 map connectivity and every NPC/landmark approach. The final agbcc build links
-successfully: 261,084 bytes EWRAM, 29,824 bytes IWRAM, about 15,091 KiB linked ROM,
-padded to 16 MiB. RAM headroom is limited and must be checked on future additions.
+successfully: 261,196 bytes EWRAM, 29,824 bytes IWRAM, 17,266,984 bytes linked ROM,
+padded to 32 MiB. RAM headroom is limited and must be checked on future additions.
 
 Emulator checks include all nine starters from New Game, all rival counters,
 all three campaign entrances, decline and chapter gates, nurse and route travel,
@@ -558,7 +558,7 @@ resources. Remaining earned circuit combat, other full starting routes,
 and broad hardware/emulator checks remain before calling this a polished release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `e400f0243f54a2f77e4b20c8d37fe2272199cbe2a7b391f18a54e14d608df971`
+SHA-256: `63c7b535953831bb62b905acbf1c7567192cf524ebe4d3c594434f5c9e90ad02`
 
 ## Earned six-rescue Mewtwo route
 
@@ -685,7 +685,7 @@ but does not replace earned combat. No circuit opponent stats were weakened.
 
 ## Weather and saved day/night cycle
 
-The current ROM adds native animated rain and snow, regional weather,
+The previous weather release added native animated rain and snow, regional weather,
 48-minute days with dawn/dusk/night tint, and saved World Gear overrides.
 Only outdoor European maps receive these effects. The clock reuses saved
 playtime; menus/battles use their native palettes. Night tint is applied to the
@@ -719,3 +719,39 @@ from this clone, so those suites could not run here. Their row navigation was
 updated for the expanded menu; the native environment check verifies scrolling
 through both added options and the relocated Restore Defaults row. Real GBA
 hardware timing and a full campaign replay remain outside this focused check.
+
+
+## National roster, Dex moves and real-world local clock
+
+The earlier 48-minute clock checks above describe the previous release. LOCAL
+now reads the cartridge RTC; rain/snow regional timing still uses playtime.
+
+Passed checks on the expanded build:
+- `test_eclipse_roster_static.py`: all 1,025 species partitioned between common
+  reserves, post-League guardian reserves and the seven original guardian events;
+  639 imported table entries and asset sets; safe learnset and machine bounds.
+- Battle asset validation: 1,278 indexed 64x64 front/back images, native colors.
+- `test_eclipse_dex.py`: native SELECT tabs, LEFT/RIGHT boundaries, area/back,
+  1,025-entry National list, Pecharunt entry/sprite/level moves, four-digit numbers.
+  Complete seen/owned flags are explicit UI fixtures, not earned catches.
+- `test_eclipse_reserve_visible.py`: naturally selected Pachirisu, its native
+  icon-derived overworld sprite and matching wild battle.
+- `test_eclipse_fairy.py`: native Sylveon typing and Dragon Rage immunity, with
+  explicit move/encounter fixtures.
+- `test_eclipse_local_time.py`: mGBA RTC fixtures converted with America/Chicago
+  timezone through the actual cartridge GPIO reader: morning, previous-day night
+  and dusk. The emulator bridge uses its fixed RTC source, not game-clock writes.
+- `test_eclipse_environment.py`: native World Gear changes, rain/snow particles,
+  stable daylight/night palettes, native cold Save/Continue, RTC phases, regional
+  Norway snow, past-era composition, indoor clear and Restore Defaults.
+- `test_eclipse_roster_runtime.py`: Turtwig, Scorbunny and Pecharunt native wild
+  generation, capture, PC overflow and cold Continue with extended seen/caught
+  flags. Explicit species and Master Ball fixtures isolate the data integration;
+  the original earned six-member party remains unchanged.
+
+This does not verify every species in battle, all modern evolution methods or
+battle balance. Modern move/ability coverage is an adapted native subset, and
+new species reuse an existing cry. The country reserves use shared rates and
+regional levels; further habitat and individual encounter balancing remains.
+
+Final expanded release SHA-256: `63c7b535953831bb62b905acbf1c7567192cf524ebe4d3c594434f5c9e90ad02`.

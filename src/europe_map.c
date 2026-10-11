@@ -701,11 +701,11 @@ static const u8 sWeatherAuto[] = _("WEATHER: REGIONAL");
 static const u8 sWeatherClear[] = _("WEATHER: CLEAR");
 static const u8 sWeatherRain[] = _("WEATHER: RAIN");
 static const u8 sWeatherSnow[] = _("WEATHER: SNOW");
-static const u8 sTimeAuto[] = _("TIME: AUTO");
+static const u8 sTimeAuto[] = _("TIME: LOCAL");
 static const u8 sTimeDay[] = _("TIME: DAY");
 static const u8 sTimeNight[] = _("TIME: NIGHT");
 static const u8 sWeatherHelp[] = _("Outdoor weather; indoors stay clear.");
-static const u8 sTimeHelp[] = _("48-minute day; clock saves with game.");
+static const u8 sTimeHelp[] = _("Local time via RTC; DAY/NIGHT override.");
 static const u8 sWildOn[] = _("WILD SPRITES: ON");
 static void DrawWorldOptions(u8 row)
 {
@@ -785,8 +785,8 @@ static const u8 sCreditLines[][7][48] = {
      _("Engine: pret/pokefirered contributors"),
      _("Base: Pokemon Europe Version project"),
      _("Pokemon: Game Freak / Nintendo / Creatures"),
-     _("Eclipse story, maps and systems: this fork"),
-     _("Repository references: RESEARCH-ECLIPSE.md"),
+     _("Sprites/data: RHH expansion and artists"),
+     _("Artist list: data/RHH-ROSTER-CREDITS.md"),
      _("Thank you for playing.")}
 };
 static const u8 sCreditsNext[] = _("A/RIGHT: NEXT  B: RETURN");

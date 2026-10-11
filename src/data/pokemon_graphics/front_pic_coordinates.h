@@ -2200,4 +2200,5 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(24, 40),
         .y_offset = 13,
     },
+#include "../eclipse_roster/front_coords.h"
 };

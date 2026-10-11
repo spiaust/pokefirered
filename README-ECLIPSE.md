@@ -104,14 +104,13 @@ appearance and these gameplay settings at any time:
 Outdoor districts and campaign routes now have regional weather that changes
 with playtime. Northern and alpine districts use snow during their precipitation
 periods; other countries use rain. World Gear offers REGIONAL, CLEAR, RAIN and
-SNOW, plus AUTO, DAY and NIGHT lighting. Shelters and other indoor maps stay clear.
+SNOW, plus LOCAL, DAY and NIGHT lighting. Shelters and other indoor maps stay clear.
 
-AUTO starts at 08:00 and completes a day in 48 minutes of active playtime.
-Dawn and dusk fade gradually into blue nighttime lighting. The clock follows
-the saved playtime counter and pauses when the game is off. It does not use
-real-world time or live weather. Lighting combines with the historical sepia
+LOCAL uses the emulator/cartridge real-time clock. Dawn and dusk fade gradually
+into blue nighttime lighting, including while the game is off. Weather continues
+to use regional playtime patterns. Lighting combines with the historical sepia
 palette, while menus and battles retain their normal colors. Settings survive
-ordinary Save/Continue and Restore Defaults returns both controls to AUTO/REGIONAL.
+ordinary Save/Continue and Restore Defaults returns both controls to LOCAL/REGIONAL.
 Rain retains the native rain battle effects; falling snow is visual and does
 not start hail damage. Snowflakes keep respawning after their first fall.
 
@@ -279,10 +278,27 @@ Eclipse saves load the new staff; there is no need to restart the campaign.
 ## Build and verification
 
 Run `powershell -File scripts/build-windows.ps1` with the base WSL/agbcc tools.
-The native build produces a 16 MiB ROM and the Eclipse release alias. Read
+The native build produces a 32 MiB ROM and the Eclipse release alias. Read
 STORY-ECLIPSE.md for the campaign and country roster, RESEARCH-ECLIPSE.md for
 repository provenance, and TESTING-ECLIPSE.md for actual validation and limits.
 The districts are compact, with stylized landmarks and shared League shelters.
 One Normal-mode campaign has reached the ending with earned partners. Remaining
 natural legendary captures, postgame balancing, other starting routes and
 broader hardware/emulator checks remain before a polished release.
+
+
+## Expanded Pokédex
+
+On a Pokémon's Dex entry, SELECT cycles INFO, LEVEL-UP, TM and HM. LEFT/RIGHT
+turn move-list pages. The displayed lists read the actual game learnsets and
+machine compatibility. The roster includes all 1,025 National Dex base species
+through Pecharunt, with original IDs and existing save offsets preserved.
+Country districts mix their original encounter tables with a fixed reserve of
+partners from every generation. Additional guardian reserves unlock after the
+League ending; the seven existing story guardians keep their original gates.
+Visible encounters use the same reserves and the World Gear visibility toggle.
+See RESEARCH-ECLIPSE.md for source credits and battle-engine adaptations.
+
+Automatic World Gear time now reads the emulator/cartridge RTC and follows its
+local clock. DAY and NIGHT provide permanent overrides. An emulator must expose
+GBA RTC support for automatic time; hardware without RTC defaults to daylight.
