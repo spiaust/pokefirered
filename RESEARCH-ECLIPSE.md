@@ -108,3 +108,14 @@ The import audit now lists 214 supported rules and 139 omitted rules. Gender
 plus unsupported extra conditions and contradictory duplicate conditions
 remain omitted. Native gender reads the preserved personality and species
 ratio; no saved fields or RAM globals are added.
+
+### Campaign move-reminder access
+
+The original FireRed ChooseMonForMoveRelearner / TeachMoveRelearnerMove menus
+now have free campaign entry points at 100 maps. Their existing earlier-level
+selection, deduplication, move replacement and egg checks are retained. Piloswine
+receives the level-1 Ancient Power lesson and move-known Mamoswine branch from
+the already pinned RHH Gen IX learnset / Gen II family source. This original
+species branch is outside the 639-row imported evolution audit. No new global
+RAM or save fields are introduced. Reminder lessons deliberately have no
+mushroom or money charge so all country starts can recover evolution moves.

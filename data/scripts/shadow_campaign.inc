@@ -7379,3 +7379,41 @@ EclipseCircuit_Archivist::
  goto ShadowChampion_Done
 EclipseCircuit_ArchivistText::
  .string "Our archive records your journey.\nReplay its ending and credits?$"
+
+Shadow_MoveReminder::
+ lock
+ faceplayer
+ msgbox Shadow_ReminderOffer, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+Shadow_ReminderChoose::
+ msgbox Shadow_ReminderWhich
+ special ChooseMonForMoveRelearner
+ waitstate
+ goto_if_ge VAR_0x8004, PARTY_SIZE, Shadow_End
+ special IsSelectedMonEgg
+ goto_if_eq VAR_RESULT, TRUE, Shadow_ReminderEgg
+ goto_if_eq VAR_0x8005, 0, Shadow_ReminderNone
+ msgbox Shadow_ReminderMove
+ special TeachMoveRelearnerMove
+ waitstate
+ goto_if_eq VAR_0x8004, 0, Shadow_End
+ msgbox Shadow_ReminderDone
+ goto Shadow_End
+Shadow_ReminderEgg::
+ msgbox Shadow_ReminderEggText
+ goto Shadow_End
+Shadow_ReminderNone::
+ msgbox Shadow_ReminderNoneText
+ goto Shadow_End
+Shadow_ReminderOffer::
+ .string "I help partners recall moves.\nThis shelter service is free.\pWould you like a reminder?$"
+Shadow_ReminderWhich::
+ .string "Which partner needs a reminder?$"
+Shadow_ReminderMove::
+ .string "Choose a move from its earlier\nlevel-up lessons.$"
+Shadow_ReminderDone::
+ .string "Lesson complete! Knowing certain\nmoves can unlock an evolution.\pPILOSWINE needs ANCIENTPOWER,\nthen another level-up.$"
+Shadow_ReminderEggText::
+ .string "An EGG cannot take lessons yet.$"
+Shadow_ReminderNoneText::
+ .string "This partner has no earlier\nlevel-up moves to recall.$"

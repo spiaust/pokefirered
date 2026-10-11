@@ -365,3 +365,17 @@ Wormadam model. Espurr evolves at 25 and Lechonk at 18 for either gender,
 using the roster's existing Meowstic and Oinkologne base models. Separate
 male/female artwork and form-specific stats remain pending. The Pokémon's
 personality and gender are preserved through evolution and saving.
+
+## Free move reminders
+
+Scientists offer free move reminders in all 21 chapter shelters, the 39 country
+plazas in both eras, and Krakow sanctuary. Look below the route guide in chapter
+shelters or beside the storage attendant in country plazas. Choose a partner,
+then one of its earlier level-up moves. The native menu can replace a current
+move when all four slots are occupied. Eggs cannot take lessons; partners with
+no missing earlier moves have nothing to recall. Lessons cost no items or money.
+
+Piloswine can now recall Ancient Power (a level-1 lesson), then evolve into
+Mamoswine on its next level-up. Reminder lessons also recover forgotten moves
+needed by Bonsly, Steenee, Clobbopus, Tangela and Yanma. Everstone and shadow
+restrictions still prevent evolution.

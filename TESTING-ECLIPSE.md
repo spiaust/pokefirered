@@ -924,4 +924,32 @@ listed in TODO-ECLIPSE.md.
 
 ROM content remains 17,299,532 bytes, padded to 32 MiB. EWRAM remains 261,196 /
 262,144 bytes and IWRAM 29,824 / 32,768; no new RAM globals or save fields.
-Current release SHA-256: `6b6c8faba6238aefdd68ec0a587c0b0ef2f17d3a1cb058eb0e04a79e1123355f`.
+Previous gender-evolution release SHA-256: `6b6c8faba6238aefdd68ec0a587c0b0ef2f17d3a1cb058eb0e04a79e1123355f`.
+
+
+## Free move reminders and Mamoswine — 2026-10-11
+
+Added one scientist reminder at each of 21 chapter shelters, 78 country-era
+plazas and Krakow sanctuary. Existing object IDs are preserved by appending
+new events. Country and campaign static checks pass all object limits,
+approaches, scripts and native-width text. No global RAM or save fields change.
+
+`test_eclipse_reminder.py` uses native travel, NPC conversations, party choice
+and the original move-relearner UI. Isolated species, level, moves and Rare
+Candy fixtures test Piloswine recalling Ancient Power and evolving into
+Mamoswine, plus imported Bonsly recalling Mimic and evolving into Sudowoodo.
+Lessons preserve decoded inventory and money; raw encrypted comparisons are
+avoided because field returns can refresh the save encryption key. Offer and
+party-selection cancellation preserve moves/inventory and release controls.
+Mamoswine, its recalled Ancient Power and extended seen/caught flags survive
+native Save and cold Continue.
+
+The longest imported learnset (Mr. Rime, 22 entries) scrolls to its final
+Teeter Dance lesson. A separate full-four-move case uses the native replacement
+summary screen and changes exactly slot one, preserving the other three moves.
+Native boot/title and existing saved Continue pass. Tests run on ignored,
+isolated batteries and do not modify the user's save or claim natural training.
+
+ROM content remains 17,299,532 bytes, padded to 32 MiB. EWRAM remains 261,196 /
+262,144 bytes; IWRAM 29,824 / 32,768. Both ROM aliases match.
+Current release SHA-256: `34ebc89b9eece1a1a1d7f10bb9578b3e728dc889df0638b23ff37c2ebb0eec96`.
