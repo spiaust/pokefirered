@@ -19,8 +19,9 @@ be rescued and purified. The opening rival uses one level-six counter-starter
 with a basic attack; later rival battles use full teams and moves. Route trainers and rival practice matches are repeatable.
 
 Each shelter provides a nurse, mission opponent, previous/next chapter porters,
-route guide, shop, rescue partner and purification keeper. Catch partners in
-route grass; use the original starting-city PCs for storage. Save normally
+route guide, shop, rescue partner, purification keeper and storage attendant.
+Every country district also offers native storage access in both eras. Catch
+partners in route grass and swap teams locally. Save normally
 through the Start menu. Town Map, SELECT opens chapter guidance; A shows records.
 
 ## Countries and time travel

@@ -13,6 +13,7 @@ def first_symbol(name):
 def move_score(e,slot):
  b=e.symbols['gBattleMons'];move=e.read(b+12+2*slot,2);pp=e.read(b+36+slot,1)
  if not move or not pp:return -1
+ if move==e.read(e.symbols['gDisableStructs']+4,2):return -1
  m=e.symbols['gBattleMoves']+12*move;power=e.read(m+1,1);kind=e.read(m+2,1);accuracy=e.read(m+3,1)
  if not power:return 0
  damage=power*(accuracy or 100)/100
@@ -43,10 +44,28 @@ def natural_battle(e,limit=1800):
    # Decline optional switches and move replacement; allow ordinary evolutions.
    e.press('B' if e.read(e.read('gBattlescriptCurrInstr'),1)==0x5a else 'A',30)
  else:
-  e.screenshot(ROOT/'test-output/natural-stalled.png');raise AssertionError('natural battle stalled')
+  e.screenshot(ROOT/'test-output/natural-stalled.png');e.state(ROOT/'test-output/natural-stalled.state')
+  instr=e.read('gBattlescriptCurrInstr');fn=e.read('gBattlerControllerFuncs')&~1
+  nearby=[(k,hex(v)) for k,v in e.symbols.items() if abs((v&~1)-fn)<4]
+  raise AssertionError(('natural battle stalled',hex(fn),nearby,hex(instr),e.read(instr,1),turns))
  outcome=e.read('gBattleOutcome',1)
  e.finish_dialogue();e.frames(240)
  return outcome,turns
+
+def natural_go(e,target):
+ """Walk normally and battle incidental encounters without field-state edits."""
+ for _ in range(30):
+  try:
+   go(e,target);e.frames(90)
+   if e.in_battle():
+    result,turns=natural_battle(e);assert result==1
+    continue
+   return
+  except AssertionError:
+   if not e.in_battle():raise
+   result,turns=natural_battle(e)
+   assert result==1,('route encounter',result)
+ raise AssertionError('too many route encounters')
 
 def main():
  results=[];e=Emulator(ROOT/'pokefirered.gba')

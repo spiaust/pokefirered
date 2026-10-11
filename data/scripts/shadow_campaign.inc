@@ -6348,3 +6348,17 @@ Shadow_NetworkPendingText::
  .string "ADA: {STR_VAR_1} of 39 local memories\nare anchored. Revisit each country\pthrough its station and CELEBI.\nProtect its wartime refuge, then\pchoose the future with its keeper.\nEvery community deserves a say.$"
 Shadow_NetworkCompleteText::
  .string "ADA: All 39 communities have\nchosen their futures. The shadow\pnetwork has become a rescue\nnetwork. We keep the records of\pthe harm, and care for those who\nsurvived. Your journey gave these\pplaces partners, not weapons.\nThe League will remember you.$"
+
+Shadow_Storage::
+ lock
+ faceplayer
+ msgbox Shadow_StorageText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ special ShowPokemonStorageSystemPC
+ waitstate
+ msgbox Shadow_StorageReturnText
+ goto Shadow_End
+Shadow_StorageText::
+ .string "Our partner relay reaches your\nPOKEMON storage across both eras.\pWould you like to manage your team?$"
+Shadow_StorageReturnText::
+ .string "Your partners are safe with us.\nCome back whenever you need them.$"

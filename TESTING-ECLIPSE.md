@@ -77,6 +77,27 @@ to continue. Retirement, both-era encounter limits, difficulty opponent levels
 and field-sprite toggles also pass. Native bag navigation in the tester now
 respects pocket clamping after a Ball has been used.
 
+## Second badge natural playtest
+
+A cold-loaded first-badge save trained through seven normal London practice
+sessions, incidental wild battles and native evolution to Croconaw at level
+eighteen. The Paris Water gym passed twice, in thirteen and fifteen attack selections,
+reaching level nineteen, with the second badge/chapter preserved on cold
+Continue. This remains one starter/team path, not proof of balance for every
+team. An earlier automated attempt stalled; Psyduck can Disable a move, so the
+tester now excludes the native disabled move from selection. No game balance
+change was inferred from that stalled attempt.
+
+## Local storage follow-up
+
+All 21 shelters and 78 country-era districts now provide a native storage
+attendant. Static checks cover NPC capacity and approach reachability, and
+require exactly one attendant in every country-era map. Cold-save runtime
+checks open Move Pokemon and return safely from a shelter, a present district
+and a wartime district, with unchanged party counts/species and field controls
+restored. The native storage system supplies deposit, withdraw and box tools;
+no new RAM buffers or storage rules were introduced.
+
 ## Reproduce
 
 Run the build, then the Python scripts in WSL with the base mGBA test bridge:
@@ -89,6 +110,7 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
 6. `scripts/test_eclipse_combat.py`, `scripts/test_eclipse_challenges.py`,
    and `scripts/test_eclipse_credits.py`
 7. `scripts/test_eclipse_natural.py` and `scripts/test_eclipse_natural_gym.py`
+8. `scripts/test_eclipse_storage.py` and `scripts/test_eclipse_natural_paris.py`
 
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
@@ -105,4 +127,4 @@ A full natural-level balancing playthrough and broad hardware/emulator testing
 remain outstanding before calling this a polished final release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `9c71c1dbeb5b65e424acc00b13ca94603ac78f4ee2b9d45da75830ae99b511d6`
+SHA-256: `4853bd659ad9e30ac601fb174394f8f9448bca6630d91f4787bc292a514b8158`

@@ -3,24 +3,10 @@ from emulator import Emulator,ROOT
 import test_shadow_runtime, test_continent_runtime
 from test_shadow_runtime import talk,monfield
 from test_continent_runtime import battle_start
-from test_eclipse_natural import natural_battle
+from test_eclipse_natural import natural_battle,natural_go
 from test_landmark_cases import save
 from test_celebi import load_checkpoint
 
-original_go=test_shadow_runtime.go
-def natural_go(e,target):
- for _ in range(30):
-  try:
-   original_go(e,target);e.frames(90)
-   if e.in_battle():
-    result,turns=natural_battle(e);assert result==1
-    continue
-   return
-  except AssertionError:
-   if not e.in_battle():raise
-   result,turns=natural_battle(e)
-   assert result==1,('route encounter',result)
- raise AssertionError('too many route encounters')
 test_shadow_runtime.go=natural_go
 test_continent_runtime.go=natural_go
 e=Emulator(ROOT/'pokefirered.gba')

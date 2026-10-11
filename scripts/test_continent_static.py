@@ -13,6 +13,7 @@ for n in G['gMapGroup_Continent']:
  m=json.loads((R/f'data/maps/{n}/map.json').read_text());l=L[m['layout']];w,h=l['width'],l['height'];blob=(R/l['blockdata_filepath']).read_bytes();a=struct.unpack('<%dH'%(w*h),blob)
  if not n.endswith('Past'):hashes.add(blob)
  assert len(m['object_events'])<=16
+ assert sum(o['script']=='Shadow_Storage' for o in m['object_events'])==1,(n,'storage attendant missing')
  blocked={(o['x'],o['y']) for o in m['object_events']};start=(15,30);q=deque([start]);seen={start}
  while q:
   x,y=q.popleft()
