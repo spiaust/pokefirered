@@ -677,7 +677,7 @@ ShadowAmsterdam_RewardDone::
 	msgbox ShadowAmsterdam_After
 	goto Shadow_End
 ShadowAmsterdam_Before::
-	.string "MAARTEN: VEIL's machines use a\nsignal that suppresses emotion.\pYour rival chased a freighter\nwithout waiting for us. Earn the\pTHUNDERBADGE, then find them in\nBerlin. Shall we battle?$"
+	.string "MAARTEN: VEIL's machines use a\nsignal that suppresses emotion.\pYour rival chased a freighter\nwithout waiting for us. Earn the\pTHUNDERBADGE, then find them in\nBerlin.\pGround types block Electric moves.\nBelgium has wild NIDORAN.\pTrain one into NIDORINA, then use\na MOON STONE for NIDOQUEEN.\pShall we battle?$"
 ShadowAmsterdam_After::
 	.string "MAARTEN: The THUNDERBADGE is\nyours. ECLIPSE stole an archive\pfrom Berlin. ADA thinks the\nsignal is much older than this\pcompany.$"
 ShadowAmsterdam_Intro::

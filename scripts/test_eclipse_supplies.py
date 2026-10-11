@@ -15,13 +15,13 @@ from test_landmark_cases import save
 def count(e,item): return count_pocket(e,item,0x310,42)
 
 
-def use_stone(e):
+def use_stone(e,item=96,party_index=2):
  start_action(e,2);wait_task(e,'Task_BagMenu_HandleInput');bag=e.symbols['gBagMenuState']
  for _ in range(6):
   if e.read(bag+6,2)==0:break
   e.press('LEFT',60)
  slots=e.read('gSaveBlock1Ptr')+0x310
- index=next(i for i in range(42) if e.read(slots+i*4,2)==96)
+ index=next(i for i in range(42) if e.read(slots+i*4,2)==item)
  for _ in range(80):
   cur=e.read(bag+8,2)+e.read(bag+14,2)
   if cur==index:break
@@ -30,9 +30,9 @@ def use_stone(e):
  e.press('A',90);e.press('A',180);wait_task(e,'Task_HandleChooseMonInput')
  for _ in range(10):
   cur=e.read(e.symbols['gPartyMenu']+9,1)
-  if cur==2:break
+  if cur==party_index:break
   e.press('RIGHT' if cur==0 else 'DOWN',60)
- assert cur==2
+ assert cur==party_index
  e.press('A',900)
 
 

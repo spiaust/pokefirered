@@ -136,6 +136,18 @@ evolution, purification, inventory and story progress. Storage access in a
 shelter and both country eras, plus earned Water Pulse teaching, also pass
 on this release.
 
+The natural Amsterdam run continues from the earned third-badge team and
+purified Raichu save. Ordinary station travel reaches Belgium, where a
+full-HP Nidoran is caught in two native Poke Ball attempts. Two Grass-route
+practice battles raise it to level 22 and Nidorina; the purchased Moon Stone
+evolves it into Nidoqueen. Five more practice battles reach level 25. The
+Normal level-25 Electric gym is won in six move selections, reaching level 26.
+Cold Continue preserves the four-partner team and fourth badge. A final replay
+also checks the actual badge flag and earned Shock Wave TM (seven selections).
+No encounter, catch-rate, stats, damage, experience or AI fixtures are used in
+this run. The runner handles delayed grass transitions and Abra teleport
+outcomes. Purification and Raichu evolution also pass again on this ROM.
+
 ## Reproduce
 
 Run the build, then the Python scripts in WSL with the base mGBA test bridge:
@@ -152,6 +164,8 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
 9. `scripts/test_eclipse_tm_rewards.py`, `scripts/test_eclipse_tm_teaching.py`,
    `scripts/test_eclipse_natural_brussels.py` and `scripts/test_eclipse_party_memory.py`
 10. `scripts/test_eclipse_supplies.py` (requires the natural third-badge save)
+11. `scripts/test_eclipse_natural_amsterdam.py` (requires the purified Raichu save;
+    `--caught` resumes after the Belgian catch and `--resume` replays the gym)
 
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
@@ -168,4 +182,4 @@ A full natural-level balancing playthrough and broad hardware/emulator testing
 remain outstanding before calling this a polished final release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `4909e71e95d84657487f0f6fe64c5a21d34f7dfdfda8118e5d7531189327ee97`
+SHA-256: `09979d3dd60b3dc47ffe870db6316cb625a3a8207562348e8b89a5a8ca11152a`

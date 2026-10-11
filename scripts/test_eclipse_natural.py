@@ -73,13 +73,15 @@ def natural_go(e,target):
   try:
    go(e,target);e.frames(90)
    if e.in_battle():
-    result,turns=natural_battle(e);assert result in (1,4,7)
+    result,turns=natural_battle(e);assert result in (1,4,5,7)
     continue
    return
   except AssertionError:
+   # Grass encounters can interrupt movement before the battle flag is set.
+   e.frames(180)
    if not e.in_battle():raise
    result,turns=natural_battle(e)
-   assert result in (1,4,7),('route encounter',result)
+   assert result in (1,4,5,7),('route encounter',result)
  raise AssertionError('too many route encounters')
 
 def main():

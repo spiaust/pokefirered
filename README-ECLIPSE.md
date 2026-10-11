@@ -87,6 +87,10 @@ appearance and these gameplay settings at any time:
 Visible sprites cover all 62 species in the new encounter tables, using native
 sprites and original small adaptations of the base's Pokemon icons.
 
+Amsterdam's leader explains how a Belgian NIDORAN can become NIDORINA
+and then evolve with a Moon Stone into a Ground-type NIDOQUEEN. Country
+travel and the shared shops let you prepare a team before challenging the gym.
+
 ## Supplies and evolution
 
 Every campaign shelter and country shop sells all six evolution stones at
