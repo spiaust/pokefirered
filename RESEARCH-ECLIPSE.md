@@ -94,3 +94,17 @@ existing level-up moves remain intact. These two original-species branches
 are in the original evolution table, outside the 639-row import audit.
 Mime Jr.'s regional rule, Poipole/Dragon Pulse, Dipplin/Dragon Cheer and
 Piloswine's reminder-dependent route remain future work.
+
+### Gender-based evolution support
+
+The pinned RHH IF_GENDER rules now map to native EVO_LEVEL_MALE / FEMALE
+methods while retaining their level thresholds. Combee, Salandit and Burmy
+use their actual gender-specific targets. Espurr and Lechonk retain both
+branches using the existing base-species representation: female Meowstic and
+Oinkologne targets deliberately map to the same base model as their male
+counterparts. Separate form graphics, stats and abilities are not supplied
+by this pass. Burmy's Wormadam target uses the existing plant-coat model.
+The import audit now lists 214 supported rules and 139 omitted rules. Gender
+plus unsupported extra conditions and contradictory duplicate conditions
+remain omitted. Native gender reads the preserved personality and species
+ratio; no saved fields or RAM globals are added.

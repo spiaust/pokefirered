@@ -897,4 +897,31 @@ projection, campaign static, boot/title and cold Continue checks pass.
 The final rebuild matches the ROM used by the initial ten gameplay cases.
 ROM content remains 17,299,532 bytes, padded to 32 MiB. EWRAM remains 261,196 /
 262,144 bytes and IWRAM 29,824 / 32,768; no save layout changes.
-Current release SHA-256: `71a4371084cb98045dd20e00a953f9440432b6dcf00107abda0b9c323f33d04b`.
+Previous move-evolution release SHA-256: `71a4371084cb98045dd20e00a953f9440432b6dcf00107abda0b9c323f33d04b`.
+
+
+## Gender-dependent evolution paths — 2026-10-11
+
+`test_eclipse_gender_evolution.py` passes thirteen native Rare Candy cases:
+female/male Combee at 21, female Combee below threshold, female/male Salandit
+at 33, both Burmy branches at 20, Everstone and shadow prevention, both genders
+of Espurr at 25 and both genders of Lechonk at 18. Personality fixtures properly
+reorder and re-encrypt the mon substructures. Species, gender/personality,
+level, restrictions and inventory are explicit test fixtures on an isolated
+copy of the earned circuit battery; they do not claim natural captures or
+training. Evolution preserves personality, while native level-up recalculates
+the Pokémon's stats. Gen IX Oinkologne, its personality and extended seen/caught
+flags survive native Save and cold Continue.
+
+`test_eclipse_evolution_projection.py` also checks gender thresholds, female
+base-form aliases, extra-condition rejection and contradictory duplicate gender
+conditions. Fresh generation exactly matches the built evolution table: 214
+supported and 139 omitted imported rules. The final ROM retains native
+move-known Bonsly and stale-time RTC Riolu evolution coverage. Boot/title and
+cold Continue pass. Espurr/Lechonk gender forms share the existing base-model
+art/stats, and Wormadam uses its existing plant model; separate forms remain
+listed in TODO-ECLIPSE.md.
+
+ROM content remains 17,299,532 bytes, padded to 32 MiB. EWRAM remains 261,196 /
+262,144 bytes and IWRAM 29,824 / 32,768; no new RAM globals or save fields.
+Current release SHA-256: `6b6c8faba6238aefdd68ec0a587c0b0ef2f17d3a1cb058eb0e04a79e1123355f`.

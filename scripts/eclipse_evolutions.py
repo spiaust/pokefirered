@@ -3,6 +3,12 @@ Nested conditions are never silently discarded. Unsupported rules are audited.
 """
 import re
 
+# Gender forms share the roster's single base-species model.
+GENDER_FORM_ALIASES = {
+    "SPECIES_MEOWSTIC_F": "SPECIES_MEOWSTIC",
+    "SPECIES_OINKOLOGNE_F": "SPECIES_OINKOLOGNE",
+}
+
 def project(body, species, items, aliases=None, moves=None):
     accepted, omitted = [], []
     match = re.search(r"\.evolutions\s*=\s*EVOLUTION\(", body)
@@ -33,13 +39,17 @@ def project(body, species, items, aliases=None, moves=None):
             supported = not tail.strip()
             if method == 'EVO_LEVEL' and conditions:
                 rules = dict((k, v.strip()) for k,v in conditions)
+                if len(rules) != len(conditions):
+                    omitted.append(raw); continue
+                if len(rules) == 1 and rules.get('IF_GENDER') in ('MON_MALE', 'MON_FEMALE') and param.isdigit():
+                    method = 'EVO_LEVEL_MALE' if rules['IF_GENDER'] == 'MON_MALE' else 'EVO_LEVEL_FEMALE'; supported = True
                 if param == '0' and len(rules) == 1 and rules.get('IF_KNOWS_MOVE') in (moves or set()):
                     method = 'EVO_LEVEL_MOVE'; param = rules['IF_KNOWS_MOVE']; supported = True
                 if param == '0' and rules.get('IF_MIN_FRIENDSHIP') == 'FRIENDSHIP_EVO_THRESHOLD':
                     if len(rules) == 1: method = 'EVO_FRIENDSHIP'; supported = True
                     elif len(rules) == 2 and rules.get('IF_NOT_TIME') == 'TIME_NIGHT': method = 'EVO_FRIENDSHIP_DAY'; supported = True
                     elif len(rules) == 2 and rules.get('IF_TIME') == 'TIME_NIGHT': method = 'EVO_FRIENDSHIP_NIGHT'; supported = True
-            if method not in ('EVO_LEVEL','EVO_LEVEL_MOVE','EVO_FRIENDSHIP','EVO_FRIENDSHIP_DAY','EVO_FRIENDSHIP_NIGHT','EVO_TRADE','EVO_TRADE_ITEM','EVO_ITEM'): supported = False
+            if method not in ('EVO_LEVEL','EVO_LEVEL_MALE','EVO_LEVEL_FEMALE','EVO_LEVEL_MOVE','EVO_FRIENDSHIP','EVO_FRIENDSHIP_DAY','EVO_FRIENDSHIP_NIGHT','EVO_TRADE','EVO_TRADE_ITEM','EVO_ITEM'): supported = False
             if method == 'EVO_LEVEL_MOVE' and param not in (moves or set()): supported = False
             if target not in species or (method in ('EVO_ITEM','EVO_TRADE_ITEM') and param not in items): supported = False
             if supported: accepted.append((method,param,target))
@@ -56,6 +66,7 @@ if __name__ == '__main__':
     items = set(re.findall(r'#define (ITEM_\w+)\s+', (root/'include/constants/items.h').read_text()))
     moves = set(re.findall(r'#define (MOVE_\w+)\s+', (root/'include/constants/moves.h').read_text()))
     aliases = {r['source_token']: r['token'] for r in roster['species']}
+    aliases.update(GENDER_FORM_ALIASES)
     lines, audit = [], []
     for row in roster['species']:
         accepted, omitted = project(source[str(row['national'])]['body'], species, items, aliases, moves)

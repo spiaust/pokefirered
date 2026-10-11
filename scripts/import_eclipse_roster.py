@@ -7,7 +7,7 @@ from pathlib import Path
 import json,re,urllib.request,time
 from concurrent.futures import ThreadPoolExecutor
 from PIL import Image
-from eclipse_evolutions import project
+from eclipse_evolutions import project, GENDER_FORM_ALIASES
 ROOT=Path(__file__).resolve().parents[1]; CACHE=ROOT/'.local-tools/roster'
 SHA='7b4344c7ee867c98c8fb9d6026791df4f8eaecf7'
 ENTRIES=json.loads((ROOT/'data/eclipse-roster-source.json').read_text())
@@ -92,7 +92,7 @@ def inc(name,s):write('src/data/eclipse_roster/'+name+'.h',s+'\n')
 credit=(CACHE/'CREDITS.md').read_bytes();(ROOT/'data/RHH-ROSTER-CREDITS.md').write_bytes(credit)
 write('data/eclipse-roster.json',json.dumps({'source':'https://github.com/rh-hideout/pokeemerald-expansion','commit':SHA,'projection':'Gen III move/ability subset; original species unchanged','species':rows},indent=2)+'\n')
 gfx=[];decl=[];front=[];back=[];pal=[];shiny=[];icons=[];iconp=[];foot=[];stats=[];names=[];levels=[];ptrs=[];tms=[];dex=[];evo=[];evo_audit=[];coordsf=[];coordsb=[];elevation=[]
-source_to_token={r['source_token']:r['token'] for r in rows};existing_species=set(re.findall(r'#define (SPECIES_\w+)\s+\d+', (ROOT/'include/constants/species.h').read_text()))
+source_to_token={r['source_token']:r['token'] for r in rows};source_to_token.update(GENDER_FORM_ALIASES);existing_species=set(re.findall(r'#define (SPECIES_\w+)\s+\d+', (ROOT/'include/constants/species.h').read_text()))
 dextexts=[]
 for r in rows:
  n=r['national'];token=r['token'];folder=f'graphics/pokemon/eclipse_roster/{n}';dst=ROOT/folder;dst.mkdir(parents=True,exist_ok=True)

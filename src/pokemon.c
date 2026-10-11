@@ -5089,6 +5089,12 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                 if (gEvolutionTable[species][i].param <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_MALE:
+            case EVO_LEVEL_FEMALE:
+                if (gEvolutionTable[species][i].param <= level
+                    && GetMonGender(mon) == (gEvolutionTable[species][i].method == EVO_LEVEL_MALE ? MON_MALE : MON_FEMALE))
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
             case EVO_LEVEL_MOVE:
                 {
                     u8 slot;

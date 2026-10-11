@@ -216,11 +216,19 @@
   },
   {
     "species": "SPECIES_BURMY",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 20, SPECIES_WORMADAM_PLANT, CONDITIONS({IF_GENDER, MON_FEMALE})}",
-      "{EVO_LEVEL, 20, SPECIES_MOTHIM_PLANT, CONDITIONS({IF_GENDER, MON_MALE})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_FEMALE",
+        "20",
+        "SPECIES_WORMADAM"
+      ],
+      [
+        "EVO_LEVEL_MALE",
+        "20",
+        "SPECIES_MOTHIM"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_WORMADAM",
@@ -234,10 +242,14 @@
   },
   {
     "species": "SPECIES_COMBEE",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 21, SPECIES_VESPIQUEN, CONDITIONS({IF_GENDER, MON_FEMALE})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_FEMALE",
+        "21",
+        "SPECIES_VESPIQUEN"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_VESPIQUEN",
@@ -2181,11 +2193,19 @@
   },
   {
     "species": "SPECIES_ESPURR",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 25, SPECIES_MEOWSTIC_M, CONDITIONS({IF_GENDER, MON_MALE})}",
-      "{EVO_LEVEL, 25, SPECIES_MEOWSTIC_F, CONDITIONS({IF_GENDER, MON_FEMALE})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_MALE",
+        "25",
+        "SPECIES_MEOWSTIC"
+      ],
+      [
+        "EVO_LEVEL_FEMALE",
+        "25",
+        "SPECIES_MEOWSTIC"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_MEOWSTIC",
@@ -2768,9 +2788,14 @@
   },
   {
     "species": "SPECIES_SALANDIT",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_LEVEL_FEMALE",
+        "33",
+        "SPECIES_SALAZZLE"
+      ]
+    ],
     "omitted": [
-      "{EVO_LEVEL, 33, SPECIES_SALAZZLE, CONDITIONS({IF_GENDER, MON_FEMALE})}",
       "{EVO_NONE, 0, SPECIES_SALAZZLE_TOTEM}"
     ]
   },
@@ -3918,11 +3943,19 @@
   },
   {
     "species": "SPECIES_LECHONK",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 18, SPECIES_OINKOLOGNE_M, CONDITIONS({IF_GENDER, MON_MALE})}",
-      "{EVO_LEVEL, 18, SPECIES_OINKOLOGNE_F, CONDITIONS({IF_GENDER, MON_FEMALE})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_MALE",
+        "18",
+        "SPECIES_OINKOLOGNE"
+      ],
+      [
+        "EVO_LEVEL_FEMALE",
+        "18",
+        "SPECIES_OINKOLOGNE"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_OINKOLOGNE",

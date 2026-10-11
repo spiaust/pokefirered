@@ -282,6 +282,9 @@
 
 #define EVO_LEVEL_MOVE      16 // Level up while knowing the specified move
 
+#define EVO_LEVEL_MALE      17 // Level and male gender required
+#define EVO_LEVEL_FEMALE    18 // Level and female gender required
+
 #define EVOS_PER_MON 5
 
 #define EVO_MODE_NORMAL     0

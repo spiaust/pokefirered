@@ -355,3 +355,13 @@ needs Taunt (35). Tangela learns Ancient Power at 24 to evolve into Tangrowth;
 Yanma learns it at 33 to evolve into Yanmega. Learning the required move on
 that level-up can trigger evolution immediately. Forgetting it blocks this
 route until it is learned again. Everstone and shadow restrictions still apply.
+
+## Gender-based evolutions
+
+Female Combee evolves at level 21 into Vespiquen; female Salandit evolves at
+33 into Salazzle. Males keep their original species. At level 20, female Burmy
+becomes Wormadam and male Burmy becomes Mothim. The game uses the plant-coat
+Wormadam model. Espurr evolves at 25 and Lechonk at 18 for either gender,
+using the roster's existing Meowstic and Oinkologne base models. Separate
+male/female artwork and form-specific stats remain pending. The Pokémon's
+personality and gender are preserved through evolution and saving.

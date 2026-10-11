@@ -18,3 +18,13 @@ for token in ('BUDEW','BUNEARY','CHINGLING','MUNCHLAX','RIOLU','WOOBAT','SWADLOO
 for token in ('CHERUBI','SHELLOS','SCATTERBUG','SPEWPA','FLABEBE','PUMPKABOO','FINIZEN'):
     assert rules['SPECIES_'+token],token
 print('PASS: nested unsupported conditions rejected; nine friendship routes and seven base-form aliases preserved')
+
+from eclipse_evolutions import GENDER_FORM_ALIASES
+body='.evolutions = EVOLUTION({EVO_LEVEL, 21, SPECIES_VESPIQUEN, CONDITIONS({IF_GENDER, MON_FEMALE})}),'
+assert project(body,{'SPECIES_VESPIQUEN'},set())[0]==[('EVO_LEVEL_FEMALE','21','SPECIES_VESPIQUEN')]
+for extra in ('{IF_GENDER, MON_MALE}','{IF_TIME, TIME_NIGHT}'):
+    assert not project(body.replace('{IF_GENDER, MON_FEMALE}','{IF_GENDER, MON_FEMALE},'+extra),{'SPECIES_VESPIQUEN'},set())[0]
+assert not project(body.replace('MON_FEMALE','MON_GENDERLESS'),{'SPECIES_VESPIQUEN'},set())[0]
+assert project(body.replace('21','25').replace('SPECIES_VESPIQUEN','SPECIES_MEOWSTIC_F'),{'SPECIES_MEOWSTIC'},set(),GENDER_FORM_ALIASES)[0]==[('EVO_LEVEL_FEMALE','25','SPECIES_MEOWSTIC')]
+for token in ('BURMY','ESPURR','LECHONK'):assert len(rules['SPECIES_'+token])==2
+print('PASS: gender rules, both-gender base projections, and contradictory/extra condition rejection')

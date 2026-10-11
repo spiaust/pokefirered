@@ -14,6 +14,9 @@ The ending keeps League shelters, country travel and repeatable training availab
   retain nested source requirements and audit unsupported special evolutions.
 - [x] Add move-known evolution for Bonsly, Steenee, Clobbopus, Tangela and Yanma;
   add obtainable Ancient Power at Tangela level 24 and Yanma level 33.
+- [x] Restore gender/level rules for Combee, Salandit, Burmy, Espurr and
+  Lechonk, with native gender checks and existing base-species form projections.
+- [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [ ] Expand modern ability/move/evolution coverage and species-specific cries;
   tune reserve habitats and encounter balance across countries.
 
