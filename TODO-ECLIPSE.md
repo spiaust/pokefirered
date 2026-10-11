@@ -14,7 +14,8 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Pre-League legendary encounters: Articuno, Zapdos and Moltres.
 - [x] Postgame legendary encounters: Suicune, Lugia, Ho-Oh and Mewtwo.
 - [ ] Finish natural-level campaign balancing and broad hardware/emulator checks.
-  Natural saved-party coverage now reaches all eight badges, the wartime
-  chapters and Veil's Geneva finale, with six partners and three purifications.
-  Continue with the League, natural legendary captures and the postgame.
+  One Normal-mode, non-Nuzlocke saved-party route now reaches all eight badges,
+  the wartime chapters, Veil, all four council members and the champion ending,
+  with six partners and three purifications. Continue with natural legendary
+  captures, postgame combat, other starting routes and difficulty balancing.
   Past-map and player palettes survive cold Continue and the modern return.

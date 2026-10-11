@@ -397,9 +397,54 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
     `scripts/test_eclipse_natural_geneva.py` (earned rescues, native training,
     wartime victories, modern return and final Veil battle)
 
+20. `scripts/test_eclipse_natural_league.py` (earned Shock Wave, held EXP. SHARE,
+    native practice, four council victories, champion and cold ending save)
+
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
 the ROM changes. Preview capture: `scripts/preview_eclipse.py`.
+
+## Natural League and first ending
+
+The earned England/Totodile campaign now reaches the champion ending in Normal
+mode with Nuzlocke disabled. The first unprepared Thalia attempt lost to Dewgong
+and left chapter 16 pending. Ice Beam alone was ineffective against its healing;
+the level-15 Raichu had no damaging Electric move after its early evolution.
+No opponent, party, progression or inventory fixtures were used in this run.
+
+`test_eclipse_natural_league.py` teaches the truly earned Amsterdam Shock Wave
+TM to Raichu through the native TM Case, replacing Growl. It gives the already
+awarded EXP. SHARE through the Bag's Give menu and verifies that the item leaves
+the Bag and becomes held. Thirty-seven completed Geneva first-trainer practices
+in the saved progression raise Raichu to 45 and Nidoqueen to 59. Incidental
+encounters remain enabled. Each practice uses original experience, HP, PP, AI
+and native healing; no stat or experience writes are made. The prepared party
+also contains Croconaw 23, Pidgeotto 33, purified Houndoom 40 and purified Lapras
+45. This is one successful route, not a claim that every starter or similarly
+leveled team has been balanced.
+
+The runner buys ten Hyper Potions and three Revives with earned money for
+16,500, heals between council chambers, and selects ordinary moves and native
+matchup switches. The initial successful pass takes 10/13/8/8/18 attack selections
+against Thalia, Nikos, Eleni, Leon and the rival respectively. The final cold
+replay passes in 11/9/8/8/19 selections with exact party-record comparisons.
+Its rival uses
+Meganium as the evolved counter to Totodile. All three ending pages open after
+the real champion victory; the game-clear flag is set and the player returns
+to the champion shelter with chapter 21 saved. League shelters remain usable.
+
+Every chamber is saved through the Start menu and loaded in a fresh emulator.
+The final replay also compares species, held items, experience, levels, moves,
+HP and purification records after cold Continue, together with the map and
+player palettes. `--resume` replays the prepared League; `--train` resumes the
+saved training route, and `--stage=17` through `--stage=20` resume individual
+remaining chapters from the previous native victory. The native battle helper's
+optional `finish=False` lets the champion test inspect the credits before
+closing them. Other callers retain automatic field-dialogue completion.
+
+Natural legendary captures, postgame combat, other full starting routes and
+broad hardware/emulator checks remain outstanding. Earlier postgame victory and
+capacity fixtures remain explicitly separate from this natural campaign.
 
 ## Release-quality limits
 
@@ -408,8 +453,9 @@ The geography uses compact districts, stylized landmarks and shared League
 shelters rather than full-scale city reconstructions. Wild actors use defined
 spawn points and do not roam. There are no following party sprites, new villain
 sprite sheets, dedicated gym interiors, snagging or new Shadow-type moves.
-A full natural-level balancing playthrough and broad hardware/emulator testing
-remain outstanding before calling this a polished final release.
+One Normal-mode campaign has reached the ending with earned partners and
+resources. Natural legendary and postgame coverage, other full starting routes,
+and broad hardware/emulator checks remain before calling this a polished release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
 SHA-256: `aa29d21a624bc31c80be8affc808cd075ae8339846687e337a89d56de769dce6`

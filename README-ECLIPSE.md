@@ -42,6 +42,21 @@ be reclaimed from the leader.
 | Rome | Overheat |
 | Madrid | Earthquake |
 
+## Preparing for the League
+
+Keep damaging moves on the partners you evolve with stones. Raichu will not
+learn Pikachu's later Electric attacks after evolution; the Amsterdam badge's
+Shock Wave TM supplies reliable Electric coverage. Give EXP. SHARE to a partner
+from the Bag's Give menu to train it alongside your active battler. The item
+works while held, rather than by merely carrying it in the Bag.
+
+The Geneva route's first trainer uses Magneton and Tyranitar. Ground and
+Fighting attacks make it a useful repeatable practice match after defeating
+Veil. Heal between practices. The council starts with Ice and Water partners;
+bring Electric coverage rather than relying on Ice Beam against Dewgong.
+Shelter nurses, supplies, storage and return travel remain available between
+League matches.
+
 ## Countries and time travel
 
 The station attendant at the shelter's lower left opens a six-region destination
@@ -234,4 +249,6 @@ The native build produces a 16 MiB ROM and the Eclipse release alias. Read
 STORY-ECLIPSE.md for the campaign and country roster, RESEARCH-ECLIPSE.md for
 repository provenance, and TESTING-ECLIPSE.md for actual validation and limits.
 The districts are compact, with stylized landmarks and shared League shelters.
-A full natural-level balancing playthrough remains a release-quality check.
+One Normal-mode campaign has reached the ending with earned partners. Natural
+legendary captures, postgame balancing, other starting routes and broader
+hardware/emulator checks remain before a polished release.

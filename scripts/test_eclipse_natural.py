@@ -109,7 +109,7 @@ def effective_speed(e,b):
  return speed
 
 
-def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,revive_species=0,trace=False,matchups=None,fallback_species=0,finish_low_enemy=False):
+def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,revive_species=0,trace=False,matchups=None,fallback_species=0,finish_low_enemy=False,finish=True):
  action=first_symbol('HandleInputChooseAction');move=first_symbol('HandleInputChooseMove');turns=0;heals=0;revived=False
  for _ in range(limit):
   if not e.in_battle():break
@@ -187,7 +187,7 @@ def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,re
   nearby=[(k,hex(v)) for k,v in e.symbols.items() if abs((v&~1)-fn)<4]
   raise AssertionError(('natural battle stalled',hex(fn),nearby,hex(instr),e.read(instr,1),turns))
  outcome=e.read('gBattleOutcome',1)
- e.finish_dialogue();e.frames(240)
+ if finish:e.finish_dialogue();e.frames(240)
  return outcome,turns
 
 def natural_trainer_battle(e,target):
