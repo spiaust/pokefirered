@@ -167,6 +167,35 @@ not claims that Moscow, London or every other city was occupied. Contemporary
 navigation labels include regions that belonged to the USSR and Yugoslavia
 during WWII. The victory does not erase the victims or real history.
 
+## Legendary guardians
+
+Guardians appear as native overworld Pokemon in the present-day country districts.
+Their landmark signs describe the location and unlock condition. These are real
+wild battles with normal catch rates and moves. Declining, fleeing or knocking
+out a guardian leaves it available for another attempt; a successful catch
+removes it permanently through a saved flag. Full-party catches go to the PC.
+Optional Nuzlocke still uses that country's first-encounter allowance, shared
+with its historical era. Repeat attempts can be caught after disabling Nuzlocke.
+Celebi remains the time-travel guide so catching a guardian cannot break travel.
+
+| Phase | Guardian | Destination | Level | Unlock |
+| --- | --- | --- | --- | --- |
+| Before League | Articuno | Reykjavik, Iceland | 40 | Sixth badge, Vienna completed |
+| Before League | Zapdos | Oslo, Norway | 45 | Seventh badge, Rome completed |
+| Before League | Moltres | Rome, Italy | 45 | Eight badges, Madrid completed |
+| Postgame | Suicune | Helsinki, Finland | 60 | League ending |
+| Postgame | Lugia | Valletta, Malta | 65 | League ending |
+| Postgame | Ho-Oh | Vienna, Austria | 65 | League ending and three purified rescues |
+| Postgame | Mewtwo | Berlin, Germany | 70 | League ending and all six purified rescues |
+
+## Postgame production roadmap
+
+The ending leaves League shelters and repeatable training available. Further
+production will add an Eclipse-remnant hunt in Scandinavia, sanctuary
+restoration in Krakow, and a true champion rematch circuit. Detailed tasks are
+tracked in [TODO-ECLIPSE.md](TODO-ECLIPSE.md). Legendary guardians are implemented;
+the three larger postgame arcs remain on that roadmap.
+
 | Destination | City | Landmark |
 | --- | --- | --- |
 | England | London | BIG BEN |

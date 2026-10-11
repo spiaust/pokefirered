@@ -3427,7 +3427,7 @@ ContinentBerlin_Landmark::
  msgbox ContinentBerlin_LandmarkText, MSGBOX_SIGN
  end
 ContinentBerlin_LandmarkText::
- .string "BRANDENBURG GATE - BERLIN. This\nis a compact landmark district.\pThe station is south; trainers\nare along the garden paths.$"
+ .string "BRANDENBURG GATE - BERLIN.\pThe station is south; trainers\nfollow the garden paths.\pMEWTWO waits northeast.\nWin the League and purify six.$"
 ContinentBerlin_Keeper::
  lock
  faceplayer
@@ -3643,7 +3643,7 @@ ContinentVienna_Landmark::
  msgbox ContinentVienna_LandmarkText, MSGBOX_SIGN
  end
 ContinentVienna_LandmarkText::
- .string "ST STEPHEN'S - VIENNA. This is\na compact landmark district.\pThe station is south; trainers\nare along the garden paths.$"
+ .string "ST STEPHEN'S - VIENNA.\pThe station is south; trainers\nfollow the garden paths.\pHO-OH waits northeast.\nWin the League and purify three.$"
 ContinentVienna_Keeper::
  lock
  faceplayer
@@ -3931,7 +3931,7 @@ ContinentRome_Landmark::
  msgbox ContinentRome_LandmarkText, MSGBOX_SIGN
  end
 ContinentRome_LandmarkText::
- .string "COLOSSEUM - ROME. This is a\ncompact landmark district. The\pstation is south; trainers are\nalong the garden paths.$"
+ .string "COLOSSEUM - ROME.\pThe station is south; trainers\nfollow the garden paths.\pMOLTRES waits northeast.\nReturn after eight badges.$"
 ContinentRome_Keeper::
  lock
  faceplayer
@@ -4435,7 +4435,7 @@ ContinentOslo_Landmark::
  msgbox ContinentOslo_LandmarkText, MSGBOX_SIGN
  end
 ContinentOslo_LandmarkText::
- .string "AKERSHUS FORTRESS - OSLO. This\nis a compact landmark district.\pThe station is south; trainers\nare along the garden paths.$"
+ .string "AKERSHUS FORTRESS - OSLO.\pThe station is south; trainers\nfollow the garden paths.\pZAPDOS waits northeast.\nReturn after your seventh badge.$"
 ContinentOslo_Keeper::
  lock
  faceplayer
@@ -4579,7 +4579,7 @@ ContinentHelsinki_Landmark::
  msgbox ContinentHelsinki_LandmarkText, MSGBOX_SIGN
  end
 ContinentHelsinki_LandmarkText::
- .string "HELSINKI CATHEDRAL - HELSINKI.\nThis is a compact landmark\pdistrict. The station is south;\ntrainers are along the garden\ppaths.$"
+ .string "HELSINKI CATHEDRAL - HELSINKI.\pThe station is south; trainers\nfollow the garden paths.\pSUICUNE waits northeast.\nReturn after the League.$"
 ContinentHelsinki_Keeper::
  lock
  faceplayer
@@ -4651,7 +4651,7 @@ ContinentReykjavik_Landmark::
  msgbox ContinentReykjavik_LandmarkText, MSGBOX_SIGN
  end
 ContinentReykjavik_LandmarkText::
- .string "PARLIAMENT HOUSE - REYKJAVIK.\nThis is a compact landmark\pdistrict. The station is south;\ntrainers are along the garden\ppaths.$"
+ .string "PARLIAMENT HOUSE - REYKJAVIK.\pThe station is south; trainers\nfollow the garden paths.\pARTICUNO waits northeast.\nReturn after your sixth badge.$"
 ContinentReykjavik_Keeper::
  lock
  faceplayer
@@ -4795,7 +4795,7 @@ ContinentValletta_Landmark::
  msgbox ContinentValletta_LandmarkText, MSGBOX_SIGN
  end
 ContinentValletta_LandmarkText::
- .string "FORT ST ELMO - VALLETTA. This\nis a compact landmark district.\pThe station is south; trainers\nare along the garden paths.$"
+ .string "FORT ST ELMO - VALLETTA.\pThe station is south; trainers\nfollow the garden paths.\pLUGIA waits northeast.\nReturn after the League.$"
 ContinentValletta_Keeper::
  lock
  faceplayer
@@ -6418,3 +6418,191 @@ Shadow_TMRewardFull::
  goto Shadow_End
 Shadow_TMRewardFullText::
  .string "There is no room for your TM.\nMake space, then talk to me again.\pYour badge and reward are safe.$"
+
+EclipseLegendary_StoryLocked::
+ msgbox EclipseLegendary_StoryLockedText
+ goto Shadow_End
+EclipseLegendary_CareLocked::
+ msgbox EclipseLegendary_CareLockedText
+ goto Shadow_End
+EclipseLegendary_Already::
+ msgbox EclipseLegendary_CaughtText
+ goto Shadow_End
+EclipseLegendary_Retry::
+ msgbox EclipseLegendary_RetryText
+ goto Shadow_End
+EclipseLegendary_StoryLockedText::
+ .string "The guardian watches quietly.\nContinue your League journey.\pSome guardians return only once\nECLIPSE has been defeated.$"
+EclipseLegendary_CareLockedText::
+ .string "The guardian senses closed\nhearts in the rescue network.\pHO-OH needs three purified\npartners; MEWTWO needs all six.\pCare for your rescued partners\nand return to this refuge.$"
+EclipseLegendary_CaughtText::
+ .string "The guardian has joined your\nteam. Its refuge remains safe.$"
+EclipseLegendary_RetryText::
+ .string "The guardian returns to its\nrefuge. You may try again.\pYour challenge rules still apply\nto catches in this country.$"
+EclipseLegendary_ARTICUNO::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_set FLAG_0x8CE, EclipseLegendary_Already
+ goto_if_lt VAR_SHADOW_STAGE, 8, EclipseLegendary_StoryLocked
+ goto_if_lt VAR_SHADOW_PURIFIED, 0, EclipseLegendary_CareLocked
+ msgbox EclipseLegendary_ARTICUNO_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ special QuestLog_CutRecording
+ setwildbattle SPECIES_ARTICUNO, 40
+ playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
+ waitmoncry
+ special StartLegendaryBattle
+ waitstate
+ specialvar VAR_RESULT, GetBattleOutcome
+ goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, EclipseLegendary_Retry
+ setflag FLAG_0x8CE
+ removeobject VAR_LAST_TALKED
+ msgbox EclipseLegendary_CaughtText
+ goto Shadow_End
+EclipseLegendary_ARTICUNO_Intro::
+ .string "The northern guardian returns\nnow that your sixth badge\pproves your care.\nChallenge this guardian?$"
+
+EclipseLegendary_ZAPDOS::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_set FLAG_0x8CF, EclipseLegendary_Already
+ goto_if_lt VAR_SHADOW_STAGE, 10, EclipseLegendary_StoryLocked
+ goto_if_lt VAR_SHADOW_PURIFIED, 0, EclipseLegendary_CareLocked
+ msgbox EclipseLegendary_ZAPDOS_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ special QuestLog_CutRecording
+ setwildbattle SPECIES_ZAPDOS, 45
+ playmoncry SPECIES_ZAPDOS, CRY_MODE_ENCOUNTER
+ waitmoncry
+ special StartLegendaryBattle
+ waitstate
+ specialvar VAR_RESULT, GetBattleOutcome
+ goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, EclipseLegendary_Retry
+ setflag FLAG_0x8CF
+ removeobject VAR_LAST_TALKED
+ msgbox EclipseLegendary_CaughtText
+ goto Shadow_End
+EclipseLegendary_ZAPDOS_Intro::
+ .string "The storm guardian watches the\nnorthern relay. Your seventh\pbadge quieted its alarm.\nChallenge this guardian?$"
+
+EclipseLegendary_MOLTRES::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_set FLAG_0x8D0, EclipseLegendary_Already
+ goto_if_lt VAR_SHADOW_STAGE, 11, EclipseLegendary_StoryLocked
+ goto_if_lt VAR_SHADOW_PURIFIED, 0, EclipseLegendary_CareLocked
+ msgbox EclipseLegendary_MOLTRES_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ special QuestLog_CutRecording
+ setwildbattle SPECIES_MOLTRES, 45
+ playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
+ waitmoncry
+ special StartLegendaryBattle
+ waitstate
+ specialvar VAR_RESULT, GetBattleOutcome
+ goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, EclipseLegendary_Retry
+ setflag FLAG_0x8D0
+ removeobject VAR_LAST_TALKED
+ msgbox EclipseLegendary_CaughtText
+ goto Shadow_End
+EclipseLegendary_MOLTRES_Intro::
+ .string "The ember guardian shelters\nnear Rome. Eight badges show\pyou can withstand its trial.\nChallenge this guardian?$"
+
+EclipseLegendary_SUICUNE::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_set FLAG_0x8D1, EclipseLegendary_Already
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseLegendary_StoryLocked
+ goto_if_lt VAR_SHADOW_PURIFIED, 0, EclipseLegendary_CareLocked
+ msgbox EclipseLegendary_SUICUNE_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ special QuestLog_CutRecording
+ setwildbattle SPECIES_SUICUNE, 60
+ playmoncry SPECIES_SUICUNE, CRY_MODE_ENCOUNTER
+ waitmoncry
+ special StartLegendaryBattle
+ waitstate
+ specialvar VAR_RESULT, GetBattleOutcome
+ goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, EclipseLegendary_Retry
+ setflag FLAG_0x8D1
+ removeobject VAR_LAST_TALKED
+ msgbox EclipseLegendary_CaughtText
+ goto Shadow_End
+EclipseLegendary_SUICUNE_Intro::
+ .string "With ECLIPSE defeated, the\nlake guardian returns to\pcleanse the refuge waters.\nChallenge this guardian?$"
+
+EclipseLegendary_LUGIA::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_set FLAG_0x8D2, EclipseLegendary_Already
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseLegendary_StoryLocked
+ goto_if_lt VAR_SHADOW_PURIFIED, 0, EclipseLegendary_CareLocked
+ msgbox EclipseLegendary_LUGIA_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ special QuestLog_CutRecording
+ setwildbattle SPECIES_LUGIA, 65
+ playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
+ waitmoncry
+ special StartLegendaryBattle
+ waitstate
+ specialvar VAR_RESULT, GetBattleOutcome
+ goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, EclipseLegendary_Retry
+ setflag FLAG_0x8D2
+ removeobject VAR_LAST_TALKED
+ msgbox EclipseLegendary_CaughtText
+ goto Shadow_End
+EclipseLegendary_LUGIA_Intro::
+ .string "The sea guardian returns after\nthe League to watch the\prestored rescue lanes.\nChallenge this guardian?$"
+
+EclipseLegendary_HO_OH::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_set FLAG_0x8D3, EclipseLegendary_Already
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseLegendary_StoryLocked
+ goto_if_lt VAR_SHADOW_PURIFIED, 3, EclipseLegendary_CareLocked
+ msgbox EclipseLegendary_HO_OH_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ special QuestLog_CutRecording
+ setwildbattle SPECIES_HO_OH, 65
+ playmoncry SPECIES_HO_OH, CRY_MODE_ENCOUNTER
+ waitmoncry
+ special StartLegendaryBattle
+ waitstate
+ specialvar VAR_RESULT, GetBattleOutcome
+ goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, EclipseLegendary_Retry
+ setflag FLAG_0x8D3
+ removeobject VAR_LAST_TALKED
+ msgbox EclipseLegendary_CaughtText
+ goto Shadow_End
+EclipseLegendary_HO_OH_Intro::
+ .string "Three purified partners have\nrekindled the sanctuary\pbeacon. The rainbow guardian\nanswers.\pChallenge this guardian?$"
+
+EclipseLegendary_MEWTWO::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_set FLAG_0x8D4, EclipseLegendary_Already
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseLegendary_StoryLocked
+ goto_if_lt VAR_SHADOW_PURIFIED, 6, EclipseLegendary_CareLocked
+ msgbox EclipseLegendary_MEWTWO_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ special QuestLog_CutRecording
+ setwildbattle SPECIES_MEWTWO, 70
+ playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
+ waitmoncry
+ special StartLegendaryBattle
+ waitstate
+ specialvar VAR_RESULT, GetBattleOutcome
+ goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, EclipseLegendary_Retry
+ setflag FLAG_0x8D4
+ removeobject VAR_LAST_TALKED
+ msgbox EclipseLegendary_CaughtText
+ goto Shadow_End
+EclipseLegendary_MEWTWO_Intro::
+ .string "All six rescued partners are\nfree. The escaped laboratory\pguardian will now test your\npromise.\pChallenge this guardian?$"

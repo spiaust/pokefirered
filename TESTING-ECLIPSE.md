@@ -15,6 +15,8 @@ The original project's tracked source and player saves were preserved.
   two present-day outcomes, an all-country epilogue and one-time reward.
 - World Gear: Normal/Easy/Hard, independent optional Nuzlocke, and optional
   rate-based visible encounters covering all 62 encounter-table species.
+- Seven stationary legendary guardians: three before the League and four
+  after the ending, native sprites/battles, story/care gates and saved catches.
 - Native credits and ordinary Start-menu saving.
 
 ## Native checks
@@ -161,6 +163,18 @@ A final-ROM Berlin replay also wins (five selections), and Amsterdam's
 natural fourth-gym regression passes (seven selections) with its cold-save
 checks after the battle-runner update.
 
+Legendary checks use explicit stage/purification, Master Ball and disabled
+incidental-encounter fixtures; these are encounter-system checks, not a natural
+legendary balancing playthrough. All seven native battles have the correct
+species and levels. Story gates, purification gates and declining pass. Articuno
+can be retried after a native flee and fixture-assisted knockout. All seven
+are caught through native Ball input; their hide flags and exact Ball consumption
+survive cold Continue. Captures beyond six party slots persist in PC storage,
+and revisiting every refuge shows no duplicate guardian. The challenge test
+checks first-encounter allowance, the native Nuzlocke refusal/refund script on a
+retry, and successful capture after disabling the rule. The final-ROM natural
+Berlin regression also passes with badge, move and TM persistence.
+
 ## Reproduce
 
 Run the build, then the Python scripts in WSL with the base mGBA test bridge:
@@ -181,6 +195,8 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
     `--caught` resumes after the Belgian catch and `--resume` replays the gym)
 12. `scripts/test_eclipse_natural_berlin.py` (requires the natural fourth-badge
     save; `--resume` replays the gym from the trained-team save)
+13. `scripts/test_eclipse_legendaries.py` and
+    `scripts/test_eclipse_legendary_challenge.py` (use the cold completed save)
 
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
@@ -197,4 +213,4 @@ A full natural-level balancing playthrough and broad hardware/emulator testing
 remain outstanding before calling this a polished final release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `6764db85a027aa94c51a8008ad2233eb2ceda09ed6394822161be36bb297f42d`
+SHA-256: `870373f421e12b1765c3d4dacf1defb62ae9cedbe9733dfeea63bb457a2c70b5`

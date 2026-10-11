@@ -352,6 +352,8 @@ void StartSouthernIslandBattle(void)
 void StartLegendaryBattle(void)
 {
     u16 species;
+
+    Shadow_BeginEncounter();
     
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;

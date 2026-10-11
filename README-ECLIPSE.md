@@ -112,6 +112,31 @@ purification ribbon. Normal friendship events also help. SHADOW and HEALED
 nicknames identify rescue status. Snagging and a new Shadow move type are not
 part of this ruleset.
 
+## Legendary guardians
+
+Guardians appear as native overworld Pokemon in the present-day country districts.
+Their landmark signs describe the location and unlock condition. These are real
+wild battles with normal catch rates and moves. Declining, fleeing or knocking
+out a guardian leaves it available for another attempt; a successful catch
+removes it permanently through a saved flag. Full-party catches go to the PC.
+Optional Nuzlocke still uses that country's first-encounter allowance, shared
+with its historical era. Repeat attempts can be caught after disabling Nuzlocke.
+Celebi remains the time-travel guide so catching a guardian cannot break travel.
+
+| Phase | Guardian | Destination | Level | Unlock |
+| --- | --- | --- | --- | --- |
+| Before League | Articuno | Reykjavik, Iceland | 40 | Sixth badge, Vienna completed |
+| Before League | Zapdos | Oslo, Norway | 45 | Seventh badge, Rome completed |
+| Before League | Moltres | Rome, Italy | 45 | Eight badges, Madrid completed |
+| Postgame | Suicune | Helsinki, Finland | 60 | League ending |
+| Postgame | Lugia | Valletta, Malta | 65 | League ending |
+| Postgame | Ho-Oh | Vienna, Austria | 65 | League ending and three purified rescues |
+| Postgame | Mewtwo | Berlin, Germany | 70 | League ending and all six purified rescues |
+
+The postgame production roadmap is tracked in [TODO-ECLIPSE.md](TODO-ECLIPSE.md).
+It includes the Scandinavian Eclipse-remnant hunt, Krakow sanctuary restoration
+and a true champion rematch circuit. Those three additions remain planned work.
+
 ## Build and verification
 
 Run `powershell -File scripts/build-windows.ps1` with the base WSL/agbcc tools.

@@ -1,0 +1,95 @@
+{
+  "encounters": [
+    {
+      "species": "ARTICUNO",
+      "country": "Iceland",
+      "city": "Reykjavik",
+      "country_index": 19,
+      "level": 40,
+      "min_stage": 8,
+      "min_purified": 0,
+      "flag": "0x8ce",
+      "map": "ContinentReykjavik",
+      "x": 34,
+      "y": 12
+    },
+    {
+      "species": "ZAPDOS",
+      "country": "Norway",
+      "city": "Oslo",
+      "country_index": 16,
+      "level": 45,
+      "min_stage": 10,
+      "min_purified": 0,
+      "flag": "0x8cf",
+      "map": "ContinentOslo",
+      "x": 34,
+      "y": 12
+    },
+    {
+      "species": "MOLTRES",
+      "country": "Italy",
+      "city": "Rome",
+      "country_index": 9,
+      "level": 45,
+      "min_stage": 11,
+      "min_purified": 0,
+      "flag": "0x8d0",
+      "map": "ContinentRome",
+      "x": 34,
+      "y": 12
+    },
+    {
+      "species": "SUICUNE",
+      "country": "Finland",
+      "city": "Helsinki",
+      "country_index": 18,
+      "level": 60,
+      "min_stage": 21,
+      "min_purified": 0,
+      "flag": "0x8d1",
+      "map": "ContinentHelsinki",
+      "x": 34,
+      "y": 12
+    },
+    {
+      "species": "LUGIA",
+      "country": "Malta",
+      "city": "Valletta",
+      "country_index": 21,
+      "level": 65,
+      "min_stage": 21,
+      "min_purified": 0,
+      "flag": "0x8d2",
+      "map": "ContinentValletta",
+      "x": 34,
+      "y": 12
+    },
+    {
+      "species": "HO_OH",
+      "country": "Austria",
+      "city": "Vienna",
+      "country_index": 5,
+      "level": 65,
+      "min_stage": 21,
+      "min_purified": 3,
+      "flag": "0x8d3",
+      "map": "ContinentVienna",
+      "x": 34,
+      "y": 12
+    },
+    {
+      "species": "MEWTWO",
+      "country": "Germany",
+      "city": "Berlin",
+      "country_index": 2,
+      "level": 70,
+      "min_stage": 21,
+      "min_purified": 6,
+      "flag": "0x8d4",
+      "map": "ContinentBerlin",
+      "x": 34,
+      "y": 12
+    }
+  ]
+}
