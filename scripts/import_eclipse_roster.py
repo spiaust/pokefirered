@@ -122,7 +122,7 @@ for r in rows:
  supported, omitted = project(ENTRIES[str(n)]['body'], existing_species | set(source_to_token.values()), set(re.findall(r'#define (ITEM_\w+)\s+', (ROOT/'include/constants/items.h').read_text())), source_to_token, MOVES)
  evo_audit.append(dict(species=token, supported=supported, omitted=omitted))
  evos=['{'+', '.join(rule)+'}' for rule in supported]
- if evos:evo.append(f'[{token}] = {{'+', '.join(evos[:7])+'},')
+ if evos:evo.append(f'[{token}] = {{'+', '.join(evos[:8])+'},')
  coordsf.append(f'[{token}] = {{MON_COORDS_SIZE(64, 64), {r["frontOffset"]}}},');coordsb.append(f'[{token}] = {{MON_COORDS_SIZE(64, 64), {r["backOffset"]}}},');elevation.append(f'[{token}] = 0,')
 for name,data in [('assets',gfx),('declarations',decl),('front',front),('back',back),('palette',pal),('shiny',shiny),('icons',icons),('icon_palette',iconp),('footprints',foot),('stats',stats),('names',names),('learnsets',levels),('learnset_pointers',ptrs),('machines',tms),('dex',dex),('dex_text',dextexts),('evolutions',evo),('front_coords',coordsf),('back_coords',coordsb),('elevation',elevation)]:inc(name,'\n'.join(data))
 (ROOT/'data/eclipse-evolution-projection.json').write_text(json.dumps(evo_audit,indent=2)+'\n',encoding='utf-8')

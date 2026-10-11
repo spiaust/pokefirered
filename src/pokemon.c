@@ -5095,6 +5095,22 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                     && GetMonGender(mon) == (gEvolutionTable[species][i].method == EVO_LEVEL_MALE ? MON_MALE : MON_FEMALE))
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_FRIENDSHIP_MOVE_TYPE:
+                if (friendship >= 220)
+                {
+                    u8 slot;
+                    for (slot = 0; slot < MAX_MON_MOVES; slot++)
+                    {
+                        u16 move = GetMonData(mon, MON_DATA_MOVE1 + slot, NULL);
+                        if (move != MOVE_NONE && move < MOVES_COUNT
+                            && gBattleMoves[move].type == gEvolutionTable[species][i].param)
+                        {
+                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                            break;
+                        }
+                    }
+                }
+                break;
             case EVO_LEVEL_MOVE:
                 {
                     u8 slot;

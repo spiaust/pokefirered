@@ -396,3 +396,15 @@ Use a stone from the Bag on a compatible partner. A successful evolution uses
 one stone. Wrong species, wrong gender, Everstone and shadow restrictions
 prevent the evolution. Eevee's original three stone and two friendship paths
 remain available. These items use existing colored stone icons.
+
+## Sylveon and all eight Eevee evolutions
+
+Eevee learns Baby-Doll Eyes at level 15, or can recall it afterward from any
+free move reminder. It is a Fairy status move with priority +1 that lowers the
+foe's Attack by one stage. The move menu abbreviates its name to BABYDOLLEYES.
+
+An Eevee with at least 220 friendship evolves into Sylveon on its next level-up
+if it currently knows a Fairy move. This works in either day or night and takes
+priority over Espeon/Umbreon. Without a Fairy move, their day/night friendship
+rules still apply. Everstone and shadow restrictions also apply to Sylveon.
+All five stone alternatives remain available, completing all eight evolutions.

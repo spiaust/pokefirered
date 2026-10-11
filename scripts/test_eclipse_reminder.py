@@ -46,50 +46,54 @@ def bag(e):
 def money(e):
     return e.read(e.read('gSaveBlock1Ptr')+0x290)^e.read(e.read('gSaveBlock2Ptr')+0xf20)
 
-import argparse
-parser=argparse.ArgumentParser();parser.add_argument('--only-long',action='store_true');args=parser.parse_args()
-for species,required,target in ([] if args.only_long else [('PILOSWINE','MOVE_ANCIENT_POWER','MAMOSWINE'),('BONSLY','MOVE_MIMIC','SUDOWOODO')]):
+def main():
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--only-long',action='store_true');args=parser.parse_args()
+    for species,required,target in ([] if args.only_long else [('PILOSWINE','MOVE_ANCIENT_POWER','MAMOSWINE'),('BONSLY','MOVE_MIMIC','SUDOWOODO')]):
+        e=Emulator(ROOT/'pokefirered.gba')
+        try:
+            load_checkpoint(e,'natural-circuit-complete',True);world(e,0)
+            fixture(e,species,255,0,0);moves_fixture(e,'MOVE_TACKLE')
+            before=bag(e);cash=money(e)
+            lesson(e,required)
+            assert bag(e)==before and money(e)==cash
+            e.screenshot(ROOT/f'test-output/reminder-{species.lower()}.png')
+            candy(e);assert monfield(e,0,0,0)&65535==ids['SPECIES_'+target]
+            print('PASS: free native reminder then level-up evolves',species,'into',target,flush=True)
+            if species=='PILOSWINE':
+                field(e);start_action(e,4)
+                for _ in range(8):e.press('A',240)
+                e.battery(ROOT/'test-output/reminder-mamoswine.sav')
+            old=[monfield(e,0,1,j)&65535 for j in (0,2,4,6)];before=bag(e)
+            field(e);offer(e);e.press('B',180);field(e)
+            assert old==[monfield(e,0,1,j)&65535 for j in (0,2,4,6)] and bag(e)==before
+            offer(e);e.press('A',180);advance(e,lambda:e.task_active('Task_HandleChooseMonInput'));e.press('B',180);field(e)
+            assert old==[monfield(e,0,1,j)&65535 for j in (0,2,4,6)] and bag(e)==before
+            print('PASS: offer and party cancellation preserve moves and inventory',flush=True)
+        finally:e.close()
     e=Emulator(ROOT/'pokefirered.gba')
     try:
         load_checkpoint(e,'natural-circuit-complete',True);world(e,0)
-        fixture(e,species,255,0,0);moves_fixture(e,'MOVE_TACKLE')
-        before=bag(e);cash=money(e)
-        lesson(e,required)
+        fixture(e,'MR_RIME',255,0,0)
+        old=[monfield(e,0,1,j)&65535 for j in (0,2,4,6)]
+        assert all(old)
+        e.write(e.symbols['gPlayerParty']+0x54,100,1)
+        before=bag(e);cash=money(e);lesson(e,'MOVE_TEETER_DANCE')
         assert bag(e)==before and money(e)==cash
-        e.screenshot(ROOT/f'test-output/reminder-{species.lower()}.png')
-        candy(e);assert monfield(e,0,0,0)&65535==ids['SPECIES_'+target]
-        print('PASS: free native reminder then level-up evolves',species,'into',target,flush=True)
-        if species=='PILOSWINE':
-            field(e);start_action(e,4)
-            for _ in range(8):e.press('A',240)
-            e.battery(ROOT/'test-output/reminder-mamoswine.sav')
-        old=[monfield(e,0,1,j)&65535 for j in (0,2,4,6)];before=bag(e)
-        field(e);offer(e);e.press('B',180);field(e)
-        assert old==[monfield(e,0,1,j)&65535 for j in (0,2,4,6)] and bag(e)==before
-        offer(e);e.press('A',180);advance(e,lambda:e.task_active('Task_HandleChooseMonInput'));e.press('B',180);field(e)
-        assert old==[monfield(e,0,1,j)&65535 for j in (0,2,4,6)] and bag(e)==before
-        print('PASS: offer and party cancellation preserve moves and inventory',flush=True)
+        old[0]=moves['MOVE_TEETER_DANCE']
+        assert [monfield(e,0,1,j)&65535 for j in (0,2,4,6)]==old
+        print('PASS: imported roster maximum-length learnset pages to its final move and replaces slot one',flush=True)
     finally:e.close()
-e=Emulator(ROOT/'pokefirered.gba')
-try:
-    load_checkpoint(e,'natural-circuit-complete',True);world(e,0)
-    fixture(e,'MR_RIME',255,0,0)
-    old=[monfield(e,0,1,j)&65535 for j in (0,2,4,6)]
-    assert all(old)
-    e.write(e.symbols['gPlayerParty']+0x54,100,1)
-    before=bag(e);cash=money(e);lesson(e,'MOVE_TEETER_DANCE')
-    assert bag(e)==before and money(e)==cash
-    old[0]=moves['MOVE_TEETER_DANCE']
-    assert [monfield(e,0,1,j)&65535 for j in (0,2,4,6)]==old
-    print('PASS: imported roster maximum-length learnset pages to its final move and replaces slot one',flush=True)
-finally:e.close()
-e=Emulator(ROOT/'pokefirered.gba')
-try:
-    load_checkpoint(e,'reminder-mamoswine',True)
-    assert monfield(e,0,0,0)&65535==ids['SPECIES_MAMOSWINE']
-    assert moves['MOVE_ANCIENT_POWER'] in [monfield(e,0,1,j)&65535 for j in (0,2,4,6)]
-    extra=ids['SPECIES_MAMOSWINE']-440;mask=1<<(extra%8);sb=e.read('gSaveBlock2Ptr')
-    assert e.read(sb+0xb20+extra//8,1)&mask
-    assert e.read(sb+0xb70+extra//8,1)&mask
-    print('PASS: reminder-learned Ancient Power and Mamoswine survive Save/cold Continue')
-finally:e.close()
+    e=Emulator(ROOT/'pokefirered.gba')
+    try:
+        load_checkpoint(e,'reminder-mamoswine',True)
+        assert monfield(e,0,0,0)&65535==ids['SPECIES_MAMOSWINE']
+        assert moves['MOVE_ANCIENT_POWER'] in [monfield(e,0,1,j)&65535 for j in (0,2,4,6)]
+        extra=ids['SPECIES_MAMOSWINE']-440;mask=1<<(extra%8);sb=e.read('gSaveBlock2Ptr')
+        assert e.read(sb+0xb20+extra//8,1)&mask
+        assert e.read(sb+0xb70+extra//8,1)&mask
+        print('PASS: reminder-learned Ancient Power and Mamoswine survive Save/cold Continue')
+    finally:e.close()
+
+if __name__ == '__main__':
+    main()

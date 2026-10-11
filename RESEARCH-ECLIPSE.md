@@ -138,3 +138,23 @@ and actual use. EVOS_PER_MON increases from five to seven in ROM tables to
 retain every existing Eevee branch while adding Leafeon and Glaceon; all native
 consumers use the same constant. Aegislash retains the existing shield-form
 representation; this pass does not add battle form switching or new abilities.
+
+### Sylveon and Baby-Doll Eyes
+
+The same pinned RHH source provides Eevee's level-15 Baby-Doll Eyes and Sylveon's
+friendship plus known-Fairy-move rule. See the cached gen_9 learnset and
+[gen_1 family data](https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/pokemon/species_info/gen_1_families.h).
+This game retains the classic 220 friendship threshold. Its new native method
+checks all four current move slots, rejects empty/invalid move IDs, and uses the
+battle move's type. Sylveon's rule is the eighth and final Eevee slot, so it
+wins over its day/night friendship branches. The conservative importer accepts
+this exact pair of conditions and still rejects unknown types/extra conditions.
+The imported 639-row audit remains 220 supported and 133 omitted rules; Eevee
+is an original-species manual branch. The generator/importer now retain eight
+slots. ROM-only table growth adds no global RAM or save fields.
+
+Baby-Doll Eyes is native move 360, with Fairy typing, 100 accuracy, 30 PP,
+priority +1 and the existing one-stage Attack-down status effect. It reuses
+Charm's animation, has its own description and fits the 12-character native
+move label limit. Existing move IDs and animations remain fixed. Only Eevee's
+learnset is expanded in this pass; other modern learnsets remain projected.

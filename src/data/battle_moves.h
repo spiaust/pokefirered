@@ -4618,5 +4618,6 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 [MOVE_FAIRY_WIND] = {.effect = EFFECT_HIT, .power = 40, .type = TYPE_FAIRY, .accuracy = 100, .pp = 30, .secondaryEffectChance = 0, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
 [MOVE_MOONBLAST] = {.effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT, .power = 95, .type = TYPE_FAIRY, .accuracy = 100, .pp = 15, .secondaryEffectChance = 30, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
 [MOVE_PLAY_ROUGH] = {.effect = EFFECT_ATTACK_DOWN_HIT, .power = 90, .type = TYPE_FAIRY, .accuracy = 90, .pp = 10, .secondaryEffectChance = 10, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
+[MOVE_BABY_DOLL_EYES] = {.effect = EFFECT_ATTACK_DOWN, .power = 0, .type = TYPE_FAIRY, .accuracy = 100, .pp = 30, .priority = 1, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
 [MOVE_LEAFAGE] = {.effect = EFFECT_HIT, .power = 40, .type = TYPE_GRASS, .accuracy = 100, .pp = 40, .secondaryEffectChance = 0, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
 };

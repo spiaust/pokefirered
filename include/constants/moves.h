@@ -363,7 +363,9 @@
 #define MOVE_PLAY_ROUGH 358
 #define MOVE_LEAFAGE 359
 
-#define MOVES_COUNT 360
+#define MOVE_BABY_DOLL_EYES 360
+
+#define MOVES_COUNT 361
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

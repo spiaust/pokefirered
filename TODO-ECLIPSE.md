@@ -19,7 +19,9 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add free native move reminders at 100 locations and unlock Piloswine /
   Mamoswine through recalling Ancient Power and leveling up.
 - [x] Add Shiny, Dusk, Dawn and Ice Stones to shops, fourteen stone routes,
-  Dawn Stone gender checks and seven-slot Eevee evolution support.
+  Dawn Stone gender checks and expanded Eevee evolution support.
+- [x] Complete all eight Eevee evolutions with Sylveon; add obtainable level-15
+  Baby-Doll Eyes, free recall and friendship plus a known Fairy move.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [ ] Expand modern ability/move/evolution coverage and species-specific cries;
   tune reserve habitats and encounter balance across countries.

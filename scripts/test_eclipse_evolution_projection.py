@@ -1,4 +1,5 @@
 """Prevent nested source requirements from becoming unconditional evolutions."""
+import re
 import json
 from emulator import ROOT
 from eclipse_evolutions import project
@@ -35,3 +36,15 @@ assert not project(body,{'SPECIES_GALLADE'},set())[0]
 assert not project(body.replace('{IF_GENDER, MON_MALE}','{IF_GENDER, MON_MALE},{IF_TIME, TIME_NIGHT}'),{'SPECIES_GALLADE'},{'ITEM_DAWN_STONE'})[0]
 for token in ('MINCCINO','LAMPENT','FLOETTE','DOUBLADE','CRABRAWLER','CETODDLE'):assert rules['SPECIES_'+token][0][0]=='EVO_ITEM'
 print('PASS: six imported stone routes and conditional Dawn Stone item availability')
+
+body='.evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SYLVEON, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD},{IF_KNOWS_MOVE_TYPE, TYPE_FAIRY})}),'
+assert project(body,{'SPECIES_SYLVEON'},set())[0]==[('EVO_FRIENDSHIP_MOVE_TYPE','TYPE_FAIRY','SPECIES_SYLVEON')]
+for bad in (body.replace('TYPE_FAIRY','TYPE_UNKNOWN'),body.replace('{IF_KNOWS_MOVE_TYPE, TYPE_FAIRY}','{IF_KNOWS_MOVE_TYPE, TYPE_FAIRY},{IF_TIME, TIME_NIGHT}'),body.replace('FRIENDSHIP_EVO_THRESHOLD','1')):
+    assert not project(bad,{'SPECIES_SYLVEON'},set())[0]
+print('PASS: friendship plus Fairy move type; unknown types and extra conditions rejected')
+
+# Original animation indices must remain stable when new moves are appended.
+anims=(ROOT/'data/battle_anim_scripts.s').read_text().split('gBattleAnims_Moves::',1)[1].split('gBattleAnims_StatusConditions::',1)[0]
+pointers=re.findall(r'\.4byte (Move_\w+)',anims)
+assert len(pointers)==362 and pointers[68]=='Move_COUNTER' and pointers[360]=='Move_CHARM' and pointers[361]=='Move_COUNT'
+print('PASS: original move animation indices and appended move/sentinel remain aligned')

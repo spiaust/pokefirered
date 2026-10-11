@@ -358,6 +358,8 @@ const u8 gMoveDescription_PsychoBoost[] = _("An intense attack\nthat also sharpl
 
 static const u8 sEclipseModernMoveDescription[] = _("An attack with\na modern partner's\nnatural power.");
 
+static const u8 sBabyDollEyesDescription[] = _("The user acts first\nand lowers the\nfoe's ATTACK with\na cute stare.");
+
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
     [MOVE_KARATE_CHOP   - 1] = gMoveDescription_KarateChop,
@@ -718,4 +720,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 [MOVE_MOONBLAST - 1] = sEclipseModernMoveDescription,
 [MOVE_PLAY_ROUGH - 1] = sEclipseModernMoveDescription,
 [MOVE_LEAFAGE - 1] = sEclipseModernMoveDescription,
+[MOVE_BABY_DOLL_EYES - 1] = sBabyDollEyesDescription,
 };

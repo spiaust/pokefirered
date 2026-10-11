@@ -288,7 +288,9 @@
 #define EVO_ITEM_MALE       19 // Evolution item requires male gender
 #define EVO_ITEM_FEMALE     20 // Evolution item requires female gender
 
-#define EVOS_PER_MON 7
+#define EVO_FRIENDSHIP_MOVE_TYPE 21 // Friendship and a currently known move type
+
+#define EVOS_PER_MON 8
 
 #define EVO_MODE_NORMAL     0
 #define EVO_MODE_TRADE      1

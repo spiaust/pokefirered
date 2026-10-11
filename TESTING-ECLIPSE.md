@@ -977,4 +977,35 @@ existing item or species IDs. The evolution table grows to seven ROM slots;
 all consumers compile with that constant. Item pocket sizes, save layout,
 EWRAM (261,196 / 262,144) and IWRAM (29,824 / 32,768) remain unchanged.
 Final ROM content remains 17,299,532 bytes, padded to 32 MiB; both aliases match.
-Current release SHA-256: `c75dbbda77e4b951d0930f1b2652e368867fddfb79f03bcbb8df2a5e2b7edfa5`.
+Previous stone release SHA-256: `c75dbbda77e4b951d0930f1b2652e368867fddfb79f03bcbb8df2a5e2b7edfa5`.
+
+### Sylveon and complete Eevee evolution coverage
+
+The release builds with the eighth Eevee branch and native move 360,
+Baby-Doll Eyes. `test_eclipse_sylveon.py` checks day and night Sylveon priority,
+positive Fairy moves in all four slots, a second Fairy move, insufficient
+friendship, Everstone and shadow restrictions, and Espeon/Umbreon without a
+Fairy move. It also learns Baby-Doll Eyes through the native level-15 menu and
+a free reminder, then evolves through native Rare Candy use. Saved Sylveon,
+its move and the extended seen/caught entries survive native Save/cold Continue.
+The second-slot case also has a separate `--cases=8` log.
+
+`test_eclipse_baby_doll_eyes.py` uses explicit combat fixtures to make the user
+slower than a harmless opponent. Native turn ordering still puts the user
+first; the move consumes one PP, lowers the opponent's Attack exactly one
+stage and deals no damage. The reused Charm animation completes normally.
+`test_eclipse_stones.py --cases=6,7,19,20,21` confirms the other five stone
+Eevee alternatives and one-stone consumption. Together with the Sylveon test's
+day/night alternatives, all eight Eevee branches pass native UI checks.
+
+Evolution-projection regressions reject unknown move types and additional
+conditions, and check animation indices so an appended move cannot shift
+original animations. Campaign/continent static checks pass, and the final
+2026 title boots into both New Game and cold-saved Continue. The tests use
+isolated earned checkpoints with explicit Pokémon/RTC fixtures and do not
+modify personal saves. Modern forms/abilities/cries and broader balancing
+remain on the roadmap.
+
+ROM content is 17,299,532 bytes; both padded aliases are 32 MiB.
+EWRAM remains 261,196 / 262,144 bytes, and IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `eb22f4bde68bb047f012f0dad9bc929961c0ae3a87a5a0a9877b00d6e8cba71a`.
