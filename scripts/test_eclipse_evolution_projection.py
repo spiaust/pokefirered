@@ -48,3 +48,12 @@ anims=(ROOT/'data/battle_anim_scripts.s').read_text().split('gBattleAnims_Moves:
 pointers=re.findall(r'\.4byte (Move_\w+)',anims)
 assert len(pointers)==362 and pointers[68]=='Move_COUNTER' and pointers[360]=='Move_CHARM' and pointers[361]=='Move_COUNT'
 print('PASS: original move animation indices and appended move/sentinel remain aligned')
+
+body='.evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CHANSEY, CONDITIONS({IF_NOT_TIME, TIME_NIGHT},{IF_HOLD_ITEM, ITEM_OVAL_STONE})}),'
+assert project(body,{'SPECIES_CHANSEY'},{'ITEM_OVAL_STONE'})[0]==[('EVO_LEVEL_ITEM_DAY','ITEM_OVAL_STONE','SPECIES_CHANSEY')]
+assert project(body.replace('IF_NOT_TIME','IF_TIME'),{'SPECIES_CHANSEY'},{'ITEM_OVAL_STONE'})[0]==[('EVO_LEVEL_ITEM_NIGHT','ITEM_OVAL_STONE','SPECIES_CHANSEY')]
+for bad in (body.replace('TIME_NIGHT','TIME_EVENING'),body.replace('{IF_HOLD_ITEM, ITEM_OVAL_STONE}','{IF_HOLD_ITEM, ITEM_OVAL_STONE},{IF_GENDER, MON_FEMALE}'),body.replace('EVO_LEVEL, 0','EVO_LEVEL, 10')):
+    assert not project(bad,{'SPECIES_CHANSEY'},{'ITEM_OVAL_STONE'})[0]
+assert not project(body,{'SPECIES_CHANSEY'},set())[0]
+assert next(r for r in rows if r['species']=='SPECIES_HAPPINY')['supported']==[['EVO_LEVEL_ITEM_DAY','ITEM_OVAL_STONE','SPECIES_CHANSEY']]
+print('PASS: held-item time conditions, item availability and additional-condition rejection')

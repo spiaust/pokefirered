@@ -22,6 +22,8 @@ The ending keeps League shelters, country travel and repeatable training availab
   Dawn Stone gender checks and expanded Eevee evolution support.
 - [x] Complete all eight Eevee evolutions with Sylveon; add obtainable level-15
   Baby-Doll Eyes, free recall and friendship plus a known Fairy move.
+- [x] Add obtainable Oval Stone, Razor Claw and Razor Fang; unlock Happiny,
+  Sneasel and Gligar with time-dependent held-item level-up and safe cancellation.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [ ] Expand modern ability/move/evolution coverage and species-specific cries;
   tune reserve habitats and encounter balance across countries.

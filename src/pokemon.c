@@ -5038,6 +5038,24 @@ static u8 GetNatureFromPersonality(u32 personality)
     return personality % NUM_NATURES;
 }
 
+// Commit held-item consumption only after the normal evolution succeeds.
+void ConsumeHeldEvolutionItem(struct Pokemon *mon, u16 preSpecies, u16 postSpecies)
+{
+    u8 i;
+    u16 heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, NULL);
+    for (i = 0; i < EVOS_PER_MON; i++)
+    {
+        const struct Evolution *evo = &gEvolutionTable[preSpecies][i];
+        if ((evo->method == EVO_LEVEL_ITEM_DAY || evo->method == EVO_LEVEL_ITEM_NIGHT)
+            && evo->param == heldItem && evo->targetSpecies == postSpecies)
+        {
+            heldItem = ITEM_NONE;
+            SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
+            break;
+        }
+    }
+}
+
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
 {
     int i;
@@ -5093,6 +5111,12 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
             case EVO_LEVEL_FEMALE:
                 if (gEvolutionTable[species][i].param <= level
                     && GetMonGender(mon) == (gEvolutionTable[species][i].method == EVO_LEVEL_MALE ? MON_MALE : MON_FEMALE))
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_ITEM_DAY:
+            case EVO_LEVEL_ITEM_NIGHT:
+                if (heldItem == gEvolutionTable[species][i].param
+                    && Eclipse_IsNight() == (gEvolutionTable[species][i].method == EVO_LEVEL_ITEM_NIGHT))
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_FRIENDSHIP_MOVE_TYPE:

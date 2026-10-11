@@ -290,6 +290,9 @@
 
 #define EVO_FRIENDSHIP_MOVE_TYPE 21 // Friendship and a currently known move type
 
+#define EVO_LEVEL_ITEM_DAY   22 // Held item and daytime level up
+#define EVO_LEVEL_ITEM_NIGHT 23 // Held item and nighttime level up
+
 #define EVOS_PER_MON 8
 
 #define EVO_MODE_NORMAL     0

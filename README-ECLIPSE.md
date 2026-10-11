@@ -408,3 +408,20 @@ if it currently knows a Fairy move. This works in either day or night and takes
 priority over Espeon/Umbreon. Without a Fairy move, their day/night friendship
 rules still apply. Everstone and shadow restrictions also apply to Sylveon.
 All five stone alternatives remain available, completing all eight evolutions.
+
+## Held-item evolutions
+
+Shelter and country shops sell Oval Stone, Razor Claw and Razor Fang for 2,100
+each. Choose **Give** in the Bag to equip the item, then gain a level:
+
+- Happiny holding Oval Stone evolves into Chansey during the day.
+- Sneasel holding Razor Claw evolves into Weavile at night.
+- Gligar holding Razor Fang evolves into Gliscor at night.
+
+Day runs from 06:00 through 19:59; night runs from 20:00 through 05:59, using
+the same real-world local clock and World Gear overrides as other evolutions.
+The held item is consumed only when the evolution succeeds. Cancelling keeps
+the item, and wrong-time attempts leave it equipped. Shadow partners must be
+purified first. Razor Claw also boosts critical-hit ratio, while Razor Fang
+adds the native 10% flinch chance to eligible damaging moves. Their icons reuse
+existing stone/claw/fang art.

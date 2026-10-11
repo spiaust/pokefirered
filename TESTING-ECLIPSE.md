@@ -1008,4 +1008,37 @@ remain on the roadmap.
 
 ROM content is 17,299,532 bytes; both padded aliases are 32 MiB.
 EWRAM remains 261,196 / 262,144 bytes, and IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `eb22f4bde68bb047f012f0dad9bc929961c0ae3a87a5a0a9877b00d6e8cba71a`.
+Previous Sylveon release SHA-256: `eb22f4bde68bb047f012f0dad9bc929961c0ae3a87a5a0a9877b00d6e8cba71a`.
+
+### Held-item day/night evolutions
+
+The release builds Happiny/Oval Stone/day, Sneasel/Razor Claw/night and
+Gligar/Razor Fang/night paths. `test_eclipse_held_evolution.py` buys all three
+items from a native country shop with earned money, charges exactly 2,100 each
+and preserves the original six-member party. It gives Oval Stone through the
+native Bag/party flow, then uses native Rare Candy evolution. Eleven explicit
+species/held-item/RTC fixture cases cover the three positive paths, wrong-time
+rejection, wrong/missing item, shadow rejection and both World Gear overrides.
+Successful paths consume their held item; rejected paths retain it.
+
+The cancellation fixture waits for the native cancellable evolution state,
+presses B, and verifies Gligar keeps its Razor Fang while the used Rare Candy
+stays spent. A second level-up then evolves Gligar and consumes the preserved
+fang. Native Save/cold Continue preserves Gliscor, the consumed held-item state
+and extended seen/caught flags. `--cases=11`, logged separately, evolves
+Bulbasaur into Ivysaur while retaining an unrelated Razor Fang. Existing
+Sylveon/Espeon/Umbreon native regressions pass, as do campaign/country static
+checks and the 2026 title's New Game/Continue checks.
+
+Parser regressions accept exactly the required known held item and day/night
+conditions, and reject unavailable items, unsupported times, nonzero level
+requirements and added conditions. The generated audit has 221 supported and
+132 omitted imported evolution rules. Item definitions reuse the native Scope
+Lens and King's Rock battle effects for Razor Claw/Fang; this pass does not
+statistically sample critical-hit/flinch probabilities. Existing item IDs,
+save fields and global RAM allocations remain fixed. All runtime tests use
+isolated checkpoints/fixtures rather than personal saves.
+
+ROM content is 17,299,532 bytes; both padded aliases are 32 MiB.
+EWRAM remains 261,196 / 262,144 bytes, and IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `39546fd3fffbb1bccf4afa65cad66b44ef8b63f09edf71514a13b213b0fae398`.

@@ -158,3 +158,28 @@ priority +1 and the existing one-stage Attack-down status effect. It reuses
 Charm's animation, has its own description and fits the 12-character native
 move label limit. Existing move IDs and animations remain fixed. Only Eevee's
 learnset is expanded in this pass; other modern learnsets remain projected.
+
+### Held-item day/night evolutions
+
+The pinned RHH [Gen II family source](https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/pokemon/species_info/gen_2_families.h)
+requires nighttime and held Razor items for base Sneasel and Gligar. Its cached
+Happiny rule requires held Oval Stone and a non-night time. This pass implements
+the classic level-up paths. Hisuian Sneasel and conditional direct item-use
+alternatives remain outside the current base-species projection.
+
+Unused item slots 56–58 now hold Oval Stone, Razor Claw and Razor Fang, with old
+unused-slot aliases retained. Shops charge 2,100; Bag Give uses the native held
+item flow. Razor Claw reuses Scope Lens's critical effect; Razor Fang reuses
+King's Rock's 10% flinch effect. Existing Moon Stone, Quick Claw and Dragon Fang
+icons are reused. The new methods query Eclipse_IsNight, including World Gear
+overrides and a refreshed RTC. Neither method changes held items while checking
+eligibility. The normal evolution scene consumes the matching held item only
+when it commits the evolved species; cancellation leaves it intact. Ordinary
+level/stone/friendship evolutions retain unrelated held items.
+
+The conservative parser accepts exactly one known held item plus one supported
+day/night condition at level zero, rejecting missing items, extra conditions and
+unsupported times/level requirements. Happiny adds one generated rule: 221
+supported, 132 omitted across 639 imported rows. Sneasel/Gligar remain manual
+original-species branches. Generated files now use UTF-8/LF consistently on
+Windows. Item/species/save IDs and global RAM allocations remain fixed.

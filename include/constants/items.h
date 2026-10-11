@@ -61,8 +61,11 @@
 #define ITEM_036 54
 #define ITEM_ICE_STONE 55
 #define ITEM_037 55
+#define ITEM_OVAL_STONE 56
 #define ITEM_038 56
+#define ITEM_RAZOR_CLAW 57
 #define ITEM_039 57
+#define ITEM_RAZOR_FANG 58
 #define ITEM_03A 58
 #define ITEM_03B 59
 #define ITEM_03C 60
