@@ -148,6 +148,14 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     {.size = 8, .y_offset = 1},
     {.size = 8, .y_offset = 1},
     {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ECLIPSE_GRUNT] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ECLIPSE_VEIL] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ECLIPSE_BOREAL] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ECLIPSE_PATROL] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ECLIPSE_VEX] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ECLIPSE_RIME] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ECLIPSE_WARDEN] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ECLIPSE_DIRECTOR] = {.size = 8, .y_offset = 1},
 };
 
 const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
@@ -300,6 +308,14 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(RUIN_MANIAC, gTrainerFrontPic_RuinManiac, 0x800),
     TRAINER_SPRITE(LADY, gTrainerFrontPic_Lady, 0x800),
     TRAINER_SPRITE(PAINTER, gTrainerFrontPic_Painter, 0x800),
+    TRAINER_SPRITE(ECLIPSE_GRUNT, gTrainerFrontPic_EclipseGrunt, 0x800),
+    TRAINER_SPRITE(ECLIPSE_VEIL, gTrainerFrontPic_EclipseVeil, 0x800),
+    TRAINER_SPRITE(ECLIPSE_BOREAL, gTrainerFrontPic_EclipseBoreal, 0x800),
+    TRAINER_SPRITE(ECLIPSE_PATROL, gTrainerFrontPic_EclipsePatrol, 0x800),
+    TRAINER_SPRITE(ECLIPSE_VEX, gTrainerFrontPic_EclipseVex, 0x800),
+    TRAINER_SPRITE(ECLIPSE_RIME, gTrainerFrontPic_EclipseRime, 0x800),
+    TRAINER_SPRITE(ECLIPSE_WARDEN, gTrainerFrontPic_EclipseWarden, 0x800),
+    TRAINER_SPRITE(ECLIPSE_DIRECTOR, gTrainerFrontPic_EclipseDirector, 0x800),
 };
 
 const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
@@ -452,4 +468,12 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(RUIN_MANIAC, gTrainerPalette_RuinManiac),
     TRAINER_PAL(LADY, gTrainerPalette_Lady),
     TRAINER_PAL(PAINTER, gTrainerPalette_Painter),
+    TRAINER_PAL(ECLIPSE_GRUNT, gTrainerPalette_EclipseGrunt),
+    TRAINER_PAL(ECLIPSE_VEIL, gTrainerPalette_EclipseVeil),
+    TRAINER_PAL(ECLIPSE_BOREAL, gTrainerPalette_EclipseBoreal),
+    TRAINER_PAL(ECLIPSE_PATROL, gTrainerPalette_EclipsePatrol),
+    TRAINER_PAL(ECLIPSE_VEX, gTrainerPalette_EclipseVex),
+    TRAINER_PAL(ECLIPSE_RIME, gTrainerPalette_EclipseRime),
+    TRAINER_PAL(ECLIPSE_WARDEN, gTrainerPalette_EclipseWarden),
+    TRAINER_PAL(ECLIPSE_DIRECTOR, gTrainerPalette_EclipseDirector),
 };

@@ -888,4 +888,12 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_RUIN_MANIAC]           = sAnims_RuinManiac,
     [TRAINER_PIC_LADY]                  = sAnims_Lady,
     [TRAINER_PIC_PAINTER]               = sAnims_Painter,
+    [TRAINER_PIC_ECLIPSE_GRUNT] = sAnims_RocketGruntM,
+    [TRAINER_PIC_ECLIPSE_VEIL] = sAnims_RocketGruntM,
+    [TRAINER_PIC_ECLIPSE_BOREAL] = sAnims_RocketGruntM,
+    [TRAINER_PIC_ECLIPSE_PATROL] = sAnims_RocketGruntM,
+    [TRAINER_PIC_ECLIPSE_VEX] = sAnims_RocketGruntM,
+    [TRAINER_PIC_ECLIPSE_RIME] = sAnims_RocketGruntM,
+    [TRAINER_PIC_ECLIPSE_WARDEN] = sAnims_RocketGruntM,
+    [TRAINER_PIC_ECLIPSE_DIRECTOR] = sAnims_RocketGruntM,
 };

@@ -2328,3 +2328,99 @@ static const struct SpriteFrameImage sPicTable_Weezing[] = {
  overworld_frame(gObjectEventPic_Weezing, 2, 2, 2),
  overworld_frame(gObjectEventPic_Weezing, 2, 2, 2),
 };
+
+static const struct SpriteFrameImage sPicTable_EclipseGrunt[] = {
+    overworld_frame(gObjectEventPic_EclipseGrunt, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EclipseGrunt, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EclipseGrunt, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EclipseGrunt, 2, 4, 3),
+    overworld_frame(gObjectEventPic_EclipseGrunt, 2, 4, 4),
+    overworld_frame(gObjectEventPic_EclipseGrunt, 2, 4, 5),
+    overworld_frame(gObjectEventPic_EclipseGrunt, 2, 4, 6),
+    overworld_frame(gObjectEventPic_EclipseGrunt, 2, 4, 7),
+    overworld_frame(gObjectEventPic_EclipseGrunt, 2, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_EclipseVeil[] = {
+    overworld_frame(gObjectEventPic_EclipseVeil, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EclipseVeil, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EclipseVeil, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EclipseVeil, 2, 4, 3),
+    overworld_frame(gObjectEventPic_EclipseVeil, 2, 4, 4),
+    overworld_frame(gObjectEventPic_EclipseVeil, 2, 4, 5),
+    overworld_frame(gObjectEventPic_EclipseVeil, 2, 4, 6),
+    overworld_frame(gObjectEventPic_EclipseVeil, 2, 4, 7),
+    overworld_frame(gObjectEventPic_EclipseVeil, 2, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_EclipseBoreal[] = {
+    overworld_frame(gObjectEventPic_EclipseBoreal, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EclipseBoreal, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EclipseBoreal, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EclipseBoreal, 2, 4, 3),
+    overworld_frame(gObjectEventPic_EclipseBoreal, 2, 4, 4),
+    overworld_frame(gObjectEventPic_EclipseBoreal, 2, 4, 5),
+    overworld_frame(gObjectEventPic_EclipseBoreal, 2, 4, 6),
+    overworld_frame(gObjectEventPic_EclipseBoreal, 2, 4, 7),
+    overworld_frame(gObjectEventPic_EclipseBoreal, 2, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_EclipsePatrol[] = {
+    overworld_frame(gObjectEventPic_EclipsePatrol, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EclipsePatrol, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EclipsePatrol, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EclipsePatrol, 2, 4, 3),
+    overworld_frame(gObjectEventPic_EclipsePatrol, 2, 4, 4),
+    overworld_frame(gObjectEventPic_EclipsePatrol, 2, 4, 5),
+    overworld_frame(gObjectEventPic_EclipsePatrol, 2, 4, 6),
+    overworld_frame(gObjectEventPic_EclipsePatrol, 2, 4, 7),
+    overworld_frame(gObjectEventPic_EclipsePatrol, 2, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_EclipseVex[] = {
+    overworld_frame(gObjectEventPic_EclipseVex, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EclipseVex, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EclipseVex, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EclipseVex, 2, 4, 3),
+    overworld_frame(gObjectEventPic_EclipseVex, 2, 4, 4),
+    overworld_frame(gObjectEventPic_EclipseVex, 2, 4, 5),
+    overworld_frame(gObjectEventPic_EclipseVex, 2, 4, 6),
+    overworld_frame(gObjectEventPic_EclipseVex, 2, 4, 7),
+    overworld_frame(gObjectEventPic_EclipseVex, 2, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_EclipseRime[] = {
+    overworld_frame(gObjectEventPic_EclipseRime, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EclipseRime, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EclipseRime, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EclipseRime, 2, 4, 3),
+    overworld_frame(gObjectEventPic_EclipseRime, 2, 4, 4),
+    overworld_frame(gObjectEventPic_EclipseRime, 2, 4, 5),
+    overworld_frame(gObjectEventPic_EclipseRime, 2, 4, 6),
+    overworld_frame(gObjectEventPic_EclipseRime, 2, 4, 7),
+    overworld_frame(gObjectEventPic_EclipseRime, 2, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_EclipseWarden[] = {
+    overworld_frame(gObjectEventPic_EclipseWarden, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EclipseWarden, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EclipseWarden, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EclipseWarden, 2, 4, 3),
+    overworld_frame(gObjectEventPic_EclipseWarden, 2, 4, 4),
+    overworld_frame(gObjectEventPic_EclipseWarden, 2, 4, 5),
+    overworld_frame(gObjectEventPic_EclipseWarden, 2, 4, 6),
+    overworld_frame(gObjectEventPic_EclipseWarden, 2, 4, 7),
+    overworld_frame(gObjectEventPic_EclipseWarden, 2, 4, 8),
+};
+
+static const struct SpriteFrameImage sPicTable_EclipseDirector[] = {
+    overworld_frame(gObjectEventPic_EclipseDirector, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EclipseDirector, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EclipseDirector, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EclipseDirector, 2, 4, 3),
+    overworld_frame(gObjectEventPic_EclipseDirector, 2, 4, 4),
+    overworld_frame(gObjectEventPic_EclipseDirector, 2, 4, 5),
+    overworld_frame(gObjectEventPic_EclipseDirector, 2, 4, 6),
+    overworld_frame(gObjectEventPic_EclipseDirector, 2, 4, 7),
+    overworld_frame(gObjectEventPic_EclipseDirector, 2, 4, 8),
+};

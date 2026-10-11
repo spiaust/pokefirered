@@ -24,6 +24,21 @@ Every country district also offers native storage access in both eras. Catch
 partners in route grass and swap teams locally. Save normally
 through the Start menu. Town Map, SELECT opens chapter guidance; A shows records.
 
+## Villain uniforms and leaders
+
+Eclipse grunts and infiltrators wear matching charcoal uniforms with violet
+panels and a silver crescent emblem. Director Veil has silver hair and a long
+coat; Vex wears a technician jacket, Rime a cold-weather scout outfit, and
+Boreal a fur-lined expedition coat. The wartime patrol, research warden and
+laboratory director have separate muted period designs. All eight designs have
+custom battle portraits and nine-frame walking sheets, connected to 43 enemy
+battles and their map actors. Battle labels identify Eclipse and occupation
+opponents, and the original trainer prize factors are preserved.
+
+Preview: `graphics/eclipse_villains/preview.png`. Generated source sheets,
+final prompts and conversion details are retained beside the native assets;
+see `graphics/eclipse_villains/README.md`.
+
 ## Gym technique rewards
 
 Each badge leader also gives one themed TM. The native TM Case is supplied

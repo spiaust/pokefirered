@@ -551,14 +551,14 @@ other full starting routes and hardware checks remain unfinished.
 The story and requested systems are implemented in a playable native campaign.
 The geography uses compact districts, stylized landmarks and shared League
 shelters rather than full-scale city reconstructions. Wild actors use defined
-spawn points and do not roam. There are no following party sprites, new villain
-sprite sheets, dedicated gym interiors, snagging or new Shadow-type moves.
+spawn points and do not roam. There are no following party sprites, dedicated gym interiors, snagging or
+new Shadow-type moves. Custom villain sprites are now included.
 One Normal-mode campaign has reached the ending with earned partners and
 resources. Remaining earned circuit combat, other full starting routes,
 and broad hardware/emulator checks remain before calling this a polished release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `63c7b535953831bb62b905acbf1c7567192cf524ebe4d3c594434f5c9e90ad02`
+SHA-256: `8c8a1006f6c66d97b6ae1e265b058137be77c3a8da81ace4c41c0dc5e9861244`
 
 ## Earned six-rescue Mewtwo route
 

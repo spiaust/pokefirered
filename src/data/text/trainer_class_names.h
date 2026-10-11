@@ -107,4 +107,7 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_LADY]                = _("LADY"),
     [TRAINER_CLASS_PAINTER]             = _("PAINTER"),
     [TRAINER_CLASS_EUROPE_COUNCIL]      = _("COUNCIL"),
+    [TRAINER_CLASS_ECLIPSE] = _("ECLIPSE"),
+    [TRAINER_CLASS_OCCUPATION] = _("OCCUPATION"),
+    [TRAINER_CLASS_ECLIPSE_AGENT] = _("ECLIPSE"),
 };

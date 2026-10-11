@@ -327,3 +327,13 @@ const u16 gObjectEventPic_Vulpix[] = INCBIN_U16("graphics/object_events/pics/pok
 const u16 gObjectEventPic_Wartortle[] = INCBIN_U16("graphics/object_events/pics/pokemon/wartortle.4bpp");
 
 const u16 gObjectEventPic_Weezing[] = INCBIN_U16("graphics/object_events/pics/pokemon/weezing.4bpp");
+
+const u16 gObjectEventPal_EclipseVillains[] = INCBIN_U16("graphics/eclipse_villains/overworld/shared.gbapal");
+const u16 gObjectEventPic_EclipseGrunt[] = INCBIN_U16("graphics/eclipse_villains/overworld/grunt.4bpp");
+const u16 gObjectEventPic_EclipseVeil[] = INCBIN_U16("graphics/eclipse_villains/overworld/veil.4bpp");
+const u16 gObjectEventPic_EclipseBoreal[] = INCBIN_U16("graphics/eclipse_villains/overworld/boreal.4bpp");
+const u16 gObjectEventPic_EclipsePatrol[] = INCBIN_U16("graphics/eclipse_villains/overworld/patrol.4bpp");
+const u16 gObjectEventPic_EclipseVex[] = INCBIN_U16("graphics/eclipse_villains/overworld/vex.4bpp");
+const u16 gObjectEventPic_EclipseRime[] = INCBIN_U16("graphics/eclipse_villains/overworld/rime.4bpp");
+const u16 gObjectEventPic_EclipseWarden[] = INCBIN_U16("graphics/eclipse_villains/overworld/warden.4bpp");
+const u16 gObjectEventPic_EclipseDirector[] = INCBIN_U16("graphics/eclipse_villains/overworld/director.4bpp");

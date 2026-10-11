@@ -454,3 +454,27 @@ const u32 gTrainerPalette_RedBackPic[] = INCBIN_U32("graphics/trainers/palettes/
 const u32 gTrainerPalette_LeafBackPic[] = INCBIN_U32("graphics/trainers/palettes/leaf_back_pic.gbapal.lz");
 const u32 gTrainerPalette_PokedudeBackPic[] = INCBIN_U32("graphics/trainers/palettes/pokedude_back_pic.gbapal.lz");
 const u32 gTrainerPalette_OldManBackPic[] = INCBIN_U32("graphics/trainers/palettes/old_man_back_pic.gbapal.lz");
+
+const u32 gTrainerFrontPic_EclipseGrunt[] = INCBIN_U32("graphics/eclipse_villains/battle/grunt.4bpp.lz");
+const u32 gTrainerPalette_EclipseGrunt[] = INCBIN_U32("graphics/eclipse_villains/battle/grunt.gbapal.lz");
+
+const u32 gTrainerFrontPic_EclipseVeil[] = INCBIN_U32("graphics/eclipse_villains/battle/veil.4bpp.lz");
+const u32 gTrainerPalette_EclipseVeil[] = INCBIN_U32("graphics/eclipse_villains/battle/veil.gbapal.lz");
+
+const u32 gTrainerFrontPic_EclipseBoreal[] = INCBIN_U32("graphics/eclipse_villains/battle/boreal.4bpp.lz");
+const u32 gTrainerPalette_EclipseBoreal[] = INCBIN_U32("graphics/eclipse_villains/battle/boreal.gbapal.lz");
+
+const u32 gTrainerFrontPic_EclipsePatrol[] = INCBIN_U32("graphics/eclipse_villains/battle/patrol.4bpp.lz");
+const u32 gTrainerPalette_EclipsePatrol[] = INCBIN_U32("graphics/eclipse_villains/battle/patrol.gbapal.lz");
+
+const u32 gTrainerFrontPic_EclipseVex[] = INCBIN_U32("graphics/eclipse_villains/battle/vex.4bpp.lz");
+const u32 gTrainerPalette_EclipseVex[] = INCBIN_U32("graphics/eclipse_villains/battle/vex.gbapal.lz");
+
+const u32 gTrainerFrontPic_EclipseRime[] = INCBIN_U32("graphics/eclipse_villains/battle/rime.4bpp.lz");
+const u32 gTrainerPalette_EclipseRime[] = INCBIN_U32("graphics/eclipse_villains/battle/rime.gbapal.lz");
+
+const u32 gTrainerFrontPic_EclipseWarden[] = INCBIN_U32("graphics/eclipse_villains/battle/warden.4bpp.lz");
+const u32 gTrainerPalette_EclipseWarden[] = INCBIN_U32("graphics/eclipse_villains/battle/warden.gbapal.lz");
+
+const u32 gTrainerFrontPic_EclipseDirector[] = INCBIN_U32("graphics/eclipse_villains/battle/director.4bpp.lz");
+const u32 gTrainerPalette_EclipseDirector[] = INCBIN_U32("graphics/eclipse_villains/battle/director.gbapal.lz");

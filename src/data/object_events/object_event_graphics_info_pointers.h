@@ -200,6 +200,14 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysN;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
 
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EclipseGrunt;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EclipseVeil;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EclipseBoreal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EclipsePatrol;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EclipseVex;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EclipseRime;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EclipseWarden;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EclipseDirector;
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_RED_NORMAL]               = &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE]                 = &gObjectEventGraphicsInfo_RedBike,
@@ -401,4 +409,12 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
  [OBJ_EVENT_GFX_VULPIX] = &gObjectEventGraphicsInfo_Vulpix,
  [OBJ_EVENT_GFX_WARTORTLE] = &gObjectEventGraphicsInfo_Wartortle,
  [OBJ_EVENT_GFX_WEEZING] = &gObjectEventGraphicsInfo_Weezing,
+    [OBJ_EVENT_GFX_ECLIPSE_GRUNT] = &gObjectEventGraphicsInfo_EclipseGrunt,
+    [OBJ_EVENT_GFX_ECLIPSE_VEIL] = &gObjectEventGraphicsInfo_EclipseVeil,
+    [OBJ_EVENT_GFX_ECLIPSE_BOREAL] = &gObjectEventGraphicsInfo_EclipseBoreal,
+    [OBJ_EVENT_GFX_ECLIPSE_PATROL] = &gObjectEventGraphicsInfo_EclipsePatrol,
+    [OBJ_EVENT_GFX_ECLIPSE_VEX] = &gObjectEventGraphicsInfo_EclipseVex,
+    [OBJ_EVENT_GFX_ECLIPSE_RIME] = &gObjectEventGraphicsInfo_EclipseRime,
+    [OBJ_EVENT_GFX_ECLIPSE_WARDEN] = &gObjectEventGraphicsInfo_EclipseWarden,
+    [OBJ_EVENT_GFX_ECLIPSE_DIRECTOR] = &gObjectEventGraphicsInfo_EclipseDirector,
 };

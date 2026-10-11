@@ -167,6 +167,15 @@
 #define TRAINER_PIC_LADY                  146
 #define TRAINER_PIC_PAINTER               147
 
+#define TRAINER_PIC_ECLIPSE_GRUNT 148
+#define TRAINER_PIC_ECLIPSE_VEIL 149
+#define TRAINER_PIC_ECLIPSE_BOREAL 150
+#define TRAINER_PIC_ECLIPSE_PATROL 151
+#define TRAINER_PIC_ECLIPSE_VEX 152
+#define TRAINER_PIC_ECLIPSE_RIME 153
+#define TRAINER_PIC_ECLIPSE_WARDEN 154
+#define TRAINER_PIC_ECLIPSE_DIRECTOR 155
+
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_RED                    0
 #define TRAINER_BACK_PIC_LEAF                   1
@@ -288,6 +297,9 @@
 #define TRAINER_CLASS_LADY                105
 #define TRAINER_CLASS_PAINTER             106
 #define TRAINER_CLASS_EUROPE_COUNCIL      107
+#define TRAINER_CLASS_ECLIPSE             108
+#define TRAINER_CLASS_OCCUPATION          109
+#define TRAINER_CLASS_ECLIPSE_AGENT       110
 
 #define FACILITY_CLASS_AQUA_LEADER_ARCHIE     0
 #define FACILITY_CLASS_AQUA_GRUNT_M           1

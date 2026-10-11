@@ -4550,4 +4550,21 @@ extern const u16 gDexScreen_TopMenuIconPals_AtoZ[];
 extern const u32 gDexScreen_TopMenuIconTiles_AtoZ[];
 
 #include "../src/data/eclipse_roster/declarations.h"
+extern const u16 gObjectEventPal_EclipseVillains[];
+extern const u32 gTrainerFrontPic_EclipseGrunt[];
+extern const u32 gTrainerPalette_EclipseGrunt[];
+extern const u32 gTrainerFrontPic_EclipseVeil[];
+extern const u32 gTrainerPalette_EclipseVeil[];
+extern const u32 gTrainerFrontPic_EclipseBoreal[];
+extern const u32 gTrainerPalette_EclipseBoreal[];
+extern const u32 gTrainerFrontPic_EclipsePatrol[];
+extern const u32 gTrainerPalette_EclipsePatrol[];
+extern const u32 gTrainerFrontPic_EclipseVex[];
+extern const u32 gTrainerPalette_EclipseVex[];
+extern const u32 gTrainerFrontPic_EclipseRime[];
+extern const u32 gTrainerPalette_EclipseRime[];
+extern const u32 gTrainerFrontPic_EclipseWarden[];
+extern const u32 gTrainerPalette_EclipseWarden[];
+extern const u32 gTrainerFrontPic_EclipseDirector[];
+extern const u32 gTrainerPalette_EclipseDirector[];
 #endif //GUARD_GRAPHICS_H

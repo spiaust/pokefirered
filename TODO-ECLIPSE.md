@@ -2,6 +2,9 @@
 
 The ending keeps League shelters, country travel and repeatable training available.
 
+- [x] Custom Eclipse grunt uniforms, distinct Veil/Vex/Rime/Boreal designs,
+  and separate wartime patrol/warden/director art. Eight native battle portraits,
+  72 walking frames and 43 matching battle/map bindings.
 - [x] Regional rain/snow and real-world local RTC day/night, gradual dawn/dusk,
   World Gear overrides, indoor clear weather and historical tint.
 - [x] Pokédex level-up, TM and HM tabs with native compatibility and paging.

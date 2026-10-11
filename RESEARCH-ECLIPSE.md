@@ -1,7 +1,8 @@
 # Repository research and provenance
 
-Researched 2026-10-10. No outside code or artwork was copied in this campaign.
-Original campaign code and writing sit on the existing FireRed decompilation.
+Researched 2026-10-10 and updated 2026-10-11. Original campaign code and
+writing sit on the existing FireRed decompilation. Imported Pokemon artwork
+and metadata are attributed below.
 
 - https://github.com/pret/pokefirered — same engine as this base; preserve upstream credits.
 - https://github.com/Maruno17/pokemon-essentials — RPG Maker XP/Ruby engine;
@@ -54,3 +55,14 @@ https://github.com/pret/pokeemerald/blob/master/src/siirtc.c . The game reads th
 RTC without resetting it. Compatible emulators supply their host local time;
 DAY and NIGHT remain manual World Gear overrides. If an RTC is unavailable,
 automatic lighting holds at daylight until the player chooses an override.
+
+## Original villain artwork — 2026-10-11
+
+Eight new character sheets were created with the built-in `image_gen.imagegen`
+tool: Eclipse grunt, Veil, Vex, Rime, Boreal, historical patrol, research warden
+and laboratory director. Their charcoal/violet/crescent identity and separate
+period uniforms are original campaign designs. No other fan game's villain
+art was copied. `graphics/eclipse_villains/prompts.json` retains every final
+prompt; `source/` retains the generated sheets. `scripts/pack_eclipse_villains.py`
+performs only deterministic cropping, nearest-neighbor scaling, palette indexing
+and packing into native 64x64 battle and nine-frame 16x32 walking assets.

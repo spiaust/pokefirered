@@ -449,3 +449,7 @@ $(WALLPAPERGFXDIR)/tiles/tiles.4bpp: %.4bpp: %.png
 
 $(WALLPAPERGFXDIR)/volcano/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 57 -Wnum_tiles
+
+# Keep each custom NPC's nine 16x32 walking frames contiguous.
+graphics/eclipse_villains/overworld/%.4bpp: graphics/eclipse_villains/overworld/%.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4

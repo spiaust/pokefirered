@@ -1,0 +1,264 @@
+{
+  "trainers": {
+    "376": "vex",
+    "377": "rime",
+    "378": "boreal",
+    "148": "grunt",
+    "164": "veil",
+    "188": "grunt",
+    "196": "patrol",
+    "203": "warden",
+    "210": "director",
+    "217": "veil",
+    "261": "grunt",
+    "264": "grunt",
+    "267": "grunt",
+    "270": "grunt",
+    "273": "grunt",
+    "276": "grunt",
+    "279": "grunt",
+    "282": "grunt",
+    "288": "grunt",
+    "291": "grunt",
+    "300": "grunt",
+    "303": "grunt",
+    "306": "grunt",
+    "309": "grunt",
+    "315": "grunt",
+    "318": "grunt",
+    "324": "grunt",
+    "327": "grunt",
+    "330": "grunt",
+    "333": "grunt",
+    "336": "grunt",
+    "339": "grunt",
+    "342": "grunt",
+    "345": "grunt",
+    "348": "grunt",
+    "351": "grunt",
+    "354": "grunt",
+    "357": "grunt",
+    "360": "grunt",
+    "363": "grunt",
+    "366": "grunt",
+    "369": "grunt",
+    "372": "grunt"
+  },
+  "map_actors": [
+    [
+      "ContinentAmsterdamPast",
+      "ContinentAmsterdamPast_Battle0",
+      273
+    ],
+    [
+      "ContinentAthensPast",
+      "ContinentAthensPast_Battle0",
+      291
+    ],
+    [
+      "ContinentBelgradePast",
+      "ContinentBelgradePast_Battle0",
+      339
+    ],
+    [
+      "ContinentBerlinPast",
+      "ContinentBerlinPast_Battle0",
+      267
+    ],
+    [
+      "ContinentBratislavaPast",
+      "ContinentBratislavaPast_Battle0",
+      282
+    ],
+    [
+      "ContinentBrusselsPast",
+      "ContinentBrusselsPast_Battle0",
+      270
+    ],
+    [
+      "ContinentBucharestPast",
+      "ContinentBucharestPast_Battle0",
+      330
+    ],
+    [
+      "ContinentBudapestPast",
+      "ContinentBudapestPast_Battle0",
+      327
+    ],
+    [
+      "ContinentCopenhagen",
+      "EclipseNordic_Vex",
+      376
+    ],
+    [
+      "ContinentCopenhagenPast",
+      "ContinentCopenhagenPast_Battle0",
+      306
+    ],
+    [
+      "ContinentHelsinkiPast",
+      "ContinentHelsinkiPast_Battle0",
+      315
+    ],
+    [
+      "ContinentKotorPast",
+      "ContinentKotorPast_Battle0",
+      351
+    ],
+    [
+      "ContinentKyivPast",
+      "ContinentKyivPast_Battle0",
+      360
+    ],
+    [
+      "ContinentLjubljanaPast",
+      "ContinentLjubljanaPast_Battle0",
+      345
+    ],
+    [
+      "ContinentLondonPast",
+      "ContinentLondonPast_Battle0",
+      261
+    ],
+    [
+      "ContinentLuxembourgPast",
+      "ContinentLuxembourgPast_Battle0",
+      303
+    ],
+    [
+      "ContinentMinskPast",
+      "ContinentMinskPast_Battle0",
+      363
+    ],
+    [
+      "ContinentMoscowPast",
+      "ContinentMoscowPast_Battle0",
+      357
+    ],
+    [
+      "ContinentOslo",
+      "EclipseNordic_Rime",
+      377
+    ],
+    [
+      "ContinentOsloPast",
+      "ContinentOsloPast_Battle0",
+      309
+    ],
+    [
+      "ContinentParisPast",
+      "ContinentParisPast_Battle0",
+      264
+    ],
+    [
+      "ContinentPraguePast",
+      "ContinentPraguePast_Battle0",
+      279
+    ],
+    [
+      "ContinentReykjavikPast",
+      "ContinentReykjavikPast_Battle0",
+      318
+    ],
+    [
+      "ContinentRigaPast",
+      "ContinentRigaPast_Battle0",
+      369
+    ],
+    [
+      "ContinentRomePast",
+      "ContinentRomePast_Battle0",
+      288
+    ],
+    [
+      "ContinentSarajevoPast",
+      "ContinentSarajevoPast_Battle0",
+      348
+    ],
+    [
+      "ContinentSkopjePast",
+      "ContinentSkopjePast_Battle0",
+      354
+    ],
+    [
+      "ContinentSofiaPast",
+      "ContinentSofiaPast_Battle0",
+      333
+    ],
+    [
+      "ContinentStockholm",
+      "EclipseNordic_Boreal",
+      378
+    ],
+    [
+      "ContinentTallinnPast",
+      "ContinentTallinnPast_Battle0",
+      372
+    ],
+    [
+      "ContinentTiranaPast",
+      "ContinentTiranaPast_Battle0",
+      336
+    ],
+    [
+      "ContinentVallettaPast",
+      "ContinentVallettaPast_Battle0",
+      324
+    ],
+    [
+      "ContinentViennaPast",
+      "ContinentViennaPast_Battle0",
+      276
+    ],
+    [
+      "ContinentVilniusPast",
+      "ContinentVilniusPast_Battle0",
+      366
+    ],
+    [
+      "ContinentWarsawPast",
+      "ContinentWarsawPast_Battle0",
+      300
+    ],
+    [
+      "ContinentZagrebPast",
+      "ContinentZagrebPast_Battle0",
+      342
+    ],
+    [
+      "ShadowGeneva",
+      "ShadowGeneva_Mission",
+      217
+    ],
+    [
+      "ShadowLisbon",
+      "ShadowLisbon_Mission",
+      188
+    ],
+    [
+      "ShadowParis1940",
+      "ShadowParis1940_Mission",
+      196
+    ],
+    [
+      "ShadowPrague",
+      "ShadowPrague_Mission",
+      148
+    ],
+    [
+      "ShadowWarsaw1943",
+      "ShadowWarsaw1943_Mission",
+      203
+    ],
+    [
+      "ShadowZurich",
+      "ShadowZurich_Mission",
+      164
+    ],
+    [
+      "ShadowBerlin1944",
+      "ShadowBerlin1944_Mission",
+      210
+    ]
+  ]
+}

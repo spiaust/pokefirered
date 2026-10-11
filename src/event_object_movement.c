@@ -10,6 +10,7 @@
 #include "field_effect_helpers.h"
 #include "field_player_avatar.h"
 #include "fieldmap.h"
+#include "field_weather.h"
 #include "metatile_behavior.h"
 #include "overworld.h"
 #include "quest_log.h"
@@ -209,7 +210,8 @@ const u8 gReflectionEffectPaletteMap[16] = {
     [PALSLOT_NPC_3_REFLECTION]       = PALSLOT_NPC_3_REFLECTION,
     [PALSLOT_NPC_4_REFLECTION]       = PALSLOT_NPC_4_REFLECTION,
     [PALSLOT_NPC_SPECIAL]            = PALSLOT_NPC_SPECIAL_REFLECTION,
-    [PALSLOT_NPC_SPECIAL_REFLECTION] = PALSLOT_NPC_SPECIAL_REFLECTION
+    [PALSLOT_NPC_SPECIAL_REFLECTION] = PALSLOT_NPC_SPECIAL_REFLECTION,
+    [12] = 12, [13] = 13, [14] = 14, [15] = 15
 };
 
 static const struct SpriteTemplate gCameraSpriteTemplate = {
@@ -471,6 +473,7 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_RS_GROUDON                  0x1119
 #define OBJ_EVENT_PAL_TAG_RS_GROUDON_REFLECTION       0x111A
 #define OBJ_EVENT_PAL_TAG_RS_SUBMARINE_SHADOW         0x111B
+#define OBJ_EVENT_PAL_TAG_ECLIPSE_VILLAINS 0x1186
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -509,6 +512,25 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
 
     {},
 };
+
+static u8 GetObjectSpritePaletteSlot(const struct ObjectEventGraphicsInfo *info)
+{
+    u8 slot;
+    static const struct SpritePalette palette = {gObjectEventPal_EclipseVillains, OBJ_EVENT_PAL_TAG_ECLIPSE_VILLAINS};
+    if (info->paletteTag != OBJ_EVENT_PAL_TAG_ECLIPSE_VILLAINS)
+        return info->paletteSlot;
+    slot = IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_ECLIPSE_VILLAINS);
+    if (slot == 0xFF)
+    {
+        slot = LoadSpritePalette(&palette);
+        if (slot != 0xFF)
+        {
+            ApplyGlobalFieldPaletteTint(slot);
+            UpdateSpritePaletteWithWeather(slot);
+        }
+    }
+    return slot == 0xFF ? info->paletteSlot : slot;
+}
 
 static const u16 sPlayerReflectionPaletteTags[] = {
     OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION,
@@ -1593,7 +1615,7 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
     sprite->centerToCornerVecY = -(graphicsInfo->height >> 1);
     sprite->x += 8;
     sprite->y += 16 + sprite->centerToCornerVecY;
-    sprite->oam.paletteNum = graphicsInfo->paletteSlot;
+    sprite->oam.paletteNum = GetObjectSpritePaletteSlot(graphicsInfo);
     sprite->coordOffsetEnabled = TRUE;
     sprite->data[0] = objectEventId;
     objectEvent->spriteId = spriteId;
@@ -1747,7 +1769,7 @@ u8 CreateVirtualObject(u8 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevatio
         sprite->centerToCornerVecX = -(graphicsInfo->width >> 1);
         sprite->centerToCornerVecY = -(graphicsInfo->height >> 1);
         sprite->y += sprite->centerToCornerVecY;
-        sprite->oam.paletteNum = graphicsInfo->paletteSlot;
+        sprite->oam.paletteNum = GetObjectSpritePaletteSlot(graphicsInfo);
         sprite->coordOffsetEnabled = TRUE;
         sprite->sVirtualObjId = virtualObjId;
         sprite->sVirtualObjElev = elevation;
@@ -1784,7 +1806,7 @@ u8 CreateFameCheckerObject(u8 graphicsId, u8 localId, s16 x, s16 y)
         sprite = &gSprites[spriteId];
         sprite->centerToCornerVecY = -(graphicsInfo->height >> 1);
         sprite->y += sprite->centerToCornerVecY;
-        sprite->oam.paletteNum = graphicsInfo->paletteSlot;
+        sprite->oam.paletteNum = GetObjectSpritePaletteSlot(graphicsInfo);
         sprite->data[0] = localId;
         if (graphicsInfo->paletteSlot == PALSLOT_NPC_SPECIAL)
             LoadSpecialObjectReflectionPalette(graphicsInfo->paletteTag, graphicsInfo->paletteSlot);
@@ -1931,7 +1953,7 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
         if (subspriteTables != NULL)
             SetSubspriteTables(sprite, subspriteTables);
 
-        sprite->oam.paletteNum = graphicsInfo->paletteSlot;
+        sprite->oam.paletteNum = GetObjectSpritePaletteSlot(graphicsInfo);
         sprite->coordOffsetEnabled = TRUE;
         sprite->data[0] = objectEventId;
         objectEvent->spriteId = spriteId;
@@ -1989,7 +2011,7 @@ void ObjectEventSetGraphicsId(struct ObjectEvent *objectEvent, u8 graphicsId)
     sprite->images = graphicsInfo->images;
     sprite->anims = graphicsInfo->anims;
     sprite->subspriteTables = graphicsInfo->subspriteTables;
-    sprite->oam.paletteNum = graphicsInfo->paletteSlot;
+    sprite->oam.paletteNum = GetObjectSpritePaletteSlot(graphicsInfo);
     if (!sprite->usingSheet)
     {
         s32 var2;
