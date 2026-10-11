@@ -543,7 +543,7 @@ purified Raichu evolution checks remain in `test_eclipse_supplies.py`.
 
 Build log: `build-eclipse-timer-balls.log`. EWRAM remains 261,084/262,144 bytes,
 and IWRAM 29,824/32,768 bytes. The release alias matches the rebuilt ROM.
-Natural Mewtwo capture still needs six earned purifications. Postgame combat,
+Natural Mewtwo capture and its six earned purifications are now verified. Postgame combat,
 other full starting routes and hardware checks remain unfinished.
 
 ## Release-quality limits
@@ -559,3 +559,22 @@ and broad hardware/emulator checks remain before calling this a polished release
 
 Release: `Pokemon-Europe-Eclipse.gba`
 SHA-256: `c13f9e82fd4954ccf385843574ef0261aac5848dc7e154997e5fc574e31613f3`
+
+## Earned six-rescue Mewtwo route
+
+`python3 scripts/test_eclipse_natural_mewtwo_unlock.py` cold-loads the earned
+champion Timer Ball preparation. Native PC deposits free party slots for the
+Zurich Eevee, wartime Paris Mareep and Berlin Dratini. Care raises the saved
+purification count from three to six; all rescue bits and the six-member party
+persist after cold Continue. No memory writes or battle fixtures are used.
+
+`python3 scripts/test_eclipse_natural_legendaries.py --post --timer --resume --guardian=MEWTWO`
+uses that checkpoint and native encounter gates, damage, PP and catch odds.
+Mewtwo was caught with 39 Ultra Balls and 45 Timer Balls, 22 native healing
+uses and three move selections. Raichu established paralysis; purified
+Houndoom absorbed Psychic until its other attacks exhausted resources, and
+Lapras finished the encounter. The exact boxed record and remaining Ball
+quantities survived cold Continue. This expensive attempt warrants further
+strategy/balance work; it does not establish a comfortable average catch cost.
+The seven guardian saves are separate earned checkpoint branches, not one
+continuous inventory route containing every legendary.

@@ -21,6 +21,9 @@ def main():
   post='--post' in sys.argv;timer='--timer' in sys.argv
   preparation='natural-prepared-timer-legendaries' if timer else 'natural-prepared-post-legendaries' if post else 'natural-prepared-legendaries'
   guardian=next((x.split('=')[1].upper() for x in sys.argv if x.startswith('--guardian=')),None)
+  if guardian=='MEWTWO':
+   assert '--resume' in sys.argv, 'Mewtwo requires the earned six-rescue checkpoint'
+   preparation='natural-mewtwo-unlocked'
   assert not guardian or post and guardian in {r['species'] for r in D[3:]}
   expected_stage=21 if post else 16
   after=next((x.split('=')[1] for x in sys.argv if x.startswith('--after=')),None)
@@ -42,7 +45,7 @@ def main():
     battle_start(e,(34,13));assert e.read(e.symbols['gBattleMons']+88,2)==species
     assert e.read(e.symbols['gEnemyParty']+84,1)==row['level']
     before_balls=sum(count_pocket(e,item,0x430,13) for item in (2,10))
-    result,balls,heals,attacks=capture(e,fallback_species={'LUGIA':131,'HO_OH':229}.get(row['species'],31),strong_move=row['species'] in ('LUGIA','HO_OH'))
+    result,balls,heals,attacks=capture(e,fallback_species={'LUGIA':131,'HO_OH':229,'MEWTWO':229}.get(row['species'],31),strong_move=row['species'] in ('LUGIA','HO_OH'))
     assert sum(count_pocket(e,item,0x430,13) for item in (2,10))==before_balls-balls
     if result==7:break
     assert not flag(e,int(row['flag'],16)) and boxed(e).count(species)==before

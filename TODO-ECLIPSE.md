@@ -18,7 +18,8 @@ The ending keeps League shelters, country travel and repeatable training availab
   the wartime chapters, Veil, all four council members and the champion ending,
   with six partners and three purifications. Natural captures now
   cover Articuno, Zapdos, Moltres before the League, plus Suicune, Lugia and
-  Ho-Oh after it, including cold-saved PC delivery. Timer Balls are available
-  in League shops for long battles. Continue with six-purification Mewtwo,
+  Ho-Oh and Mewtwo after it, including cold-saved PC delivery. All six rescues
+  were purified using native PC deposits, care and country travel. Timer Balls
+  are available in League shops for long battles. Continue with Mewtwo balancing,
   postgame combat, other starting routes and difficulty balancing.
   Past-map and player palettes survive cold Continue and the modern return.

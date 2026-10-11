@@ -7,12 +7,12 @@ from test_oxford_gym import count_pocket
 import json
 
 def main():
- for row in D[:6]:
+ for row in D:
   name='natural-caught-'+row['species'].lower();e=Emulator(ROOT/'pokefirered.gba')
   try:
    load_checkpoint(e,name,True);species=SPECIES[row['species']]
    records=boxed_records(e,species);assert len(records)==1
-   # All six covered legendaries use the native Slow experience curve.
+   # All seven legendaries use the native Slow experience curve.
    assert records[0][2][0][1]==row['level']**3*5//4
    assert (records[0][2][3][0]>>27)&15 in (2,10),'unexpected catch Ball in boxed data'
    assert flag(e,int(row['flag'],16)) and e.read('gPlayerPartyCount',1)==6
