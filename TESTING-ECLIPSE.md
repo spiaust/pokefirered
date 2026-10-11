@@ -9,7 +9,7 @@ The original project's tracked source and player saves were preserved.
   Eclipse, WWII resistance missions, League council and champion ending.
 - 42 campaign shelter/route maps, 78 country era maps and Krakow sanctuary: 39 independently
   authored compact districts, landmarks, a country passport and station menu.
-- 279 new trainer teams, repeatable practice, six shadow rescues, saved care,
+- 292 new trainer teams, repeatable practice, six shadow rescues, saved care,
   purification, evolution lock, damage modifiers and purple battle palettes.
 - Bidirectional era travel, sepia historical colors, 39 saved local decisions,
   two present-day outcomes, an all-country epilogue and one-time reward.
@@ -209,6 +209,42 @@ The updated scrolling shop also sells Escape Rope; its native purchase at 550,
 cancellation and the existing stone/purification/evolution flow pass using earned
 money. Both restoration branches have been replayed on the final built ROM.
 
+The champion circuit passes native acceptance, decline, ordered-opponent and
+pre-League gates. All thirteen new teams are checked in Easy, Normal and Hard:
+levels change by -4/0/+5 while every species, held item and four-move set remains
+correct. These opponents are not marked shadow. Thirteen Normal victories use
+explicit HP/damage fixtures to verify real native callbacks, not natural combat
+balance. Unclaimed badge TMs are delivered before the rematch prompt. Partial
+progress survives cold Continue, and the main ending stays complete.
+
+All nine starter choices produce the correct fully evolved rival ace in each
+of the three difficulty modes, with its intended four moves and Lum Berry.
+The World Gear UI changes difficulty during the saved circuit without changing
+its card. A separate regression checks all nine original opening counter-starters:
+they remain level-six unevolved partners with one basic attack.
+
+A full Master Ball stack leaves the first circuit reward pending. Normal delivery
+adds one, saves the completion flag, survives cold Continue and cannot repeat.
+A free champion rematch leaves completion intact; starting another lap works,
+and a completed-lap progress fixture confirms that it gives no second reward.
+An explicit one-partner/low-HP/harmless-move fixture causes a real native defeat.
+Blackout preserves the pending match; clinic exit, campaign re-entry and a retry
+victory work through ordinary controls. Navigation tests now read each map's
+actual compiled tileset attributes rather than guessing the shared clinic tileset.
+
+The steward and archivist restore their templates in older completed saves.
+Cold Continue of a pre-circuit save can reach the steward without leaving the
+shelter. The archivist replays all three credits pages and returns safely to the
+field; the existing all-country epilogue still gives only one Master Ball.
+The circuit uses unused VAR_0x40BF and reward flag 0x8DD, adding no persistent
+RAM allocations. Existing shelter approaches and native dialogue widths pass.
+An original-Champion regression resets only its completed trainer flag and stage
+in the test fixture, wins the native first Champion match, and verifies that it
+advances the main ending, launches all three credits pages and returns to the
+shelter without starting the circuit. Final-ROM checks include the full circuit,
+all rival choices, loss/retry, settings, classic opening rivals, the original
+Champion ending and preserved credits/network rewards.
+
 ## Reproduce
 
 Run the build, then the Python scripts in WSL with the base mGBA test bridge:
@@ -238,6 +274,14 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
     `scripts/test_eclipse_krakow_capacity.py` (use cold completed checkpoints;
     timeline, progress, materials and capacity fixtures are documented)
 
+16. `scripts/test_eclipse_circuit.py` and
+    `scripts/test_eclipse_circuit_rival.py` (native teams and ordered callbacks)
+17. `scripts/test_eclipse_circuit_loss.py` and
+    `scripts/test_eclipse_circuit_settings.py` (native blackout retry, World Gear
+    and opening-rival regression; requires the circuit partial checkpoint)
+18. `scripts/test_eclipse_credits.py` and `scripts/test_eclipse_first_ending.py`
+    (archivist replay, original Champion ending and network reward)
+
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
 the ROM changes. Preview capture: `scripts/preview_eclipse.py`.
@@ -253,4 +297,4 @@ A full natural-level balancing playthrough and broad hardware/emulator testing
 remain outstanding before calling this a polished final release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `32a3078109f0db2a88be4a6ba6b0286462ede84815914a536df214623ad6dace`
+SHA-256: `b763ab7e52a7e3bc775c812349de82089799b7f31f718e20383bc31a71a9ec82`

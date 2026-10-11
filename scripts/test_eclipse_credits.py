@@ -1,4 +1,4 @@
-"""Cold-load champion save, replay three credits pages and verify one-time network reward."""
+"""Cold-load champion save, replay three credits pages via the archivist and verify one-time network reward."""
 from emulator import Emulator,ROOT
 from test_celebi import load_checkpoint
 from test_shadow_runtime import go,talk
@@ -13,7 +13,10 @@ def main():
  try:
   load_checkpoint(e,'eclipse-finished',True);assert e.var(0x408C)==21
   talk(e,(10,7));talk(e,(15,20))
-  go(e,(6,4));e.press('UP');e.press('A',180)
+  talk(e,(9,6),'NO')
+  go(e,(9,6));e.press('UP');e.press('A',180)
+  from test_country import wait_menu
+  wait_menu(e,'Task_YesNoMenu_HandleInput');e.press('A',180)
   for _ in range(50):
    if e.task_active('Task_EuropeMap'):break
    e.press('A',90)

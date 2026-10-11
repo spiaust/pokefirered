@@ -79,5 +79,816 @@
       "archive": "VOLTORB"
     },
     "partner_level": 30
+  },
+  "champion_circuit": {
+    "progress_var": "0x40bf",
+    "reward_flag": "0x8dd",
+    "reward": "MASTER_BALL",
+    "trainers": [
+      {
+        "id": 379,
+        "map": "ShadowLondon",
+        "name": "ELLIS",
+        "level": 64,
+        "party": [
+          {
+            "species": "GOLEM",
+            "item": "LEFTOVERS",
+            "moves": [
+              "EARTHQUAKE",
+              "ROCK_SLIDE",
+              "DOUBLE_EDGE",
+              "EXPLOSION"
+            ]
+          },
+          {
+            "species": "OMASTAR",
+            "item": "MYSTIC_WATER",
+            "moves": [
+              "SURF",
+              "ICE_BEAM",
+              "RAIN_DANCE",
+              "PROTECT"
+            ]
+          },
+          {
+            "species": "KABUTOPS",
+            "item": "SCOPE_LENS",
+            "moves": [
+              "ROCK_SLIDE",
+              "SURF",
+              "SWORDS_DANCE",
+              "BRICK_BREAK"
+            ]
+          },
+          {
+            "species": "AERODACTYL",
+            "item": "LUM_BERRY",
+            "moves": [
+              "ROCK_SLIDE",
+              "AERIAL_ACE",
+              "EARTHQUAKE",
+              "DOUBLE_EDGE"
+            ]
+          },
+          {
+            "species": "TYRANITAR",
+            "item": "LUM_BERRY",
+            "moves": [
+              "ROCK_SLIDE",
+              "CRUNCH",
+              "EARTHQUAKE",
+              "BRICK_BREAK"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 380,
+        "map": "ShadowParis",
+        "name": "MARINE",
+        "level": 65,
+        "party": [
+          {
+            "species": "POLIWRATH",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SURF",
+              "BRICK_BREAK",
+              "HYPNOSIS",
+              "ICE_BEAM"
+            ]
+          },
+          {
+            "species": "LAPRAS",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SURF",
+              "ICE_BEAM",
+              "THUNDERBOLT",
+              "CONFUSE_RAY"
+            ]
+          },
+          {
+            "species": "STARMIE",
+            "item": "MYSTIC_WATER",
+            "moves": [
+              "SURF",
+              "PSYCHIC",
+              "THUNDERBOLT",
+              "RECOVER"
+            ]
+          },
+          {
+            "species": "KINGDRA",
+            "item": "LUM_BERRY",
+            "moves": [
+              "SURF",
+              "ICE_BEAM",
+              "DRAGON_BREATH",
+              "RAIN_DANCE"
+            ]
+          },
+          {
+            "species": "MILOTIC",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SURF",
+              "ICE_BEAM",
+              "RECOVER",
+              "TOXIC"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 381,
+        "map": "ShadowBrussels",
+        "name": "SABINE",
+        "level": 66,
+        "party": [
+          {
+            "species": "JUMPLUFF",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SLEEP_POWDER",
+              "LEECH_SEED",
+              "GIGA_DRAIN",
+              "AERIAL_ACE"
+            ]
+          },
+          {
+            "species": "BRELOOM",
+            "item": "LUM_BERRY",
+            "moves": [
+              "SPORE",
+              "SKY_UPPERCUT",
+              "MACH_PUNCH",
+              "GIGA_DRAIN"
+            ]
+          },
+          {
+            "species": "EXEGGUTOR",
+            "item": "MIRACLE_SEED",
+            "moves": [
+              "PSYCHIC",
+              "GIGA_DRAIN",
+              "SLEEP_POWDER",
+              "SUNNY_DAY"
+            ]
+          },
+          {
+            "species": "LUDICOLO",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SURF",
+              "GIGA_DRAIN",
+              "ICE_BEAM",
+              "RAIN_DANCE"
+            ]
+          },
+          {
+            "species": "VENUSAUR",
+            "item": "LUM_BERRY",
+            "moves": [
+              "GIGA_DRAIN",
+              "SLUDGE_BOMB",
+              "SLEEP_POWDER",
+              "SYNTHESIS"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 382,
+        "map": "ShadowAmsterdam",
+        "name": "MAARTEN",
+        "level": 67,
+        "party": [
+          {
+            "species": "RAICHU",
+            "item": "MAGNET",
+            "moves": [
+              "THUNDERBOLT",
+              "BRICK_BREAK",
+              "THUNDER_WAVE",
+              "QUICK_ATTACK"
+            ]
+          },
+          {
+            "species": "ELECTRODE",
+            "item": "MAGNET",
+            "moves": [
+              "THUNDERBOLT",
+              "LIGHT_SCREEN",
+              "THUNDER_WAVE",
+              "EXPLOSION"
+            ]
+          },
+          {
+            "species": "AMPHAROS",
+            "item": "LEFTOVERS",
+            "moves": [
+              "THUNDERBOLT",
+              "FIRE_PUNCH",
+              "THUNDER_WAVE",
+              "LIGHT_SCREEN"
+            ]
+          },
+          {
+            "species": "LANTURN",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SURF",
+              "THUNDERBOLT",
+              "ICE_BEAM",
+              "CONFUSE_RAY"
+            ]
+          },
+          {
+            "species": "MAGNETON",
+            "item": "MAGNET",
+            "moves": [
+              "THUNDERBOLT",
+              "THUNDER_WAVE",
+              "METAL_SOUND",
+              "TRI_ATTACK"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 383,
+        "map": "ShadowBerlin",
+        "name": "GRETA",
+        "level": 68,
+        "party": [
+          {
+            "species": "PRIMEAPE",
+            "item": "SCOPE_LENS",
+            "moves": [
+              "CROSS_CHOP",
+              "ROCK_SLIDE",
+              "EARTHQUAKE",
+              "AERIAL_ACE"
+            ]
+          },
+          {
+            "species": "HITMONLEE",
+            "item": "LUM_BERRY",
+            "moves": [
+              "BRICK_BREAK",
+              "ROCK_SLIDE",
+              "EARTHQUAKE",
+              "MACH_PUNCH"
+            ]
+          },
+          {
+            "species": "HERACROSS",
+            "item": "LUM_BERRY",
+            "moves": [
+              "MEGAHORN",
+              "BRICK_BREAK",
+              "ROCK_SLIDE",
+              "SWORDS_DANCE"
+            ]
+          },
+          {
+            "species": "BLAZIKEN",
+            "item": "CHARCOAL",
+            "moves": [
+              "FLAMETHROWER",
+              "SKY_UPPERCUT",
+              "ROCK_SLIDE",
+              "SWORDS_DANCE"
+            ]
+          },
+          {
+            "species": "MACHAMP",
+            "item": "LEFTOVERS",
+            "moves": [
+              "CROSS_CHOP",
+              "ROCK_SLIDE",
+              "EARTHQUAKE",
+              "BULK_UP"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 384,
+        "map": "ShadowVienna",
+        "name": "IRENA",
+        "level": 69,
+        "party": [
+          {
+            "species": "ESPEON",
+            "item": "TWISTED_SPOON",
+            "moves": [
+              "PSYCHIC",
+              "SHADOW_BALL",
+              "CALM_MIND",
+              "MORNING_SUN"
+            ]
+          },
+          {
+            "species": "SLOWBRO",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SURF",
+              "PSYCHIC",
+              "ICE_BEAM",
+              "CALM_MIND"
+            ]
+          },
+          {
+            "species": "EXEGGUTOR",
+            "item": "MIRACLE_SEED",
+            "moves": [
+              "PSYCHIC",
+              "GIGA_DRAIN",
+              "SLEEP_POWDER",
+              "SUNNY_DAY"
+            ]
+          },
+          {
+            "species": "GARDEVOIR",
+            "item": "LUM_BERRY",
+            "moves": [
+              "PSYCHIC",
+              "THUNDERBOLT",
+              "CALM_MIND",
+              "HYPNOSIS"
+            ]
+          },
+          {
+            "species": "ALAKAZAM",
+            "item": "TWISTED_SPOON",
+            "moves": [
+              "PSYCHIC",
+              "FIRE_PUNCH",
+              "ICE_PUNCH",
+              "RECOVER"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 385,
+        "map": "ShadowRome",
+        "name": "FLAVIA",
+        "level": 70,
+        "party": [
+          {
+            "species": "ARCANINE",
+            "item": "CHARCOAL",
+            "moves": [
+              "FLAMETHROWER",
+              "EXTREME_SPEED",
+              "IRON_TAIL",
+              "ROAR"
+            ]
+          },
+          {
+            "species": "NINETALES",
+            "item": "LEFTOVERS",
+            "moves": [
+              "FLAMETHROWER",
+              "WILL_O_WISP",
+              "CONFUSE_RAY",
+              "SUNNY_DAY"
+            ]
+          },
+          {
+            "species": "RAPIDASH",
+            "item": "SCOPE_LENS",
+            "moves": [
+              "FLAMETHROWER",
+              "MEGAHORN",
+              "DOUBLE_EDGE",
+              "HYPNOSIS"
+            ]
+          },
+          {
+            "species": "HOUNDOOM",
+            "item": "CHARCOAL",
+            "moves": [
+              "FLAMETHROWER",
+              "CRUNCH",
+              "WILL_O_WISP",
+              "SUNNY_DAY"
+            ]
+          },
+          {
+            "species": "CHARIZARD",
+            "item": "LUM_BERRY",
+            "moves": [
+              "FLAMETHROWER",
+              "AERIAL_ACE",
+              "EARTHQUAKE",
+              "DRAGON_CLAW"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 386,
+        "map": "ShadowMadrid",
+        "name": "INES",
+        "level": 71,
+        "party": [
+          {
+            "species": "DUGTRIO",
+            "item": "SOFT_SAND",
+            "moves": [
+              "EARTHQUAKE",
+              "ROCK_SLIDE",
+              "AERIAL_ACE",
+              "SLUDGE_BOMB"
+            ]
+          },
+          {
+            "species": "QUAGSIRE",
+            "item": "LEFTOVERS",
+            "moves": [
+              "EARTHQUAKE",
+              "SURF",
+              "ICE_BEAM",
+              "YAWN"
+            ]
+          },
+          {
+            "species": "CLAYDOL",
+            "item": "LEFTOVERS",
+            "moves": [
+              "EARTHQUAKE",
+              "PSYCHIC",
+              "ICE_BEAM",
+              "REFLECT"
+            ]
+          },
+          {
+            "species": "FLYGON",
+            "item": "LUM_BERRY",
+            "moves": [
+              "EARTHQUAKE",
+              "DRAGON_CLAW",
+              "ROCK_SLIDE",
+              "FLAMETHROWER"
+            ]
+          },
+          {
+            "species": "NIDOQUEEN",
+            "item": "LEFTOVERS",
+            "moves": [
+              "EARTHQUAKE",
+              "SLUDGE_BOMB",
+              "ICE_BEAM",
+              "THUNDERBOLT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 387,
+        "map": "ShadowAthens",
+        "name": "THALIA",
+        "level": 74,
+        "party": [
+          {
+            "species": "DEWGONG",
+            "item": "NEVER_MELT_ICE",
+            "moves": [
+              "SURF",
+              "ICE_BEAM",
+              "REST",
+              "SLEEP_TALK"
+            ]
+          },
+          {
+            "species": "JYNX",
+            "item": "LUM_BERRY",
+            "moves": [
+              "ICE_BEAM",
+              "PSYCHIC",
+              "LOVELY_KISS",
+              "CALM_MIND"
+            ]
+          },
+          {
+            "species": "LAPRAS",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SURF",
+              "ICE_BEAM",
+              "THUNDERBOLT",
+              "CONFUSE_RAY"
+            ]
+          },
+          {
+            "species": "CLOYSTER",
+            "item": "NEVER_MELT_ICE",
+            "moves": [
+              "ICE_BEAM",
+              "SURF",
+              "SPIKES",
+              "EXPLOSION"
+            ]
+          },
+          {
+            "species": "PILOSWINE",
+            "item": "SOFT_SAND",
+            "moves": [
+              "EARTHQUAKE",
+              "ROCK_SLIDE",
+              "ICE_BEAM",
+              "REST"
+            ]
+          },
+          {
+            "species": "WALREIN",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SURF",
+              "ICE_BEAM",
+              "REST",
+              "SLEEP_TALK"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 388,
+        "map": "ShadowAthens2",
+        "name": "NIKOS",
+        "level": 75,
+        "party": [
+          {
+            "species": "HITMONTOP",
+            "item": "LEFTOVERS",
+            "moves": [
+              "BRICK_BREAK",
+              "ROCK_SLIDE",
+              "MACH_PUNCH",
+              "BULK_UP"
+            ]
+          },
+          {
+            "species": "POLIWRATH",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SURF",
+              "BRICK_BREAK",
+              "HYPNOSIS",
+              "ICE_BEAM"
+            ]
+          },
+          {
+            "species": "HITMONLEE",
+            "item": "LUM_BERRY",
+            "moves": [
+              "BRICK_BREAK",
+              "ROCK_SLIDE",
+              "EARTHQUAKE",
+              "MACH_PUNCH"
+            ]
+          },
+          {
+            "species": "HERACROSS",
+            "item": "LUM_BERRY",
+            "moves": [
+              "MEGAHORN",
+              "BRICK_BREAK",
+              "ROCK_SLIDE",
+              "SWORDS_DANCE"
+            ]
+          },
+          {
+            "species": "BLAZIKEN",
+            "item": "CHARCOAL",
+            "moves": [
+              "FLAMETHROWER",
+              "SKY_UPPERCUT",
+              "ROCK_SLIDE",
+              "SWORDS_DANCE"
+            ]
+          },
+          {
+            "species": "MACHAMP",
+            "item": "LEFTOVERS",
+            "moves": [
+              "CROSS_CHOP",
+              "ROCK_SLIDE",
+              "EARTHQUAKE",
+              "BULK_UP"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 389,
+        "map": "ShadowAthens3",
+        "name": "ELENI",
+        "level": 76,
+        "party": [
+          {
+            "species": "MISDREAVUS",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SHADOW_BALL",
+              "THUNDERBOLT",
+              "PSYCHIC",
+              "CONFUSE_RAY"
+            ]
+          },
+          {
+            "species": "SABLEYE",
+            "item": "LEFTOVERS",
+            "moves": [
+              "SHADOW_BALL",
+              "BRICK_BREAK",
+              "FAKE_OUT",
+              "RECOVER"
+            ]
+          },
+          {
+            "species": "ABSOL",
+            "item": "SCOPE_LENS",
+            "moves": [
+              "SHADOW_BALL",
+              "AERIAL_ACE",
+              "ROCK_SLIDE",
+              "SWORDS_DANCE"
+            ]
+          },
+          {
+            "species": "GENGAR",
+            "item": "LUM_BERRY",
+            "moves": [
+              "THUNDERBOLT",
+              "ICE_PUNCH",
+              "PSYCHIC",
+              "HYPNOSIS"
+            ]
+          },
+          {
+            "species": "HOUNDOOM",
+            "item": "CHARCOAL",
+            "moves": [
+              "FLAMETHROWER",
+              "CRUNCH",
+              "WILL_O_WISP",
+              "SUNNY_DAY"
+            ]
+          },
+          {
+            "species": "UMBREON",
+            "item": "LEFTOVERS",
+            "moves": [
+              "FAINT_ATTACK",
+              "TOXIC",
+              "CONFUSE_RAY",
+              "MOONLIGHT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 390,
+        "map": "ShadowAthens4",
+        "name": "LEON",
+        "level": 77,
+        "party": [
+          {
+            "species": "GYARADOS",
+            "item": "LUM_BERRY",
+            "moves": [
+              "EARTHQUAKE",
+              "RETURN",
+              "DRAGON_DANCE",
+              "SURF"
+            ]
+          },
+          {
+            "species": "AERODACTYL",
+            "item": "LUM_BERRY",
+            "moves": [
+              "ROCK_SLIDE",
+              "AERIAL_ACE",
+              "EARTHQUAKE",
+              "DOUBLE_EDGE"
+            ]
+          },
+          {
+            "species": "KINGDRA",
+            "item": "LUM_BERRY",
+            "moves": [
+              "SURF",
+              "ICE_BEAM",
+              "DRAGON_BREATH",
+              "RAIN_DANCE"
+            ]
+          },
+          {
+            "species": "FLYGON",
+            "item": "LUM_BERRY",
+            "moves": [
+              "EARTHQUAKE",
+              "DRAGON_CLAW",
+              "ROCK_SLIDE",
+              "FLAMETHROWER"
+            ]
+          },
+          {
+            "species": "SALAMENCE",
+            "item": "LUM_BERRY",
+            "moves": [
+              "DRAGON_CLAW",
+              "AERIAL_ACE",
+              "EARTHQUAKE",
+              "FLAMETHROWER"
+            ]
+          },
+          {
+            "species": "DRAGONITE",
+            "item": "LUM_BERRY",
+            "moves": [
+              "DRAGON_CLAW",
+              "AERIAL_ACE",
+              "EARTHQUAKE",
+              "THUNDERBOLT"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 391,
+        "map": "ShadowChampion",
+        "name": "RIVAL",
+        "level": 80,
+        "party": [
+          {
+            "species": "PIDGEOT",
+            "item": "SCOPE_LENS",
+            "moves": [
+              "AERIAL_ACE",
+              "RETURN",
+              "STEEL_WING",
+              "QUICK_ATTACK"
+            ]
+          },
+          {
+            "species": "ALAKAZAM",
+            "item": "TWISTED_SPOON",
+            "moves": [
+              "PSYCHIC",
+              "FIRE_PUNCH",
+              "ICE_PUNCH",
+              "RECOVER"
+            ]
+          },
+          {
+            "species": "GYARADOS",
+            "item": "LUM_BERRY",
+            "moves": [
+              "EARTHQUAKE",
+              "RETURN",
+              "DRAGON_DANCE",
+              "SURF"
+            ]
+          },
+          {
+            "species": "SNORLAX",
+            "item": "LEFTOVERS",
+            "moves": [
+              "BODY_SLAM",
+              "SHADOW_BALL",
+              "EARTHQUAKE",
+              "REST"
+            ]
+          },
+          {
+            "species": "METAGROSS",
+            "item": "LUM_BERRY",
+            "moves": [
+              "METEOR_MASH",
+              "EARTHQUAKE",
+              "SHADOW_BALL",
+              "AGILITY"
+            ]
+          },
+          {
+            "species": "VENUSAUR",
+            "item": "LUM_BERRY",
+            "moves": [
+              "GIGA_DRAIN",
+              "SLUDGE_BOMB",
+              "SLEEP_POWDER",
+              "SYNTHESIS"
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

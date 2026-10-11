@@ -30,7 +30,7 @@ for ref in re.findall(r'(?:goto(?:_if_\w+[^\n]*,)?|msgbox)\s+(Shadow\w+)',s):ass
 font=(R/'src/text.c').read_text();widths=list(map(int,re.findall(r'\b\d+\b',re.search(r'sFontNormalLatinGlyphWidths\[\]\s*=\s*\{(.*?)\};',font,re.S)[1])))
 chars={m[1]:int(m[2],16) for m in re.finditer(r"^'(.)'\s*=\s*([0-9A-F]{2})\s*$",(R/'charmap.txt').read_text(encoding='utf-8'),re.M)};chars["'"]=0xB4
 for t in re.findall(r'\.string "([^"\n]+)"',s):
-    t=t.replace('{RIVAL}','WWWWWWW').replace('{PLAYER}','WWWWWWW').replace('{STR_VAR_1}','39')
+    t=t.replace('{RIVAL}','WWWWWWW').replace('{PLAYER}','WWWWWWW').replace('{STR_VAR_1}','MAARTEN' if '{STR_VAR_2}' in t else '39').replace('{STR_VAR_2}','AMSTERDAM')
     for line in re.split(r'\\[npl]|\$',t):
         width=sum(widths[chars[c]] for c in line);assert width<=216,(width,line)
 print('PASS: 21 chapters, eight badges, 159 trainer IDs, 42 reachable maps and native dialogue widths')

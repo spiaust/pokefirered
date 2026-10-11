@@ -22,7 +22,7 @@ def target(tag,label):
 def flag(e):return bool(e.read(e.read('gSaveBlock1Ptr')+0xee0+0x8d5//8,1)&(1<<(0x8d5%8)))
 
 
-def win(e):
+def win(e,finish=True):
  action=first_symbol('HandleInputChooseAction');move=first_symbol('HandleInputChooseMove')
  for _ in range(1500):
   if not e.in_battle():break
@@ -33,7 +33,7 @@ def win(e):
    e.write(b+12,82,2);e.write(b+36,40,1);e.press('UP',2);e.press('LEFT',2)
   e.press('B' if e.read(e.read('gBattlescriptCurrInstr'),1)==0x5a else 'A',30)
  assert not e.in_battle() and e.read('gBattleOutcome',1)==1
- e.finish_dialogue();e.frames(240)
+ if finish:e.finish_dialogue();e.frames(240)
 
 
 def main():

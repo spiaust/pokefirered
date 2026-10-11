@@ -205,8 +205,9 @@ Completed saves retain the hunt, reward and open League/travel facilities.
 ## Postgame production roadmap
 
 The ending leaves League shelters and repeatable training available. The
-Scandinavian remnant hunt, legendary guardians and Krakow sanctuary restoration
-are now implemented. Remaining production includes a true champion rematch circuit. Detailed tasks are tracked in
+Scandinavian remnant hunt, legendary guardians, Krakow sanctuary restoration
+and champion rematch circuit are now implemented. Remaining production focuses
+on natural-level balance and broad emulator/hardware checks. Detailed tasks are tracked in
 [TODO-ECLIPSE.md](TODO-ECLIPSE.md).
 
 | Destination | City | Landmark |
@@ -267,3 +268,19 @@ One level-30 returning partner can be adopted, and Zofia awards one Lucky Egg.
 Bag/storage capacity problems leave those rewards available for later collection.
 This refuge adds a present-day district; Poland's historical operations remain
 in Warsaw. Its compact castle artwork adapts the existing Polish landmark tiles.
+
+## Champion circuit: strength after the victory
+
+League steward Stewart organizes a thirteen-match reunion after the ending.
+Ellis, Marine, Sabine, Maarten, Greta, Irena, Flavia and Ines field five trained
+partners at Normal levels 64 through 71. Thalia, Nikos, Eleni and Leon follow
+with six-partner council teams at levels 74 through 77. The rival closes the
+circuit with six level-80 partners and a fully evolved counter-starter ace.
+All teams have four chosen moves per partner, held items and stronger AI.
+
+These rematches celebrate honest training after Eclipse rather than restarting
+the shadow crisis. The player may heal and travel between matches; defeats do
+not erase earlier wins. Stewart records the next opponent, and the first complete
+card earns one Master Ball. Completed trainers offer individual rematches,
+while the steward can open another ordered lap without repeating the reward.
+The League archivist keeps the original ending and credits available for replay.

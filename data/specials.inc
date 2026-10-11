@@ -469,4 +469,5 @@ gSpecials::
 	def_special Shadow_ShowCredits
 	def_special Eclipse_KrakowPrepare
 	def_special Eclipse_PolandMemory
+	def_special Eclipse_CircuitStatus
 gSpecialsEnd::

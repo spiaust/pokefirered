@@ -1636,7 +1636,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
         gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
     }
 
-    if (trainerNum >= 100 && trainerNum <= 378 && VarGet(VAR_SHADOW_STARTED))
+    if (trainerNum >= 100 && trainerNum <= 391 && VarGet(VAR_SHADOW_STARTED))
     {
         u8 mode = VarGet(VAR_SHADOW_DIFFICULTY);
         for (i = 0; i < gTrainers[trainerNum].partySize; i++)
@@ -1656,7 +1656,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     if (trainerNum >= 100 && trainerNum <= 258 && VarGet(VAR_SHADOW_STARTED)
         && (gTrainers[trainerNum].trainerClass == TRAINER_CLASS_RIVAL_EARLY
             || gTrainers[trainerNum].trainerClass == TRAINER_CLASS_RIVAL_LATE || trainerNum == 252))
-        Shadow_RivalPartner(party, gTrainers[trainerNum].partySize, trainerNum == 100);
+        Shadow_RivalPartner(party, gTrainers[trainerNum].partySize, trainerNum == 100, FALSE);
+    if (trainerNum == 391 && VarGet(VAR_SHADOW_STARTED))
+        Shadow_RivalPartner(party, gTrainers[trainerNum].partySize, FALSE, TRUE);
     if (Shadow_IsEnemyTrainer(trainerNum))
     {
         u8 shadow = 1;

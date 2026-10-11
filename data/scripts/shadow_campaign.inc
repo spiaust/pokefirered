@@ -234,6 +234,10 @@ ShadowOxford_Keeper::
 ShadowLondon_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowLondon_Main
+ goto_if_unset FLAG_0x8C6, ShadowLondon_Done
+ goto EclipseCircuit_ELLIS
+ShadowLondon_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 1, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 1, ShadowLondon_Done
 	msgbox ShadowLondon_Before, MSGBOX_YESNO
@@ -250,6 +254,7 @@ ShadowLondon_Done::
  goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
  setflag FLAG_0x8C6
 ShadowLondon_RewardDone::
+ goto_if_ge VAR_SHADOW_STAGE, 21, EclipseCircuit_ELLIS
 	msgbox ShadowLondon_After
 	goto Shadow_End
 ShadowLondon_Before::
@@ -373,6 +378,10 @@ ShadowLondon_Keeper::
 ShadowParis_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowParis_Main
+ goto_if_unset FLAG_0x8C7, ShadowParis_Done
+ goto EclipseCircuit_MARINE
+ShadowParis_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 2, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 2, ShadowParis_Done
 	msgbox ShadowParis_Before, MSGBOX_YESNO
@@ -389,6 +398,7 @@ ShadowParis_Done::
  goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
  setflag FLAG_0x8C7
 ShadowParis_RewardDone::
+ goto_if_ge VAR_SHADOW_STAGE, 21, EclipseCircuit_MARINE
 	msgbox ShadowParis_After
 	goto Shadow_End
 ShadowParis_Before::
@@ -519,6 +529,10 @@ ShadowParis_Keeper::
 ShadowBrussels_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowBrussels_Main
+ goto_if_unset FLAG_0x8C8, ShadowBrussels_Done
+ goto EclipseCircuit_SABINE
+ShadowBrussels_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 3, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 3, ShadowBrussels_Done
 	msgbox ShadowBrussels_Before, MSGBOX_YESNO
@@ -535,6 +549,7 @@ ShadowBrussels_Done::
  goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
  setflag FLAG_0x8C8
 ShadowBrussels_RewardDone::
+ goto_if_ge VAR_SHADOW_STAGE, 21, EclipseCircuit_SABINE
 	msgbox ShadowBrussels_After
 	goto Shadow_End
 ShadowBrussels_Before::
@@ -658,6 +673,10 @@ ShadowBrussels_Keeper::
 ShadowAmsterdam_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowAmsterdam_Main
+ goto_if_unset FLAG_0x8C9, ShadowAmsterdam_Done
+ goto EclipseCircuit_MAARTEN
+ShadowAmsterdam_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 4, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 4, ShadowAmsterdam_Done
 	msgbox ShadowAmsterdam_Before, MSGBOX_YESNO
@@ -674,6 +693,7 @@ ShadowAmsterdam_Done::
  goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
  setflag FLAG_0x8C9
 ShadowAmsterdam_RewardDone::
+ goto_if_ge VAR_SHADOW_STAGE, 21, EclipseCircuit_MAARTEN
 	msgbox ShadowAmsterdam_After
 	goto Shadow_End
 ShadowAmsterdam_Before::
@@ -797,6 +817,10 @@ ShadowAmsterdam_Keeper::
 ShadowBerlin_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowBerlin_Main
+ goto_if_unset FLAG_0x8CA, ShadowBerlin_Done
+ goto EclipseCircuit_GRETA
+ShadowBerlin_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 5, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 5, ShadowBerlin_Done
 	msgbox ShadowBerlin_Before, MSGBOX_YESNO
@@ -813,6 +837,7 @@ ShadowBerlin_Done::
  goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
  setflag FLAG_0x8CA
 ShadowBerlin_RewardDone::
+ goto_if_ge VAR_SHADOW_STAGE, 21, EclipseCircuit_GRETA
 	msgbox ShadowBerlin_After
 	goto Shadow_End
 ShadowBerlin_Before::
@@ -1075,6 +1100,10 @@ ShadowPrague_Keeper::
 ShadowVienna_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowVienna_Main
+ goto_if_unset FLAG_0x8CB, ShadowVienna_Done
+ goto EclipseCircuit_IRENA
+ShadowVienna_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 7, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 7, ShadowVienna_Done
 	msgbox ShadowVienna_Before, MSGBOX_YESNO
@@ -1091,6 +1120,7 @@ ShadowVienna_Done::
  goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
  setflag FLAG_0x8CB
 ShadowVienna_RewardDone::
+ goto_if_ge VAR_SHADOW_STAGE, 21, EclipseCircuit_IRENA
 	msgbox ShadowVienna_After
 	goto Shadow_End
 ShadowVienna_Before::
@@ -1353,6 +1383,10 @@ ShadowZurich_Keeper::
 ShadowRome_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowRome_Main
+ goto_if_unset FLAG_0x8CC, ShadowRome_Done
+ goto EclipseCircuit_FLAVIA
+ShadowRome_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 9, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 9, ShadowRome_Done
 	msgbox ShadowRome_Before, MSGBOX_YESNO
@@ -1369,6 +1403,7 @@ ShadowRome_Done::
  goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
  setflag FLAG_0x8CC
 ShadowRome_RewardDone::
+ goto_if_ge VAR_SHADOW_STAGE, 21, EclipseCircuit_FLAVIA
 	msgbox ShadowRome_After
 	goto Shadow_End
 ShadowRome_Before::
@@ -1492,6 +1527,10 @@ ShadowRome_Keeper::
 ShadowMadrid_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowMadrid_Main
+ goto_if_unset FLAG_0x8CD, ShadowMadrid_Done
+ goto EclipseCircuit_INES
+ShadowMadrid_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 10, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 10, ShadowMadrid_Done
 	msgbox ShadowMadrid_Before, MSGBOX_YESNO
@@ -1508,6 +1547,7 @@ ShadowMadrid_Done::
  goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
  setflag FLAG_0x8CD
 ShadowMadrid_RewardDone::
+ goto_if_ge VAR_SHADOW_STAGE, 21, EclipseCircuit_INES
 	msgbox ShadowMadrid_After
 	goto Shadow_End
 ShadowMadrid_Before::
@@ -2302,6 +2342,9 @@ ShadowGeneva_Keeper::
 ShadowAthens_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowAthens_Main
+ goto EclipseCircuit_THALIA
+ShadowAthens_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 16, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 16, ShadowAthens_Done
 	msgbox ShadowAthens_Before, MSGBOX_YESNO
@@ -2424,6 +2467,9 @@ ShadowAthens_Keeper::
 ShadowAthens2_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowAthens2_Main
+ goto EclipseCircuit_NIKOS
+ShadowAthens2_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 17, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 17, ShadowAthens2_Done
 	msgbox ShadowAthens2_Before, MSGBOX_YESNO
@@ -2546,6 +2592,9 @@ ShadowAthens2_Keeper::
 ShadowAthens3_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowAthens3_Main
+ goto EclipseCircuit_ELENI
+ShadowAthens3_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 18, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 18, ShadowAthens3_Done
 	msgbox ShadowAthens3_Before, MSGBOX_YESNO
@@ -2668,6 +2717,9 @@ ShadowAthens3_Keeper::
 ShadowAthens4_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowAthens4_Main
+ goto EclipseCircuit_LEON
+ShadowAthens4_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 19, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 19, ShadowAthens4_Done
 	msgbox ShadowAthens4_Before, MSGBOX_YESNO
@@ -2790,6 +2842,9 @@ ShadowAthens4_Keeper::
 ShadowChampion_Mission::
 	lock
 	faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, ShadowChampion_Main
+ goto EclipseCircuit_RIVAL
+ShadowChampion_Main::
 	goto_if_lt VAR_SHADOW_STAGE, 20, Shadow_Locked
 	goto_if_gt VAR_SHADOW_STAGE, 20, ShadowChampion_Done
 	msgbox ShadowChampion_Before, MSGBOX_YESNO
@@ -6941,3 +6996,350 @@ EclipseKrakow_RewardFull::
  goto Shadow_End
 EclipseKrakow_RewardFullText::
  .string "There is no room for LUCKY EGG.\nMake room, then return to ZOFIA.\pThe restored refuge and your\nreward will wait safely.$"
+
+EclipseCircuit_Steward::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseCircuit_Locked
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_Start
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Reward
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_Restart
+ goto EclipseCircuit_Guidance
+EclipseCircuit_Start::
+ msgbox EclipseCircuit_StartText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ setvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Guidance
+EclipseCircuit_Restart::
+ msgbox EclipseCircuit_RestartText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ setvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Guidance
+EclipseCircuit_Guidance::
+ special Eclipse_CircuitStatus
+ msgbox EclipseCircuit_GuidanceText
+ goto Shadow_End
+EclipseCircuit_Reward::
+ goto_if_set FLAG_0x8DD, EclipseCircuit_RewardDone
+ msgbox EclipseCircuit_RewardText
+ giveitem ITEM_MASTER_BALL, 1
+ goto_if_eq VAR_0x8007, FALSE, EclipseCircuit_RewardFull
+ setflag FLAG_0x8DD
+EclipseCircuit_RewardDone::
+ setvar VAR_ECLIPSE_CIRCUIT, 15
+ msgbox EclipseCircuit_CompleteText
+ goto Shadow_End
+EclipseCircuit_RewardFull::
+ msgbox EclipseCircuit_RewardFullText
+ goto Shadow_End
+EclipseCircuit_Locked::
+ msgbox EclipseCircuit_LockedText
+ goto Shadow_End
+EclipseCircuit_NotStarted::
+ msgbox EclipseCircuit_NotStartedText
+ goto Shadow_End
+EclipseCircuit_Report::
+ msgbox EclipseCircuit_ReportText
+ goto Shadow_End
+EclipseCircuit_Won::
+ msgbox EclipseCircuit_WonText
+ goto Shadow_End
+EclipseCircuit_PracticeWon::
+ msgbox EclipseCircuit_PracticeText
+ goto Shadow_End
+EclipseCircuit_StartText::
+ .string "STEWART: Champion, our leaders\nand council have trained anew.\pWin eight leader rematches,\nfour council matches, then\pyour rival in this chamber.\nStart the champion circuit?$"
+EclipseCircuit_RestartText::
+ .string "Your first circuit is complete.\nYou may rematch anyone freely.\pThe first reward is yours once.\nBegin another ordered lap?$"
+EclipseCircuit_GuidanceText::
+ .string "Your next opponent is\n{STR_VAR_1} in {STR_VAR_2}.\pVisit the League shelter and\nspeak to its mission opponent.\pYou may heal, travel, save and\nadjust World Gear between bouts.\pLosses leave this match pending.\nYour earlier wins remain saved.$"
+EclipseCircuit_RewardText::
+ .string "STEWART: Thirteen rematches won!\nTake one MASTER BALL for your\pfirst completed circuit. Seek\npartners with care and respect.$"
+EclipseCircuit_RewardFullText::
+ .string "There is no room for MASTER BALL.\nMake room, then return here.\pYour circuit and first reward\nwill remain saved.$"
+EclipseCircuit_CompleteText::
+ .string "STEWART: The circuit is complete.\nIndividual rematches are open.\pCome back for another ordered\nlap whenever you are ready.$"
+EclipseCircuit_LockedText::
+ .string "Finish your first League journey\nbefore beginning the circuit.$"
+EclipseCircuit_NotStartedText::
+ .string "Our rematch teams are ready.\nSpeak to STEWART near the PC\pin the champion's shelter to\nstart your circuit.$"
+EclipseCircuit_ReportText::
+ .string "All thirteen matches are won.\nReport to STEWART near the PC\pin the champion's shelter.$"
+EclipseCircuit_WonText::
+ .string "Your circuit card records a win.\nHeal and prepare for the next\popponent. STEWART can remind\nyou where to travel.$"
+EclipseCircuit_PracticeText::
+ .string "A good rematch! Come back when\nyour partners are ready again.$"
+EclipseCircuit_DefeatText::
+ .string "Your training has paid off.$"
+
+EclipseCircuit_ELLIS::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_ELLIS_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 1, EclipseCircuit_Guidance
+EclipseCircuit_ELLIS_Ready::
+ msgbox EclipseCircuit_ELLIS_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 379
+ trainerbattle_single 379, EclipseCircuit_ELLIS_Intro, EclipseCircuit_DefeatText, EclipseCircuit_ELLIS_Victory
+ goto Shadow_End
+EclipseCircuit_ELLIS_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 1, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_ELLIS_Intro::
+ .string "ELLIS: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_MARINE::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_MARINE_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 2, EclipseCircuit_Guidance
+EclipseCircuit_MARINE_Ready::
+ msgbox EclipseCircuit_MARINE_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 380
+ trainerbattle_single 380, EclipseCircuit_MARINE_Intro, EclipseCircuit_DefeatText, EclipseCircuit_MARINE_Victory
+ goto Shadow_End
+EclipseCircuit_MARINE_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 2, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_MARINE_Intro::
+ .string "MARINE: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_SABINE::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_SABINE_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 3, EclipseCircuit_Guidance
+EclipseCircuit_SABINE_Ready::
+ msgbox EclipseCircuit_SABINE_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 381
+ trainerbattle_single 381, EclipseCircuit_SABINE_Intro, EclipseCircuit_DefeatText, EclipseCircuit_SABINE_Victory
+ goto Shadow_End
+EclipseCircuit_SABINE_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 3, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_SABINE_Intro::
+ .string "SABINE: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_MAARTEN::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_MAARTEN_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 4, EclipseCircuit_Guidance
+EclipseCircuit_MAARTEN_Ready::
+ msgbox EclipseCircuit_MAARTEN_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 382
+ trainerbattle_single 382, EclipseCircuit_MAARTEN_Intro, EclipseCircuit_DefeatText, EclipseCircuit_MAARTEN_Victory
+ goto Shadow_End
+EclipseCircuit_MAARTEN_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 4, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_MAARTEN_Intro::
+ .string "MAARTEN: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_GRETA::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_GRETA_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 5, EclipseCircuit_Guidance
+EclipseCircuit_GRETA_Ready::
+ msgbox EclipseCircuit_GRETA_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 383
+ trainerbattle_single 383, EclipseCircuit_GRETA_Intro, EclipseCircuit_DefeatText, EclipseCircuit_GRETA_Victory
+ goto Shadow_End
+EclipseCircuit_GRETA_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 5, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_GRETA_Intro::
+ .string "GRETA: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_IRENA::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_IRENA_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 6, EclipseCircuit_Guidance
+EclipseCircuit_IRENA_Ready::
+ msgbox EclipseCircuit_IRENA_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 384
+ trainerbattle_single 384, EclipseCircuit_IRENA_Intro, EclipseCircuit_DefeatText, EclipseCircuit_IRENA_Victory
+ goto Shadow_End
+EclipseCircuit_IRENA_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 6, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_IRENA_Intro::
+ .string "IRENA: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_FLAVIA::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_FLAVIA_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 7, EclipseCircuit_Guidance
+EclipseCircuit_FLAVIA_Ready::
+ msgbox EclipseCircuit_FLAVIA_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 385
+ trainerbattle_single 385, EclipseCircuit_FLAVIA_Intro, EclipseCircuit_DefeatText, EclipseCircuit_FLAVIA_Victory
+ goto Shadow_End
+EclipseCircuit_FLAVIA_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 7, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_FLAVIA_Intro::
+ .string "FLAVIA: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_INES::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_INES_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 8, EclipseCircuit_Guidance
+EclipseCircuit_INES_Ready::
+ msgbox EclipseCircuit_INES_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 386
+ trainerbattle_single 386, EclipseCircuit_INES_Intro, EclipseCircuit_DefeatText, EclipseCircuit_INES_Victory
+ goto Shadow_End
+EclipseCircuit_INES_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 8, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_INES_Intro::
+ .string "INES: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_THALIA::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_THALIA_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 9, EclipseCircuit_Guidance
+EclipseCircuit_THALIA_Ready::
+ msgbox EclipseCircuit_THALIA_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 387
+ trainerbattle_single 387, EclipseCircuit_THALIA_Intro, EclipseCircuit_DefeatText, EclipseCircuit_THALIA_Victory
+ goto Shadow_End
+EclipseCircuit_THALIA_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 9, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_THALIA_Intro::
+ .string "THALIA: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_NIKOS::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_NIKOS_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 10, EclipseCircuit_Guidance
+EclipseCircuit_NIKOS_Ready::
+ msgbox EclipseCircuit_NIKOS_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 388
+ trainerbattle_single 388, EclipseCircuit_NIKOS_Intro, EclipseCircuit_DefeatText, EclipseCircuit_NIKOS_Victory
+ goto Shadow_End
+EclipseCircuit_NIKOS_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 10, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_NIKOS_Intro::
+ .string "NIKOS: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_ELENI::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_ELENI_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 11, EclipseCircuit_Guidance
+EclipseCircuit_ELENI_Ready::
+ msgbox EclipseCircuit_ELENI_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 389
+ trainerbattle_single 389, EclipseCircuit_ELENI_Intro, EclipseCircuit_DefeatText, EclipseCircuit_ELENI_Victory
+ goto Shadow_End
+EclipseCircuit_ELENI_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 11, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_ELENI_Intro::
+ .string "ELENI: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_LEON::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_LEON_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 12, EclipseCircuit_Guidance
+EclipseCircuit_LEON_Ready::
+ msgbox EclipseCircuit_LEON_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 390
+ trainerbattle_single 390, EclipseCircuit_LEON_Intro, EclipseCircuit_DefeatText, EclipseCircuit_LEON_Victory
+ goto Shadow_End
+EclipseCircuit_LEON_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 12, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_LEON_Intro::
+ .string "LEON: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_RIVAL::
+ goto_if_questlog EventScript_ReleaseEnd
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_NotStarted
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Report
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_RIVAL_Ready
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 13, EclipseCircuit_Guidance
+EclipseCircuit_RIVAL_Ready::
+ msgbox EclipseCircuit_RIVAL_Intro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag 391
+ trainerbattle_single 391, EclipseCircuit_RIVAL_Intro, EclipseCircuit_DefeatText, EclipseCircuit_RIVAL_Victory
+ goto Shadow_End
+EclipseCircuit_RIVAL_Victory::
+ goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_PracticeWon
+ goto_if_ne VAR_ECLIPSE_CIRCUIT, 13, EclipseCircuit_PracticeWon
+ addvar VAR_ECLIPSE_CIRCUIT, 1
+ goto EclipseCircuit_Won
+EclipseCircuit_RIVAL_Intro::
+ .string "{RIVAL}: Our partners are stronger.\nAn honest rematch awaits.\pChallenge my circuit team?$"
+
+EclipseCircuit_Archivist::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseCircuit_Locked
+ msgbox EclipseCircuit_ArchivistText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ goto ShadowChampion_Done
+EclipseCircuit_ArchivistText::
+ .string "Our archive records your journey.\nReplay its ending and credits?$"

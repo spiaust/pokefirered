@@ -439,6 +439,13 @@ static void LoadSaveblockObjEventScripts(void)
     const struct ObjectEventTemplate * src = gMapHeader.events->objectEvents;
     struct ObjectEventTemplate * savObjTemplates = gSaveBlock1Ptr->objectEventTemplates;
 
+    // Completed Eclipse saves predate the circuit steward and credits archivist.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SHADOW_CHAMPION)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SHADOW_CHAMPION)
+        && gMapHeader.events->objectEventCount >= 14)
+        for (i = 12; i < 14; i++)
+            savObjTemplates[i] = src[i];
+
     // Restore stationary courtyard residents and the v0.76 companion in old saves.
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_BERLIN)
         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_BERLIN)

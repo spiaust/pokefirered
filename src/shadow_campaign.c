@@ -11,6 +11,7 @@
 #include "europe_map.h"
 #include "constants/maps.h"
 #include "constants/flags.h"
+#include "constants/items.h"
 #include "constants/vars.h"
 #include "constants/pokemon.h"
 #include "constants/species.h"
@@ -261,10 +262,10 @@ void Shadow_NetworkStatus(void)
     ConvertIntToDecimalStringN(gStringVar1, count, STR_CONV_MODE_LEFT_ALIGN, 2);
 }
 
-void Shadow_RivalPartner(struct Pokemon *party, u8 count, bool8 opening)
+void Shadow_RivalPartner(struct Pokemon *party, u8 count, bool8 opening, bool8 circuit)
 {
     u16 starter = VarGet(VAR_EUROPE_STARTER_SPECIES), species, target;
-    u8 slot = count > 3 ? 3 : count - 1;
+    u8 slot = circuit ? count - 1 : count > 3 ? 3 : count - 1;
     u8 level = GetMonData(&party[slot], MON_DATA_LEVEL, NULL);
     u8 iv = VarGet(VAR_SHADOW_DIFFICULTY) == 2 ? 26 : VarGet(VAR_SHADOW_DIFFICULTY) == 1 ? 5 : 16;
     u8 i;
@@ -301,6 +302,20 @@ void Shadow_RivalPartner(struct Pokemon *party, u8 count, bool8 opening)
         CalculateMonStats(&party[slot]);
         GiveMonInitialMoveset(&party[slot]);
     }
+    if (circuit)
+    {
+        static const u16 fire[] = {MOVE_FLAMETHROWER, MOVE_EARTHQUAKE, MOVE_BRICK_BREAK, MOVE_SUNNY_DAY};
+        static const u16 water[] = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_EARTHQUAKE, MOVE_PROTECT};
+        static const u16 grass[] = {MOVE_GIGA_DRAIN, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_TOXIC};
+        static const u16 fallback[] = {MOVE_RETURN, MOVE_SHADOW_BALL, MOVE_QUICK_ATTACK, MOVE_PROTECT};
+        const u16 *moves = fallback;
+        u16 item = ITEM_LUM_BERRY;
+        if (species == SPECIES_CHARMANDER || species == SPECIES_CYNDAQUIL || species == SPECIES_TORCHIC) moves = fire;
+        if (species == SPECIES_SQUIRTLE || species == SPECIES_TOTODILE || species == SPECIES_MUDKIP) moves = water;
+        if (species == SPECIES_BULBASAUR || species == SPECIES_CHIKORITA || species == SPECIES_TREECKO) moves = grass;
+        SetMonData(&party[slot], MON_DATA_HELD_ITEM, &item);
+        for (i = 0; i < MAX_MON_MOVES; i++) SetMonMoveSlot(&party[slot], moves[i], i);
+    }
 }
 
 void Shadow_ShowCredits(void)
@@ -327,4 +342,16 @@ void Eclipse_KrakowPrepare(void)
                 MapGridSetMetatileIdAt(x + 7, y + 7, !FlagGet(flags[task]) ? 0x300D : task == 2 && gSpecialVar_Result == 1 ? 0x3004 : 0x3165);
     if (FlagGet(FLAG_0x8D6) && FlagGet(FLAG_0x8D7) && FlagGet(FLAG_0x8D8))
         FlagClear(gSpecialVar_Result == 1 ? FLAG_0x8DA : FLAG_0x8DB);
+}
+
+void Eclipse_CircuitStatus(void)
+{
+    static const u8 names[][9] = {_("ELLIS"), _("MARINE"), _("SABINE"), _("MAARTEN"), _("GRETA"), _("IRENA"), _("FLAVIA"), _("INES"), _("THALIA"), _("NIKOS"), _("ELENI"), _("LEON"), _("RIVAL")};
+    static const u8 cities[][10] = {_("LONDON"), _("PARIS"), _("BRUSSELS"), _("AMSTERDAM"), _("BERLIN"), _("VIENNA"), _("ROME"), _("MADRID"), _("ATHENS"), _("ATHENS"), _("ATHENS"), _("ATHENS"), _("ATHENS")};
+    u16 stage = VarGet(VAR_ECLIPSE_CIRCUIT);
+    if (stage >= 1 && stage <= 13)
+    {
+        StringCopy(gStringVar1, names[stage - 1]);
+        StringCopy(gStringVar2, cities[stage - 1]);
+    }
 }

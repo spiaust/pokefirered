@@ -12,11 +12,13 @@ DATA=[('NotreDame','Paris','france',4,38,(28,35),0x40c0,1),('Westminster','Londo
 layouts={l.get('id'):l for l in json.loads((ROOT/'data/layouts/layouts.json').read_text())['layouts']}
 def go(e,target):
  group,index,x,y=e.location();groups=json.loads((ROOT/'data/maps/map_groups.json').read_text());name=groups['gMapGroup_Europe'][index];m=json.loads((ROOT/f'data/maps/{name}/map.json').read_text());l=layouts[m['layout']];w,h=l['width'],l['height'];t=struct.unpack('<%dH'%(w*h),(ROOT/l['blockdata_filepath']).read_bytes());blocked={(v['x'],v['y']) for v in m['object_events']+m['warp_events']+m['coord_events']}
- primary='building' if l['primary_tileset']=='gTileset_Building' else 'general';secondary=('generic_building_1' if l['secondary_tileset']=='gTileset_GenericBuilding1' else 'pokemon_tower') if primary=='building' else 'europe_'+name[6:].lower();attrs=(ROOT/f'data/tilesets/primary/{primary}/metatile_attributes.bin').read_bytes()+(ROOT/f'data/tilesets/secondary/{secondary}/metatile_attributes.bin').read_bytes()
+ # Read the map's actual native tilesets, including shared station/clinic layouts.
+ attrs=[e.read(e.symbols[l[k]]+0x14) for k in ('primary_tileset','secondary_tileset')]
  def valid(p):
   xx,yy=p
   if not(0<=xx<w and 0<=yy<h) or p in blocked:return False
-  v=t[yy*w+xx];return not v&0xc00 and v>>12!=1 and struct.unpack_from('<I',attrs,(v&1023)*4)[0]&511 not in (0x10,0x11,0x12,0x13,0x15,0x19,0x1a,0x1b)
+  v=t[yy*w+xx];tile=v&1023;behavior=e.read(attrs[0 if tile<640 else 1]+4*(tile if tile<640 else tile-640))&511
+  return not v&0xc00 and v>>12!=1 and behavior not in (0x10,0x11,0x12,0x13,0x15,0x19,0x1a,0x1b)
  q=deque([(x,y)]);prev={(x,y):None}
  for_p=[(-1,0,'LEFT'),(1,0,'RIGHT'),(0,-1,'UP'),(0,1,'DOWN')]
  while q and target not in prev:

@@ -149,7 +149,7 @@ Celebi remains the time-travel guide so catching a guardian cannot break travel.
 
 The postgame production roadmap is tracked in [TODO-ECLIPSE.md](TODO-ECLIPSE.md).
 It includes the Scandinavian Eclipse-remnant hunt, Krakow sanctuary restoration
-and a true champion rematch circuit. The hunt and Krakow restoration are implemented; the rematch circuit remains planned.
+and a true champion rematch circuit. The hunt, Krakow restoration and champion rematch circuit are implemented.
 
 ## Krakow sanctuary restoration
 
@@ -168,6 +168,45 @@ Nuzlocke enabled. A full party sends it to the PC; full storage leaves adoption
 pending. Return to Zofia for one Lucky Egg. A full bag leaves that reward pending.
 Healing, storage, the shop and return travel remain available after completion.
 The refuge's friendly partners stay visible independently of the wild toggle.
+
+## Champion rematch circuit
+
+After the League, speak to Stewart near the PC in the champion shelter. Follow
+his circuit card through eight leader rematches, the four council chambers and
+your rival. Visit the existing mission opponents in their League shelters;
+the ordinary country districts host their separate local trainers. Previous/next
+porters and station travel stay open. Stewart names your next opponent and city.
+Unclaimed badge TMs remain available before a leader's rematch.
+
+| Opponent | Shelter | Normal level | Partners |
+| --- | --- | --- | --- |
+| Ellis | London | 64 | 5 |
+| Marine | Paris | 65 | 5 |
+| Sabine | Brussels | 66 | 5 |
+| Maarten | Amsterdam | 67 | 5 |
+| Greta | Berlin | 68 | 5 |
+| Irena | Vienna | 69 | 5 |
+| Flavia | Rome | 70 | 5 |
+| Ines | Madrid | 71 | 5 |
+| Thalia | Athens council 1 | 74 | 6 |
+| Nikos | Athens council 2 | 75 | 6 |
+| Eleni | Athens council 3 | 76 | 6 |
+| Leon | Athens council 4 | 77 | 6 |
+| Rival | Athens champion | 80 | 6 |
+
+Every partner has four curated moves and a held item. Easy lowers levels by four;
+Hard raises them by five. World Gear can be adjusted between matches. The rival
+uses a fully evolved counter to any of the nine starters, with a matching ace
+moveset and Lum Berry. Circuit opponents use their own partners rather than
+shadow partners.
+
+Each win saves independently. Declining, losing or speaking to an opponent out
+of order leaves the pending match unchanged. You may heal, save and travel
+between bouts. After thirteen wins, return to Stewart for one Master Ball; a full
+Ball stack leaves it pending. Completion opens unrestricted individual rematches
+and another ordered lap. The first-completion reward cannot be earned twice.
+An archivist east of Stewart replays the ending and credits. Older completed
+Eclipse saves load the new staff; there is no need to restart the campaign.
 
 ## Build and verification
 
