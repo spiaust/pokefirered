@@ -22,6 +22,7 @@
 #include "quest_log_objects.h"
 #include "quest_log_player.h"
 #include "quest_log.h"
+#include "shadow_campaign.h"
 #include "new_menu_helpers.h"
 #include "strings.h"
 #include "constants/event_objects.h"
@@ -1115,6 +1116,9 @@ void QuestLog_InitPalettesBackup(void)
 void QuestLog_BackUpPalette(u16 offset, u16 size)
 {
     CpuCopy16(&gPlttBufferUnfaded[offset], &sPalettesBackup[offset], PLTT_SIZEOF(size));
+    // The final recap restores this backup, including the saved map's era tint.
+    if (Shadow_IsPast())
+        TintPalette_SepiaTone(&sPalettesBackup[offset], size);
 }
 
 static bool8 FieldCB2_FinalScene(void)

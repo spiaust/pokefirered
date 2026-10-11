@@ -193,8 +193,41 @@ after a fresh-emulator cold Continue. All preparation, battles, healing, TM
 teaching and saving use native controls with no stats, inventory, progress,
 experience, damage or AI writes. The natural battle runner now handles a late
 grass encounter interrupting a route trainer's menu, finishing the wild battle
-before retrying the conversation. Madrid onward and postgame natural-level
-balancing, plus broad hardware/emulator checks, remain outstanding.
+before retrying the conversation.
+
+Madrid's level-43 gym is won in 16 move selections with the saved Rome party.
+`scripts/test_eclipse_natural_madrid.py` checks all eight actual badge flags,
+the Earthquake TM and stage 11 before and after a fresh-emulator cold Continue.
+Lisbon initially defeats that party. `scripts/test_eclipse_natural_lisbon.py`
+teaches the earned Earthquake TM to Nidoqueen, replacing Poison Sting through
+the native TM Case. Thirteen ordinary Rome Fire-route practice victories raise
+Nidoqueen to level 45. An attack-only retry still loses: Weezing's Explosion
+knocks out the healthy lead, leaving undertrained partners against Magneton.
+The successful Normal, non-Nuzlocke retry buys five Hyper Potions and one
+Revive with earned money (7,500 total), then spends two Hyper Potions and the
+Revive through the native battle Bag. The handler falls in six attack
+selections; stage 12, Earthquake and the consumed TM survive cold Continue.
+The runner selects healing targets using the Bag's current party order after
+switches. This establishes one ordinary-item route through the battle, not
+Nuzlocke balance or item-free viability. `--resume` repeats it from the saved
+trained Lisbon checkpoint.
+
+`scripts/test_eclipse_natural_past.py` enters Paris 1940 through the naturally
+unlocked Lisbon porter. Declining travel leaves the player in place; returning
+to Lisbon restores modern colors and preserves story progress. The level-46
+patrol is defeated in seven attack selections, spending two remaining Hyper
+Potions. Native Save and cold Continue preserve stage 13 and the past palette.
+This exposed a release bug: FireRed's Continue recap restored untinted palette
+backups even when the saved map was historical. `QuestLog_BackUpPalette` now
+stores the saved map's sepia tint for both tiles and object palettes. The
+regression compares all 13 map palette slots and the player's sprite colors.
+`scripts/test_eclipse_past_continue.py` also cold-saves a historical French
+country district, checks both palette sets after Continue, returns to its
+modern district and verifies modern colors after another cold save. All four
+new runners pass on the rebuilt release. No stats, inventory, story progress,
+experience, damage, AI, encounter or RNG memory writes are used. Native item
+purchases and consumption are asserted. Warsaw 1943 onward, postgame natural
+balancing and broad hardware/emulator checks remain outstanding.
 
 Legendary checks use explicit stage/purification, Master Ball and disabled
 incidental-encounter fixtures; these are encounter-system checks, not a natural
@@ -330,4 +363,4 @@ A full natural-level balancing playthrough and broad hardware/emulator testing
 remain outstanding before calling this a polished final release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `b763ab7e52a7e3bc775c812349de82089799b7f31f718e20383bc31a71a9ec82`
+SHA-256: `aa29d21a624bc31c80be8affc808cd075ae8339846687e337a89d56de769dce6`

@@ -1,4 +1,4 @@
-"""Read-only battle automation: normal inputs, original stats/HP/PP and native AI.
+"""Native battle automation: normal inputs, original stats/HP/PP and native AI.
 
 Starter checkpoints come from test_country's actual New Game button sequences.
 This records outcomes; it does not require a lone starter to beat every opponent.
@@ -28,8 +28,50 @@ def move_score(e,slot):
   if a==kind and d in targets:damage*=f/10
  return damage
 
-def natural_battle(e,limit=1800,learn_moves=()):
- action=first_symbol('HandleInputChooseAction');move=first_symbol('HandleInputChooseMove');turns=0
+def use_battle_heal(e,item,target_species=0):
+ """Spend a real healing item through the native battle Bag and party menu."""
+ from test_navigation import wait_task
+ from test_oxford_gym import count_pocket
+ before=count_pocket(e,item,0x310,42)
+ assert before>0
+ e.press('UP',2);e.press('LEFT',2);e.press('RIGHT',2);e.press('A',180)
+ wait_task(e,'Task_BagMenu_HandleInput');bag=e.symbols['gBagMenuState']
+ for _ in range(6):
+  if e.read(bag+6,2)==0:break
+  e.press('LEFT',60)
+ base=e.read('gSaveBlock1Ptr')+0x310
+ index=next(i for i in range(42) if e.read(base+4*i,2)==item)
+ for _ in range(80):
+  cur=e.read(bag+8,2)+e.read(bag+14,2)
+  if cur==index:break
+  e.press('DOWN' if cur<index else 'UP',30)
+ assert cur==index
+ e.press('A',90);e.press('A',180);wait_task(e,'Task_HandleChooseMonInput')
+ count=e.read('gPlayerPartyCount',1);current=e.read('gBattlerPartyIndexes',2)
+ order=[(e.read(e.symbols['gBattlePartyCurrentOrder']+i//2,1)&15) if i&1 else (e.read(e.symbols['gBattlePartyCurrentOrder']+i//2,1)>>4) for i in range(count)]
+ if target_species:
+  from test_shadow_runtime import monfield
+  # The Bag's party menu uses the current party array after battle switches.
+  target=next(i for i in range(count) if monfield(e,i,0,0)&65535==target_species)
+ else:target=order.index(current)
+ for _ in range(12):
+  cur=e.read(e.symbols['gPartyMenu']+9,1)
+  if cur==target:break
+  e.press('LEFT' if target==0 else 'RIGHT' if cur==0 else 'DOWN' if cur<target else 'UP',60)
+ assert cur==target
+ e.press('A',180)
+ for _ in range(20):
+  if not e.task_active('Task_HandleChooseMonInput'):break
+  e.press('A',60)
+ if count_pocket(e,item,0x310,42)!=before-1:
+  print('Item menu context:',item,'target',target,'original',current,'order',order,'cursor',e.read(e.symbols['gPartyMenu']+9,1),flush=True)
+  e.screenshot(ROOT/'test-output/natural-item-failure.png');e.state(ROOT/'test-output/natural-item-failure.state')
+ assert count_pocket(e,item,0x310,42)==before-1
+ print('Native battle healing item spent:',item,flush=True)
+
+
+def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,revive_species=0):
+ action=first_symbol('HandleInputChooseAction');move=first_symbol('HandleInputChooseMove');turns=0;heals=0;revived=False
  for _ in range(limit):
   if not e.in_battle():break
   fn=e.read('gBattlerControllerFuncs')&~1
@@ -55,9 +97,23 @@ def natural_battle(e,limit=1800,learn_moves=()):
     if cur==target:break
     e.press('LEFT' if target==0 else 'RIGHT' if cur==0 else 'DOWN' if cur<target else 'UP',60)
    e.press('A',180);e.press('A',180);e.frames(300);continue
+  if revive_species and not revived and fn in (action,move):
+   from test_shadow_runtime import monfield
+   from test_oxford_gym import count_pocket
+   target=next(i for i in range(e.read('gPlayerPartyCount',1)) if monfield(e,i,0,0)&65535==revive_species)
+   if e.read(e.symbols['gPlayerParty']+100*target+86,2)==0 and count_pocket(e,24,0x310,42):
+    if fn==move:e.press('B',30)
+    use_battle_heal(e,24,revive_species);revived=True;continue
   if fn==action:
+   hp=e.read(e.symbols['gBattleMons']+40,2);maxhp=e.read(e.symbols['gBattleMons']+44,2)
+   if healing_item and heals<healing_limit and 0<hp*3<maxhp*2:
+    use_battle_heal(e,healing_item);heals+=1;continue
    e.press('UP',2);e.press('LEFT',2);e.press('A',30)
   elif fn==move:
+   hp=e.read(e.symbols['gBattleMons']+40,2);maxhp=e.read(e.symbols['gBattleMons']+44,2)
+   if healing_item and heals<healing_limit and 0<hp*3<maxhp*2:
+    # Dialogue confirmation can advance directly into move selection.
+    e.press('B',30);use_battle_heal(e,healing_item);heals+=1;continue
    slot=max(range(4),key=lambda x:move_score(e,x));e.press('UP',2);e.press('LEFT',2)
    if slot&1:e.press('RIGHT',2)
    if slot&2:e.press('DOWN',2)

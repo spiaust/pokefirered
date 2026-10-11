@@ -100,6 +100,11 @@ Berlin's earned Brick Break TM can upgrade a compatible partner's Fighting
 move. Zurich's Houndoom/Pidgey practice trainer is an alternative if the
 Magneton/Haunter trainer overwhelms your team; train near the boss's level 37.
 
+Lisbon's handler carries a Weezing with Explosion. Keep another trained
+partner ready, or use the shared shops' Revives and Hyper Potions in a normal
+run. Madrid's Earthquake TM provides strong coverage against the handler's
+Magneton and Houndoom.
+
 ## Supplies and evolution
 
 Every campaign shelter and country shop sells all six evolution stones at
