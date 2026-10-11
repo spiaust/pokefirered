@@ -16,6 +16,8 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [ ] Finish natural-level campaign balancing and broad hardware/emulator checks.
   One Normal-mode, non-Nuzlocke saved-party route now reaches all eight badges,
   the wartime chapters, Veil, all four council members and the champion ending,
-  with six partners and three purifications. Continue with natural legendary
-  captures, postgame combat, other starting routes and difficulty balancing.
+  with six partners and three purifications. Natural Ultra Ball catches now
+  cover Articuno, Zapdos, Moltres before the League and Suicune after it,
+  including cold-saved PC delivery. Continue with Lugia, Ho-Oh, Mewtwo,
+  postgame combat, other starting routes and difficulty balancing.
   Past-map and player palettes survive cold Continue and the modern return.

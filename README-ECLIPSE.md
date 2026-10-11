@@ -203,6 +203,17 @@ pending. Return to Zofia for one Lucky Egg. A full bag leaves that reward pendin
 Healing, storage, the shop and return travel remain available after completion.
 The refuge's friendly partners stay visible independently of the wild toggle.
 
+## Catching the guardians
+
+Bring enough Balls and healing supplies: the guardians retain their native
+low catch rates. Thunder Wave can improve your odds without ongoing damage.
+Use weaker attacks carefully, allowing for critical hits, and stop attacking
+before a knockout. Pressure can use up move PP quickly. A full party sends a
+successful catch to the PC; you do not need to empty a party slot first.
+Caught guardians stay removed after saving and Continue. Normal-mode captures
+of all three pre-League birds and postgame Suicune have been verified with
+ordinary purchased Ultra Balls and an earned team.
+
 ## Champion rematch circuit
 
 After the League, speak to Stewart near the PC in the champion shelter. Follow
@@ -249,6 +260,6 @@ The native build produces a 16 MiB ROM and the Eclipse release alias. Read
 STORY-ECLIPSE.md for the campaign and country roster, RESEARCH-ECLIPSE.md for
 repository provenance, and TESTING-ECLIPSE.md for actual validation and limits.
 The districts are compact, with stylized landmarks and shared League shelters.
-One Normal-mode campaign has reached the ending with earned partners. Natural
-legendary captures, postgame balancing, other starting routes and broader
-hardware/emulator checks remain before a polished release.
+One Normal-mode campaign has reached the ending with earned partners. Remaining
+natural legendary captures, postgame balancing, other starting routes and
+broader hardware/emulator checks remain before a polished release.

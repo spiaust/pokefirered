@@ -18,9 +18,10 @@ def buy(e,orders):
    if cur==index:break
    e.press('DOWN' if cur<index else 'UP',30)
   assert cur==index
-  before=money(e),count_pocket(e,item,0x310,42);assert before[0]>=quantity*price
+  offset,slots=(0x430,13) if 1<=item<=12 else (0x310,42)
+  before=money(e),count_pocket(e,item,offset,slots);assert before[0]>=quantity*price
   confirm_purchase(e,quantity);e.press('A',180);wait_menu(e,'Task_ReturnToItemListAfterItemPurchase')
-  assert money(e)==before[0]-quantity*price and count_pocket(e,item,0x310,42)==before[1]+quantity
+  assert money(e)==before[0]-quantity*price and count_pocket(e,item,offset,slots)==before[1]+quantity
   e.press('A',90);wait_menu(e,'Task_BuyMenu')
   print('Native supplies purchased:',item,quantity,'cost',quantity*price,flush=True)
  e.press('B',180);wait_menu(e,'Task_ShopMenu');e.press('B',180);e.finish_dialogue()

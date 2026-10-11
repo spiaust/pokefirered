@@ -400,6 +400,10 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
 20. `scripts/test_eclipse_natural_league.py` (earned Shock Wave, held EXP. SHARE,
     native practice, four council victories, champion and cold ending save)
 
+21. `scripts/test_eclipse_natural_legendaries.py`, then
+    `scripts/test_eclipse_natural_legendary_saves.py` (earned-party catches,
+    purchased Ultra Balls, PC delivery and cold persistence; `--post` for Suicune)
+
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
 the ROM changes. Preview capture: `scripts/preview_eclipse.py`.
@@ -442,9 +446,54 @@ remaining chapters from the previous native victory. The native battle helper's
 optional `finish=False` lets the champion test inspect the credits before
 closing them. Other callers retain automatic field-dialogue completion.
 
-Natural legendary captures, postgame combat, other full starting routes and
-broad hardware/emulator checks remain outstanding. Earlier postgame victory and
+Remaining natural legendary captures, postgame combat, other full starting
+routes and broad hardware/emulator checks remain outstanding. Earlier postgame victory and
 capacity fixtures remain explicitly separate from this natural campaign.
+
+## Natural legendary captures
+
+`test_eclipse_natural_legendaries.py` uses the earned prepared-League save at
+chapter 16 for the three birds, and the earned champion save at chapter 21 for
+`--post` (Suicune). These are separate natural branches of the same campaign;
+the pre-League catches are not claimed to have been used in the League run.
+Native station menus reach Iceland, Norway, Italy and Finland. Normal difficulty
+and Nuzlocke OFF remain in effect. Encounter rates, catch odds, HP, PP, stats,
+experience, storage and inventory are never patched.
+
+The initial 50-Ultra-Ball Articuno pilot exhausted its supply without catching
+it. The successful preparation buys 90 Ultra Balls, 15 Hyper Potions and five
+Full Restores for 141,000 in earned money; the pre-League budget starts at
+144,644, and the postgame budget at 172,844. All purchases verify the proper
+Ball or item pocket and exact money deductions. The shared shop helper now
+supports Ball purchases instead of assuming every purchase enters the item
+pocket.
+
+The native capture helper paralyzes with Thunder Wave and weakens with Quick
+Attack. A Zapdos pilot suffered a critical-hit knockout before throwing a Ball;
+the helper now checks a conservative critical-damage bound before attacking
+again. It uses real healing and native replacements when a partner faints,
+rather than extending HP or disabling attacks. The recorded successful catches
+use 1/49/13 Ultra Balls for Articuno/Zapdos/Moltres; the final guarded replay
+passes all three in 13/61/13 Balls, with exact boxed-record and Ball-count checks
+across cold Continue. The Suicune run uses 80 Ultra
+Balls, 14 heals and 13 move selections. Raichu faints in the long Suicune battle
+and Nidoqueen finishes the catch. These counts describe observed runs and do
+not promise that a fixed number of Balls will catch a guardian.
+
+Each successful catch sets the native removal flag, adds exactly one guardian
+to the PC with the six-member party retained, and preserves the campaign stage
+after cold Continue. `test_eclipse_natural_legendary_saves.py` independently
+cold-loads all four catches, verifies their exact native level via the Slow
+experience curve, confirms the actor is absent, and checks that no unearned
+Master Ball is present. The capture runner also compares complete decrypted
+boxed records and remaining Ultra Balls across its save/load boundary.
+`--resume` replays purchased preparation; `--after=articuno` or `--after=zapdos`
+continues from a native caught checkpoint. Use `--post --resume` for the saved
+Suicune preparation. Test saves and screenshots remain under ignored test-output.
+
+Natural Lugia, Ho-Oh and Mewtwo captures, postgame battles, other full starting
+routes and hardware checks remain outstanding. Earlier seven-legendary fixtures
+are encounter-system tests and remain separate from these earned-party results.
 
 ## Release-quality limits
 
@@ -454,7 +503,7 @@ shelters rather than full-scale city reconstructions. Wild actors use defined
 spawn points and do not roam. There are no following party sprites, new villain
 sprite sheets, dedicated gym interiors, snagging or new Shadow-type moves.
 One Normal-mode campaign has reached the ending with earned partners and
-resources. Natural legendary and postgame coverage, other full starting routes,
+resources. Remaining natural legendary and postgame coverage, other full starting routes,
 and broad hardware/emulator checks remain before calling this a polished release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
