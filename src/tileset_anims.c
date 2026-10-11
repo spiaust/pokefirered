@@ -1,4 +1,7 @@
 #include "global.h"
+#include "event_data.h"
+#include "constants/maps.h"
+#include "constants/vars.h"
 
 static EWRAM_DATA struct {
     const u16 *src;
@@ -207,6 +210,10 @@ static void _InitSecondaryTilesetAnimation(void)
 
 static void QueueAnimTiles_General_Flower(u16 timer)
 {
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON)
+        && (gMapHeader.mapType == MAP_TYPE_TOWN || gMapHeader.mapType == MAP_TYPE_ROUTE)
+        && VarGet(VAR_EUROPE_STILL_FLOWERS) == 1)
+        timer = 0;
     AppendTilesetAnimToBuffer(sTilesetAnims_General_Flower[timer % ARRAY_COUNT(sTilesetAnims_General_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
 }
 

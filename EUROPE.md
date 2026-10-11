@@ -1,7 +1,26 @@
 # Pokemon European Tour
 
-A FireRed-based prototype of a journey through real European countries.
+## Current expansion - v3.3 (2026-10-10)
 
+European Council is complete: four fictional representatives and Champion Rowan, London reading-room reception, native saved victories, permanent title, one Rare Candy with full-bag recovery, repeat circuits, free healing, training and a supply shop. 252 checks plus the copied Austin Save/Continue check passed on ROM cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab. All three fresh-country main journeys and all three country Council teams completed. Original saves and Finished/v3.0 remain unchanged; v3.2 is archived. The USA companion project does not exist yet, so transfer is deferred. See EUROPEAN-COUNCIL.md, EXPANSION-CHECKLIST.md and artifacts/releases/v3.3-VERIFICATION.json for exact coverage and limits.
+
+
+## Previous expansion - v3.2 (2026-10-10)
+
+Character skin/accent choices, original directional Lapras rental art and CELEBI: LETTERS FOR TOMORROW are complete. The optional chapter has three regional archive researchers, native saved notes, an explicit Ada/Celebi ending and one PP UP with full-bag recovery. World Options scrolls and saves/reset preferences. 207 check results plus Austin copied Save/Continue verification passed on ROM ffa9fe49e33dbf18904ff1e9d22e29b156008cc1cc0473530ef3f14a00add6ca. Three fresh-country journeys also reached the main Ada ending on this exact build; both optional chapter country orders completed. Original saves are unchanged. Native avatar geometry/hair and six untested full-route starter teams are not expanded coverage. Current Prototype is v3.2; Finished/v3.0 and v3.1 remain archived. USA transfer awaits the companion repository and agreed protocol. See EXPANSION-CHECKLIST.md, EXPANSION-WALKTHROUGH.md and artifacts/releases/v3.2-VERIFICATION.json.
+
+
+## Previous expansion - v3.1 (2026-10-10)
+
+The completed v3.0 story remains the baseline. v3.1 adds independent flower motion controls in World Options; the current Prototype ROM is v3.1, while Finished and the v3.0 archive remain the completed baseline. Sixteen focused native checks and Austin's copied Save/Continue check passed. All original saves are unchanged. The full story was not replayed for this cosmetic expansion. See EXPANSION-CHECKLIST.md, artifacts/releases/v3.1-NOTES.md and artifacts/releases/v3.1-VERIFICATION.json. Character customization is next.
+
+
+A FireRed-based European adventure with three country arcs and a complete Celebi story route.
+
+
+## v3.0: Finished European Tour release
+
+Release v3.0 finishes the defined European Tour at Rose and Ada. Ada now explicitly says MAIN STORY COMPLETE, and native saves support continued exploration. Three independent new games (England/Bulbasaur, France/Chikorita, Germany/Mudkip) reach all three badges, the complete historical route, Ada, cold Continue and delayed accounts. Release suites record 178 passing checks plus Austin copy verification. They also cover optional landmark cases/stamps, capital and regional rooms, shops/clinics, rail/coastal/riverboat/Lapras/bicycle travel, town music, all five Red/Leaf outfit colors, and the animated six-town Celebi title. All four original saves are unchanged. No full-playthrough claim is made for the other six starter teams. Further wartime chapters, USA transfer and additional customization, mounts and scenery controls are expansion work; the existing Flowers toggle remains included. See COMPLETION-CHECKLIST.md and the verification manifest.
 
 ## v2.27: Eiffel observation room layout
 

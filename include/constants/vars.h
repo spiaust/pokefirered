@@ -253,15 +253,23 @@
 #define VAR_0x40C4                 0x40C4
 #define VAR_EUROPE_OUTFIT_COLOR VAR_0x40C4 // 0 classic; 1 blue; 2 green
 #define VAR_0x40C5                 0x40C5
+#define VAR_EUROPE_STILL_FLOWERS VAR_0x40C5 // 0 animated; 1 still (cosmetic only)
 #define VAR_0x40C6                 0x40C6
+#define VAR_EUROPE_SKIN_TONE VAR_0x40C6 // 0 native; 1 light; 2 tan; 3 brown; 4 deep
 #define VAR_0x40C7                 0x40C7
+#define VAR_EUROPE_ACCENT_COLOR VAR_0x40C7 // 0 native; 1 blue; 2 green; 3 purple; 4 gold
 #define VAR_0x40C8                 0x40C8
+#define VAR_EUROPE_ARCHIVE_STORY VAR_0x40C8 // 0 unstarted; 1 collecting; 2 complete
 #define VAR_0x40C9                 0x40C9
+#define VAR_EUROPE_ARCHIVE_OXFORD VAR_0x40C9 // Oxford sources note
 #define VAR_0x40CA                 0x40CA
+#define VAR_EUROPE_ARCHIVE_CHANTILLY VAR_0x40CA // Chantilly context note
 #define VAR_0x40CB                 0x40CB
+#define VAR_EUROPE_ARCHIVE_ORAN VAR_0x40CB // Oranienburg care note
 #define VAR_0x40CC                 0x40CC
-#define VAR_0x40CD                 0x40CD
-#define VAR_0x40CE                 0x40CE
+#define VAR_EUROPE_MAIN_CONCLUDED VAR_0x40CC // Ada conclusion has been read
+#define VAR_EUROPE_COUNCIL_STAGE    0x40CD // Council victories: 0..5
+#define VAR_EUROPE_COUNCIL_TITLE    0x40CE // 0 none, 1 reward pending, 2 claimed
 #define VAR_FRONTIER_FACILITY      0x40CF
 #define VAR_0x40D0                 0x40D0
 #define VAR_0x40D1                 0x40D1

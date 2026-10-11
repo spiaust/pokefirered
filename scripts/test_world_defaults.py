@@ -14,7 +14,10 @@ try:
  load_checkpoint(e,'world-flowers-save',True)
  assert prefs(e)==(1,2,1,1,0)
  before=preserved(e);identity=who(e);loc=e.location()
- open_key_item(e,363);wait_task(e,'Task_EuropeMap');e.press('UP',60);e.press('UP',60);e.press('LEFT',60);e.press('DOWN',60)
+ open_key_item(e,363);wait_task(e,'Task_EuropeMap')
+ for _ in range(4):e.press('DOWN',60)
+ e.press('LEFT',60)
+ for _ in range(4):e.press('DOWN',60)
  e.press('LEFT',60);e.press('RIGHT',60);assert prefs(e)==(1,2,1,1,4)
  for cancel in ('B','START'):
   e.press('A',60);e.press(cancel,60)
@@ -28,7 +31,7 @@ try:
  start_action(e,4)
  for _ in range(5):e.press('A',150)
  e.battery(ROOT/'test-output/world-defaults-save.sav');saved=preserved(e)
- print('PASS: sixth-row wrap, Left/Right ignored, B/START cancellation and confirmed cosmetic-only reset',flush=True)
+ print('PASS: ninth-row scrolling, Left/Right ignored, B/START cancellation and confirmed cosmetic-only reset',flush=True)
 finally:e.close()
 e=Emulator(ROOT/'pokefirered.gba')
 try:

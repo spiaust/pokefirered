@@ -9,14 +9,14 @@ from test_southampton_care import rest
 from test_london_past import clerk,rose
 from key_item_test_helpers import reload
 
-def progress(e):return tuple(e.var(v) for v in range(0x40C0,0x4100))
+def progress(e):return tuple(e.var(v) for v in range(0x40C0,0x4100) if v != 0x40CC)
 
 def conclusion(e,label):
  before=preserved(e),progress(e);researcher(e);e.frames(900)
  for i in range(5):
   assert e.read('sLockFieldControls',1)
   e.screenshot(ROOT/f'test-output/current-ending-{label}-{i}.png');e.press('A',900)
- e.finish_dialogue();assert not e.read('sLockFieldControls',1)
+ e.finish_dialogue();assert not e.read('sLockFieldControls',1);assert e.var(0x40CC)==1
  assert (preserved(e),progress(e))==before
 
 e=Emulator(ROOT/'pokefirered.gba')

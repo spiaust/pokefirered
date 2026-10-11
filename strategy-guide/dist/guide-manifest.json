@@ -1,0 +1,11 @@
+{
+  "edition": "v3.3",
+  "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab",
+  "chapters": 41,
+  "source_documents": [
+    "WALKTHROUGH.md",
+    "EUROPEAN-COUNCIL.md",
+    "EXPANSION-WALKTHROUGH.md"
+  ],
+  "screenshots_are_game_captures": true
+}

@@ -10910,3 +10910,41 @@ static const struct TrainerMonNoItemCustomMoves sParty_EuropeLeaderConrad[] = {
     {.iv = 0, .lvl = 14, .species = SPECIES_VOLTORB, .moves = {MOVE_TACKLE, MOVE_SPARK}},
     {.iv = 0, .lvl = 16, .species = SPECIES_PIKACHU, .moves = {MOVE_QUICK_ATTACK, MOVE_SHOCK_WAVE}},
 };
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeCouncilAlfred[] = {
+    {.iv = 20, .lvl = 18, .species = SPECIES_PIDGEOTTO, .moves = {MOVE_GUST, MOVE_QUICK_ATTACK}},
+    {.iv = 20, .lvl = 18, .species = SPECIES_NOCTOWL, .moves = {MOVE_PECK, MOVE_CONFUSION}},
+    {.iv = 20, .lvl = 19, .species = SPECIES_FURRET, .moves = {MOVE_QUICK_ATTACK, MOVE_DEFENSE_CURL}},
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeCouncilSolene[] = {
+    {.iv = 20, .lvl = 19, .species = SPECIES_BUTTERFREE, .moves = {MOVE_CONFUSION, MOVE_GUST}},
+    {.iv = 20, .lvl = 19, .species = SPECIES_WEEPINBELL, .moves = {MOVE_VINE_WHIP, MOVE_ACID}},
+    {.iv = 20, .lvl = 20, .species = SPECIES_SKIPLOOM, .moves = {MOVE_TACKLE, MOVE_LEECH_SEED}},
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeCouncilOtmar[] = {
+    {.iv = 20, .lvl = 20, .species = SPECIES_MAGNEMITE, .moves = {MOVE_THUNDER_SHOCK, MOVE_SONIC_BOOM}},
+    {.iv = 20, .lvl = 20, .species = SPECIES_VOLTORB, .moves = {MOVE_SPARK, MOVE_TACKLE}},
+    {.iv = 20, .lvl = 21, .species = SPECIES_MACHOP, .moves = {MOVE_KARATE_CHOP, MOVE_FOCUS_ENERGY}},
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeCouncilElara[] = {
+    {.iv = 20, .lvl = 21, .species = SPECIES_PSYDUCK, .moves = {MOVE_WATER_GUN, MOVE_CONFUSION}},
+    {.iv = 20, .lvl = 21, .species = SPECIES_POLIWHIRL, .moves = {MOVE_BUBBLE, MOVE_DOUBLE_SLAP}},
+    {.iv = 20, .lvl = 22, .species = SPECIES_HORSEA, .moves = {MOVE_WATER_GUN, MOVE_SMOKESCREEN}},
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeCouncilRowan[] = {
+    {.iv = 20, .lvl = 22, .species = SPECIES_EEVEE, .moves = {MOVE_QUICK_ATTACK, MOVE_BITE}},
+    {.iv = 20, .lvl = 22, .species = SPECIES_PIDGEOTTO, .moves = {MOVE_WING_ATTACK, MOVE_QUICK_ATTACK}},
+    {.iv = 20, .lvl = 22, .species = SPECIES_IVYSAUR, .moves = {MOVE_RAZOR_LEAF, MOVE_TACKLE}},
+    {.iv = 20, .lvl = 23, .species = SPECIES_PIKACHU, .moves = {MOVE_SHOCK_WAVE, MOVE_QUICK_ATTACK}},
+};
+
+
+static const struct TrainerMonNoItemCustomMoves sParty_EuropeCouncilCoach[] = {
+    {.iv = 0, .lvl = 14, .species = SPECIES_SENTRET, .moves = {MOVE_SCRATCH}},
+    {.iv = 0, .lvl = 15, .species = SPECIES_MAREEP, .moves = {MOVE_TACKLE, MOVE_THUNDER_SHOCK}},
+    {.iv = 0, .lvl = 16, .species = SPECIES_EEVEE, .moves = {MOVE_TACKLE, MOVE_QUICK_ATTACK}},
+};

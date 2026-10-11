@@ -21,7 +21,7 @@ try:
  go(e,(8,24));loc=e.location();before=preserved(e);identity=who(e);tiles=grid(e)
  e.screenshot(ROOT/'test-output/world-flowers-on.png')
  options(e)
- for _ in range(3):e.press('UP',60) # Wrap past Restore Defaults and outfit to flowers.
+ for _ in range(6):e.press('UP',60) # Wrap past Restore Defaults, motion and outfit to flowers.
  e.press('RIGHT',60);assert e.var(VAR)==1
  e.screenshot(ROOT/'test-output/world-flowers-options.png');close(e)
  assert e.location()==loc and grid(e)==tiles and preserved(e)==before and who(e)==identity

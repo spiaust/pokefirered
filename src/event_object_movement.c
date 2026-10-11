@@ -2175,10 +2175,12 @@ void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
 {
     u8 paletteIndex = FindObjectEventPaletteIndexByTag(paletteTag);
     u16 outfit = VarGet(VAR_EUROPE_OUTFIT_COLOR);
+    u16 skin = VarGet(VAR_EUROPE_SKIN_TONE);
+    u16 accent = VarGet(VAR_EUROPE_ACCENT_COLOR);
     bool8 reflection = paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION
         || paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION;
 
-    if (outfit > 0 && outfit < 5
+    if (((outfit > 0 && outfit < 5) || (skin > 0 && skin < 5) || (accent > 0 && accent < 5))
         && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON)
         && (reflection || (paletteSlot == PALSLOT_PLAYER
             && (paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_RED || paletteTag == OBJ_EVENT_PAL_TAG_PLAYER_GREEN))))
@@ -2207,11 +2209,43 @@ void PatchObjectPalette(u16 paletteTag, u8 paletteSlot)
             colors[11] = reflection ? RGB(31, 25, 31) : RGB(25, 15, 29);
             colors[12] = reflection ? RGB(28, 18, 31) : RGB(18, 8, 23);
         }
-        else
+        else if (outfit == 4)
         {
             colors[8] = reflection ? RGB(22, 17, 12) : RGB(12, 7, 2);
             colors[11] = reflection ? RGB(31, 31, 18) : RGB(31, 26, 8);
             colors[12] = reflection ? RGB(31, 25, 13) : RGB(24, 15, 3);
+        }
+        if (skin > 0 && skin < 5)
+        {
+            static const u16 skinColors[4][2] = {
+                {RGB(31, 26, 22), RGB(25, 18, 15)},
+                {RGB(28, 20, 13), RGB(22, 13, 9)},
+                {RGB(21, 13, 8), RGB(14, 8, 5)},
+                {RGB(13, 8, 6), RGB(8, 4, 3)},
+            };
+            colors[2] = skinColors[skin - 1][0];
+            colors[3] = skinColors[skin - 1][1];
+        }
+        if (accent > 0 && accent < 5)
+        {
+            static const u16 accentColors[4][2] = {
+                {RGB(11, 22, 29), RGB(8, 13, 24)},
+                {RGB(14, 26, 16), RGB(7, 18, 10)},
+                {RGB(25, 15, 29), RGB(18, 8, 23)},
+                {RGB(31, 26, 8), RGB(24, 15, 3)},
+            };
+            colors[13] = accentColors[accent - 1][0];
+            colors[14] = accentColors[accent - 1][1];
+        }
+        if (reflection)
+        {
+            // Reflection palettes use a lighter version of the selected skin/accent.
+            for (i = 0; i < 16; i++)
+            {
+                if ((skin > 0 && skin < 5 && (i == 2 || i == 3))
+                    || (accent > 0 && accent < 5 && (i == 13 || i == 14)))
+                    colors[i] = RGB((GET_R(colors[i]) + 31) / 2, (GET_G(colors[i]) + 31) / 2, (GET_B(colors[i]) + 31) / 2);
+            }
         }
         LoadPalette(colors, OBJ_PLTT_ID(paletteSlot), PLTT_SIZE_4BPP);
     }

@@ -10,6 +10,15 @@ STORY = 0x40EE
 CANDY = 68
 
 
+def finish_continue_recap(emu):
+    # FireRed can briefly display a historical quest-log scene after Continue.
+    # Skip with normal B input and wait until the actual saved map is restored.
+    for _ in range(20):
+        if emu.read('gQuestLogState',1) not in (2,3):return
+        emu.press('B',180)
+    assert emu.read('gQuestLogState',1) not in (2,3),'Continue recap did not finish'
+
+
 def load_checkpoint(emu, name, legacy=False):
     if not legacy:
         emu.state(ROOT / f'test-output/{name}.state', True)
@@ -21,6 +30,7 @@ def load_checkpoint(emu, name, legacy=False):
     emu.press('A', 300)
     emu.frames(300)
     emu.press('B', 90)
+    finish_continue_recap(emu)
     emu.finish_dialogue()
 
 

@@ -28,7 +28,15 @@ def page(e,city,dest,label):
  assert (preserved(e),history(e),e.location())==before
 e=Emulator(ROOT/'pokefirered.gba')
 try:
- load_checkpoint(e,'oranienburg-bridges-complete',True);original=preserved(e)[1:],history(e)
+ load_checkpoint(e,'oranienburg-bridges-complete',True)
+ if e.var(0x40CC)!=1:
+  go(e,(16,14))
+  if e.location()[1]!=12:travel(e,3)
+  go(e,(18,14));prior=preserved(e);old=tuple(e.var(v) for v in range(0x40C0,0x4100) if v!=0x40CC)
+  e.press('DOWN');e.press('A',180);e.finish_dialogue()
+  assert e.var(0x40CC)==1 and preserved(e)==prior
+  assert tuple(e.var(v) for v in range(0x40C0,0x4100) if v!=0x40CC)==old
+ original=preserved(e)[1:],history(e)
  for city,dest in [('Oxford',3),('Chantilly',4),('Oranienburg',5)]:
   go(e,(16,14))
   if e.location()[1]!=dest*4:travel(e,dest)

@@ -525,6 +525,24 @@ static const u8 sWorldOptionText7[] = _("UP/DOWN: ROW  LEFT/RIGHT: CHANGE");
 static const u8 sWorldOptionText8[] = _("A: CHANGE  B/START: BACK");
 static const u8 sFlowersOn[] = _("FLOWERS: ON");
 static const u8 sFlowersOff[] = _("FLOWERS: OFF");
+static const u8 sFlowersMoving[] = _("FLOWER MOTION: ON");
+static const u8 sFlowersStill[] = _("FLOWER MOTION: OFF");
+#define WORLD_OPTION_COUNT 9
+#define WORLD_OPTION_RESET (WORLD_OPTION_COUNT - 1)
+static const u8 sSkinClassic[] = _("SKIN: CLASSIC");
+static const u8 sSkinLight[] = _("SKIN: LIGHT");
+static const u8 sSkinTan[] = _("SKIN: TAN");
+static const u8 sSkinBrown[] = _("SKIN: BROWN");
+static const u8 sSkinDeep[] = _("SKIN: DEEP");
+static const u8 *const sSkinNames[] = {sSkinClassic, sSkinLight, sSkinTan, sSkinBrown, sSkinDeep};
+static const u8 sAccentClassic[] = _("ACCENT: CLASSIC");
+static const u8 sAccentBlue[] = _("ACCENT: BLUE");
+static const u8 sAccentGreen[] = _("ACCENT: GREEN");
+static const u8 sAccentPurple[] = _("ACCENT: PURPLE");
+static const u8 sAccentGold[] = _("ACCENT: GOLD");
+static const u8 *const sAccentNames[] = {sAccentClassic, sAccentBlue, sAccentGreen, sAccentPurple, sAccentGold};
+static const u16 sWorldOptionVars[] = {VAR_EUROPE_MAP_DETAIL, VAR_EUROPE_AVATAR_STYLE, VAR_EUROPE_MAP_CONTRAST, VAR_EUROPE_HIDE_FLOWERS, VAR_EUROPE_OUTFIT_COLOR, VAR_EUROPE_STILL_FLOWERS, VAR_EUROPE_SKIN_TONE, VAR_EUROPE_ACCENT_COLOR};
+static const u8 sWorldOptionCounts[] = {2, 3, 2, 2, 5, 2, 5, 5};
 static const u8 sRestoreDefaults[] = _("RESTORE DEFAULTS: PRESS A");
 static const u8 sRestoreHeading[] = _("RESTORE DEFAULTS?");
 static const u8 sRestoreInfo[] = _("All cosmetic settings will reset.");
@@ -584,12 +602,24 @@ static void DrawWorldOptions(u8 row)
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
     MapText(sWorldOptionText0, 7, 4, sGold);
     MapRect(4, 7, 20, 226, 1);
-    MapText(VarGet(VAR_EUROPE_MAP_DETAIL) ? sWorldOptionText1 : sWorldOptionText2, 12, 25, row == 0 ? sGold : sWhite);
-    MapText(style == 1 ? sRed : style == 2 ? sLeaf : sOriginal, 12, 39, row == 1 ? sGold : sWhite);
-    MapText(VarGet(VAR_EUROPE_MAP_CONTRAST) ? sWorldOptionText3 : sWorldOptionText4, 12, 53, row == 2 ? sGold : sWhite);
-    MapText(VarGet(VAR_EUROPE_HIDE_FLOWERS) == 1 ? sFlowersOff : sFlowersOn, 12, 67, row == 3 ? sGold : sWhite);
-    MapText(outfit == 1 ? sOutfitBlue : outfit == 2 ? sOutfitGreen : outfit == 3 ? sOutfitPurple : outfit == 4 ? sOutfitGold : sOutfitClassic, 12, 81, row == 4 ? sGold : sWhite);
-    MapText(sRestoreDefaults, 12, 95, row == 5 ? sGold : sWhite);
+    {
+        const u8 *labels[WORLD_OPTION_COUNT];
+        u8 first = row > 6 ? row - 6 : 0;
+        u8 i;
+        u16 skin = VarGet(VAR_EUROPE_SKIN_TONE);
+        u16 accent = VarGet(VAR_EUROPE_ACCENT_COLOR);
+        labels[0] = VarGet(VAR_EUROPE_MAP_DETAIL) ? sWorldOptionText1 : sWorldOptionText2;
+        labels[1] = style == 1 ? sRed : style == 2 ? sLeaf : sOriginal;
+        labels[2] = VarGet(VAR_EUROPE_MAP_CONTRAST) ? sWorldOptionText3 : sWorldOptionText4;
+        labels[3] = VarGet(VAR_EUROPE_HIDE_FLOWERS) == 1 ? sFlowersOff : sFlowersOn;
+        labels[4] = outfit == 1 ? sOutfitBlue : outfit == 2 ? sOutfitGreen : outfit == 3 ? sOutfitPurple : outfit == 4 ? sOutfitGold : sOutfitClassic;
+        labels[5] = VarGet(VAR_EUROPE_STILL_FLOWERS) == 1 ? sFlowersStill : sFlowersMoving;
+        labels[6] = sSkinNames[skin < 5 ? skin : 0];
+        labels[7] = sAccentNames[accent < 5 ? accent : 0];
+        labels[8] = sRestoreDefaults;
+        for (i = first; i < WORLD_OPTION_COUNT && i < first + 7; i++)
+            MapText(labels[i], 12, 25 + 12 * (i - first), i == row ? sGold : sWhite);
+    }
     MapText(sPreviewHeading, 191, 25, sGold);
     MapText(sWorldPreviewBike ? sPreviewBike : sPreviewWalk, 199, 80, sWhite);
     MapText(sPreviewTurn, 191, 94, sGold);
@@ -625,7 +655,7 @@ static void Task_EuropeMap(u8 taskId)
         {
             gTasks[taskId].data[2] = 0;
             PlaySE(SE_SELECT);
-            DrawWorldOptions(5);
+            DrawWorldOptions(WORLD_OPTION_RESET);
         }
         else if (JOY_NEW(A_BUTTON))
         {
@@ -634,11 +664,14 @@ static void Task_EuropeMap(u8 taskId)
             VarSet(VAR_EUROPE_MAP_CONTRAST, 0);
             VarSet(VAR_EUROPE_HIDE_FLOWERS, 0);
             VarSet(VAR_EUROPE_OUTFIT_COLOR, 0);
+            VarSet(VAR_EUROPE_STILL_FLOWERS, 0);
+            VarSet(VAR_EUROPE_SKIN_TONE, 0);
+            VarSet(VAR_EUROPE_ACCENT_COLOR, 0);
             sWorldPreviewBike = FALSE;
             sWorldPreviewFacing = 0;
             gTasks[taskId].data[2] = 0;
             PlaySE(SE_SELECT);
-            DrawWorldOptions(5);
+            DrawWorldOptions(WORLD_OPTION_RESET);
         }
         return;
     }
@@ -683,12 +716,12 @@ static void Task_EuropeMap(u8 taskId)
         }
         else if (JOY_NEW(DPAD_UP | DPAD_DOWN))
         {
-            row = (row + (JOY_NEW(DPAD_UP) ? 5 : 1)) % 6;
+            row = (row + (JOY_NEW(DPAD_UP) ? WORLD_OPTION_COUNT - 1 : 1)) % WORLD_OPTION_COUNT;
             gTasks[taskId].data[1] = row;
             PlaySE(SE_SELECT);
             DrawWorldOptions(row);
         }
-        else if (row == 5)
+        else if (row == WORLD_OPTION_RESET)
         {
             if (JOY_NEW(A_BUTTON))
             {
@@ -699,8 +732,8 @@ static void Task_EuropeMap(u8 taskId)
         }
         else if (JOY_NEW(A_BUTTON | DPAD_LEFT | DPAD_RIGHT))
         {
-            u16 var = row == 0 ? VAR_EUROPE_MAP_DETAIL : row == 1 ? VAR_EUROPE_AVATAR_STYLE : row == 2 ? VAR_EUROPE_MAP_CONTRAST : row == 3 ? VAR_EUROPE_HIDE_FLOWERS : VAR_EUROPE_OUTFIT_COLOR;
-            u8 count = row == 4 ? 5 : row == 1 ? 3 : 2;
+            u16 var = sWorldOptionVars[row];
+            u8 count = sWorldOptionCounts[row];
             VarSet(var, (VarGet(var) + (JOY_NEW(DPAD_LEFT) ? count - 1 : 1)) % count);
             PlaySE(SE_SELECT);
             DrawWorldOptions(row);

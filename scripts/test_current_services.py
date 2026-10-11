@@ -1,5 +1,6 @@
 """Native station purchases and clinic care on the genuine completed journey."""
 from collections import Counter
+import struct,re
 from emulator import Emulator,ROOT
 from test_celebi import load_checkpoint
 from test_landmark_cases import go
@@ -11,8 +12,21 @@ from key_item_test_helpers import reload
 
 def history(e):return tuple(e.var(v) for v in range(0x40C0,0x4100))
 def contents(e):return Counter({i:q for i,q in preserved(e)[3] if i})
+SLOTS={int(n):(int(g),int(a)) for n,g,a in re.findall(r'SUBSTRUCT_CASE\(\s*(\d+),\s*(\d+),\s*(\d+),',(ROOT/'src/pokemon.c').read_text())}
 def identity(e):
- return tuple((tuple(e.read(e.symbols['gPlayerParty']+100*i+j,1) for j in range(32)),e.read(e.symbols['gPlayerParty']+100*i+84,1)) for i in range(e.read('gPlayerPartyCount',1)))
+ result=[]
+ for i in range(e.read('gPlayerPartyCount',1)):
+  raw=bytearray(e.read(e.symbols['gPlayerParty']+100*i+j,1) for j in range(100));personality,trainer=struct.unpack_from('<II',raw);growth,attacks=SLOTS[personality%24]
+  # Health, PP and walking friendship are mutable care data; preserve every other byte.
+  for j in [28,29,32+12*growth+9,*range(32+12*attacks+8,32+12*attacks+12),*range(80,84),86,87]:raw[j]=0
+  result.append(bytes(raw))
+ return tuple(result)
+def friendships(e):
+ result=[]
+ for i in range(e.read('gPlayerPartyCount',1)):
+  p=e.symbols['gPlayerParty']+100*i;personality=e.read(p);trainer=e.read(p+4);growth=SLOTS[personality%24][0]
+  result.append(e.read(p+32+12*growth+9,1)^(((personality^trainer)>>8)&255))
+ return result
 
 e=Emulator(ROOT/'pokefirered.gba')
 try:
@@ -40,11 +54,12 @@ try:
   e.walk('RIGHT',3);e.walk('DOWN',2);e.frames(180);assert e.location()==(43,dest*4,23,10)
   print('PASS: '+city+' station cold Continue retains purchases and exact saved state; exit reaches the correct town',flush=True)
   go(e,(6,10));e.walk('UP',1);e.frames(180);assert e.location()==(43,dest*4+3,6,8)
-  e=reload(e,'current-services-'+city+'-clinic');before=preserved(e)[1:],history(e),identity(e)
+  e=reload(e,'current-services-'+city+'-clinic');before=preserved(e)[1:],history(e),identity(e);friendship_before=friendships(e)
   e.walk('UP',4);e.walk('RIGHT',1);e.press('UP');e.press('A',180);e.finish_dialogue()
   for i in range(e.read('gPlayerPartyCount',1)):
    p=e.symbols['gPlayerParty']+100*i;assert e.read(p+86,2)==e.read(p+88,2) and e.read(p+80)==0
   assert (preserved(e)[1:],history(e),identity(e))==before
+  assert all(0<=last-first<=5 for first,last in zip(friendship_before,friendships(e)))
   e.screenshot(ROOT/f'test-output/current-services-{city}-clinic.png')
   e=reload(e,'current-services-'+city+'-healed');e.walk('DOWN',5);e.frames(180)
   assert e.location()==(43,dest*4,6,10) and history(e)==original

@@ -677,6 +677,7 @@
     "EuropePalaceVisitor",
     "EuropeRadcliffeVisitor",
     "EuropeStablesVisitor",
-    "EuropeMagdalenVisitor"
+    "EuropeMagdalenVisitor",
+    "EuropeCouncilHall"
   ]
 }

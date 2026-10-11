@@ -1,0 +1,381 @@
+[
+  {
+    "image": "england.png",
+    "source_battery": "release-england-badge-one.sav",
+    "location": [
+      43,
+      12,
+      15,
+      10
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "france.png",
+    "source_battery": "release-england-badge-two.sav",
+    "location": [
+      43,
+      16,
+      16,
+      14
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "germany.png",
+    "source_battery": "release-england-badge-three.sav",
+    "location": [
+      43,
+      20,
+      15,
+      10
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "celebi.png",
+    "source_battery": "celebi-forest.sav",
+    "location": [
+      43,
+      17,
+      15,
+      24
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "refuge.png",
+    "source_battery": "celebi-refuge-arrived.sav",
+    "location": [
+      43,
+      29,
+      5,
+      10
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "post.png",
+    "source_battery": "celebi-refuge-departure.sav",
+    "location": [
+      43,
+      17,
+      15,
+      24
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "beauvais.png",
+    "source_battery": "beauvais-directions-checked-in.sav",
+    "location": [
+      43,
+      31,
+      4,
+      7
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "garden.png",
+    "source_battery": "beauvaisgarden-realism-save.sav",
+    "location": [
+      43,
+      32,
+      49,
+      9
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "amiens.png",
+    "source_battery": "amiens-arrival.sav",
+    "location": [
+      43,
+      33,
+      10,
+      16
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "rouen.png",
+    "source_battery": "rouen-arrival.sav",
+    "location": [
+      43,
+      34,
+      10,
+      16
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "le-havre.png",
+    "source_battery": "le-havre-arrival.sav",
+    "location": [
+      43,
+      35,
+      8,
+      5
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "southampton.png",
+    "source_battery": "southampton-arrival.sav",
+    "location": [
+      43,
+      36,
+      8,
+      5
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "london-1940.png",
+    "source_battery": "release-england-london-ending.sav",
+    "location": [
+      43,
+      37,
+      10,
+      16
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "ending.png",
+    "source_battery": "release-england-all-accounts.sav",
+    "location": [
+      43,
+      12,
+      18,
+      14
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "stamps.png",
+    "source_battery": "current-stamps-complete.sav",
+    "location": [
+      43,
+      12,
+      18,
+      14
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "gastly.png",
+    "source_battery": "notredame-gastly-caught.sav",
+    "location": [
+      43,
+      38,
+      10,
+      5
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "lapras.png",
+    "source_battery": "expansion-integration-water.sav",
+    "location": [
+      43,
+      12,
+      26,
+      19
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "archive.png",
+    "source_battery": "archive-4-5-oxford.sav",
+    "location": [
+      43,
+      53,
+      6,
+      4
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "chateau.png",
+    "source_battery": "archive-4-5-town-4.sav",
+    "location": [
+      43,
+      51,
+      6,
+      4
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "palace.png",
+    "source_battery": "archive-4-5-town-5.sav",
+    "location": [
+      43,
+      52,
+      6,
+      4
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "council.png",
+    "source_battery": "council-england-stage-1.sav",
+    "location": [
+      43,
+      56,
+      2,
+      4
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "bicycle.png",
+    "source_battery": "current-bicycle-riding.sav",
+    "location": [
+      43,
+      12,
+      14,
+      14
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "riverboat.png",
+    "source_battery": "current-riverboat-0.sav",
+    "location": [
+      43,
+      0,
+      24,
+      16
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "dover.png",
+    "source_battery": "current-coast-27-ferry.sav",
+    "location": [
+      43,
+      27,
+      8,
+      5
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "calais.png",
+    "source_battery": "current-coast-28-ferry.sav",
+    "location": [
+      43,
+      28,
+      8,
+      5
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "notredame.png",
+    "source_battery": "current-landmarks-notredame-active.sav",
+    "location": [
+      43,
+      38,
+      8,
+      15
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "westminster.png",
+    "source_battery": "current-landmarks-westminster-active.sav",
+    "location": [
+      43,
+      39,
+      8,
+      15
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "reichstag.png",
+    "source_battery": "current-landmarks-reichstag-active.sav",
+    "location": [
+      43,
+      40,
+      8,
+      15
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "home.png",
+    "source_battery": "current-rooms-London.sav",
+    "location": [
+      43,
+      47,
+      9,
+      7
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "reading.png",
+    "source_battery": "current-interiors-London-reading.sav",
+    "location": [
+      43,
+      48,
+      9,
+      7
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "amiens-bridge.png",
+    "source_battery": "amiens-bridge-west.sav",
+    "location": [
+      43,
+      33,
+      31,
+      11
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "rouen-bridge.png",
+    "source_battery": "rouen-arrival.sav",
+    "location": [
+      43,
+      34,
+      10,
+      16
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "london-bridge.png",
+    "source_battery": "london-past-bridge-westminster.sav",
+    "location": [
+      43,
+      37,
+      55,
+      15
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "southampton-quay.png",
+    "source_battery": "southampton-quay-tip.sav",
+    "location": [
+      43,
+      36,
+      49,
+      38
+    ],
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  },
+  {
+    "image": "country-menu.png",
+    "source": "native NEW GAME country menu",
+    "rom_sha256": "cdb0b733bc93710a39d54967e4466add2dbff8a2f9c88f97380a4e96d5b32dab"
+  }
+]

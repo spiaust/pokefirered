@@ -48,7 +48,7 @@ EuropeLondonReadingRoom_End::
  end
 
 EuropeLondonReadingRoom_EntryText::
- .string "A neighbor welcomes visitors.\n"
+ .string "READING ROOM / COUNCIL RECEPTION\n"
  .string "Visit the reading room?$"
 
 EuropeLondonReadingRoom_HostText::

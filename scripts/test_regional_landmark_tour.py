@@ -12,7 +12,11 @@ maps=json.loads((ROOT/'data/maps/map_groups.json').read_text())['gMapGroup_Europ
 def history(e):return tuple(e.var(v) for v in range(0x40C0,0x4100))
 e=Emulator(ROOT/'pokefirered.gba')
 try:
- load_checkpoint(e,'mixed-map-pages',True);original=preserved(e)[1:],history(e)
+ load_checkpoint(e,'mixed-map-pages',True)
+ if e.var(0x40CC)!=1:
+  if e.location()[1]!=12:go(e,(16,14));travel(e,3)
+  go(e,(18,14));e.press('DOWN');e.press('A',180);e.finish_dialogue();assert e.var(0x40CC)==1
+ original=preserved(e)[1:],history(e)
  for tag,dest,point,name in [('radcliffe',3,(38,10),'EuropeRadcliffeVisitor'),('magdalen',3,(51,11),'EuropeMagdalenVisitor'),('chateau',4,(51,11),'EuropeChateauVisitor'),('stables',4,(38,19),'EuropeStablesVisitor'),('palace',5,(48,9),'EuropePalaceVisitor')]:
   go(e,(16,14))
   if e.location()[1]!=dest*4:travel(e,dest)

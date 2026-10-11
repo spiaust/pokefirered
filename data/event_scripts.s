@@ -1437,6 +1437,7 @@ Text_TestMsg::
 	.include "data/maps/EuropeCalaisPort/scripts.inc"
 
 	.include "data/scripts/europe_celebi.inc"
+	.include "data/scripts/europe_archive.inc"
 
 	.include "data/maps/EuropeChantillyPast/scripts.inc"
 	.include "data/scripts/europe_time.inc"
@@ -1502,3 +1503,6 @@ Text_TestMsg::
 	.include "data/maps/EuropeStablesVisitor/scripts.inc"
 
 	.include "data/maps/EuropeMagdalenVisitor/scripts.inc"
+
+	.include "data/scripts/europe_council.inc"
+	.include "data/maps/EuropeCouncilHall/scripts.inc"

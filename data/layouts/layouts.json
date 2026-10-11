@@ -4878,6 +4878,18 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/EuropeMagdalenVisitor/border.bin",
       "blockdata_filepath": "data/layouts/EuropeMagdalenVisitor/map.bin"
+    },
+    {
+      "id": "LAYOUT_EUROPE_COUNCIL_HALL",
+      "name": "EuropeCouncilHall_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EuropeCouncilHall/border.bin",
+      "blockdata_filepath": "data/layouts/EuropeCouncilHall/map.bin"
     }
   ]
 }

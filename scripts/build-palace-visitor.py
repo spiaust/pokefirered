@@ -9,6 +9,7 @@ def write(p,j):
 name='EuropePalaceVisitor';dest=r/'data/maps'/name;dest.mkdir(exist_ok=True)
 m=json.loads((r/'data/maps/EuropeEiffelVisitor/map.json').read_text());m['id']='MAP_EUROPE_PALACE_VISITOR';m['name']=name;m['layout']='LAYOUT_EUROPE_PALACE_VISITOR';m['region_map_section']='MAPSEC_EUROPE_ORANIENBURG'
 for e in m['object_events']+m['coord_events']:e['script']=e['script'].replace('EuropeEiffelVisitor',name)
+archive = dict(m['object_events'][0]);archive.update(graphics_id='OBJ_EVENT_GFX_SCIENTIST', x=6, y=3, script='EuropeArchive_Oran');m['object_events'].append(archive)
 write(dest/'map.json',m)
 (dest/'scripts.inc').write_text('''EuropePalaceVisitor_MapScripts::
  .byte 0

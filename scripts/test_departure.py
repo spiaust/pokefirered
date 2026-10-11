@@ -30,7 +30,9 @@ def visit_post(emu):
     emu.press('A', 180)
     emu.finish_dialogue()
     assert emu.location() == POST, emu.location()
-    assert (preserved(emu), emu.var(PAST)) == before
+    from walking_test_helpers import assert_walk_preserved
+    assert_walk_preserved(before[0],preserved(emu))
+    assert emu.var(PAST)==before[1]
 
 
 def back_to_refuge(emu):

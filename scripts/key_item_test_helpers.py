@@ -33,7 +33,8 @@ def toggle_registration(e,item=360):
 def reload(e,name):
     save(e,name);state=preserved(e),e.location(),registered(e)
     e.close();e=Emulator(ROOT/'pokefirered.gba');load_checkpoint(e,name,True)
-    assert (preserved(e),e.location(),registered(e))==state
+    after=preserved(e),e.location(),registered(e)
+    assert after==state,{'party_byte_differences':[(i,a,b) for i,(a,b) in enumerate(zip(state[0][0][1],after[0][0][1])) if a!=b],'other_changes':state[0][1:]!=after[0][1:],'locations':(state[1],after[1]),'registered':(state[2],after[2])}
     return e
 
 

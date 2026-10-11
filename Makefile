@@ -397,3 +397,7 @@ $(ROM): $(ELF)
 # Symbol file (`make syms`)
 $(SYM): $(ELF)
 	$(OBJDUMP) -t $< | sort -u | grep -E "^0[2389]" | $(PERL) -p -e 's/^(\w{8}) (\w).{6} \S+\t(\w{8}) (\S+)$$/\1 \2 \3 \4/g' > $@
+
+# Native rental mount artwork, generated deterministically from code.
+graphics/object_events/pics/misc/europe_lapras_mount.4bpp: scripts/build_lapras_mount.py
+	python3 scripts/build_lapras_mount.py

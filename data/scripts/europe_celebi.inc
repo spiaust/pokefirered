@@ -2,6 +2,8 @@
 EuropeCelebi_Researcher::
 	lock
 	faceplayer
+	goto_if_eq VAR_EUROPE_ARCHIVE_STORY, 1, EuropeArchive_Report
+EuropeCelebi_MainResearcher::
 	goto_if_eq VAR_EUROPE_CELEBI_STORY, 3, EuropeCelebi_Complete
 	goto_if_eq VAR_EUROPE_CELEBI_STORY, 2, EuropeCelebi_Report
 	goto_if_eq VAR_EUROPE_CELEBI_STORY, 1, EuropeCelebi_Directions
@@ -156,6 +158,7 @@ EuropeCelebi_Text_Full::
 	.string "Your vision report stays safe.$"
 EuropeCelebi_Conclusion::
  msgbox EuropeCelebi_ConclusionText
+ setvar VAR_EUROPE_MAIN_CONCLUDED, 1
  call EuropeCase_Synthesis
  goto_if_ne VAR_EUROPE_PORT_ACCOUNT, 1, EuropePortAccount_Ada
  goto_if_ne VAR_EUROPE_SOUTH_ACCOUNT, 1, EuropeSouthAccount_Ada
@@ -168,5 +171,5 @@ EuropeCelebi_ConclusionText::
  .string "keeping their partners close.\p"
  .string "That is what our present-day routes\n"
  .string "need too. OAK can use these notes.\p"
- .string "Keep exploring the landmarks and\n"
- .string "helping the companions you meet.$"
+ .string "MAIN STORY COMPLETE!\n"
+ .string "Keep exploring and helping friends.$"

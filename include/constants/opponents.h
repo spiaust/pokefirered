@@ -766,7 +766,15 @@
 //       only space for 15 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             753
+#define TRAINER_EUROPE_COUNCIL_ALFRED 753
+#define TRAINER_EUROPE_COUNCIL_SOLENE 754
+#define TRAINER_EUROPE_COUNCIL_OTMAR 755
+#define TRAINER_EUROPE_COUNCIL_ELARA 756
+#define TRAINER_EUROPE_COUNCIL_ROWAN 757
+
+#define TRAINER_EUROPE_COUNCIL_COACH 758
+
+#define NUM_TRAINERS                             759
 #define MAX_TRAINERS_COUNT                       768
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

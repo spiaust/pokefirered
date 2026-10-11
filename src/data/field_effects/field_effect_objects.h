@@ -226,6 +226,27 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_SurfBlob =
     .callback = UpdateSurfBlobFieldEffect,
 };
 
+static const struct SpriteFrameImage sPicTable_EuropeLaprasMount[] =
+{
+    overworld_frame(gObjectEventPic_EuropeLaprasMount, 4, 4, 0),
+    overworld_frame(gObjectEventPic_EuropeLaprasMount, 4, 4, 1),
+    overworld_frame(gObjectEventPic_EuropeLaprasMount, 4, 4, 2),
+    overworld_frame(gObjectEventPic_EuropeLaprasMount, 4, 4, 3),
+    overworld_frame(gObjectEventPic_EuropeLaprasMount, 4, 4, 4),
+    overworld_frame(gObjectEventPic_EuropeLaprasMount, 4, 4, 5),
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_EuropeLaprasMount =
+{
+    .tileTag = TAG_NONE,
+    .paletteTag = TAG_NONE,
+    .oam = &gObjectEventBaseOam_32x32,
+    .anims = sAnimTable_SurfBlob,
+    .images = sPicTable_EuropeLaprasMount,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateSurfBlobFieldEffect,
+};
+
 static const struct SpriteFrameImage sPicTable_Arrow[] =
 {
     overworld_frame(gFieldEffectObjectPic_Arrow, 2, 2, 0),

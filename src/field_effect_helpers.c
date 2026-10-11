@@ -9,6 +9,9 @@
 #include "metatile_behavior.h"
 #include "constants/field_effects.h"
 #include "constants/event_objects.h"
+#include "constants/maps.h"
+
+extern const struct SpriteTemplate gFieldEffectObjectTemplate_EuropeLaprasMount;
 #include "constants/songs.h"
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF // duplicate of define in event_object_movement.c
@@ -946,8 +949,15 @@ u32 FldEff_SurfBlob(void)
     u8 spriteId;
     struct Sprite *sprite;
 
+    const struct SpriteTemplate *template = gFieldEffectObjectTemplatePointers[FLDEFFOBJ_SURF_BLOB];
+
     SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 8);
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_SURF_BLOB], gFieldEffectArguments[0], gFieldEffectArguments[1], 0x96);
+    // Both rental rivers use dedicated Lapras art, including native water saves.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON)
+        && (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LONDON)
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_OXFORD)))
+        template = &gFieldEffectObjectTemplate_EuropeLaprasMount;
+    spriteId = CreateSpriteAtEnd(template, gFieldEffectArguments[0], gFieldEffectArguments[1], 0x96);
     if (spriteId != MAX_SPRITES)
     {
         sprite = &gSprites[spriteId];
