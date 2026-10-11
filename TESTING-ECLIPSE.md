@@ -558,7 +558,7 @@ resources. Remaining earned circuit combat, other full starting routes,
 and broad hardware/emulator checks remain before calling this a polished release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `8c8a1006f6c66d97b6ae1e265b058137be77c3a8da81ace4c41c0dc5e9861244`
+SHA-256: `87854257a51e027ebf038ab97ef9f8de2b08a5a3db555d8e0a4f6cd3c33c43b0`
 
 ## Earned six-rescue Mewtwo route
 
@@ -754,4 +754,44 @@ battle balance. Modern move/ability coverage is an adapted native subset, and
 new species reuse an existing cry. The country reserves use shared rates and
 regional levels; further habitat and individual encounter balancing remains.
 
-Final expanded release SHA-256: `63c7b535953831bb62b905acbf1c7567192cf524ebe4d3c594434f5c9e90ad02`.
+Expanded roster release before custom villain artwork SHA-256: `63c7b535953831bb62b905acbf1c7567192cf524ebe4d3c594434f5c9e90ad02`.
+
+## Custom villain uniforms and sprites — 2026-10-11
+
+Eight original character designs now have 64x64 battle portraits and nine-frame
+16x32 walking sheets: Eclipse grunt, Veil, Vex, Rime, Boreal, historical patrol,
+research warden and laboratory director. All 43 affected battles have matching
+map actors, including Germany's conditional laboratory encounter. Dedicated
+trainer and object graphics IDs retain the original Rocket/scientist assets.
+Eclipse and occupation labels replace the reused Rocket/scientist labels for
+these opponents. All enemy parties, items, AI and original prize factors are
+preserved. The new assets add no EWRAM or IWRAM globals.
+
+Verified on the final ROM:
+
+- `test_eclipse_villains_static.py`: eight transparent, palette-indexed portraits,
+  72 nonempty walking frames, native 4bpp limits and every battle/map binding.
+- `test_eclipse_villains.py`: actual native battle introduction for all eight
+  designs; VRAM portraits and palettes match their compiled assets. Every
+  compiled walking frame matches independently packed PNG pixel checksums,
+  and each adjacent field actor is visible with its own correct palette.
+- `test_eclipse_villains_environment.py`: Rime's field palette survives rain,
+  animated night snow and a loaded visible partner. A native trainer victory
+  returns to the same custom actor; normal Save and cold Continue preserve
+  the actor, colors, weather settings and remnant progression.
+- `test_eclipse_environment.py`: existing World Gear, RTC phase transitions,
+  palette composition, weather particles, regional snow, historical tint,
+  indoor clear weather and cold saved settings still pass.
+- `test_shadow_static.py` and `test_continent_static.py`: campaign, map/NPC
+  reachability, reward gates, dialogue widths and encounters still pass.
+
+Rendering tests use explicit chapter/remnant/trainer-defeat fixtures and an
+accelerated battle damage fixture. They verify artwork integration and native
+callbacks rather than combat balance. Only test-created saves were used.
+The walking-sheet build rule explicitly packs 2x4-tile frames, preventing
+horizontal sheets from being treated as one row-major image.
+
+Final agbcc build: EWRAM 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768;
+ROM content 17,275,272 bytes, padded to 32 MiB. Both `pokefirered.gba` and
+`Pokemon-Europe-Eclipse.gba` contain the same verified release.
+Current custom-art release SHA-256: `87854257a51e027ebf038ab97ef9f8de2b08a5a3db555d8e0a4f6cd3c33c43b0`.

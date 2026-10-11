@@ -18,7 +18,10 @@ native-size output enlarged with nearest-neighbor sampling.
 
 Run `python scripts/pack_eclipse_villains.py` with Pillow installed to reproduce
 native PNG and JASC palette assets. The usual ROM build converts those into
-4bpp/LZ and GBA palettes. Battle portraits are 64x64 with index-zero
+4bpp/LZ and GBA palettes. The explicit walking-sheet conversion rule uses
+2x4-tile metatiles, keeping each horizontal-strip frame contiguous.
+`overworld/frame_checksums.json` records all 72 native tile-frame checksums
+computed directly from the indexed PNG pixels. Battle portraits are 64x64 with index-zero
 transparency and at most fifteen visible colors. Overworld sheets contain nine
 16x32 frames in the engine's standard S/N/W idle and walking order; east uses
 native mirroring. All walking designs share one fifteen-color palette. Vex's

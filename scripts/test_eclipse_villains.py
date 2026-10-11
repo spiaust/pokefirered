@@ -73,7 +73,6 @@ def enter_battle(e,target,trainer,name):
  print('PASS:',name,'native field palette and tiles, battle portrait and palette',flush=True)
 
 def main():
- countries=json.loads((ROOT/'data/continent-campaign.json').read_text())['countries']
  groups=json.loads((ROOT/'data/maps/map_groups.json').read_text())['gMapGroup_Continent']
  cases=[('grunt',6,148),('veil',8,164),('patrol',12,196),('warden',13,203),('director',14,210),('vex',21,376),('rime',21,377),('boreal',21,378)]
  for name,stage,trainer in cases:
