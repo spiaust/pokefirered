@@ -1,0 +1,38 @@
+"""Play Rome from the earned Zurich victory without memory fixtures."""
+from emulator import Emulator, ROOT
+from test_celebi import load_checkpoint
+import test_eclipse_natural as natural
+import test_shadow_runtime, test_continent_runtime
+from test_shadow_runtime import talk
+from test_continent_runtime import battle_start
+from test_landmark_cases import save
+from test_oxford_gym import count_pocket
+
+def main():
+ test_shadow_runtime.go=natural.natural_go
+ test_continent_runtime.go=natural.natural_go
+ e=Emulator(ROOT/'pokefirered.gba')
+ try:
+  load_checkpoint(e,'natural-zurich-complete',True)
+  assert e.var(0x408C)==9 and e.var(0x4090)==0
+  for stage,city,checkpoint in ((9,'Rome','natural-seventh-badge'),):
+   talk(e,(10,4));assert e.location()[:2]==(44,stage*2)
+   talk(e,(2,4));battle_start(e,(6,4))
+   result,turns=natural.natural_battle(e)
+   print('Natural',city,':',result,turns,'selections; stage',e.var(0x408C),flush=True)
+   if result==2:
+    assert e.var(0x408C)==stage
+    print('Training required; last earned checkpoint preserved.',flush=True)
+    return
+   assert result==1 and e.var(0x408C)==stage+1
+   assert count_pocket(e,338,0x464,58)==1
+   assert e.read(e.read('gSaveBlock1Ptr')+0xee0+0x826//8,1)&(1<<(0x826%8))
+   talk(e,(2,4));save(e,checkpoint)
+   e.screenshot(ROOT/f'test-output/eclipse-natural-{city.lower()}.png')
+   e.close();e=Emulator(ROOT/'pokefirered.gba');load_checkpoint(e,checkpoint,True)
+   assert e.var(0x408C)==stage+1 and e.var(0x4090)==0
+   assert count_pocket(e,338,0x464,58)==1
+   assert e.read(e.read('gSaveBlock1Ptr')+0xee0+0x826//8,1)&(1<<(0x826%8))
+   print('PASS:',city,'native victory and cold Continue.',flush=True)
+ finally:e.close()
+if __name__=='__main__':main()

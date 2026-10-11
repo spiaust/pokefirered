@@ -76,6 +76,21 @@ def natural_battle(e,limit=1800,learn_moves=()):
  e.finish_dialogue();e.frames(240)
  return outcome,turns
 
+def natural_trainer_battle(e,target):
+ """Handle late grass transitions before talking to a route trainer."""
+ for _ in range(8):
+  try:
+   battle_start(e,target)
+   return natural_battle(e)
+  except AssertionError:
+   if not e.in_battle():raise
+   trainer=bool(e.read('gBattleTypeFlags')&8)
+   outcome,turns=natural_battle(e)
+   if trainer:return outcome,turns
+   assert outcome in (1,4,5,7),('approach encounter',outcome)
+ raise AssertionError('too many encounters before trainer conversation')
+
+
 def natural_go(e,target):
  """Walk normally and battle incidental encounters without field-state edits."""
  for _ in range(30):

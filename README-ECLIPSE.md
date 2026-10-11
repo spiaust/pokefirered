@@ -94,6 +94,11 @@ travel and the shared shops let you prepare a team before challenging the gym.
 Berlin's leader recommends Flying or Psychic moves against her Fighting team.
 The earlier Brussels routes remain available for training a Flying partner
 until it learns a stronger attack.
+Zurich's Veil opens with Magneton and also uses Haunter and Houndoom. Bring
+Fighting or Ground coverage for Magneton and Dark coverage for Haunter.
+Berlin's earned Brick Break TM can upgrade a compatible partner's Fighting
+move. Zurich's Houndoom/Pidgey practice trainer is an alternative if the
+Magneton/Haunter trainer overwhelms your team; train near the boss's level 37.
 
 ## Supplies and evolution
 

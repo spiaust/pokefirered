@@ -14,5 +14,5 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Pre-League legendary encounters: Articuno, Zapdos and Moltres.
 - [x] Postgame legendary encounters: Suicune, Lugia, Ho-Oh and Mewtwo.
 - [ ] Finish natural-level campaign balancing and broad hardware/emulator checks.
-  Natural saved-party coverage now reaches Prague and Vienna (sixth badge);
-  continue with Zurich, Rome and the remaining campaign and postgame.
+  Natural saved-party coverage now reaches Zurich and Rome (seventh badge);
+  continue with Madrid, Lisbon and the remaining campaign and postgame.

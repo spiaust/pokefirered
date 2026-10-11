@@ -173,8 +173,28 @@ experience or AI memory writes are used. Reproduce with
 `scripts/test_eclipse_natural_prague.py`, then
 `scripts/test_eclipse_natural_vienna.py`. The latter also reports a native loss
 without advancing progress if a future balance change makes this party fail.
-These checks extend natural campaign coverage through the sixth badge;
-Zurich onward and the postgame still need natural-level balancing coverage.
+These checks establish natural campaign progression through the sixth badge.
+
+Zurich initially defeats the same party with its level-37 Magneton, Haunter and
+Houndoom. A preparation run teaches the earned Brick Break TM to the level-30
+Nidoqueen through the native TM Case, replacing Double Kick and retaining Bite.
+The first Magneton/Haunter practice trainer can still cause a native blackout.
+The finalized reproducible route uses the Houndoom/Pidgey trainer instead:
+13 victories raise Nidoqueen to level 37, then Veil is defeated in five move
+selections. Native Save and cold Continue preserve the consumed TM, learned
+Brick Break and stage 9. Run `scripts/test_eclipse_natural_zurich.py`; `--training`
+resumes a saved preparation and `--resume` replays the boss from its trained save.
+An earlier mixed-trainer preparation also defeated Veil in six selections.
+
+The saved Zurich party then wins Rome's level-40 Fire gym in 15 selections
+(16 in the earlier preparation branch). `scripts/test_eclipse_natural_rome.py`
+checks the actual seventh badge, earned Overheat TM and stage 10 before and
+after a fresh-emulator cold Continue. All preparation, battles, healing, TM
+teaching and saving use native controls with no stats, inventory, progress,
+experience, damage or AI writes. The natural battle runner now handles a late
+grass encounter interrupting a route trainer's menu, finishing the wild battle
+before retrying the conversation. Madrid onward and postgame natural-level
+balancing, plus broad hardware/emulator checks, remain outstanding.
 
 Legendary checks use explicit stage/purification, Master Ball and disabled
 incidental-encounter fixtures; these are encounter-system checks, not a natural
