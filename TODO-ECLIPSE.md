@@ -21,5 +21,9 @@ The ending keeps League shelters, country travel and repeatable training availab
   Ho-Oh and Mewtwo after it, including cold-saved PC delivery. All six rescues
   were purified using native PC deposits, care and country travel. Timer Balls
   are available in League shops for long battles. Continue with Mewtwo balancing,
-  postgame combat, other starting routes and difficulty balancing.
+  rematch combat, other starting routes and difficulty balancing. The earned
+  champion party completed the Scandinavia hunt and cold-saved its unique
+  reward; Boreal required 13 Hyper Potions and one Revive on this route. The
+  same save then earned the Warsaw garden decision, restored Krakow using
+  purchased materials and cold-saved the Lucky Egg and boxed Eevee adoption.
   Past-map and player palettes survive cold Continue and the modern return.

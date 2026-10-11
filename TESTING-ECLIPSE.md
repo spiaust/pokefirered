@@ -578,3 +578,41 @@ quantities survived cold Continue. This expensive attempt warrants further
 strategy/balance work; it does not establish a comfortable average catch cost.
 The seven guardian saves are separate earned checkpoint branches, not one
 continuous inventory route containing every legendary.
+
+## Earned Scandinavia remnant hunt
+
+`python3 scripts/test_eclipse_natural_nordic.py` continues the earned champion
+party on Normal with Nuzlocke off. It buys 20 Hyper Potions, 10 Revives and
+five Full Restores for 54,000 earned money, then follows Ada through Copenhagen,
+Oslo and Stockholm. Native battles defeat Vex, Rime and Boreal without modified
+levels, damage, opponent HP or victory fixtures. Each victory and the exact
+healed party are cold-saved before continuing.
+
+The successful route used 8/8/10 attack selections and 2/4/13 Hyper Potions
+respectively; Boreal also required one Revive. No Full Restores were consumed.
+Nidoqueen rose from level 60 to 62 and Raichu from 49 to 50. Raichu fainted
+against the faster shadow Crobat; Nidoqueen handled the remainder with native
+coverage and healing. Rime's Weezing is safer for Nidoqueen than the first
+Lapras matchup, which failed to complete in the test harness. These results
+verify one playable route, not comfortable balance for every party.
+
+Ada's unique Shadow Ball TM, completion variable and exact inventory persist
+after cold Continue, and another conversation does not duplicate the reward.
+The native test helper now retries a missing party lookup on the next frame:
+GetMonData can briefly leave boxed bytes decrypted at an emulator frame boundary.
+The helper never changes encrypted Pokémon data.
+
+## Earned Krakow restoration
+
+`python3 scripts/test_eclipse_natural_krakow.py` continues the natural Nordic
+completion. It purchases one Escape Rope, two Super Potions and a Water Stone
+for 4,050 earned money, wins the Warsaw past operation with unmodified battles,
+and chooses the garden through the native keeper dialogue. The saved timeline
+choice opens Krakow restoration. Declining donations preserves materials;
+accepting consumes the exact quantities and changes all three work areas.
+
+The Lucky Egg is awarded once, and the level-30 Eevee adoption reaches native
+PC storage because the party already contains six partners. Its exact boxed
+record, restored garden tiles, adoption flag, reward and prior Nordic completion
+survive cold Continue. The archive branch and capacity failures remain covered
+by separate explicit quest fixtures, not this earned route.

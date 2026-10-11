@@ -155,7 +155,12 @@ def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,re
   if revive_species and not revived and fn in (action,move):
    from test_shadow_runtime import monfield
    from test_oxford_gym import count_pocket
-   target=next(i for i in range(e.read('gPlayerPartyCount',1)) if monfield(e,i,0,0)&65535==revive_species)
+   target=next((i for i in range(e.read('gPlayerPartyCount',1)) if monfield(e,i,0,0)&65535==revive_species),None)
+   # A frame can end inside native GetMonData while its boxed bytes are
+   # temporarily decrypted. Wait for the next frame before selecting a party
+   # member; never change the game's encrypted records to satisfy the test.
+   if target is None:
+    e.frames(1);continue
    if e.read(e.symbols['gPlayerParty']+100*target+86,2)==0 and count_pocket(e,24,0x310,42):
     if fn==move:e.press('B',30)
     use_battle_heal(e,24,revive_species);revived=True;continue
