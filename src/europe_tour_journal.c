@@ -12,7 +12,11 @@ enum {
     TOUR_FOREST, TOUR_GARDENS, TOUR_REMY, TOUR_SURVEY_REPORT,
     TOUR_MARINE, TOUR_WATER_TM, TOUR_LENA, TOUR_KARL,
     TOUR_DELIVERY_REPORT, TOUR_CONRAD, TOUR_ELECTRIC_TM,
-    TOUR_LONDON, TOUR_PARIS, TOUR_BERLIN, TOUR_REWARD, TOUR_COMPLETE
+    TOUR_LONDON, TOUR_PARIS, TOUR_BERLIN, TOUR_REWARD, TOUR_COMPLETE,
+    TOUR_NORDIC = 47, TOUR_KRAKOW = 52, TOUR_KRAKOW_WORK,
+    TOUR_KRAKOW_REWARD, TOUR_CIRCUIT, TOUR_CIRCUIT_MATCHES,
+    TOUR_CIRCUIT_REWARD = 69, TOUR_GUARDIANS, TOUR_CARE_THREE = 77,
+    TOUR_CARE_SIX, TOUR_RESTORED, TOUR_WARSAW_MEMORY
 };
 
 const u8 gEuropeTourMilestones[7][24] = {
@@ -93,9 +97,75 @@ const u8 gEuropeTourLeads[][4][44] = {
     {_("19 / ATHENS3"), _("GREECE"), _("Win the COUNCIL match ahead."), _("Nurse left; next porter right.")},
     {_("20 / ATHENS4"), _("GREECE"), _("Win the COUNCIL match ahead."), _("Nurse left; next porter right.")},
     {_("21 / CHAMPION"), _("GREECE"), _("Win the RIVAL match ahead."), _("Nurse left; next porter right.")},
-    {_("EUROPEAN CHAMPION"), _("All twenty-one chapters are complete."), _("Shelters and training remain open."), _("Visit partners who still need care.")}
+    {_("EUROPEAN CHAMPION"), _("All twenty-one chapters are complete."), _("Shelters and training remain open."), _("Visit partners who still need care.")},
+    {_("HUNT THE ECLIPSE REMNANTS"), _("Find ADA in modern COPENHAGEN."), _("Investigate the surviving northern relays."), _("Country porters connect the capitals.")},
+    {_("COPENHAGEN / VEX"), _("Battle VEX at the Danish relay."), _("Then follow the signal to OSLO."), _("Heal and stock up before each remnant.")},
+    {_("OSLO / RIME"), _("Battle RIME at the Norwegian relay."), _("The final signal leads to STOCKHOLM."), _("Your earlier relay victories stay saved.")},
+    {_("STOCKHOLM / BOREAL"), _("Defeat BOREAL and silence the last relay."), _("Return to ADA in COPENHAGEN afterward."), _("The northern guardians remain available.")},
+    {_("REPORT TO ADA"), _("All three remnant relays are silent."), _("Collect SHADOW BALL in COPENHAGEN."), _("Make room in the TM CASE if needed.")},
+    {_("RESTORE KRAKOW SANCTUARY"), _("Use the KRAKOW porter in modern WARSAW."), _("Speak to the sanctuary caretaker."), _("Your Polish timeline choice shapes it.")},
+    {_("KRAKOW / RESTORATION WORK"), _("Bring an ESCAPE ROPE and two SUPER POTIONS."), _("The last worksite needs a WATER STONE."), _("Speak to each worksite volunteer.")},
+    {_("KRAKOW / CLAIM YOUR REWARD"), _("All three restoration tasks are complete."), _("Speak to the caretaker for a LUCKY EGG."), _("The refuge also offers a rescued partner.")},
+    {_("ENTER THE CHAMPION CIRCUIT"), _("Find STEWART in the Champion shelter."), _("Thirteen stronger rematches await."), _("He also offers a training kit.")},
+    {_("CIRCUIT 01/13 / ELLIS"), _("Next match: LONDON."), _("Normal team level: 64."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 02/13 / MARINE"), _("Next match: PARIS."), _("Normal team level: 65."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 03/13 / SABINE"), _("Next match: BRUSSELS."), _("Normal team level: 66."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 04/13 / MAARTEN"), _("Next match: AMSTERDAM."), _("Normal team level: 67."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 05/13 / GRETA"), _("Next match: BERLIN."), _("Normal team level: 68."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 06/13 / IRENA"), _("Next match: VIENNA."), _("Normal team level: 69."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 07/13 / FLAVIA"), _("Next match: ROME."), _("Normal team level: 70."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 08/13 / INES"), _("Next match: MADRID."), _("Normal team level: 71."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 09/13 / THALIA"), _("Next match: ATHENS / HALL 1."), _("Normal team level: 74."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 10/13 / NIKOS"), _("Next match: ATHENS / HALL 2."), _("Normal team level: 75."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 11/13 / ELENI"), _("Next match: ATHENS / HALL 3."), _("Normal team level: 76."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 12/13 / LEON"), _("Next match: ATHENS / HALL 4."), _("Normal team level: 77."), _("Heal, train and prepare your move coverage.")},
+    {_("CIRCUIT 13/13 / RIVAL"), _("Next match: CHAMPION SHELTER."), _("Normal team level: 80."), _("Heal, train and prepare your move coverage.")},
+    {_("CLAIM THE CIRCUIT MASTER BALL"), _("Return to STEWART in the Champion shelter."), _("Your thirteen victories are recorded."), _("Keep one space in the BALLS pocket.")},
+    {_("GUARDIAN / ARTICUNO"), _("A guardian awaits in modern REYKJAVIK."), _("Look for its partner near the refuge."), _("Save and bring POKE BALLS before battle.")},
+    {_("GUARDIAN / ZAPDOS"), _("A guardian awaits in modern OSLO."), _("Look for its partner near the refuge."), _("Save and bring POKE BALLS before battle.")},
+    {_("GUARDIAN / MOLTRES"), _("A guardian awaits in modern ROME."), _("Look for its partner near the refuge."), _("Save and bring POKE BALLS before battle.")},
+    {_("GUARDIAN / SUICUNE"), _("A guardian awaits in modern HELSINKI."), _("Look for its partner near the refuge."), _("Save and bring POKE BALLS before battle.")},
+    {_("GUARDIAN / LUGIA"), _("A guardian awaits in modern VALLETTA."), _("Look for its partner near the refuge."), _("Save and bring POKE BALLS before battle.")},
+    {_("GUARDIAN / HO-OH"), _("A guardian awaits in modern VIENNA."), _("Look for its partner near the refuge."), _("Save and bring POKE BALLS before battle.")},
+    {_("GUARDIAN / MEWTWO"), _("A guardian awaits in modern BERLIN."), _("Look for its partner near the refuge."), _("Save and bring POKE BALLS before battle.")},
+    {_("REKINDLE THE RAINBOW BEACON"), _("Purify three rescued SHADOW partners."), _("Shelter keepers offer care and rest."), _("HO-OH waits in modern VIENNA afterward.")},
+    {_("FREE THE LABORATORY GUARDIAN"), _("Purify all six rescued SHADOW partners."), _("Use a city PC to bring partners for care."), _("MEWTWO waits in modern BERLIN afterward.")},
+    {_("EUROPE RESTORED"), _("Remnants, sanctuary and circuit complete."), _("All seven guardians have been caught."), _("Keep exploring reserves and rematches.")},
+    {_("REMEMBER WARSAW"), _("Visit WARSAW in the past."), _("Complete its operation and choose a legacy."), _("Return to modern WARSAW for KRAKOW.")}
 
 };
+
+// Read saved postgame objectives without changing their order or rewards.
+static u8 GetPostgameLead(void)
+{
+    u16 circuit = VarGet(VAR_ECLIPSE_CIRCUIT);
+    u16 nordic = VarGet(VAR_ECLIPSE_NORDIC_HUNT);
+    u16 krakow = VarGet(VAR_ECLIPSE_KRAKOW);
+    u8 i;
+    if (circuit >= 1 && circuit <= 13) return TOUR_CIRCUIT_MATCHES + circuit - 1;
+    if (circuit == 14) return TOUR_CIRCUIT_REWARD;
+    if (nordic > 0 && nordic < 5) return TOUR_NORDIC + nordic;
+    if (nordic == 0 && krakow == 0) return TOUR_NORDIC;
+    if (krakow < 3)
+    {
+        if (!(VarGet(VAR_0x40A5) & (1 << 13))) return TOUR_WARSAW_MEMORY;
+        if (krakow == 0) return TOUR_KRAKOW;
+        if (krakow == 2 || (FlagGet(FLAG_0x8D6) && FlagGet(FLAG_0x8D7) && FlagGet(FLAG_0x8D8))) return TOUR_KRAKOW_REWARD;
+        return TOUR_KRAKOW_WORK;
+    }
+    if (nordic == 0) return TOUR_NORDIC;
+    if (circuit == 0) return TOUR_CIRCUIT;
+    for (i = 0; i < 7; i++)
+    {
+        if (!FlagGet(FLAG_0x8CE + i))
+        {
+            if (i == 5 && VarGet(VAR_SHADOW_PURIFIED) < 3) return TOUR_CARE_THREE;
+            if (i == 6 && VarGet(VAR_SHADOW_PURIFIED) < 6) return TOUR_CARE_SIX;
+            return TOUR_GUARDIANS + i;
+        }
+    }
+    return TOUR_RESTORED;
+}
 
 u8 GetEuropeTourLead(void)
 {
@@ -103,7 +173,8 @@ u8 GetEuropeTourLead(void)
     if (VarGet(VAR_SHADOW_STARTED))
     {
         stage = VarGet(VAR_SHADOW_STAGE);
-        return 25 + (stage > 21 ? 21 : stage);
+        if (stage >= 21) return GetPostgameLead();
+        return 25 + stage;
     }
     if (!FlagGet(FLAG_BADGE01_GET))
     {

@@ -48,7 +48,9 @@ def main():
   after=int(next((x.split('=')[1] for x in sys.argv if x.startswith('--after=')),0))
   stop=int(next((x.split('=')[1] for x in sys.argv if x.startswith('--stop=')),13))
   kit='--kit' in sys.argv;legend='--legend' in sys.argv;ready='--ready' in sys.argv
-  load_checkpoint(e,f'natural-circuit-{after}-complete' if after else 'natural-circuit-kit-trained' if ready else 'natural-circuit-prepared' if kit else 'natural-caught-mewtwo' if legend else 'natural-krakow-complete',True)
+  checkpoint=next((x.split('=',1)[1] for x in sys.argv if x.startswith('--checkpoint=')),None)
+  restored='--full-restores' in sys.argv
+  load_checkpoint(e,checkpoint if checkpoint else f'natural-circuit-{after}-complete' if after else 'natural-circuit-kit-trained' if ready else 'natural-circuit-prepared' if kit else 'natural-caught-mewtwo' if legend else 'natural-krakow-complete',True)
   assert e.var(0x408C)==21 and e.var(0x4090)==0 and e.var(0x4091)==0
   if not after and not kit and not ready:
    if not legend:talk(e,(15,29),'YES')
@@ -76,6 +78,7 @@ def main():
    shelter(e,row['map']);talk(e,(2,4))
    if count_pocket(e,21,0x310,42)<10 and money(e)>=12000:buy(e,((21,10,1200),))
    if count_pocket(e,23,0x310,42)<5 and money(e)>=6000:buy(e,((23,10,600),))
+   if restored and count_pocket(e,19,0x310,42)<6 and money(e)>=3000:buy(e,((19,min(6,money(e)//3000),3000),))
    has_mewtwo=any(monfield(e,j,0,0)&65535==150 for j in range(6))
    opener=150 if has_mewtwo else 26 if i==1 else 131 if i==0 else 31
    index=next(j for j in range(6) if monfield(e,j,0,0)&65535==opener)
@@ -83,7 +86,7 @@ def main():
    talk(e,(6,4),'NO');assert e.var(0x40BF)==i+1 and not e.in_battle()
    supplies=tuple(count_pocket(e,item,0x310,42) for item in (21,24,19,23))
    battle_start(e,(6,4));check_team(e,row,0)
-   result,turns=natural.natural_battle(e,limit=7000,status_item=23,healing_item=21,healing_limit=count_pocket(e,21,0x310,42),revive_species=150 if has_mewtwo else 31,matchups={376:31,229:31,197:31,103:229,297:150,3:150,76:150,139:150,141:150,142:150,248:150,62:150,131:150,121:150,230:150,350:150} if has_mewtwo else {76:131,139:26,141:31,142:26,248:31,62:26,131:26,121:26,230:31,350:26},fallback_species=150 if has_mewtwo else 31,finish_low_enemy=True,trace=True)
+   result,turns=natural.natural_battle(e,limit=7000,status_item=23,healing_item=(19,21) if restored else 21,healing_limit=sum(count_pocket(e,n,0x310,42) for n in ((19,21) if restored else (21,))),revive_species=31 if restored and i==10 else 150 if has_mewtwo else 31,matchups={94:150,376:31,229:31,197:31,103:229,297:150,3:150,76:150,139:150,141:150,142:150,248:150,62:150,131:150,121:150,230:150,350:150} if has_mewtwo else {76:131,139:26,141:31,142:26,248:31,62:26,131:26,121:26,230:31,350:26},fallback_species=150 if has_mewtwo else 31,finish_low_enemy=not restored,trace=True)
    spent=tuple(before-count_pocket(e,item,0x310,42) for item,before in zip((21,24,19,23),supplies))
    print('Natural circuit:',row['name'],result,turns,'attack selections; Hyper/Revive/FullRestore/FullHeal',spent,flush=True)
    if result!=1:

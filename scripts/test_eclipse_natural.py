@@ -81,6 +81,12 @@ def use_battle_heal(e,item,target_species=0):
   print('Item menu context:',item,'target',target,'original',current,'order',order,'cursor',e.read(e.symbols['gPartyMenu']+9,1),flush=True)
   e.screenshot(ROOT/'test-output/natural-item-failure.png');e.state(ROOT/'test-output/natural-item-failure.state')
  assert count_pocket(e,item,0x310,42)==before-1
+ # Some restorative acknowledgements return to the Bag before battle resumes.
+ # Close it explicitly rather than confirming its item menu again.
+ for _ in range(30):
+  if e.read(e.symbols['gMain']+4)&~1==e.symbols['BattleMainCB2']&~1:break
+  e.press('B',60)
+ assert e.read(e.symbols['gMain']+4)&~1==e.symbols['BattleMainCB2']&~1
  print('Native battle healing item spent:',item,flush=True)
 
 
@@ -122,10 +128,24 @@ def effective_speed(e,b):
 
 
 def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,revive_species=0,trace=False,matchups=None,fallback_species=0,finish_low_enemy=False,finish=True,status_item=0):
- action=first_symbol('HandleInputChooseAction');move=first_symbol('HandleInputChooseMove');turns=0;heals=0;revived=False
- for _ in range(limit):
+ action=first_symbol('HandleInputChooseAction');move=first_symbol('HandleInputChooseMove');item_return=first_symbol('CompleteWhenChoseItem');turns=0;heals=0;revived=False
+ healing_items=(healing_item,) if isinstance(healing_item,int) else tuple(healing_item)
+ for iteration in range(limit):
   if not e.in_battle():break
+  if trace and iteration and iteration%300==0:
+   print("Battle heartbeat:",iteration,turns,hex(e.read("gBattlerControllerFuncs")&~1),e.read("gBattleMons",2),e.read(e.symbols["gBattleMons"]+40,2),flush=True)
+   e.screenshot(ROOT/"test-output/natural-battle-heartbeat.png");e.state(ROOT/"test-output/natural-battle-heartbeat.state")
   fn=e.read('gBattlerControllerFuncs')&~1
+  if fn==item_return:
+   # Wait for the native menu-return command; A can reopen the Bag as
+   # the following action menu appears with its previous Bag cursor.
+   if e.read(e.symbols['gMain']+4)&~1==e.symbols['BattleMainCB2']&~1:e.frames(30)
+   elif not e.task_active('Task_HandleChooseMonInput'):e.press('B',60)
+   else:e.press('A',30)
+   continue
+  if len(healing_items)>1 and fn in (action,move):
+   from test_oxford_gym import count_pocket
+   healing_item=next((item for item in healing_items if count_pocket(e,item,0x310,42)),0)
   if learn_moves and e.task_active('Task_InputHandler_SelectOrForgetMove'):
    # Normal move-forgetting UI: replace the first move, keeping useful coverage.
    for _ in range(6):

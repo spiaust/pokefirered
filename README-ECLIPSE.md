@@ -323,3 +323,15 @@ GBA RTC support for automatic time; hardware without RTC defaults to daylight.
 A custom emerald/violet European skyline and time rift now frame the larger
 Pokémon logo and Eclipse title. Celebi hovers while the Start prompt blinks.
 Intro credits show 2026, and native New Game / Continue still work.
+
+## Postgame guidance
+
+After becoming Champion, open the map and press SELECT to read the current
+postgame lead. The journal tracks the Scandinavian relays, Warsaw's timeline
+prerequisite, Krakow materials and rewards, each Champion circuit opponent,
+and all seven guardians. Active circuit matches take priority; started
+restoration work remains visible before an unstarted remnant hunt. It also
+explains Ho-Oh's three-purification and Mewtwo's six-purification requirements.
+The displayed rematch levels are for Normal; World Gear difficulty still applies.
+All thirteen circuit rematches and the unique Master Ball now have earned-party,
+native-input coverage through cold saved Continue. Broader balance work remains.

@@ -24,10 +24,12 @@ The ending keeps League shelters, country travel and repeatable training availab
   difficulty settings and award a saved circuit completion reward.
 - [x] Champion training kit: Stewart supplies reusable Surf and one-time
   Thunderbolt/Flamethrower after circuit entry, with saved partial-delivery retry.
-- [x] Earned Normal-mode circuit coverage through ten rematches, with exact
-  party and card persistence after each victory.
-- [ ] Train the postgame party further and finish earned Eleni, Leon and rival
-  circuit battles; verify the natural final Master Ball reward.
+- [x] Earned Normal-mode circuit coverage through all thirteen rematches, with
+  exact party and card persistence after each victory. Eleni, Leon and the
+  rival now pass using native inputs and purchased supplies.
+- [x] Verify the naturally earned unique Master Ball through Save / cold Continue.
+- [x] Add current postgame journal leads for remnants, Krakow, all thirteen
+  rematches, pending rewards, seven guardians and purification prerequisites.
 - [x] Pre-League legendary encounters: Articuno, Zapdos and Moltres.
 - [x] Postgame legendary encounters: Suicune, Lugia, Ho-Oh and Mewtwo.
 - [ ] Finish natural-level campaign balancing and broad hardware/emulator checks.
@@ -38,7 +40,7 @@ The ending keeps League shelters, country travel and repeatable training availab
   Ho-Oh and Mewtwo after it, including cold-saved PC delivery. All six rescues
   were purified using native PC deposits, care and country travel. Timer Balls
   are available in League shops for long battles. Continue with Mewtwo balancing,
-  the last three rematch battles, other starting routes and difficulty balancing. The earned
+  other starting routes, non-legendary rematch teams and difficulty balancing. The earned
   champion party completed the Scandinavia hunt and cold-saved its unique
   reward; Boreal required 13 Hyper Potions and one Revive on this route. The
   same save then earned the Warsaw garden decision, restored Krakow using

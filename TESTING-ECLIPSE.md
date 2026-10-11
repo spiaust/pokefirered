@@ -807,4 +807,48 @@ shortcut handlers are retained; no additional EWRAM or save fields were added.
 
 Final agbcc build: EWRAM 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768;
 ROM content 17,293,164 bytes, padded to 32 MiB. Both ROM aliases match.
-Current release SHA-256: `c8eac326ee8b0331d80550cf23f8b309358acbb08e3eca713ad4499b48c2004b`.
+Previous title release SHA-256: `c8eac326ee8b0331d80550cf23f8b309358acbb08e3eca713ad4499b48c2004b`.
+
+## Earned final rematches and postgame journal — October 11, 2026
+
+The existing Normal-mode, non-Nuzlocke earned party has now completed all
+thirteen Champion circuit matches. The final opponents retain their original
+levels, stats, held items, move PP and native AI. All preparation and combat use
+native buttons: supplies are purchased with earned money, and battle experience
+supplies level gains. Eleni required 31 attack selections, 12 Full Restores,
+10 Full Heals and one Revive. Leon's actual midbattle emulator state was resumed
+after fixing test-controller menu timing; his complete victory was cold-saved.
+The rival required 17 attack selections, 13 Hyper Potions, three Full Restores,
+one Full Heal and one Revive. Each final victory preserved the exact party on
+cold Continue. Stewart then awarded exactly one Master Ball; repeated talk and
+cold Continue preserved the reward flag, completed circuit and Ball quantity.
+
+Test-created checkpoints: `natural-circuit-11-complete.sav`,
+`natural-circuit-12-complete.sav`, `natural-circuit-13-complete.sav` and
+`natural-circuit-complete.sav` in ignored `test-output/`. These are earned saves,
+not forced-victory fixtures. The route includes naturally caught Mewtwo and
+substantial healing supplies; it does not establish balance for every starter,
+a non-legendary party, Hard mode or Nuzlocke.
+
+The reusable earned controller now handles native Bag return timing, potion
+fallback and affordable Full Restore purchases. `prepare_earned_circuit.py`
+prepares the ten-match checkpoint through real shops and optional owned items.
+`test_eclipse_natural_circuit.py --after=11 --full-restores` continues from the
+earned Eleni checkpoint; `--after=12 --full-restores` runs the rival and reward.
+Save helpers wait for native flash completion before exporting battery saves.
+
+`test_eclipse_postgame_journal.py` passes on the final ROM: all 34 postgame
+leads, thirteen match directions, care thresholds, pending rewards, active
+circuit/restoration priority and all 136 native-width text lines. Every journal
+view preserves the party, Bag, location, quest variables and reward flags.
+These lead-selection cases explicitly fixture progress and do not claim battle
+wins. Separate cold Continue of the naturally completed circuit verifies the
+final ROM's compatibility with the earned Master Ball save. Campaign leads at
+stages 0, 12 and 20 retain their original behavior and the seven milestone rows.
+`test_release_title.py` also passes: 2026 intro, animated title, A/Start and cold
+Continue. Campaign and continent static checks retain all maps, rewards,
+dialogue widths and weighted encounter tables.
+
+Final agbcc build: EWRAM 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768;
+ROM content 17,299,452 bytes, padded to 32 MiB. Both ROM aliases match.
+Current release SHA-256: `11eb4fa4b6f8df220087132422488b0aeabb5cf9a8e11f12d49054b566b535cb`.

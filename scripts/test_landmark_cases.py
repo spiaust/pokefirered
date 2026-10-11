@@ -40,7 +40,7 @@ def talk(e,point,d='UP',choice=None):
  else:e.finish_dialogue()
 def save(e,name):
  start_action(e,4)
- for _ in range(5):e.press('A',150)
+ for _ in range(8):e.press('A',240)
  e.battery(ROOT/f'test-output/{name}.sav')
  e.press('B',180);e.press('B',180);e.frames(90)
 def run(row):
