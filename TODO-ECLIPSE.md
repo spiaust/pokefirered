@@ -44,3 +44,6 @@ The ending keeps League shelters, country travel and repeatable training availab
   same save then earned the Warsaw garden decision, restored Krakow using
   purchased materials and cold-saved the Lucky Egg and boxed Eevee adoption.
   Past-map and player palettes survive cold Continue and the modern return.
+
+- [x] Update the intro dates to 2026 and replace the flat title with custom
+  temporal-eclipse artwork, a larger logo and animated Celebi.

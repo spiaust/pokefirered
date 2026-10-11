@@ -794,4 +794,17 @@ horizontal sheets from being treated as one row-major image.
 Final agbcc build: EWRAM 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768;
 ROM content 17,275,272 bytes, padded to 32 MiB. Both `pokefirered.gba` and
 `Pokemon-Europe-Eclipse.gba` contain the same verified release.
-Current custom-art release SHA-256: `87854257a51e027ebf038ab97ef9f8de2b08a5a3db555d8e0a4f6cd3c33c43b0`.
+Previous villain-art release SHA-256: `87854257a51e027ebf038ab97ef9f8de2b08a5a3db555d8e0a4f6cd3c33c43b0`.
+
+## Custom title and 2026 intro — October 11, 2026
+
+`test_release_title.py` passes on the final ROM: fresh boot shows the current-year
+credit canvas, then the custom skyline/rift title. Captures verify native pixels,
+hovering Celebi and the blinking prompt. Start and A each enter New Game.
+A separate cold boot loads the test-created Oslo checkpoint through Continue.
+The original personal save files were never opened. Native title music and
+shortcut handlers are retained; no additional EWRAM or save fields were added.
+
+Final agbcc build: EWRAM 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768;
+ROM content 17,293,164 bytes, padded to 32 MiB. Both ROM aliases match.
+Current release SHA-256: `c8eac326ee8b0331d80550cf23f8b309358acbb08e3eca713ad4499b48c2004b`.

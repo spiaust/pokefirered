@@ -317,3 +317,9 @@ See RESEARCH-ECLIPSE.md for source credits and battle-engine adaptations.
 Automatic World Gear time now reads the emulator/cartridge RTC and follows its
 local clock. DAY and NIGHT provide permanent overrides. An emulator must expose
 GBA RTC support for automatic time; hardware without RTC defaults to daylight.
+
+## Custom 2026 boot screens
+
+A custom emerald/violet European skyline and time rift now frame the larger
+Pokémon logo and Eclipse title. Celebi hovers while the Start prompt blinks.
+Intro credits show 2026, and native New Game / Continue still work.

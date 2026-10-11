@@ -246,9 +246,9 @@ static void SpriteCB_NidorinoAttack(struct Sprite *sprite);
 extern const u32 gMultiBootProgram_PokemonColosseum_Start[];
 extern const u32 gMultiBootProgram_PokemonColosseum_End[];
 
-static const u16 sCopyright_Pal[] = INCBIN_U16("graphics/intro/copyright.gbapal");
-static const u8 sCopyright_Gfx[]  = INCBIN_U8( "graphics/intro/copyright.4bpp.lz");
-static const u8 sCopyright_Map[]  = INCBIN_U8( "graphics/intro/copyright.bin.lz");
+static const u16 sCopyright_Pal[] = INCBIN_U16("graphics/eclipse_title/copyright.gbapal");
+static const u8 sCopyright_Gfx[]  = INCBIN_U8( "graphics/eclipse_title/copyright.4bpp.lz");
+static const u8 sCopyright_Map[]  = INCBIN_U8( "graphics/eclipse_title/copyright.bin.lz");
 
 // Game Freak
 static const u16 sGameFreakBg_Pal[]   = INCBIN_U16("graphics/intro/game_freak/bg.gbapal");
@@ -935,7 +935,7 @@ static bool8 SetUpCopyrightScreen(void)
         DmaFill32(3, 0, OAM, OAM_SIZE);
         DmaFill16(3, 0, PLTT + sizeof(vu16), PLTT_SIZE - sizeof(vu16));
         ResetPaletteFade();
-        LoadCopyrightGraphics(0 * BG_CHAR_SIZE, 7 * BG_SCREEN_SIZE, BG_PLTT_ID(0));
+        LoadCopyrightGraphics(0 * BG_CHAR_SIZE, 31 * BG_SCREEN_SIZE, BG_PLTT_ID(0));
         ScanlineEffect_Stop();
         ResetTasks();
         ResetSpriteData();
@@ -945,7 +945,7 @@ static bool8 SetUpCopyrightScreen(void)
 #else
         BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_WHITEALPHA);
 #endif
-        SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_16COLOR | BGCNT_SCREENBASE(7));
+        SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_16COLOR | BGCNT_SCREENBASE(31));
         EnableInterrupts(INTR_FLAG_VBLANK);
         SetVBlankCallback(VBlankCB_Copyright);
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_BG0_ON);
