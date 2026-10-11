@@ -351,6 +351,11 @@ void BattleLoadOpponentMonSpriteGfx(struct Pokemon *mon, u8 battlerId)
     LoadPalette(buffer, paletteOffset, PLTT_SIZE_4BPP);
     LoadPalette(buffer, BG_PLTT_ID(8) + BG_PLTT_ID(battlerId), PLTT_SIZE_4BPP);
     Free(buffer);
+    if (GetMonData(mon, MON_DATA_UNUSED_RIBBONS, NULL) & 1)
+    {
+        BlendPalette(paletteOffset, 16, 6, RGB(12, 2, 22));
+        CpuCopy32(&gPlttBufferFaded[paletteOffset], &gPlttBufferUnfaded[paletteOffset], PLTT_SIZE_4BPP);
+    }
     if (species == SPECIES_CASTFORM)
     {
         paletteOffset = OBJ_PLTT_ID(battlerId);
@@ -405,6 +410,11 @@ void BattleLoadPlayerMonSpriteGfx(struct Pokemon *mon, u8 battlerId)
     LoadPalette(buffer, paletteOffset, PLTT_SIZE_4BPP);
     LoadPalette(buffer, BG_PLTT_ID(8) + BG_PLTT_ID(battlerId), PLTT_SIZE_4BPP);
     Free(buffer);
+    if (GetMonData(mon, MON_DATA_UNUSED_RIBBONS, NULL) & 1)
+    {
+        BlendPalette(paletteOffset, 16, 6, RGB(12, 2, 22));
+        CpuCopy32(&gPlttBufferFaded[paletteOffset], &gPlttBufferUnfaded[paletteOffset], PLTT_SIZE_4BPP);
+    }
     if (species == SPECIES_CASTFORM)
     {
         paletteOffset = OBJ_PLTT_ID(battlerId);

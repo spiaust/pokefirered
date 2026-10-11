@@ -1,0 +1,1859 @@
+{
+  "title": "Pokemon Europe: Eclipse",
+  "chapters": [
+    {
+      "city": "Oxford",
+      "country": "England",
+      "level": 9,
+      "opponent": "RIVAL",
+      "kind": "rival",
+      "before": "ADA: Welcome to the European League. Your rival believes strength means never needing help. Show them what a partner can do. The station porter will open the next journey after your match.",
+      "after": "{RIVAL}: You won. A League courier vanished near Paris. I am going after the badges, but I will keep an eye out. First, earn your badge here.",
+      "trainer": 100
+    },
+    {
+      "city": "London",
+      "country": "England",
+      "level": 12,
+      "opponent": "ELLIS",
+      "kind": "gym",
+      "before": "ELLIS: Eight countries host our League challenge. Rock is your first test. Team ECLIPSE calls frightened POKEMON powerful. We call that cruelty.",
+      "after": "ELLIS: The BOULDERBADGE is yours. Take the ferry to France. Find ADA's missing courier before ECLIPSE does.",
+      "trainer": 108
+    },
+    {
+      "city": "Paris",
+      "country": "France",
+      "level": 17,
+      "opponent": "MARINE",
+      "kind": "gym",
+      "before": "MARINE: The courier left a sealed research ledger. ECLIPSE stole its key and abandoned a PIKACHU whose heart is closed. Win this match, then meet our rescue keeper.",
+      "after": "MARINE: The CASCADEBADGE is yours. The ledger names Brussels. Take the rescued partner with you if you can. Care opens what force cannot.",
+      "trainer": 116
+    },
+    {
+      "city": "Brussels",
+      "country": "Belgium",
+      "level": 21,
+      "opponent": "SABINE",
+      "kind": "gym",
+      "before": "SABINE: ECLIPSE buys League freight permits to move stolen partners. Our garden shelter intercepted one shipment. Prove your bond before I entrust you with its manifest.",
+      "after": "SABINE: You earned the RAINBOWBADGE. The manifest leads to Amsterdam. Their director VEIL funds the machines through a shipping company.",
+      "trainer": 124
+    },
+    {
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "level": 25,
+      "opponent": "MAARTEN",
+      "kind": "gym",
+      "before": "MAARTEN: VEIL's machines use a signal that suppresses emotion. Your rival chased a freighter without waiting for us. Earn the THUNDERBADGE, then find them in Berlin.",
+      "after": "MAARTEN: The THUNDERBADGE is yours. ECLIPSE stole an archive from Berlin. ADA thinks the signal is much older than this company.",
+      "trainer": 132
+    },
+    {
+      "city": "Berlin",
+      "country": "Germany",
+      "level": 29,
+      "opponent": "GRETA",
+      "kind": "gym",
+      "before": "GRETA: Our archive preserves the work of people who resisted the Nazi regime. Someone stole a wartime laboratory file. German resistance members risked everything to protect their neighbors. Help us protect that memory.",
+      "after": "GRETA: The SOULBADGE is yours. Your birthplace never decides your loyalties. ADA traced the stolen file to Prague. The resistance names in it must remain protected.",
+      "trainer": 140
+    },
+    {
+      "city": "Prague",
+      "country": "Czechia",
+      "level": 32,
+      "opponent": "ECLIPSE",
+      "kind": "enemy",
+      "before": "ADA: ECLIPSE is testing a shadow transmitter in the old freight yard. Your rival tried to destroy it alone and was captured. Defeat the handler and bring everyone out together.",
+      "after": "{RIVAL}: I thought asking for help meant losing. You came anyway. The receiver points to Vienna. From now on we do this together.",
+      "trainer": 148
+    },
+    {
+      "city": "Vienna",
+      "country": "Austria",
+      "level": 35,
+      "opponent": "IRENA",
+      "kind": "gym",
+      "before": "IRENA: The signal can be unmade, but its original frequency is missing. My psychic partners hear a frightened voice inside it. Earn the MARSHBADGE; then we can search the Swiss archive.",
+      "after": "IRENA: The MARSHBADGE is yours. The archive's keeper in Zurich has a clock that reacts to CELEBI. ECLIPSE is trying to use it to reach the past.",
+      "trainer": 156
+    },
+    {
+      "city": "Zurich",
+      "country": "Switzerland",
+      "level": 37,
+      "opponent": "VEIL",
+      "kind": "enemy",
+      "before": "VEIL: Fear creates obedient partners. CELEBI will take me to the original machine, and this time nobody will stop its broadcast. Your sentimental League is already obsolete.",
+      "after": "ADA: VEIL escaped with the clock's core. We recovered its map. It names Rome, Madrid and a final shipping point in Lisbon. CELEBI is following the damage to time.",
+      "trainer": 164
+    },
+    {
+      "city": "Rome",
+      "country": "Italy",
+      "level": 40,
+      "opponent": "FLAVIA",
+      "kind": "gym",
+      "before": "FLAVIA: ECLIPSE recruits trainers by promising instant strength. My partners grew through years of trust. The VOLCANOBADGE belongs to someone who understands that difference.",
+      "after": "FLAVIA: The VOLCANOBADGE is yours. A League ranger intercepted VEIL's message to Madrid. They plan to erase the people who stopped the original experiments.",
+      "trainer": 172
+    },
+    {
+      "city": "Madrid",
+      "country": "Spain",
+      "level": 43,
+      "opponent": "INES",
+      "kind": "gym",
+      "before": "INES: This is your eighth challenge. The EARTHBADGE will qualify you for Athens, but first there are lives to protect. ECLIPSE's ship is leaving Lisbon with the clock core.",
+      "after": "INES: All eight badges! The League can wait. Your rival has found a harbor path in Lisbon. Stop the ship before VEIL can reopen the past.",
+      "trainer": 180
+    },
+    {
+      "city": "Lisbon",
+      "country": "Portugal",
+      "level": 45,
+      "opponent": "ECLIPSE",
+      "kind": "enemy",
+      "before": "{RIVAL}: We will cut the harbor power together. You draw the handler out; I will stop the transmitter. CELEBI is here. Something on that ship is tearing a hole in time.",
+      "after": "ADA: CELEBI opened a path to 1940. We can stop VEIL's fictional shadow experiment and protect its victims. We cannot erase the real war. CELEBI will always offer a way home.",
+      "trainer": 188
+    },
+    {
+      "city": "Paris1940",
+      "country": "France, 1940",
+      "level": 46,
+      "opponent": "PATROL",
+      "kind": "nazi",
+      "before": "MIREILLE: Nazi occupation forces seized our partners for a secret experiment. We are the resistance. Drive off this patrol so our courier can reach a safe house. CELEBI waits beside the return guide.",
+      "after": "MIREILLE: The courier is safe. Her message names a transfer to Warsaw in 1943. CELEBI can follow the clock's echoes. Our struggle is for people and their partners, never for a flag.",
+      "trainer": 196
+    },
+    {
+      "city": "Warsaw1943",
+      "country": "Poland, 1943",
+      "level": 48,
+      "opponent": "WARDEN",
+      "kind": "nazi",
+      "before": "ZOFIA: The underground is moving families away from a fictional research depot. Disable its shadow controller while we open the exit. The real occupation and persecution were human crimes. Our rescue changes this invented operation only.",
+      "after": "ZOFIA: Everyone in the safe house has a route out. The machine's designer moved to Berlin. LENA, a German resistance courier, can get you into its service wing in 1944.",
+      "trainer": 203
+    },
+    {
+      "city": "Berlin1944",
+      "country": "Germany, 1944",
+      "level": 50,
+      "opponent": "DIRECTOR",
+      "kind": "nazi",
+      "before": "LENA: I work inside the laboratory for the resistance. Your cover is a repair courier. If you started in Germany, your local knowledge helps us verify the papers. Once inside, refuse their orders and disable the machine. I will evacuate the partners.",
+      "after": "LENA: The controller is destroyed. VEIL stole a copy, but we kept the names of the resistance out of his hands. We helped this rescue succeed. The war still has its real history. Go home and stop him.",
+      "trainer": 210
+    },
+    {
+      "city": "Geneva",
+      "country": "Switzerland",
+      "level": 52,
+      "opponent": "VEIL",
+      "kind": "enemy",
+      "before": "VEIL: I brought the shadow frequency back. One broadcast will close every heart in the League. Your rival has shut the outer relays, but you will not reach the core.",
+      "after": "ADA: It is over. The broadcast is broken; the rescued partners can heal. The archive will preserve the resistance accounts with care. Your rival is waiting in Athens. Finish the journey you began.",
+      "trainer": 217
+    },
+    {
+      "city": "Athens",
+      "country": "Greece",
+      "level": 54,
+      "opponent": "THALIA",
+      "kind": "elite",
+      "before": "THALIA: Welcome to the European League. Eight badges and the freedom of your partners brought you here. Four council members stand between you and the final rival match. Begin with ice.",
+      "after": "THALIA: First council match complete. Heal and rest if you need to. NIKOS is waiting at the next chamber.",
+      "trainer": 224
+    },
+    {
+      "city": "Athens2",
+      "country": "Greece",
+      "level": 55,
+      "opponent": "NIKOS",
+      "kind": "elite",
+      "before": "NIKOS: Strength is what you choose to protect. My fighting team will test how you turn that choice into action.",
+      "after": "NIKOS: You passed. ELENI studies the fears that remain after a battle. She is your next opponent.",
+      "trainer": 231
+    },
+    {
+      "city": "Athens3",
+      "country": "Greece",
+      "level": 56,
+      "opponent": "ELENI",
+      "kind": "elite",
+      "before": "ELENI: Darkness is not a fault in a partner. A closed heart is an injury. Our ghost and psychic teams have learned to trust again. Show me your team's courage.",
+      "after": "ELENI: Your partners know you will stay with them. LEON waits in the dragon chamber.",
+      "trainer": 238
+    },
+    {
+      "city": "Athens4",
+      "country": "Greece",
+      "level": 57,
+      "opponent": "LEON",
+      "kind": "elite",
+      "before": "LEON: You have crossed countries and centuries. One last council match. Do not mistake a powerful partner for a tool.",
+      "after": "LEON: The council recognizes you. Your rival reached the champion's chamber first. Go meet them as equals.",
+      "trainer": 245
+    },
+    {
+      "city": "Champion",
+      "country": "Greece",
+      "level": 60,
+      "opponent": "RIVAL",
+      "kind": "champion",
+      "before": "{RIVAL}: I used to think a champion stood alone. Now I know who helped me get here. No secrets, no stolen strength. One honest match between us. Ready?",
+      "after": "{RIVAL}: You are the EUROPEAN CHAMPION! ADA records our journey: eight badges, partners rescued, a resistance network protected, and ECLIPSE defeated. CELEBI returns to its forest. The shelters remain open. We will keep traveling together. THE END.",
+      "trainer": 252
+    }
+  ],
+  "trainers": [
+    {
+      "id": 100,
+      "name": "RIVAL",
+      "level": 9,
+      "party": [
+        "PIDGEY",
+        "EEVEE"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 101,
+      "name": "ARI",
+      "level": 6,
+      "party": [
+        "PIDGEY",
+        "EEVEE"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 102,
+      "name": "BEA",
+      "level": 6,
+      "party": [
+        "EEVEE",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 103,
+      "name": "CYRIL",
+      "level": 6,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 104,
+      "name": "DARA",
+      "level": 6,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 105,
+      "name": "EMIL",
+      "level": 6,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 106,
+      "name": "FINN",
+      "level": 6,
+      "party": [
+        "POLIWAG",
+        "SENTRET"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 107,
+      "name": "RIVAL",
+      "level": 8,
+      "party": [
+        "EEVEE",
+        "PIDGEY",
+        "EEVEE"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 108,
+      "name": "ELLIS",
+      "level": 12,
+      "party": [
+        "GEODUDE",
+        "ONIX"
+      ],
+      "kind": "gym"
+    },
+    {
+      "id": 109,
+      "name": "ARI",
+      "level": 9,
+      "party": [
+        "GEODUDE",
+        "ONIX"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 110,
+      "name": "BEA",
+      "level": 9,
+      "party": [
+        "ONIX",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 111,
+      "name": "CYRIL",
+      "level": 9,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 112,
+      "name": "DARA",
+      "level": 9,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 113,
+      "name": "EMIL",
+      "level": 9,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 114,
+      "name": "FINN",
+      "level": 9,
+      "party": [
+        "POLIWAG",
+        "SENTRET"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 115,
+      "name": "RIVAL",
+      "level": 11,
+      "party": [
+        "EEVEE",
+        "PIDGEY",
+        "ONIX"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 116,
+      "name": "MARINE",
+      "level": 17,
+      "party": [
+        "PSYDUCK",
+        "STARYU",
+        "WARTORTLE"
+      ],
+      "kind": "gym"
+    },
+    {
+      "id": 117,
+      "name": "ARI",
+      "level": 14,
+      "party": [
+        "PSYDUCK",
+        "STARYU"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 118,
+      "name": "BEA",
+      "level": 14,
+      "party": [
+        "STARYU",
+        "WARTORTLE"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 119,
+      "name": "CYRIL",
+      "level": 14,
+      "party": [
+        "WARTORTLE",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 120,
+      "name": "DARA",
+      "level": 14,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 121,
+      "name": "EMIL",
+      "level": 14,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 122,
+      "name": "FINN",
+      "level": 14,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 123,
+      "name": "RIVAL",
+      "level": 16,
+      "party": [
+        "EEVEE",
+        "PIDGEY",
+        "WARTORTLE"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 124,
+      "name": "SABINE",
+      "level": 21,
+      "party": [
+        "ODDISH",
+        "GLOOM",
+        "BAYLEEF"
+      ],
+      "kind": "gym"
+    },
+    {
+      "id": 125,
+      "name": "ARI",
+      "level": 18,
+      "party": [
+        "ODDISH",
+        "GLOOM"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 126,
+      "name": "BEA",
+      "level": 18,
+      "party": [
+        "GLOOM",
+        "BAYLEEF"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 127,
+      "name": "CYRIL",
+      "level": 18,
+      "party": [
+        "BAYLEEF",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 128,
+      "name": "DARA",
+      "level": 18,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 129,
+      "name": "EMIL",
+      "level": 18,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 130,
+      "name": "FINN",
+      "level": 18,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 131,
+      "name": "RIVAL",
+      "level": 20,
+      "party": [
+        "EEVEE",
+        "PIDGEY",
+        "BAYLEEF"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 132,
+      "name": "MAARTEN",
+      "level": 25,
+      "party": [
+        "MAGNEMITE",
+        "VOLTORB",
+        "ELECTABUZZ"
+      ],
+      "kind": "gym"
+    },
+    {
+      "id": 133,
+      "name": "ARI",
+      "level": 22,
+      "party": [
+        "MAGNEMITE",
+        "VOLTORB"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 134,
+      "name": "BEA",
+      "level": 22,
+      "party": [
+        "VOLTORB",
+        "ELECTABUZZ"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 135,
+      "name": "CYRIL",
+      "level": 22,
+      "party": [
+        "ELECTABUZZ",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 136,
+      "name": "DARA",
+      "level": 22,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 137,
+      "name": "EMIL",
+      "level": 22,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 138,
+      "name": "FINN",
+      "level": 22,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 139,
+      "name": "RIVAL",
+      "level": 24,
+      "party": [
+        "JOLTEON",
+        "PIDGEOT",
+        "ELECTABUZZ"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 140,
+      "name": "GRETA",
+      "level": 29,
+      "party": [
+        "MACHOP",
+        "PRIMEAPE",
+        "MACHOKE"
+      ],
+      "kind": "gym"
+    },
+    {
+      "id": 141,
+      "name": "ARI",
+      "level": 26,
+      "party": [
+        "MACHOP",
+        "PRIMEAPE"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 142,
+      "name": "BEA",
+      "level": 26,
+      "party": [
+        "PRIMEAPE",
+        "MACHOKE"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 143,
+      "name": "CYRIL",
+      "level": 26,
+      "party": [
+        "MACHOKE",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 144,
+      "name": "DARA",
+      "level": 26,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 145,
+      "name": "EMIL",
+      "level": 26,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 146,
+      "name": "FINN",
+      "level": 26,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 147,
+      "name": "RIVAL",
+      "level": 28,
+      "party": [
+        "JOLTEON",
+        "PIDGEOT",
+        "MACHOKE"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 148,
+      "name": "ECLIPSE",
+      "level": 32,
+      "party": [
+        "GOLBAT",
+        "HOUNDOOM",
+        "HYPNO"
+      ],
+      "kind": "enemy"
+    },
+    {
+      "id": 149,
+      "name": "ARI",
+      "level": 29,
+      "party": [
+        "GOLBAT",
+        "HOUNDOOM"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 150,
+      "name": "BEA",
+      "level": 29,
+      "party": [
+        "HOUNDOOM",
+        "HYPNO"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 151,
+      "name": "CYRIL",
+      "level": 29,
+      "party": [
+        "HYPNO",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 152,
+      "name": "DARA",
+      "level": 29,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 153,
+      "name": "EMIL",
+      "level": 29,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 154,
+      "name": "FINN",
+      "level": 29,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 155,
+      "name": "RIVAL",
+      "level": 31,
+      "party": [
+        "JOLTEON",
+        "PIDGEOT",
+        "HYPNO"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 156,
+      "name": "IRENA",
+      "level": 35,
+      "party": [
+        "ABRA",
+        "KADABRA",
+        "ESPEON"
+      ],
+      "kind": "gym"
+    },
+    {
+      "id": 157,
+      "name": "ARI",
+      "level": 32,
+      "party": [
+        "ABRA",
+        "KADABRA"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 158,
+      "name": "BEA",
+      "level": 32,
+      "party": [
+        "KADABRA",
+        "ESPEON"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 159,
+      "name": "CYRIL",
+      "level": 32,
+      "party": [
+        "ESPEON",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 160,
+      "name": "DARA",
+      "level": 32,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 161,
+      "name": "EMIL",
+      "level": 32,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 162,
+      "name": "FINN",
+      "level": 32,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 163,
+      "name": "RIVAL",
+      "level": 34,
+      "party": [
+        "JOLTEON",
+        "PIDGEOT",
+        "ESPEON"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 164,
+      "name": "VEIL",
+      "level": 37,
+      "party": [
+        "MAGNETON",
+        "HAUNTER",
+        "HOUNDOOM"
+      ],
+      "kind": "enemy"
+    },
+    {
+      "id": 165,
+      "name": "ARI",
+      "level": 34,
+      "party": [
+        "MAGNETON",
+        "HAUNTER"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 166,
+      "name": "BEA",
+      "level": 34,
+      "party": [
+        "HAUNTER",
+        "HOUNDOOM"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 167,
+      "name": "CYRIL",
+      "level": 34,
+      "party": [
+        "HOUNDOOM",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 168,
+      "name": "DARA",
+      "level": 34,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 169,
+      "name": "EMIL",
+      "level": 34,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 170,
+      "name": "FINN",
+      "level": 34,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 171,
+      "name": "RIVAL",
+      "level": 36,
+      "party": [
+        "JOLTEON",
+        "PIDGEOT",
+        "HOUNDOOM"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 172,
+      "name": "FLAVIA",
+      "level": 40,
+      "party": [
+        "VULPIX",
+        "NINETALES",
+        "ARCANINE"
+      ],
+      "kind": "gym"
+    },
+    {
+      "id": 173,
+      "name": "ARI",
+      "level": 37,
+      "party": [
+        "VULPIX",
+        "NINETALES"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 174,
+      "name": "BEA",
+      "level": 37,
+      "party": [
+        "NINETALES",
+        "ARCANINE"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 175,
+      "name": "CYRIL",
+      "level": 37,
+      "party": [
+        "ARCANINE",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 176,
+      "name": "DARA",
+      "level": 37,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 177,
+      "name": "EMIL",
+      "level": 37,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 178,
+      "name": "FINN",
+      "level": 37,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 179,
+      "name": "RIVAL",
+      "level": 39,
+      "party": [
+        "JOLTEON",
+        "PIDGEOT",
+        "ARCANINE"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 180,
+      "name": "INES",
+      "level": 43,
+      "party": [
+        "SANDSLASH",
+        "DUGTRIO",
+        "NIDOQUEEN"
+      ],
+      "kind": "gym"
+    },
+    {
+      "id": 181,
+      "name": "ARI",
+      "level": 40,
+      "party": [
+        "SANDSLASH",
+        "DUGTRIO"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 182,
+      "name": "BEA",
+      "level": 40,
+      "party": [
+        "DUGTRIO",
+        "NIDOQUEEN"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 183,
+      "name": "CYRIL",
+      "level": 40,
+      "party": [
+        "NIDOQUEEN",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 184,
+      "name": "DARA",
+      "level": 40,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 185,
+      "name": "EMIL",
+      "level": 40,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 186,
+      "name": "FINN",
+      "level": 40,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 187,
+      "name": "RIVAL",
+      "level": 42,
+      "party": [
+        "JOLTEON",
+        "PIDGEOT",
+        "NIDOQUEEN"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 188,
+      "name": "ECLIPSE",
+      "level": 45,
+      "party": [
+        "CROBAT",
+        "WEEZING",
+        "MAGNETON",
+        "HOUNDOOM"
+      ],
+      "kind": "enemy"
+    },
+    {
+      "id": 189,
+      "name": "ARI",
+      "level": 42,
+      "party": [
+        "CROBAT",
+        "WEEZING"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 190,
+      "name": "BEA",
+      "level": 42,
+      "party": [
+        "WEEZING",
+        "MAGNETON"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 191,
+      "name": "CYRIL",
+      "level": 42,
+      "party": [
+        "MAGNETON",
+        "HOUNDOOM"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 192,
+      "name": "DARA",
+      "level": 42,
+      "party": [
+        "HOUNDOOM",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 193,
+      "name": "EMIL",
+      "level": 42,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 194,
+      "name": "FINN",
+      "level": 42,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 195,
+      "name": "RIVAL",
+      "level": 44,
+      "party": [
+        "JOLTEON",
+        "PIDGEOT",
+        "HOUNDOOM"
+      ],
+      "kind": "rival"
+    },
+    {
+      "id": 196,
+      "name": "PATROL",
+      "level": 46,
+      "party": [
+        "GOLBAT",
+        "MAGNETON",
+        "HOUNDOOM"
+      ],
+      "kind": "nazi"
+    },
+    {
+      "id": 197,
+      "name": "ARI",
+      "level": 43,
+      "party": [
+        "GOLBAT",
+        "MAGNETON"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 198,
+      "name": "BEA",
+      "level": 43,
+      "party": [
+        "MAGNETON",
+        "HOUNDOOM"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 199,
+      "name": "CYRIL",
+      "level": 43,
+      "party": [
+        "HOUNDOOM",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 200,
+      "name": "DARA",
+      "level": 43,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 201,
+      "name": "EMIL",
+      "level": 43,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 202,
+      "name": "FINN",
+      "level": 43,
+      "party": [
+        "ODDISH",
+        "POLIWAG"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 203,
+      "name": "WARDEN",
+      "level": 48,
+      "party": [
+        "HYPNO",
+        "WEEZING",
+        "HOUNDOOM",
+        "MAGNETON"
+      ],
+      "kind": "nazi"
+    },
+    {
+      "id": 204,
+      "name": "ARI",
+      "level": 45,
+      "party": [
+        "HYPNO",
+        "WEEZING"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 205,
+      "name": "BEA",
+      "level": 45,
+      "party": [
+        "WEEZING",
+        "HOUNDOOM"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 206,
+      "name": "CYRIL",
+      "level": 45,
+      "party": [
+        "HOUNDOOM",
+        "MAGNETON"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 207,
+      "name": "DARA",
+      "level": 45,
+      "party": [
+        "MAGNETON",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 208,
+      "name": "EMIL",
+      "level": 45,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 209,
+      "name": "FINN",
+      "level": 45,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 210,
+      "name": "DIRECTOR",
+      "level": 50,
+      "party": [
+        "MAGNETON",
+        "HYPNO",
+        "CROBAT",
+        "HOUNDOOM"
+      ],
+      "kind": "nazi"
+    },
+    {
+      "id": 211,
+      "name": "ARI",
+      "level": 47,
+      "party": [
+        "MAGNETON",
+        "HYPNO"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 212,
+      "name": "BEA",
+      "level": 47,
+      "party": [
+        "HYPNO",
+        "CROBAT"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 213,
+      "name": "CYRIL",
+      "level": 47,
+      "party": [
+        "CROBAT",
+        "HOUNDOOM"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 214,
+      "name": "DARA",
+      "level": 47,
+      "party": [
+        "HOUNDOOM",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 215,
+      "name": "EMIL",
+      "level": 47,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 216,
+      "name": "FINN",
+      "level": 47,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 217,
+      "name": "VEIL",
+      "level": 52,
+      "party": [
+        "MAGNETON",
+        "TYRANITAR",
+        "HOUNDOOM",
+        "GENGAR",
+        "DRAGONITE"
+      ],
+      "kind": "enemy"
+    },
+    {
+      "id": 218,
+      "name": "ARI",
+      "level": 49,
+      "party": [
+        "MAGNETON",
+        "TYRANITAR"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 219,
+      "name": "BEA",
+      "level": 49,
+      "party": [
+        "TYRANITAR",
+        "HOUNDOOM"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 220,
+      "name": "CYRIL",
+      "level": 49,
+      "party": [
+        "HOUNDOOM",
+        "GENGAR"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 221,
+      "name": "DARA",
+      "level": 49,
+      "party": [
+        "GENGAR",
+        "DRAGONITE"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 222,
+      "name": "EMIL",
+      "level": 49,
+      "party": [
+        "DRAGONITE",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 223,
+      "name": "FINN",
+      "level": 49,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 224,
+      "name": "THALIA",
+      "level": 54,
+      "party": [
+        "DEWGONG",
+        "LAPRAS",
+        "CLOYSTER",
+        "JYNX"
+      ],
+      "kind": "elite"
+    },
+    {
+      "id": 225,
+      "name": "ARI",
+      "level": 51,
+      "party": [
+        "DEWGONG",
+        "LAPRAS"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 226,
+      "name": "BEA",
+      "level": 51,
+      "party": [
+        "LAPRAS",
+        "CLOYSTER"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 227,
+      "name": "CYRIL",
+      "level": 51,
+      "party": [
+        "CLOYSTER",
+        "JYNX"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 228,
+      "name": "DARA",
+      "level": 51,
+      "party": [
+        "JYNX",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 229,
+      "name": "EMIL",
+      "level": 51,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 230,
+      "name": "FINN",
+      "level": 51,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 231,
+      "name": "NIKOS",
+      "level": 55,
+      "party": [
+        "MACHAMP",
+        "HERACROSS",
+        "HITMONLEE",
+        "POLIWRATH"
+      ],
+      "kind": "elite"
+    },
+    {
+      "id": 232,
+      "name": "ARI",
+      "level": 52,
+      "party": [
+        "MACHAMP",
+        "HERACROSS"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 233,
+      "name": "BEA",
+      "level": 52,
+      "party": [
+        "HERACROSS",
+        "HITMONLEE"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 234,
+      "name": "CYRIL",
+      "level": 52,
+      "party": [
+        "HITMONLEE",
+        "POLIWRATH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 235,
+      "name": "DARA",
+      "level": 52,
+      "party": [
+        "POLIWRATH",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 236,
+      "name": "EMIL",
+      "level": 52,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 237,
+      "name": "FINN",
+      "level": 52,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 238,
+      "name": "ELENI",
+      "level": 56,
+      "party": [
+        "GENGAR",
+        "MISDREAVUS",
+        "HYPNO",
+        "ALAKAZAM"
+      ],
+      "kind": "elite"
+    },
+    {
+      "id": 239,
+      "name": "ARI",
+      "level": 53,
+      "party": [
+        "GENGAR",
+        "MISDREAVUS"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 240,
+      "name": "BEA",
+      "level": 53,
+      "party": [
+        "MISDREAVUS",
+        "HYPNO"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 241,
+      "name": "CYRIL",
+      "level": 53,
+      "party": [
+        "HYPNO",
+        "ALAKAZAM"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 242,
+      "name": "DARA",
+      "level": 53,
+      "party": [
+        "ALAKAZAM",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 243,
+      "name": "EMIL",
+      "level": 53,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 244,
+      "name": "FINN",
+      "level": 53,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 245,
+      "name": "LEON",
+      "level": 57,
+      "party": [
+        "DRAGONAIR",
+        "KINGDRA",
+        "GYARADOS",
+        "DRAGONITE"
+      ],
+      "kind": "elite"
+    },
+    {
+      "id": 246,
+      "name": "ARI",
+      "level": 54,
+      "party": [
+        "DRAGONAIR",
+        "KINGDRA"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 247,
+      "name": "BEA",
+      "level": 54,
+      "party": [
+        "KINGDRA",
+        "GYARADOS"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 248,
+      "name": "CYRIL",
+      "level": 54,
+      "party": [
+        "GYARADOS",
+        "DRAGONITE"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 249,
+      "name": "DARA",
+      "level": 54,
+      "party": [
+        "DRAGONITE",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 250,
+      "name": "EMIL",
+      "level": 54,
+      "party": [
+        "PIDGEY",
+        "MAREEP"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 251,
+      "name": "FINN",
+      "level": 54,
+      "party": [
+        "MAREEP",
+        "ODDISH"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 252,
+      "name": "RIVAL",
+      "level": 60,
+      "party": [
+        "PIDGEOT",
+        "JOLTEON",
+        "LAPRAS",
+        "ARCANINE",
+        "HERACROSS",
+        "DRAGONITE"
+      ],
+      "kind": "champion"
+    },
+    {
+      "id": 253,
+      "name": "ARI",
+      "level": 57,
+      "party": [
+        "PIDGEOT",
+        "JOLTEON"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 254,
+      "name": "BEA",
+      "level": 57,
+      "party": [
+        "JOLTEON",
+        "LAPRAS"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 255,
+      "name": "CYRIL",
+      "level": 57,
+      "party": [
+        "LAPRAS",
+        "ARCANINE"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 256,
+      "name": "DARA",
+      "level": 57,
+      "party": [
+        "ARCANINE",
+        "HERACROSS"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 257,
+      "name": "EMIL",
+      "level": 57,
+      "party": [
+        "HERACROSS",
+        "DRAGONITE"
+      ],
+      "kind": "route"
+    },
+    {
+      "id": 258,
+      "name": "FINN",
+      "level": 57,
+      "party": [
+        "DRAGONITE",
+        "PIDGEY"
+      ],
+      "kind": "route"
+    }
+  ],
+  "enemy_trainers": [
+    148,
+    164,
+    188,
+    196,
+    203,
+    210,
+    217
+  ]
+}

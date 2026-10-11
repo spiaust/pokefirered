@@ -1,4 +1,5 @@
 #include "global.h"
+#include "shadow_campaign.h"
 #include "gflib.h"
 #include "battle.h"
 #include "battle_anim.h"
@@ -1635,6 +1636,32 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
         gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
     }
 
+    if (trainerNum >= 100 && trainerNum <= 375 && VarGet(VAR_SHADOW_STARTED))
+    {
+        u8 mode = VarGet(VAR_SHADOW_DIFFICULTY);
+        for (i = 0; i < gTrainers[trainerNum].partySize; i++)
+        {
+            u8 level = GetMonData(&party[i], MON_DATA_LEVEL, NULL);
+            u32 experience;
+            u16 species = GetMonData(&party[i], MON_DATA_SPECIES, NULL);
+            if (mode == 1) level = level > 5 ? level - 4 : 2;
+            if (mode == 2) level = level < 95 ? level + 5 : 100;
+            experience = gExperienceTables[gSpeciesInfo[species].growthRate][level];
+            SetMonData(&party[i], MON_DATA_EXP, &experience);
+            CalculateMonStats(&party[i]);
+            GiveMonInitialMoveset(&party[i]);
+        }
+    }
+    if (trainerNum >= 100 && trainerNum <= 258 && VarGet(VAR_SHADOW_STARTED)
+        && (gTrainers[trainerNum].trainerClass == TRAINER_CLASS_RIVAL_EARLY
+            || gTrainers[trainerNum].trainerClass == TRAINER_CLASS_RIVAL_LATE || trainerNum == 252))
+        Shadow_RivalPartner(party, gTrainers[trainerNum].partySize);
+    if (Shadow_IsEnemyTrainer(trainerNum))
+    {
+        u8 shadow = 1;
+        for (i = 0; i < gTrainers[trainerNum].partySize; i++)
+            SetMonData(&party[i], MON_DATA_UNUSED_RIBBONS, &shadow);
+    }
     return gTrainers[trainerNum].partySize;
 }
 

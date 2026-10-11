@@ -1701,3 +1701,783 @@ const u16 gTilesetPalettes_EuropeSouthamptonPast[][16] =
     INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_ContinentLondon[] = INCBIN_U32("data/tilesets/secondary/continent_london/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentLondon[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_london/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentParis[] = INCBIN_U32("data/tilesets/secondary/continent_paris/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentParis[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_paris/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentBerlin[] = INCBIN_U32("data/tilesets/secondary/continent_berlin/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentBerlin[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_berlin/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentBrussels[] = INCBIN_U32("data/tilesets/secondary/continent_brussels/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentBrussels[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_brussels/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentAmsterdam[] = INCBIN_U32("data/tilesets/secondary/continent_amsterdam/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentAmsterdam[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_amsterdam/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentVienna[] = INCBIN_U32("data/tilesets/secondary/continent_vienna/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentVienna[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vienna/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentPrague[] = INCBIN_U32("data/tilesets/secondary/continent_prague/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentPrague[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_prague/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentBratislava[] = INCBIN_U32("data/tilesets/secondary/continent_bratislava/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentBratislava[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bratislava/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentBern[] = INCBIN_U32("data/tilesets/secondary/continent_bern/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentBern[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bern/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentRome[] = INCBIN_U32("data/tilesets/secondary/continent_rome/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentRome[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_rome/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentAthens[] = INCBIN_U32("data/tilesets/secondary/continent_athens/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentAthens[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_athens/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentMadrid[] = INCBIN_U32("data/tilesets/secondary/continent_madrid/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentMadrid[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_madrid/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentLisbon[] = INCBIN_U32("data/tilesets/secondary/continent_lisbon/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentLisbon[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_lisbon/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentWarsaw[] = INCBIN_U32("data/tilesets/secondary/continent_warsaw/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentWarsaw[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_warsaw/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentLuxembourg[] = INCBIN_U32("data/tilesets/secondary/continent_luxembourg/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentLuxembourg[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_luxembourg/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentCopenhagen[] = INCBIN_U32("data/tilesets/secondary/continent_copenhagen/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentCopenhagen[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_copenhagen/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentOslo[] = INCBIN_U32("data/tilesets/secondary/continent_oslo/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentOslo[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_oslo/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentStockholm[] = INCBIN_U32("data/tilesets/secondary/continent_stockholm/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentStockholm[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_stockholm/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentHelsinki[] = INCBIN_U32("data/tilesets/secondary/continent_helsinki/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentHelsinki[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_helsinki/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentReykjavik[] = INCBIN_U32("data/tilesets/secondary/continent_reykjavik/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentReykjavik[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_reykjavik/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentDublin[] = INCBIN_U32("data/tilesets/secondary/continent_dublin/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentDublin[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_dublin/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentValletta[] = INCBIN_U32("data/tilesets/secondary/continent_valletta/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentValletta[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_valletta/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentBudapest[] = INCBIN_U32("data/tilesets/secondary/continent_budapest/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentBudapest[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_budapest/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentBucharest[] = INCBIN_U32("data/tilesets/secondary/continent_bucharest/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentBucharest[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_bucharest/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentSofia[] = INCBIN_U32("data/tilesets/secondary/continent_sofia/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentSofia[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sofia/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentTirana[] = INCBIN_U32("data/tilesets/secondary/continent_tirana/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentTirana[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tirana/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentBelgrade[] = INCBIN_U32("data/tilesets/secondary/continent_belgrade/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentBelgrade[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_belgrade/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentZagreb[] = INCBIN_U32("data/tilesets/secondary/continent_zagreb/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentZagreb[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_zagreb/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentLjubljana[] = INCBIN_U32("data/tilesets/secondary/continent_ljubljana/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentLjubljana[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_ljubljana/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentSarajevo[] = INCBIN_U32("data/tilesets/secondary/continent_sarajevo/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentSarajevo[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_sarajevo/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentKotor[] = INCBIN_U32("data/tilesets/secondary/continent_kotor/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentKotor[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kotor/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentSkopje[] = INCBIN_U32("data/tilesets/secondary/continent_skopje/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentSkopje[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_skopje/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentMoscow[] = INCBIN_U32("data/tilesets/secondary/continent_moscow/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentMoscow[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_moscow/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentKyiv[] = INCBIN_U32("data/tilesets/secondary/continent_kyiv/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentKyiv[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_kyiv/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentMinsk[] = INCBIN_U32("data/tilesets/secondary/continent_minsk/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentMinsk[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_minsk/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentVilnius[] = INCBIN_U32("data/tilesets/secondary/continent_vilnius/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentVilnius[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_vilnius/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentRiga[] = INCBIN_U32("data/tilesets/secondary/continent_riga/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentRiga[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_riga/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentTallinn[] = INCBIN_U32("data/tilesets/secondary/continent_tallinn/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentTallinn[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_tallinn/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ContinentIstanbul[] = INCBIN_U32("data/tilesets/secondary/continent_istanbul/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ContinentIstanbul[][16] = {
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/00.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/01.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/02.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/03.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/04.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/05.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/06.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/07.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/08.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/09.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/10.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/11.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/12.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/13.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/14.gbapal"),
+ INCBIN_U16("data/tilesets/secondary/continent_istanbul/palettes/15.gbapal"),
+};

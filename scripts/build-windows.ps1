@@ -25,3 +25,5 @@ if (-not $linuxRoot) { throw 'Ubuntu returned an empty project path.' }
 $target = if ($Compare) { 'compare' } else { 'all' }
 & wsl -d Ubuntu --cd $linuxRoot -- bash scripts/build-linux.sh $target --windows-manifests
 if ($LASTEXITCODE -ne 0) { throw 'ROM build failed. See the errors above.' }
+
+Copy-Item -LiteralPath (Join-Path $projectRoot 'pokefirered.gba') -Destination (Join-Path $projectRoot 'Pokemon-Europe-Eclipse.gba') -Force

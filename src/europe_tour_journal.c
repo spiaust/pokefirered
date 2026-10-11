@@ -71,12 +71,40 @@ const u8 gEuropeTourLeads[][4][44] = {
     {_("CLAIM YOUR TOUR REWARD"), _("All three city stamps are recorded."),
      _("Make room in ITEMS for one EXP. SHARE."), _("Talk to a LONDON, PARIS or BERLIN guide.")},
     {_("THREE COUNTRIES EXPLORED"), _("Your three badges and tour reward are"),
-     _("recorded. Keep exploring at your own pace."), _("Use UP/DOWN to check the CELEBI journey.")}
+     _("recorded. Keep exploring at your own pace."), _("Use UP/DOWN to check the CELEBI journey.")},
+    {_("01 / OXFORD"), _("ENGLAND"), _("Win the RIVAL match ahead."), _("Nurse left; next porter right.")},
+    {_("02 / LONDON"), _("ENGLAND"), _("Win the GYM match ahead."), _("Nurse left; next porter right.")},
+    {_("03 / PARIS"), _("FRANCE"), _("Win the GYM match ahead."), _("Nurse left; next porter right.")},
+    {_("04 / BRUSSELS"), _("BELGIUM"), _("Win the GYM match ahead."), _("Nurse left; next porter right.")},
+    {_("05 / AMSTERDAM"), _("NETHERLANDS"), _("Win the GYM match ahead."), _("Nurse left; next porter right.")},
+    {_("06 / BERLIN"), _("GERMANY"), _("Win the GYM match ahead."), _("Nurse left; next porter right.")},
+    {_("07 / PRAGUE"), _("CZECHIA"), _("Win the RESCUE match ahead."), _("Nurse left; next porter right.")},
+    {_("08 / VIENNA"), _("AUSTRIA"), _("Win the GYM match ahead."), _("Nurse left; next porter right.")},
+    {_("09 / ZURICH"), _("SWITZERLAND"), _("Win the RESCUE match ahead."), _("Nurse left; next porter right.")},
+    {_("10 / ROME"), _("ITALY"), _("Win the GYM match ahead."), _("Nurse left; next porter right.")},
+    {_("11 / MADRID"), _("SPAIN"), _("Win the GYM match ahead."), _("Nurse left; next porter right.")},
+    {_("12 / LISBON"), _("PORTUGAL"), _("Win the RESCUE match ahead."), _("Nurse left; next porter right.")},
+    {_("13 / PARIS1940"), _("FRANCE, 1940"), _("Win the RESCUE match ahead."), _("Nurse left; next porter right.")},
+    {_("14 / WARSAW1943"), _("POLAND, 1943"), _("Win the RESCUE match ahead."), _("Nurse left; next porter right.")},
+    {_("15 / BERLIN1944"), _("GERMANY, 1944"), _("Win the RESCUE match ahead."), _("Nurse left; next porter right.")},
+    {_("16 / GENEVA"), _("SWITZERLAND"), _("Win the RESCUE match ahead."), _("Nurse left; next porter right.")},
+    {_("17 / ATHENS"), _("GREECE"), _("Win the COUNCIL match ahead."), _("Nurse left; next porter right.")},
+    {_("18 / ATHENS2"), _("GREECE"), _("Win the COUNCIL match ahead."), _("Nurse left; next porter right.")},
+    {_("19 / ATHENS3"), _("GREECE"), _("Win the COUNCIL match ahead."), _("Nurse left; next porter right.")},
+    {_("20 / ATHENS4"), _("GREECE"), _("Win the COUNCIL match ahead."), _("Nurse left; next porter right.")},
+    {_("21 / CHAMPION"), _("GREECE"), _("Win the RIVAL match ahead."), _("Nurse left; next porter right.")},
+    {_("EUROPEAN CHAMPION"), _("All twenty-one chapters are complete."), _("Shelters and training remain open."), _("Visit partners who still need care.")}
+
 };
 
 u8 GetEuropeTourLead(void)
 {
     u16 stage;
+    if (VarGet(VAR_SHADOW_STARTED))
+    {
+        stage = VarGet(VAR_SHADOW_STAGE);
+        return 25 + (stage > 21 ? 21 : stage);
+    }
     if (!FlagGet(FLAG_BADGE01_GET))
     {
         stage = VarGet(VAR_EUROPE_ENGLAND_STORY);
@@ -118,6 +146,13 @@ u8 GetEuropeTourLead(void)
 
 u8 GetEuropeTourMilestones(void)
 {
+    if (VarGet(VAR_SHADOW_STARTED))
+    {
+        u16 stage = VarGet(VAR_SHADOW_STAGE);
+        return (stage >= 2) | ((stage >= 7) << 1) | ((stage >= 11) << 2)
+            | ((stage >= 12) << 3) | ((stage >= 15) << 4)
+            | ((stage >= 16) << 5) | ((stage >= 21) << 6);
+    }
     return (VarGet(VAR_EUROPE_STAMP_LONDON) != 0)
         | ((VarGet(VAR_EUROPE_STAMP_PARIS) != 0) << 1)
         | ((VarGet(VAR_EUROPE_STAMP_BERLIN) != 0) << 2)
@@ -126,3 +161,9 @@ u8 GetEuropeTourMilestones(void)
         | (FlagGet(FLAG_BADGE02_GET) << 5)
         | (FlagGet(FLAG_BADGE03_GET) << 6);
 }
+
+const u8 gShadowCampaignMilestones[7][24] = {
+ _("FIRST BADGE"), _("RIVAL RESCUED"), _("EIGHT BADGES"),
+ _("TIME PASSAGE OPEN"), _("RESISTANCE HELPED"), _("ECLIPSE DEFEATED"),
+ _("EUROPEAN CHAMPION")
+};

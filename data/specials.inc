@@ -454,4 +454,17 @@ gSpecials::
 	def_special CreateEnemyEventMon
 	def_special EuropeRail_LoadJourney
 	def_special EuropeRail_PrepareJourney
+	def_special Shadow_Resume
+	def_special Shadow_Rescue
+	def_special Shadow_TryPurify
+	def_special Shadow_PrepareVisible
+	def_special Shadow_StartVisible
+	def_special Shadow_CountryStatus
+	def_special Shadow_CountryClear
+	def_special Shadow_CountryMemory
+	def_special Shadow_CountryDecide
+	def_special Shadow_CountryTravel
+	def_special Shadow_ApplyTimeline
+	def_special Shadow_NetworkStatus
+	def_special Shadow_ShowCredits
 gSpecialsEnd::

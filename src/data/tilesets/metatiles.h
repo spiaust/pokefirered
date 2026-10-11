@@ -243,3 +243,120 @@ const u32 gMetatileAttributes_EuropeLeHavrePast[] = INCBIN_U32("data/tilesets/se
 
 const u16 gMetatiles_EuropeSouthamptonPast[] = INCBIN_U16("data/tilesets/secondary/europe_southamptonpast/metatiles.bin");
 const u32 gMetatileAttributes_EuropeSouthamptonPast[] = INCBIN_U32("data/tilesets/secondary/europe_southamptonpast/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentLondon[] = INCBIN_U16("data/tilesets/secondary/continent_london/metatiles.bin");
+const u32 gMetatileAttributes_ContinentLondon[] = INCBIN_U32("data/tilesets/secondary/continent_london/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentParis[] = INCBIN_U16("data/tilesets/secondary/continent_paris/metatiles.bin");
+const u32 gMetatileAttributes_ContinentParis[] = INCBIN_U32("data/tilesets/secondary/continent_paris/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentBerlin[] = INCBIN_U16("data/tilesets/secondary/continent_berlin/metatiles.bin");
+const u32 gMetatileAttributes_ContinentBerlin[] = INCBIN_U32("data/tilesets/secondary/continent_berlin/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentBrussels[] = INCBIN_U16("data/tilesets/secondary/continent_brussels/metatiles.bin");
+const u32 gMetatileAttributes_ContinentBrussels[] = INCBIN_U32("data/tilesets/secondary/continent_brussels/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentAmsterdam[] = INCBIN_U16("data/tilesets/secondary/continent_amsterdam/metatiles.bin");
+const u32 gMetatileAttributes_ContinentAmsterdam[] = INCBIN_U32("data/tilesets/secondary/continent_amsterdam/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentVienna[] = INCBIN_U16("data/tilesets/secondary/continent_vienna/metatiles.bin");
+const u32 gMetatileAttributes_ContinentVienna[] = INCBIN_U32("data/tilesets/secondary/continent_vienna/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentPrague[] = INCBIN_U16("data/tilesets/secondary/continent_prague/metatiles.bin");
+const u32 gMetatileAttributes_ContinentPrague[] = INCBIN_U32("data/tilesets/secondary/continent_prague/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentBratislava[] = INCBIN_U16("data/tilesets/secondary/continent_bratislava/metatiles.bin");
+const u32 gMetatileAttributes_ContinentBratislava[] = INCBIN_U32("data/tilesets/secondary/continent_bratislava/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentBern[] = INCBIN_U16("data/tilesets/secondary/continent_bern/metatiles.bin");
+const u32 gMetatileAttributes_ContinentBern[] = INCBIN_U32("data/tilesets/secondary/continent_bern/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentRome[] = INCBIN_U16("data/tilesets/secondary/continent_rome/metatiles.bin");
+const u32 gMetatileAttributes_ContinentRome[] = INCBIN_U32("data/tilesets/secondary/continent_rome/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentAthens[] = INCBIN_U16("data/tilesets/secondary/continent_athens/metatiles.bin");
+const u32 gMetatileAttributes_ContinentAthens[] = INCBIN_U32("data/tilesets/secondary/continent_athens/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentMadrid[] = INCBIN_U16("data/tilesets/secondary/continent_madrid/metatiles.bin");
+const u32 gMetatileAttributes_ContinentMadrid[] = INCBIN_U32("data/tilesets/secondary/continent_madrid/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentLisbon[] = INCBIN_U16("data/tilesets/secondary/continent_lisbon/metatiles.bin");
+const u32 gMetatileAttributes_ContinentLisbon[] = INCBIN_U32("data/tilesets/secondary/continent_lisbon/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentWarsaw[] = INCBIN_U16("data/tilesets/secondary/continent_warsaw/metatiles.bin");
+const u32 gMetatileAttributes_ContinentWarsaw[] = INCBIN_U32("data/tilesets/secondary/continent_warsaw/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentLuxembourg[] = INCBIN_U16("data/tilesets/secondary/continent_luxembourg/metatiles.bin");
+const u32 gMetatileAttributes_ContinentLuxembourg[] = INCBIN_U32("data/tilesets/secondary/continent_luxembourg/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentCopenhagen[] = INCBIN_U16("data/tilesets/secondary/continent_copenhagen/metatiles.bin");
+const u32 gMetatileAttributes_ContinentCopenhagen[] = INCBIN_U32("data/tilesets/secondary/continent_copenhagen/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentOslo[] = INCBIN_U16("data/tilesets/secondary/continent_oslo/metatiles.bin");
+const u32 gMetatileAttributes_ContinentOslo[] = INCBIN_U32("data/tilesets/secondary/continent_oslo/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentStockholm[] = INCBIN_U16("data/tilesets/secondary/continent_stockholm/metatiles.bin");
+const u32 gMetatileAttributes_ContinentStockholm[] = INCBIN_U32("data/tilesets/secondary/continent_stockholm/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentHelsinki[] = INCBIN_U16("data/tilesets/secondary/continent_helsinki/metatiles.bin");
+const u32 gMetatileAttributes_ContinentHelsinki[] = INCBIN_U32("data/tilesets/secondary/continent_helsinki/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentReykjavik[] = INCBIN_U16("data/tilesets/secondary/continent_reykjavik/metatiles.bin");
+const u32 gMetatileAttributes_ContinentReykjavik[] = INCBIN_U32("data/tilesets/secondary/continent_reykjavik/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentDublin[] = INCBIN_U16("data/tilesets/secondary/continent_dublin/metatiles.bin");
+const u32 gMetatileAttributes_ContinentDublin[] = INCBIN_U32("data/tilesets/secondary/continent_dublin/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentValletta[] = INCBIN_U16("data/tilesets/secondary/continent_valletta/metatiles.bin");
+const u32 gMetatileAttributes_ContinentValletta[] = INCBIN_U32("data/tilesets/secondary/continent_valletta/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentBudapest[] = INCBIN_U16("data/tilesets/secondary/continent_budapest/metatiles.bin");
+const u32 gMetatileAttributes_ContinentBudapest[] = INCBIN_U32("data/tilesets/secondary/continent_budapest/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentBucharest[] = INCBIN_U16("data/tilesets/secondary/continent_bucharest/metatiles.bin");
+const u32 gMetatileAttributes_ContinentBucharest[] = INCBIN_U32("data/tilesets/secondary/continent_bucharest/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentSofia[] = INCBIN_U16("data/tilesets/secondary/continent_sofia/metatiles.bin");
+const u32 gMetatileAttributes_ContinentSofia[] = INCBIN_U32("data/tilesets/secondary/continent_sofia/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentTirana[] = INCBIN_U16("data/tilesets/secondary/continent_tirana/metatiles.bin");
+const u32 gMetatileAttributes_ContinentTirana[] = INCBIN_U32("data/tilesets/secondary/continent_tirana/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentBelgrade[] = INCBIN_U16("data/tilesets/secondary/continent_belgrade/metatiles.bin");
+const u32 gMetatileAttributes_ContinentBelgrade[] = INCBIN_U32("data/tilesets/secondary/continent_belgrade/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentZagreb[] = INCBIN_U16("data/tilesets/secondary/continent_zagreb/metatiles.bin");
+const u32 gMetatileAttributes_ContinentZagreb[] = INCBIN_U32("data/tilesets/secondary/continent_zagreb/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentLjubljana[] = INCBIN_U16("data/tilesets/secondary/continent_ljubljana/metatiles.bin");
+const u32 gMetatileAttributes_ContinentLjubljana[] = INCBIN_U32("data/tilesets/secondary/continent_ljubljana/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentSarajevo[] = INCBIN_U16("data/tilesets/secondary/continent_sarajevo/metatiles.bin");
+const u32 gMetatileAttributes_ContinentSarajevo[] = INCBIN_U32("data/tilesets/secondary/continent_sarajevo/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentKotor[] = INCBIN_U16("data/tilesets/secondary/continent_kotor/metatiles.bin");
+const u32 gMetatileAttributes_ContinentKotor[] = INCBIN_U32("data/tilesets/secondary/continent_kotor/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentSkopje[] = INCBIN_U16("data/tilesets/secondary/continent_skopje/metatiles.bin");
+const u32 gMetatileAttributes_ContinentSkopje[] = INCBIN_U32("data/tilesets/secondary/continent_skopje/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentMoscow[] = INCBIN_U16("data/tilesets/secondary/continent_moscow/metatiles.bin");
+const u32 gMetatileAttributes_ContinentMoscow[] = INCBIN_U32("data/tilesets/secondary/continent_moscow/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentKyiv[] = INCBIN_U16("data/tilesets/secondary/continent_kyiv/metatiles.bin");
+const u32 gMetatileAttributes_ContinentKyiv[] = INCBIN_U32("data/tilesets/secondary/continent_kyiv/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentMinsk[] = INCBIN_U16("data/tilesets/secondary/continent_minsk/metatiles.bin");
+const u32 gMetatileAttributes_ContinentMinsk[] = INCBIN_U32("data/tilesets/secondary/continent_minsk/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentVilnius[] = INCBIN_U16("data/tilesets/secondary/continent_vilnius/metatiles.bin");
+const u32 gMetatileAttributes_ContinentVilnius[] = INCBIN_U32("data/tilesets/secondary/continent_vilnius/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentRiga[] = INCBIN_U16("data/tilesets/secondary/continent_riga/metatiles.bin");
+const u32 gMetatileAttributes_ContinentRiga[] = INCBIN_U32("data/tilesets/secondary/continent_riga/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentTallinn[] = INCBIN_U16("data/tilesets/secondary/continent_tallinn/metatiles.bin");
+const u32 gMetatileAttributes_ContinentTallinn[] = INCBIN_U32("data/tilesets/secondary/continent_tallinn/metatile_attributes.bin");
+
+const u16 gMetatiles_ContinentIstanbul[] = INCBIN_U16("data/tilesets/secondary/continent_istanbul/metatiles.bin");
+const u32 gMetatileAttributes_ContinentIstanbul[] = INCBIN_U32("data/tilesets/secondary/continent_istanbul/metatile_attributes.bin");

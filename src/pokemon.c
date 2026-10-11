@@ -2257,7 +2257,7 @@ void SetBattleMonMoveSlot(struct BattlePokemon *mon, u16 move, u8 slot)
     mon->pp[slot] = gBattleMoves[move].pp;
 }
 
-static void GiveMonInitialMoveset(struct Pokemon *mon)
+void GiveMonInitialMoveset(struct Pokemon *mon)
 {
     GiveBoxMonInitialMoveset(&mon->box);
 }
@@ -2645,6 +2645,17 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             damage = (15 * damage) / 10;
     }
 
+    // The encrypted ribbon nibble follows the Pokemon through party, PC and saves.
+    // Both AI and actual battles use this calculation.
+    if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_POKEDUDE)))
+    {
+        struct Pokemon *attackMon = GetBattlerSide(battlerIdAtk) == B_SIDE_PLAYER
+            ? &gPlayerParty[gBattlerPartyIndexes[battlerIdAtk]] : &gEnemyParty[gBattlerPartyIndexes[battlerIdAtk]];
+        struct Pokemon *defendMon = GetBattlerSide(battlerIdDef) == B_SIDE_PLAYER
+            ? &gPlayerParty[gBattlerPartyIndexes[battlerIdDef]] : &gEnemyParty[gBattlerPartyIndexes[battlerIdDef]];
+        if (GetMonData(attackMon, MON_DATA_UNUSED_RIBBONS, NULL) & 1) damage = damage * 5 / 4;
+        if (GetMonData(defendMon, MON_DATA_UNUSED_RIBBONS, NULL) & 1) damage = damage * 5 / 4;
+    }
     return damage + 2;
 }
 
@@ -3348,7 +3359,10 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
         SET8(mon->level);
         break;
     case MON_DATA_HP:
-        SET16(mon->hp);
+        if (VarGet(VAR_SHADOW_NUZLOCKE) && (GetMonData(mon, MON_DATA_UNUSED_RIBBONS, NULL) & 2))
+            mon->hp = 0;
+        else
+            SET16(mon->hp);
         break;
     case MON_DATA_MAX_HP:
         SET16(mon->maxHP);
@@ -5039,6 +5053,9 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
         holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
     else
         holdEffect = ItemId_GetHoldEffect(heldItem);
+
+    if (GetMonData(mon, MON_DATA_UNUSED_RIBBONS, NULL) & 1)
+        return SPECIES_NONE;
 
     // Prevent evolution with Everstone, unless we're just viewing the party menu with an evolution item
     if (holdEffect == HOLD_EFFECT_PREVENT_EVOLVE && type != EVO_MODE_ITEM_CHECK)

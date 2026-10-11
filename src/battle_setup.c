@@ -1,4 +1,5 @@
 #include "global.h"
+#include "shadow_campaign.h"
 #include "task.h"
 #include "help_system.h"
 #include "overworld.h"
@@ -236,6 +237,7 @@ static bool8 CheckSilphScopeInPokemonTower(u16 mapGroup, u16 mapNum)
 
 void StartWildBattle(void)
 {
+    Shadow_BeginEncounter();
     if (GetSafariZoneFlag())
         DoSafariBattle();
     else if (CheckSilphScopeInPokemonTower(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum))
@@ -309,6 +311,7 @@ void StartOldManTutorialBattle(void)
 
 void StartScriptedWildBattle(void)
 {
+    Shadow_BeginEncounter();
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_WILD_SCRIPTED;

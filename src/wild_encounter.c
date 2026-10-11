@@ -1,4 +1,10 @@
 #include "global.h"
+#include "event_object_movement.h"
+#include "constants/vars.h"
+#include "constants/event_objects.h"
+#include "constants/species.h"
+#include "shadow_campaign.h"
+#include "constants/flags.h"
 #include "random.h"
 #include "wild_encounter.h"
 #include "event_data.h"
@@ -781,4 +787,153 @@ static void AddToWildEncounterRateBuff(u8 encounterRate)
         sWildEncounterData.encounterRateBuff += encounterRate;
     else
         sWildEncounterData.encounterRateBuff = 0;
+}
+
+static u16 Shadow_WildGraphics(u16 species)
+{
+    switch (species)
+    {
+    case SPECIES_SNORLAX: return OBJ_EVENT_GFX_SNORLAX;
+    case SPECIES_SPEAROW: return OBJ_EVENT_GFX_SPEAROW;
+    case SPECIES_CUBONE: return OBJ_EVENT_GFX_CUBONE;
+    case SPECIES_POLIWRATH: return OBJ_EVENT_GFX_POLIWRATH;
+    case SPECIES_CLEFAIRY: return OBJ_EVENT_GFX_CLEFAIRY;
+    case SPECIES_PIDGEOT: return OBJ_EVENT_GFX_PIDGEOT;
+    case SPECIES_JIGGLYPUFF: return OBJ_EVENT_GFX_JIGGLYPUFF;
+    case SPECIES_EEVEE: return OBJ_EVENT_GFX_EEVEE;
+    case SPECIES_PIDGEY: return OBJ_EVENT_GFX_PIDGEY;
+    case SPECIES_CHANSEY: return OBJ_EVENT_GFX_CHANSEY;
+    case SPECIES_OMANYTE: return OBJ_EVENT_GFX_OMANYTE;
+    case SPECIES_KANGASKHAN: return OBJ_EVENT_GFX_KANGASKHAN;
+    case SPECIES_PIKACHU: return OBJ_EVENT_GFX_PIKACHU;
+    case SPECIES_PSYDUCK: return OBJ_EVENT_GFX_PSYDUCK;
+    case SPECIES_NIDORAN_F: return OBJ_EVENT_GFX_NIDORAN_F;
+    case SPECIES_NIDORAN_M: return OBJ_EVENT_GFX_NIDORAN_M;
+    case SPECIES_NIDORINO: return OBJ_EVENT_GFX_NIDORINO;
+    case SPECIES_MEOWTH: return OBJ_EVENT_GFX_MEOWTH;
+    case SPECIES_SEEL: return OBJ_EVENT_GFX_SEEL;
+    case SPECIES_VOLTORB: return OBJ_EVENT_GFX_VOLTORB;
+    case SPECIES_SLOWPOKE: return OBJ_EVENT_GFX_SLOWPOKE;
+    case SPECIES_SLOWBRO: return OBJ_EVENT_GFX_SLOWBRO;
+    case SPECIES_MACHOP: return OBJ_EVENT_GFX_MACHOP;
+    case SPECIES_WIGGLYTUFF: return OBJ_EVENT_GFX_WIGGLYTUFF;
+    case SPECIES_DODUO: return OBJ_EVENT_GFX_DODUO;
+    case SPECIES_FEAROW: return OBJ_EVENT_GFX_FEAROW;
+    case SPECIES_MACHOKE: return OBJ_EVENT_GFX_MACHOKE;
+    case SPECIES_LAPRAS: return OBJ_EVENT_GFX_LAPRAS;
+    case SPECIES_ZAPDOS: return OBJ_EVENT_GFX_ZAPDOS;
+    case SPECIES_MOLTRES: return OBJ_EVENT_GFX_MOLTRES;
+    case SPECIES_ARTICUNO: return OBJ_EVENT_GFX_ARTICUNO;
+    case SPECIES_MEWTWO: return OBJ_EVENT_GFX_MEWTWO;
+    case SPECIES_MEW: return OBJ_EVENT_GFX_MEW;
+    case SPECIES_ENTEI: return OBJ_EVENT_GFX_ENTEI;
+    case SPECIES_SUICUNE: return OBJ_EVENT_GFX_SUICUNE;
+    case SPECIES_RAIKOU: return OBJ_EVENT_GFX_RAIKOU;
+    case SPECIES_LUGIA: return OBJ_EVENT_GFX_LUGIA;
+    case SPECIES_HO_OH: return OBJ_EVENT_GFX_HO_OH;
+    case SPECIES_CELEBI: return OBJ_EVENT_GFX_CELEBI;
+    case SPECIES_KABUTO: return OBJ_EVENT_GFX_KABUTO;
+    case SPECIES_ABRA: return OBJ_EVENT_GFX_ABRA;
+    case SPECIES_ALAKAZAM: return OBJ_EVENT_GFX_ALAKAZAM;
+    case SPECIES_ARCANINE: return OBJ_EVENT_GFX_ARCANINE;
+    case SPECIES_BAYLEEF: return OBJ_EVENT_GFX_BAYLEEF;
+    case SPECIES_CLOYSTER: return OBJ_EVENT_GFX_CLOYSTER;
+    case SPECIES_CROBAT: return OBJ_EVENT_GFX_CROBAT;
+    case SPECIES_DEWGONG: return OBJ_EVENT_GFX_DEWGONG;
+    case SPECIES_DRAGONAIR: return OBJ_EVENT_GFX_DRAGONAIR;
+    case SPECIES_DRAGONITE: return OBJ_EVENT_GFX_DRAGONITE;
+    case SPECIES_DRATINI: return OBJ_EVENT_GFX_DRATINI;
+    case SPECIES_DUGTRIO: return OBJ_EVENT_GFX_DUGTRIO;
+    case SPECIES_ELECTABUZZ: return OBJ_EVENT_GFX_ELECTABUZZ;
+    case SPECIES_ESPEON: return OBJ_EVENT_GFX_ESPEON;
+    case SPECIES_GENGAR: return OBJ_EVENT_GFX_GENGAR;
+    case SPECIES_GEODUDE: return OBJ_EVENT_GFX_GEODUDE;
+    case SPECIES_GLOOM: return OBJ_EVENT_GFX_GLOOM;
+    case SPECIES_GOLBAT: return OBJ_EVENT_GFX_GOLBAT;
+    case SPECIES_GYARADOS: return OBJ_EVENT_GFX_GYARADOS;
+    case SPECIES_HAUNTER: return OBJ_EVENT_GFX_HAUNTER;
+    case SPECIES_HERACROSS: return OBJ_EVENT_GFX_HERACROSS;
+    case SPECIES_HITMONLEE: return OBJ_EVENT_GFX_HITMONLEE;
+    case SPECIES_HOUNDOOM: return OBJ_EVENT_GFX_HOUNDOOM;
+    case SPECIES_HOUNDOUR: return OBJ_EVENT_GFX_HOUNDOUR;
+    case SPECIES_HYPNO: return OBJ_EVENT_GFX_HYPNO;
+    case SPECIES_JOLTEON: return OBJ_EVENT_GFX_JOLTEON;
+    case SPECIES_JYNX: return OBJ_EVENT_GFX_JYNX;
+    case SPECIES_KADABRA: return OBJ_EVENT_GFX_KADABRA;
+    case SPECIES_KINGDRA: return OBJ_EVENT_GFX_KINGDRA;
+    case SPECIES_KRABBY: return OBJ_EVENT_GFX_KRABBY;
+    case SPECIES_MACHAMP: return OBJ_EVENT_GFX_MACHAMP;
+    case SPECIES_MAGNEMITE: return OBJ_EVENT_GFX_MAGNEMITE;
+    case SPECIES_MAGNETON: return OBJ_EVENT_GFX_MAGNETON;
+    case SPECIES_MAREEP: return OBJ_EVENT_GFX_MAREEP;
+    case SPECIES_MISDREAVUS: return OBJ_EVENT_GFX_MISDREAVUS;
+    case SPECIES_NIDOQUEEN: return OBJ_EVENT_GFX_NIDOQUEEN;
+    case SPECIES_NINETALES: return OBJ_EVENT_GFX_NINETALES;
+    case SPECIES_ODDISH: return OBJ_EVENT_GFX_ODDISH;
+    case SPECIES_ONIX: return OBJ_EVENT_GFX_ONIX;
+    case SPECIES_POLIWAG: return OBJ_EVENT_GFX_POLIWAG;
+    case SPECIES_PRIMEAPE: return OBJ_EVENT_GFX_PRIMEAPE;
+    case SPECIES_SANDSLASH: return OBJ_EVENT_GFX_SANDSLASH;
+    case SPECIES_SENTRET: return OBJ_EVENT_GFX_SENTRET;
+    case SPECIES_STARYU: return OBJ_EVENT_GFX_STARYU;
+    case SPECIES_TYRANITAR: return OBJ_EVENT_GFX_TYRANITAR;
+    case SPECIES_VULPIX: return OBJ_EVENT_GFX_VULPIX;
+    case SPECIES_WARTORTLE: return OBJ_EVENT_GFX_WARTORTLE;
+    case SPECIES_WEEZING: return OBJ_EVENT_GFX_WEEZING;
+    default: return 0xFFFF;
+    }
+}
+void Shadow_PrepareVisible(void)
+{
+    u16 header = GetCurrentMapWildMonHeaderId();
+    u8 tries;
+    FlagSet(FLAG_0x8C5);
+    if (VarGet(VAR_SHADOW_HIDE_WILD) || header == HEADER_NONE || !gWildMonHeaders[header].landMonsInfo) return;
+    if (Random() % 100 >= gWildMonHeaders[header].landMonsInfo->encounterRate * 3) return;
+    for (tries = 0; tries < 24; tries++)
+    {
+        const struct WildPokemon *mon = &gWildMonHeaders[header].landMonsInfo->wildPokemon[ChooseWildMonIndex_Land()];
+        u16 species = mon->species;
+        u16 graphics;
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_CONTINENT_LONDON) && !Shadow_IsPast())
+        {
+            u16 country = gSaveBlock1Ptr->location.mapNum / 2;
+            u16 mask = 1 << (country % 16);
+            if ((VarGet(VAR_0x40A5 + country / 16) & mask) && Random() % 4 == 0)
+                species = VarGet(VAR_0x40A2 + country / 16) & mask ? SPECIES_EEVEE : SPECIES_VOLTORB;
+        }
+        graphics = Shadow_WildGraphics(species);
+        if (graphics == 0xFFFF) continue;
+        VarSet(VAR_SHADOW_WILD_SPECIES, species);
+        VarSet(VAR_SHADOW_WILD_LEVEL, ChooseWildMonLevel(mon));
+        VarSet(VAR_OBJ_GFX_ID_0, graphics);
+        FlagClear(FLAG_0x8C5);
+        return;
+    }
+}
+void Shadow_StartVisible(void)
+{
+    GenerateWildMon(VarGet(VAR_SHADOW_WILD_SPECIES), VarGet(VAR_SHADOW_WILD_LEVEL), 0);
+}
+
+void Shadow_VisibleFieldStep(void)
+{
+    u8 group = gSaveBlock1Ptr->location.mapGroup;
+    u8 map = gSaveBlock1Ptr->location.mapNum;
+    u8 localId, objectId;
+    u16 timer;
+    if (group == MAP_GROUP(MAP_CONTINENT_LONDON)) localId = 6;
+    else if (group == MAP_GROUP(MAP_SHADOW_OXFORD) && (map & 1)) localId = gMapHeader.events->objectEventCount;
+    else return;
+    if (VarGet(VAR_SHADOW_HIDE_WILD))
+    {
+        RemoveObjectEventByLocalIdAndMap(localId, map, group);
+        FlagSet(FLAG_0x8C5);
+        return;
+    }
+    timer = (VarGet(VAR_SHADOW_SPAWN_TIMER) + 1) % 8;
+    VarSet(VAR_SHADOW_SPAWN_TIMER, timer);
+    if (timer || !TryGetObjectEventIdByLocalIdAndMap(localId, map, group, &objectId)) return;
+    Shadow_PrepareVisible();
+    if (!FlagGet(FLAG_0x8C5)) TrySpawnObjectEvent(localId, map, group);
 }

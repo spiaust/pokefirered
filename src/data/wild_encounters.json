@@ -25575,6 +25575,6837 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_SHADOW_OXFORD_ROUTE",
+          "base_label": "sShadowOxfordRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_EEVEE"
+              },
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_EEVEE"
+              },
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 4,
+                "max_level": 7,
+                "species": "SPECIES_MAREEP"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_LONDON_ROUTE",
+          "base_label": "sShadowLondonRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_MAREEP"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_PARIS_ROUTE",
+          "base_label": "sShadowParisRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_WARTORTLE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_STARYU"
+              },
+              {
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_WARTORTLE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_BRUSSELS_ROUTE",
+          "base_label": "sShadowBrusselsRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_GLOOM"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_BAYLEEF"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_GLOOM"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_BAYLEEF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_AMSTERDAM_ROUTE",
+          "base_label": "sShadowAmsterdamRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_MAGNEMITE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_ELECTABUZZ"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_MAGNEMITE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 20,
+                "max_level": 23,
+                "species": "SPECIES_ELECTABUZZ"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_BERLIN_ROUTE",
+          "base_label": "sShadowBerlinRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_PRIMEAPE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_MACHOKE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_PRIMEAPE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_MACHOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_PRAGUE_ROUTE",
+          "base_label": "sShadowPragueRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_HYPNO"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_HYPNO"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_VIENNA_ROUTE",
+          "base_label": "sShadowViennaRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_KADABRA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_ESPEON"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_KADABRA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_ESPEON"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_ZURICH_ROUTE",
+          "base_label": "sShadowZurichRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_HAUNTER"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_HAUNTER"
+              },
+              {
+                "min_level": 32,
+                "max_level": 35,
+                "species": "SPECIES_HOUNDOOM"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_ROME_ROUTE",
+          "base_label": "sShadowRomeRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_VULPIX"
+              },
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_NINETALES"
+              },
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_ARCANINE"
+              },
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_VULPIX"
+              },
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_NINETALES"
+              },
+              {
+                "min_level": 35,
+                "max_level": 38,
+                "species": "SPECIES_ARCANINE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_MADRID_ROUTE",
+          "base_label": "sShadowMadridRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_SANDSLASH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_NIDOQUEEN"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_SANDSLASH"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 38,
+                "max_level": 41,
+                "species": "SPECIES_NIDOQUEEN"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_LISBON_ROUTE",
+          "base_label": "sShadowLisbonRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_CROBAT"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_WEEZING"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_CROBAT"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_WEEZING"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_PARIS1940_ROUTE",
+          "base_label": "sShadowParis1940Route",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_HOUNDOOM"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_WARSAW1943_ROUTE",
+          "base_label": "sShadowWarsaw1943Route",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_HYPNO"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_WEEZING"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_HYPNO"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_WEEZING"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_BERLIN1944_ROUTE",
+          "base_label": "sShadowBerlin1944Route",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_HYPNO"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_CROBAT"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_HYPNO"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_GENEVA_ROUTE",
+          "base_label": "sShadowGenevaRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_TYRANITAR"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_GENGAR"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_DRAGONITE"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_MAGNETON"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_ATHENS_ROUTE",
+          "base_label": "sShadowAthensRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_DEWGONG"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_LAPRAS"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_CLOYSTER"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_JYNX"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_DEWGONG"
+              },
+              {
+                "min_level": 49,
+                "max_level": 52,
+                "species": "SPECIES_LAPRAS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_ATHENS2_ROUTE",
+          "base_label": "sShadowAthens2Route",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_HITMONLEE"
+              },
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_POLIWRATH"
+              },
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 50,
+                "max_level": 53,
+                "species": "SPECIES_HERACROSS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_ATHENS3_ROUTE",
+          "base_label": "sShadowAthens3Route",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_GENGAR"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_MISDREAVUS"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_HYPNO"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_ALAKAZAM"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_GENGAR"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_MISDREAVUS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_ATHENS4_ROUTE",
+          "base_label": "sShadowAthens4Route",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_KINGDRA"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_DRAGONITE"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_ABRA"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 52,
+                "max_level": 55,
+                "species": "SPECIES_KINGDRA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SHADOW_CHAMPION_ROUTE",
+          "base_label": "sShadowChampionRoute",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_PIDGEOT"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_JOLTEON"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_LAPRAS"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_ARCANINE"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_DRAGONITE"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_MAREEP"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_ABRA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_LONDON",
+          "base_label": "gContinentLondon",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_LONDON_PAST",
+          "base_label": "gContinentLondonPast",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_PARIS",
+          "base_label": "gContinentParis",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_PARIS_PAST",
+          "base_label": "gContinentParisPast",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BERLIN",
+          "base_label": "gContinentBerlin",
+          "land_mons": {
+            "encounter_rate": 22,
+            "mons": [
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BERLIN_PAST",
+          "base_label": "gContinentBerlinPast",
+          "land_mons": {
+            "encounter_rate": 22,
+            "mons": [
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BRUSSELS",
+          "base_label": "gContinentBrussels",
+          "land_mons": {
+            "encounter_rate": 23,
+            "mons": [
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BRUSSELS_PAST",
+          "base_label": "gContinentBrusselsPast",
+          "land_mons": {
+            "encounter_rate": 23,
+            "mons": [
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_AMSTERDAM",
+          "base_label": "gContinentAmsterdam",
+          "land_mons": {
+            "encounter_rate": 24,
+            "mons": [
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_AMSTERDAM_PAST",
+          "base_label": "gContinentAmsterdamPast",
+          "land_mons": {
+            "encounter_rate": 24,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_VIENNA",
+          "base_label": "gContinentVienna",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_VIENNA_PAST",
+          "base_label": "gContinentViennaPast",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_PRAGUE",
+          "base_label": "gContinentPrague",
+          "land_mons": {
+            "encounter_rate": 26,
+            "mons": [
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_PRAGUE_PAST",
+          "base_label": "gContinentPraguePast",
+          "land_mons": {
+            "encounter_rate": 26,
+            "mons": [
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BRATISLAVA",
+          "base_label": "gContinentBratislava",
+          "land_mons": {
+            "encounter_rate": 27,
+            "mons": [
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BRATISLAVA_PAST",
+          "base_label": "gContinentBratislavaPast",
+          "land_mons": {
+            "encounter_rate": 27,
+            "mons": [
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BERN",
+          "base_label": "gContinentBern",
+          "land_mons": {
+            "encounter_rate": 28,
+            "mons": [
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BERN_PAST",
+          "base_label": "gContinentBernPast",
+          "land_mons": {
+            "encounter_rate": 28,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_ROME",
+          "base_label": "gContinentRome",
+          "land_mons": {
+            "encounter_rate": 29,
+            "mons": [
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_ROME_PAST",
+          "base_label": "gContinentRomePast",
+          "land_mons": {
+            "encounter_rate": 29,
+            "mons": [
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_ATHENS",
+          "base_label": "gContinentAthens",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_ATHENS_PAST",
+          "base_label": "gContinentAthensPast",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_MADRID",
+          "base_label": "gContinentMadrid",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_MADRID_PAST",
+          "base_label": "gContinentMadridPast",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_LISBON",
+          "base_label": "gContinentLisbon",
+          "land_mons": {
+            "encounter_rate": 22,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_LISBON_PAST",
+          "base_label": "gContinentLisbonPast",
+          "land_mons": {
+            "encounter_rate": 22,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_WARSAW",
+          "base_label": "gContinentWarsaw",
+          "land_mons": {
+            "encounter_rate": 23,
+            "mons": [
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_WARSAW_PAST",
+          "base_label": "gContinentWarsawPast",
+          "land_mons": {
+            "encounter_rate": 23,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_LUXEMBOURG",
+          "base_label": "gContinentLuxembourg",
+          "land_mons": {
+            "encounter_rate": 24,
+            "mons": [
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_LUXEMBOURG_PAST",
+          "base_label": "gContinentLuxembourgPast",
+          "land_mons": {
+            "encounter_rate": 24,
+            "mons": [
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_COPENHAGEN",
+          "base_label": "gContinentCopenhagen",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_COPENHAGEN_PAST",
+          "base_label": "gContinentCopenhagenPast",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_OSLO",
+          "base_label": "gContinentOslo",
+          "land_mons": {
+            "encounter_rate": 26,
+            "mons": [
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_OSLO_PAST",
+          "base_label": "gContinentOsloPast",
+          "land_mons": {
+            "encounter_rate": 26,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_STOCKHOLM",
+          "base_label": "gContinentStockholm",
+          "land_mons": {
+            "encounter_rate": 27,
+            "mons": [
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_STOCKHOLM_PAST",
+          "base_label": "gContinentStockholmPast",
+          "land_mons": {
+            "encounter_rate": 27,
+            "mons": [
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_HELSINKI",
+          "base_label": "gContinentHelsinki",
+          "land_mons": {
+            "encounter_rate": 28,
+            "mons": [
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_HELSINKI_PAST",
+          "base_label": "gContinentHelsinkiPast",
+          "land_mons": {
+            "encounter_rate": 28,
+            "mons": [
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_REYKJAVIK",
+          "base_label": "gContinentReykjavik",
+          "land_mons": {
+            "encounter_rate": 29,
+            "mons": [
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_REYKJAVIK_PAST",
+          "base_label": "gContinentReykjavikPast",
+          "land_mons": {
+            "encounter_rate": 29,
+            "mons": [
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_DUBLIN",
+          "base_label": "gContinentDublin",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_DUBLIN_PAST",
+          "base_label": "gContinentDublinPast",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_VALLETTA",
+          "base_label": "gContinentValletta",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_VALLETTA_PAST",
+          "base_label": "gContinentVallettaPast",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BUDAPEST",
+          "base_label": "gContinentBudapest",
+          "land_mons": {
+            "encounter_rate": 22,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BUDAPEST_PAST",
+          "base_label": "gContinentBudapestPast",
+          "land_mons": {
+            "encounter_rate": 22,
+            "mons": [
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BUCHAREST",
+          "base_label": "gContinentBucharest",
+          "land_mons": {
+            "encounter_rate": 23,
+            "mons": [
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BUCHAREST_PAST",
+          "base_label": "gContinentBucharestPast",
+          "land_mons": {
+            "encounter_rate": 23,
+            "mons": [
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_SOFIA",
+          "base_label": "gContinentSofia",
+          "land_mons": {
+            "encounter_rate": 24,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_SOFIA_PAST",
+          "base_label": "gContinentSofiaPast",
+          "land_mons": {
+            "encounter_rate": 24,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_TIRANA",
+          "base_label": "gContinentTirana",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_TIRANA_PAST",
+          "base_label": "gContinentTiranaPast",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BELGRADE",
+          "base_label": "gContinentBelgrade",
+          "land_mons": {
+            "encounter_rate": 26,
+            "mons": [
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_BELGRADE_PAST",
+          "base_label": "gContinentBelgradePast",
+          "land_mons": {
+            "encounter_rate": 26,
+            "mons": [
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_ZAGREB",
+          "base_label": "gContinentZagreb",
+          "land_mons": {
+            "encounter_rate": 27,
+            "mons": [
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 19,
+                "max_level": 22,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_ZAGREB_PAST",
+          "base_label": "gContinentZagrebPast",
+          "land_mons": {
+            "encounter_rate": 27,
+            "mons": [
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_LJUBLJANA",
+          "base_label": "gContinentLjubljana",
+          "land_mons": {
+            "encounter_rate": 28,
+            "mons": [
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_LJUBLJANA_PAST",
+          "base_label": "gContinentLjubljanaPast",
+          "land_mons": {
+            "encounter_rate": 28,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_SARAJEVO",
+          "base_label": "gContinentSarajevo",
+          "land_mons": {
+            "encounter_rate": 29,
+            "mons": [
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_SARAJEVO_PAST",
+          "base_label": "gContinentSarajevoPast",
+          "land_mons": {
+            "encounter_rate": 29,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_VOLTORB"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_VOLTORB"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_KOTOR",
+          "base_label": "gContinentKotor",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_KOTOR_PAST",
+          "base_label": "gContinentKotorPast",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_SKOPJE",
+          "base_label": "gContinentSkopje",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_SKOPJE_PAST",
+          "base_label": "gContinentSkopjePast",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 47,
+                "max_level": 50,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_MOSCOW",
+          "base_label": "gContinentMoscow",
+          "land_mons": {
+            "encounter_rate": 22,
+            "mons": [
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 34,
+                "max_level": 37,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_MOSCOW_PAST",
+          "base_label": "gContinentMoscowPast",
+          "land_mons": {
+            "encounter_rate": 22,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_KYIV",
+          "base_label": "gContinentKyiv",
+          "land_mons": {
+            "encounter_rate": 23,
+            "mons": [
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 37,
+                "max_level": 40,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_KYIV_PAST",
+          "base_label": "gContinentKyivPast",
+          "land_mons": {
+            "encounter_rate": 23,
+            "mons": [
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 41,
+                "max_level": 44,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_MINSK",
+          "base_label": "gContinentMinsk",
+          "land_mons": {
+            "encounter_rate": 24,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 43,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_MINSK_PAST",
+          "base_label": "gContinentMinskPast",
+          "land_mons": {
+            "encounter_rate": 24,
+            "mons": [
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 45,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_VILNIUS",
+          "base_label": "gContinentVilnius",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_VILNIUS_PAST",
+          "base_label": "gContinentVilniusPast",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_NIDORAN_F"
+              },
+              {
+                "min_level": 43,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_RIGA",
+          "base_label": "gContinentRiga",
+          "land_mons": {
+            "encounter_rate": 26,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_RIGA_PAST",
+          "base_label": "gContinentRigaPast",
+          "land_mons": {
+            "encounter_rate": 26,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 47,
+                "species": "SPECIES_JIGGLYPUFF"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_TALLINN",
+          "base_label": "gContinentTallinn",
+          "land_mons": {
+            "encounter_rate": 27,
+            "mons": [
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 13,
+                "max_level": 16,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_TALLINN_PAST",
+          "base_label": "gContinentTallinnPast",
+          "land_mons": {
+            "encounter_rate": 27,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_ISTANBUL",
+          "base_label": "gContinentIstanbul",
+          "land_mons": {
+            "encounter_rate": 28,
+            "mons": [
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 16,
+                "max_level": 19,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_CONTINENT_ISTANBUL_PAST",
+          "base_label": "gContinentIstanbulPast",
+          "land_mons": {
+            "encounter_rate": 28,
+            "mons": [
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 46,
+                "max_level": 49,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
         }
       ]
     }

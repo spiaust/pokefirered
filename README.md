@@ -1,3 +1,8 @@
+# Pokemon Europe: Eclipse
+
+This is the separate new campaign fork. Start with [playing instructions](README-ECLIPSE.md)
+and the [complete story](STORY-ECLIPSE.md). The preserved base documentation follows.
+
 # Pokémon European Tour — playable prototype
 
 Current update: **v0.59** expands historical London with Westminster,

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "shadow_campaign.h"
 #include "gflib.h"
 #include "bike.h"
 #include "coord_event_weather.h"
@@ -617,6 +618,7 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
 
 static bool8 TryStartStepBasedScript(struct MapPosition *position, u16 metatileBehavior, u16 direction)
 {
+    Shadow_VisibleFieldStep();
     if (TryStartCoordEventScript(position) == TRUE)
         return TRUE;
     if (TryStartWarpEventScript(position, metatileBehavior) == TRUE)

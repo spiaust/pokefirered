@@ -1,4 +1,5 @@
 #include "global.h"
+#include "shadow_campaign.h"
 #include "gflib.h"
 #include "scanline_effect.h"
 #include "task.h"
@@ -988,7 +989,9 @@ static void InitRegionMap(u8 type)
 void InitRegionMapWithExitCB(u8 type, MainCallback cb)
 {
     if (type != REGIONMAP_TYPE_FLY
-        && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON))
+        && (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_LONDON)
+            || gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SHADOW_OXFORD)
+            || gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_CONTINENT_LONDON)))
     {
         OpenEuropeMap(cb);
         return;
@@ -3812,7 +3815,9 @@ u8 *GetMapName(u8 *dst0, u16 mapsec, u16 fill)
     u8 *dst;
     u16 i;
     u16 idx;
-    if ((idx = mapsec - KANTO_MAPSEC_START) < MAPSEC_NONE - KANTO_MAPSEC_START)
+    if (Shadow_GetCountryMapName(mapsec) != NULL)
+        dst = StringCopy(dst0, Shadow_GetCountryMapName(mapsec));
+    else if ((idx = mapsec - KANTO_MAPSEC_START) < MAPSEC_NONE - KANTO_MAPSEC_START)
     {
         if (IsCeladonDeptStoreMapsec(mapsec) == TRUE)
             dst = StringCopy(dst0, sMapsecName_CELADON_DEPT_);

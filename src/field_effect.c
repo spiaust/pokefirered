@@ -1,4 +1,5 @@
 #include "global.h"
+#include "shadow_campaign.h"
 #include "gflib.h"
 #include "decompress.h"
 #include "event_data.h"
@@ -437,7 +438,7 @@ static void FieldEffectScript_LoadTiles(const u8 **script)
 
 void ApplyGlobalFieldPaletteTint(u8 paletteIdx)
 {
-    switch (gGlobalFieldTintMode)
+    switch (Shadow_IsPast() && gGlobalFieldTintMode == 0 ? 2 : gGlobalFieldTintMode)
     {
     case 0:
         return;

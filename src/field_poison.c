@@ -1,4 +1,6 @@
 #include "global.h"
+#include "event_data.h"
+#include "constants/vars.h"
 #include "gflib.h"
 #include "strings.h"
 #include "task.h"
@@ -104,6 +106,11 @@ s32 DoPoisonFieldEffect(void)
             hp = GetMonData(pokemon, MON_DATA_HP);
             if (hp == 0 || --hp == 0)
                 numFainted++;
+            if (!hp && VarGet(VAR_SHADOW_NUZLOCKE))
+            {
+                u8 state = GetMonData(pokemon, MON_DATA_UNUSED_RIBBONS, NULL) | 2;
+                SetMonData(pokemon, MON_DATA_UNUSED_RIBBONS, &state);
+            }
             SetMonData(pokemon, MON_DATA_HP, &hp);
             numPoisoned++;
         }

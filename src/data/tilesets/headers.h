@@ -900,3 +900,81 @@ const struct Tileset gTileset_EuropeSouthamptonPast =
     .metatileAttributes = gMetatileAttributes_EuropeSouthamptonPast,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_ContinentLondon = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentLondon, .palettes = gTilesetPalettes_ContinentLondon, .metatiles = gMetatiles_ContinentLondon, .metatileAttributes = gMetatileAttributes_ContinentLondon, .callback = NULL};
+
+const struct Tileset gTileset_ContinentParis = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentParis, .palettes = gTilesetPalettes_ContinentParis, .metatiles = gMetatiles_ContinentParis, .metatileAttributes = gMetatileAttributes_ContinentParis, .callback = NULL};
+
+const struct Tileset gTileset_ContinentBerlin = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentBerlin, .palettes = gTilesetPalettes_ContinentBerlin, .metatiles = gMetatiles_ContinentBerlin, .metatileAttributes = gMetatileAttributes_ContinentBerlin, .callback = NULL};
+
+const struct Tileset gTileset_ContinentBrussels = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentBrussels, .palettes = gTilesetPalettes_ContinentBrussels, .metatiles = gMetatiles_ContinentBrussels, .metatileAttributes = gMetatileAttributes_ContinentBrussels, .callback = NULL};
+
+const struct Tileset gTileset_ContinentAmsterdam = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentAmsterdam, .palettes = gTilesetPalettes_ContinentAmsterdam, .metatiles = gMetatiles_ContinentAmsterdam, .metatileAttributes = gMetatileAttributes_ContinentAmsterdam, .callback = NULL};
+
+const struct Tileset gTileset_ContinentVienna = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentVienna, .palettes = gTilesetPalettes_ContinentVienna, .metatiles = gMetatiles_ContinentVienna, .metatileAttributes = gMetatileAttributes_ContinentVienna, .callback = NULL};
+
+const struct Tileset gTileset_ContinentPrague = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentPrague, .palettes = gTilesetPalettes_ContinentPrague, .metatiles = gMetatiles_ContinentPrague, .metatileAttributes = gMetatileAttributes_ContinentPrague, .callback = NULL};
+
+const struct Tileset gTileset_ContinentBratislava = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentBratislava, .palettes = gTilesetPalettes_ContinentBratislava, .metatiles = gMetatiles_ContinentBratislava, .metatileAttributes = gMetatileAttributes_ContinentBratislava, .callback = NULL};
+
+const struct Tileset gTileset_ContinentBern = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentBern, .palettes = gTilesetPalettes_ContinentBern, .metatiles = gMetatiles_ContinentBern, .metatileAttributes = gMetatileAttributes_ContinentBern, .callback = NULL};
+
+const struct Tileset gTileset_ContinentRome = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentRome, .palettes = gTilesetPalettes_ContinentRome, .metatiles = gMetatiles_ContinentRome, .metatileAttributes = gMetatileAttributes_ContinentRome, .callback = NULL};
+
+const struct Tileset gTileset_ContinentAthens = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentAthens, .palettes = gTilesetPalettes_ContinentAthens, .metatiles = gMetatiles_ContinentAthens, .metatileAttributes = gMetatileAttributes_ContinentAthens, .callback = NULL};
+
+const struct Tileset gTileset_ContinentMadrid = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentMadrid, .palettes = gTilesetPalettes_ContinentMadrid, .metatiles = gMetatiles_ContinentMadrid, .metatileAttributes = gMetatileAttributes_ContinentMadrid, .callback = NULL};
+
+const struct Tileset gTileset_ContinentLisbon = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentLisbon, .palettes = gTilesetPalettes_ContinentLisbon, .metatiles = gMetatiles_ContinentLisbon, .metatileAttributes = gMetatileAttributes_ContinentLisbon, .callback = NULL};
+
+const struct Tileset gTileset_ContinentWarsaw = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentWarsaw, .palettes = gTilesetPalettes_ContinentWarsaw, .metatiles = gMetatiles_ContinentWarsaw, .metatileAttributes = gMetatileAttributes_ContinentWarsaw, .callback = NULL};
+
+const struct Tileset gTileset_ContinentLuxembourg = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentLuxembourg, .palettes = gTilesetPalettes_ContinentLuxembourg, .metatiles = gMetatiles_ContinentLuxembourg, .metatileAttributes = gMetatileAttributes_ContinentLuxembourg, .callback = NULL};
+
+const struct Tileset gTileset_ContinentCopenhagen = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentCopenhagen, .palettes = gTilesetPalettes_ContinentCopenhagen, .metatiles = gMetatiles_ContinentCopenhagen, .metatileAttributes = gMetatileAttributes_ContinentCopenhagen, .callback = NULL};
+
+const struct Tileset gTileset_ContinentOslo = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentOslo, .palettes = gTilesetPalettes_ContinentOslo, .metatiles = gMetatiles_ContinentOslo, .metatileAttributes = gMetatileAttributes_ContinentOslo, .callback = NULL};
+
+const struct Tileset gTileset_ContinentStockholm = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentStockholm, .palettes = gTilesetPalettes_ContinentStockholm, .metatiles = gMetatiles_ContinentStockholm, .metatileAttributes = gMetatileAttributes_ContinentStockholm, .callback = NULL};
+
+const struct Tileset gTileset_ContinentHelsinki = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentHelsinki, .palettes = gTilesetPalettes_ContinentHelsinki, .metatiles = gMetatiles_ContinentHelsinki, .metatileAttributes = gMetatileAttributes_ContinentHelsinki, .callback = NULL};
+
+const struct Tileset gTileset_ContinentReykjavik = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentReykjavik, .palettes = gTilesetPalettes_ContinentReykjavik, .metatiles = gMetatiles_ContinentReykjavik, .metatileAttributes = gMetatileAttributes_ContinentReykjavik, .callback = NULL};
+
+const struct Tileset gTileset_ContinentDublin = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentDublin, .palettes = gTilesetPalettes_ContinentDublin, .metatiles = gMetatiles_ContinentDublin, .metatileAttributes = gMetatileAttributes_ContinentDublin, .callback = NULL};
+
+const struct Tileset gTileset_ContinentValletta = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentValletta, .palettes = gTilesetPalettes_ContinentValletta, .metatiles = gMetatiles_ContinentValletta, .metatileAttributes = gMetatileAttributes_ContinentValletta, .callback = NULL};
+
+const struct Tileset gTileset_ContinentBudapest = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentBudapest, .palettes = gTilesetPalettes_ContinentBudapest, .metatiles = gMetatiles_ContinentBudapest, .metatileAttributes = gMetatileAttributes_ContinentBudapest, .callback = NULL};
+
+const struct Tileset gTileset_ContinentBucharest = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentBucharest, .palettes = gTilesetPalettes_ContinentBucharest, .metatiles = gMetatiles_ContinentBucharest, .metatileAttributes = gMetatileAttributes_ContinentBucharest, .callback = NULL};
+
+const struct Tileset gTileset_ContinentSofia = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentSofia, .palettes = gTilesetPalettes_ContinentSofia, .metatiles = gMetatiles_ContinentSofia, .metatileAttributes = gMetatileAttributes_ContinentSofia, .callback = NULL};
+
+const struct Tileset gTileset_ContinentTirana = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentTirana, .palettes = gTilesetPalettes_ContinentTirana, .metatiles = gMetatiles_ContinentTirana, .metatileAttributes = gMetatileAttributes_ContinentTirana, .callback = NULL};
+
+const struct Tileset gTileset_ContinentBelgrade = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentBelgrade, .palettes = gTilesetPalettes_ContinentBelgrade, .metatiles = gMetatiles_ContinentBelgrade, .metatileAttributes = gMetatileAttributes_ContinentBelgrade, .callback = NULL};
+
+const struct Tileset gTileset_ContinentZagreb = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentZagreb, .palettes = gTilesetPalettes_ContinentZagreb, .metatiles = gMetatiles_ContinentZagreb, .metatileAttributes = gMetatileAttributes_ContinentZagreb, .callback = NULL};
+
+const struct Tileset gTileset_ContinentLjubljana = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentLjubljana, .palettes = gTilesetPalettes_ContinentLjubljana, .metatiles = gMetatiles_ContinentLjubljana, .metatileAttributes = gMetatileAttributes_ContinentLjubljana, .callback = NULL};
+
+const struct Tileset gTileset_ContinentSarajevo = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentSarajevo, .palettes = gTilesetPalettes_ContinentSarajevo, .metatiles = gMetatiles_ContinentSarajevo, .metatileAttributes = gMetatileAttributes_ContinentSarajevo, .callback = NULL};
+
+const struct Tileset gTileset_ContinentKotor = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentKotor, .palettes = gTilesetPalettes_ContinentKotor, .metatiles = gMetatiles_ContinentKotor, .metatileAttributes = gMetatileAttributes_ContinentKotor, .callback = NULL};
+
+const struct Tileset gTileset_ContinentSkopje = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentSkopje, .palettes = gTilesetPalettes_ContinentSkopje, .metatiles = gMetatiles_ContinentSkopje, .metatileAttributes = gMetatileAttributes_ContinentSkopje, .callback = NULL};
+
+const struct Tileset gTileset_ContinentMoscow = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentMoscow, .palettes = gTilesetPalettes_ContinentMoscow, .metatiles = gMetatiles_ContinentMoscow, .metatileAttributes = gMetatileAttributes_ContinentMoscow, .callback = NULL};
+
+const struct Tileset gTileset_ContinentKyiv = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentKyiv, .palettes = gTilesetPalettes_ContinentKyiv, .metatiles = gMetatiles_ContinentKyiv, .metatileAttributes = gMetatileAttributes_ContinentKyiv, .callback = NULL};
+
+const struct Tileset gTileset_ContinentMinsk = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentMinsk, .palettes = gTilesetPalettes_ContinentMinsk, .metatiles = gMetatiles_ContinentMinsk, .metatileAttributes = gMetatileAttributes_ContinentMinsk, .callback = NULL};
+
+const struct Tileset gTileset_ContinentVilnius = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentVilnius, .palettes = gTilesetPalettes_ContinentVilnius, .metatiles = gMetatiles_ContinentVilnius, .metatileAttributes = gMetatileAttributes_ContinentVilnius, .callback = NULL};
+
+const struct Tileset gTileset_ContinentRiga = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentRiga, .palettes = gTilesetPalettes_ContinentRiga, .metatiles = gMetatiles_ContinentRiga, .metatileAttributes = gMetatileAttributes_ContinentRiga, .callback = NULL};
+
+const struct Tileset gTileset_ContinentTallinn = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentTallinn, .palettes = gTilesetPalettes_ContinentTallinn, .metatiles = gMetatiles_ContinentTallinn, .metatileAttributes = gMetatileAttributes_ContinentTallinn, .callback = NULL};
+
+const struct Tileset gTileset_ContinentIstanbul = {.isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_ContinentIstanbul, .palettes = gTilesetPalettes_ContinentIstanbul, .metatiles = gMetatiles_ContinentIstanbul, .metatileAttributes = gMetatileAttributes_ContinentIstanbul, .callback = NULL};

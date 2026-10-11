@@ -1,4 +1,5 @@
 #include "global.h"
+#include "shadow_campaign.h"
 #include "gflib.h"
 #include "overworld.h"
 #include "script.h"
@@ -836,7 +837,7 @@ static void CopyTilesetToVramUsingHeap(struct Tileset const *tileset, u16 numTil
 
 static void ApplyGlobalTintToPaletteEntries(u16 offset, u16 size)
 {
-    switch (gGlobalFieldTintMode)
+    switch (Shadow_IsPast() && gGlobalFieldTintMode == 0 ? 2 : gGlobalFieldTintMode)
     {
     case QL_TINT_NONE:
         return;
@@ -858,7 +859,7 @@ static void ApplyGlobalTintToPaletteEntries(u16 offset, u16 size)
 
 void ApplyGlobalTintToPaletteSlot(u8 slot, u8 count)
 {
-    switch (gGlobalFieldTintMode)
+    switch (Shadow_IsPast() && gGlobalFieldTintMode == 0 ? 2 : gGlobalFieldTintMode)
     {
     case QL_TINT_NONE:
         return;

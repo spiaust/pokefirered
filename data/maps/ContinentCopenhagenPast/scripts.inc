@@ -1,0 +1,11 @@
+ContinentCopenhagenPast_MapScripts::
+ map_script MAP_SCRIPT_ON_LOAD, ContinentCopenhagenPast_Load
+ map_script MAP_SCRIPT_ON_TRANSITION, ContinentCopenhagenPast_Transition
+ .byte 0
+ContinentCopenhagenPast_Load::
+ special Shadow_PrepareVisible
+ special Shadow_ApplyTimeline
+ end
+ContinentCopenhagenPast_Transition::
+ setrespawn HEAL_LOCATION_EUROPE_LONDON
+ end

@@ -1,4 +1,6 @@
 #include "global.h"
+#include "shadow_campaign.h"
+#include "fieldmap.h"
 #include "gflib.h"
 #include "menu.h"
 #include "help_system.h"
@@ -19,6 +21,7 @@ static EWRAM_DATA MainCallback sEuropeMapReturn = NULL;
 static EWRAM_DATA u8 sEuropeMapSelection = 0;
 static EWRAM_DATA u8 sEuropeMapCurrent = 0;
 static EWRAM_DATA bool8 sEuropeMapPast = FALSE;
+static EWRAM_DATA bool8 sEclipseCredits = FALSE;
 static EWRAM_DATA bool8 sEuropePlacesRooms = FALSE;
 static const struct BgTemplate sMapBg[] = {
     {.bg = 0, .charBaseIndex = 0, .mapBaseIndex = 31, .priority = 0}
@@ -35,7 +38,7 @@ static const u8 sWhite[] = {1, 2, 1};
 static const u8 sGold[] = {1, 3, 1};
 static const u8 sNorthLabel[] = _("N");
 static const u8 sHeading[] = _("EUROPEAN TRAVEL MAP");
-static const u8 sPastHeading[] = _("1940: MODERN RETURN MAP");
+static const u8 sPastHeading[] = _("PAST: MODERN RETURN MAP");
 static const u8 sPastLocation[] = _("YOU: FRANCE, 1940");
 static const u8 sBeauvaisLocation[] = _("YOU: BEAUVAIS, 1940");
 static const u8 sLondonPastLocation[] = _("YOU: LONDON, 1940");
@@ -99,9 +102,9 @@ static const u8 sRecordsHeadings[][40] = {
 };
 static const u8 sRecordPageControls[] = _("A: LEAD  LEFT/RIGHT: PAGE");
 static const u8 sJournalControls[] = _("UP/DOWN: TOPIC  SELECT: MAP  B: BACK");
-static const u8 sTourHeading[] = _("EUROPE TOUR / CURRENT LEAD");
-static const u8 sTourRecordsHeading[] = _("EUROPE TOUR / STAMPS AND BADGES");
-static const u8 sTourHint[] = _("City guides offer optional tour stamps.");
+static const u8 sTourHeading[] = _("ECLIPSE / CURRENT CHAPTER");
+static const u8 sTourRecordsHeading[] = _("ECLIPSE / CAMPAIGN RECORDS");
+static const u8 sTourHint[] = _("Use shelter porters to change chapters.");
 static const u8 sShowRecords[] = _("A: VIEW MILESTONES");
 static const u8 sShowLead[] = _("A: VIEW CURRENT LEAD");
 static const u8 sJournalPastHint[] = _("CELEBI waits near your past arrival.");
@@ -341,7 +344,7 @@ static void DrawEuropeJournal(u8 taskId)
     u8 start = tour ? 0 : gTasks[taskId].data[5] * JOURNAL_RECORDS_PER_PAGE;
     u8 end = tour ? ARRAY_COUNT(gEuropeTourMilestones) : min(start + JOURNAL_RECORDS_PER_PAGE, ARRAY_COUNT(sMilestones));
     const u8 (*leads)[4][44] = tour ? gEuropeTourLeads : sJournalLeads;
-    const u8 (*labels)[24] = tour ? gEuropeTourMilestones : sMilestones;
+    const u8 (*labels)[24] = tour ? (VarGet(VAR_SHADOW_STARTED) ? gShadowCampaignMilestones : gEuropeTourMilestones) : sMilestones;
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
     MapText(tour ? (records ? sTourRecordsHeading : sTourHeading) : (records ? sRecordsHeadings[gTasks[taskId].data[5]] : sJournalHeading), 7, 2, sGold);
     MapRect(4, 7, 19, 226, 1);
@@ -370,6 +373,13 @@ static void DrawEuropeJournal(u8 taskId)
 static const u8 *GetEuropeMapLocation(void)
 {
     u8 map = gSaveBlock1Ptr->location.mapNum;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_CONTINENT_LONDON))
+        return Shadow_GetCountryMapName(gMapHeader.regionMapSectionId);
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SHADOW_OXFORD))
+    {
+        u8 chapter = map / 2;
+        return gEuropeTourLeads[25 + (chapter > 20 ? 20 : chapter)][1];
+    }
     if (!sEuropeMapPast)
         return sLocations[sEuropeMapCurrent];
     if (map == MAP_NUM(MAP_EUROPE_LONDON_PAST))
@@ -387,11 +397,89 @@ static const u8 *GetEuropeMapLocation(void)
     return sPastLocation;
 }
 
+static const u8 sContinentalPlaces[][3][24] = {
+ {_("ENGLAND"), _("LONDON"), _("BIG BEN")},
+ {_("FRANCE"), _("PARIS"), _("NOTRE-DAME")},
+ {_("GERMANY"), _("BERLIN"), _("BRANDENBURG GATE")},
+ {_("BELGIUM"), _("BRUSSELS"), _("GRAND PLACE")},
+ {_("NETHERLANDS"), _("AMSTERDAM"), _("CANAL HOUSES")},
+ {_("AUSTRIA"), _("VIENNA"), _("ST STEPHEN'S")},
+ {_("CZECHIA"), _("PRAGUE"), _("CHARLES BRIDGE")},
+ {_("SLOVAKIA"), _("BRATISLAVA"), _("BRATISLAVA CASTLE")},
+ {_("SWITZERLAND"), _("BERN"), _("ZYTGLOGGE")},
+ {_("ITALY"), _("ROME"), _("COLOSSEUM")},
+ {_("GREECE"), _("ATHENS"), _("ACROPOLIS")},
+ {_("SPAIN"), _("MADRID"), _("ROYAL PALACE")},
+ {_("PORTUGAL"), _("LISBON"), _("BELEM TOWER")},
+ {_("POLAND"), _("WARSAW"), _("ROYAL CASTLE")},
+ {_("LUXEMBOURG"), _("LUXEMBOURG"), _("BOCK CASEMATES")},
+ {_("DENMARK"), _("COPENHAGEN"), _("ROSENBORG CASTLE")},
+ {_("NORWAY"), _("OSLO"), _("AKERSHUS FORTRESS")},
+ {_("SWEDEN"), _("STOCKHOLM"), _("CITY HALL")},
+ {_("FINLAND"), _("HELSINKI"), _("HELSINKI CATHEDRAL")},
+ {_("ICELAND"), _("REYKJAVIK"), _("PARLIAMENT HOUSE")},
+ {_("IRELAND"), _("DUBLIN"), _("TRINITY COLLEGE")},
+ {_("MALTA"), _("VALLETTA"), _("FORT ST ELMO")},
+ {_("HUNGARY"), _("BUDAPEST"), _("PARLIAMENT")},
+ {_("ROMANIA"), _("BUCHAREST"), _("ROMANIAN ATHENAEUM")},
+ {_("BULGARIA"), _("SOFIA"), _("ALEXANDER NEVSKY")},
+ {_("ALBANIA"), _("TIRANA"), _("ET'HEM BEY MOSQUE")},
+ {_("SERBIA"), _("BELGRADE"), _("BELGRADE FORTRESS")},
+ {_("CROATIA"), _("ZAGREB"), _("ST MARK'S CHURCH")},
+ {_("SLOVENIA"), _("LJUBLJANA"), _("TRIPLE BRIDGE")},
+ {_("BOSNIA"), _("SARAJEVO"), _("LATIN BRIDGE")},
+ {_("MONTENEGRO"), _("KOTOR"), _("KOTOR CITY WALLS")},
+ {_("N MACEDONIA"), _("SKOPJE"), _("STONE BRIDGE")},
+ {_("RUSSIA"), _("MOSCOW"), _("ST BASIL'S")},
+ {_("UKRAINE"), _("KYIV"), _("ST SOPHIA")},
+ {_("BELARUS"), _("MINSK"), _("NEMIGA DISTRICT")},
+ {_("LITHUANIA"), _("VILNIUS"), _("GEDIMINAS TOWER")},
+ {_("LATVIA"), _("RIGA"), _("HOUSE OF BLACKHEADS")},
+ {_("ESTONIA"), _("TALLINN"), _("TOWN HALL")},
+ {_("TURKEY"), _("ISTANBUL"), _("HAGIA SOPHIA")},
+};
+
+static const u8 sPassportTitle[] = _("EUROPE PASSPORT - 39 COUNTRIES");
+static const u8 sPassportModern[] = _("PRESENT");
+static const u8 sPassportPast[] = _("WARTIME");
+static const u8 sMemoryWaiting[] = _("MEMORY: UNSET");
+static const u8 sMemoryGarden[] = _("MEMORY: GARDEN");
+static const u8 sMemoryArchive[] = _("MEMORY: ARCHIVE");
+static const u8 sPassportTravel[] = _("Travel through the station menus.");
+static const u8 sPassportControls[] = _("D-PAD: COUNTRY  SELECT: STORY  B: EXIT");
+static void DrawContinentPassport(void)
+{
+    u8 i, selected = sEuropeMapSelection;
+    u8 first = selected / 7 * 7;
+    u16 mask = 1 << (selected % 16);
+    const u8 *memory = sMemoryWaiting;
+    FillWindowPixelBuffer(0, PIXEL_FILL(1));
+    MapText(sPassportTitle, 7, 3, sGold);
+    MapRect(4, 7, 17, 226, 1);
+    for (i = first; i < ARRAY_COUNT(sContinentalPlaces) && i < first + 7; i++)
+        MapText(sContinentalPlaces[i][0], 9, 22 + (i - first) * 12, selected == i ? sGold : sWhite);
+    MapText(sContinentalPlaces[selected][1], 125, 22, sGold);
+    MapText(sContinentalPlaces[selected][2], 125, 40, sWhite);
+    MapText(Shadow_IsPast() ? sPassportPast : sPassportModern, 125, 63, sGold);
+    if (VarGet(VAR_0x40A5 + selected / 16) & mask)
+        memory = VarGet(VAR_0x40A2 + selected / 16) & mask ? sMemoryGarden : sMemoryArchive;
+    MapText(memory, 125, 82, sWhite);
+    MapText(GetEuropeMapLocation(), 7, 113, sGold);
+    MapText(sPassportTravel, 7, 129, sWhite);
+    MapText(sPassportControls, 7, 147, sGold);
+    PutWindowTilemap(0);
+    CopyWindowToVram(0, COPYWIN_FULL);
+}
 static void DrawEuropeMap(bool8 info)
 {
     u8 i;
     u8 x, y;
     u16 span;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_CONTINENT_LONDON))
+    {
+        DrawContinentPassport();
+        return;
+    }
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
     MapText(sEuropeMapPast ? sPastHeading : sHeading, 7, 2, sGold);
     // Projected Natural Earth land and WGS84 city centres. Labels never move the dots.
@@ -495,6 +583,11 @@ static const u8 sRoomsLines[][4][44] = {
 static void DrawEuropePlaces(void)
 {
     u8 i;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_CONTINENT_LONDON))
+    {
+        DrawContinentPassport();
+        return;
+    }
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
     MapText(sEuropePlacesRooms ? (sEuropeMapSelection < 3 ? sRoomsHeading : sServicesHeading) : sPlacesHeading, 7, 4, sGold);
     MapRect(4, 7, 20, 226, 1);
@@ -519,7 +612,7 @@ static const u8 sWorldOptionText1[] = _("MAP DETAIL: SHADED");
 static const u8 sWorldOptionText2[] = _("MAP DETAIL: SIMPLE");
 static const u8 sWorldOptionText3[] = _("MAP COLORS: HIGH CONTRAST");
 static const u8 sWorldOptionText4[] = _("MAP COLORS: NATURAL");
-static const u8 sWorldOptionText5[] = _("Cosmetic choices. Your trainer ID stays.");
+static const u8 sWorldOptionText5[] = _("Changes apply now. Save to keep them.");
 static const u8 sWorldOptionText6[] = _("Save normally. SELECT: WALK/BIKE.");
 static const u8 sWorldOptionText7[] = _("UP/DOWN: ROW  LEFT/RIGHT: CHANGE");
 static const u8 sWorldOptionText8[] = _("A: CHANGE  B/START: BACK");
@@ -527,7 +620,7 @@ static const u8 sFlowersOn[] = _("FLOWERS: ON");
 static const u8 sFlowersOff[] = _("FLOWERS: OFF");
 static const u8 sFlowersMoving[] = _("FLOWER MOTION: ON");
 static const u8 sFlowersStill[] = _("FLOWER MOTION: OFF");
-#define WORLD_OPTION_COUNT 9
+#define WORLD_OPTION_COUNT 12
 #define WORLD_OPTION_RESET (WORLD_OPTION_COUNT - 1)
 static const u8 sSkinClassic[] = _("SKIN: CLASSIC");
 static const u8 sSkinLight[] = _("SKIN: LIGHT");
@@ -541,11 +634,11 @@ static const u8 sAccentGreen[] = _("ACCENT: GREEN");
 static const u8 sAccentPurple[] = _("ACCENT: PURPLE");
 static const u8 sAccentGold[] = _("ACCENT: GOLD");
 static const u8 *const sAccentNames[] = {sAccentClassic, sAccentBlue, sAccentGreen, sAccentPurple, sAccentGold};
-static const u16 sWorldOptionVars[] = {VAR_EUROPE_MAP_DETAIL, VAR_EUROPE_AVATAR_STYLE, VAR_EUROPE_MAP_CONTRAST, VAR_EUROPE_HIDE_FLOWERS, VAR_EUROPE_OUTFIT_COLOR, VAR_EUROPE_STILL_FLOWERS, VAR_EUROPE_SKIN_TONE, VAR_EUROPE_ACCENT_COLOR};
-static const u8 sWorldOptionCounts[] = {2, 3, 2, 2, 5, 2, 5, 5};
+static const u16 sWorldOptionVars[] = {VAR_EUROPE_MAP_DETAIL, VAR_EUROPE_AVATAR_STYLE, VAR_EUROPE_MAP_CONTRAST, VAR_EUROPE_HIDE_FLOWERS, VAR_EUROPE_OUTFIT_COLOR, VAR_EUROPE_STILL_FLOWERS, VAR_EUROPE_SKIN_TONE, VAR_EUROPE_ACCENT_COLOR, VAR_SHADOW_DIFFICULTY, VAR_SHADOW_NUZLOCKE, VAR_SHADOW_HIDE_WILD};
+static const u8 sWorldOptionCounts[] = {2, 3, 2, 2, 5, 2, 5, 5, 3, 2, 2};
 static const u8 sRestoreDefaults[] = _("RESTORE DEFAULTS: PRESS A");
 static const u8 sRestoreHeading[] = _("RESTORE DEFAULTS?");
-static const u8 sRestoreInfo[] = _("All cosmetic settings will reset.");
+static const u8 sRestoreInfo[] = _("Game and cosmetic options reset.");
 static const u8 sOutfitClassic[] = _("OUTFIT: CLASSIC");
 static const u8 sOutfitBlue[] = _("OUTFIT: BLUE");
 static const u8 sOutfitGreen[] = _("OUTFIT: GREEN");
@@ -592,6 +685,16 @@ static void UpdateWorldPreview(void)
     }
 }
 
+static const u8 sDifficultyHelp[] = _("Easy lowers; Hard raises levels.");
+static const u8 sNuzlockeHelp[] = _("First encounter; fainted retire.");
+static const u8 sWildHelp[] = _("Spawns follow local encounter rates.");
+static const u8 sModeEasy[] = _("DIFFICULTY: EASY");
+static const u8 sModeHard[] = _("DIFFICULTY: HARD");
+static const u8 sModeNormal[] = _("DIFFICULTY: NORMAL");
+static const u8 sChallengeOn[] = _("NUZLOCKE: ON");
+static const u8 sChallengeOff[] = _("NUZLOCKE: OFF");
+static const u8 sWildOff[] = _("WILD SPRITES: OFF");
+static const u8 sWildOn[] = _("WILD SPRITES: ON");
 static void DrawWorldOptions(u8 row)
 {
     static const u8 sOriginal[] = _("AVATAR: ORIGINAL");
@@ -616,14 +719,17 @@ static void DrawWorldOptions(u8 row)
         labels[5] = VarGet(VAR_EUROPE_STILL_FLOWERS) == 1 ? sFlowersStill : sFlowersMoving;
         labels[6] = sSkinNames[skin < 5 ? skin : 0];
         labels[7] = sAccentNames[accent < 5 ? accent : 0];
-        labels[8] = sRestoreDefaults;
+        labels[8] = VarGet(VAR_SHADOW_DIFFICULTY) == 1 ? sModeEasy : VarGet(VAR_SHADOW_DIFFICULTY) == 2 ? sModeHard : sModeNormal;
+        labels[9] = VarGet(VAR_SHADOW_NUZLOCKE) ? sChallengeOn : sChallengeOff;
+        labels[10] = VarGet(VAR_SHADOW_HIDE_WILD) ? sWildOff : sWildOn;
+        labels[11] = sRestoreDefaults;
         for (i = first; i < WORLD_OPTION_COUNT && i < first + 7; i++)
             MapText(labels[i], 12, 25 + 12 * (i - first), i == row ? sGold : sWhite);
     }
     MapText(sPreviewHeading, 191, 25, sGold);
     MapText(sWorldPreviewBike ? sPreviewBike : sPreviewWalk, 199, 80, sWhite);
     MapText(sPreviewTurn, 191, 94, sGold);
-    MapText(sWorldOptionText5, 7, 108, sWhite);
+    MapText(row == 8 ? sDifficultyHelp : row == 9 ? sNuzlockeHelp : row == 10 ? sWildHelp : sWorldOptionText5, 7, 108, sWhite);
     MapText(sWorldOptionText6, 7, 121, sWhite);
     MapText(sWorldOptionText7, 7, 135, sGold);
     MapText(sWorldOptionText8, 7, 147, sGold);
@@ -645,10 +751,66 @@ static void DrawRestoreDefaults(void)
     CopyWindowToVram(0, COPYWIN_FULL);
 }
 
+static const u8 sCreditTitle[] = _("POKEMON EUROPE: ECLIPSE");
+static const u8 sCreditLines[][7][48] = {
+    {_("EUROPEAN CHAMPION"),
+     _("Eight badges. Your rival stands beside you."),
+     _("Shadow partners can trust again."),
+     _("The resistance protected its communities."),
+     _("ECLIPSE can no longer exploit the timeline."),
+     _("39 local futures still await your choices."),
+     _("The shelters remain open. Keep exploring.")},
+    {_("THE JOURNEY"),
+     _("ADA - researcher and League mentor"),
+     _("LENA - resistance courier"),
+     _("Your rival - from isolation to friendship"),
+     _("VEIL - the architect of Team ECLIPSE"),
+     _("CELEBI - guardian of the time anchors"),
+     _("Every partner you chose to protect")},
+    {_("CREDITS"),
+     _("Engine: pret/pokefirered contributors"),
+     _("Base: Pokemon Europe Version project"),
+     _("Pokemon: Game Freak / Nintendo / Creatures"),
+     _("Eclipse story, maps and systems: this fork"),
+     _("Repository references: RESEARCH-ECLIPSE.md"),
+     _("Thank you for playing.")}
+};
+static const u8 sCreditsNext[] = _("A/RIGHT: NEXT  B: RETURN");
+static const u8 sCreditsReturn[] = _("A/B: RETURN TO YOUR JOURNEY");
+static void DrawEclipseCredits(u8 page)
+{
+    u8 i;
+    FillWindowPixelBuffer(0, PIXEL_FILL(1));
+    MapText(sCreditTitle, 7, 5, sGold);
+    MapRect(4, 7, 21, 226, 1);
+    for (i = 0; i < 7; i++)
+        MapText(sCreditLines[page][i], 7, 30 + i * 15, i ? sWhite : sGold);
+    MapText(page == 2 ? sCreditsReturn : sCreditsNext, 7, 147, sGold);
+    PutWindowTilemap(0);
+    CopyWindowToVram(0, COPYWIN_FULL);
+}
+
 static void Task_EuropeMap(u8 taskId)
 {
     if (gPaletteFade.active)
         return;
+    if (sEclipseCredits && !gTasks[taskId].data[0])
+    {
+        u8 page = gTasks[taskId].data[1];
+        if (JOY_NEW(B_BUTTON | START_BUTTON) || (page == 2 && JOY_NEW(A_BUTTON | DPAD_RIGHT)))
+        {
+            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].data[0] = 1;
+        }
+        else if (JOY_NEW(A_BUTTON | DPAD_RIGHT | DPAD_LEFT))
+        {
+            if (JOY_NEW(DPAD_LEFT)) page = page ? page - 1 : 0;
+            else page++;
+            gTasks[taskId].data[1] = page;
+            DrawEclipseCredits(page);
+        }
+        return;
+    }
     if (sWorldOptions && gTasks[taskId].data[2])
     {
         if (JOY_NEW(B_BUTTON | START_BUTTON))
@@ -667,6 +829,9 @@ static void Task_EuropeMap(u8 taskId)
             VarSet(VAR_EUROPE_STILL_FLOWERS, 0);
             VarSet(VAR_EUROPE_SKIN_TONE, 0);
             VarSet(VAR_EUROPE_ACCENT_COLOR, 0);
+            VarSet(VAR_SHADOW_DIFFICULTY, 0);
+            VarSet(VAR_SHADOW_NUZLOCKE, 0);
+            VarSet(VAR_SHADOW_HIDE_WILD, 0);
             sWorldPreviewBike = FALSE;
             sWorldPreviewFacing = 0;
             gTasks[taskId].data[2] = 0;
@@ -735,6 +900,7 @@ static void Task_EuropeMap(u8 taskId)
             u16 var = sWorldOptionVars[row];
             u8 count = sWorldOptionCounts[row];
             VarSet(var, (VarGet(var) + (JOY_NEW(DPAD_LEFT) ? count - 1 : 1)) % count);
+            Shadow_ApplyChallenge();
             PlaySE(SE_SELECT);
             DrawWorldOptions(row);
         }
@@ -752,11 +918,11 @@ static void Task_EuropeMap(u8 taskId)
         else
         {
             gTasks[taskId].data[1] = JOURNAL_LEAD;
-            gTasks[taskId].data[4] = 0;
+            gTasks[taskId].data[4] = VarGet(VAR_SHADOW_STARTED) != 0;
             gTasks[taskId].data[5] = 0;
-            gTasks[taskId].data[2] = GetJournalLead();
-            gTasks[taskId].data[3] = GetJournalMilestones();
-            gTasks[taskId].data[6] = GetJournalMilestones() >> 16;
+            gTasks[taskId].data[2] = VarGet(VAR_SHADOW_STARTED) ? GetEuropeTourLead() : GetJournalLead();
+            gTasks[taskId].data[3] = VarGet(VAR_SHADOW_STARTED) ? GetEuropeTourMilestones() : GetJournalMilestones();
+            gTasks[taskId].data[6] = VarGet(VAR_SHADOW_STARTED) ? 0 : GetJournalMilestones() >> 16;
             DrawEuropeJournal(taskId);
         }
     }
@@ -809,11 +975,12 @@ static void Task_EuropeMap(u8 taskId)
     }
     else if (JOY_NEW(DPAD_LEFT | DPAD_UP | DPAD_RIGHT | DPAD_DOWN))
     {
+        u8 count = gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_CONTINENT_LONDON) ? ARRAY_COUNT(sContinentalPlaces) : ARRAY_COUNT(sCityX);
         sEuropePlacesRooms = FALSE;
         if (JOY_NEW(DPAD_LEFT | DPAD_UP))
-            sEuropeMapSelection = (sEuropeMapSelection + ARRAY_COUNT(sCityX) - 1) % ARRAY_COUNT(sCityX);
+            sEuropeMapSelection = (sEuropeMapSelection + count - 1) % count;
         else
-            sEuropeMapSelection = (sEuropeMapSelection + 1) % ARRAY_COUNT(sCityX);
+            sEuropeMapSelection = (sEuropeMapSelection + 1) % count;
         PlaySE(SE_SELECT);
         if (gTasks[taskId].data[7])
             DrawEuropePlaces();
@@ -874,7 +1041,8 @@ static void CB2_InitEuropeMap(void)
         LoadPalette(&land, 4, 2);
         LoadPalette(&coast, 5, 2);
     }
-    if (sWorldOptions) DrawWorldOptions(0);
+    if (sEclipseCredits) DrawEclipseCredits(0);
+    else if (sWorldOptions) DrawWorldOptions(0);
     else DrawEuropeMap(FALSE);
     ShowBg(0);
     if (sWorldOptions)
@@ -888,8 +1056,9 @@ static void CB2_InitEuropeMap(void)
 void OpenEuropeMap(MainCallback callback)
 {
     sWorldOptions = FALSE;
+    sEclipseCredits = FALSE;
     sEuropeMapReturn = callback;
-    sEuropeMapPast = gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_CHANTILLY_PAST)
+    sEuropeMapPast = Shadow_IsPast() || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EUROPE_CHANTILLY_PAST)
         && (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_CHANTILLY_PAST)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_CHANTILLY_PAST_POST)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_BEAUVAIS_PAST)
@@ -898,7 +1067,7 @@ void OpenEuropeMap(MainCallback callback)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_ROUEN_PAST)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LE_HAVRE_PAST)
             || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_SOUTHAMPTON_PAST)
-            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LONDON_PAST));
+            || gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EUROPE_LONDON_PAST)));
     // Use map identities, so adding another town cannot mislabel its country.
     switch (gSaveBlock1Ptr->location.mapNum)
     {
@@ -974,6 +1143,8 @@ void OpenEuropeMap(MainCallback callback)
         sEuropeMapCurrent = 0;
         break;
     }
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_CONTINENT_LONDON))
+        sEuropeMapCurrent = gSaveBlock1Ptr->location.mapNum / 2;
     sEuropeMapSelection = sEuropeMapCurrent;
     // Defer resetting tasks until the caller has finished its cleanup.
     SetMainCallback2(CB2_InitEuropeMap);
@@ -982,6 +1153,15 @@ void OpenEuropeMap(MainCallback callback)
 void OpenEuropeWorldOptions(MainCallback callback)
 {
     sWorldOptions = TRUE;
+    sEclipseCredits = FALSE;
+    sEuropeMapReturn = callback;
+    SetMainCallback2(CB2_InitEuropeMap);
+}
+
+void OpenEuropeCredits(MainCallback callback)
+{
+    sWorldOptions = FALSE;
+    sEclipseCredits = TRUE;
     sEuropeMapReturn = callback;
     SetMainCallback2(CB2_InitEuropeMap);
 }

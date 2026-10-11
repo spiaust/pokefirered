@@ -1315,6 +1315,174 @@
       "y": 3,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_OXFORD",
+      "name": "OXFORD",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_LONDON",
+      "name": "LONDON",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_PARIS",
+      "name": "PARIS",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_BRUSSELS",
+      "name": "BRUSSELS",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_AMSTERDAM",
+      "name": "AMSTERDAM",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_BERLIN",
+      "name": "BERLIN",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_PRAGUE",
+      "name": "PRAGUE",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_VIENNA",
+      "name": "VIENNA",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_ZURICH",
+      "name": "ZURICH",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_ROME",
+      "name": "ROME",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_MADRID",
+      "name": "MADRID",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_LISBON",
+      "name": "LISBON",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_PARIS1940",
+      "name": "PARIS1940",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_WARSAW1943",
+      "name": "WARSAW1943",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_BERLIN1944",
+      "name": "BERLIN1944",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_GENEVA",
+      "name": "GENEVA",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_ATHENS",
+      "name": "ATHENS LEAGUE",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_ATHENS2",
+      "name": "ATHENS LEAGUE",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_ATHENS3",
+      "name": "ATHENS LEAGUE",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_ATHENS4",
+      "name": "ATHENS LEAGUE",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SHADOW_CHAMPION",
+      "name": "CHAMPION",
+      "x": 5,
+      "y": 5,
+      "width": 1,
+      "height": 1
     }
   ]
 }

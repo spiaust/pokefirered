@@ -559,7 +559,120 @@ static const struct MenuAction sMultichoiceList_EuropePastSouth[] = {
     { sText_EuropeSouthampton }, { gOtherText_Exit }
 };
 
+static const u8 sContinentMenuText0_0[] = _("WEST / CENTRAL");
+static const u8 sContinentMenuText0_1[] = _("SOUTH / ALPS");
+static const u8 sContinentMenuText0_2[] = _("NORTH / ISLANDS");
+static const u8 sContinentMenuText0_3[] = _("DANUBE / BALKANS");
+static const u8 sContinentMenuText0_4[] = _("ADRIATIC / BALKANS");
+static const u8 sContinentMenuText0_5[] = _("EAST / BALTIC");
+static const struct MenuAction sContinentMenu0[] = {
+ {sContinentMenuText0_0},
+ {sContinentMenuText0_1},
+ {sContinentMenuText0_2},
+ {sContinentMenuText0_3},
+ {sContinentMenuText0_4},
+ {sContinentMenuText0_5},
+};
+static const u8 sContinentMenuText1_0[] = _("ENGLAND");
+static const u8 sContinentMenuText1_1[] = _("FRANCE");
+static const u8 sContinentMenuText1_2[] = _("GERMANY");
+static const u8 sContinentMenuText1_3[] = _("BELGIUM");
+static const u8 sContinentMenuText1_4[] = _("NETHERLANDS");
+static const u8 sContinentMenuText1_5[] = _("AUSTRIA");
+static const u8 sContinentMenuText1_6[] = _("CZECHIA");
+static const u8 sContinentMenuText1_7[] = _("SLOVAKIA");
+static const struct MenuAction sContinentMenu1[] = {
+ {sContinentMenuText1_0},
+ {sContinentMenuText1_1},
+ {sContinentMenuText1_2},
+ {sContinentMenuText1_3},
+ {sContinentMenuText1_4},
+ {sContinentMenuText1_5},
+ {sContinentMenuText1_6},
+ {sContinentMenuText1_7},
+};
+static const u8 sContinentMenuText2_0[] = _("SWITZERLAND");
+static const u8 sContinentMenuText2_1[] = _("ITALY");
+static const u8 sContinentMenuText2_2[] = _("GREECE");
+static const u8 sContinentMenuText2_3[] = _("SPAIN");
+static const u8 sContinentMenuText2_4[] = _("PORTUGAL");
+static const u8 sContinentMenuText2_5[] = _("POLAND");
+static const u8 sContinentMenuText2_6[] = _("LUXEMBOURG");
+static const struct MenuAction sContinentMenu2[] = {
+ {sContinentMenuText2_0},
+ {sContinentMenuText2_1},
+ {sContinentMenuText2_2},
+ {sContinentMenuText2_3},
+ {sContinentMenuText2_4},
+ {sContinentMenuText2_5},
+ {sContinentMenuText2_6},
+};
+static const u8 sContinentMenuText3_0[] = _("DENMARK");
+static const u8 sContinentMenuText3_1[] = _("NORWAY");
+static const u8 sContinentMenuText3_2[] = _("SWEDEN");
+static const u8 sContinentMenuText3_3[] = _("FINLAND");
+static const u8 sContinentMenuText3_4[] = _("ICELAND");
+static const u8 sContinentMenuText3_5[] = _("IRELAND");
+static const u8 sContinentMenuText3_6[] = _("MALTA");
+static const struct MenuAction sContinentMenu3[] = {
+ {sContinentMenuText3_0},
+ {sContinentMenuText3_1},
+ {sContinentMenuText3_2},
+ {sContinentMenuText3_3},
+ {sContinentMenuText3_4},
+ {sContinentMenuText3_5},
+ {sContinentMenuText3_6},
+};
+static const u8 sContinentMenuText4_0[] = _("HUNGARY");
+static const u8 sContinentMenuText4_1[] = _("ROMANIA");
+static const u8 sContinentMenuText4_2[] = _("BULGARIA");
+static const u8 sContinentMenuText4_3[] = _("ALBANIA");
+static const u8 sContinentMenuText4_4[] = _("SERBIA");
+static const u8 sContinentMenuText4_5[] = _("CROATIA");
+static const struct MenuAction sContinentMenu4[] = {
+ {sContinentMenuText4_0},
+ {sContinentMenuText4_1},
+ {sContinentMenuText4_2},
+ {sContinentMenuText4_3},
+ {sContinentMenuText4_4},
+ {sContinentMenuText4_5},
+};
+static const u8 sContinentMenuText5_0[] = _("SLOVENIA");
+static const u8 sContinentMenuText5_1[] = _("BOSNIA");
+static const u8 sContinentMenuText5_2[] = _("MONTENEGRO");
+static const u8 sContinentMenuText5_3[] = _("N MACEDONIA");
+static const struct MenuAction sContinentMenu5[] = {
+ {sContinentMenuText5_0},
+ {sContinentMenuText5_1},
+ {sContinentMenuText5_2},
+ {sContinentMenuText5_3},
+};
+static const u8 sContinentMenuText6_0[] = _("RUSSIA");
+static const u8 sContinentMenuText6_1[] = _("UKRAINE");
+static const u8 sContinentMenuText6_2[] = _("BELARUS");
+static const u8 sContinentMenuText6_3[] = _("LITHUANIA");
+static const u8 sContinentMenuText6_4[] = _("LATVIA");
+static const u8 sContinentMenuText6_5[] = _("ESTONIA");
+static const u8 sContinentMenuText6_6[] = _("TURKEY");
+static const struct MenuAction sContinentMenu6[] = {
+ {sContinentMenuText6_0},
+ {sContinentMenuText6_1},
+ {sContinentMenuText6_2},
+ {sContinentMenuText6_3},
+ {sContinentMenuText6_4},
+ {sContinentMenuText6_5},
+ {sContinentMenuText6_6},
+};
+
 static const struct MultichoiceListStruct sMultichoiceLists[] = {
+ [MULTICHOICE_SHADOW_WORLD_0] = MULTICHOICE(sContinentMenu0),
+ [MULTICHOICE_SHADOW_WORLD_1] = MULTICHOICE(sContinentMenu1),
+ [MULTICHOICE_SHADOW_WORLD_2] = MULTICHOICE(sContinentMenu2),
+ [MULTICHOICE_SHADOW_WORLD_3] = MULTICHOICE(sContinentMenu3),
+ [MULTICHOICE_SHADOW_WORLD_4] = MULTICHOICE(sContinentMenu4),
+ [MULTICHOICE_SHADOW_WORLD_5] = MULTICHOICE(sContinentMenu5),
+ [MULTICHOICE_SHADOW_WORLD_6] = MULTICHOICE(sContinentMenu6),
+
     [MULTICHOICE_EUROPE_PAST_SOUTH] = MULTICHOICE(sMultichoiceList_EuropePastSouth),
     [MULTICHOICE_EUROPE_PAST] = MULTICHOICE(sMultichoiceList_EuropePast),
     [MULTICHOICE_EUROPE_STARTER_ENGLAND] = MULTICHOICE(sMultichoiceList_StarterEngland),

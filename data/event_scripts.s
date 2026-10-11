@@ -1506,3 +1506,5 @@ Text_TestMsg::
 
 	.include "data/scripts/europe_council.inc"
 	.include "data/maps/EuropeCouncilHall/scripts.inc"
+
+	.include "data/scripts/shadow_campaign.inc"

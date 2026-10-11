@@ -1,0 +1,11 @@
+ContinentBratislavaPast_MapScripts::
+ map_script MAP_SCRIPT_ON_LOAD, ContinentBratislavaPast_Load
+ map_script MAP_SCRIPT_ON_TRANSITION, ContinentBratislavaPast_Transition
+ .byte 0
+ContinentBratislavaPast_Load::
+ special Shadow_PrepareVisible
+ special Shadow_ApplyTimeline
+ end
+ContinentBratislavaPast_Transition::
+ setrespawn HEAL_LOCATION_EUROPE_LONDON
+ end

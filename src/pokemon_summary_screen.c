@@ -1,4 +1,5 @@
 #include "global.h"
+#include "shadow_campaign.h"
 #include "gflib.h"
 #include "pokemon.h"
 #include "pokemon_summary_screen.h"
@@ -5212,7 +5213,7 @@ static bool32 CurrentMonIsFromGBA(void)
 
 static bool32 MapSecIsInKantoOrSevii(u8 mapSec)
 {
-    if (mapSec >= KANTO_MAPSEC_START && mapSec < MAPSEC_NONE)
+    if (Shadow_GetCountryMapName(mapSec) != NULL || (mapSec >= KANTO_MAPSEC_START && mapSec < MAPSEC_NONE))
         return TRUE;
     return FALSE;
 }

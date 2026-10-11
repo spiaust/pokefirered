@@ -231,3 +231,99 @@ const u16 gFieldEffectObjectPic_Bubbles[] = INCBIN_U16("graphics/field_effects/p
 const u16 gFieldEffectObjectPic_SmallSparkle[] = INCBIN_U16("graphics/field_effects/pics/small_sparkle.4bpp");
 const u16 gFieldEffectPal_SmallSparkle[] = INCBIN_U16("graphics/field_effects/palettes/small_sparkle.gbapal");
 const u16 gFieldEffectObjectPic_Bird[] = INCBIN_U16("graphics/field_effects/pics/bird.4bpp");
+
+const u16 gObjectEventPic_Eevee[] = INCBIN_U16("graphics/object_events/pics/pokemon/eevee.4bpp");
+
+const u16 gObjectEventPic_Abra[] = INCBIN_U16("graphics/object_events/pics/pokemon/abra.4bpp");
+
+const u16 gObjectEventPic_Alakazam[] = INCBIN_U16("graphics/object_events/pics/pokemon/alakazam.4bpp");
+
+const u16 gObjectEventPic_Arcanine[] = INCBIN_U16("graphics/object_events/pics/pokemon/arcanine.4bpp");
+
+const u16 gObjectEventPic_Bayleef[] = INCBIN_U16("graphics/object_events/pics/pokemon/bayleef.4bpp");
+
+const u16 gObjectEventPic_Cloyster[] = INCBIN_U16("graphics/object_events/pics/pokemon/cloyster.4bpp");
+
+const u16 gObjectEventPic_Crobat[] = INCBIN_U16("graphics/object_events/pics/pokemon/crobat.4bpp");
+
+const u16 gObjectEventPic_Dewgong[] = INCBIN_U16("graphics/object_events/pics/pokemon/dewgong.4bpp");
+
+const u16 gObjectEventPic_Dragonair[] = INCBIN_U16("graphics/object_events/pics/pokemon/dragonair.4bpp");
+
+const u16 gObjectEventPic_Dragonite[] = INCBIN_U16("graphics/object_events/pics/pokemon/dragonite.4bpp");
+
+const u16 gObjectEventPic_Dratini[] = INCBIN_U16("graphics/object_events/pics/pokemon/dratini.4bpp");
+
+const u16 gObjectEventPic_Dugtrio[] = INCBIN_U16("graphics/object_events/pics/pokemon/dugtrio.4bpp");
+
+const u16 gObjectEventPic_Electabuzz[] = INCBIN_U16("graphics/object_events/pics/pokemon/electabuzz.4bpp");
+
+const u16 gObjectEventPic_Espeon[] = INCBIN_U16("graphics/object_events/pics/pokemon/espeon.4bpp");
+
+const u16 gObjectEventPic_Gengar[] = INCBIN_U16("graphics/object_events/pics/pokemon/gengar.4bpp");
+
+const u16 gObjectEventPic_Geodude[] = INCBIN_U16("graphics/object_events/pics/pokemon/geodude.4bpp");
+
+const u16 gObjectEventPic_Gloom[] = INCBIN_U16("graphics/object_events/pics/pokemon/gloom.4bpp");
+
+const u16 gObjectEventPic_Golbat[] = INCBIN_U16("graphics/object_events/pics/pokemon/golbat.4bpp");
+
+const u16 gObjectEventPic_Gyarados[] = INCBIN_U16("graphics/object_events/pics/pokemon/gyarados.4bpp");
+
+const u16 gObjectEventPic_Haunter[] = INCBIN_U16("graphics/object_events/pics/pokemon/haunter.4bpp");
+
+const u16 gObjectEventPic_Heracross[] = INCBIN_U16("graphics/object_events/pics/pokemon/heracross.4bpp");
+
+const u16 gObjectEventPic_Hitmonlee[] = INCBIN_U16("graphics/object_events/pics/pokemon/hitmonlee.4bpp");
+
+const u16 gObjectEventPic_Houndoom[] = INCBIN_U16("graphics/object_events/pics/pokemon/houndoom.4bpp");
+
+const u16 gObjectEventPic_Houndour[] = INCBIN_U16("graphics/object_events/pics/pokemon/houndour.4bpp");
+
+const u16 gObjectEventPic_Hypno[] = INCBIN_U16("graphics/object_events/pics/pokemon/hypno.4bpp");
+
+const u16 gObjectEventPic_Jolteon[] = INCBIN_U16("graphics/object_events/pics/pokemon/jolteon.4bpp");
+
+const u16 gObjectEventPic_Jynx[] = INCBIN_U16("graphics/object_events/pics/pokemon/jynx.4bpp");
+
+const u16 gObjectEventPic_Kadabra[] = INCBIN_U16("graphics/object_events/pics/pokemon/kadabra.4bpp");
+
+const u16 gObjectEventPic_Kingdra[] = INCBIN_U16("graphics/object_events/pics/pokemon/kingdra.4bpp");
+
+const u16 gObjectEventPic_Krabby[] = INCBIN_U16("graphics/object_events/pics/pokemon/krabby.4bpp");
+
+const u16 gObjectEventPic_Machamp[] = INCBIN_U16("graphics/object_events/pics/pokemon/machamp.4bpp");
+
+const u16 gObjectEventPic_Magnemite[] = INCBIN_U16("graphics/object_events/pics/pokemon/magnemite.4bpp");
+
+const u16 gObjectEventPic_Magneton[] = INCBIN_U16("graphics/object_events/pics/pokemon/magneton.4bpp");
+
+const u16 gObjectEventPic_Mareep[] = INCBIN_U16("graphics/object_events/pics/pokemon/mareep.4bpp");
+
+const u16 gObjectEventPic_Misdreavus[] = INCBIN_U16("graphics/object_events/pics/pokemon/misdreavus.4bpp");
+
+const u16 gObjectEventPic_Nidoqueen[] = INCBIN_U16("graphics/object_events/pics/pokemon/nidoqueen.4bpp");
+
+const u16 gObjectEventPic_Ninetales[] = INCBIN_U16("graphics/object_events/pics/pokemon/ninetales.4bpp");
+
+const u16 gObjectEventPic_Oddish[] = INCBIN_U16("graphics/object_events/pics/pokemon/oddish.4bpp");
+
+const u16 gObjectEventPic_Onix[] = INCBIN_U16("graphics/object_events/pics/pokemon/onix.4bpp");
+
+const u16 gObjectEventPic_Poliwag[] = INCBIN_U16("graphics/object_events/pics/pokemon/poliwag.4bpp");
+
+const u16 gObjectEventPic_Primeape[] = INCBIN_U16("graphics/object_events/pics/pokemon/primeape.4bpp");
+
+const u16 gObjectEventPic_Sandslash[] = INCBIN_U16("graphics/object_events/pics/pokemon/sandslash.4bpp");
+
+const u16 gObjectEventPic_Sentret[] = INCBIN_U16("graphics/object_events/pics/pokemon/sentret.4bpp");
+
+const u16 gObjectEventPic_Staryu[] = INCBIN_U16("graphics/object_events/pics/pokemon/staryu.4bpp");
+
+const u16 gObjectEventPic_Tyranitar[] = INCBIN_U16("graphics/object_events/pics/pokemon/tyranitar.4bpp");
+
+const u16 gObjectEventPic_Vulpix[] = INCBIN_U16("graphics/object_events/pics/pokemon/vulpix.4bpp");
+
+const u16 gObjectEventPic_Wartortle[] = INCBIN_U16("graphics/object_events/pics/pokemon/wartortle.4bpp");
+
+const u16 gObjectEventPic_Weezing[] = INCBIN_U16("graphics/object_events/pics/pokemon/weezing.4bpp");
