@@ -105,6 +105,15 @@ partner ready, or use the shared shops' Revives and Hyper Potions in a normal
 run. Madrid's Earthquake TM provides strong coverage against the handler's
 Magneton and Houndoom.
 
+Prague's rescued Houndour provides Dark coverage for the wartime Psychic
+opponents. Purify it, then raise it one level to evolve; Vienna's Abra/Kadabra
+practice trainer is a safe way to begin catching it up. Train it further before
+Geneva's Gengar. Warsaw's rescued Lapras already knows Ice Beam, which gives
+you strong coverage against Dragonite. The shelters keep these rescues
+available after their chapters, so you can return when you have a party slot.
+Use the battle's Shift prompt to bring in the right partner as the opponent
+announces its next Pokemon.
+
 ## Supplies and evolution
 
 Every campaign shelter and country shop sells all six evolution stones at

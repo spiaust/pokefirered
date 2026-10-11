@@ -14,6 +14,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Pre-League legendary encounters: Articuno, Zapdos and Moltres.
 - [x] Postgame legendary encounters: Suicune, Lugia, Ho-Oh and Mewtwo.
 - [ ] Finish natural-level campaign balancing and broad hardware/emulator checks.
-  Natural saved-party coverage now reaches all eight badges, Lisbon and Paris
-  1940; continue with Warsaw 1943, Berlin 1944 and the remaining campaign and
-  postgame. Past-map and player palettes now survive cold Continue correctly.
+  Natural saved-party coverage now reaches all eight badges, the wartime
+  chapters and Veil's Geneva finale, with six partners and three purifications.
+  Continue with the League, natural legendary captures and the postgame.
+  Past-map and player palettes survive cold Continue and the modern return.

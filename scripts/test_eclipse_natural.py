@@ -15,6 +15,8 @@ def move_score(e,slot):
  if not move or not pp:return -1
  if move==e.read(e.symbols['gDisableStructs']+4,2):return -1
  m=e.symbols['gBattleMoves']+12*move;power=e.read(m+1,1);kind=e.read(m+2,1);accuracy=e.read(m+3,1)
+ # Levitate is an ability immunity, separate from the normal type table.
+ if kind==4 and e.read(b+88+32,1)==26:return -1
  if not power:return 0
  damage=power*(accuracy or 100)/100
  attack=e.read(b+(2 if kind<=8 else 8),2);defense=e.read(b+88+(4 if kind<=8 else 10),2)
@@ -70,7 +72,44 @@ def use_battle_heal(e,item,target_species=0):
  print('Native battle healing item spent:',item,flush=True)
 
 
-def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,revive_species=0):
+def switch_battle_partner(e,species):
+ """Choose a living partner through the native battle Pokemon menu."""
+ from test_navigation import wait_task
+ from test_shadow_runtime import monfield
+ e.press('UP',2);e.press('LEFT',2);e.press('DOWN',2);e.press('A',180)
+ wait_task(e,'Task_HandleChooseMonInput')
+ target=next(i for i in range(e.read('gPlayerPartyCount',1)) if monfield(e,i,0,0)&65535==species and e.read(e.symbols['gPlayerParty']+100*i+86,2))
+ for _ in range(12):
+  cur=e.read(e.symbols['gPartyMenu']+9,1)
+  if cur==target:break
+  e.press('LEFT' if target==0 else 'RIGHT' if cur==0 else 'DOWN' if cur<target else 'UP',60)
+ assert cur==target
+ e.press('A',180);e.press('A',180);e.frames(300)
+ for _ in range(20):
+  if e.read('gBattleMons',2)==species and not e.task_active('Task_HandleChooseMonInput'):break
+  e.press('A',60)
+ assert e.read('gBattleMons',2)==species
+ print('Native tactical switch:',species,flush=True)
+
+
+def announced_enemy(e):
+ """Read the opponent selected for the native replacement/Shift prompt."""
+ from test_shadow_runtime import monfield
+ # BattleStruct.monToSwitchIntoId[1]; the header's following field is at 0x60.
+ index=e.read(e.read('gBattleStruct')+0x5d,1)
+ if index<6 and e.read(e.symbols['gEnemyParty']+100*index+86,2):
+  return monfield(e,index,0,0,'gEnemyParty')&65535
+ return e.read(e.symbols['gBattleMons']+88,2)
+
+
+def effective_speed(e,b):
+ stage=e.read(b+24+3,1);speed=e.read(b+6,2)
+ speed*=((stage-4)/2 if stage>=6 else 2/(8-stage))
+ if e.read(b+76)&64:speed/=4
+ return speed
+
+
+def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,revive_species=0,trace=False,matchups=None,fallback_species=0,finish_low_enemy=False):
  action=first_symbol('HandleInputChooseAction');move=first_symbol('HandleInputChooseMove');turns=0;heals=0;revived=False
  for _ in range(limit):
   if not e.in_battle():break
@@ -87,16 +126,32 @@ def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,re
    order=[(e.read(e.symbols['gBattlePartyCurrentOrder']+i//2,1)&15) if i&1 else (e.read(e.symbols['gBattlePartyCurrentOrder']+i//2,1)>>4) for i in range(count)]
    active=next((i for i,x in enumerate(order) if x==current),0)
    living=[i for i in range(count) if e.read(e.symbols['gPlayerParty']+100*i+86,2)]
-   if active in living:
-    # Generic dialogue confirmation can accept an optional opponent switch.
-    e.press('B',180);continue
    assert living,'no living partner available'
-   target=living[0]
+   target=living[0];desired=(matchups or {}).get(announced_enemy(e))
+   candidate=None
+   if desired or fallback_species:
+    from test_shadow_runtime import monfield
+    candidate=next((i for i in living if monfield(e,i,0,0)&65535==desired),None)
+    if candidate is not None:target=candidate
+    elif active not in living:
+     candidate=next((i for i in living if monfield(e,i,0,0)&65535==fallback_species),None)
+     if candidate is not None:target=candidate
+   if active in living and (candidate is None or target==active):
+    e.press('B',180);continue
+   # Accept the native Shift prompt's free switch, or choose a faint replacement.
    for _ in range(8):
     cur=e.read(e.symbols['gPartyMenu']+9,1)
     if cur==target:break
     e.press('LEFT' if target==0 else 'RIGHT' if cur==0 else 'DOWN' if cur<target else 'UP',60)
    e.press('A',180);e.press('A',180);e.frames(300);continue
+  if matchups and fn in (action,move):
+   from test_shadow_runtime import monfield
+   desired=matchups.get(e.read(e.symbols['gBattleMons']+88,2))
+   if desired and e.read('gBattleMons',2)!=desired:
+    target=next((i for i in range(e.read('gPlayerPartyCount',1)) if monfield(e,i,0,0)&65535==desired and e.read(e.symbols['gPlayerParty']+100*i+86,2)),None)
+    if target is not None:
+     if fn==move:e.press('B',30)
+     switch_battle_partner(e,desired);continue
   if revive_species and not revived and fn in (action,move):
    from test_shadow_runtime import monfield
    from test_oxford_gym import count_pocket
@@ -104,14 +159,17 @@ def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,re
    if e.read(e.symbols['gPlayerParty']+100*target+86,2)==0 and count_pocket(e,24,0x310,42):
     if fn==move:e.press('B',30)
     use_battle_heal(e,24,revive_species);revived=True;continue
+  b=e.symbols['gBattleMons']
+  finish_now=finish_low_enemy and e.read(b+128,2)*2<=e.read(b+132,2) and effective_speed(e,b)>effective_speed(e,b+88)
   if fn==action:
    hp=e.read(e.symbols['gBattleMons']+40,2);maxhp=e.read(e.symbols['gBattleMons']+44,2)
-   if healing_item and heals<healing_limit and 0<hp*3<maxhp*2:
+   if healing_item and heals<healing_limit and 0<hp*2<maxhp and not finish_now:
     use_battle_heal(e,healing_item);heals+=1;continue
    e.press('UP',2);e.press('LEFT',2);e.press('A',30)
   elif fn==move:
    hp=e.read(e.symbols['gBattleMons']+40,2);maxhp=e.read(e.symbols['gBattleMons']+44,2)
-   if healing_item and heals<healing_limit and 0<hp*3<maxhp*2:
+   if trace:print('Battle decision:',e.read('gBattleMons',2),hp,maxhp,'enemy',e.read(e.symbols['gBattleMons']+88,2),e.read(e.symbols['gBattleMons']+128,2),flush=True)
+   if healing_item and heals<healing_limit and 0<hp*2<maxhp and not finish_now:
     # Dialogue confirmation can advance directly into move selection.
     e.press('B',30);use_battle_heal(e,healing_item);heals+=1;continue
    slot=max(range(4),key=lambda x:move_score(e,x));e.press('UP',2);e.press('LEFT',2)

@@ -226,8 +226,53 @@ country district, checks both palette sets after Continue, returns to its
 modern district and verifies modern colors after another cold save. All four
 new runners pass on the rebuilt release. No stats, inventory, story progress,
 experience, damage, AI, encounter or RNG memory writes are used. Native item
-purchases and consumption are asserted. Warsaw 1943 onward, postgame natural
-balancing and broad hardware/emulator checks remain outstanding.
+purchases and consumption are asserted.
+
+Warsaw initially defeats the four-partner team in six attack selections.
+`scripts/test_eclipse_natural_warsaw.py` returns to the already completed Prague
+shelter, collects its level-29 shadow Houndour, purifies it through native care,
+and evolves it into Houndoom after two Vienna Abra/Kadabra practice battles.
+The rescue bit, purification count and evolved partner are checked. Purchases
+of three Hyper Potions and one Revive cost 5,100 in earned money. The prepared
+five-partner team wins Warsaw in 11 attack selections (12 in an earlier saved
+branch), spending none of those supplies. The native saved party and historical
+tile/player colors survive cold Continue. `--probe` records the original team;
+`--resume` repeats the boss from the saved preparation.
+
+This exposed a test-runner error: its type-only scoring chose Earthquake against
+Weezing despite Levitate. The scorer now excludes that ability immunity. Native
+battle Pokemon menus also support specified matchup switches, choose an
+appropriate surviving replacement, and use the announced opponent in the free
+Shift prompt. Optional finishing logic accounts for Speed stages and paralysis;
+healing normally starts below half HP instead of repeatedly healing at two-thirds.
+These are runner input-policy changes, not edits to battle stats or native AI.
+
+`scripts/test_eclipse_natural_berlin1944.py` uses Nidoqueen against Magneton,
+Crobat and Houndoom, with the purified Houndoom against Hypno. The finalized
+replay wins in 11 attack selections using three Hyper Potions; an earlier
+paid-switch replay won in nine using one. Historical tile/player palettes and
+stage 15 survive cold Continue. Declining travel leaves the player in Berlin;
+returning to modern Geneva restores modern colors, which persist after another
+native save and cold restart.
+
+`scripts/test_eclipse_natural_geneva.py` adds Warsaw's level-45 shadow Lapras
+through its earned rescue, purifies it, and verifies Ice Beam. The party reaches
+six and three total purifications. Five Hyper Potions and one Revive are bought
+with 7,500 in earned money. The newly evolved Dark partner is initially too weak
+for Veil's level-52 Gengar; 23 ordinary Vienna practice victories raise it from
+level 31 to 40. The final team uses Nidoqueen for Magneton/Tyranitar/Houndoom,
+Houndoom for Gengar and Lapras for Dragonite. The finalized cold-save replay
+wins in seven attack selections without consuming an item. An earlier continuous
+run also won in seven using two Hyper Potions. Destiny Bond in failed retries
+helped identify poor replacement and recovery choices in the old runner.
+`--resume` repeats the finale from the trained preparation; `--train` can resume
+its training. Stage 16, six partners, the purified Lapras and modern tile/player
+colors survive cold Continue. These Normal, non-Nuzlocke playtests use native
+controls and earned resources, with no party, progress, inventory, experience,
+damage, AI, encounter or RNG memory writes. Lisbon still passes with its two
+Hyper Potions and Revive after the runner changes; Paris 1940 passes in seven
+selections with one Hyper Potion and a cold sepia save. League progression,
+postgame natural balancing and broad hardware/emulator checks remain outstanding.
 
 Legendary checks use explicit stage/purification, Master Ball and disabled
 incidental-encounter fixtures; these are encounter-system checks, not a natural
@@ -347,6 +392,10 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
     and opening-rival regression; requires the circuit partial checkpoint)
 18. `scripts/test_eclipse_credits.py` and `scripts/test_eclipse_first_ending.py`
     (archivist replay, original Champion ending and network reward)
+19. `scripts/test_eclipse_natural_warsaw.py`,
+    `scripts/test_eclipse_natural_berlin1944.py`, then
+    `scripts/test_eclipse_natural_geneva.py` (earned rescues, native training,
+    wartime victories, modern return and final Veil battle)
 
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
