@@ -623,7 +623,7 @@ static const u8 sFlowersOn[] = _("FLOWERS: ON");
 static const u8 sFlowersOff[] = _("FLOWERS: OFF");
 static const u8 sFlowersMoving[] = _("FLOWER MOTION: ON");
 static const u8 sFlowersStill[] = _("FLOWER MOTION: OFF");
-#define WORLD_OPTION_COUNT 12
+#define WORLD_OPTION_COUNT 14
 #define WORLD_OPTION_RESET (WORLD_OPTION_COUNT - 1)
 static const u8 sSkinClassic[] = _("SKIN: CLASSIC");
 static const u8 sSkinLight[] = _("SKIN: LIGHT");
@@ -637,8 +637,8 @@ static const u8 sAccentGreen[] = _("ACCENT: GREEN");
 static const u8 sAccentPurple[] = _("ACCENT: PURPLE");
 static const u8 sAccentGold[] = _("ACCENT: GOLD");
 static const u8 *const sAccentNames[] = {sAccentClassic, sAccentBlue, sAccentGreen, sAccentPurple, sAccentGold};
-static const u16 sWorldOptionVars[] = {VAR_EUROPE_MAP_DETAIL, VAR_EUROPE_AVATAR_STYLE, VAR_EUROPE_MAP_CONTRAST, VAR_EUROPE_HIDE_FLOWERS, VAR_EUROPE_OUTFIT_COLOR, VAR_EUROPE_STILL_FLOWERS, VAR_EUROPE_SKIN_TONE, VAR_EUROPE_ACCENT_COLOR, VAR_SHADOW_DIFFICULTY, VAR_SHADOW_NUZLOCKE, VAR_SHADOW_HIDE_WILD};
-static const u8 sWorldOptionCounts[] = {2, 3, 2, 2, 5, 2, 5, 5, 3, 2, 2};
+static const u16 sWorldOptionVars[] = {VAR_EUROPE_MAP_DETAIL, VAR_EUROPE_AVATAR_STYLE, VAR_EUROPE_MAP_CONTRAST, VAR_EUROPE_HIDE_FLOWERS, VAR_EUROPE_OUTFIT_COLOR, VAR_EUROPE_STILL_FLOWERS, VAR_EUROPE_SKIN_TONE, VAR_EUROPE_ACCENT_COLOR, VAR_SHADOW_DIFFICULTY, VAR_SHADOW_NUZLOCKE, VAR_SHADOW_HIDE_WILD, VAR_ECLIPSE_WEATHER, VAR_ECLIPSE_TIME};
+static const u8 sWorldOptionCounts[] = {2, 3, 2, 2, 5, 2, 5, 5, 3, 2, 2, 4, 3};
 static const u8 sRestoreDefaults[] = _("RESTORE DEFAULTS: PRESS A");
 static const u8 sRestoreHeading[] = _("RESTORE DEFAULTS?");
 static const u8 sRestoreInfo[] = _("Game and cosmetic options reset.");
@@ -697,6 +697,15 @@ static const u8 sModeNormal[] = _("DIFFICULTY: NORMAL");
 static const u8 sChallengeOn[] = _("NUZLOCKE: ON");
 static const u8 sChallengeOff[] = _("NUZLOCKE: OFF");
 static const u8 sWildOff[] = _("WILD SPRITES: OFF");
+static const u8 sWeatherAuto[] = _("WEATHER: REGIONAL");
+static const u8 sWeatherClear[] = _("WEATHER: CLEAR");
+static const u8 sWeatherRain[] = _("WEATHER: RAIN");
+static const u8 sWeatherSnow[] = _("WEATHER: SNOW");
+static const u8 sTimeAuto[] = _("TIME: AUTO");
+static const u8 sTimeDay[] = _("TIME: DAY");
+static const u8 sTimeNight[] = _("TIME: NIGHT");
+static const u8 sWeatherHelp[] = _("Outdoor weather; indoors stay clear.");
+static const u8 sTimeHelp[] = _("48-minute day; clock saves with game.");
 static const u8 sWildOn[] = _("WILD SPRITES: ON");
 static void DrawWorldOptions(u8 row)
 {
@@ -725,14 +734,16 @@ static void DrawWorldOptions(u8 row)
         labels[8] = VarGet(VAR_SHADOW_DIFFICULTY) == 1 ? sModeEasy : VarGet(VAR_SHADOW_DIFFICULTY) == 2 ? sModeHard : sModeNormal;
         labels[9] = VarGet(VAR_SHADOW_NUZLOCKE) ? sChallengeOn : sChallengeOff;
         labels[10] = VarGet(VAR_SHADOW_HIDE_WILD) ? sWildOff : sWildOn;
-        labels[11] = sRestoreDefaults;
+        labels[11] = VarGet(VAR_ECLIPSE_WEATHER) == 1 ? sWeatherClear : VarGet(VAR_ECLIPSE_WEATHER) == 2 ? sWeatherRain : VarGet(VAR_ECLIPSE_WEATHER) == 3 ? sWeatherSnow : sWeatherAuto;
+        labels[12] = VarGet(VAR_ECLIPSE_TIME) == 1 ? sTimeDay : VarGet(VAR_ECLIPSE_TIME) == 2 ? sTimeNight : sTimeAuto;
+        labels[13] = sRestoreDefaults;
         for (i = first; i < WORLD_OPTION_COUNT && i < first + 7; i++)
             MapText(labels[i], 12, 25 + 12 * (i - first), i == row ? sGold : sWhite);
     }
     MapText(sPreviewHeading, 191, 25, sGold);
     MapText(sWorldPreviewBike ? sPreviewBike : sPreviewWalk, 199, 80, sWhite);
     MapText(sPreviewTurn, 191, 94, sGold);
-    MapText(row == 8 ? sDifficultyHelp : row == 9 ? sNuzlockeHelp : row == 10 ? sWildHelp : sWorldOptionText5, 7, 108, sWhite);
+    MapText(row == 8 ? sDifficultyHelp : row == 9 ? sNuzlockeHelp : row == 10 ? sWildHelp : row == 11 ? sWeatherHelp : row == 12 ? sTimeHelp : sWorldOptionText5, 7, 108, sWhite);
     MapText(sWorldOptionText6, 7, 121, sWhite);
     MapText(sWorldOptionText7, 7, 135, sGold);
     MapText(sWorldOptionText8, 7, 147, sGold);
@@ -835,6 +846,8 @@ static void Task_EuropeMap(u8 taskId)
             VarSet(VAR_SHADOW_DIFFICULTY, 0);
             VarSet(VAR_SHADOW_NUZLOCKE, 0);
             VarSet(VAR_SHADOW_HIDE_WILD, 0);
+            VarSet(VAR_ECLIPSE_WEATHER, 0);
+            VarSet(VAR_ECLIPSE_TIME, 0);
             sWorldPreviewBike = FALSE;
             sWorldPreviewFacing = 0;
             gTasks[taskId].data[2] = 0;

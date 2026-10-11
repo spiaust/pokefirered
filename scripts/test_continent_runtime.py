@@ -14,7 +14,7 @@ def visible(e):
  return any(e.read(e.symbols['gObjectEvents']+36*i,1)&1 and e.read(e.symbols['gObjectEvents']+36*i+8,1)==lid and e.read(e.symbols['gObjectEvents']+36*i+9,1)==m and e.read(e.symbols['gObjectEvents']+36*i+10,1)==g for i in range(16))
 def menu_row(e,row):
  fn=e.symbols['Task_EuropeMap']&~1;t=e.symbols['gTasks'];slot=next(i for i in range(16) if e.read(t+40*i,4)&~1==fn and e.read(t+40*i+4,1));p=t+slot*40+10
- for _ in range(12):
+ for _ in range(20):
   if e.read(p,2)==row:return
   e.press('DOWN',15)
  raise AssertionError(('settings row',row))

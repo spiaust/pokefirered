@@ -11,6 +11,10 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Champion rematch circuit: add stronger teams, complete movesets and held
   items for the eight leaders, League council and rival champion; preserve
   difficulty settings and award a saved circuit completion reward.
+- [x] Regional rain/snow and a saved 48-minute day/night cycle, with gradual
+  dawn/dusk, World Gear overrides, indoor clear weather and historical tint.
+- [x] Regional rain/snow and a saved 48-minute day/night cycle, with gradual
+  dawn/dusk, World Gear overrides, indoor clear weather and historical tint.
 - [x] Champion training kit: Stewart supplies reusable Surf and one-time
   Thunderbolt/Flamethrower after circuit entry, with saved partial-delivery retry.
 - [x] Earned Normal-mode circuit coverage through ten rematches, with exact

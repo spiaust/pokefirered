@@ -1,5 +1,6 @@
 """Confirmed cosmetic reset, cancellation, field return and saved defaults."""
 from emulator import Emulator,ROOT
+from test_continent_runtime import menu_row
 from test_celebi import load_checkpoint
 from test_gym_ui import open_key_item,start_action
 from test_navigation import wait_task
@@ -19,6 +20,7 @@ try:
  e.press('LEFT',60)
  for _ in range(4):e.press('DOWN',60)
  e.press('LEFT',60);e.press('RIGHT',60);assert prefs(e)==(1,2,1,1,4)
+ menu_row(e,13)
  for cancel in ('B','START'):
   e.press('A',60);e.press(cancel,60)
   assert e.task_active('Task_EuropeMap') and prefs(e)==(1,2,1,1,4)

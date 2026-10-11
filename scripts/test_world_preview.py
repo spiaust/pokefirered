@@ -1,5 +1,6 @@
 """Live menu preview colors, avatar swaps, confirmation and field cleanup."""
 from emulator import Emulator,ROOT
+from test_continent_runtime import menu_row
 from test_celebi import load_checkpoint
 from test_gym_ui import open_key_item
 from test_navigation import wait_task
@@ -35,7 +36,7 @@ try:
  assert e.var(0x40d3)==2
  assert e.read('sWorldPreviewBike',1)==1
  e.press('SELECT',60);assert e.read('sWorldPreviewBike',1)==0;outfit(e,2)
- e.press('UP',60);e.press('UP',60);e.press('A',60)
+ menu_row(e,13);e.press('A',60)
  e.screenshot(ROOT/'test-output/world-preview-confirm.png')
  e.press('B',60);preview(e);outfit(e,2)
  e.press('A',60);e.press('A',60);preview(e);assert e.var(0x40c4)==0 and e.var(0x40d3)==0

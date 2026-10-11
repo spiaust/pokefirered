@@ -1,5 +1,6 @@
 """Native four-direction previews across avatars and poses without save edits."""
 from emulator import Emulator,ROOT
+from test_continent_runtime import menu_row
 from test_celebi import load_checkpoint
 from test_gym_ui import open_key_item
 from test_navigation import wait_task
@@ -24,7 +25,7 @@ try:
    e.press('SELECT',60);facing(e,0)
   e.press('RIGHT',60)
  e.press('R',60);facing(e,1)
- e.press('UP',60);e.press('UP',60);e.press('A',60)
+ menu_row(e,13);e.press('A',60)
  e.press('R',60);assert e.read('sWorldPreviewFacing',1)==1
  e.press('B',60);facing(e,1)
  settings=prefs(e)

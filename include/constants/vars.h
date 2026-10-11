@@ -392,7 +392,7 @@
 // Text color ids for VAR_TEXT_COLOR / VAR_PREV_TEXT_COLOR
 #define NPC_TEXT_COLOR_MALE      0 // Blue, for male NPCs
 #define NPC_TEXT_COLOR_FEMALE    1 // Red, for female NPCs
-#define NPC_TEXT_COLOR_MON       2 // Black, for Pokémon
+#define NPC_TEXT_COLOR_MON       2 // Black, for PokÃƒÂ©mon
 #define NPC_TEXT_COLOR_NEUTRAL   3 // Black, for inanimate objects and messages from the game
 #define NPC_TEXT_COLOR_DEFAULT 255 // If an NPC is selected, use the color specified by GetColorFromTextColorTable, otherwise use Neutral.
 
@@ -416,4 +416,7 @@
 #define VAR_ECLIPSE_NORDIC_HUNT VAR_0x40BD
 #define VAR_ECLIPSE_KRAKOW VAR_0x40BE
 #define VAR_ECLIPSE_CIRCUIT VAR_0x40BF
+#define VAR_ECLIPSE_WEATHER VAR_0x40D0 // 0 regional, 1 clear, 2 rain, 3 snow
+#define VAR_ECLIPSE_TIME VAR_0x40D1 // 0 clock, 1 daylight, 2 night
+
 #endif // GUARD_CONSTANTS_VARS_H

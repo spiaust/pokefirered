@@ -1,4 +1,9 @@
 #include "global.h"
+#include "palette.h"
+#include "field_weather.h"
+#include "field_weather_util.h"
+#include "constants/weather.h"
+#include "constants/map_types.h"
 #include "pokemon.h"
 #include "pokedex.h"
 #include "event_data.h"
@@ -353,5 +358,80 @@ void Eclipse_CircuitStatus(void)
     {
         StringCopy(gStringVar1, names[stage - 1]);
         StringCopy(gStringVar2, cities[stage - 1]);
+    }
+}
+
+// Portable saved clock: two minutes of play per game hour, starting at 08:00.
+// No RTC hardware or extra save/RAM allocation is required.
+u8 Eclipse_GetHour(void)
+{
+    return (8 + (gSaveBlock2Ptr->playTimeHours * 60u + gSaveBlock2Ptr->playTimeMinutes) / 2) % 24;
+}
+static bool8 Eclipse_IsOutdoor(void)
+{
+    u8 group = gSaveBlock1Ptr->location.mapGroup;
+    u8 type = gMapHeader.mapType;
+    return (group == MAP_GROUP(MAP_EUROPE_LONDON)
+        || group == MAP_GROUP(MAP_SHADOW_OXFORD)
+        || group == MAP_GROUP(MAP_CONTINENT_LONDON)
+        || group == MAP_GROUP(MAP_POSTGAME_KRAKOW))
+        && (type == MAP_TYPE_TOWN || type == MAP_TYPE_CITY || type == MAP_TYPE_ROUTE || type == MAP_TYPE_OCEAN_ROUTE);
+}
+u8 Eclipse_MapWeather(u8 original)
+{
+    static const u8 chapters[] = {0,0,1,3,4,2,6,5,8,9,11,12,1,13,2,8,10,10,10,10,10};
+    u16 mode, country, band;
+    u8 group = gSaveBlock1Ptr->location.mapGroup;
+    if (!Eclipse_IsOutdoor()) return original;
+    mode = VarGet(VAR_ECLIPSE_WEATHER);
+    if (mode == 1) return WEATHER_SUNNY;
+    if (mode == 2) return WEATHER_RAIN;
+    if (mode == 3) return WEATHER_SNOW;
+    country = group == MAP_GROUP(MAP_CONTINENT_LONDON) ? gSaveBlock1Ptr->location.mapNum / 2
+        : group == MAP_GROUP(MAP_SHADOW_OXFORD) ? chapters[gSaveBlock1Ptr->location.mapNum / 2]
+        : group == MAP_GROUP(MAP_POSTGAME_KRAKOW) ? 13 : gSaveBlock1Ptr->location.mapNum / 4;
+    band = (gSaveBlock2Ptr->playTimeHours * 60u + gSaveBlock2Ptr->playTimeMinutes) / 12;
+    if ((country + band) % 3 != 1) return WEATHER_SUNNY;
+    switch (country)
+    {
+    case 5: case 8: case 15: case 16: case 17: case 18: case 19:
+    case 32: case 34: case 35: case 36: case 37:
+        return WEATHER_SNOW;
+    default:
+        return WEATHER_RAIN;
+    }
+}
+void Eclipse_UpdateEnvironment(void)
+{
+    u8 weather;
+    if (!Eclipse_IsOutdoor()) return;
+    weather = Eclipse_MapWeather(gMapHeader.weather);
+    if (GetSav1Weather() != weather) SetWeather(weather);
+}
+void Eclipse_TintFieldHardware(void)
+{
+    u16 i, mode, minute;
+    u8 darkness, r, g, b;
+    volatile u16 *dest = (volatile u16 *)PLTT;
+    if (!Eclipse_IsOutdoor()) return;
+    mode = VarGet(VAR_ECLIPSE_TIME);
+    if (mode == 1) return;
+    minute = ((gSaveBlock2Ptr->playTimeHours * 60u + gSaveBlock2Ptr->playTimeMinutes) * 30
+        + gSaveBlock2Ptr->playTimeSeconds / 2 + 480) % 1440;
+    darkness = mode == 2 ? 12 : minute < 300 || minute >= 1200 ? 12
+        : minute < 480 ? (480 - minute) / 15 : minute < 1020 ? 0 : (minute - 1020) / 15;
+    if (!darkness) return;
+    // Transform the transferred palette, never the source buffers. This avoids
+    // accumulation and composes with weather fades and the historical sepia.
+    // Text/menu BG palettes 13-15 retain their original contrast.
+    for (i = 0; i < 512; i++)
+    {
+        u16 color;
+        if (i >= 208 && i < 256) continue;
+        color = gPlttBufferFaded[i];
+        r = (color & 31) * (32 - darkness) / 32;
+        g = ((color >> 5) & 31) * (32 - darkness) / 32;
+        b = ((color >> 10) & 31) * (32 - darkness / 3) / 32;
+        dest[i] = RGB(r, g, b);
     }
 }

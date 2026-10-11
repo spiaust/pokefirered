@@ -558,7 +558,7 @@ resources. Remaining earned circuit combat, other full starting routes,
 and broad hardware/emulator checks remain before calling this a polished release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `67629ea7f27154b88962c8498d35471fe9a9675560f29c9b47fa50656bee09b7`
+SHA-256: `e400f0243f54a2f77e4b20c8d37fe2272199cbe2a7b391f18a54e14d608df971`
 
 ## Earned six-rescue Mewtwo route
 
@@ -682,3 +682,40 @@ one Revive, five Full Heals). The pending match and main ending remain saved.
 Further partner training is required before verifying Eleni, Leon, the rival
 and the natural Master Ball reward. The fixture regression covers those rules
 but does not replace earned combat. No circuit opponent stats were weakened.
+
+## Weather and saved day/night cycle
+
+The current ROM adds native animated rain and snow, regional weather,
+48-minute days with dawn/dusk/night tint, and saved World Gear overrides.
+Only outdoor European maps receive these effects. The clock reuses saved
+playtime; menus/battles use their native palettes. Night tint is applied to the
+hardware palette without modifying either source buffer, composing with sepia
+and avoiding cumulative tint. Text BG palettes retain their contrast.
+FireRed's dormant snow restart timer now advances, so snowfall continues.
+RAM usage is unchanged: EWRAM 261,084 bytes; IWRAM 29,824 bytes.
+
+On ROM `e400f0243f54a2f77e4b20c8d37fe2272199cbe2a7b391f18a54e14d608df971`:
+
+- `scripts/test_eclipse_environment.py` passed native World Gear rain/snow/day/
+  night selection, actual rain/snow sprite counts, snow callback respawning
+  after 1,200 extra frames, hardware palette comparisons and stable frames.
+  Native Save/cold Continue retains settings and location. Clock fixtures
+  cover day/night/dawn/dusk and live time/weather boundary transitions.
+  Native Norway travel verifies regional snow in both eras and historical
+  tint composition; return to the champion shelter verifies indoor clear and
+  untinted palettes despite forced settings. Restore Defaults resets controls.
+  Only clock phases are memory fixtures; settings, travel, saving and reload
+  use native inputs. The test allows the full native save prompt to finish.
+- `scripts/test_eclipse_past_continue.py` passed historical map/player palette
+  cold reload and modern return/cold palette restoration.
+- `scripts/test_shadow_static.py` and `scripts/test_continent_static.py` passed
+  campaign/map/trainer/encounter/dialogue validation.
+- Rain/day, rain/night, snow/night, regional Norway snow, historical snow/night
+  and indoor screenshots were inspected. Snow remains visible after repeated
+  falls. Snow is visual; it does not apply hail damage in battles.
+
+The older cosmetic suites' required European Tour checkpoint files are absent
+from this clone, so those suites could not run here. Their row navigation was
+updated for the expanded menu; the native environment check verifies scrolling
+through both added options and the relocated Restore Defaults row. Real GBA
+hardware timing and a full campaign replay remain outside this focused check.

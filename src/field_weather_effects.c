@@ -737,6 +737,7 @@ void Snow_InitVars(void)
     gWeatherPtr->gammaTargetIndex = 3;
     gWeatherPtr->gammaStepDelay = 20;
     gWeatherPtr->targetSnowflakeSpriteCount = 16;
+    gWeatherPtr->snowflakeTimer = 0;
     gWeatherPtr->snowflakeVisibleCounter = 0;
 }
 
@@ -755,6 +756,9 @@ void Snow_InitAll(void)
 
 void Snow_Main(void)
 {
+    // FireRed never advanced this unused weather timer. Keep flakes respawning.
+    if (gWeatherPtr->snowflakeTimer < 19)
+        gWeatherPtr->snowflakeTimer++;
     if (gWeatherPtr->initStep == 0 && !UpdateVisibleSnowflakeSprites())
     {
         gWeatherPtr->weatherGfxLoaded = TRUE;
@@ -900,7 +904,6 @@ static void InitSnowflakeSpriteMovement(struct Sprite *sprite)
 
 static void WaitSnowflakeSprite(struct Sprite *sprite)
 {
-    // Timer is never incremented
     if (gWeatherPtr->snowflakeTimer > 18)
     {
         sprite->invisible = FALSE;

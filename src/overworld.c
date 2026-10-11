@@ -1,4 +1,5 @@
 #include "global.h"
+#include "shadow_campaign.h"
 #include "gflib.h"
 #include "bg_regs.h"
 #include "cable_club.h"
@@ -1579,6 +1580,7 @@ void CB1_Overworld(void)
 
 static void OverworldBasic(void)
 {
+    Eclipse_UpdateEnvironment();
     ScriptContext_RunScript();
     RunTasks();
     AnimateSprites();
@@ -1870,6 +1872,7 @@ static void VBlankCB_Field(void)
     ScanlineEffect_InitHBlankDmaTransfer();
     FieldUpdateBgTilemapScroll();
     TransferPlttBuffer();
+    Eclipse_TintFieldHardware();
     TransferTilesetAnimsBuffer();
 }
 

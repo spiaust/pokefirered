@@ -99,6 +99,22 @@ appearance and these gameplay settings at any time:
   steps. Switch them OFF for classic grass encounters. Actors occupy defined
   encounter points rather than roaming; interact to start a real wild battle.
 
+## Weather and day/night
+
+Outdoor districts and campaign routes now have regional weather that changes
+with playtime. Northern and alpine districts use snow during their precipitation
+periods; other countries use rain. World Gear offers REGIONAL, CLEAR, RAIN and
+SNOW, plus AUTO, DAY and NIGHT lighting. Shelters and other indoor maps stay clear.
+
+AUTO starts at 08:00 and completes a day in 48 minutes of active playtime.
+Dawn and dusk fade gradually into blue nighttime lighting. The clock follows
+the saved playtime counter and pauses when the game is off. It does not use
+real-world time or live weather. Lighting combines with the historical sepia
+palette, while menus and battles retain their normal colors. Settings survive
+ordinary Save/Continue and Restore Defaults returns both controls to AUTO/REGIONAL.
+Rain retains the native rain battle effects; falling snow is visual and does
+not start hail damage. Snowflakes keep respawning after their first fall.
+
 Visible sprites cover all 62 species in the new encounter tables, using native
 sprites and original small adaptations of the base's Pokemon icons.
 
