@@ -206,13 +206,15 @@ The refuge's friendly partners stay visible independently of the wild toggle.
 ## Catching the guardians
 
 Bring enough Balls and healing supplies: the guardians retain their native
-low catch rates. Thunder Wave can improve your odds without ongoing damage.
+low catch rates. Shelter and country shops now sell Timer Balls for 1,000.
+They become stronger as a battle lasts; use them during a prolonged attempt,
+especially against partners that know Recover. Thunder Wave can improve your odds without ongoing damage.
 Use weaker attacks carefully, allowing for critical hits, and stop attacking
 before a knockout. Pressure can use up move PP quickly. A full party sends a
 successful catch to the PC; you do not need to empty a party slot first.
 Caught guardians stay removed after saving and Continue. Normal-mode captures
-of all three pre-League birds and postgame Suicune have been verified with
-ordinary purchased Ultra Balls and an earned team.
+of all three pre-League birds and postgame Suicune, Lugia and Ho-Oh have been
+verified with purchased Ultra/Timer Balls and an earned team.
 
 ## Champion rematch circuit
 

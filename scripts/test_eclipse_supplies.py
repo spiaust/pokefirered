@@ -47,7 +47,7 @@ def main():
   go(e,(8,7));e.press('UP');e.press('A',180);wait_menu(e,'Task_ShopMenu');e.press('A',180);wait_menu(e,'Task_BuyMenu')
   stock=e.symbols['Shadow_ShopItems'];items=[]
   while e.read(stock+2*len(items),2):items.append(e.read(stock+2*len(items),2))
-  assert len(items)==22 and set(range(93,99)).issubset(items),items
+  assert len(items)==23 and 10 in items and set(range(93,99)).issubset(items),items
   shop=e.symbols['sShopData']
   for item,price in ((96,2100),(94,2100),(85,550)):
    index=items.index(item)

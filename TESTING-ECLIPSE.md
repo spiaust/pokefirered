@@ -404,6 +404,9 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
     `scripts/test_eclipse_natural_legendary_saves.py` (earned-party catches,
     purchased Ultra Balls, PC delivery and cold persistence; `--post` for Suicune)
 
+22. `scripts/test_eclipse_timer_rules.py` (explicit Nuzlocke allowance/Ball/escape
+    fixtures; native blocked refund and unrestricted Timer throw)
+
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
 the ROM changes. Preview capture: `scripts/preview_eclipse.py`.
@@ -491,9 +494,57 @@ boxed records and remaining Ultra Balls across its save/load boundary.
 continues from a native caught checkpoint. Use `--post --resume` for the saved
 Suicune preparation. Test saves and screenshots remain under ignored test-output.
 
-Natural Lugia, Ho-Oh and Mewtwo captures, postgame battles, other full starting
-routes and hardware checks remain outstanding. Earlier seven-legendary fixtures
+The following guardian pass adds Lugia and Ho-Oh coverage; natural Mewtwo
+capture, postgame battles, other full starting routes and hardware checks
+remain outstanding. Earlier seven-legendary fixtures
 are encounter-system tests and remain separate from these earned-party results.
+
+## Recovering guardians and Timer Ball access
+
+Natural champion-party coverage now includes Malta's level-65 Lugia and
+Austria's level-65 Ho-Oh. Ho-Oh opens with the three purifications actually
+earned during the campaign; no care or story gate is patched. Separate branches
+start from the same earned champion/preparation save, so these captures are
+not claimed as one continuously stocked six-legendary run.
+
+The initial Lugia catch uses 51 Ultra Balls, seven heals and five move selections.
+Lugia knocks out Raichu and restores its own HP with Recover; Lapras keeps the
+attempt alive. A Ho-Oh pilot exhausts enemy PP and ends in a native knockout.
+The uncaught flag stays clear, storage is unchanged, and the runner heals and
+retries without restoring supplies or setting progress. Its retry catches Ho-Oh
+with another 21 Ultra Balls. The capture helper can restore Raichu with a real
+Revive and switch it back after the opponent's high-power attacks run out of PP.
+An optional Shock Wave policy uses a conservative critical-hit damage bound;
+it does not change damage, critical rates or enemy recovery.
+
+These attempts exposed missing long-battle supplies. The shared League shop
+now includes the existing FireRed Timer Ball for its native 1,000 price, bringing
+stock to 23 items. The original Ball calculation is unchanged: Timer Balls grow
+with the native battle turn counter and cap at the original multiplier. No RAM
+state, new item type, encounter odds or guardian stats were added.
+
+`--post --timer --guardian=lugia` buys 45 Ultra Balls, 45 Timer Balls, 15 Hyper
+Potions and five Full Restores for 132,000 in earned money. The runner chooses
+Timer Balls after ten battle turns, verifies consumption from the Ball pocket,
+and compares both Ball stacks plus the full boxed record across cold Continue.
+That observed Lugia run catches it with seven Ultra Balls and two Timer Balls;
+Ho-Oh's run from the same saved preparation uses three Ultra and fourteen Timer
+Balls with three heals. These are observed outcomes, not guaranteed counts.
+Use `--post --timer --resume --guardian=ho_oh` for that preparation replay.
+The cold-save checker now covers all six naturally captured guardians, verifies
+their exact native level/experience, recorded Ball type, actor removal and stage.
+
+`test_eclipse_timer_rules.py` uses explicit used-encounter, one-Timer-Ball and
+escape fixtures to isolate Nuzlocke behavior. A blocked throw refunds the Timer
+Ball; switching Nuzlocke OFF consumes it through the original catch handler.
+This is a rule regression, separate from the natural capture balance checks.
+The scrolling shop, stone prices, cancellation, shadow evolution refusal and
+purified Raichu evolution checks remain in `test_eclipse_supplies.py`.
+
+Build log: `build-eclipse-timer-balls.log`. EWRAM remains 261,084/262,144 bytes,
+and IWRAM 29,824/32,768 bytes. The release alias matches the rebuilt ROM.
+Natural Mewtwo capture still needs six earned purifications. Postgame combat,
+other full starting routes and hardware checks remain unfinished.
 
 ## Release-quality limits
 
@@ -507,4 +558,4 @@ resources. Remaining natural legendary and postgame coverage, other full startin
 and broad hardware/emulator checks remain before calling this a polished release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `aa29d21a624bc31c80be8affc808cd075ae8339846687e337a89d56de769dce6`
+SHA-256: `c13f9e82fd4954ccf385843574ef0261aac5848dc7e154997e5fc574e31613f3`

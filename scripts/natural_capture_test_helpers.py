@@ -58,7 +58,24 @@ def quick_attack_max_damage(e):
  level=e.read(b+42,1)
  return ((2*level//5+2)*40*atk//max(1,defense)//50)*2+6
 
-def capture(e,limit=7000):
+def shock_wave_max_damage(e):
+ # Raichu's Electric STAB and neutral/super-effective matchups only.
+ b=e.symbols['gBattleMons'];atk=e.read(b+8,2);defense=e.read(b+88+10,2)
+ attack_stage=max(6,e.read(b+28,1));defense_stage=min(6,e.read(b+88+29,1))
+ atk=atk*(attack_stage-4)//2;defense=defense*2//(8-defense_stage)
+ base=((2*e.read(b+42,1)//5+2)*60*atk//max(1,defense)//50)*2+2
+ effect=1;types={e.read(b+88+33,1),e.read(b+88+34,1)};chart=e.symbols['gTypeEffectiveness']
+ for i in range(140):
+  attack,target,factor=(e.read(chart+3*i+j,1) for j in range(3))
+  if attack==255:break
+  if attack==13 and target in types:effect*=factor/10
+ return int(base*1.5*effect)+12
+
+def dangerous_moves_spent(e):
+ b=e.symbols['gBattleMons']+88;table=e.symbols['gBattleMoves']
+ return all(not e.read(b+36+i,1) or e.read(table+12*e.read(b+12+2*i,2)+1,1)<110 for i in range(4))
+
+def capture(e,limit=7000,fallback_species=31,strong_move=False):
  action=natural.first_symbol('HandleInputChooseAction');movefn=natural.first_symbol('HandleInputChooseMove')
  b=e.symbols['gBattleMons'];balls=heals=attacks=0
  for _ in range(limit):
@@ -69,7 +86,7 @@ def capture(e,limit=7000):
   if e.task_active('Task_HandleChooseMonInput'):
    living=[i for i in range(e.read('gPlayerPartyCount',1)) if e.read(e.symbols['gPlayerParty']+100*i+86,2)]
    assert living
-   target=next((i for i in living if monfield(e,i,0,0)&65535==31),living[0])
+   target=next((i for i in living if monfield(e,i,0,0)&65535==fallback_species),living[0])
    from natural_preparation_test_helpers import choose
    choose(e,target);e.press('A',180);e.press('A',180);e.frames(300);continue
   if fn in (action,movefn):
@@ -83,13 +100,24 @@ def capture(e,limit=7000):
      natural.use_battle_heal(e,item);heals+=1;continue
    enemyhp,enemymax,status=e.read(b+128,2),e.read(b+132,2),e.read(b+164)
    species=e.read(b,2)
+   if strong_move and species!=26 and enemyhp*5>enemymax and dangerous_moves_spent(e):
+    target=next((i for i in range(e.read('gPlayerPartyCount',1)) if monfield(e,i,0,0)&65535==26),None)
+    if target is not None:
+     if fn==movefn:e.press('B',30)
+     if not e.read(e.symbols['gPlayerParty']+100*target+86,2) and count_pocket(e,24,0x310,42):
+      natural.use_battle_heal(e,24,26);heals+=1;continue
+     if e.read(e.symbols['gPlayerParty']+100*target+86,2):
+      natural.switch_battle_partner(e,26);continue
    if species==26 and not status and e.read(b+36+2,1):
     move(e,86,fn);attacks+=1;continue
+   if strong_move and species==26 and enemyhp*5>enemymax and enemyhp>shock_wave_max_damage(e) and e.read(b+36,1):
+    move(e,351,fn);attacks+=1;continue
    if species==26 and enemyhp*5>enemymax and enemyhp>quick_attack_max_damage(e) and e.read(b+36+3,1):
     move(e,98,fn);attacks+=1;continue
    if fn==movefn:e.press('B',30)
-   print('Native capture throw:',balls+1,'enemy HP',enemyhp,enemymax,'status',status,'player',species,hp,flush=True)
-   throw(e);balls+=1
+   item=10 if count_pocket(e,10,0x430,13) and (e.read(e.symbols['gBattleResults']+0x13,1)>10 or not count_pocket(e,2,0x430,13)) else 2
+   print('Native capture throw:',balls+1,'Ball',item,'enemy HP',enemyhp,enemymax,'status',status,'player',species,hp,flush=True)
+   throw(e,item);balls+=1
   else:e.press('A',30)
  else:raise AssertionError('native capture stalled')
  outcome=e.read('gBattleOutcome',1);e.finish_dialogue();e.frames(240)

@@ -7,15 +7,16 @@ from test_oxford_gym import count_pocket
 import json
 
 def main():
- for row in D[:4]:
+ for row in D[:6]:
   name='natural-caught-'+row['species'].lower();e=Emulator(ROOT/'pokefirered.gba')
   try:
    load_checkpoint(e,name,True);species=SPECIES[row['species']]
    records=boxed_records(e,species);assert len(records)==1
-   # All four covered legendaries use the native Slow experience curve.
+   # All six covered legendaries use the native Slow experience curve.
    assert records[0][2][0][1]==row['level']**3*5//4
+   assert (records[0][2][3][0]>>27)&15 in (2,10),'unexpected catch Ball in boxed data'
    assert flag(e,int(row['flag'],16)) and e.read('gPlayerPartyCount',1)==6
-   assert e.var(0x408C)==(21 if row['species']=='SUICUNE' else 16)
+   assert e.var(0x408C)==(21 if row['min_stage']==21 else 16)
    assert e.var(0x4090)==0 and e.var(0x4091)==0
    m=json.loads((ROOT/f"data/maps/{row['map']}/map.json").read_text())
    lid=next(i+1 for i,o in enumerate(m['object_events']) if o['script']=='EclipseLegendary_'+row['species'])
