@@ -2,7 +2,7 @@
 
 The ending keeps League shelters, country travel and repeatable training available.
 
-- [ ] Eclipse-remnant hunt in Scandinavia: investigate surviving relays across
+- [x] Eclipse-remnant hunt in Scandinavia: investigate surviving relays across
   Denmark, Norway and Sweden, battle remnant commanders, and shut down their
   final shadow signal. Connect the investigation to the northern guardians.
 - [ ] Sanctuary restoration in Krakow: add a distinct Krakow district alongside

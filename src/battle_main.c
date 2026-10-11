@@ -1636,7 +1636,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
         gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
     }
 
-    if (trainerNum >= 100 && trainerNum <= 375 && VarGet(VAR_SHADOW_STARTED))
+    if (trainerNum >= 100 && trainerNum <= 378 && VarGet(VAR_SHADOW_STARTED))
     {
         u8 mode = VarGet(VAR_SHADOW_DIFFICULTY);
         for (i = 0; i < gTrainers[trainerNum].partySize; i++)
@@ -1649,7 +1649,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
             experience = gExperienceTables[gSpeciesInfo[species].growthRate][level];
             SetMonData(&party[i], MON_DATA_EXP, &experience);
             CalculateMonStats(&party[i]);
-            GiveMonInitialMoveset(&party[i]);
+            if (!(gTrainers[trainerNum].partyFlags & F_TRAINER_PARTY_CUSTOM_MOVESET))
+                GiveMonInitialMoveset(&party[i]);
         }
     }
     if (trainerNum >= 100 && trainerNum <= 258 && VarGet(VAR_SHADOW_STARTED)

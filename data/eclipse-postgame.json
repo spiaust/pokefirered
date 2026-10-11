@@ -1,0 +1,45 @@
+{
+  "nordic_hunt": {
+    "progress_var": "0x40bd",
+    "reward_flag": "0x8d5",
+    "reward_tm": 30,
+    "trainers": [
+      {
+        "id": 376,
+        "name": "VEX",
+        "level": 62,
+        "party": [
+          "CROBAT",
+          "ELECTRODE",
+          "MUK"
+        ]
+      },
+      {
+        "id": 377,
+        "name": "RIME",
+        "level": 64,
+        "party": [
+          "MAGNETON",
+          "HOUNDOOM",
+          "WEEZING"
+        ]
+      },
+      {
+        "id": 378,
+        "name": "BOREAL",
+        "level": 66,
+        "party": [
+          "HOUNDOOM",
+          "CROBAT",
+          "UMBREON",
+          "TYRANITAR"
+        ]
+      }
+    ],
+    "route": [
+      "Copenhagen",
+      "Oslo",
+      "Stockholm"
+    ]
+  }
+}

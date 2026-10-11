@@ -188,13 +188,27 @@ Celebi remains the time-travel guide so catching a guardian cannot break travel.
 | Postgame | Ho-Oh | Vienna, Austria | 65 | League ending and three purified rescues |
 | Postgame | Mewtwo | Berlin, Germany | 70 | League ending and all six purified rescues |
 
+## Scandinavian remnant hunt
+
+After the League ending, meet Ada northeast of Copenhagen's landmark. Accept
+her investigation, defeat Vex in Copenhagen, Rime in Oslo and Boreal in Stockholm,
+then return to Ada. Their three relays threaten the northern rescue network and
+its guardians. Opponents have three, three and four shadow partners at Normal
+levels 62, 64 and 66, with curated four-move sets, held items and stronger AI.
+Easy lowers levels by four; Hard raises them by five without replacing movesets.
+
+The hunt saves each victory independently and leaves the main ending complete.
+Declining does not advance it. Defeated commanders cannot be farmed. Ada gives
+one Shadow Ball TM; a full TM stack leaves it pending until there is room.
+Completed saves retain the hunt, reward and open League/travel facilities.
+
 ## Postgame production roadmap
 
-The ending leaves League shelters and repeatable training available. Further
-production will add an Eclipse-remnant hunt in Scandinavia, sanctuary
-restoration in Krakow, and a true champion rematch circuit. Detailed tasks are
-tracked in [TODO-ECLIPSE.md](TODO-ECLIPSE.md). Legendary guardians are implemented;
-the three larger postgame arcs remain on that roadmap.
+The ending leaves League shelters and repeatable training available. The
+Scandinavian remnant hunt and legendary guardians are now implemented.
+Remaining production includes sanctuary restoration in Krakow and a true
+champion rematch circuit. Detailed tasks are tracked in
+[TODO-ECLIPSE.md](TODO-ECLIPSE.md).
 
 | Destination | City | Landmark |
 | --- | --- | --- |

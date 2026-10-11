@@ -2808,7 +2808,7 @@ ShadowChampion_Done::
 ShadowChampion_Before::
 	.string "{RIVAL}: I used to think a\nchampion stood alone. Now I know\pwho helped me get here. No\nsecrets, no stolen strength. One\phonest match between us. Ready?\nShall we battle?$"
 ShadowChampion_After::
-	.string "{RIVAL}: You are the EUROPEAN\nCHAMPION! ADA records our\pjourney: eight badges, partners\nrescued, a resistance network\pprotected, and ECLIPSE defeated.\nCELEBI returns to its forest.\pThe shelters remain open. We\nwill keep traveling together.\pTHE END.$"
+	.string "{RIVAL}: You are the EUROPEAN\nCHAMPION! ADA records our\pjourney: eight badges, partners\nrescued, a resistance network\pprotected, and ECLIPSE defeated.\nCELEBI watches the timeways.\pThe shelters remain open. We\nwill keep traveling together.\pADA waits in Copenhagen. Help\nher investigate a northern relay.\pTHE END.$"
 ShadowChampion_Intro::
 	.string "Your partners are ready. Let us\nbegin.$"
 ShadowChampion_Defeat::
@@ -4363,7 +4363,7 @@ ContinentCopenhagen_Landmark::
  msgbox ContinentCopenhagen_LandmarkText, MSGBOX_SIGN
  end
 ContinentCopenhagen_LandmarkText::
- .string "ROSENBORG CASTLE - COPENHAGEN.\nThis is a compact landmark\pdistrict. The station is south;\ntrainers are along the garden\ppaths.$"
+ .string "ROSENBORG CASTLE - COPENHAGEN.\nThis is a compact landmark\pdistrict. The station is south;\ntrainers are along the garden\ppaths.\pAfter the League, meet ADA\nnortheast of the landmark.$"
 ContinentCopenhagen_Keeper::
  lock
  faceplayer
@@ -4435,7 +4435,7 @@ ContinentOslo_Landmark::
  msgbox ContinentOslo_LandmarkText, MSGBOX_SIGN
  end
 ContinentOslo_LandmarkText::
- .string "AKERSHUS FORTRESS - OSLO.\pThe station is south; trainers\nfollow the garden paths.\pZAPDOS waits northeast.\nReturn after your seventh badge.$"
+ .string "AKERSHUS FORTRESS - OSLO.\pThe station is south; trainers\nfollow the garden paths.\pZAPDOS waits northeast.\nReturn after your seventh badge.\pADA investigates a northern\nrelay from Copenhagen.$"
 ContinentOslo_Keeper::
  lock
  faceplayer
@@ -4507,7 +4507,7 @@ ContinentStockholm_Landmark::
  msgbox ContinentStockholm_LandmarkText, MSGBOX_SIGN
  end
 ContinentStockholm_LandmarkText::
- .string "CITY HALL - STOCKHOLM. This is\na compact landmark district.\pThe station is south; trainers\nare along the garden paths.$"
+ .string "CITY HALL - STOCKHOLM. This is\na compact landmark district.\pThe station is south; trainers\nare along the garden paths.\pADA investigates a northern\nrelay from Copenhagen.$"
 ContinentStockholm_Keeper::
  lock
  faceplayer
@@ -6606,3 +6606,125 @@ EclipseLegendary_MEWTWO::
  goto Shadow_End
 EclipseLegendary_MEWTWO_Intro::
  .string "All six rescued partners are\nfree. The escaped laboratory\pguardian will now test your\npromise.\pChallenge this guardian?$"
+
+EclipseNordic_Ada::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseNordic_Locked
+ goto_if_eq VAR_ECLIPSE_NORDIC_HUNT, 0, EclipseNordic_Start
+ goto_if_eq VAR_ECLIPSE_NORDIC_HUNT, 1, EclipseNordic_DenmarkLead
+ goto_if_eq VAR_ECLIPSE_NORDIC_HUNT, 2, EclipseNordic_NorwayLead
+ goto_if_eq VAR_ECLIPSE_NORDIC_HUNT, 3, EclipseNordic_SwedenLead
+ goto_if_eq VAR_ECLIPSE_NORDIC_HUNT, 4, EclipseNordic_Reward
+ msgbox EclipseNordic_CompleteText
+ goto Shadow_End
+EclipseNordic_Start::
+ msgbox EclipseNordic_StartText, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ setvar VAR_ECLIPSE_NORDIC_HUNT, 1
+EclipseNordic_DenmarkLead::
+ msgbox EclipseNordic_DenmarkText
+ goto Shadow_End
+EclipseNordic_NorwayLead::
+ msgbox EclipseNordic_NorwayText
+ goto Shadow_End
+EclipseNordic_SwedenLead::
+ msgbox EclipseNordic_SwedenText
+ goto Shadow_End
+EclipseNordic_Reward::
+ goto_if_set FLAG_0x8D5, EclipseNordic_RewardDone
+ msgbox EclipseNordic_RewardText
+ giveitem ITEM_TM30, 1
+ goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
+ setflag FLAG_0x8D5
+EclipseNordic_RewardDone::
+ setvar VAR_ECLIPSE_NORDIC_HUNT, 5
+ msgbox EclipseNordic_CompleteText
+ goto Shadow_End
+EclipseNordic_Locked::
+ msgbox EclipseNordic_LockedText
+ goto Shadow_End
+EclipseNordic_LockedText::
+ .string "ADA: Finish your League journey.\nThen help us secure the north.$"
+EclipseNordic_StartText::
+ .string "ADA: The League is safe, but an\nECLIPSE remnant is broadcasting.\pTheir signal frightens partners\nand unsettles the guardians.\pI traced a relay here in\nCopenhagen. Will you help us?$"
+EclipseNordic_DenmarkText::
+ .string "ADA: Find VEX beside me, near\nthe eastern relay in Copenhagen.\pDefeat them and recover the\nroute to the next transmitter.$"
+EclipseNordic_NorwayText::
+ .string "ADA: VEX's relay points to Oslo.\nFind RIME in its eastern garden.\pZAPDOS guards that coast. The\nremnants must not cage it.$"
+EclipseNordic_SwedenText::
+ .string "ADA: The last signal comes from\nStockholm. BOREAL waits east\pof the landmark. Stop the final\nrelay, then return here.$"
+EclipseNordic_RewardText::
+ .string "ADA: All three relays are silent.\nThe rescue lanes are safe.\pTake SHADOW BALL as a reminder:\nuse strength to protect partners.$"
+EclipseNordic_CompleteText::
+ .string "ADA: The northern hunt is done.\nKeep exploring and training.\pThe guardians are free to choose\ntheir own partners again.$"
+EclipseNordic_Vex::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseNordic_Locked
+ goto_if_lt VAR_ECLIPSE_NORDIC_HUNT, 1, EclipseNordic_Order
+ goto_if_gt VAR_ECLIPSE_NORDIC_HUNT, 1, EclipseNordic_Defeated
+ msgbox EclipseNordic_VexIntro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ trainerbattle_single 376, EclipseNordic_VexIntro, EclipseNordic_DefeatText, EclipseNordic_VexWon
+ goto Shadow_End
+EclipseNordic_VexWon::
+ setvar VAR_ECLIPSE_NORDIC_HUNT, 2
+ msgbox EclipseNordic_VexAfter
+ goto Shadow_End
+EclipseNordic_VexIntro::
+ .string "VEX: The old company is gone.\nWe can still turn fear into\ppower. Our next relay is\nhidden in Oslo. Stop me if you\pcan.\nBattle the remnant?$"
+EclipseNordic_VexAfter::
+ .string "The relay is dismantled.\nReport to ADA in Copenhagen.$"
+EclipseNordic_Rime::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseNordic_Locked
+ goto_if_lt VAR_ECLIPSE_NORDIC_HUNT, 2, EclipseNordic_Order
+ goto_if_gt VAR_ECLIPSE_NORDIC_HUNT, 2, EclipseNordic_Defeated
+ msgbox EclipseNordic_RimeIntro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ trainerbattle_single 377, EclipseNordic_RimeIntro, EclipseNordic_DefeatText, EclipseNordic_RimeWon
+ goto Shadow_End
+EclipseNordic_RimeWon::
+ setvar VAR_ECLIPSE_NORDIC_HUNT, 3
+ msgbox EclipseNordic_RimeAfter
+ goto Shadow_End
+EclipseNordic_RimeIntro::
+ .string "RIME: ZAPDOS belongs in our\nnetwork, not the open sky. Our\pchief waits in Stockholm. You\nwill never reach that final\prelay.\nBattle the remnant?$"
+EclipseNordic_RimeAfter::
+ .string "The relay is dismantled.\nReport to ADA in Copenhagen.$"
+EclipseNordic_Boreal::
+ goto_if_questlog EventScript_ReleaseEnd
+ lock
+ faceplayer
+ goto_if_lt VAR_SHADOW_STAGE, 21, EclipseNordic_Locked
+ goto_if_lt VAR_ECLIPSE_NORDIC_HUNT, 3, EclipseNordic_Order
+ goto_if_gt VAR_ECLIPSE_NORDIC_HUNT, 3, EclipseNordic_Defeated
+ msgbox EclipseNordic_BorealIntro, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ trainerbattle_single 378, EclipseNordic_BorealIntro, EclipseNordic_DefeatText, EclipseNordic_BorealWon
+ goto Shadow_End
+EclipseNordic_BorealWon::
+ setvar VAR_ECLIPSE_NORDIC_HUNT, 4
+ msgbox EclipseNordic_BorealAfter
+ goto Shadow_End
+EclipseNordic_BorealIntro::
+ .string "BOREAL: Your badges changed\nnothing. This final signal\pwill close every heart in the\nnorth. I will take the\pguardians next.\nBattle the remnant?$"
+EclipseNordic_BorealAfter::
+ .string "The relay is dismantled.\nReport to ADA in Copenhagen.$"
+EclipseNordic_Order::
+ msgbox EclipseNordic_OrderText
+ goto Shadow_End
+EclipseNordic_Defeated::
+ msgbox EclipseNordic_DefeatedText
+ goto Shadow_End
+EclipseNordic_OrderText::
+ .string "Follow ADA's investigation from\nCopenhagen to Oslo, then\pStockholm. Shut down each relay\nbefore pursuing the next.$"
+EclipseNordic_DefeatedText::
+ .string "This relay is silent. Its former\npartners are with the keepers.$"
+EclipseNordic_DefeatText::
+ .string "The signal failed. We surrender.$"

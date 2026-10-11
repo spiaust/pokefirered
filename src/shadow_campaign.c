@@ -111,6 +111,9 @@ bool8 Shadow_IsEnemyTrainer(u16 trainer)
     }
     switch (trainer)
     {
+    case 376:
+    case 377:
+    case 378:
     case 148:
     case 164:
     case 188:

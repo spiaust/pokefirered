@@ -24,7 +24,7 @@ for n in G['gMapGroup_Continent']:
   x,y=o['x'],o['y'];assert (x,y+1) in seen,(n,o['script'],'south approach blocked')
  for o in m['bg_events']:assert (o['x'],o['y']+1) in seen,(n,'landmark inaccessible')
 assert len(hashes)==39,'countries must have independent geography'
-s=(R/'src/data/trainers.h').read_text(encoding='utf8');ids=[int(x) for x in re.findall(r'^\s*\[(\d+)\]',s,re.M)];assert len(ids)==len(set(ids));assert set(range(100,376))<=set(ids)
+s=(R/'src/data/trainers.h').read_text(encoding='utf8');ids=[int(x) for x in re.findall(r'^\s*\[(\d+)\]',s,re.M)];assert len(ids)==len(set(ids));assert set(range(100,379))<=set(ids)
 s=(R/'data/scripts/shadow_campaign.inc').read_text();labels=re.findall(r'^(\w+)::',s,re.M);assert len(labels)==len(set(labels)),'duplicate scripts'
 for n in G['gMapGroup_Continent']:
  for o in json.loads((R/f'data/maps/{n}/map.json').read_text())['object_events']:assert o['script'] in labels
@@ -34,7 +34,7 @@ for t in re.findall(r'\.string "([^"\n]+)"',s):
  t=re.sub(r'\{(?:RIVAL|PLAYER)\}','WWWWWWW',t);t=t.replace('{STR_VAR_1}','39')
  for line in re.split(r'\\[npl]|\$',t):
   width=sum(widths[chars[c]] for c in line);assert width<=216,(width,line)
-print('PASS: 39 independent city layouts, 78 era maps, 276 unique trainers, all event approaches reachable, and native text fits.')
+print('PASS: 39 independent city layouts, 78 era maps, 279 unique trainers, all event approaches reachable, and native text fits.')
 
 # Every weighted visible species has a native sprite mapping; none are silently dropped.
 wild=json.loads((R/'src/data/wild_encounters.json').read_text())

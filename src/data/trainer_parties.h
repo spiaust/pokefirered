@@ -12329,3 +12329,22 @@ static const struct TrainerMonNoItemDefaultMoves ContinentParty375[] = {
  {.iv = 100, .lvl = 52, .species = SPECIES_SLOWPOKE},
  {.iv = 100, .lvl = 52, .species = SPECIES_HYPNO},
 };
+
+static const struct TrainerMonItemCustomMoves EclipseRemnantParty376[] = {
+    {.iv = 200, .lvl = 62, .species = SPECIES_CROBAT, .heldItem = ITEM_SITRUS_BERRY, .moves = {MOVE_AERIAL_ACE, MOVE_SLUDGE_BOMB, MOVE_CONFUSE_RAY, MOVE_BITE}},
+    {.iv = 200, .lvl = 62, .species = SPECIES_ELECTRODE, .heldItem = ITEM_MAGNET, .moves = {MOVE_THUNDERBOLT, MOVE_LIGHT_SCREEN, MOVE_THUNDER_WAVE, MOVE_SWIFT}},
+    {.iv = 200, .lvl = 62, .species = SPECIES_MUK, .heldItem = ITEM_LEFTOVERS, .moves = {MOVE_SLUDGE_BOMB, MOVE_BRICK_BREAK, MOVE_MINIMIZE, MOVE_TOXIC}},
+};
+
+static const struct TrainerMonItemCustomMoves EclipseRemnantParty377[] = {
+    {.iv = 200, .lvl = 64, .species = SPECIES_MAGNETON, .heldItem = ITEM_MAGNET, .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_METAL_SOUND, MOVE_TRI_ATTACK}},
+    {.iv = 200, .lvl = 64, .species = SPECIES_HOUNDOOM, .heldItem = ITEM_CHARCOAL, .moves = {MOVE_FLAMETHROWER, MOVE_CRUNCH, MOVE_WILL_O_WISP, MOVE_SUNNY_DAY}},
+    {.iv = 200, .lvl = 64, .species = SPECIES_WEEZING, .heldItem = ITEM_LEFTOVERS, .moves = {MOVE_SLUDGE_BOMB, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SMOKESCREEN}},
+};
+
+static const struct TrainerMonItemCustomMoves EclipseRemnantParty378[] = {
+    {.iv = 200, .lvl = 66, .species = SPECIES_HOUNDOOM, .heldItem = ITEM_CHARCOAL, .moves = {MOVE_FLAMETHROWER, MOVE_CRUNCH, MOVE_WILL_O_WISP, MOVE_SOLAR_BEAM}},
+    {.iv = 200, .lvl = 66, .species = SPECIES_CROBAT, .heldItem = ITEM_SITRUS_BERRY, .moves = {MOVE_AERIAL_ACE, MOVE_SLUDGE_BOMB, MOVE_CONFUSE_RAY, MOVE_STEEL_WING}},
+    {.iv = 200, .lvl = 66, .species = SPECIES_UMBREON, .heldItem = ITEM_LEFTOVERS, .moves = {MOVE_TOXIC, MOVE_CONFUSE_RAY, MOVE_FAINT_ATTACK, MOVE_MOONLIGHT}},
+    {.iv = 200, .lvl = 66, .species = SPECIES_TYRANITAR, .heldItem = ITEM_LUM_BERRY, .moves = {MOVE_ROCK_SLIDE, MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_BRICK_BREAK}},
+};

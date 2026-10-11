@@ -9,7 +9,7 @@ The original project's tracked source and player saves were preserved.
   Eclipse, WWII resistance missions, League council and champion ending.
 - 42 campaign shelter/route maps plus 78 country era maps: 39 independently
   authored compact districts, landmarks, a country passport and station menu.
-- 276 new trainer teams, repeatable practice, six shadow rescues, saved care,
+- 279 new trainer teams, repeatable practice, six shadow rescues, saved care,
   purification, evolution lock, damage modifiers and purple battle palettes.
 - Bidirectional era travel, sepia historical colors, 39 saved local decisions,
   two present-day outcomes, an all-country epilogue and one-time reward.
@@ -175,6 +175,18 @@ checks first-encounter allowance, the native Nuzlocke refusal/refund script on a
 retry, and successful capture after disabling the rule. The final-ROM natural
 Berlin regression also passes with badge, move and TM persistence.
 
+The Scandinavian postgame hunt passes native pre-League, acceptance, decline
+and ordered-investigation gates. All three commanders are battled in Easy,
+Normal and Hard: real levels change by -4/0/+5 while curated moves, held items
+and shadow status remain intact. Explicit HP/damage fixtures accelerate those
+nine victories; this does not establish natural battle balance. Each victory
+advances only the hunt, keeping the main ending complete. Defeated commanders
+cannot be farmed. A full Shadow Ball stack leaves the reward pending; native
+delivery succeeds after space is available, cannot be duplicated, and persists
+with quest completion after cold Continue. The final-ROM natural Berlin and
+legendary Nuzlocke regressions also pass. The quest uses previously unused
+VAR_0x40BD and reward flag 0x8D5 without adding RAM allocations.
+
 ## Reproduce
 
 Run the build, then the Python scripts in WSL with the base mGBA test bridge:
@@ -197,6 +209,8 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
     save; `--resume` replays the gym from the trained-team save)
 13. `scripts/test_eclipse_legendaries.py` and
     `scripts/test_eclipse_legendary_challenge.py` (use the cold completed save)
+14. `scripts/test_eclipse_nordic.py` (uses the cold completed save; victory
+    and bag-capacity fixtures are explicitly documented in the script)
 
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
@@ -213,4 +227,4 @@ A full natural-level balancing playthrough and broad hardware/emulator testing
 remain outstanding before calling this a polished final release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `870373f421e12b1765c3d4dacf1defb62ae9cedbe9733dfeea63bb457a2c70b5`
+SHA-256: `0d11abbbfcc60ee272610dbe64478f3a33b6be0eac124ba7959412f948cbe78e`
