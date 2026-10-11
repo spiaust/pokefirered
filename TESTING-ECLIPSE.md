@@ -163,6 +163,19 @@ A final-ROM Berlin replay also wins (five selections), and Amsterdam's
 natural fourth-gym regression passes (seven selections) with its cold-save
 checks after the battle-runner update.
 
+The natural Prague and Vienna runs continue from the earned fifth-badge
+checkpoint on the current release ROM. The same four-partner party defeats
+Prague's level-32 Eclipse handler in 15 move selections, then Vienna's
+level-35 Psychic gym in eight. Neither chapter needs extra practice battles.
+Native Save and a fresh-emulator cold Continue preserve stage 7 after Prague
+and stage 8 after Vienna. No party, progress, inventory, encounter, damage,
+experience or AI memory writes are used. Reproduce with
+`scripts/test_eclipse_natural_prague.py`, then
+`scripts/test_eclipse_natural_vienna.py`. The latter also reports a native loss
+without advancing progress if a future balance change makes this party fail.
+These checks extend natural campaign coverage through the sixth badge;
+Zurich onward and the postgame still need natural-level balancing coverage.
+
 Legendary checks use explicit stage/purification, Master Ball and disabled
 incidental-encounter fixtures; these are encounter-system checks, not a natural
 legendary balancing playthrough. All seven native battles have the correct
