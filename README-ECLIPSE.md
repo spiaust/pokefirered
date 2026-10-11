@@ -24,6 +24,24 @@ Every country district also offers native storage access in both eras. Catch
 partners in route grass and swap teams locally. Save normally
 through the Start menu. Town Map, SELECT opens chapter guidance; A shows records.
 
+## Gym technique rewards
+
+Each badge leader also gives one themed TM. The native TM Case is supplied
+with your first TM. Talk to a previously defeated leader to claim a missing
+reward; if your bag cannot accept it, make space and return. Used TMs cannot
+be reclaimed from the leader.
+
+| Gym | TM reward |
+| --- | --- |
+| London | Rock Tomb |
+| Paris | Water Pulse |
+| Brussels | Bullet Seed |
+| Amsterdam | Shock Wave |
+| Berlin | Brick Break |
+| Vienna | Calm Mind |
+| Rome | Overheat |
+| Madrid | Earthquake |
+
 ## Countries and time travel
 
 The station attendant at the shelter's lower left opens a six-region destination

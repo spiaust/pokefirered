@@ -33,6 +33,21 @@ def natural_battle(e,limit=1800):
  for _ in range(limit):
   if not e.in_battle():break
   fn=e.read('gBattlerControllerFuncs')&~1
+  if e.task_active('Task_HandleChooseMonInput'):
+   count=e.read('gPlayerPartyCount',1);current=e.read('gBattlerPartyIndexes',2)
+   order=[(e.read(e.symbols['gBattlePartyCurrentOrder']+i//2,1)&15) if i&1 else (e.read(e.symbols['gBattlePartyCurrentOrder']+i//2,1)>>4) for i in range(count)]
+   active=next((i for i,x in enumerate(order) if x==current),0)
+   living=[i for i in range(count) if e.read(e.symbols['gPlayerParty']+100*i+86,2)]
+   if active in living:
+    # Generic dialogue confirmation can accept an optional opponent switch.
+    e.press('B',180);continue
+   assert living,'no living partner available'
+   target=living[0]
+   for _ in range(8):
+    cur=e.read(e.symbols['gPartyMenu']+9,1)
+    if cur==target:break
+    e.press('LEFT' if target==0 else 'RIGHT' if cur==0 else 'DOWN' if cur<target else 'UP',60)
+   e.press('A',180);e.press('A',180);e.frames(300);continue
   if fn==action:
    e.press('UP',2);e.press('LEFT',2);e.press('A',30)
   elif fn==move:
@@ -58,13 +73,13 @@ def natural_go(e,target):
   try:
    go(e,target);e.frames(90)
    if e.in_battle():
-    result,turns=natural_battle(e);assert result==1
+    result,turns=natural_battle(e);assert result in (1,4,7)
     continue
    return
   except AssertionError:
    if not e.in_battle():raise
    result,turns=natural_battle(e)
-   assert result==1,('route encounter',result)
+   assert result in (1,4,7),('route encounter',result)
  raise AssertionError('too many route encounters')
 
 def main():

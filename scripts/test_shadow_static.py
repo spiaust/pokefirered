@@ -34,3 +34,13 @@ for t in re.findall(r'\.string "([^"\n]+)"',s):
     for line in re.split(r'\\[npl]|\$',t):
         width=sum(widths[chars[c]] for c in line);assert width<=216,(width,line)
 print('PASS: 21 chapters, eight badges, 159 trainer IDs, 42 reachable maps and native dialogue widths')
+
+gyms=[c for c in json.loads((R/'data/shadow-campaign.json').read_text())['chapters'] if c['kind']=='gym']
+assert len(gyms)==8 and len({c['tm_reward_flag'] for c in gyms})==8
+assert all(1<=c['tm_reward']<=50 for c in gyms)
+for c in gyms:
+ city=c['city'];tm=c['tm_reward'];flag=int(c['tm_reward_flag'],16)
+ reward=re.search(r'Shadow'+city+r'_Done::(.*?)Shadow'+city+r'_RewardDone::',(R/'data/scripts/shadow_campaign.inc').read_text(),re.S)[1]
+ assert f'giveitem ITEM_TM{tm:02d}, 1' in reward and f'setflag FLAG_0x{flag:X}' in reward
+ assert 'goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull' in reward
+print('PASS: eight unique saved gym TM claims retain rewards when native delivery fails.')

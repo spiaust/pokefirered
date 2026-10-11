@@ -3294,9 +3294,8 @@ static void Task_SlideSelectedSlotsOnscreen(u8 taskId)
         PutWindowTilemap(sPartyMenuBoxes[gPartyMenu.slotId].windowId);
         PutWindowTilemap(sPartyMenuBoxes[gPartyMenu.slotId2].windowId);
         ScheduleBgCopyTilemapToVram(0);
-        // BUG: memory leak
-        // Free(sSlot1TilemapBuffer);
-        // Free(sSlot2TilemapBuffer);
+        FREE_AND_SET_NULL(sSlot1TilemapBuffer);
+        FREE_AND_SET_NULL(sSlot2TilemapBuffer);
         FinishTwoMonAction(taskId);
     }
     // Continue sliding

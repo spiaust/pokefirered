@@ -244,6 +244,12 @@ ShadowLondon_Victory::
 	setvar VAR_SHADOW_STAGE, 2
 	setflag FLAG_BADGE01_GET
 ShadowLondon_Done::
+ goto_if_set FLAG_0x8C6, ShadowLondon_RewardDone
+ msgbox Shadow_TMRewardText
+ giveitem ITEM_TM39, 1
+ goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
+ setflag FLAG_0x8C6
+ShadowLondon_RewardDone::
 	msgbox ShadowLondon_After
 	goto Shadow_End
 ShadowLondon_Before::
@@ -377,6 +383,12 @@ ShadowParis_Victory::
 	setvar VAR_SHADOW_STAGE, 3
 	setflag FLAG_BADGE02_GET
 ShadowParis_Done::
+ goto_if_set FLAG_0x8C7, ShadowParis_RewardDone
+ msgbox Shadow_TMRewardText
+ giveitem ITEM_TM03, 1
+ goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
+ setflag FLAG_0x8C7
+ShadowParis_RewardDone::
 	msgbox ShadowParis_After
 	goto Shadow_End
 ShadowParis_Before::
@@ -517,6 +529,12 @@ ShadowBrussels_Victory::
 	setvar VAR_SHADOW_STAGE, 4
 	setflag FLAG_BADGE04_GET
 ShadowBrussels_Done::
+ goto_if_set FLAG_0x8C8, ShadowBrussels_RewardDone
+ msgbox Shadow_TMRewardText
+ giveitem ITEM_TM09, 1
+ goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
+ setflag FLAG_0x8C8
+ShadowBrussels_RewardDone::
 	msgbox ShadowBrussels_After
 	goto Shadow_End
 ShadowBrussels_Before::
@@ -650,6 +668,12 @@ ShadowAmsterdam_Victory::
 	setvar VAR_SHADOW_STAGE, 5
 	setflag FLAG_BADGE03_GET
 ShadowAmsterdam_Done::
+ goto_if_set FLAG_0x8C9, ShadowAmsterdam_RewardDone
+ msgbox Shadow_TMRewardText
+ giveitem ITEM_TM34, 1
+ goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
+ setflag FLAG_0x8C9
+ShadowAmsterdam_RewardDone::
 	msgbox ShadowAmsterdam_After
 	goto Shadow_End
 ShadowAmsterdam_Before::
@@ -783,6 +807,12 @@ ShadowBerlin_Victory::
 	setvar VAR_SHADOW_STAGE, 6
 	setflag FLAG_BADGE05_GET
 ShadowBerlin_Done::
+ goto_if_set FLAG_0x8CA, ShadowBerlin_RewardDone
+ msgbox Shadow_TMRewardText
+ giveitem ITEM_TM31, 1
+ goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
+ setflag FLAG_0x8CA
+ShadowBerlin_RewardDone::
 	msgbox ShadowBerlin_After
 	goto Shadow_End
 ShadowBerlin_Before::
@@ -1055,6 +1085,12 @@ ShadowVienna_Victory::
 	setvar VAR_SHADOW_STAGE, 8
 	setflag FLAG_BADGE06_GET
 ShadowVienna_Done::
+ goto_if_set FLAG_0x8CB, ShadowVienna_RewardDone
+ msgbox Shadow_TMRewardText
+ giveitem ITEM_TM04, 1
+ goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
+ setflag FLAG_0x8CB
+ShadowVienna_RewardDone::
 	msgbox ShadowVienna_After
 	goto Shadow_End
 ShadowVienna_Before::
@@ -1327,6 +1363,12 @@ ShadowRome_Victory::
 	setvar VAR_SHADOW_STAGE, 10
 	setflag FLAG_BADGE07_GET
 ShadowRome_Done::
+ goto_if_set FLAG_0x8CC, ShadowRome_RewardDone
+ msgbox Shadow_TMRewardText
+ giveitem ITEM_TM50, 1
+ goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
+ setflag FLAG_0x8CC
+ShadowRome_RewardDone::
 	msgbox ShadowRome_After
 	goto Shadow_End
 ShadowRome_Before::
@@ -1460,6 +1502,12 @@ ShadowMadrid_Victory::
 	setvar VAR_SHADOW_STAGE, 11
 	setflag FLAG_BADGE08_GET
 ShadowMadrid_Done::
+ goto_if_set FLAG_0x8CD, ShadowMadrid_RewardDone
+ msgbox Shadow_TMRewardText
+ giveitem ITEM_TM26, 1
+ goto_if_eq VAR_0x8007, FALSE, Shadow_TMRewardFull
+ setflag FLAG_0x8CD
+ShadowMadrid_RewardDone::
 	msgbox ShadowMadrid_After
 	goto Shadow_End
 ShadowMadrid_Before::
@@ -6362,3 +6410,11 @@ Shadow_StorageText::
  .string "Our partner relay reaches your\nPOKEMON storage across both eras.\pWould you like to manage your team?$"
 Shadow_StorageReturnText::
  .string "Your partners are safe with us.\nCome back whenever you need them.$"
+
+Shadow_TMRewardText::
+ .string "Your badge comes with this TM.\nTeach it to a compatible partner\pand try a new battle strategy!$"
+Shadow_TMRewardFull::
+ msgbox Shadow_TMRewardFullText
+ goto Shadow_End
+Shadow_TMRewardFullText::
+ .string "There is no room for your TM.\nMake space, then talk to me again.\pYour badge and reward are safe.$"

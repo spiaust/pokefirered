@@ -19,7 +19,9 @@
       "kind": "gym",
       "before": "ELLIS: Eight countries host our League challenge. Rock is your first test. Team ECLIPSE calls frightened POKEMON powerful. We call that cruelty.",
       "after": "ELLIS: The BOULDERBADGE is yours. Take the ferry to France. Find ADA's missing courier before ECLIPSE does.",
-      "trainer": 108
+      "trainer": 108,
+      "tm_reward": 39,
+      "tm_reward_flag": "0x8c6"
     },
     {
       "city": "Paris",
@@ -29,7 +31,9 @@
       "kind": "gym",
       "before": "MARINE: The courier left a sealed research ledger. ECLIPSE stole its key and abandoned a PIKACHU whose heart is closed. Win this match, then meet our rescue keeper.",
       "after": "MARINE: The CASCADEBADGE is yours. The ledger names Brussels. Take the rescued partner with you if you can. Care opens what force cannot.",
-      "trainer": 116
+      "trainer": 116,
+      "tm_reward": 3,
+      "tm_reward_flag": "0x8c7"
     },
     {
       "city": "Brussels",
@@ -39,7 +43,9 @@
       "kind": "gym",
       "before": "SABINE: ECLIPSE buys League freight permits to move stolen partners. Our garden shelter intercepted one shipment. Prove your bond before I entrust you with its manifest.",
       "after": "SABINE: You earned the RAINBOWBADGE. The manifest leads to Amsterdam. Their director VEIL funds the machines through a shipping company.",
-      "trainer": 124
+      "trainer": 124,
+      "tm_reward": 9,
+      "tm_reward_flag": "0x8c8"
     },
     {
       "city": "Amsterdam",
@@ -49,7 +55,9 @@
       "kind": "gym",
       "before": "MAARTEN: VEIL's machines use a signal that suppresses emotion. Your rival chased a freighter without waiting for us. Earn the THUNDERBADGE, then find them in Berlin.",
       "after": "MAARTEN: The THUNDERBADGE is yours. ECLIPSE stole an archive from Berlin. ADA thinks the signal is much older than this company.",
-      "trainer": 132
+      "trainer": 132,
+      "tm_reward": 34,
+      "tm_reward_flag": "0x8c9"
     },
     {
       "city": "Berlin",
@@ -59,7 +67,9 @@
       "kind": "gym",
       "before": "GRETA: Our archive preserves the work of people who resisted the Nazi regime. Someone stole a wartime laboratory file. German resistance members risked everything to protect their neighbors. Help us protect that memory.",
       "after": "GRETA: The SOULBADGE is yours. Your birthplace never decides your loyalties. ADA traced the stolen file to Prague. The resistance names in it must remain protected.",
-      "trainer": 140
+      "trainer": 140,
+      "tm_reward": 31,
+      "tm_reward_flag": "0x8ca"
     },
     {
       "city": "Prague",
@@ -79,7 +89,9 @@
       "kind": "gym",
       "before": "IRENA: The signal can be unmade, but its original frequency is missing. My psychic partners hear a frightened voice inside it. Earn the MARSHBADGE; then we can search the Swiss archive.",
       "after": "IRENA: The MARSHBADGE is yours. The archive's keeper in Zurich has a clock that reacts to CELEBI. ECLIPSE is trying to use it to reach the past.",
-      "trainer": 156
+      "trainer": 156,
+      "tm_reward": 4,
+      "tm_reward_flag": "0x8cb"
     },
     {
       "city": "Zurich",
@@ -99,7 +111,9 @@
       "kind": "gym",
       "before": "FLAVIA: ECLIPSE recruits trainers by promising instant strength. My partners grew through years of trust. The VOLCANOBADGE belongs to someone who understands that difference.",
       "after": "FLAVIA: The VOLCANOBADGE is yours. A League ranger intercepted VEIL's message to Madrid. They plan to erase the people who stopped the original experiments.",
-      "trainer": 172
+      "trainer": 172,
+      "tm_reward": 50,
+      "tm_reward_flag": "0x8cc"
     },
     {
       "city": "Madrid",
@@ -109,7 +123,9 @@
       "kind": "gym",
       "before": "INES: This is your eighth challenge. The EARTHBADGE will qualify you for Athens, but first there are lives to protect. ECLIPSE's ship is leaving Lisbon with the clock core.",
       "after": "INES: All eight badges! The League can wait. Your rival has found a harbor path in Lisbon. Stop the ship before VEIL can reopen the past.",
-      "trainer": 180
+      "trainer": 180,
+      "tm_reward": 26,
+      "tm_reward_flag": "0x8cd"
     },
     {
       "city": "Lisbon",

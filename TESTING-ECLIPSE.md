@@ -98,6 +98,35 @@ and a wartime district, with unchanged party counts/species and field controls
 restored. The native storage system supplies deposit, withdraw and box tools;
 no new RAM buffers or storage rules were introduced.
 
+## Gym TM rewards
+
+All eight leaders supply their themed TM once, including when revisited from
+an existing completed save. Rewards and claim flags (unused flags 0x8C6-0x8CD)
+survive cold Continue; native item delivery supplies a TM Case. Explicit
+full-stack fixtures verify that failed delivery keeps a reward unclaimed and
+that making room allows exactly one collection. A naturally earned second-badge
+save teaches Water Pulse to Croconaw through the TM Case, consumes one TM,
+updates only the selected move/PP and persists the result through a cold save.
+The leader does not replace a consumed TM. No reward test changes catch rates,
+trainer AI or battle damage.
+
+## Third badge and party stability
+
+A naturally earned second-badge save catches a full-HP Pidgey with one ordinary
+Poke Ball, switches its lead partner through the native party menu, and trains
+through six Grass-route practice sessions from level seventeen to twenty-two.
+The Flying partner wins the third gym and reaches level twenty-four. A cold
+Continue preserves the badge and team; a final-ROM replay also wins. These
+runs use ordinary stats, encounter/catch rates, trainer AI and experience.
+Native optional opponent-switch prompts are now handled by the tester, avoiding
+repeated attempts to send out a partner already in battle.
+
+The base party menu leaked both temporary tilemap buffers after each party-slot
+swap. They are now freed and cleared after the animation's final use. A native
+20-swap test verifies NULL buffer pointers, stable allocated heap use, unchanged
+party order after an even number of swaps, and restored field controls. Native
+storage access in shelters and both country eras also passes after the fix.
+
 ## Reproduce
 
 Run the build, then the Python scripts in WSL with the base mGBA test bridge:
@@ -111,6 +140,8 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
    and `scripts/test_eclipse_credits.py`
 7. `scripts/test_eclipse_natural.py` and `scripts/test_eclipse_natural_gym.py`
 8. `scripts/test_eclipse_storage.py` and `scripts/test_eclipse_natural_paris.py`
+9. `scripts/test_eclipse_tm_rewards.py`, `scripts/test_eclipse_tm_teaching.py`,
+   `scripts/test_eclipse_natural_brussels.py` and `scripts/test_eclipse_party_memory.py`
 
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
@@ -127,4 +158,4 @@ A full natural-level balancing playthrough and broad hardware/emulator testing
 remain outstanding before calling this a polished final release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `4853bd659ad9e30ac601fb174394f8f9448bca6630d91f4787bc292a514b8158`
+SHA-256: `f39bd5a8423fad50cfc8809f83969263c36ebf635ca432d715a9dd6f450f15aa`
