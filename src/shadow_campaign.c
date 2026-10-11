@@ -13,6 +13,7 @@
 #include "constants/vars.h"
 #include "constants/pokemon.h"
 #include "constants/species.h"
+#include "constants/moves.h"
 static const u8 sShadowName[] = _("SHADOW");
 static const u8 sHealedName[] = _("HEALED");
 static const u8 sChapters[][2] = {
@@ -256,7 +257,7 @@ void Shadow_NetworkStatus(void)
     ConvertIntToDecimalStringN(gStringVar1, count, STR_CONV_MODE_LEFT_ALIGN, 2);
 }
 
-void Shadow_RivalPartner(struct Pokemon *party, u8 count)
+void Shadow_RivalPartner(struct Pokemon *party, u8 count, bool8 opening)
 {
     u16 starter = VarGet(VAR_EUROPE_STARTER_SPECIES), species, target;
     u8 slot = count > 3 ? 3 : count - 1;
@@ -276,7 +277,18 @@ void Shadow_RivalPartner(struct Pokemon *party, u8 count)
     case SPECIES_MUDKIP: species = SPECIES_TREECKO; break;
     default: species = SPECIES_EEVEE; break;
     }
+    if (opening) iv = VarGet(VAR_SHADOW_DIFFICULTY) == 2 ? 12 : VarGet(VAR_SHADOW_DIFFICULTY) == 1 ? 0 : 5;
     CreateMon(&party[slot], species, level, iv, FALSE, 0, OT_ID_RANDOM_NO_SHINY, 0);
+    if (opening)
+    {
+        u16 attack = species == SPECIES_TREECKO ? MOVE_POUND
+            : (species == SPECIES_CHARMANDER || species == SPECIES_TORCHIC || species == SPECIES_TOTODILE) ? MOVE_SCRATCH : MOVE_TACKLE;
+        SetMonMoveSlot(&party[slot], attack, 0);
+        SetMonMoveSlot(&party[slot], MOVE_NONE, 1);
+        SetMonMoveSlot(&party[slot], MOVE_NONE, 2);
+        SetMonMoveSlot(&party[slot], MOVE_NONE, 3);
+        return;
+    }
     for (i = 0; i < 2; i++)
     {
         target = GetEvolutionTargetSpecies(&party[slot], EVO_MODE_NORMAL, 0);

@@ -1,4 +1,4 @@
-# Eclipse verification â€” 2026-10-10
+# Eclipse verification â€” 2026-10-11
 
 Separate clone: `S:/pokemon-europe-shadow`, branch `codex/europe-eclipse`.
 The original project's tracked source and player saves were preserved.
@@ -21,7 +21,7 @@ The original project's tracked source and player saves were preserved.
 
 Static checks verify trainer IDs, all scripted references, dialogue widths,
 map connectivity and every NPC/landmark approach. The final agbcc build links
-successfully: 261,084 bytes EWRAM, 29,824 bytes IWRAM, 15,453,016 bytes linked ROM,
+successfully: 261,084 bytes EWRAM, 29,824 bytes IWRAM, about 15,091 KiB linked ROM,
 padded to 16 MiB. RAM headroom is limited and must be checked on future additions.
 
 Emulator checks include all nine starters from New Game, all rival counters,
@@ -54,6 +54,29 @@ travel tests set the operation-clear bits to isolate map consequences; separate
 combat checks exercise the actual operation victories. Epilogue UI tests set
 39 memory bits to isolate reward and duplicate handling.
 
+## Balance and rule follow-up — October 11, 2026
+
+All nine starter choices won the revised level-six opening rival battle using
+normal button inputs, original HP/stats/PP/EXP, and native opponent AI. Each
+advanced the story and reached level eight. This is narrow opening evidence,
+not a complete natural-level campaign playthrough. The tester asserts the
+compiled move-table stride (12 bytes); earlier results using nine bytes are
+invalid and excluded from balance conclusions.
+
+A separate native Totodile run won the rival, healed normally, trained through
+five repeatable Oxford practice sessions and incidental wild battles to level
+thirteen, then won the Rock gym and reached level fourteen. The badge and
+chapter survived a cold Continue. No stats, HP, PP, levels or EXP were injected.
+An immediate level-eight gym attempt lost; route preparation is necessary.
+The current campaign replay also passed all chapter callbacks through the
+champion, native credits, cold ending saves and the one-time epilogue reward.
+
+The actual second-encounter Ball action reaches the dedicated Nuzlocke refusal
+script, returns the Ball, leaves party size unchanged and permits the battle
+to continue. Retirement, both-era encounter limits, difficulty opponent levels
+and field-sprite toggles also pass. Native bag navigation in the tester now
+respects pocket clamping after a Ball has been used.
+
 ## Reproduce
 
 Run the build, then the Python scripts in WSL with the base mGBA test bridge:
@@ -65,6 +88,7 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
 5. `scripts/test_shadow_progression.py` and `scripts/test_shadow_ending_save.py`
 6. `scripts/test_eclipse_combat.py`, `scripts/test_eclipse_challenges.py`,
    and `scripts/test_eclipse_credits.py`
+7. `scripts/test_eclipse_natural.py` and `scripts/test_eclipse_natural_gym.py`
 
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
@@ -81,4 +105,4 @@ A full natural-level balancing playthrough and broad hardware/emulator testing
 remain outstanding before calling this a polished final release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `09109e43615ee8ec4bdd9a69ba8185fe040368d98cc8b1b30d94b6b7c0dc8450`
+SHA-256: `9c71c1dbeb5b65e424acc00b13ca94603ac78f4ee2b9d45da75830ae99b511d6`

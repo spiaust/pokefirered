@@ -15,7 +15,8 @@ a resistance double-agent cover; nationality does not determine allegiance.
 The 21-chapter campaign has eight badge battles, a recurring rival who chooses
 and evolves a counter-starter, Team Eclipse, WWII resistance operations, four
 League council members, a champion match and credits. Six shadow partners can
-be rescued and purified. Route trainers and rival practice matches are repeatable.
+be rescued and purified. The opening rival uses one level-six counter-starter
+with a basic attack; later rival battles use full teams and moves. Route trainers and rival practice matches are repeatable.
 
 Each shelter provides a nurse, mission opponent, previous/next chapter porters,
 route guide, shop, rescue partner and purification keeper. Catch partners in
@@ -54,7 +55,8 @@ appearance and these gameplay settings at any time:
   Hard raises them by five. Rival partner IVs also change with difficulty.
 - Nuzlocke is optional and independent of difficulty. Only the first wild
   encounter in a European area permits capture; both country eras share an
-  allowance. Fainted partners are marked retired and cannot be healed while
+  allowance. Rejected capture attempts explain the rule and refund the Ball.
+  Fainted partners are marked retired and cannot be healed while
   enabled, including after a blackout or PC storage. Gifts and rescues are
   allowed. Disabling the mode allows healing; re-enabling retires marked
   partners again. This variant does not force nicknames or release partners.

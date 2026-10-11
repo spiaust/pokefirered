@@ -15,9 +15,9 @@ def open_key_item(emu,item):
     start_action(emu,2)
     wait_task(emu,'Task_BagMenu_HandleInput')
     bag=emu.symbols['gBagMenuState']
-    for _ in range(3):
+    for _ in range(5):
         if emu.read(bag+6,2)==1: break
-        emu.press('RIGHT',90)
+        emu.press('LEFT' if emu.read(bag+6,2)>1 else 'RIGHT',90)
     assert emu.read(bag+6,2)==1
     save=emu.read('gSaveBlock1Ptr')
     target=next(i for i in range(30) if emu.read(save+0x3B8+i*4,2)==item)

@@ -5,7 +5,7 @@ from test_continent_runtime import world,var,battle_start,accelerated_win,bit,D
 from test_country import party_species
 from test_gym_ui import open_key_item
 from test_navigation import wait_task
-import json
+import json,sys
 
 def main():
  e=Emulator(ROOT/'pokefirered.gba')
@@ -15,12 +15,13 @@ def main():
    m=json.loads((ROOT/f'data/maps/Europe{city}/map.json').read_text());o=next(o for o in m['object_events'] if o['script']=='Shadow_Entrance')
    for i,species in enumerate(expected):
     e.state(ROOT/f'test-output/start-{country}-{i}.state',True);talk(e,(o['x'],o['y']+1));battle_start(e,(6,4))
-    assert monfield(e,1,0,0,'gEnemyParty')&0xffff==species,(country,i,species)
+    assert monfield(e,0,0,0,'gEnemyParty')&0xffff==species,(country,i,species)
    print('PASS:',country,'all three rival counter-starters',flush=True)
   for mode,level in [(0,16),(1,12),(2,21)]:
    e.state(ROOT/'test-output/continent-ready.state',True);var(e,0x4090,mode);world(e,0);battle_start(e,(15,19))
    assert e.read(e.symbols['gEnemyParty']+0x54,1)==level,(mode,level)
   print('PASS: Normal/Easy/Hard create real opponent levels 16/12/21.',flush=True)
+  if '--opening-only' in sys.argv:return
   e.state(ROOT/'test-output/continent-ready.state',True)
   for i,d in enumerate(D):
    world(e,i);talk(e,(12,31));talk(e,(18,31),'YES');battle_start(e,(15,19));accelerated_win(e)

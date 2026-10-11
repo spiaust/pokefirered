@@ -1655,7 +1655,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     if (trainerNum >= 100 && trainerNum <= 258 && VarGet(VAR_SHADOW_STARTED)
         && (gTrainers[trainerNum].trainerClass == TRAINER_CLASS_RIVAL_EARLY
             || gTrainers[trainerNum].trainerClass == TRAINER_CLASS_RIVAL_LATE || trainerNum == 252))
-        Shadow_RivalPartner(party, gTrainers[trainerNum].partySize);
+        Shadow_RivalPartner(party, gTrainers[trainerNum].partySize, trainerNum == 100);
     if (Shadow_IsEnemyTrainer(trainerNum))
     {
         u8 shadow = 1;

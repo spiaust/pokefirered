@@ -60,6 +60,7 @@ def main():
   for _ in range(3):e.press('B',180)
   setstage(e,12);e.state(ROOT/'test-output/continent-ready.state')
   print('PASS: native World Gear cycles Easy/Hard/Normal and independently toggles Nuzlocke and wild sprites.',flush=True)
+  if '--prepare-only' in sys.argv:return
   for i,d in enumerate(D):
    world(e,i);e.write('sWildEncountersDisabled',1,1);go(e,(22,13));e.press('UP');e.press('A',180);e.finish_dialogue()
    e.screenshot(ROOT/f'test-output/continent-{i:02}-present.png')

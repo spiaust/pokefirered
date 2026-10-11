@@ -29,7 +29,7 @@ try:
         if c['kind'] in ('enemy','nazi'):
             assert monfield(e,0,3,8,'gEnemyParty')&(1<<27),(stage,'enemy shadow bit')
         e.screenshot(ROOT/f'test-output/eclipse-battle-{stage:02d}.png')
-        action=e.symbols['HandleInputChooseAction']&~1;move=e.symbols['HandleInputChooseMove']&~1
+        action=next(int(t.split()[0],16)&~1 for t in (ROOT/'pokefirered.sym').read_text().splitlines() if t.split()[-1:]==['HandleInputChooseAction']);move=e.symbols['HandleInputChooseMove']&~1
         for turn in range(1800):
             if not e.in_battle():break
             b=e.symbols['gBattleMons']

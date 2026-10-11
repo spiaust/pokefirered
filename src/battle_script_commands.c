@@ -9482,11 +9482,17 @@ static void Cmd_handleballthrow(void)
         MarkBattlerForControllerExec(gActiveBattler);
         gBattlescriptCurrInstr = BattleScript_GhostBallDodge;
     }
-    else if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) || (VarGet(VAR_SHADOW_NUZLOCKE) && VarGet(VAR_SHADOW_ENCOUNTER_BLOCKED)))
+    else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
     {
         BtlController_EmitBallThrowAnim(BUFFER_A, BALL_TRAINER_BLOCK);
         MarkBattlerForControllerExec(gActiveBattler);
         gBattlescriptCurrInstr = BattleScript_TrainerBallBlock;
+    }
+    else if (VarGet(VAR_SHADOW_NUZLOCKE) && VarGet(VAR_SHADOW_ENCOUNTER_BLOCKED))
+    {
+        // A rule refusal is not a trainer animation; keep the player's Ball.
+        AddBagItem(gLastUsedItem, 1);
+        gBattlescriptCurrInstr = BattleScript_NuzlockeBallBlock;
     }
     else if (gBattleTypeFlags & (BATTLE_TYPE_POKEDUDE | BATTLE_TYPE_OLD_MAN_TUTORIAL))
     {

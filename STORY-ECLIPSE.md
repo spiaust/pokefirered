@@ -23,7 +23,7 @@ recovery and responsibility; rescued partners survive and can heal.
 
 ## Campaign, beginning to ending
 
-### 1. Oxford — England (level 9)
+### 1. Oxford — England (level 6)
 
 ADA: Welcome to the European League. Your rival believes strength means never needing help. Show them what a partner can do. The station porter will open the next journey after your match.
 

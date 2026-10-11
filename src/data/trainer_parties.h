@@ -10950,8 +10950,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_EuropeCouncilCoach[] = {
 };
 
 static const struct TrainerMonNoItemDefaultMoves ShadowParty100[] = {
-    {.iv = 4, .lvl = 9, .species = SPECIES_PIDGEY},
-    {.iv = 4, .lvl = 9, .species = SPECIES_EEVEE},
+    {.iv = 4, .lvl = 6, .species = SPECIES_EEVEE},
 };
 static const struct TrainerMonNoItemDefaultMoves ShadowParty101[] = {
     {.iv = 3, .lvl = 6, .species = SPECIES_PIDGEY},

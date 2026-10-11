@@ -19,6 +19,6 @@ void Shadow_ApplyChallenge(void);
 void Shadow_VisibleFieldStep(void);
 void Shadow_NetworkStatus(void);
 struct Pokemon;
-void Shadow_RivalPartner(struct Pokemon *party, u8 count);
+void Shadow_RivalPartner(struct Pokemon *party, u8 count, bool8 opening);
 void Shadow_ShowCredits(void);
 #endif
