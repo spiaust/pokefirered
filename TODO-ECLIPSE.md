@@ -12,6 +12,8 @@ The ending keeps League shelters, country travel and repeatable training availab
   sprites/icons, country reserve encounters and additional post-League guardians.
 - [x] Restore Eevee day/night evolution and nine imported friendship routes;
   retain nested source requirements and audit unsupported special evolutions.
+- [x] Add move-known evolution for Bonsly, Steenee, Clobbopus, Tangela and Yanma;
+  add obtainable Ancient Power at Tangela level 24 and Yanma level 33.
 - [ ] Expand modern ability/move/evolution coverage and species-specific cries;
   tune reserve habitats and encounter balance across countries.
 

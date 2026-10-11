@@ -5089,6 +5089,19 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                 if (gEvolutionTable[species][i].param <= level)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_MOVE:
+                {
+                    u8 slot;
+                    for (slot = 0; slot < MAX_MON_MOVES; slot++)
+                    {
+                        if (GetMonData(mon, MON_DATA_MOVE1 + slot, NULL) == gEvolutionTable[species][i].param)
+                        {
+                            targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                            break;
+                        }
+                    }
+                }
+                break;
             case EVO_LEVEL_ATK_GT_DEF:
                 if (gEvolutionTable[species][i].param <= level)
                     if (GetMonData(mon, MON_DATA_ATK, NULL) > GetMonData(mon, MON_DATA_DEF, NULL))

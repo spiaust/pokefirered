@@ -875,4 +875,26 @@ pass; title boot and saved Continue pass. No RAM or saved-data fields were added
 
 Final ROM content: 17,299,532 bytes, padded to 32 MiB. EWRAM remains 261,196 /
 262,144 bytes, IWRAM 29,824 / 32,768. Both ROM aliases match.
-Current release SHA-256: `219bc65d5b509d28a81897fe2b30debd477c25de17c31f939d350be5f940c113`.
+Previous friendship release SHA-256: `219bc65d5b509d28a81897fe2b30debd477c25de17c31f939d350be5f940c113`.
+
+
+## Move-known evolution paths — 2026-10-11
+
+`test_eclipse_move_evolution.py` passes the five new paths through native Rare
+Candy use, required-move rejection, Everstone and shadow prevention. Tangela
+learns Ancient Power and evolves on the same level-up at 24; Yanma does so at
+33. Native Save / cold Continue retains evolved Yanmega and Ancient Power.
+These are isolated species, level, moves, inventory and restriction fixtures;
+they do not claim naturally raised or captured partners. The required move is
+checked in the current moveset, rather than against historical learned moves.
+
+`test-eclipse-move-fourth-slot.log` checks Clobbopus with Taunt in slot four.
+`test-eclipse-move-friendship-regression.log` rechecks Riolu with deliberately
+stale menu time, preserving the RTC friendship path. Parser assertions reject
+unknown required moves and extra unsupported conditions. Existing evolution
+projection, campaign static, boot/title and cold Continue checks pass.
+
+The final rebuild matches the ROM used by the initial ten gameplay cases.
+ROM content remains 17,299,532 bytes, padded to 32 MiB. EWRAM remains 261,196 /
+262,144 bytes and IWRAM 29,824 / 32,768; no save layout changes.
+Current release SHA-256: `71a4371084cb98045dd20e00a953f9440432b6dcf00107abda0b9c323f33d04b`.

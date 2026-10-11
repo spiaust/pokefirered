@@ -346,3 +346,12 @@ Evolution day runs from 06:00 through 19:59 on the local RTC. World Gear DAY
 and NIGHT override this requirement, including indoors and in the past.
 Everstone and the shadow state still prevent evolution. Special modern methods
 remain tracked in data/eclipse-evolution-projection.json for future production.
+
+## Move-based evolutions
+
+Level up while the required move is in the Pokémon's current four moves:
+Bonsly needs Mimic (learned at 16), Steenee needs Stomp (28), and Clobbopus
+needs Taunt (35). Tangela learns Ancient Power at 24 to evolve into Tangrowth;
+Yanma learns it at 33 to evolve into Yanmega. Learning the required move on
+that level-up can trigger evolution immediately. Forgetting it blocks this
+route until it is learned again. Everstone and shadow restrictions still apply.

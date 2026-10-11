@@ -42,45 +42,49 @@ def candy(e,stale=False):
     e.press('A',90);e.press('A',180);e.press('A',180)
     for _ in range(90):e.press('A',90)
 
-cases=[('RIOLU','LUCARIO',12,0,255,0,0),('RIOLU','RIOLU',22,0,255,0,0),
- ('SNOM','FROSMOTH',22,0,255,0,0),('SNOM','SNOM',12,0,255,0,0),
- ('BUDEW','ROSELIA',12,0,255,0,0),('CHINGLING','CHIMECHO',22,0,255,0,0),
- ('BUNEARY','LOPUNNY',12,0,255,0,0),('MUNCHLAX','SNORLAX',22,0,255,0,0),
- ('EEVEE','ESPEON',12,0,255,0,0),('EEVEE','UMBREON',22,0,255,0,0),
- ('RIOLU','LUCARIO',22,1,255,0,0),('SNOM','FROSMOTH',12,2,255,0,0),
- ('RIOLU','RIOLU',12,0,0,0,0),('RIOLU','RIOLU',12,0,255,195,0),
- ('RIOLU','RIOLU',12,0,255,0,1)]
-cases += [('WOOBAT','SWOOBAT',12,0,255,0,0),('SWADLOON','LEAVANNY',12,0,255,0,0),('TYPE_NULL','SILVALLY',12,0,255,0,0),
- ('RIOLU','RIOLU',5,0,255,0,0),('RIOLU','LUCARIO',6,0,255,0,0),('RIOLU','LUCARIO',19,0,255,0,0),('RIOLU','RIOLU',20,0,255,0,0),('RIOLU','LUCARIO',12,0,255,0,0),('SNOM','FROSMOTH',22,0,255,0,0)]
-import argparse
-parser=argparse.ArgumentParser();parser.add_argument('--cases');args=parser.parse_args()
-selected=set(map(int,args.cases.split(','))) if args.cases else set(range(len(cases)))
-for n,(species,target,hour,mode,friendship,held,shadow) in enumerate(cases):
-    if n not in selected: continue
-    e=Emulator(ROOT/'pokefirered.gba')
-    try:
-        load_checkpoint(e,'natural-circuit-complete',True)
-        # mGBA RTC fixture uses UTC TZ, making its host-local RTC deterministic.
-        e.rtc(int(datetime(2026,10,11,hour,0,tzinfo=timezone.utc).timestamp()));e.frames(120)
-        assert e.read('sEclipseLocalMinute',2)//60==hour
-        var(e,0x40d1,mode);fixture(e,species,friendship,held,shadow);candy(e,n>=22)
-        actual=monfield(e,0,0,0)&65535
-        assert actual==ids['SPECIES_'+target],(n,species,target,actual)
-        assert e.read(e.symbols['gPlayerParty']+0x54,1)==51
-        if n == 17:
-            from tm_teaching_test_helpers import field
-            field(e);e.screenshot(ROOT/'test-output/friendship-silvally.png')
-            start_action(e,4)
-            for _ in range(8):e.press('A',240)
-            e.battery(ROOT/'test-output/friendship-silvally.sav')
-        print('PASS:',n,species,'->',target,'RTC',hour,'override',mode,flush=True)
-    finally:e.close()
+def main():
+    cases=[('RIOLU','LUCARIO',12,0,255,0,0),('RIOLU','RIOLU',22,0,255,0,0),
+     ('SNOM','FROSMOTH',22,0,255,0,0),('SNOM','SNOM',12,0,255,0,0),
+     ('BUDEW','ROSELIA',12,0,255,0,0),('CHINGLING','CHIMECHO',22,0,255,0,0),
+     ('BUNEARY','LOPUNNY',12,0,255,0,0),('MUNCHLAX','SNORLAX',22,0,255,0,0),
+     ('EEVEE','ESPEON',12,0,255,0,0),('EEVEE','UMBREON',22,0,255,0,0),
+     ('RIOLU','LUCARIO',22,1,255,0,0),('SNOM','FROSMOTH',12,2,255,0,0),
+     ('RIOLU','RIOLU',12,0,0,0,0),('RIOLU','RIOLU',12,0,255,195,0),
+     ('RIOLU','RIOLU',12,0,255,0,1)]
+    cases += [('WOOBAT','SWOOBAT',12,0,255,0,0),('SWADLOON','LEAVANNY',12,0,255,0,0),('TYPE_NULL','SILVALLY',12,0,255,0,0),
+     ('RIOLU','RIOLU',5,0,255,0,0),('RIOLU','LUCARIO',6,0,255,0,0),('RIOLU','LUCARIO',19,0,255,0,0),('RIOLU','RIOLU',20,0,255,0,0),('RIOLU','LUCARIO',12,0,255,0,0),('SNOM','FROSMOTH',22,0,255,0,0)]
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--cases');args=parser.parse_args()
+    selected=set(map(int,args.cases.split(','))) if args.cases else set(range(len(cases)))
+    for n,(species,target,hour,mode,friendship,held,shadow) in enumerate(cases):
+        if n not in selected: continue
+        e=Emulator(ROOT/'pokefirered.gba')
+        try:
+            load_checkpoint(e,'natural-circuit-complete',True)
+            # mGBA RTC fixture uses UTC TZ, making its host-local RTC deterministic.
+            e.rtc(int(datetime(2026,10,11,hour,0,tzinfo=timezone.utc).timestamp()));e.frames(120)
+            assert e.read('sEclipseLocalMinute',2)//60==hour
+            var(e,0x40d1,mode);fixture(e,species,friendship,held,shadow);candy(e,n>=22)
+            actual=monfield(e,0,0,0)&65535
+            assert actual==ids['SPECIES_'+target],(n,species,target,actual)
+            assert e.read(e.symbols['gPlayerParty']+0x54,1)==51
+            if n == 17:
+                from tm_teaching_test_helpers import field
+                field(e);e.screenshot(ROOT/'test-output/friendship-silvally.png')
+                start_action(e,4)
+                for _ in range(8):e.press('A',240)
+                e.battery(ROOT/'test-output/friendship-silvally.sav')
+            print('PASS:',n,species,'->',target,'RTC',hour,'override',mode,flush=True)
+        finally:e.close()
 
-if 17 in selected:
-    e=Emulator(ROOT/'pokefirered.gba')
-    try:
-        load_checkpoint(e,'friendship-silvally',True)
-        assert monfield(e,0,0,0)&65535==ids['SPECIES_SILVALLY']
-        assert e.read(e.symbols['gPlayerParty']+0x54,1)==51
-        print('PASS: evolved Silvally survives native Save and cold Continue',flush=True)
-    finally:e.close()
+    if 17 in selected:
+        e=Emulator(ROOT/'pokefirered.gba')
+        try:
+            load_checkpoint(e,'friendship-silvally',True)
+            assert monfield(e,0,0,0)&65535==ids['SPECIES_SILVALLY']
+            assert e.read(e.symbols['gPlayerParty']+0x54,1)==51
+            print('PASS: evolved Silvally survives native Save and cold Continue',flush=True)
+        finally:e.close()
+
+if __name__ == '__main__':
+    main()

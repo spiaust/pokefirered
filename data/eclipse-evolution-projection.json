@@ -405,10 +405,14 @@
   },
   {
     "species": "SPECIES_BONSLY",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 0, SPECIES_SUDOWOODO, CONDITIONS({IF_KNOWS_MOVE, MOVE_MIMIC})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_MOVE",
+        "MOVE_MIMIC",
+        "SPECIES_SUDOWOODO"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_MIME_JR",
@@ -2804,10 +2808,14 @@
   },
   {
     "species": "SPECIES_STEENEE",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 0, SPECIES_TSAREENA, CONDITIONS({IF_KNOWS_MOVE, MOVE_STOMP})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_MOVE",
+        "MOVE_STOMP",
+        "SPECIES_TSAREENA"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_TSAREENA",
@@ -3432,10 +3440,14 @@
   },
   {
     "species": "SPECIES_CLOBBOPUS",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 0, SPECIES_GRAPPLOCT, CONDITIONS({IF_KNOWS_MOVE, MOVE_TAUNT})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_MOVE",
+        "MOVE_TAUNT",
+        "SPECIES_GRAPPLOCT"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_GRAPPLOCT",

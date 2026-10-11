@@ -80,3 +80,17 @@ The generated audit records 203 supported rules and 150 omitted rules across
 additional conditions and unavailable regional/form targets. This pass does
 not implement those methods or replace original species' cross-generation trees.
 Source: https://github.com/rh-hideout/pokeemerald-expansion/tree/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7
+
+### Move-known evolution support
+
+EVO_LEVEL_MOVE checks the current four moves at normal level-up. The pinned
+RHH IF_KNOWS_MOVE rules now project for Bonsly/Mimic, Steenee/Stomp and
+Clobbopus/Taunt. Unknown moves and additional conditions remain omitted.
+The imported audit now contains 206 supported and 147 omitted rules.
+Tangela/Tangrowth and Yanma/Yanmega additionally use the same Ancient Power
+rule from the pinned gen_1_families.h and gen_2_families.h sources. Ancient
+Power at levels 24/33 comes from the pinned Gen IX learnsets; their other
+existing level-up moves remain intact. These two original-species branches
+are in the original evolution table, outside the 639-row import audit.
+Mime Jr.'s regional rule, Poipole/Dragon Pulse, Dipplin/Dragon Cheer and
+Piloswine's reminder-dependent route remain future work.
