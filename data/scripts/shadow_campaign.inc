@@ -7003,6 +7003,7 @@ EclipseCircuit_Steward::
  faceplayer
  goto_if_lt VAR_SHADOW_STAGE, 21, EclipseCircuit_Locked
  goto_if_eq VAR_ECLIPSE_CIRCUIT, 0, EclipseCircuit_Start
+ call EclipseCircuit_TrainingKit
  goto_if_eq VAR_ECLIPSE_CIRCUIT, 14, EclipseCircuit_Reward
  goto_if_eq VAR_ECLIPSE_CIRCUIT, 15, EclipseCircuit_Restart
  goto EclipseCircuit_Guidance
@@ -7010,7 +7011,42 @@ EclipseCircuit_Start::
  msgbox EclipseCircuit_StartText, MSGBOX_YESNO
  goto_if_eq VAR_RESULT, NO, Shadow_End
  setvar VAR_ECLIPSE_CIRCUIT, 1
+ call EclipseCircuit_TrainingKit
  goto EclipseCircuit_Guidance
+EclipseCircuit_TrainingKit::
+ goto_if_unset FLAG_0x8DE, EclipseCircuit_TrainingKitExplain
+ goto_if_unset FLAG_0x8DF, EclipseCircuit_TrainingKitExplain
+ goto_if_unset FLAG_0x8E0, EclipseCircuit_TrainingKitExplain
+ return
+EclipseCircuit_TrainingKitExplain::
+ msgbox EclipseCircuit_TrainingKitText
+ goto_if_set FLAG_0x8DE, EclipseCircuit_TrainingKitElectric
+ checkitem ITEM_HM03, 1
+ goto_if_eq VAR_RESULT, TRUE, EclipseCircuit_TrainingKitSurfOwned
+ giveitem ITEM_HM03, 1
+ goto_if_eq VAR_0x8007, FALSE, EclipseCircuit_TrainingKitFull
+EclipseCircuit_TrainingKitSurfOwned::
+ setflag FLAG_0x8DE
+EclipseCircuit_TrainingKitElectric::
+ goto_if_set FLAG_0x8DF, EclipseCircuit_TrainingKitFire
+ giveitem ITEM_TM24, 1
+ goto_if_eq VAR_0x8007, FALSE, EclipseCircuit_TrainingKitFull
+ setflag FLAG_0x8DF
+EclipseCircuit_TrainingKitFire::
+ goto_if_set FLAG_0x8E0, EclipseCircuit_TrainingKitDone
+ giveitem ITEM_TM35, 1
+ goto_if_eq VAR_0x8007, FALSE, EclipseCircuit_TrainingKitFull
+ setflag FLAG_0x8E0
+EclipseCircuit_TrainingKitDone::
+ return
+EclipseCircuit_TrainingKitFull::
+ msgbox EclipseCircuit_TrainingKitFullText
+ return
+EclipseCircuit_TrainingKitText::
+ .string "STEWART: Train your whole team.\nThis kit teaches SURF,\pTHUNDERBOLT and FLAMETHROWER.\nUse your TM CASE to prepare.\pSURF can teach several partners.\nThe TMs are yours once; any\pmissing gift waits here.$"
+EclipseCircuit_TrainingKitFullText::
+ .string "Make room in your TM CASE, then\nreturn for the rest of your kit.\pYour circuit progress is saved.$"
+
 EclipseCircuit_Restart::
  msgbox EclipseCircuit_RestartText, MSGBOX_YESNO
  goto_if_eq VAR_RESULT, NO, Shadow_End

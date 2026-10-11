@@ -554,11 +554,11 @@ shelters rather than full-scale city reconstructions. Wild actors use defined
 spawn points and do not roam. There are no following party sprites, new villain
 sprite sheets, dedicated gym interiors, snagging or new Shadow-type moves.
 One Normal-mode campaign has reached the ending with earned partners and
-resources. Remaining natural legendary and postgame coverage, other full starting routes,
+resources. Remaining earned circuit combat, other full starting routes,
 and broad hardware/emulator checks remain before calling this a polished release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `c13f9e82fd4954ccf385843574ef0261aac5848dc7e154997e5fc574e31613f3`
+SHA-256: `67629ea7f27154b88962c8498d35471fe9a9675560f29c9b47fa50656bee09b7`
 
 ## Earned six-rescue Mewtwo route
 
@@ -616,3 +616,69 @@ PC storage because the party already contains six partners. Its exact boxed
 record, restored garden tiles, adoption flag, reward and prior Nordic completion
 survive cold Continue. The archive branch and capacity failures remain covered
 by separate explicit quest fixtures, not this earned route.
+
+## Champion training kit and earned circuit pilots
+
+Stewart now awards HM03 Surf, TM24 Thunderbolt and TM35 Flamethrower after
+circuit entry. Separate saved flags 0x8DE-0x8E0 track successful deliveries.
+A held-over gift retries on another visit without repeating delivered gifts;
+existing circuit saves can claim the kit. Surf already owned is recognized.
+No additional runtime RAM is allocated.
+
+`python3 scripts/test_eclipse_circuit_kit.py` uses explicit TM quantity fixtures
+to verify declining entry, partial delivery, a full Thunderbolt stack, cold
+pending state, successful retry and one-time rewards. Native Surf teaching
+retains the HM for a second compatible partner; consumable TMs disappear.
+Static campaign, geography, dialogue-width and encounter checks pass.
+
+The earned Nordic/Krakow party lost to Ellis both before and after native kit
+teaching. The upgraded attempt used one Hyper Potion and one Revive. Its
+level-62 Nidoqueen, level-50 Raichu and several lower-level partners are not
+yet adequate for the full level-64 opposing team; the pending circuit entry
+and actual blackout were saved. These pilots do not establish a victory.
+
+The second pilot branches from the earned six-purification Mewtwo capture.
+Mareep is deposited and Mewtwo withdrawn through the native PC; no Pokémon or
+supplies are transferred between saves. The route buys ten Hyper Potions and
+five Revives for 19,500 earned money, then learns Surf on Lapras, Thunderbolt
+on Mewtwo and Flamethrower on Houndoom through the TM Case.
+
+Build: `build-eclipse-champion-kit.log`. EWRAM remains 261,084/262,144 bytes;
+IWRAM remains 29,824/32,768 bytes. The release alias matches the rebuilt ROM.
+
+The native Mewtwo route defeated Ellis and Marine with eight attack selections
+each, using two and one Hyper Potions respectively. Both exact healed parties
+and ordered victories survived cold Continue. The first Sabine pilot stalled
+after prolonged sleep and Leech Seed; switching purified Houndoom into Exeggutor
+won the retry in nine attack selections with one Hyper Potion and no status
+items. Circuit tests use optional native status-item handling; later retries use
+cheaper Full Heals for status and confusion.
+The complete fixture regression still passes all 39 difficulty/team entries,
+thirteen ordered wins, partial/cold saves, unique rewards and another-lap guards.
+
+Further native circuit progression defeated Maarten (14 attack selections,
+eight Hyper Potions and five Full Restores), Greta (five selections, no items)
+and Irena (18 selections, four Hyper Potions). Their exact parties and circuit
+cards survived cold Continue. Flavia's first attempt lost after burns and
+confusion consumed 11 Hyper Potions and one Revive. The saved sixth victory
+remained intact. Buying ten Full Heals for 6,000 earned money and using native
+status/confusion treatment won the retry in eleven selections with four Hyper
+Potions and three Full Heals. The current test policy restocks Hyper Potions
+and Full Heals only when it has sufficient earned money.
+
+Ines won in ten attack selections with four Hyper Potions and one Full Heal.
+Thalia's first pilot lost after Jynx's Calm Mind and sleep. The automation now
+scores visible Attack/Defense and special stat changes, burn, screens, accuracy
+and evasion; it changes only its chosen native input. The retry won in twelve
+selections with three Hyper Potions. Nikos won in eight selections with one
+Hyper Potion, one Revive and one Full Heal. Each victory and exact party were
+cold-saved. Retry counts are separate checkpoint branches and are not added
+to the successful route's inventory consumption.
+
+The earned route currently stops at Eleni with ten cold-saved circuit wins.
+Her first pilot lost using ten Hyper Potions and one Revive. A retry switched
+Nidoqueen into Absol, Houndoom and Umbreon, but also lost (seven Hyper Potions,
+one Revive, five Full Heals). The pending match and main ending remain saved.
+Further partner training is required before verifying Eleni, Leon, the rival
+and the natural Master Ball reward. The fixture regression covers those rules
+but does not replace earned combat. No circuit opponent stats were weakened.

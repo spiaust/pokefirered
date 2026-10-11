@@ -13,7 +13,7 @@ def choose(e,index):
   e.press('LEFT' if index==0 else 'RIGHT' if cur==0 else 'DOWN' if cur<index else 'UP',60)
  assert cur==index
 
-def teach(e,species,tm,move,slot):
+def teach(e,species,tm,move,slot,reusable=False):
  index=next(i for i in range(e.read('gPlayerPartyCount',1)) if monfield(e,i,0,0)&65535==species)
  old=[monfield(e,index,1,j)&65535 for j in (0,2,4,6)]
  assert count_pocket(e,tm,0x464,58)
@@ -30,7 +30,7 @@ def teach(e,species,tm,move,slot):
   e.press('A',180)
  e.press('A',180);field(e);old[slot]=move
  assert [monfield(e,index,1,j)&65535 for j in (0,2,4,6)]==old
- assert not count_pocket(e,tm,0x464,58)
+ assert count_pocket(e,tm,0x464,58)==(1 if reusable else 0)
  print('Earned TM learned:',species,tm,move,flush=True)
 
 def give(e,species,item):

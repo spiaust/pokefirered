@@ -20,7 +20,19 @@ def move_score(e,slot):
  if not power:return 0
  damage=power*(accuracy or 100)/100
  attack=e.read(b+(2 if kind<=8 else 8),2);defense=e.read(b+88+(4 if kind<=8 else 10),2)
+ # Score the current visible stat changes rather than the unboosted stats.
+ attack_stage=e.read(b+24+(1 if kind<=8 else 4),1)
+ defense_stage=e.read(b+88+24+(2 if kind<=8 else 5),1)
+ attack*=((attack_stage-4)/2 if attack_stage>=6 else 2/(8-attack_stage))
+ defense*=((defense_stage-4)/2 if defense_stage>=6 else 2/(8-defense_stage))
  damage*=attack/max(1,defense)
+ if kind<=8 and e.read(b+76)&16 and e.read(b+32,1)!=62:damage*=0.5
+ screens=e.read(e.symbols['gSideStatuses']+2,2)
+ if screens&(1 if kind<=8 else 2):damage*=0.5
+ if accuracy:
+  stage=max(0,min(12,6+e.read(b+30,1)-e.read(b+88+31,1)))
+  ratio=(stage-3)/3 if stage>=6 else 3/(9-stage)
+  damage*=min(100,accuracy*ratio)/accuracy
  if kind in (e.read(b+33,1),e.read(b+34,1)):damage*=1.5
  targets=set([e.read(b+88+33,1),e.read(b+88+34,1)])
  table=e.symbols['gTypeEffectiveness']
@@ -109,7 +121,7 @@ def effective_speed(e,b):
  return speed
 
 
-def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,revive_species=0,trace=False,matchups=None,fallback_species=0,finish_low_enemy=False,finish=True):
+def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,revive_species=0,trace=False,matchups=None,fallback_species=0,finish_low_enemy=False,finish=True,status_item=0):
  action=first_symbol('HandleInputChooseAction');move=first_symbol('HandleInputChooseMove');turns=0;heals=0;revived=False
  for _ in range(limit):
   if not e.in_battle():break
@@ -144,6 +156,11 @@ def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,re
     if cur==target:break
     e.press('LEFT' if target==0 else 'RIGHT' if cur==0 else 'DOWN' if cur<target else 'UP',60)
    e.press('A',180);e.press('A',180);e.frames(300);continue
+  if status_item and fn in (action,move) and (e.read(e.symbols['gBattleMons']+76) or e.read(e.symbols['gBattleMons']+80)&7):
+   from test_oxford_gym import count_pocket
+   if count_pocket(e,status_item,0x310,42):
+    if fn==move:e.press('B',30)
+    use_battle_heal(e,status_item);continue
   if matchups and fn in (action,move):
    from test_shadow_runtime import monfield
    desired=matchups.get(e.read(e.symbols['gBattleMons']+88,2))

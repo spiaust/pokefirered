@@ -213,12 +213,17 @@ Use weaker attacks carefully, allowing for critical hits, and stop attacking
 before a knockout. Pressure can use up move PP quickly. A full party sends a
 successful catch to the PC; you do not need to empty a party slot first.
 Caught guardians stay removed after saving and Continue. Normal-mode captures
-of all three pre-League birds and postgame Suicune, Lugia and Ho-Oh have been
+of all three pre-League birds and postgame Suicune, Lugia, Ho-Oh and Mewtwo have been
 verified with purchased Ultra/Timer Balls and an earned team.
 
 ## Champion rematch circuit
 
-After the League, speak to Stewart near the PC in the champion shelter. Follow
+After the League, speak to Stewart near the PC in the champion shelter. Once
+you accept the circuit, he gives a training kit: reusable Surf HM03, one
+Thunderbolt TM24 and one Flamethrower TM35. Teach compatible partners from
+the TM Case. Each gift is awarded once; if delivery fails, return to Stewart
+for the remaining gifts. Players with an active circuit can also claim the kit.
+Train several partners before taking on the stronger teams. Follow
 his circuit card through eight leader rematches, the four council chambers and
 your rival. Visit the existing mission opponents in their League shelters;
 the ordinary country districts host their separate local trainers. Previous/next

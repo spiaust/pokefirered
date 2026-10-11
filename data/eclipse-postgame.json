@@ -889,6 +889,23 @@
           }
         ]
       }
+    ],
+    "training_kit": [
+      {
+        "item": "HM03_SURF",
+        "flag": "0x8de",
+        "reusable": true
+      },
+      {
+        "item": "TM24_THUNDERBOLT",
+        "flag": "0x8df",
+        "reusable": false
+      },
+      {
+        "item": "TM35_FLAMETHROWER",
+        "flag": "0x8e0",
+        "reusable": false
+      }
     ]
   }
 }
