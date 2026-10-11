@@ -1399,10 +1399,14 @@
   },
   {
     "species": "SPECIES_MINCCINO",
-    "supported": [],
-    "omitted": [
-      "{EVO_ITEM, ITEM_SHINY_STONE, SPECIES_CINCCINO}"
-    ]
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_SHINY_STONE",
+        "SPECIES_CINCCINO"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_CINCCINO",
@@ -1691,10 +1695,14 @@
   },
   {
     "species": "SPECIES_LAMPENT",
-    "supported": [],
-    "omitted": [
-      "{EVO_ITEM, ITEM_DUSK_STONE, SPECIES_CHANDELURE}"
-    ]
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_DUSK_STONE",
+        "SPECIES_CHANDELURE"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_CHANDELURE",
@@ -2148,10 +2156,14 @@
   },
   {
     "species": "SPECIES_FLOETTE",
-    "supported": [],
-    "omitted": [
-      "{EVO_ITEM, ITEM_SHINY_STONE, SPECIES_FLORGES_RED}"
-    ]
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_SHINY_STONE",
+        "SPECIES_FLORGES"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_FLORGES",
@@ -2225,10 +2237,14 @@
   },
   {
     "species": "SPECIES_DOUBLADE",
-    "supported": [],
-    "omitted": [
-      "{EVO_ITEM, ITEM_DUSK_STONE, SPECIES_AEGISLASH_SHIELD}"
-    ]
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_DUSK_STONE",
+        "SPECIES_AEGISLASH"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_AEGISLASH",
@@ -2655,10 +2671,15 @@
   },
   {
     "species": "SPECIES_CRABRAWLER",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_ICE_STONE",
+        "SPECIES_CRABOMINABLE"
+      ]
+    ],
     "omitted": [
-      "{EVO_LEVEL, 0, SPECIES_CRABOMINABLE, CONDITIONS({IF_IN_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM})}",
-      "{EVO_ITEM, ITEM_ICE_STONE, SPECIES_CRABOMINABLE}"
+      "{EVO_LEVEL, 0, SPECIES_CRABOMINABLE, CONDITIONS({IF_IN_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM})}"
     ]
   },
   {
@@ -4389,10 +4410,14 @@
   },
   {
     "species": "SPECIES_CETODDLE",
-    "supported": [],
-    "omitted": [
-      "{EVO_ITEM, ITEM_ICE_STONE, SPECIES_CETITAN}"
-    ]
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_ICE_STONE",
+        "SPECIES_CETITAN"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_CETITAN",

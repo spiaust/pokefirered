@@ -18,6 +18,8 @@ The ending keeps League shelters, country travel and repeatable training availab
   Lechonk, with native gender checks and existing base-species form projections.
 - [x] Add free native move reminders at 100 locations and unlock Piloswine /
   Mamoswine through recalling Ancient Power and leveling up.
+- [x] Add Shiny, Dusk, Dawn and Ice Stones to shops, fourteen stone routes,
+  Dawn Stone gender checks and seven-slot Eevee evolution support.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [ ] Expand modern ability/move/evolution coverage and species-specific cries;
   tune reserve habitats and encounter balance across countries.

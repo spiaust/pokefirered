@@ -119,3 +119,22 @@ the already pinned RHH Gen IX learnset / Gen II family source. This original
 species branch is outside the 639-row imported evolution audit. No new global
 RAM or save fields are introduced. Reminder lessons deliberately have no
 mushroom or money charge so all country starts can recover evolution moves.
+
+### Modern evolution stones
+
+Four unused item slots (52–55) now hold Shiny, Dusk, Dawn and Ice Stones.
+Existing item constants/IDs, pocket sizes and save fields remain fixed; the
+old unused ITEM_034–037 aliases remain defined. Native evolution-item handling,
+item consumption and shop purchases are used, with the shared stone effect
+flag. Colored Sun/Moon/Thunder/Water Stone icons are reused respectively.
+Each costs 2,100, matching the original shop stones.
+
+The pinned RHH family data supplies four original-species Shiny/Dusk branches,
+gender-conditioned Dawn Stone routes for Kirlia/Snorunt, and modern Leaf/Ice
+Eevee alternatives. Six imported stone rules now project as well. The import
+audit contains 220 supported and 133 omitted rules, excluding manual original
+species branches. EVO_ITEM_MALE/FEMALE retain gender during party-menu checks
+and actual use. EVOS_PER_MON increases from five to seven in ROM tables to
+retain every existing Eevee branch while adding Leafeon and Glaceon; all native
+consumers use the same constant. Aegislash retains the existing shield-form
+representation; this pass does not add battle form switching or new abilities.

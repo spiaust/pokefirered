@@ -5171,8 +5171,10 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
     case EVO_MODE_ITEM_CHECK:
         for (i = 0; i < EVOS_PER_MON; i++)
         {
-            if (gEvolutionTable[species][i].method == EVO_ITEM
-             && gEvolutionTable[species][i].param == evolutionItem)
+            if (gEvolutionTable[species][i].param == evolutionItem
+                && (gEvolutionTable[species][i].method == EVO_ITEM
+                    || (gEvolutionTable[species][i].method == EVO_ITEM_MALE && GetMonGender(mon) == MON_MALE)
+                    || (gEvolutionTable[species][i].method == EVO_ITEM_FEMALE && GetMonGender(mon) == MON_FEMALE)))
             {
                 targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;

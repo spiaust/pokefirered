@@ -952,4 +952,29 @@ isolated batteries and do not modify the user's save or claim natural training.
 
 ROM content remains 17,299,532 bytes, padded to 32 MiB. EWRAM remains 261,196 /
 262,144 bytes; IWRAM 29,824 / 32,768. Both ROM aliases match.
-Current release SHA-256: `34ebc89b9eece1a1a1d7f10bb9578b3e728dc889df0638b23ff37c2ebb0eec96`.
+Previous reminder release SHA-256: `34ebc89b9eece1a1a1d7f10bb9578b3e728dc889df0638b23ff37c2ebb0eec96`.
+
+
+## Modern evolution stones — 2026-10-11
+
+`test_eclipse_stones.py` buys all four new stones with earned circuit money,
+checks exact 2,100 costs and delivery, and preserves the original six-member
+party. Nineteen isolated species/personality/inventory cases verify fourteen
+new stone routes, wrong Dawn Stone genders, wrong stone, Everstone and shadow
+prevention. A successful evolution consumes exactly one stone; each rejected
+case consumes none. Cetitan and the remaining Ice Stone survive native Save
+and cold Continue. Fixture evolution cases do not claim naturally captured
+or trained partners; shop purchases use the existing earned party and money.
+
+Additional native cases verify Eevee's original Flareon, Jolteon and Vaporeon
+stone branches. Separate day/night cases retain Espeon and Umbreon, giving
+native coverage of all seven current Eevee branches including Leafeon/Glaceon.
+Conditional-item parser assertions require a known item and correct gender,
+and reject unsupported extra conditions. Boot/title and native Continue pass.
+
+Four previously unused item IDs (52–55) are populated without shifting any
+existing item or species IDs. The evolution table grows to seven ROM slots;
+all consumers compile with that constant. Item pocket sizes, save layout,
+EWRAM (261,196 / 262,144) and IWRAM (29,824 / 32,768) remain unchanged.
+Final ROM content remains 17,299,532 bytes, padded to 32 MiB; both aliases match.
+Current release SHA-256: `c75dbbda77e4b951d0930f1b2652e368867fddfb79f03bcbb8df2a5e2b7edfa5`.

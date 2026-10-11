@@ -28,3 +28,10 @@ assert not project(body.replace('MON_FEMALE','MON_GENDERLESS'),{'SPECIES_VESPIQU
 assert project(body.replace('21','25').replace('SPECIES_VESPIQUEN','SPECIES_MEOWSTIC_F'),{'SPECIES_MEOWSTIC'},set(),GENDER_FORM_ALIASES)[0]==[('EVO_LEVEL_FEMALE','25','SPECIES_MEOWSTIC')]
 for token in ('BURMY','ESPURR','LECHONK'):assert len(rules['SPECIES_'+token])==2
 print('PASS: gender rules, both-gender base projections, and contradictory/extra condition rejection')
+
+body='.evolutions = EVOLUTION({EVO_ITEM, ITEM_DAWN_STONE, SPECIES_GALLADE, CONDITIONS({IF_GENDER, MON_MALE})}),'
+assert project(body,{'SPECIES_GALLADE'},{'ITEM_DAWN_STONE'})[0]==[('EVO_ITEM_MALE','ITEM_DAWN_STONE','SPECIES_GALLADE')]
+assert not project(body,{'SPECIES_GALLADE'},set())[0]
+assert not project(body.replace('{IF_GENDER, MON_MALE}','{IF_GENDER, MON_MALE},{IF_TIME, TIME_NIGHT}'),{'SPECIES_GALLADE'},{'ITEM_DAWN_STONE'})[0]
+for token in ('MINCCINO','LAMPENT','FLOETTE','DOUBLADE','CRABRAWLER','CETODDLE'):assert rules['SPECIES_'+token][0][0]=='EVO_ITEM'
+print('PASS: six imported stone routes and conditional Dawn Stone item availability')

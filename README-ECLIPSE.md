@@ -379,3 +379,20 @@ Piloswine can now recall Ancient Power (a level-1 lesson), then evolve into
 Mamoswine on its next level-up. Reminder lessons also recover forgotten moves
 needed by Bonsly, Steenee, Clobbopus, Tangela and Yanma. Everstone and shadow
 restrictions still prevent evolution.
+
+## Modern evolution stones
+
+Shelter shops sell Shiny, Dusk, Dawn and Ice Stones for 2,100 each.
+
+- Shiny: Togetic → Togekiss, Roselia → Roserade, Minccino → Cinccino,
+  Floette → Florges.
+- Dusk: Murkrow → Honchkrow, Misdreavus → Mismagius, Lampent → Chandelure,
+  Doublade → Aegislash (existing shield-form model).
+- Dawn: male Kirlia → Gallade; female Snorunt → Froslass.
+- Ice: Eevee → Glaceon, Crabrawler → Crabominable, Cetoddle → Cetitan.
+- Leaf: Eevee → Leafeon, alongside the original Leaf Stone routes.
+
+Use a stone from the Bag on a compatible partner. A successful evolution uses
+one stone. Wrong species, wrong gender, Everstone and shadow restrictions
+prevent the evolution. Eevee's original three stone and two friendship paths
+remain available. These items use existing colored stone icons.

@@ -285,7 +285,10 @@
 #define EVO_LEVEL_MALE      17 // Level and male gender required
 #define EVO_LEVEL_FEMALE    18 // Level and female gender required
 
-#define EVOS_PER_MON 5
+#define EVO_ITEM_MALE       19 // Evolution item requires male gender
+#define EVO_ITEM_FEMALE     20 // Evolution item requires female gender
+
+#define EVOS_PER_MON 7
 
 #define EVO_MODE_NORMAL     0
 #define EVO_MODE_TRADE      1
