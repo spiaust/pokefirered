@@ -91,6 +91,10 @@ Amsterdam's leader explains how a Belgian NIDORAN can become NIDORINA
 and then evolve with a Moon Stone into a Ground-type NIDOQUEEN. Country
 travel and the shared shops let you prepare a team before challenging the gym.
 
+Berlin's leader recommends Flying or Psychic moves against her Fighting team.
+The earlier Brussels routes remain available for training a Flying partner
+until it learns a stronger attack.
+
 ## Supplies and evolution
 
 Every campaign shelter and country shop sells all six evolution stones at

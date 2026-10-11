@@ -28,11 +28,18 @@ def move_score(e,slot):
   if a==kind and d in targets:damage*=f/10
  return damage
 
-def natural_battle(e,limit=1800):
+def natural_battle(e,limit=1800,learn_moves=()):
  action=first_symbol('HandleInputChooseAction');move=first_symbol('HandleInputChooseMove');turns=0
  for _ in range(limit):
   if not e.in_battle():break
   fn=e.read('gBattlerControllerFuncs')&~1
+  if learn_moves and e.task_active('Task_InputHandler_SelectOrForgetMove'):
+   # Normal move-forgetting UI: replace the first move, keeping useful coverage.
+   for _ in range(6):
+    if e.read('sMoveSelectionCursorPos',1)==0:break
+    e.press('DOWN',60)
+   assert e.read('sMoveSelectionCursorPos',1)==0
+   e.press('A',900);continue
   if e.task_active('Task_HandleChooseMonInput'):
    count=e.read('gPlayerPartyCount',1);current=e.read('gBattlerPartyIndexes',2)
    order=[(e.read(e.symbols['gBattlePartyCurrentOrder']+i//2,1)&15) if i&1 else (e.read(e.symbols['gBattlePartyCurrentOrder']+i//2,1)>>4) for i in range(count)]
@@ -56,8 +63,10 @@ def natural_battle(e,limit=1800):
    if slot&2:e.press('DOWN',2)
    e.press('A',30);turns+=1
   else:
-   # Decline optional switches and move replacement; allow ordinary evolutions.
-   e.press('B' if e.read(e.read('gBattlescriptCurrInstr'),1)==0x5a else 'A',30)
+   # Learn only explicitly selected moves through the native prompt.
+   learning=e.read(e.read('gBattlescriptCurrInstr'),1)==0x5a
+   accept=e.read('gMoveToLearn',2) in learn_moves
+   e.press('B' if learning and not accept else 'A',30)
  else:
   e.screenshot(ROOT/'test-output/natural-stalled.png');e.state(ROOT/'test-output/natural-stalled.state')
   instr=e.read('gBattlescriptCurrInstr');fn=e.read('gBattlerControllerFuncs')&~1

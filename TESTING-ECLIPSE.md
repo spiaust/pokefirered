@@ -148,6 +148,19 @@ No encounter, catch-rate, stats, damage, experience or AI fixtures are used in
 this run. The runner handles delayed grass transitions and Abra teleport
 outcomes. Purification and Raichu evolution also pass again on this ROM.
 
+The natural Berlin run continues from the earned fourth-badge save. Five
+Grass-route practice battles raise the original Flying partner from level 24
+to 27, learning Wing Attack through the native move-replacement menu. Six
+Berlin practice battles then reach level 29. The Normal level-29 gym is won
+in six move selections, reaching level 30. Native Save and cold Continue
+preserve the four-partner team, fifth badge, Wing Attack and Brick Break TM.
+No levels, stats, damage, experience or AI were overridden. An initial attempt
+to train a level-24 Pidgeotto directly in Berlin frequently fainted; the leader
+now suggests earlier Brussels practice if a Flying partner struggles.
+A final-ROM Berlin replay also wins (five selections), and Amsterdam's
+natural fourth-gym regression passes (seven selections) with its cold-save
+checks after the battle-runner update.
+
 ## Reproduce
 
 Run the build, then the Python scripts in WSL with the base mGBA test bridge:
@@ -166,6 +179,8 @@ Run the build, then the Python scripts in WSL with the base mGBA test bridge:
 10. `scripts/test_eclipse_supplies.py` (requires the natural third-badge save)
 11. `scripts/test_eclipse_natural_amsterdam.py` (requires the purified Raichu save;
     `--caught` resumes after the Belgian catch and `--resume` replays the gym)
+12. `scripts/test_eclipse_natural_berlin.py` (requires the natural fourth-badge
+    save; `--resume` replays the gym from the trained-team save)
 
 Checkpoints and screenshots are under ignored `test-output`. Native save files
 can cold-load between builds; emulator state files must be regenerated whenever
@@ -182,4 +197,4 @@ A full natural-level balancing playthrough and broad hardware/emulator testing
 remain outstanding before calling this a polished final release.
 
 Release: `Pokemon-Europe-Eclipse.gba`
-SHA-256: `09979d3dd60b3dc47ffe870db6316cb625a3a8207562348e8b89a5a8ca11152a`
+SHA-256: `6764db85a027aa94c51a8008ad2233eb2ceda09ed6394822161be36bb297f42d`

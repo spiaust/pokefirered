@@ -816,7 +816,7 @@ ShadowBerlin_RewardDone::
 	msgbox ShadowBerlin_After
 	goto Shadow_End
 ShadowBerlin_Before::
-	.string "GRETA: Our archive preserves the\nwork of people who resisted the\pNazi regime. Someone stole a\nwartime laboratory file. German\presistance members risked\neverything to protect their\pneighbors. Help us protect that\nmemory. Shall we battle?$"
+	.string "GRETA: Our archive preserves the\nwork of people who resisted the\pNazi regime. Someone stole a\nwartime laboratory file. German\presistance members risked\neverything to protect their\pneighbors. Help us protect that\nmemory.\pFlying and Psychic moves work\nwell against my Fighting team.\pIf your Flying partner struggles,\ntrain on Brussels routes first.\pPrepare your partners.\nShall we battle?$"
 ShadowBerlin_After::
 	.string "GRETA: The SOULBADGE is yours.\nYour birthplace never decides\pyour loyalties. ADA traced the\nstolen file to Prague. The\presistance names in it must\nremain protected.$"
 ShadowBerlin_Intro::
