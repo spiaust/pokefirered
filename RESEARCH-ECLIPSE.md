@@ -569,3 +569,14 @@ Native critcalc adds the ability stage before the existing cap and armor guards.
 The legacy odds table and critical damage multiplier stay intact; this does
 not introduce the modern guaranteed-critical stage or hidden abilities.
 No new RAM or save fields are needed.
+
+### Tinted Lens regular slots
+
+Pinned RHH damage calculation applies a 2.0 modifier for resisted attacks:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Cached Gen I/III families supply Venonat, Venomoth and Illumise's second regular
+slots; imported metadata supply Yanmega. The native shared helper runs after
+both defending types and Wonder Guard in Cmd_typecalc and TypeCalc. It preserves
+effectiveness labels and rejects no-effect, neutral and fixed-damage cases.
+Native battler damage estimates use the same helper; broader AI switching
+heuristics are not rewritten. No new RAM/save fields or hidden abilities.

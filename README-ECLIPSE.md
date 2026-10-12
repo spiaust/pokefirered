@@ -697,3 +697,14 @@ and existing no-critical rules still block critical hits. Native Gen III odds
 remain 1/16, 1/8, 1/4, 1/3 and 1/2 across the five capped stages; critical
 damage retains the native multiplier. Hidden-only slots remain omitted.
 Murkrow keeps its chosen Super Luck slot when a Dusk Stone evolves it.
+
+## Tinted Lens ability
+
+Tinted Lens doubles resisted attack damage for Venonat, Venomoth, Illumise
+and Yanmega's regular slots. It applies once after both defending types: a
+half-damage resistance is doubled, and a quarter-damage resistance becomes
+half damage, subject to native rounding. Mixed weakness/resistance combinations
+that are neutral receive no bonus. Type immunity, Levitate, Water Absorb and
+Wonder Guard remain effective. Fixed damage, Struggle and confusion self-damage
+are unchanged. Venonat preserves Tinted Lens when it evolves into Venomoth.
+Hidden-only slots and alternate forms remain outside this update.

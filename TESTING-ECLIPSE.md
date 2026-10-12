@@ -1553,9 +1553,31 @@ use controlled stats/levels; these are not naturally trained campaign teams.
 Campaign/country static checks pass.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `eab35f115b9b786cc581e6020df2c169f31985fc327603f8b7378813ee105ace`.
+Previous release SHA-256: `eab35f115b9b786cc581e6020df2c169f31985fc327603f8b7378813ee105ace`.
 
 Super Luck critical-boundary, Cheer-combination, species and evolution tests
 passed on the final build. Reckless/recoil and native doubles Cheer regressions
 also passed. Absol's full Super Luck description was visually verified.
 Repeating the ability refresh reports zero imported changes.
+
+## Tinted Lens resisted damage
+
+`test_eclipse_tinted_lens.py` compares native single and double resistance,
+neutral/super-effective attacks and mixed Fire/Grass defending types in both
+orders. It checks Ghost/Flying immunity, Levitate, Water Absorb, Wonder Guard,
+Seismic Toss, true out-of-PP Struggle and confusion self-damage. A controlled
+critical roll avoids critical variance; native Water Veil isolates Fire Punch
+comparisons from random burn damage. PP and unchanged base power are checked.
+`test_eclipse_tinted_lens_species.py` checks all four regular slots in battle,
+Venomoth's Save/cold Continue and full skills description, then native
+Venonat/Venomoth evolution with the retained ability slot. Fixtures are isolated
+and controlled, not naturally raised campaign teams. Campaign/country static
+checks pass.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `d27d321674a0e6c7307257bdd5abdf4e992ee7038ddc51e239694c3032d70172`.
+
+Tinted Lens battle and species/evolution suites passed on the final ROM.
+Full Adaptability and modern drain/secondary/spread regressions also passed.
+Venomoth's complete Tinted Lens description was visually verified. Re-running
+the ability refresh reports zero imported changes.

@@ -1294,6 +1294,16 @@ static void ApplySameTypeDamageBonus(u8 attacker, u8 moveType)
     }
 }
 
+// Apply once after both defending types, so mixed weaknesses/resistances stay neutral.
+static void ApplyTintedLensDamageBonus(u16 move, u8 attacker, u8 flags)
+{
+    if (move != MOVE_STRUGGLE && gBattleMoves[move].power
+        && gBattleMons[attacker].ability == ABILITY_TINTED_LENS
+        && (flags & MOVE_RESULT_NOT_VERY_EFFECTIVE)
+        && !(flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NO_EFFECT)))
+        gBattleMoveDamage *= 2;
+}
+
 static void Cmd_typecalc(void)
 {
     s32 i = 0;
@@ -1354,6 +1364,8 @@ static void Cmd_typecalc(void)
         gBattleCommunication[MISS_TYPE] = B_MSG_AVOIDED_DMG;
         RecordAbilityBattle(gBattlerTarget, gLastUsedAbility);
     }
+    ApplyTintedLensDamageBonus(gCurrentMove, gBattlerAttacker, gMoveResultFlags);
+
     if (gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE)
         gProtectStructs[gBattlerAttacker].targetNotAffected = 1;
 
@@ -1520,6 +1532,7 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
     {
         flags |= MOVE_RESULT_MISSED;
     }
+    ApplyTintedLensDamageBonus(move, attacker, flags);
     return flags;
 }
 

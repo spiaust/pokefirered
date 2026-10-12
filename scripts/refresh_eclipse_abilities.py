@@ -10,6 +10,7 @@ CLASSIC['HITMONCHAN']='ABILITY_IRON_FIST'
 CLASSIC['EEVEE']='ABILITY_ADAPTABILITY'
 CLASSIC['HITMONLEE']='ABILITY_RECKLESS'
 CLASSIC.update({name:'ABILITY_SUPER_LUCK' for name in ('MURKROW','ABSOL')})
+CLASSIC.update({name:'ABILITY_TINTED_LENS' for name in ('VENONAT','VENOMOTH','ILLUMISE')})
 def family_source(gen):
     path=f'src/data/pokemon/species_info/gen_{gen}_families.h'
     cached=ROOT/'.local-tools/roster'/path

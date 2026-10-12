@@ -113,3 +113,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Super Luck for six regular species slots with exact native critical
   boundaries, item/move/Dragon Cheer combinations, armor/no-critical guards,
   Absol cold-save display and Murkrow/Honchkrow evolution persistence.
+
+- [x] Add Tinted Lens for four regular species slots, single/double resistance
+  and mixed-type checks, immunity/fixed-damage/Struggle guards, native evolution
+  persistence and Venomoth cold-save/summary display.

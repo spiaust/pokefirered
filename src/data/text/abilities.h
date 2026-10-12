@@ -1,3 +1,4 @@
+static const u8 sTintedLensDescription[] = _("Boosts resisted attack damage.");
 static const u8 sSuperLuckDescription[] = _("Higher chance of critical hits.");
 static const u8 sRecklessDescription[] = _("Boosts recoil moves by 20%.");
 static const u8 sAdaptabilityDescription[] = _("Boosts same-type attack damage.");
@@ -169,6 +170,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_ADAPTABILITY] = sAdaptabilityDescription,
     [ABILITY_RECKLESS] = sRecklessDescription,
     [ABILITY_SUPER_LUCK] = sSuperLuckDescription,
+    [ABILITY_TINTED_LENS] = sTintedLensDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -257,4 +259,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ADAPTABILITY] = _("ADAPTABILITY"),
     [ABILITY_RECKLESS] = _("RECKLESS"),
     [ABILITY_SUPER_LUCK] = _("SUPER LUCK"),
+    [ABILITY_TINTED_LENS] = _("TINTED LENS"),
 };
