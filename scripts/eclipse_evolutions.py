@@ -43,6 +43,13 @@ def project(body, species, items, aliases=None, moves=None):
                 rules = dict((k, v.strip()) for k,v in conditions)
                 if len(rules) != len(conditions):
                     omitted.append(raw); continue
+                if param == '0' and len(rules) == 1 and rules.get('IF_SPECIES_IN_PARTY') in species:
+                    method = 'EVO_LEVEL_PARTY_SPECIES'; param = rules['IF_SPECIES_IN_PARTY']; supported = True
+                elif param.isdigit() and 1 <= int(param) <= 100 and len(rules) == 1 and rules.get('IF_TYPE_IN_PARTY') == 'TYPE_DARK':
+                    method = 'EVO_LEVEL_PARTY_TYPE'; param = '('+param+' << 8) | TYPE_DARK'; supported = True
+                elif param.isdigit() and 1 <= int(param) <= 100 and len(rules) == 1:
+                    if rules.get('IF_NOT_TIME') == 'TIME_NIGHT': method = 'EVO_LEVEL_DAY'; supported = True
+                    elif rules.get('IF_TIME') == 'TIME_NIGHT': method = 'EVO_LEVEL_NIGHT'; supported = True
                 if len(rules) == 1 and rules.get('IF_GENDER') in ('MON_MALE', 'MON_FEMALE') and param.isdigit():
                     method = 'EVO_LEVEL_MALE' if rules['IF_GENDER'] == 'MON_MALE' else 'EVO_LEVEL_FEMALE'; supported = True
                 if param == '0' and len(rules) == 1 and rules.get('IF_KNOWS_MOVE') in (moves or set()):
@@ -62,8 +69,9 @@ def project(body, species, items, aliases=None, moves=None):
                 gender = conditions[0][1].strip()
                 if gender in ('MON_MALE','MON_FEMALE'):
                     method = 'EVO_ITEM_MALE' if gender == 'MON_MALE' else 'EVO_ITEM_FEMALE'; supported = True
-            if method not in ('EVO_LEVEL','EVO_LEVEL_MALE','EVO_LEVEL_FEMALE','EVO_LEVEL_MOVE','EVO_FRIENDSHIP','EVO_FRIENDSHIP_DAY','EVO_FRIENDSHIP_NIGHT','EVO_FRIENDSHIP_MOVE_TYPE','EVO_TRADE','EVO_TRADE_ITEM','EVO_ITEM','EVO_ITEM_MALE','EVO_ITEM_FEMALE','EVO_LEVEL_ITEM_DAY','EVO_LEVEL_ITEM_NIGHT'): supported = False
+            if method not in ('EVO_LEVEL','EVO_LEVEL_MALE','EVO_LEVEL_FEMALE','EVO_LEVEL_MOVE','EVO_FRIENDSHIP','EVO_FRIENDSHIP_DAY','EVO_FRIENDSHIP_NIGHT','EVO_FRIENDSHIP_MOVE_TYPE','EVO_TRADE','EVO_TRADE_ITEM','EVO_ITEM','EVO_ITEM_MALE','EVO_ITEM_FEMALE','EVO_LEVEL_ITEM_DAY','EVO_LEVEL_ITEM_NIGHT','EVO_LEVEL_PARTY_SPECIES','EVO_LEVEL_PARTY_TYPE','EVO_LEVEL_DAY','EVO_LEVEL_NIGHT'): supported = False
             if method in ('EVO_ITEM','EVO_ITEM_MALE','EVO_ITEM_FEMALE') and param in HELD_TRADE_ITEMS: supported = False
+            if method == 'EVO_LEVEL_PARTY_SPECIES' and param not in species: supported = False
             if method == 'EVO_LEVEL_MOVE' and param not in (moves or set()): supported = False
             if target not in species or (method in ('EVO_ITEM','EVO_TRADE_ITEM','EVO_ITEM_MALE','EVO_ITEM_FEMALE','EVO_LEVEL_ITEM_DAY','EVO_LEVEL_ITEM_NIGHT') and param not in items): supported = False
             if supported: accepted.append((method,param,target))

@@ -7437,3 +7437,15 @@ Shadow_DoublesTooFew::
  .string "You need two fit partners\nto enter a double battle.$"
 Shadow_DoublesAfter::
  .string "Come back for another match.\nDIPPLIN learns DRAGON CHEER at\plevel 40. Cheer a DRAGON ally\nfor a stronger critical boost.$"
+
+Shadow_PartyTimeGuide::
+ lock
+ faceplayer
+ msgbox Shadow_PartyTimeOffer, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ msgbox Shadow_PartyTimeTips
+ goto Shadow_End
+Shadow_PartyTimeOffer::
+ .string "Partners and time can shape an\nevolution. Want some tips?$"
+Shadow_PartyTimeTips::
+ .string "MANTYKE needs REMORAID alongside\nwhen it gains a level.\pPANCHAM needs a DARK partner\nand level 32. Hatched partners\pmust be in your party. Fainted\npartners count; EGGS and storage\ppartners do not. Day runs from\n06:00 to 19:59; night is\p20:00 to 05:59. WORLD GEAR can\noverride the clock.\pDay: TYRUNT 39, YUNGOOS 20,\nROCKRUFF 25, FOMANTIS 34.\pNight: AMAURA 39, GREAVARD 30.\nCOSMOEM at 53: day SOLGALEO,\pnight LUNALA.$"

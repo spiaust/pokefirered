@@ -517,3 +517,23 @@ transfer it. Its animation reuses Helping Hand.
 In modern London, find Lyra and Finn beside the nurse, just right of the free
 move reminder. They offer optional, repeatable level-40 double battles. Bring
 two fit partners; the nurse next door can heal your team before another match.
+
+## Party partners and level/time evolutions
+
+Mantyke evolves into Mantine on level-up with a hatched Remoraid in the party.
+Pancham evolves into Pangoro at level 32 or higher with a hatched Dark-type
+partner. Either base type can satisfy the Dark requirement. Fainted partners
+still count; eggs and Pokémon in storage do not.
+
+The following level-ups also require the stated time:
+
+- Day: Tyrunt 39 → Tyrantrum; Yungoos 20 → Gumshoos;
+  Rockruff 25 → the existing Midday Lycanroc model; Fomantis 34 → Lurantis.
+- Night: Amaura 39 → Aurorus; Greavard 30 → Houndstone.
+- Cosmoem at 53: day → Solgaleo; night → Lunala.
+
+Day is 06:00–19:59, night 20:00–05:59, with the same real-world local clock and
+World Gear overrides. A wrong-time level-up can be followed by another level-up
+at the correct time. Everstone and shadow restrictions still apply. Rockruff's
+Midnight/Dusk forms remain pending. A researcher between modern London's move
+reminder and nurse offers optional party/time tips without charging anything.

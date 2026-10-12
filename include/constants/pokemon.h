@@ -293,6 +293,11 @@
 #define EVO_LEVEL_ITEM_DAY   22 // Held item and daytime level up
 #define EVO_LEVEL_ITEM_NIGHT 23 // Held item and nighttime level up
 
+#define EVO_LEVEL_PARTY_SPECIES 24 // A hatched species in the current party
+#define EVO_LEVEL_PARTY_TYPE    25 // param: minimum level in high byte, type in low byte
+#define EVO_LEVEL_DAY           26 // Minimum level and daytime
+#define EVO_LEVEL_NIGHT         27 // Minimum level and nighttime
+
 #define EVOS_PER_MON 8
 
 #define EVO_MODE_NORMAL     0

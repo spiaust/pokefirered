@@ -35,6 +35,8 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Dragon Cheer with ally/Dragon critical-stage behavior and a level-40
   campaign lesson to unlock Dipplin/Hydrapple; keep lessons regeneration-safe.
 - [x] Add an optional repeatable level-40 doubles coach in modern London.
+- [x] Add Mantyke/Pancham party requirements and eight level/time paths,
+  including both Cosmoem branches; add an optional London evolution researcher.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [ ] Expand modern ability/move/evolution coverage and species-specific cries;
   tune reserve habitats and encounter balance across countries.

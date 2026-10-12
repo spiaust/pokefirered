@@ -1199,4 +1199,35 @@ difficulty/campaign balancing and hardware checks remain pending.
 
 Both ROM aliases are 32 MiB; content remains 17,299,532 bytes.
 EWRAM stays 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `b5896208a09e50b156f173b8ce1d2d9b293f7bafa2547f58bb74cbdeda088eb2`.
+Previous Dragon Cheer release SHA-256: `b5896208a09e50b156f173b8ce1d2d9b293f7bafa2547f58bb74cbdeda088eb2`.
+
+### Party partners and minimum-level/time evolutions
+
+`test_eclipse_party_evolution.py` passes seventeen native Rare Candy cases:
+Mantyke with Remoraid, missing/wrong companion, egg exclusion, fainted companion,
+boxed-only exclusion and a sixth-slot companion; Pancham's level-32 boundary,
+missing/non-Dark/egg/boxed partner rejection, fainted Dark partner, sixth-slot
+Greninja (Dark in its second type), Everstone and shadow guards. Explicit
+buddy species/egg fixtures preserve valid encryption/checksums. Pangoro, its
+sixth-slot Greninja and extended seen/caught entries survive native Save/cold
+Continue. No personal saves are touched.
+
+`test_eclipse_level_time.py` split runs cover eight positive branches across
+Tyrunt, Amaura, Yungoos, Rockruff Midday, Fomantis, Greavard and both Cosmoem
+outcomes. Fourteen rejection/override cases cover wrong time, below-level
+attempts, both World Gear overrides, Everstone and shadow. The RTC uses explicit
+UTC-local emulator fixtures; production retains the real-world local clock.
+Solgaleo and Lunala with seen/caught entries survive native Save/cold Continue.
+
+The final build adds only the optional London researcher after those core
+checks. `test_eclipse_party_time_guide.py` verifies accepting/declining tips,
+unchanged party/items/money and returned field control, then cold-continues
+Pangoro, Solgaleo and Lunala with the final ROM. Projection regressions reject
+unknown party species/types, unsupported levels/times and extra conditions.
+Campaign/country capacity, approaches/text and 2026 title/New Game/Continue
+checks pass. The imported audit is 238 supported and 115 omitted rules.
+Midnight/Dusk Lycanroc and broader forms/abilities/cries/balancing remain pending.
+
+Both ROM aliases are 32 MiB; content remains 17,299,532 bytes.
+EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `d324b695c42f2da5ec8ca10e8c8b4aa81b920b59b40a123630769210937cbe4f`.

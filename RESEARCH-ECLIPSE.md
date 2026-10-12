@@ -307,3 +307,27 @@ and clears only its own trainer flag for repeat matches. Existing NPC IDs are
 preserved by appending the object. NUM_TRAINERS becomes 760; the existing
 768-trainer flag capacity and save layout remain unchanged. Other countries,
 wartime maps and main story gates are unchanged.
+
+### Current-party partners and level/time requirements
+
+Pinned source conditions require Remoraid in Mantyke's party and a Dark type
+in Pancham's party at level 32. The upstream pokemon.c scans species without
+an egg filter. This port deliberately requires hatched current-party partners;
+fainted partners qualify, eggs/boxed partners do not. Both base type fields
+are checked, with bounded species/party indexing and no battle-type changes.
+The type method stores minimum level in the parameter's high byte and type in
+the low byte; the species method supports the exact level-zero source rule.
+Only the known Dark condition is currently projected; unknown types, extra
+conditions and unsupported levels stay audited.
+
+Two minimum-level/time methods use Eclipse_IsNight and its RTC refresh/World
+Gear overrides. Exact single day/non-night or night conditions now project
+Tyrunt, Amaura, Yungoos, Rockruff Midday, Fomantis, Greavard and both Cosmoem
+branches. Levels are validated within 1–100. Conditional/alternate form rules
+remain omitted. This adds ten rules across nine imported species: 238 supported,
+115 omitted across 639 rows. No move/item IDs, save fields or global RAM change.
+
+An optional modern-London researcher explains party/time requirements. Its
+object is appended without changing existing local IDs; the map has thirteen
+NPCs within the native sixteen-object limit. Dialogue is read-only and optional.
+The rest of the campaign and chronology remains unchanged.

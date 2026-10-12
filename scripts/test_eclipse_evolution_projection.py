@@ -70,3 +70,17 @@ for token,item,target in [('SPRITZEE','SACHET','AROMATISSE'),('SWIRLIX','WHIPPED
 print('PASS: known held-item trade conditions, unavailable/extra/paired rules and direct-use alternatives')
 
 assert not project('.evolutions = EVOLUTION({EVO_ITEM, ITEM_SACHET, SPECIES_AROMATISSE, CONDITIONS({IF_GENDER, MON_FEMALE})}),',{'SPECIES_AROMATISSE'},{'ITEM_SACHET'})[0]
+
+body='.evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_MANTINE, CONDITIONS({IF_SPECIES_IN_PARTY, SPECIES_REMORAID})}),'
+assert project(body,{'SPECIES_MANTINE','SPECIES_REMORAID'},set())[0]==[('EVO_LEVEL_PARTY_SPECIES','SPECIES_REMORAID','SPECIES_MANTINE')]
+assert not project(body,{'SPECIES_MANTINE'},set())[0]
+assert not project(body.replace('EVO_LEVEL, 0','EVO_LEVEL, 20'),{'SPECIES_MANTINE','SPECIES_REMORAID'},set())[0]
+body='.evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_PANGORO, CONDITIONS({IF_TYPE_IN_PARTY, TYPE_DARK})}),'
+assert project(body,{'SPECIES_PANGORO'},set())[0]==[('EVO_LEVEL_PARTY_TYPE','(32 << 8) | TYPE_DARK','SPECIES_PANGORO')]
+assert not project(body.replace('TYPE_DARK','TYPE_UNKNOWN'),{'SPECIES_PANGORO'},set())[0]
+assert not project(body.replace('{IF_TYPE_IN_PARTY, TYPE_DARK}','{IF_TYPE_IN_PARTY, TYPE_DARK},{IF_TIME, TIME_NIGHT}'),{'SPECIES_PANGORO'},set())[0]
+body='.evolutions = EVOLUTION({EVO_LEVEL, 53, SPECIES_LUNALA, CONDITIONS({IF_TIME, TIME_NIGHT})}),'
+assert project(body,{'SPECIES_LUNALA'},set())[0]==[('EVO_LEVEL_NIGHT','53','SPECIES_LUNALA')]
+for bad in (body.replace('TIME_NIGHT','TIME_DUSK'),body.replace('EVO_LEVEL, 53','EVO_LEVEL, 101'),body.replace('{IF_TIME, TIME_NIGHT}','{IF_TIME, TIME_NIGHT},{IF_GENDER, MON_MALE}')):
+    assert not project(bad,{'SPECIES_LUNALA'},set())[0]
+print('PASS: bounded levels, party species/type requirements and time conditions remain conservative')

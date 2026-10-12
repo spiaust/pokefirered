@@ -5040,6 +5040,22 @@ static u8 GetNatureFromPersonality(u32 personality)
     return personality % NUM_NATURES;
 }
 
+// Eggs and boxed partners do not satisfy these current-party requirements.
+static bool8 PartyHasEvolutionPartner(u16 requirement, bool8 checkType)
+{
+    u8 slot;
+    for (slot = 0; slot < gPlayerPartyCount && slot < PARTY_SIZE; slot++)
+    {
+        u16 partySpecies = GetMonData(&gPlayerParty[slot], MON_DATA_SPECIES_OR_EGG, NULL);
+        if (partySpecies == SPECIES_NONE || partySpecies == SPECIES_EGG || partySpecies >= NUM_SPECIES)
+            continue;
+        if ((!checkType && partySpecies == requirement)
+            || (checkType && (gSpeciesInfo[partySpecies].types[0] == requirement || gSpeciesInfo[partySpecies].types[1] == requirement)))
+            return TRUE;
+    }
+    return FALSE;
+}
+
 // Commit held-item consumption only after the normal evolution succeeds.
 void ConsumeHeldEvolutionItem(struct Pokemon *mon, u16 preSpecies, u16 postSpecies)
 {
@@ -5107,6 +5123,21 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                 break;
             case EVO_LEVEL:
                 if (gEvolutionTable[species][i].param <= level)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_PARTY_SPECIES:
+                if (PartyHasEvolutionPartner(gEvolutionTable[species][i].param, FALSE))
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_PARTY_TYPE:
+                if (level >= (gEvolutionTable[species][i].param >> 8)
+                    && PartyHasEvolutionPartner(gEvolutionTable[species][i].param & 0xFF, TRUE))
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_DAY:
+            case EVO_LEVEL_NIGHT:
+                if (level >= gEvolutionTable[species][i].param
+                    && Eclipse_IsNight() == (gEvolutionTable[species][i].method == EVO_LEVEL_NIGHT))
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             case EVO_LEVEL_MALE:

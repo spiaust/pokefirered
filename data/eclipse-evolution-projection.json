@@ -582,10 +582,14 @@
   },
   {
     "species": "SPECIES_MANTYKE",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 0, SPECIES_MANTINE, CONDITIONS({IF_SPECIES_IN_PARTY, SPECIES_REMORAID})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_PARTY_SPECIES",
+        "SPECIES_REMORAID",
+        "SPECIES_MANTINE"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_SNOVER",
@@ -2193,10 +2197,14 @@
   },
   {
     "species": "SPECIES_PANCHAM",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 32, SPECIES_PANGORO, CONDITIONS({IF_TYPE_IN_PARTY, TYPE_DARK})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_PARTY_TYPE",
+        "(32 << 8) | TYPE_DARK",
+        "SPECIES_PANGORO"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_PANGORO",
@@ -2374,10 +2382,14 @@
   },
   {
     "species": "SPECIES_TYRUNT",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 39, SPECIES_TYRANTRUM, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_DAY",
+        "39",
+        "SPECIES_TYRANTRUM"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_TYRANTRUM",
@@ -2386,10 +2398,14 @@
   },
   {
     "species": "SPECIES_AMAURA",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 39, SPECIES_AURORUS, CONDITIONS({IF_TIME, TIME_NIGHT})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_NIGHT",
+        "39",
+        "SPECIES_AURORUS"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_AURORUS",
@@ -2644,10 +2660,14 @@
   },
   {
     "species": "SPECIES_YUNGOOS",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 20, SPECIES_GUMSHOOS, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_DAY",
+        "20",
+        "SPECIES_GUMSHOOS"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_GUMSHOOS",
@@ -2727,9 +2747,14 @@
   },
   {
     "species": "SPECIES_ROCKRUFF",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_LEVEL_DAY",
+        "25",
+        "SPECIES_LYCANROC"
+      ]
+    ],
     "omitted": [
-      "{EVO_LEVEL, 25, SPECIES_LYCANROC_MIDDAY, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})}",
       "{EVO_LEVEL, 25, SPECIES_LYCANROC_MIDNIGHT, CONDITIONS({IF_TIME, TIME_NIGHT})}"
     ]
   },
@@ -2795,9 +2820,14 @@
   },
   {
     "species": "SPECIES_FOMANTIS",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_LEVEL_DAY",
+        "34",
+        "SPECIES_LURANTIS"
+      ]
+    ],
     "omitted": [
-      "{EVO_LEVEL, 34, SPECIES_LURANTIS, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})}",
       "{EVO_NONE, 0, SPECIES_LURANTIS_TOTEM}"
     ]
   },
@@ -3053,11 +3083,19 @@
   },
   {
     "species": "SPECIES_COSMOEM",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 53, SPECIES_SOLGALEO, CONDITIONS({IF_NOT_TIME, TIME_NIGHT})}",
-      "{EVO_LEVEL, 53, SPECIES_LUNALA, CONDITIONS({IF_TIME, TIME_NIGHT})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_DAY",
+        "53",
+        "SPECIES_SOLGALEO"
+      ],
+      [
+        "EVO_LEVEL_NIGHT",
+        "53",
+        "SPECIES_LUNALA"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_SOLGALEO",
@@ -4424,10 +4462,14 @@
   },
   {
     "species": "SPECIES_GREAVARD",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 30, SPECIES_HOUNDSTONE, CONDITIONS({IF_TIME, TIME_NIGHT})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_NIGHT",
+        "30",
+        "SPECIES_HOUNDSTONE"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_HOUNDSTONE",
