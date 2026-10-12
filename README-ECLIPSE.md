@@ -708,3 +708,14 @@ that are neutral receive no bonus. Type immunity, Levitate, Water Absorb and
 Wonder Guard remain effective. Fixed damage, Struggle and confusion self-damage
 are unchanged. Venonat preserves Tinted Lens when it evolves into Venomoth.
 Hidden-only slots and alternate forms remain outside this update.
+
+## Solid Rock and Filter
+
+Solid Rock reduces super-effective damage by 25% for Camerupt, Rhyperior,
+Tirtouga and Carracosta's supported regular slots. Filter does the same for
+Mr. Mime and Mime Jr. The reduction applies once to the combined defending
+types, including four-times weaknesses and critical hits, with native rounding.
+Neutral, resisted, immune and fixed-damage attacks remain unchanged, as does
+Struggle. Drain moves heal from the damage actually dealt after reduction.
+Native damage estimates share the modifier; zero-damage queries stay zero.
+Hidden slots, alternate forms and ability-bypassing mechanics remain unfinished.

@@ -1304,6 +1304,20 @@ static void ApplyTintedLensDamageBonus(u16 move, u8 attacker, u8 flags)
         gBattleMoveDamage *= 2;
 }
 
+// Both abilities soften overall weaknesses, once after the two defending types.
+static void ApplySuperEffectiveDamageReduction(u16 move, u8 defenderAbility, u8 flags)
+{
+    if (move != MOVE_STRUGGLE && gBattleMoves[move].power && gBattleMoveDamage > 0
+        && (defenderAbility == ABILITY_SOLID_ROCK || defenderAbility == ABILITY_FILTER)
+        && (flags & MOVE_RESULT_SUPER_EFFECTIVE)
+        && !(flags & (MOVE_RESULT_NOT_VERY_EFFECTIVE | MOVE_RESULT_NO_EFFECT)))
+    {
+        gBattleMoveDamage = gBattleMoveDamage * 3 / 4;
+        if (gBattleMoveDamage == 0)
+            gBattleMoveDamage = 1;
+    }
+}
+
 static void Cmd_typecalc(void)
 {
     s32 i = 0;
@@ -1365,6 +1379,7 @@ static void Cmd_typecalc(void)
         RecordAbilityBattle(gBattlerTarget, gLastUsedAbility);
     }
     ApplyTintedLensDamageBonus(gCurrentMove, gBattlerAttacker, gMoveResultFlags);
+    ApplySuperEffectiveDamageReduction(gCurrentMove, gBattleMons[gBattlerTarget].ability, gMoveResultFlags);
 
     if (gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE)
         gProtectStructs[gBattlerAttacker].targetNotAffected = 1;
@@ -1533,6 +1548,7 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
         flags |= MOVE_RESULT_MISSED;
     }
     ApplyTintedLensDamageBonus(move, attacker, flags);
+    ApplySuperEffectiveDamageReduction(move, gBattleMons[defender].ability, flags);
     return flags;
 }
 
@@ -1577,6 +1593,7 @@ u8 AI_TypeCalc(u16 move, u16 targetSpecies, u8 targetAbility)
      && (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)))
      && gBattleMoves[move].power)
         flags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+    ApplySuperEffectiveDamageReduction(move, targetAbility, flags);
     return flags;
 }
 

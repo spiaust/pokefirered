@@ -1575,9 +1575,30 @@ and controlled, not naturally raised campaign teams. Campaign/country static
 checks pass.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `d27d321674a0e6c7307257bdd5abdf4e992ee7038ddc51e239694c3032d70172`.
+Previous release SHA-256: `d27d321674a0e6c7307257bdd5abdf4e992ee7038ddc51e239694c3032d70172`.
 
 Tinted Lens battle and species/evolution suites passed on the final ROM.
 Full Adaptability and modern drain/secondary/spread regressions also passed.
 Venomoth's complete Tinted Lens description was visually verified. Re-running
 the ability refresh reports zero imported changes.
+
+## Solid Rock/Filter weakness reduction
+
+`test_eclipse_type_guards.py` compares native damage for both abilities against
+a control: two/four-times weaknesses, physical/special moves, Drain Punch,
+neutral/resisted damage, mixed Fire/Water types in both orders, Ghost immunity,
+Seismic Toss and real out-of-PP Struggle. Controlled critical rolls verify
+critical-hit reduction. Tinted Lens resisted damage remains unchanged.
+`test_eclipse_type_guard_species.py` checks all six regular slots in battle,
+Camerupt's native Save/cold Continue and full skills description, then Mime Jr.
+evolution with known Mimic and retained Filter. Tests use isolated controlled
+fixtures, not naturally trained campaign teams or hardware link validation.
+Campaign/country static checks pass.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `669a2e9eb00381c3adcb0411f2c59e1e4f98a99e54da6395511e12735ab5db5f`.
+
+Both defensive-ability suites passed on the final ROM. Full Tinted Lens and
+targeted Adaptability regressions also passed. Camerupt's Solid Rock name and
+complete description were visually verified. The ability refresh reports zero
+imported changes when repeated.

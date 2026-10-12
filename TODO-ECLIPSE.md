@@ -117,3 +117,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Tinted Lens for four regular species slots, single/double resistance
   and mixed-type checks, immunity/fixed-damage/Struggle guards, native evolution
   persistence and Venomoth cold-save/summary display.
+
+- [x] Add Solid Rock/Filter for six regular species slots, native and AI damage
+  paths, combined typing/critical/drain checks, fixed-damage/Struggle guards,
+  Camerupt cold-save display and Mime Jr./Mr. Mime evolution persistence.

@@ -580,3 +580,15 @@ both defending types and Wonder Guard in Cmd_typecalc and TypeCalc. It preserves
 effectiveness labels and rejects no-effect, neutral and fixed-damage cases.
 Native battler damage estimates use the same helper; broader AI switching
 heuristics are not rewritten. No new RAM/save fields or hidden abilities.
+
+### Solid Rock and Filter
+
+Pinned RHH damage calculation reduces super-effective hits with these abilities:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Cached Gen I/III families supply Mr. Mime/Camerupt's second regular slots;
+imported metadata supply Mime Jr., Rhyperior, Tirtouga and Carracosta.
+The native helper applies 3/4 damage after combined typing in Cmd_typecalc,
+TypeCalc and AI_TypeCalc, preserves effectiveness flags, and excludes zero/
+negative damage, Struggle, fixed power-zero moves and no-effect cases.
+No new RAM/save fields or hidden abilities. Mold Breaker-style bypass and
+alternate-form abilities remain outside the current engine support.

@@ -7515,7 +7515,7 @@
       ],
       "abilities": [
         "ABILITY_SOUNDPROOF",
-        "ABILITY_NONE"
+        "ABILITY_FILTER"
       ],
       "source_abilities": [
         "ABILITY_SOUNDPROOF",
@@ -11341,7 +11341,7 @@
       ],
       "abilities": [
         "ABILITY_LIGHTNING_ROD",
-        "ABILITY_NONE"
+        "ABILITY_SOLID_ROCK"
       ],
       "source_abilities": [
         "ABILITY_LIGHTNING_ROD",
@@ -26406,7 +26406,7 @@
         "EGG_GROUP_WATER_3"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_SOLID_ROCK",
         "ABILITY_STURDY"
       ],
       "source_abilities": [
@@ -26567,7 +26567,7 @@
         "EGG_GROUP_WATER_3"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_SOLID_ROCK",
         "ABILITY_STURDY"
       ],
       "source_abilities": [
