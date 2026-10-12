@@ -7448,4 +7448,4 @@ Shadow_PartyTimeGuide::
 Shadow_PartyTimeOffer::
  .string "Partners and time can shape an\nevolution. Want some tips?$"
 Shadow_PartyTimeTips::
- .string "MANTYKE needs REMORAID alongside\nwhen it gains a level.\pPANCHAM needs a DARK partner\nand level 32. Hatched partners\pmust be in your party. Fainted\npartners count; EGGS and storage\ppartners do not. Day runs from\n06:00 to 19:59; night is\p20:00 to 05:59. WORLD GEAR can\noverride the clock.\pDay: TYRUNT 39, YUNGOOS 20,\nROCKRUFF 25, FOMANTIS 34.\pNight: AMAURA 39, GREAVARD 30.\nCOSMOEM at 53: day SOLGALEO,\pnight LUNALA.$"
+ .string "MANTYKE needs REMORAID alongside\nwhen it gains a level.\pPANCHAM needs a DARK partner\nand level 32. Hatched partners\pmust be in your party. Fainted\npartners count; EGGS and storage\ppartners do not. Day runs from\n06:00 to 19:59; night is\p20:00 to 05:59. WORLD GEAR can\noverride the clock.\pDay: TYRUNT 39, YUNGOOS 20,\nROCKRUFF 25, FOMANTIS 34.\pNight: AMAURA 39, GREAVARD 30.\nCOSMOEM at 53: day SOLGALEO,\pnight LUNALA.\pSLIGGOO needs level 50 and rain\nor fog outside. WORLD GEAR can\pchoose RAIN. CLEAR and SNOW\nwill not help it evolve.$"

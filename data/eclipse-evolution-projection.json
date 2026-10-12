@@ -2442,11 +2442,19 @@
   },
   {
     "species": "SPECIES_SLIGGOO",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 50, SPECIES_GOODRA, CONDITIONS({IF_WEATHER, WEATHER_RAIN})}",
-      "{EVO_LEVEL, 50, SPECIES_GOODRA, CONDITIONS({IF_WEATHER, WEATHER_FOG})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_RAIN",
+        "50",
+        "SPECIES_GOODRA"
+      ],
+      [
+        "EVO_LEVEL_FOG",
+        "50",
+        "SPECIES_GOODRA"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_GOODRA",

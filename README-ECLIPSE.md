@@ -544,3 +544,12 @@ World Gear overrides. A wrong-time level-up can be followed by another level-up
 at the correct time. Everstone and shadow restrictions still apply. Rockruff's
 Midnight/Dusk forms remain pending. A researcher between modern London's move
 reminder and nurse offers optional party/time tips without charging anything.
+
+
+## Weather evolution
+
+Sliggoo evolves into Goodra when it gains a level at level 50 or above in
+rain or fog. WORLD GEAR can select RAIN outdoors; CLEAR and SNOW do not count.
+Rain Dance and other battle-only weather do not satisfy the requirement.
+Everstone and shadow status still block evolution. London's optional evolution
+researcher now explains this route alongside party/time requirements.

@@ -1255,4 +1255,26 @@ listening checks and broader campaign balancing remain outstanding.
 
 Both ROM aliases are 32 MiB; allocated content is 23,288,035 bytes (69.40%).
 EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `3a80f6de36edd96276f055a26e2ad147550a2acbee44dbd112545803835083ca`.
+Previous cry release SHA-256: `3a80f6de36edd96276f055a26e2ad147550a2acbee44dbd112545803835083ca`.
+
+
+## Sliggoo weather evolution
+
+`test_eclipse_weather_evolution.py` uses real World Gear inputs to select
+rain, clear or snow, then an explicit encrypted Sliggoo fixture and native Rare
+Candy use. Eleven cases cover level-50 rain success, clear/snow rejection,
+level-49 rejection, Everstone, shadow, thunderstorm/downpour and both fog kinds,
+and rejection of battle-only rain. The latter weather variants are explicit
+saved-map-weather fixtures while the bag pauses field updates; no naturally
+reachable fog habitat is claimed. Native Save/cold Continue preserves Goodra,
+the rain setting and seen/caught flags. Personal saves are never accessed.
+
+Projection checks reject unknown weather, levels above 100 and extra conditions.
+Updated optional researcher dialogue passes accepting/declining, returned field
+control and unchanged party/items/money; prior Pangoro/Solgaleo/Lunala saves
+still cold-continue. Campaign/country static checks and animated title/New
+Game/cold Continue pass. Broader abilities/forms/balancing remain outstanding.
+
+Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
+EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `48de71e2840248c5500555ebc1b3ba99c19eeeb9bceda8a9ec433f6a26866a34`.

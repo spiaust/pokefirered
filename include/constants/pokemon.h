@@ -298,6 +298,9 @@
 #define EVO_LEVEL_DAY           26 // Minimum level and daytime
 #define EVO_LEVEL_NIGHT         27 // Minimum level and nighttime
 
+#define EVO_LEVEL_RAIN          28 // Minimum level and overworld rain
+#define EVO_LEVEL_FOG           29 // Minimum level and overworld fog
+
 #define EVOS_PER_MON 8
 
 #define EVO_MODE_NORMAL     0

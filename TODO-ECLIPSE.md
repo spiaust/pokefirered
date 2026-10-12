@@ -37,6 +37,8 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add an optional repeatable level-40 doubles coach in modern London.
 - [x] Add Mantyke/Pancham party requirements and eight level/time paths,
   including both Cosmoem branches; add an optional London evolution researcher.
+- [x] Add Sliggoo/Goodra level-50 overworld rain/fog evolution, World Gear
+  rain support, battle-weather rejection and optional researcher guidance.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [x] Add individual normal/reversed cries for all 639 imported Gen IV–IX
   base species; preserve full longer normal samples and original Gen I–III audio.

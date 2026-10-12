@@ -24,6 +24,8 @@
 #include "overworld.h"
 #include "party_menu.h"
 #include "field_specials.h"
+#include "field_weather.h"
+#include "constants/weather.h"
 #include "berry.h"
 #include "constants/items.h"
 #include "constants/item_effects.h"
@@ -5133,6 +5135,18 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                 if (level >= (gEvolutionTable[species][i].param >> 8)
                     && PartyHasEvolutionPartner(gEvolutionTable[species][i].param & 0xFF, TRUE))
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_RAIN:
+            case EVO_LEVEL_FOG:
+                if (level >= gEvolutionTable[species][i].param)
+                {
+                    u8 weather = GetSav1Weather();
+                    if ((gEvolutionTable[species][i].method == EVO_LEVEL_RAIN
+                         && (weather == WEATHER_RAIN || weather == WEATHER_RAIN_THUNDERSTORM || weather == WEATHER_DOWNPOUR))
+                        || (gEvolutionTable[species][i].method == EVO_LEVEL_FOG
+                            && (weather == WEATHER_FOG_HORIZONTAL || weather == WEATHER_FOG_DIAGONAL)))
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                }
                 break;
             case EVO_LEVEL_DAY:
             case EVO_LEVEL_NIGHT:

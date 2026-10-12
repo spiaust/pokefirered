@@ -84,3 +84,11 @@ assert project(body,{'SPECIES_LUNALA'},set())[0]==[('EVO_LEVEL_NIGHT','53','SPEC
 for bad in (body.replace('TIME_NIGHT','TIME_DUSK'),body.replace('EVO_LEVEL, 53','EVO_LEVEL, 101'),body.replace('{IF_TIME, TIME_NIGHT}','{IF_TIME, TIME_NIGHT},{IF_GENDER, MON_MALE}')):
     assert not project(bad,{'SPECIES_LUNALA'},set())[0]
 print('PASS: bounded levels, party species/type requirements and time conditions remain conservative')
+
+body='.evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_GOODRA, CONDITIONS({IF_WEATHER, WEATHER_RAIN})}),'
+assert project(body,{'SPECIES_GOODRA'},set())[0]==[('EVO_LEVEL_RAIN','50','SPECIES_GOODRA')]
+assert project(body.replace('WEATHER_RAIN','WEATHER_FOG'),{'SPECIES_GOODRA'},set())[0]==[('EVO_LEVEL_FOG','50','SPECIES_GOODRA')]
+for bad in (body.replace('WEATHER_RAIN','WEATHER_SNOW'),body.replace('EVO_LEVEL, 50','EVO_LEVEL, 101'),body.replace('{IF_WEATHER, WEATHER_RAIN}','{IF_WEATHER, WEATHER_RAIN},{IF_TIME, TIME_NIGHT}')):
+    assert not project(bad,{'SPECIES_GOODRA'},set())[0]
+assert len(next(r for r in rows if r['species']=='SPECIES_SLIGGOO')['supported'])==2
+print('PASS: minimum-level rain/fog conditions preserve unknown-weather and extra-condition rejection')

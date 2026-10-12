@@ -352,3 +352,20 @@ follows fixed graphics in both linker layouts, avoiding a .rodata overlap and
 adding no global RAM or save fields. Long normal cries derive a minimum length
 from their sample frame count/rate; shortened/reversed animation modes retain
 the native settings. Original cry tables and samples retain their mapping.
+
+
+### Overworld-weather evolution
+
+The pinned Sliggoo source has two level-50 Goodra conditions: WEATHER_RAIN and
+WEATHER_FOG. Conservative projection accepts only these known, single weather
+conditions with levels 1–100; extra conditions and unsupported weather remain
+omitted. Native methods EVO_LEVEL_RAIN/EVO_LEVEL_FOG read GetSav1Weather, the map weather
+already selected by World Gear or the regional environment. Rain, thunderstorm
+and downpour count as rain; horizontal/diagonal fog count as fog. Battle-weather
+flags are excluded, and existing Everstone/shadow handling applies before the
+new checks. World Gear rain makes the route obtainable without an added item;
+no fog override or new fog map is introduced in this milestone.
+
+The generated audit now has 240 supported and 113 omitted rules. Species,
+items, move IDs, save offsets and global RAM are unchanged. London researcher
+text covers the new route within native dialogue width limits.
