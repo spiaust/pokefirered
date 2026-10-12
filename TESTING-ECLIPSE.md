@@ -1437,9 +1437,30 @@ and confirms Skill Link in the next battle. Fixtures use disposable saves and
 controlled stats, not naturally trained campaign parties.
 
 Build memory: EWRAM 261,196 bytes; IWRAM 29,824 bytes; ROM content 23,288,035 bytes.
-Current release SHA-256: `569e600d06f66a9f7c7ab00a54a74cabc14d8feeaa1aeb73158c889e4761d902`.
+Previous release SHA-256: `569e600d06f66a9f7c7ab00a54a74cabc14d8feeaa1aeb73158c889e4761d902`.
 
 Skill Link battle and species suites passed on the final ROM. Technician battle
 regression and campaign/country static checks passed. Cloyster's native skills
 screenshot shows the complete Skill Link name and description. Refreshing
 abilities again reports zero imported changes.
+
+## Feebas Prism Scale route
+
+`test_eclipse_prism_scale.py` buys the cable and scale for 2,100 each using an
+earned-money checkpoint, Gives the scale through the native Bag menu, then
+uses the purchased cable on a controlled zero-Beauty Feebas. It verifies
+Milotic, exact item consumption, native Save/cold Continue and seen/caught flags.
+Guard cases cover missing/wrong held items, Everstone, shadow Feebas, Magikarp
+and already evolved Milotic. Native Rare Candy cases check Beauty 169/170 and
+that Beauty evolution preserves a held Prism Scale. These are controlled
+fixtures, not naturally raised campaign Pokémon or hardware link validation.
+
+Campaign/country static and evolution-projection checks pass. The native
+Happiny/Sneasel/Gligar held-item and Kadabra/Onix Link Cable regressions pass.
+Build: 261,196 bytes EWRAM, 29,824 bytes IWRAM and 23,288,035 bytes ROM content.
+Current release SHA-256: `e4e543bc34223c1e2805c5290b1eeb73e8b2a8ec142c71f5627b28a4b6adede9`.
+
+The complete Prism Scale suite passed on the final build. Native researcher
+accept/decline checks preserve party, inventory and funds; cold Pangoro,
+Solgaleo and Lunala saves also remain compatible. The shop screenshot shows
+PRISM SCALE in stock at the expected 2,100 price.

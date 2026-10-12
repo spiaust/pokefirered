@@ -118,7 +118,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     // Valuables
     [ITEM_TINY_MUSHROOM]  = {gItemIcon_TinyMushroom, gItemIconPalette_Mushroom},
     [ITEM_BIG_MUSHROOM]   = {gItemIcon_BigMushroom, gItemIconPalette_Mushroom},
-    [ITEM_069]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_PRISM_SCALE] = {gItemIcon_DragonScale, gItemIconPalette_DragonScale},
     [ITEM_PEARL]          = {gItemIcon_Pearl, gItemIconPalette_Pearl},
     [ITEM_BIG_PEARL]      = {gItemIcon_BigPearl, gItemIconPalette_Pearl},
     [ITEM_STARDUST]       = {gItemIcon_Stardust, gItemIconPalette_Star},

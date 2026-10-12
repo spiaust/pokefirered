@@ -94,3 +94,6 @@ The ending keeps League shelters, country travel and repeatable training availab
 
 - [x] Implement Skill Link for five regular species slots, preserving fixed-hit
   counts, first-strike accuracy, native interruptions and saved ability choices.
+
+- [x] Add purchasable Prism Scale and Feebas/Milotic Link Cable evolution,
+  researcher guidance, native purchase/Give flow, Beauty boundary and cold saves.

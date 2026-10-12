@@ -776,7 +776,8 @@ static void Task_EvolutionScene(u8 taskId)
             BattlePutTextOnWindow(gStringVar4, B_WIN_MSG);
             PlayBGM(MUS_EVOLVED);
             gTasks[taskId].tState++;
-            ConsumeHeldEvolutionItem(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);
+            // Item evolutions cannot be stopped; level-up evolutions use bit 0.
+            ConsumeHeldEvolutionItem(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies, !(gTasks[taskId].tCanStop & 1));
             SetMonData(mon, MON_DATA_SPECIES, (void *)(&gTasks[taskId].tPostEvoSpecies));
             CalculateMonStats(mon);
             EvolutionRenameMon(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);

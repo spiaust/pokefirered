@@ -127,3 +127,10 @@ for bad in (body.replace('EVO_TRADE, 0','EVO_TRADE, 1'),body.replace('{IF_TRADE_
 for token,partner,target in [('KARRABLAST','SHELMET','ESCAVALIER'),('SHELMET','KARRABLAST','ACCELGOR')]:
     assert rules['SPECIES_'+token]==[['EVO_TRADE_PARTNER','SPECIES_'+partner,'SPECIES_'+target]]
 print('PASS: paired-trade requirements preserve known counterpart and reject extra/unavailable conditions')
+
+# Prism Scale is a held trade item; never project the upstream direct-use shortcut.
+body='.evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_MILOTIC, CONDITIONS({IF_HOLD_ITEM, ITEM_PRISM_SCALE})},{EVO_ITEM, ITEM_PRISM_SCALE, SPECIES_MILOTIC}),'
+accepted,omitted=project(body,{'SPECIES_MILOTIC'},{'ITEM_PRISM_SCALE'})
+assert accepted==[('EVO_TRADE_ITEM','ITEM_PRISM_SCALE','SPECIES_MILOTIC')] and len(omitted)==1
+assert not project(body,{'SPECIES_MILOTIC'},set())[0]
+print('PASS: Prism Scale remains a held trade item; direct-use shortcut rejected')

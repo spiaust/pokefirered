@@ -502,3 +502,17 @@ Native FireRed's random-hit counter now selects five for Skill Link. Fixed
 counters are unchanged; Triple Kick bypasses later accuracy rolls after its
 first successful strike. This is a small native implementation, not an import
 of the expansion battle engine. No hidden abilities or new RAM are introduced.
+
+### Feebas and Prism Scale
+
+Pinned upstream Gen III family data includes Beauty 170 and trade while holding
+Prism Scale, plus a direct-use convenience rule:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/pokemon/species_info/gen_3_families.h
+The native classic evolution table preserves Beauty and adds the held trade
+rule. The existing solo Link Cable adaptation makes that route available without
+a second console. The projection parser treats Prism Scale as a held trade item
+and rejects the direct-use shortcut. Item 105 was unused; no save structure or
+existing item IDs move. Dragon Scale supplies an existing native icon.
+Held-item consumption now distinguishes item-triggered evolution from level-up
+evolution, so reaching Beauty 170 while holding Prism Scale does not lose it.
+Hardware link trading remains unverified.

@@ -5079,14 +5079,15 @@ static bool8 PartyHasLinkedEvolutionPartner(u16 requirement)
 }
 
 // Commit held-item consumption only after the normal evolution succeeds.
-void ConsumeHeldEvolutionItem(struct Pokemon *mon, u16 preSpecies, u16 postSpecies)
+void ConsumeHeldEvolutionItem(struct Pokemon *mon, u16 preSpecies, u16 postSpecies, bool8 itemEvolution)
 {
     u8 i;
     u16 heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, NULL);
     for (i = 0; i < EVOS_PER_MON; i++)
     {
         const struct Evolution *evo = &gEvolutionTable[preSpecies][i];
-        if ((evo->method == EVO_LEVEL_ITEM_DAY || evo->method == EVO_LEVEL_ITEM_NIGHT || evo->method == EVO_TRADE_ITEM)
+        if (((!itemEvolution && (evo->method == EVO_LEVEL_ITEM_DAY || evo->method == EVO_LEVEL_ITEM_NIGHT))
+            || (itemEvolution && evo->method == EVO_TRADE_ITEM))
             && evo->param == heldItem && evo->targetSpecies == postSpecies)
         {
             heldItem = ITEM_NONE;

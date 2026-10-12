@@ -640,3 +640,12 @@ hits after passing accuracy. Fixed two-hit moves retain two hits; Triple Kick
 retains three strikes and checks accuracy only for its first strike. A knockout
 or other native interruption can end an attack early. Hidden ability slots
 remain outside the current two-slot model.
+
+## Feebas and Prism Scale
+
+Country shops sell PRISM SCALE for 2,100. Give it to Feebas, then use LINK CABLE
+on Feebas to evolve it into Milotic; success consumes both the cable and held
+scale. No Beauty threshold is required for this route. The optional London
+evolution researcher explains it. Feebas remains available in country reserves.
+The original Beauty-170 level-up rule remains supported and keeps a held scale.
+Prism Scale uses the native Dragon Scale icon and an unused item slot (105).

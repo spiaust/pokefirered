@@ -1681,12 +1681,12 @@
       "secondaryId": 0
     },
     {
-      "english": "????????",
-      "itemId": "ITEM_NONE",
-      "price": 0,
+      "english": "PRISM SCALE",
+      "itemId": "ITEM_PRISM_SCALE",
+      "price": 2100,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "?????",
+      "description_english": "Have FEEBAS hold this,\\nthen use LINK CABLE to evolve.\\nIt becomes MILOTIC.",
       "importance": 0,
       "registrability": 0,
       "pocket": "POCKET_ITEMS",
