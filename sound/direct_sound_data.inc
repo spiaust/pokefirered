@@ -1907,3 +1907,5 @@ DirectSoundWaveData_sd90_classical_detuned_ep1_high::
 	.align 2
 DirectSoundWaveData_sd90_enhanced_delay_shaku::
 	.incbin "sound/direct_sound_samples/sd90_enhanced_delay_shaku.bin"
+
+	.include "sound/eclipse_cry_samples.inc"

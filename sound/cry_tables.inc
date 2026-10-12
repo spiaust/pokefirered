@@ -779,3 +779,5 @@ gCryTable_Reverse::
 	cry_reverse Cry_Jirachi
 	cry_reverse Cry_Deoxys
 	cry_reverse Cry_Chimecho
+
+	.include "sound/eclipse_cry_tables.inc"

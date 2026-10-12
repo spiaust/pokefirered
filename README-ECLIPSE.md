@@ -314,6 +314,13 @@ League ending; the seven existing story guardians keep their original gates.
 Visible encounters use the same reserves and the World Gear visibility toggle.
 See RESEARCH-ECLIPSE.md for source credits and battle-engine adaptations.
 
+All 639 imported Gen IV–IX base species now use individual cries from the
+pinned RHH expansion source. Battles, the Pokédex, summaries and evolutions
+share native playback, including reversed cries for battle animations. Longer
+normal cries can finish their samples; short animation modes retain their timing.
+Original Gen I–III audio and existing save layouts are preserved.
+
+
 Automatic World Gear time now reads the emulator/cartridge RTC and follows its
 local clock. DAY and NIGHT provide permanent overrides. An emulator must expose
 GBA RTC support for automatic time; hardware without RTC defaults to daylight.

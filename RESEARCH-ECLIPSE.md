@@ -331,3 +331,24 @@ An optional modern-London researcher explains party/time requirements. Its
 object is appended without changing existing local IDs; the map has thirteen
 NPCs within the native sixteen-object limit. Dialogue is read-only and optional.
 The rest of the campaign and chronology remains unchanged.
+
+
+### Species-specific Gen IV–IX cries
+
+Audio comes from the same credited [RHH Pokémon Emerald expansion](https://github.com/rh-hideout/pokeemerald-expansion/tree/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/sound/direct_sound_samples/cries)
+commit `7b4344c7ee867c98c8fb9d6026791df4f8eaecf7` as the imported roster.
+`import_eclipse_cries.py` resolves each species' source cryId to its actual
+sample label, including base-form and multiword aliases; it does not guess
+filenames from display names. `data/eclipse-cries.json` records all 639 IDs,
+source paths, SHA-256 hashes, sample rates and PCM frame counts. Samples retain
+source WAV bytes and are converted by the existing native wav2agb DPCM rules.
+Finizen and Palafin retain their shared source cry (638 unique WAV paths).
+Credit and original Pokémon sound ownership remain with their source holders.
+
+Separate normal/reverse tone tables dispatch bounded modern IDs in
+PlayCryInternal, before the original SpeciesToCryId mapping. Both directions
+share one ROM sample. The new allocated read-only `eclipse_cry_data` section
+follows fixed graphics in both linker layouts, avoiding a .rodata overlap and
+adding no global RAM or save fields. Long normal cries derive a minimum length
+from their sample frame count/rate; shortened/reversed animation modes retain
+the native settings. Original cry tables and samples retain their mapping.

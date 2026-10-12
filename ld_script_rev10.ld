@@ -1043,6 +1043,13 @@ SECTIONS {
     } > ROM =0
 
 
+    /* Modern cry samples follow fixed graphics; no new work RAM required. */
+    eclipse_cry_data :
+    ALIGN(4)
+    {
+        data/sound_data.o(eclipse_cry_data);
+    } > ROM =0
+
     /* DWARF 2 sections */
     .debug_aranges  0 : { *(.debug_aranges) }
     .debug_pubnames 0 : { *(.debug_pubnames) }

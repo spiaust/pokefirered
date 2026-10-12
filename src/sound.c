@@ -6,6 +6,7 @@
 #include "m4a.h"
 #include "constants/songs.h"
 #include "constants/sound.h"
+#include "constants/species.h"
 #include "task.h"
 
 struct Fanfare
@@ -39,6 +40,8 @@ extern struct MusicPlayerInfo gMPlayInfo_SE2;
 extern struct MusicPlayerInfo gMPlayInfo_SE3;
 extern struct ToneData gCryTable[];
 extern struct ToneData gCryTable_Reverse[];
+extern struct ToneData gEclipseCryTable[];
+extern struct ToneData gEclipseCryTable_Reverse[];
 
 extern u16 SpeciesToCryId(u16);
 
@@ -468,6 +471,27 @@ void PlayCryInternal(u16 species, s8 pan, s8 volume, u8 priority, u8 mode)
     SetPokemonCryRelease(release);
     SetPokemonCryChorus(chorus);
     SetPokemonCryPriority(priority);
+
+    // The incoming species was decremented above for the legacy cry mapping.
+    // Modern base species have their own contiguous tables, shared by every
+    // caller (battle, summary, Pokedex, evolution and reversed animations).
+    if (species >= SPECIES_TURTWIG - 1 && species < NUM_SPECIES - 1)
+    {
+        index = species - (SPECIES_TURTWIG - 1);
+        // Some modern cries exceed the legacy 140-frame normal-cry limit.
+        // Keep the complete sample audible, preserving shortened animation modes.
+        if (mode == CRY_MODE_NORMAL)
+        {
+            const struct WaveData *wave = gEclipseCryTable[index].wav;
+            u32 rate = wave->freq >> 10;
+            u32 frames = (wave->size * 60 + rate - 1) / rate + 4;
+            if (frames > length)
+                SetPokemonCryLength(frames);
+        }
+        gMPlay_PokemonCry = SetPokemonCryTone(reverse
+            ? &gEclipseCryTable_Reverse[index] : &gEclipseCryTable[index]);
+        return;
+    }
 
     // This is a fancy way to get a cry of a pokemon.
     // It creates 4 sets of 128 mini cry tables.

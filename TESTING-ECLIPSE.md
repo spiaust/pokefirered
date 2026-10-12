@@ -1230,4 +1230,29 @@ Midnight/Dusk Lycanroc and broader forms/abilities/cries/balancing remain pendin
 
 Both ROM aliases are 32 MiB; content remains 17,299,532 bytes.
 EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `d324b695c42f2da5ec8ca10e8c8b4aa81b920b59b40a123630769210937cbe4f`.
+Previous party/time release SHA-256: `d324b695c42f2da5ec8ca10e8c8b4aa81b920b59b40a123630769210937cbe4f`.
+
+
+## Individual modern cries
+
+`test_eclipse_cries.py` checks all 639 pinned WAV hashes and compiled
+normal/reverse tone pointers, compressed sample flags, frame counts, rates and
+ROM bounds. A disposable field-script fixture executes native playmoncry and
+waitmoncry commands for 13 representatives spanning every newer generation,
+base-form/multiword aliases and both table boundaries. Both directions select
+the right native tone and an active mixer channel advances through its sample;
+waiting returns field control. Normal playback duration covers the entire
+sample, including Cetitan's four-second cry. Bulbasaur, Pikachu, Chimecho and
+alternate-Unown legacy mappings pass. Native party/summary UI plays Pecharunt's
+new cry and returns to the field; its screenshot was visually inspected.
+
+`test_eclipse_roster_runtime.py` passes Gen IV/VIII/IX native encounter/capture,
+PC overflow and cold Save/Continue with species and extended seen/caught flags.
+These use explicit disposable encounter/ball fixtures, preserving the earned
+party and avoiding personal saves. Campaign/country static checks and the
+2026 animated title/New Game/cold Continue regressions pass. Real hardware
+listening checks and broader campaign balancing remain outstanding.
+
+Both ROM aliases are 32 MiB; allocated content is 23,288,035 bytes (69.40%).
+EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `3a80f6de36edd96276f055a26e2ad147550a2acbee44dbd112545803835083ca`.

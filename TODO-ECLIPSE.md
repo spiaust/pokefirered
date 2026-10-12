@@ -38,8 +38,10 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Mantyke/Pancham party requirements and eight level/time paths,
   including both Cosmoem branches; add an optional London evolution researcher.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
-- [ ] Expand modern ability/move/evolution coverage and species-specific cries;
-  tune reserve habitats and encounter balance across countries.
+- [x] Add individual normal/reversed cries for all 639 imported Gen IV–IX
+  base species; preserve full longer normal samples and original Gen I–III audio.
+- [ ] Expand modern ability/move/evolution coverage; tune reserve habitats
+  and encounter balance across countries.
 
 - [x] Eclipse-remnant hunt in Scandinavia: investigate surviving relays across
   Denmark, Norway and Sweden, battle remnant commanders, and shut down their

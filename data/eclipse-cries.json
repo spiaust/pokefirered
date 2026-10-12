@@ -1,0 +1,5757 @@
+{
+  "source": "https://raw.githubusercontent.com/rh-hideout/pokeemerald-expansion/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/",
+  "commit": "7b4344c7ee867c98c8fb9d6026791df4f8eaecf7",
+  "species": [
+    {
+      "national": 387,
+      "id": 440,
+      "token": "SPECIES_TURTWIG",
+      "source_path": "sound/direct_sound_samples/cries/turtwig.wav",
+      "rate": 13379,
+      "frames": 7052,
+      "sha256": "7673378019b429a45c76989ffaad47914c5306f4e2254b5cbe627f40168bdf7b"
+    },
+    {
+      "national": 388,
+      "id": 441,
+      "token": "SPECIES_GROTLE",
+      "source_path": "sound/direct_sound_samples/cries/grotle.wav",
+      "rate": 13379,
+      "frames": 9336,
+      "sha256": "79e128afc122fcfb30ad7a4be6fe3db739206eaf7918f321a820871322932962"
+    },
+    {
+      "national": 389,
+      "id": 442,
+      "token": "SPECIES_TORTERRA",
+      "source_path": "sound/direct_sound_samples/cries/torterra.wav",
+      "rate": 13379,
+      "frames": 23288,
+      "sha256": "43b74f5017e35d6401de1a8b3a1e5f2a2a595c9dcea5185cd6831456c71e6de1"
+    },
+    {
+      "national": 390,
+      "id": 443,
+      "token": "SPECIES_CHIMCHAR",
+      "source_path": "sound/direct_sound_samples/cries/chimchar.wav",
+      "rate": 13379,
+      "frames": 14756,
+      "sha256": "3a1f5a540cd52f462534cc909ebb81d06a3296a044cb3eeb8e18c65c4d4a46e9"
+    },
+    {
+      "national": 391,
+      "id": 444,
+      "token": "SPECIES_MONFERNO",
+      "source_path": "sound/direct_sound_samples/cries/monferno.wav",
+      "rate": 13379,
+      "frames": 18956,
+      "sha256": "acd07bf86dc6547b102b964dc74d90e1d0491da3588b0c001a0217c8d92ee228"
+    },
+    {
+      "national": 392,
+      "id": 445,
+      "token": "SPECIES_INFERNAPE",
+      "source_path": "sound/direct_sound_samples/cries/infernape.wav",
+      "rate": 13379,
+      "frames": 22000,
+      "sha256": "de3203a81f9356763c0726678d3a377a781c26e612cc42f0fe904362ace2a233"
+    },
+    {
+      "national": 393,
+      "id": 446,
+      "token": "SPECIES_PIPLUP",
+      "source_path": "sound/direct_sound_samples/cries/piplup.wav",
+      "rate": 13379,
+      "frames": 8112,
+      "sha256": "01ee72ed7ce7f1397e512de6a37e263095c9edb3da86618341bada49ebf68beb"
+    },
+    {
+      "national": 394,
+      "id": 447,
+      "token": "SPECIES_PRINPLUP",
+      "source_path": "sound/direct_sound_samples/cries/prinplup.wav",
+      "rate": 13379,
+      "frames": 12176,
+      "sha256": "f50bd1dd70a6a4a689d25040129d0b089d0b3699b330450b0a9bb2c216a10f4f"
+    },
+    {
+      "national": 395,
+      "id": 448,
+      "token": "SPECIES_EMPOLEON",
+      "source_path": "sound/direct_sound_samples/cries/empoleon.wav",
+      "rate": 13379,
+      "frames": 23000,
+      "sha256": "4904f3c07053ca146862b46e22f04b01e117f903f99fb26ff8752a1f303bcfa1"
+    },
+    {
+      "national": 396,
+      "id": 449,
+      "token": "SPECIES_STARLY",
+      "source_path": "sound/direct_sound_samples/cries/starly.wav",
+      "rate": 13379,
+      "frames": 14148,
+      "sha256": "164b0ccb52a63e203f1cf7b344811c50839cdfa7a84b488acc012c1eda90f84b"
+    },
+    {
+      "national": 397,
+      "id": 450,
+      "token": "SPECIES_STARAVIA",
+      "source_path": "sound/direct_sound_samples/cries/staravia.wav",
+      "rate": 13379,
+      "frames": 15484,
+      "sha256": "b78ce28bc1400d8ea903935d2411ae7fee6146f33838c5ce5088262faa93c744"
+    },
+    {
+      "national": 398,
+      "id": 451,
+      "token": "SPECIES_STARAPTOR",
+      "source_path": "sound/direct_sound_samples/cries/staraptor.wav",
+      "rate": 13379,
+      "frames": 16848,
+      "sha256": "525f2760a037f66d1d0c34c17fc0dd4f39b131529d4b6b193ccfd1d30160923e"
+    },
+    {
+      "national": 399,
+      "id": 452,
+      "token": "SPECIES_BIDOOF",
+      "source_path": "sound/direct_sound_samples/cries/bidoof.wav",
+      "rate": 13379,
+      "frames": 10500,
+      "sha256": "326253e0d858607dacf1776ce249a7d3c476c128528f1901ab2dd84d5531f26d"
+    },
+    {
+      "national": 400,
+      "id": 453,
+      "token": "SPECIES_BIBAREL",
+      "source_path": "sound/direct_sound_samples/cries/bibarel.wav",
+      "rate": 13379,
+      "frames": 14288,
+      "sha256": "58a15101805f5f3685d11ac27bb5aa6d5baeba08d826eb1f4f9a3f36221fbf02"
+    },
+    {
+      "national": 401,
+      "id": 454,
+      "token": "SPECIES_KRICKETOT",
+      "source_path": "sound/direct_sound_samples/cries/kricketot.wav",
+      "rate": 13379,
+      "frames": 13672,
+      "sha256": "1a59a64a0d0b9d0406ea6c3bca5acfdb851a314f87124492b6fd412caddb1f96"
+    },
+    {
+      "national": 402,
+      "id": 455,
+      "token": "SPECIES_KRICKETUNE",
+      "source_path": "sound/direct_sound_samples/cries/kricketune.wav",
+      "rate": 13379,
+      "frames": 22080,
+      "sha256": "715eb53a82a630d9e6e5b3942846761760285f914318053a9d24dfb85d71255e"
+    },
+    {
+      "national": 403,
+      "id": 456,
+      "token": "SPECIES_SHINX",
+      "source_path": "sound/direct_sound_samples/cries/shinx.wav",
+      "rate": 13379,
+      "frames": 9532,
+      "sha256": "182ea886ef64990b21dbf81a94868ed7bc70161487f31206f8db8c31ef2b1138"
+    },
+    {
+      "national": 404,
+      "id": 457,
+      "token": "SPECIES_LUXIO",
+      "source_path": "sound/direct_sound_samples/cries/luxio.wav",
+      "rate": 13379,
+      "frames": 22764,
+      "sha256": "33d83834ce2afd329ff19481dd83a2c9005a12e664f3d2b42c3323febae13d19"
+    },
+    {
+      "national": 405,
+      "id": 458,
+      "token": "SPECIES_LUXRAY",
+      "source_path": "sound/direct_sound_samples/cries/luxray.wav",
+      "rate": 13379,
+      "frames": 20720,
+      "sha256": "31a9302c7673aec0323f3fa1b6548c35678adaa62316adb70d528ad6b1038445"
+    },
+    {
+      "national": 406,
+      "id": 459,
+      "token": "SPECIES_BUDEW",
+      "source_path": "sound/direct_sound_samples/cries/budew.wav",
+      "rate": 13379,
+      "frames": 12400,
+      "sha256": "48a0cb2ad4865ea7fa74789529473beb50f7292196e585bbfdf4566d05e73600"
+    },
+    {
+      "national": 407,
+      "id": 460,
+      "token": "SPECIES_ROSERADE",
+      "source_path": "sound/direct_sound_samples/cries/roserade.wav",
+      "rate": 13379,
+      "frames": 10612,
+      "sha256": "9c99549926bd16ce073f19bb22185090ecf4b5993899939aaa8b6c32717cb8ef"
+    },
+    {
+      "national": 408,
+      "id": 461,
+      "token": "SPECIES_CRANIDOS",
+      "source_path": "sound/direct_sound_samples/cries/cranidos.wav",
+      "rate": 13379,
+      "frames": 9624,
+      "sha256": "15f66ece8318ce6e362b4f99e016ae98b6314125bfca89743c962be8892f3679"
+    },
+    {
+      "national": 409,
+      "id": 462,
+      "token": "SPECIES_RAMPARDOS",
+      "source_path": "sound/direct_sound_samples/cries/rampardos.wav",
+      "rate": 13379,
+      "frames": 19964,
+      "sha256": "bd7b160f4556675965d0aa4307ce0c05444f4eff72040fcf98ce16cfc7bba45f"
+    },
+    {
+      "national": 410,
+      "id": 463,
+      "token": "SPECIES_SHIELDON",
+      "source_path": "sound/direct_sound_samples/cries/shieldon.wav",
+      "rate": 13379,
+      "frames": 11116,
+      "sha256": "faa11b5e08a7ddba0519386ed44d005d72c1e0c2b20177e57b1f220847b1d251"
+    },
+    {
+      "national": 411,
+      "id": 464,
+      "token": "SPECIES_BASTIODON",
+      "source_path": "sound/direct_sound_samples/cries/bastiodon.wav",
+      "rate": 13379,
+      "frames": 17424,
+      "sha256": "82de4503bfce7005773f2775a439cddfd0c491d4168b3123b1df5c4943a3c05b"
+    },
+    {
+      "national": 412,
+      "id": 465,
+      "token": "SPECIES_BURMY",
+      "source_path": "sound/direct_sound_samples/cries/burmy.wav",
+      "rate": 13379,
+      "frames": 6800,
+      "sha256": "16eaacaeb9b74f74bfc982df38924416219626d997ac7ba8685062285e73e150"
+    },
+    {
+      "national": 413,
+      "id": 466,
+      "token": "SPECIES_WORMADAM",
+      "source_path": "sound/direct_sound_samples/cries/wormadam.wav",
+      "rate": 13379,
+      "frames": 19184,
+      "sha256": "a4d4fdf065e8172077812749d4557dc4ee20d05785fa171ee1542cd20eadf39a"
+    },
+    {
+      "national": 414,
+      "id": 467,
+      "token": "SPECIES_MOTHIM",
+      "source_path": "sound/direct_sound_samples/cries/mothim.wav",
+      "rate": 13379,
+      "frames": 9832,
+      "sha256": "9585d34a9cadd17dd6411e60ce9a8fa9bee769f1d82ceb5aba6ae320418d5604"
+    },
+    {
+      "national": 415,
+      "id": 468,
+      "token": "SPECIES_COMBEE",
+      "source_path": "sound/direct_sound_samples/cries/combee.wav",
+      "rate": 13379,
+      "frames": 18200,
+      "sha256": "001c90001817b36220156baf8143075d38d66ff2b5a81a2cfedebb17c1b14e7c"
+    },
+    {
+      "national": 416,
+      "id": 469,
+      "token": "SPECIES_VESPIQUEN",
+      "source_path": "sound/direct_sound_samples/cries/vespiquen.wav",
+      "rate": 13379,
+      "frames": 17304,
+      "sha256": "e2ee347c743e8de9c38f6dd800fc6525442b36ac1f5927a3f4a2f27f16e603e6"
+    },
+    {
+      "national": 417,
+      "id": 470,
+      "token": "SPECIES_PACHIRISU",
+      "source_path": "sound/direct_sound_samples/cries/pachirisu.wav",
+      "rate": 13379,
+      "frames": 6244,
+      "sha256": "b7be8c780193208c3d3b7479766f5a0a15cf2c5da98daf7e5e4125b436a307a4"
+    },
+    {
+      "national": 418,
+      "id": 471,
+      "token": "SPECIES_BUIZEL",
+      "source_path": "sound/direct_sound_samples/cries/buizel.wav",
+      "rate": 13379,
+      "frames": 9960,
+      "sha256": "a315751c2f89c28a93c25322575b7028883b39dec9c5550f10faa7ba689bd8cc"
+    },
+    {
+      "national": 419,
+      "id": 472,
+      "token": "SPECIES_FLOATZEL",
+      "source_path": "sound/direct_sound_samples/cries/floatzel.wav",
+      "rate": 13379,
+      "frames": 16860,
+      "sha256": "13198652aeaa947b64c77f68a0ac2d4d31bd29e9d45dee844cd574bdd1a1a159"
+    },
+    {
+      "national": 420,
+      "id": 473,
+      "token": "SPECIES_CHERUBI",
+      "source_path": "sound/direct_sound_samples/cries/cherubi.wav",
+      "rate": 13379,
+      "frames": 6252,
+      "sha256": "c73f33052b5803dce27c756f0152b39dfd2a2bedf7ab61479d8d2da149274292"
+    },
+    {
+      "national": 421,
+      "id": 474,
+      "token": "SPECIES_CHERRIM",
+      "source_path": "sound/direct_sound_samples/cries/cherrim.wav",
+      "rate": 13379,
+      "frames": 10528,
+      "sha256": "7301c58831f60ebd281d192be177e1657b0386bbcaffe4799b3a3735b70f7958"
+    },
+    {
+      "national": 422,
+      "id": 475,
+      "token": "SPECIES_SHELLOS",
+      "source_path": "sound/direct_sound_samples/cries/shellos.wav",
+      "rate": 13379,
+      "frames": 6428,
+      "sha256": "654380907e353e5ab7a1abb232aa47f901b4149dba244dd5ec08d6a21d69ac70"
+    },
+    {
+      "national": 423,
+      "id": 476,
+      "token": "SPECIES_GASTRODON",
+      "source_path": "sound/direct_sound_samples/cries/gastrodon.wav",
+      "rate": 13379,
+      "frames": 18344,
+      "sha256": "3497e5dc25bcd4a6a1e386649ba1ea1ca06672f0d911e24f2b1790118ea02b72"
+    },
+    {
+      "national": 424,
+      "id": 477,
+      "token": "SPECIES_AMBIPOM",
+      "source_path": "sound/direct_sound_samples/cries/ambipom.wav",
+      "rate": 13379,
+      "frames": 10564,
+      "sha256": "a96d7847aa730783da91d482ab39f60b7721d843f9476c356862eb8877980cde"
+    },
+    {
+      "national": 425,
+      "id": 478,
+      "token": "SPECIES_DRIFLOON",
+      "source_path": "sound/direct_sound_samples/cries/drifloon.wav",
+      "rate": 13379,
+      "frames": 12872,
+      "sha256": "81555dbda33f0f68d086d38d9d0038f4b9e0b7badd2d16bed81d47e68341bc74"
+    },
+    {
+      "national": 426,
+      "id": 479,
+      "token": "SPECIES_DRIFBLIM",
+      "source_path": "sound/direct_sound_samples/cries/drifblim.wav",
+      "rate": 13379,
+      "frames": 19108,
+      "sha256": "523ba929dbfc516fdd42a95db14e97aa59510ec00cce674e3f1e6142f1c94bdd"
+    },
+    {
+      "national": 427,
+      "id": 480,
+      "token": "SPECIES_BUNEARY",
+      "source_path": "sound/direct_sound_samples/cries/buneary.wav",
+      "rate": 13379,
+      "frames": 13004,
+      "sha256": "0e2a5b5ff96e2624b95c3e69f6861db787db8ce39f8df565980b3492c1b05e23"
+    },
+    {
+      "national": 428,
+      "id": 481,
+      "token": "SPECIES_LOPUNNY",
+      "source_path": "sound/direct_sound_samples/cries/lopunny.wav",
+      "rate": 13379,
+      "frames": 21888,
+      "sha256": "ba4349e693380681969cec7d471ef4eb5d264faac853b3c9ae366ed747f481d1"
+    },
+    {
+      "national": 429,
+      "id": 482,
+      "token": "SPECIES_MISMAGIUS",
+      "source_path": "sound/direct_sound_samples/cries/mismagius.wav",
+      "rate": 13379,
+      "frames": 18032,
+      "sha256": "c6042afe06735a3d39116e672f6d955b44f0fd8c60947a8b679a43df24b00d13"
+    },
+    {
+      "national": 430,
+      "id": 483,
+      "token": "SPECIES_HONCHKROW",
+      "source_path": "sound/direct_sound_samples/cries/honchkrow.wav",
+      "rate": 13379,
+      "frames": 17172,
+      "sha256": "6632db70dffd07c6d5ce6d4420e9e90529af6766a62d2a51b74858cc6ee75a61"
+    },
+    {
+      "national": 431,
+      "id": 484,
+      "token": "SPECIES_GLAMEOW",
+      "source_path": "sound/direct_sound_samples/cries/glameow.wav",
+      "rate": 13379,
+      "frames": 6520,
+      "sha256": "ef616b2dd5d8193a86f0ddf3e71104bd972df71e802a9dc55f8d08f94c8357f9"
+    },
+    {
+      "national": 432,
+      "id": 485,
+      "token": "SPECIES_PURUGLY",
+      "source_path": "sound/direct_sound_samples/cries/purugly.wav",
+      "rate": 13379,
+      "frames": 11776,
+      "sha256": "6888033d577cc115e6bfb169da8ad0a42a5d452c4a2ec75d51c5534b768ae753"
+    },
+    {
+      "national": 433,
+      "id": 486,
+      "token": "SPECIES_CHINGLING",
+      "source_path": "sound/direct_sound_samples/cries/chingling.wav",
+      "rate": 13379,
+      "frames": 17764,
+      "sha256": "9cbfc2649e9d1831690c38c0078137bd54d65bd036bf97b7a86bca0af4a8bec5"
+    },
+    {
+      "national": 434,
+      "id": 487,
+      "token": "SPECIES_STUNKY",
+      "source_path": "sound/direct_sound_samples/cries/stunky.wav",
+      "rate": 13379,
+      "frames": 6116,
+      "sha256": "e2a227e22749745780ce20e296359e30ad9f464cd8820be2d5faddb220c46809"
+    },
+    {
+      "national": 435,
+      "id": 488,
+      "token": "SPECIES_SKUNTANK",
+      "source_path": "sound/direct_sound_samples/cries/skuntank.wav",
+      "rate": 13379,
+      "frames": 21724,
+      "sha256": "bb6f35ed6064811b83bc635d0f445cd91aaa3dcc65b8c25613160132d12b3145"
+    },
+    {
+      "national": 436,
+      "id": 489,
+      "token": "SPECIES_BRONZOR",
+      "source_path": "sound/direct_sound_samples/cries/bronzor.wav",
+      "rate": 13379,
+      "frames": 10228,
+      "sha256": "456422a16c4a35bd8997d375039840d70f0bf5ec8c01f5f68204234d154c616e"
+    },
+    {
+      "national": 437,
+      "id": 490,
+      "token": "SPECIES_BRONZONG",
+      "source_path": "sound/direct_sound_samples/cries/bronzong.wav",
+      "rate": 13379,
+      "frames": 22956,
+      "sha256": "bed6544ab28638ed21187f53c38aeda6164c30656195c5c9e0efa9b6f0e936e4"
+    },
+    {
+      "national": 438,
+      "id": 491,
+      "token": "SPECIES_BONSLY",
+      "source_path": "sound/direct_sound_samples/cries/bonsly.wav",
+      "rate": 10512,
+      "frames": 7088,
+      "sha256": "de23b429a4981713bb7c4461efb27b5ce15724a3dd24644037abaadd348f8ad3"
+    },
+    {
+      "national": 439,
+      "id": 492,
+      "token": "SPECIES_MIME_JR",
+      "source_path": "sound/direct_sound_samples/cries/mime_jr.wav",
+      "rate": 13379,
+      "frames": 8956,
+      "sha256": "2b5d66d282101eb2dfac90614c2a7ac3845d1c9c573388a03474e2acefb0ca46"
+    },
+    {
+      "national": 440,
+      "id": 493,
+      "token": "SPECIES_HAPPINY",
+      "source_path": "sound/direct_sound_samples/cries/happiny.wav",
+      "rate": 13379,
+      "frames": 6836,
+      "sha256": "90e64c71b252c5d647a152f4ee1626ad16b48f246a28813d16da9d027ee905d6"
+    },
+    {
+      "national": 441,
+      "id": 494,
+      "token": "SPECIES_CHATOT",
+      "source_path": "sound/direct_sound_samples/cries/chatot.wav",
+      "rate": 13379,
+      "frames": 10656,
+      "sha256": "7c9c71d2beab280af924e69a19ab2f0f9da7a357647ad53fb6d96d8a032a5102"
+    },
+    {
+      "national": 442,
+      "id": 495,
+      "token": "SPECIES_SPIRITOMB",
+      "source_path": "sound/direct_sound_samples/cries/spiritomb.wav",
+      "rate": 13379,
+      "frames": 23096,
+      "sha256": "8aaacc28f6f15bf94191d14c1462905b3615713b1acb204f1564eabe76ee395c"
+    },
+    {
+      "national": 443,
+      "id": 496,
+      "token": "SPECIES_GIBLE",
+      "source_path": "sound/direct_sound_samples/cries/gible.wav",
+      "rate": 13379,
+      "frames": 4976,
+      "sha256": "0f8ea96cb19c78f2cbd7093e2bce4dbe4bf90d6ca62ec77a970e1fa37cde5598"
+    },
+    {
+      "national": 444,
+      "id": 497,
+      "token": "SPECIES_GABITE",
+      "source_path": "sound/direct_sound_samples/cries/gabite.wav",
+      "rate": 13379,
+      "frames": 7080,
+      "sha256": "a45ceb8728ef1b0c122c1b5d8d38a5b2d999e522546799758bf0d8473d8e08e9"
+    },
+    {
+      "national": 445,
+      "id": 498,
+      "token": "SPECIES_GARCHOMP",
+      "source_path": "sound/direct_sound_samples/cries/garchomp.wav",
+      "rate": 13379,
+      "frames": 12472,
+      "sha256": "5fb6d875a05f720eb99eb1dd09ba09eac8b6aa3fbabc6cef00e0454e788a396b"
+    },
+    {
+      "national": 446,
+      "id": 499,
+      "token": "SPECIES_MUNCHLAX",
+      "source_path": "sound/direct_sound_samples/cries/munchlax.wav",
+      "rate": 10512,
+      "frames": 5680,
+      "sha256": "5c03f0038afe181b971df1145301c9549c05463ae6ada3fc799a1b0e7e33d516"
+    },
+    {
+      "national": 447,
+      "id": 500,
+      "token": "SPECIES_RIOLU",
+      "source_path": "sound/direct_sound_samples/cries/riolu.wav",
+      "rate": 13379,
+      "frames": 5172,
+      "sha256": "90e928b81a3e5f265a3196df3eccea3b17b5cc97928e042fe59c6430021dc33d"
+    },
+    {
+      "national": 448,
+      "id": 501,
+      "token": "SPECIES_LUCARIO",
+      "source_path": "sound/direct_sound_samples/cries/lucario.wav",
+      "rate": 13379,
+      "frames": 8428,
+      "sha256": "336a542cd1b6c92e81230d03dc300193006f21c5885a6862f1d2b9c5138e8445"
+    },
+    {
+      "national": 449,
+      "id": 502,
+      "token": "SPECIES_HIPPOPOTAS",
+      "source_path": "sound/direct_sound_samples/cries/hippopotas.wav",
+      "rate": 13379,
+      "frames": 17636,
+      "sha256": "991fc3dfedce88052d2d616eca57630e6a54c522c734c198f474046c733ab1d9"
+    },
+    {
+      "national": 450,
+      "id": 503,
+      "token": "SPECIES_HIPPOWDON",
+      "source_path": "sound/direct_sound_samples/cries/hippowdon.wav",
+      "rate": 13379,
+      "frames": 23004,
+      "sha256": "3aa4167458a4707503137ee86addc451363371ff54e5b08148adad3e37d607a6"
+    },
+    {
+      "national": 451,
+      "id": 504,
+      "token": "SPECIES_SKORUPI",
+      "source_path": "sound/direct_sound_samples/cries/skorupi.wav",
+      "rate": 13379,
+      "frames": 14428,
+      "sha256": "4f41e7fa119ca7045454b71b466653fe9c1be9121a6325e78c17136beca51941"
+    },
+    {
+      "national": 452,
+      "id": 505,
+      "token": "SPECIES_DRAPION",
+      "source_path": "sound/direct_sound_samples/cries/drapion.wav",
+      "rate": 13379,
+      "frames": 11504,
+      "sha256": "3ee6e8407a31fbbaf7d78269f440b21e3f117d4428fd11a801f84bc38a31ddd9"
+    },
+    {
+      "national": 453,
+      "id": 506,
+      "token": "SPECIES_CROAGUNK",
+      "source_path": "sound/direct_sound_samples/cries/croagunk.wav",
+      "rate": 13379,
+      "frames": 15652,
+      "sha256": "d14455ff8cb4b1778c92f984da6b6441439e811ebcec9481703420840ffc3f24"
+    },
+    {
+      "national": 454,
+      "id": 507,
+      "token": "SPECIES_TOXICROAK",
+      "source_path": "sound/direct_sound_samples/cries/toxicroak.wav",
+      "rate": 13379,
+      "frames": 19236,
+      "sha256": "7480266673fc581915a4da54f23962de331b00a7bf3d0dae0b781c893ec68bf8"
+    },
+    {
+      "national": 455,
+      "id": 508,
+      "token": "SPECIES_CARNIVINE",
+      "source_path": "sound/direct_sound_samples/cries/carnivine.wav",
+      "rate": 13379,
+      "frames": 15100,
+      "sha256": "aa8424fa8d71cf89970800779db58e636a086772dca87322876da5b1315af6f3"
+    },
+    {
+      "national": 456,
+      "id": 509,
+      "token": "SPECIES_FINNEON",
+      "source_path": "sound/direct_sound_samples/cries/finneon.wav",
+      "rate": 13379,
+      "frames": 17840,
+      "sha256": "b271041f0a93dee41cb106369b6bc869277e33e3df29a74ef489d86230ab62f8"
+    },
+    {
+      "national": 457,
+      "id": 510,
+      "token": "SPECIES_LUMINEON",
+      "source_path": "sound/direct_sound_samples/cries/lumineon.wav",
+      "rate": 13379,
+      "frames": 22992,
+      "sha256": "19f6dc9d5fde0c68bf39735d85096b8374514c1198e471a1e11a6a1d0cef3877"
+    },
+    {
+      "national": 458,
+      "id": 511,
+      "token": "SPECIES_MANTYKE",
+      "source_path": "sound/direct_sound_samples/cries/mantyke.wav",
+      "rate": 13379,
+      "frames": 6308,
+      "sha256": "d1e9dc0710e25e6597fd896049fd2518cece50b3601be39b7352e2f13f9db70a"
+    },
+    {
+      "national": 459,
+      "id": 512,
+      "token": "SPECIES_SNOVER",
+      "source_path": "sound/direct_sound_samples/cries/snover.wav",
+      "rate": 13379,
+      "frames": 7048,
+      "sha256": "ff993eb08b8221d59610cd8ee4980d95466b04715d3ec8aac58b6a4377cb0be8"
+    },
+    {
+      "national": 460,
+      "id": 513,
+      "token": "SPECIES_ABOMASNOW",
+      "source_path": "sound/direct_sound_samples/cries/abomasnow.wav",
+      "rate": 13379,
+      "frames": 20664,
+      "sha256": "efc96c9879ebc094a92bf6fe95ca226db9a108c388135edaa4c3ba00116ebdb7"
+    },
+    {
+      "national": 461,
+      "id": 514,
+      "token": "SPECIES_WEAVILE",
+      "source_path": "sound/direct_sound_samples/cries/weavile.wav",
+      "rate": 13379,
+      "frames": 8352,
+      "sha256": "82077d8b02cc9b47ace7f43699fa89d0d0e06bf8a0b8a9ff8e06cb5a6a0f0b1c"
+    },
+    {
+      "national": 462,
+      "id": 515,
+      "token": "SPECIES_MAGNEZONE",
+      "source_path": "sound/direct_sound_samples/cries/magnezone.wav",
+      "rate": 13379,
+      "frames": 22372,
+      "sha256": "a811fbd851af4861f735f79afc254a9bbdc03e7db778da276f6fbf1dfb50ca0e"
+    },
+    {
+      "national": 463,
+      "id": 516,
+      "token": "SPECIES_LICKILICKY",
+      "source_path": "sound/direct_sound_samples/cries/lickilicky.wav",
+      "rate": 13379,
+      "frames": 18328,
+      "sha256": "8ab16792e287894c01f669cb17cf33bf6f478b9feaa33cb8473dce53c071b652"
+    },
+    {
+      "national": 464,
+      "id": 517,
+      "token": "SPECIES_RHYPERIOR",
+      "source_path": "sound/direct_sound_samples/cries/rhyperior.wav",
+      "rate": 13379,
+      "frames": 14508,
+      "sha256": "04fcc8ce91255179869c11b31b2e2ca33fed59b5b6fcfdaa0746fada5a549bc2"
+    },
+    {
+      "national": 465,
+      "id": 518,
+      "token": "SPECIES_TANGROWTH",
+      "source_path": "sound/direct_sound_samples/cries/tangrowth.wav",
+      "rate": 13379,
+      "frames": 16864,
+      "sha256": "ab1e50f4aa56bb2089eff3bee616d05bdd0d2099b36c2fb755190fe58413ce88"
+    },
+    {
+      "national": 466,
+      "id": 519,
+      "token": "SPECIES_ELECTIVIRE",
+      "source_path": "sound/direct_sound_samples/cries/electivire.wav",
+      "rate": 13379,
+      "frames": 23192,
+      "sha256": "6fba90861fc2a412af1df9b5eee0998c75fe2120d0ddcc233c6054b5651e11a7"
+    },
+    {
+      "national": 467,
+      "id": 520,
+      "token": "SPECIES_MAGMORTAR",
+      "source_path": "sound/direct_sound_samples/cries/magmortar.wav",
+      "rate": 13379,
+      "frames": 17216,
+      "sha256": "eec4323ad1aa40c2c317f7d5f44884d5b6f603f12cc320386ee5d79f127ca753"
+    },
+    {
+      "national": 468,
+      "id": 521,
+      "token": "SPECIES_TOGEKISS",
+      "source_path": "sound/direct_sound_samples/cries/togekiss.wav",
+      "rate": 13379,
+      "frames": 22652,
+      "sha256": "16097c706d45c486243885813ae0e4bf6dce77f34be47b0a61a2087ae0450930"
+    },
+    {
+      "national": 469,
+      "id": 522,
+      "token": "SPECIES_YANMEGA",
+      "source_path": "sound/direct_sound_samples/cries/yanmega.wav",
+      "rate": 13379,
+      "frames": 22728,
+      "sha256": "2d343c7b96352ee6f75b95768a0abb533a1fc1cc8ca96f6a8b2dd81a5d4de048"
+    },
+    {
+      "national": 470,
+      "id": 523,
+      "token": "SPECIES_LEAFEON",
+      "source_path": "sound/direct_sound_samples/cries/leafeon.wav",
+      "rate": 13379,
+      "frames": 13304,
+      "sha256": "693b3e41470e41052dd9e0c0993f6a96c582883bdfb8a233613452f14f16faa0"
+    },
+    {
+      "national": 471,
+      "id": 524,
+      "token": "SPECIES_GLACEON",
+      "source_path": "sound/direct_sound_samples/cries/glaceon.wav",
+      "rate": 13379,
+      "frames": 22676,
+      "sha256": "466b4b085e2095a17b7ca088fcccaf21eb723163d4d41d5393ae820a85e03c97"
+    },
+    {
+      "national": 472,
+      "id": 525,
+      "token": "SPECIES_GLISCOR",
+      "source_path": "sound/direct_sound_samples/cries/gliscor.wav",
+      "rate": 13379,
+      "frames": 15016,
+      "sha256": "41f9d2e0f94d63f79cdb9350eccaa96a11e7deb290d221e1ed4e8b30c8286f9e"
+    },
+    {
+      "national": 473,
+      "id": 526,
+      "token": "SPECIES_MAMOSWINE",
+      "source_path": "sound/direct_sound_samples/cries/mamoswine.wav",
+      "rate": 13379,
+      "frames": 22012,
+      "sha256": "b177583b6288d2ecad9ee25b3cf07c8a8f5560eedd330d48ca483f1e88a29888"
+    },
+    {
+      "national": 474,
+      "id": 527,
+      "token": "SPECIES_PORYGON_Z",
+      "source_path": "sound/direct_sound_samples/cries/porygon_z.wav",
+      "rate": 13379,
+      "frames": 19148,
+      "sha256": "41ccf352e681084e277c7c171cef70a42ccb215f5499554ff119ad7aab1d5901"
+    },
+    {
+      "national": 475,
+      "id": 528,
+      "token": "SPECIES_GALLADE",
+      "source_path": "sound/direct_sound_samples/cries/gallade.wav",
+      "rate": 13379,
+      "frames": 19668,
+      "sha256": "86cf59049781010ea3f90d817a2cf34ada432fbd0a1cfcedd36a504e6a5497fb"
+    },
+    {
+      "national": 476,
+      "id": 529,
+      "token": "SPECIES_PROBOPASS",
+      "source_path": "sound/direct_sound_samples/cries/probopass.wav",
+      "rate": 13379,
+      "frames": 22788,
+      "sha256": "97106ab9d8043eeabc766289c03e22baee4da09c3a86aa9a2de25ab896a4816f"
+    },
+    {
+      "national": 477,
+      "id": 530,
+      "token": "SPECIES_DUSKNOIR",
+      "source_path": "sound/direct_sound_samples/cries/dusknoir.wav",
+      "rate": 13379,
+      "frames": 22716,
+      "sha256": "6477130e7417cbe6ca3b93dbb1b145dc41d0b976e2018e857ded0ba5526d93f4"
+    },
+    {
+      "national": 478,
+      "id": 531,
+      "token": "SPECIES_FROSLASS",
+      "source_path": "sound/direct_sound_samples/cries/froslass.wav",
+      "rate": 13379,
+      "frames": 23380,
+      "sha256": "774383961df49af3ccc9e6282bb3e7dcc4394fb674dc355b32e72694ec256290"
+    },
+    {
+      "national": 479,
+      "id": 532,
+      "token": "SPECIES_ROTOM",
+      "source_path": "sound/direct_sound_samples/cries/rotom.wav",
+      "rate": 13379,
+      "frames": 14288,
+      "sha256": "72ca9b39a3c5a6ed024fdeb9a26b485bad70669336d0cff7c4d5d27c9b1d7f52"
+    },
+    {
+      "national": 480,
+      "id": 533,
+      "token": "SPECIES_UXIE",
+      "source_path": "sound/direct_sound_samples/cries/uxie.wav",
+      "rate": 13379,
+      "frames": 22304,
+      "sha256": "9528b1b1b09d8b0e12abcbae22d25d35d5330701db077f1d2f0c8ad858865668"
+    },
+    {
+      "national": 481,
+      "id": 534,
+      "token": "SPECIES_MESPRIT",
+      "source_path": "sound/direct_sound_samples/cries/mesprit.wav",
+      "rate": 13379,
+      "frames": 18464,
+      "sha256": "cc53254650a7bf52e6858f2605d8803783582cfafb9ecec49ac5b345b696e54f"
+    },
+    {
+      "national": 482,
+      "id": 535,
+      "token": "SPECIES_AZELF",
+      "source_path": "sound/direct_sound_samples/cries/azelf.wav",
+      "rate": 13379,
+      "frames": 13892,
+      "sha256": "5e9962ee08898f754d1883120b2660df58aeec0ce3a835fc5f0ac7262bc9f1ac"
+    },
+    {
+      "national": 483,
+      "id": 536,
+      "token": "SPECIES_DIALGA",
+      "source_path": "sound/direct_sound_samples/cries/dialga.wav",
+      "rate": 13379,
+      "frames": 21584,
+      "sha256": "c2b9bb650fdb08063ec44e46ed2e67453c721445e5078cfb3f9aa1e2e2d79110"
+    },
+    {
+      "national": 484,
+      "id": 537,
+      "token": "SPECIES_PALKIA",
+      "source_path": "sound/direct_sound_samples/cries/palkia.wav",
+      "rate": 13379,
+      "frames": 22436,
+      "sha256": "32d6b0553bbc691e1815485108469ea7e2e8270f5ebcf5c38474066fa74aef72"
+    },
+    {
+      "national": 485,
+      "id": 538,
+      "token": "SPECIES_HEATRAN",
+      "source_path": "sound/direct_sound_samples/cries/heatran.wav",
+      "rate": 13379,
+      "frames": 23304,
+      "sha256": "6c7dfcd46f2862eb5358895a3bfb54a917f08f8e26977d0d4111fae0a1c4d22c"
+    },
+    {
+      "national": 486,
+      "id": 539,
+      "token": "SPECIES_REGIGIGAS",
+      "source_path": "sound/direct_sound_samples/cries/regigigas.wav",
+      "rate": 13379,
+      "frames": 23272,
+      "sha256": "9f08ae8e4123ec5ac991b1ff18664daf2bfa522af50cdbb1caffcda4eada0da1"
+    },
+    {
+      "national": 487,
+      "id": 540,
+      "token": "SPECIES_GIRATINA",
+      "source_path": "sound/direct_sound_samples/cries/giratina.wav",
+      "rate": 13379,
+      "frames": 20980,
+      "sha256": "08203e052fe142a32eeac3f94876aaab1e202dfe48528597608e9d24aba593cc"
+    },
+    {
+      "national": 488,
+      "id": 541,
+      "token": "SPECIES_CRESSELIA",
+      "source_path": "sound/direct_sound_samples/cries/cresselia.wav",
+      "rate": 13379,
+      "frames": 22624,
+      "sha256": "12f5782d6594d3794e6c7699dfcd33f5edb6f85e860924cd6c86b3d668538f3b"
+    },
+    {
+      "national": 489,
+      "id": 542,
+      "token": "SPECIES_PHIONE",
+      "source_path": "sound/direct_sound_samples/cries/phione.wav",
+      "rate": 13379,
+      "frames": 14140,
+      "sha256": "454d19dbadc0e47b3aafdfb7747ba5fe424397898d9d051d0aaf916805444718"
+    },
+    {
+      "national": 490,
+      "id": 543,
+      "token": "SPECIES_MANAPHY",
+      "source_path": "sound/direct_sound_samples/cries/manaphy.wav",
+      "rate": 13379,
+      "frames": 18960,
+      "sha256": "ca5295df4f13a9d9000e5c53f81f329c7484cc520509ca62b93df486dfdd9b7f"
+    },
+    {
+      "national": 491,
+      "id": 544,
+      "token": "SPECIES_DARKRAI",
+      "source_path": "sound/direct_sound_samples/cries/darkrai.wav",
+      "rate": 13379,
+      "frames": 17348,
+      "sha256": "8809a76b8304b3c6d6377a346d52d87a217aa4dad6a0c6ed743a43a7508b64fe"
+    },
+    {
+      "national": 492,
+      "id": 545,
+      "token": "SPECIES_SHAYMIN",
+      "source_path": "sound/direct_sound_samples/cries/shaymin_land.wav",
+      "rate": 13379,
+      "frames": 23120,
+      "sha256": "ddc3bd1f804c3f5b79ca1519a963b19d5ffabc3db53f9defec703443185f4395"
+    },
+    {
+      "national": 493,
+      "id": 546,
+      "token": "SPECIES_ARCEUS",
+      "source_path": "sound/direct_sound_samples/cries/arceus.wav",
+      "rate": 13379,
+      "frames": 21336,
+      "sha256": "7325cace0730653fbfcc4b59b11cc12b274f19534c73e45d308641d6264c036a"
+    },
+    {
+      "national": 494,
+      "id": 547,
+      "token": "SPECIES_VICTINI",
+      "source_path": "sound/direct_sound_samples/cries/victini.wav",
+      "rate": 13379,
+      "frames": 14111,
+      "sha256": "03aad1cef5d684d1197857165087498f1f5b859537a833a0970f447394fa21d9"
+    },
+    {
+      "national": 495,
+      "id": 548,
+      "token": "SPECIES_SNIVY",
+      "source_path": "sound/direct_sound_samples/cries/snivy.wav",
+      "rate": 13379,
+      "frames": 9643,
+      "sha256": "d2d0a851df2e2e791f0ae66f22db359626b2122d80a708c32c15154d4167d6d0"
+    },
+    {
+      "national": 496,
+      "id": 549,
+      "token": "SPECIES_SERVINE",
+      "source_path": "sound/direct_sound_samples/cries/servine.wav",
+      "rate": 13379,
+      "frames": 13948,
+      "sha256": "2ba3c891dad535bd2503390d65b9ec3db56cf0737744f3c1543797ae61f43ac0"
+    },
+    {
+      "national": 497,
+      "id": 550,
+      "token": "SPECIES_SERPERIOR",
+      "source_path": "sound/direct_sound_samples/cries/serperior.wav",
+      "rate": 13379,
+      "frames": 15991,
+      "sha256": "463d6cdc2f9068f1ef04e273b2ea7ee182930917871dd611615e10cda84462c0"
+    },
+    {
+      "national": 498,
+      "id": 551,
+      "token": "SPECIES_TEPIG",
+      "source_path": "sound/direct_sound_samples/cries/tepig.wav",
+      "rate": 13379,
+      "frames": 5608,
+      "sha256": "5d9920e40108fad92b0ff7a1e9d0c76e8130fea2923b3f6eaa788dd279b6d7ba"
+    },
+    {
+      "national": 499,
+      "id": 552,
+      "token": "SPECIES_PIGNITE",
+      "source_path": "sound/direct_sound_samples/cries/pignite.wav",
+      "rate": 13379,
+      "frames": 17399,
+      "sha256": "71deb8ed3785118cfd085eb53a8daa30a747f8145caa284aeecf909243eea0d1"
+    },
+    {
+      "national": 500,
+      "id": 553,
+      "token": "SPECIES_EMBOAR",
+      "source_path": "sound/direct_sound_samples/cries/emboar.wav",
+      "rate": 13379,
+      "frames": 14376,
+      "sha256": "2eb92048551d508e0fd6e19f989a73c5695d75e4b05d1a207840ac43c0547b2f"
+    },
+    {
+      "national": 501,
+      "id": 554,
+      "token": "SPECIES_OSHAWOTT",
+      "source_path": "sound/direct_sound_samples/cries/oshawott.wav",
+      "rate": 13379,
+      "frames": 4415,
+      "sha256": "03e3e62588d5c04672e88024f646934531651f1f33a4e5d2842cceefc17bbb73"
+    },
+    {
+      "national": 502,
+      "id": 555,
+      "token": "SPECIES_DEWOTT",
+      "source_path": "sound/direct_sound_samples/cries/dewott.wav",
+      "rate": 13379,
+      "frames": 7663,
+      "sha256": "fc828dab9d49187fc4d333c1c99a9f353b6c0621b19c2003dc821e2e58ff1313"
+    },
+    {
+      "national": 503,
+      "id": 556,
+      "token": "SPECIES_SAMUROTT",
+      "source_path": "sound/direct_sound_samples/cries/samurott.wav",
+      "rate": 10512,
+      "frames": 22060,
+      "sha256": "1e555ef5e20e7d589a50857def99ba2a6bbbf62362f4a49dbbdf7d7580c523a3"
+    },
+    {
+      "national": 504,
+      "id": 557,
+      "token": "SPECIES_PATRAT",
+      "source_path": "sound/direct_sound_samples/cries/patrat.wav",
+      "rate": 13379,
+      "frames": 6960,
+      "sha256": "df00e88b74b09f19fb9a1dfd02f5fcddab11608ab66402f4d0a3f19811190642"
+    },
+    {
+      "national": 505,
+      "id": 558,
+      "token": "SPECIES_WATCHOG",
+      "source_path": "sound/direct_sound_samples/cries/watchog.wav",
+      "rate": 13379,
+      "frames": 5666,
+      "sha256": "3adcc065f97059ea6637f3c2ee4d8c7d7dd910d209d841d766a07f4494121752"
+    },
+    {
+      "national": 506,
+      "id": 559,
+      "token": "SPECIES_LILLIPUP",
+      "source_path": "sound/direct_sound_samples/cries/lillipup.wav",
+      "rate": 13379,
+      "frames": 11596,
+      "sha256": "9766d180d1eb71de6d32f6ceaf1759c970a7f3074ee8982986a5a2a5bfcecffa"
+    },
+    {
+      "national": 507,
+      "id": 560,
+      "token": "SPECIES_HERDIER",
+      "source_path": "sound/direct_sound_samples/cries/herdier.wav",
+      "rate": 13379,
+      "frames": 9764,
+      "sha256": "b09ca78bee898bdbe2280d55e0e5bb74089f8f4aa67f845489b57a8ced481785"
+    },
+    {
+      "national": 508,
+      "id": 561,
+      "token": "SPECIES_STOUTLAND",
+      "source_path": "sound/direct_sound_samples/cries/stoutland.wav",
+      "rate": 13379,
+      "frames": 14147,
+      "sha256": "5ecd4b474976490bf7949b3fd0a1fb7cb701472ca75436d35ec2746e0027214c"
+    },
+    {
+      "national": 509,
+      "id": 562,
+      "token": "SPECIES_PURRLOIN",
+      "source_path": "sound/direct_sound_samples/cries/purrloin.wav",
+      "rate": 13379,
+      "frames": 7330,
+      "sha256": "8fa0f14f29c4522d0632440b55e3801c6f4d048ab753a19d9df079f69ca8c717"
+    },
+    {
+      "national": 510,
+      "id": 563,
+      "token": "SPECIES_LIEPARD",
+      "source_path": "sound/direct_sound_samples/cries/liepard.wav",
+      "rate": 13379,
+      "frames": 9247,
+      "sha256": "a4cc1a077d9116ea8dd8c15f9d9e030486980e0997be54809c0e38f6b781bff3"
+    },
+    {
+      "national": 511,
+      "id": 564,
+      "token": "SPECIES_PANSAGE",
+      "source_path": "sound/direct_sound_samples/cries/pansage.wav",
+      "rate": 13379,
+      "frames": 3759,
+      "sha256": "2fe79b4116afbb8cec57df2153ce157fb862b4c166e8fcca373591ca21ad2db3"
+    },
+    {
+      "national": 512,
+      "id": 565,
+      "token": "SPECIES_SIMISAGE",
+      "source_path": "sound/direct_sound_samples/cries/simisage.wav",
+      "rate": 13379,
+      "frames": 8055,
+      "sha256": "dde619ba20166dd50147b63394cbbb1680b4ffe63611ecf44523af9f8bd9a1a7"
+    },
+    {
+      "national": 513,
+      "id": 566,
+      "token": "SPECIES_PANSEAR",
+      "source_path": "sound/direct_sound_samples/cries/pansear.wav",
+      "rate": 13379,
+      "frames": 3810,
+      "sha256": "415009cb75f10b6e9537b533caab059f5248ec8ed0ef6b18ea84b65358f06631"
+    },
+    {
+      "national": 514,
+      "id": 567,
+      "token": "SPECIES_SIMISEAR",
+      "source_path": "sound/direct_sound_samples/cries/simisear.wav",
+      "rate": 13379,
+      "frames": 7861,
+      "sha256": "929d672465627a8f15546ca7b995ab734fd20a727ee7189e1407b67480b80192"
+    },
+    {
+      "national": 515,
+      "id": 568,
+      "token": "SPECIES_PANPOUR",
+      "source_path": "sound/direct_sound_samples/cries/panpour.wav",
+      "rate": 13379,
+      "frames": 3905,
+      "sha256": "22fdff268ca3768e4868dc9cd21695f14137edcb68184f604dac0da636841603"
+    },
+    {
+      "national": 516,
+      "id": 569,
+      "token": "SPECIES_SIMIPOUR",
+      "source_path": "sound/direct_sound_samples/cries/simipour.wav",
+      "rate": 13379,
+      "frames": 7922,
+      "sha256": "04f792a2824f2834ab498fa7792d24ce40d6791af19144f42fe6c4625c78ca3c"
+    },
+    {
+      "national": 517,
+      "id": 570,
+      "token": "SPECIES_MUNNA",
+      "source_path": "sound/direct_sound_samples/cries/munna.wav",
+      "rate": 13379,
+      "frames": 14158,
+      "sha256": "d3659142a49f2bdf1e173086e977ded067fb3be7362bedf01d63be898675ec2b"
+    },
+    {
+      "national": 518,
+      "id": 571,
+      "token": "SPECIES_MUSHARNA",
+      "source_path": "sound/direct_sound_samples/cries/musharna.wav",
+      "rate": 13000,
+      "frames": 23068,
+      "sha256": "92effa6662e6d6077899e82969d9557711ff305f87dde5a82de4c2f7ce7d5dad"
+    },
+    {
+      "national": 519,
+      "id": 572,
+      "token": "SPECIES_PIDOVE",
+      "source_path": "sound/direct_sound_samples/cries/pidove.wav",
+      "rate": 13379,
+      "frames": 6833,
+      "sha256": "d5a4d7bfd92343566cab02b2478242cbac71b1ae4868d2006caa8b4d8dd8c08c"
+    },
+    {
+      "national": 520,
+      "id": 573,
+      "token": "SPECIES_TRANQUILL",
+      "source_path": "sound/direct_sound_samples/cries/tranquill.wav",
+      "rate": 13379,
+      "frames": 6950,
+      "sha256": "a1f9e0eedc1a4c8334941b2c766ade54eb32dc44ca38494e98f88c02a9b42761"
+    },
+    {
+      "national": 521,
+      "id": 574,
+      "token": "SPECIES_UNFEZANT",
+      "source_path": "sound/direct_sound_samples/cries/unfezant.wav",
+      "rate": 13379,
+      "frames": 10409,
+      "sha256": "d6a54077bc59db541babe0d86d8cea3dd18c8712b06ef1a90b9d77cd30362ad1"
+    },
+    {
+      "national": 522,
+      "id": 575,
+      "token": "SPECIES_BLITZLE",
+      "source_path": "sound/direct_sound_samples/cries/blitzle.wav",
+      "rate": 13379,
+      "frames": 8653,
+      "sha256": "aba5d2de912c2e23622d72498ae74818f1351629e009f7c06bd637d6ef3ccf99"
+    },
+    {
+      "national": 523,
+      "id": 576,
+      "token": "SPECIES_ZEBSTRIKA",
+      "source_path": "sound/direct_sound_samples/cries/zebstrika.wav",
+      "rate": 13379,
+      "frames": 18891,
+      "sha256": "8915275b4d0a6cbabb87534afcede67a9ab94f58132bc86e61199fcb2e383676"
+    },
+    {
+      "national": 524,
+      "id": 577,
+      "token": "SPECIES_ROGGENROLA",
+      "source_path": "sound/direct_sound_samples/cries/roggenrola.wav",
+      "rate": 13379,
+      "frames": 11305,
+      "sha256": "581af5cf2b2eca284d5f396c6c5eb8163ccd3a865cd6bd11ff34a20f6b878ff3"
+    },
+    {
+      "national": 525,
+      "id": 578,
+      "token": "SPECIES_BOLDORE",
+      "source_path": "sound/direct_sound_samples/cries/boldore.wav",
+      "rate": 13379,
+      "frames": 17888,
+      "sha256": "9f12bb7e4123b632b66e76e1624de8859ac9ed1ff0757a01273a11f3ad7835a0"
+    },
+    {
+      "national": 526,
+      "id": 579,
+      "token": "SPECIES_GIGALITH",
+      "source_path": "sound/direct_sound_samples/cries/gigalith.wav",
+      "rate": 13379,
+      "frames": 19236,
+      "sha256": "938b93997361ab5169a13cf00983b2804ba873dcd1b3d597687669b2a296445b"
+    },
+    {
+      "national": 527,
+      "id": 580,
+      "token": "SPECIES_WOOBAT",
+      "source_path": "sound/direct_sound_samples/cries/woobat.wav",
+      "rate": 13379,
+      "frames": 11181,
+      "sha256": "8eff52b2c0dc6035ee47f65a2712bfa016e5428b4587a5ea1ac6702481ace014"
+    },
+    {
+      "national": 528,
+      "id": 581,
+      "token": "SPECIES_SWOOBAT",
+      "source_path": "sound/direct_sound_samples/cries/swoobat.wav",
+      "rate": 13379,
+      "frames": 17995,
+      "sha256": "ce9faf50d036290f65ef9e54c09bbbf0ce04ffb68c5daf544d11e2c85be67228"
+    },
+    {
+      "national": 529,
+      "id": 582,
+      "token": "SPECIES_DRILBUR",
+      "source_path": "sound/direct_sound_samples/cries/drilbur.wav",
+      "rate": 13379,
+      "frames": 13982,
+      "sha256": "75dbe57398331e95c8f742f5e94d019422f942468d1d90245b4685880d1c6f55"
+    },
+    {
+      "national": 530,
+      "id": 583,
+      "token": "SPECIES_EXCADRILL",
+      "source_path": "sound/direct_sound_samples/cries/excadrill.wav",
+      "rate": 13379,
+      "frames": 19430,
+      "sha256": "750bc86ff55bb05c2377d2cd676074665fc8beb6522f3b04d65813725602c06c"
+    },
+    {
+      "national": 531,
+      "id": 584,
+      "token": "SPECIES_AUDINO",
+      "source_path": "sound/direct_sound_samples/cries/audino.wav",
+      "rate": 13379,
+      "frames": 9339,
+      "sha256": "980648153b9471239c6c6f668f1bb247ff07b34b1e18bb962e1d60436120da7f"
+    },
+    {
+      "national": 532,
+      "id": 585,
+      "token": "SPECIES_TIMBURR",
+      "source_path": "sound/direct_sound_samples/cries/timburr.wav",
+      "rate": 13379,
+      "frames": 9725,
+      "sha256": "8ead5922f55c8ca50e7d93112a5945dbe72e78b5a7e952f4b194c27489ad3e73"
+    },
+    {
+      "national": 533,
+      "id": 586,
+      "token": "SPECIES_GURDURR",
+      "source_path": "sound/direct_sound_samples/cries/gurdurr.wav",
+      "rate": 13379,
+      "frames": 18808,
+      "sha256": "6cc8f51e5eee59c2621b79b9ae94fc7dc7f8d744af56e313761c3f9d42399a5b"
+    },
+    {
+      "national": 534,
+      "id": 587,
+      "token": "SPECIES_CONKELDURR",
+      "source_path": "sound/direct_sound_samples/cries/conkeldurr.wav",
+      "rate": 13379,
+      "frames": 18714,
+      "sha256": "2632011cedeb170dc9a3995a98eb59b7106265f42827c46460fd552222e91158"
+    },
+    {
+      "national": 535,
+      "id": 588,
+      "token": "SPECIES_TYMPOLE",
+      "source_path": "sound/direct_sound_samples/cries/tympole.wav",
+      "rate": 13379,
+      "frames": 10669,
+      "sha256": "8bf8efcee7fef6a18d23782160da0ce1f62fdd24d07e6ba405c9731651225a3c"
+    },
+    {
+      "national": 536,
+      "id": 589,
+      "token": "SPECIES_PALPITOAD",
+      "source_path": "sound/direct_sound_samples/cries/palpitoad.wav",
+      "rate": 13379,
+      "frames": 13395,
+      "sha256": "773887738cbf8b3a893c3fb9db4f767583c6812c62099ddcac13ac963e42d9dd"
+    },
+    {
+      "national": 537,
+      "id": 590,
+      "token": "SPECIES_SEISMITOAD",
+      "source_path": "sound/direct_sound_samples/cries/seismitoad.wav",
+      "rate": 13379,
+      "frames": 13380,
+      "sha256": "de0ccc8f25f9309ec69b32179afd353ce69499eb5284ecb7647faf6dcc49b9b6"
+    },
+    {
+      "national": 538,
+      "id": 591,
+      "token": "SPECIES_THROH",
+      "source_path": "sound/direct_sound_samples/cries/throh.wav",
+      "rate": 13379,
+      "frames": 11856,
+      "sha256": "5689760b6d3fd6c3694da341a307bbbacb34e4260ab6e61b2a5ac2dde7902438"
+    },
+    {
+      "national": 539,
+      "id": 592,
+      "token": "SPECIES_SAWK",
+      "source_path": "sound/direct_sound_samples/cries/sawk.wav",
+      "rate": 13379,
+      "frames": 12317,
+      "sha256": "5a8c7ba237dab2eb05ff57b8cab817b437f5681708acb99ef41a3f29babb541e"
+    },
+    {
+      "national": 540,
+      "id": 593,
+      "token": "SPECIES_SEWADDLE",
+      "source_path": "sound/direct_sound_samples/cries/sewaddle.wav",
+      "rate": 13379,
+      "frames": 7643,
+      "sha256": "c2a46dbd01e734badefa873c2a25b72a3031395ad6229ee71fa0a7d15bd691fc"
+    },
+    {
+      "national": 541,
+      "id": 594,
+      "token": "SPECIES_SWADLOON",
+      "source_path": "sound/direct_sound_samples/cries/swadloon.wav",
+      "rate": 13379,
+      "frames": 9887,
+      "sha256": "f2fcdc93c46637918d0cbdb2ed8f01cc2b9626b1123b6fabd8f5e672d8dde1b2"
+    },
+    {
+      "national": 542,
+      "id": 595,
+      "token": "SPECIES_LEAVANNY",
+      "source_path": "sound/direct_sound_samples/cries/leavanny.wav",
+      "rate": 13379,
+      "frames": 13670,
+      "sha256": "5030066cf7f65ac96e0b62ef284a4112eacc731dc5a2285a00adc4f4e8e5b8b3"
+    },
+    {
+      "national": 543,
+      "id": 596,
+      "token": "SPECIES_VENIPEDE",
+      "source_path": "sound/direct_sound_samples/cries/venipede.wav",
+      "rate": 13379,
+      "frames": 7333,
+      "sha256": "842516755e13d04654a1f4a1d6bf34967d7bd725f09132365b0efe0eab5e4748"
+    },
+    {
+      "national": 544,
+      "id": 597,
+      "token": "SPECIES_WHIRLIPEDE",
+      "source_path": "sound/direct_sound_samples/cries/whirlipede.wav",
+      "rate": 13379,
+      "frames": 15600,
+      "sha256": "27a0f4de1e3501bb621089ae012c9fdaa0dfdc74fd849a0d77acbff5e5750817"
+    },
+    {
+      "national": 545,
+      "id": 598,
+      "token": "SPECIES_SCOLIPEDE",
+      "source_path": "sound/direct_sound_samples/cries/scolipede.wav",
+      "rate": 13000,
+      "frames": 23088,
+      "sha256": "61795a3113b82c4f50cd3e0848350de6f90287818711c690f202249be0a9ce96"
+    },
+    {
+      "national": 546,
+      "id": 599,
+      "token": "SPECIES_COTTONEE",
+      "source_path": "sound/direct_sound_samples/cries/cottonee.wav",
+      "rate": 13379,
+      "frames": 9218,
+      "sha256": "1bc503b206d7a8cf2589d2d73161e7707d46e9da4c29284bedeebbac282f4360"
+    },
+    {
+      "national": 547,
+      "id": 600,
+      "token": "SPECIES_WHIMSICOTT",
+      "source_path": "sound/direct_sound_samples/cries/whimsicott.wav",
+      "rate": 13000,
+      "frames": 22580,
+      "sha256": "2b0fedf23246b7a3b4385661ad0641f77659fc39522b2f24b6ca0c59a8f3e852"
+    },
+    {
+      "national": 548,
+      "id": 601,
+      "token": "SPECIES_PETILIL",
+      "source_path": "sound/direct_sound_samples/cries/petilil.wav",
+      "rate": 13379,
+      "frames": 4666,
+      "sha256": "0241e6e629f9a8fe30a53042c25b6933340b5968e1b7b649264301beed21c5a9"
+    },
+    {
+      "national": 549,
+      "id": 602,
+      "token": "SPECIES_LILLIGANT",
+      "source_path": "sound/direct_sound_samples/cries/lilligant.wav",
+      "rate": 13379,
+      "frames": 13436,
+      "sha256": "6d579080a13db80d0c0b766b6c690aadd10297ec0bd1a5b2ae198e79d15d94f2"
+    },
+    {
+      "national": 550,
+      "id": 603,
+      "token": "SPECIES_BASCULIN",
+      "source_path": "sound/direct_sound_samples/cries/basculin.wav",
+      "rate": 13379,
+      "frames": 6017,
+      "sha256": "070171375d4b03fbeba1514f27d0110ff8611c320dbd29e04b6e5f1e50918994"
+    },
+    {
+      "national": 551,
+      "id": 604,
+      "token": "SPECIES_SANDILE",
+      "source_path": "sound/direct_sound_samples/cries/sandile.wav",
+      "rate": 13379,
+      "frames": 6532,
+      "sha256": "39504238ba6e3beca56eea8f4f095a7ab18130c130e7d2c725749de227d1fae6"
+    },
+    {
+      "national": 552,
+      "id": 605,
+      "token": "SPECIES_KROKOROK",
+      "source_path": "sound/direct_sound_samples/cries/krokorok.wav",
+      "rate": 13379,
+      "frames": 15302,
+      "sha256": "b312f586ae87c5f4e1bb1f89cf1d5348c3ac0195ae701c4b3d4d9a70661f28d0"
+    },
+    {
+      "national": 553,
+      "id": 606,
+      "token": "SPECIES_KROOKODILE",
+      "source_path": "sound/direct_sound_samples/cries/krookodile.wav",
+      "rate": 13379,
+      "frames": 18620,
+      "sha256": "be01bb81f0168c2863c97154feb649c0f6a40d342aacdb89621b900e01a55b03"
+    },
+    {
+      "national": 554,
+      "id": 607,
+      "token": "SPECIES_DARUMAKA",
+      "source_path": "sound/direct_sound_samples/cries/darumaka.wav",
+      "rate": 13379,
+      "frames": 18379,
+      "sha256": "54e32d1b958b14f1ce4c84ae5c8b1663e4b3665ac59f18e76dea35c8e2d9dc9b"
+    },
+    {
+      "national": 555,
+      "id": 608,
+      "token": "SPECIES_DARMANITAN",
+      "source_path": "sound/direct_sound_samples/cries/darmanitan.wav",
+      "rate": 13379,
+      "frames": 17781,
+      "sha256": "ccbaa48c15c088c3c0ed7359e60ed46c048bd31eee037a783e12c1f3021aa822"
+    },
+    {
+      "national": 556,
+      "id": 609,
+      "token": "SPECIES_MARACTUS",
+      "source_path": "sound/direct_sound_samples/cries/maractus.wav",
+      "rate": 13379,
+      "frames": 12680,
+      "sha256": "9085cbeb0989507a843bba18b018d0323cd9c6db6295c32f22cdd92e04e017d6"
+    },
+    {
+      "national": 557,
+      "id": 610,
+      "token": "SPECIES_DWEBBLE",
+      "source_path": "sound/direct_sound_samples/cries/dwebble.wav",
+      "rate": 13379,
+      "frames": 11956,
+      "sha256": "191091feac94e3b0cc2ba4822cac8ae039bdbf85890390b07ab6f728df7c9b37"
+    },
+    {
+      "national": 558,
+      "id": 611,
+      "token": "SPECIES_CRUSTLE",
+      "source_path": "sound/direct_sound_samples/cries/crustle.wav",
+      "rate": 13379,
+      "frames": 16834,
+      "sha256": "5d096616c8b86c58584c201dcda65d945a694db63fc4b66365cbb8a735bbd0f8"
+    },
+    {
+      "national": 559,
+      "id": 612,
+      "token": "SPECIES_SCRAGGY",
+      "source_path": "sound/direct_sound_samples/cries/scraggy.wav",
+      "rate": 13379,
+      "frames": 13623,
+      "sha256": "1eece29c4fd8c8317e54f24d7719ce67e40cb447f4f4c79b501ac48c553d6402"
+    },
+    {
+      "national": 560,
+      "id": 613,
+      "token": "SPECIES_SCRAFTY",
+      "source_path": "sound/direct_sound_samples/cries/scrafty.wav",
+      "rate": 13379,
+      "frames": 13249,
+      "sha256": "78d4298c653da5fdf3406e9dad8ddc0a4324624c2e06f799b58ae1f883b7578e"
+    },
+    {
+      "national": 561,
+      "id": 614,
+      "token": "SPECIES_SIGILYPH",
+      "source_path": "sound/direct_sound_samples/cries/sigilyph.wav",
+      "rate": 13379,
+      "frames": 19246,
+      "sha256": "11383fc163b88b56bd682ecb2c084dc55d4b40b38cb2b2375f2ddbc03fc8f703"
+    },
+    {
+      "national": 562,
+      "id": 615,
+      "token": "SPECIES_YAMASK",
+      "source_path": "sound/direct_sound_samples/cries/yamask.wav",
+      "rate": 13379,
+      "frames": 13670,
+      "sha256": "cb38c1b64e8c1925b91123b92d4213085b3fe4aa851c70c0904b3bf9c6b20375"
+    },
+    {
+      "national": 563,
+      "id": 616,
+      "token": "SPECIES_COFAGRIGUS",
+      "source_path": "sound/direct_sound_samples/cries/cofagrigus.wav",
+      "rate": 13379,
+      "frames": 18804,
+      "sha256": "cf0bc89f5e7184a8ca1262b34d6ec6ae60721d961b6bc2483de2e1529a40e06d"
+    },
+    {
+      "national": 564,
+      "id": 617,
+      "token": "SPECIES_TIRTOUGA",
+      "source_path": "sound/direct_sound_samples/cries/tirtouga.wav",
+      "rate": 13379,
+      "frames": 5677,
+      "sha256": "c38f9693344f1b7dba5cb79341047e706aeb675413673ba33849417189f17621"
+    },
+    {
+      "national": 565,
+      "id": 618,
+      "token": "SPECIES_CARRACOSTA",
+      "source_path": "sound/direct_sound_samples/cries/carracosta.wav",
+      "rate": 13379,
+      "frames": 16148,
+      "sha256": "525d75f75e8cc1b5915d01436b2fb5c48bce29be922c98d517664ebe40ec2344"
+    },
+    {
+      "national": 566,
+      "id": 619,
+      "token": "SPECIES_ARCHEN",
+      "source_path": "sound/direct_sound_samples/cries/archen.wav",
+      "rate": 13379,
+      "frames": 9432,
+      "sha256": "829ddcbbf670bd601069f9418c090753582bbd27acffeb9ea0ca4af8cf5fdfed"
+    },
+    {
+      "national": 567,
+      "id": 620,
+      "token": "SPECIES_ARCHEOPS",
+      "source_path": "sound/direct_sound_samples/cries/archeops.wav",
+      "rate": 13379,
+      "frames": 15867,
+      "sha256": "86e985e023da228aed387e1425337431cfdfd1ad3213438e428dca3e7115ed8c"
+    },
+    {
+      "national": 568,
+      "id": 621,
+      "token": "SPECIES_TRUBBISH",
+      "source_path": "sound/direct_sound_samples/cries/trubbish.wav",
+      "rate": 13379,
+      "frames": 14011,
+      "sha256": "7e2f269f6891c042fcff0493319c9c13f6087d2e74774fe417bb6b7668fba573"
+    },
+    {
+      "national": 569,
+      "id": 622,
+      "token": "SPECIES_GARBODOR",
+      "source_path": "sound/direct_sound_samples/cries/garbodor.wav",
+      "rate": 13379,
+      "frames": 19142,
+      "sha256": "a9700c4e017e05c12a9b4fe491e21ce08d69d46c3f360ddf6a02e0c215f44ed3"
+    },
+    {
+      "national": 570,
+      "id": 623,
+      "token": "SPECIES_ZORUA",
+      "source_path": "sound/direct_sound_samples/cries/zorua.wav",
+      "rate": 13379,
+      "frames": 8563,
+      "sha256": "2e785e375752c3d3a34da6f763fd2925fb57137a6e5823df9f5e3b1b6142b80d"
+    },
+    {
+      "national": 571,
+      "id": 624,
+      "token": "SPECIES_ZOROARK",
+      "source_path": "sound/direct_sound_samples/cries/zoroark.wav",
+      "rate": 13379,
+      "frames": 18403,
+      "sha256": "0962471f73a4804cdbbab8b976c0836cd7a851eda2b648168d1298762cad67c5"
+    },
+    {
+      "national": 572,
+      "id": 625,
+      "token": "SPECIES_MINCCINO",
+      "source_path": "sound/direct_sound_samples/cries/minccino.wav",
+      "rate": 13379,
+      "frames": 11650,
+      "sha256": "8bf788c64785f1078f3e579de59006ee11dc5deff024893f578cd562a4ebb652"
+    },
+    {
+      "national": 573,
+      "id": 626,
+      "token": "SPECIES_CINCCINO",
+      "source_path": "sound/direct_sound_samples/cries/cinccino.wav",
+      "rate": 13379,
+      "frames": 18309,
+      "sha256": "6f1898e9336d858c385e9fb4c7a7eb7e1e6e0f0a98a91a5631ecf781a43aeec2"
+    },
+    {
+      "national": 574,
+      "id": 627,
+      "token": "SPECIES_GOTHITA",
+      "source_path": "sound/direct_sound_samples/cries/gothita.wav",
+      "rate": 13379,
+      "frames": 5894,
+      "sha256": "7c577e846e762c024401b39d07748e0c4b6ee37d8f64a2eb1b6e1f3cf8890d54"
+    },
+    {
+      "national": 575,
+      "id": 628,
+      "token": "SPECIES_GOTHORITA",
+      "source_path": "sound/direct_sound_samples/cries/gothorita.wav",
+      "rate": 13379,
+      "frames": 13531,
+      "sha256": "02f3f4cd82c03b80ffa2707e64f6d54a977beb599cd36583d32eac5f1d1d1aad"
+    },
+    {
+      "national": 576,
+      "id": 629,
+      "token": "SPECIES_GOTHITELLE",
+      "source_path": "sound/direct_sound_samples/cries/gothitelle.wav",
+      "rate": 13000,
+      "frames": 23224,
+      "sha256": "bad40fab5e0102377f72f22b3315a9c49fef05f04bad73491075d56f7bba6077"
+    },
+    {
+      "national": 577,
+      "id": 630,
+      "token": "SPECIES_SOLOSIS",
+      "source_path": "sound/direct_sound_samples/cries/solosis.wav",
+      "rate": 13379,
+      "frames": 9339,
+      "sha256": "aaae32d8a3f76134860bb27134f9f7f183a336fe01d5ff0b18abaf4bbb6a0796"
+    },
+    {
+      "national": 578,
+      "id": 631,
+      "token": "SPECIES_DUOSION",
+      "source_path": "sound/direct_sound_samples/cries/duosion.wav",
+      "rate": 13379,
+      "frames": 10723,
+      "sha256": "15d9fbe96b8caa7a7c54cd3d088c4f95125d90405b993585dfc7f8ee01fa966f"
+    },
+    {
+      "national": 579,
+      "id": 632,
+      "token": "SPECIES_REUNICLUS",
+      "source_path": "sound/direct_sound_samples/cries/reuniclus.wav",
+      "rate": 13379,
+      "frames": 12660,
+      "sha256": "b36e567d465c0dabad16ef6ea2dc867d32c5a59a031a7a739c82a54df3979d32"
+    },
+    {
+      "national": 580,
+      "id": 633,
+      "token": "SPECIES_DUCKLETT",
+      "source_path": "sound/direct_sound_samples/cries/ducklett.wav",
+      "rate": 13379,
+      "frames": 3752,
+      "sha256": "23c08af7da0d5472b0f67ef84d919a08af73f0bfc0708a37f0886a4490fe2e40"
+    },
+    {
+      "national": 581,
+      "id": 634,
+      "token": "SPECIES_SWANNA",
+      "source_path": "sound/direct_sound_samples/cries/swanna.wav",
+      "rate": 13379,
+      "frames": 14113,
+      "sha256": "4feaaee9cff3fbe7123459b534a7b454c8c55dcd85372949ec6fff1ef5151a9a"
+    },
+    {
+      "national": 582,
+      "id": 635,
+      "token": "SPECIES_VANILLITE",
+      "source_path": "sound/direct_sound_samples/cries/vanillite.wav",
+      "rate": 13379,
+      "frames": 9286,
+      "sha256": "f993c8a90758a0405b7157d322336446cd3970c5627cd056506290a2a0eee5d5"
+    },
+    {
+      "national": 583,
+      "id": 636,
+      "token": "SPECIES_VANILLISH",
+      "source_path": "sound/direct_sound_samples/cries/vanillish.wav",
+      "rate": 13379,
+      "frames": 12608,
+      "sha256": "e56ba128d3f6417b43a9091f6373e18b780082d5270ab8e136adb391ec588144"
+    },
+    {
+      "national": 584,
+      "id": 637,
+      "token": "SPECIES_VANILLUXE",
+      "source_path": "sound/direct_sound_samples/cries/vanilluxe.wav",
+      "rate": 13379,
+      "frames": 12562,
+      "sha256": "d31f391be7d5f46539e75b52f98f6a0b1b4c5106c7fa972d78b4314e83f42358"
+    },
+    {
+      "national": 585,
+      "id": 638,
+      "token": "SPECIES_DEERLING",
+      "source_path": "sound/direct_sound_samples/cries/deerling.wav",
+      "rate": 13379,
+      "frames": 9693,
+      "sha256": "bc361a2c19e0072515e4d2e254459638de2665980f4552d7872b3b2c357416c5"
+    },
+    {
+      "national": 586,
+      "id": 639,
+      "token": "SPECIES_SAWSBUCK",
+      "source_path": "sound/direct_sound_samples/cries/sawsbuck.wav",
+      "rate": 13379,
+      "frames": 16831,
+      "sha256": "f3a9fb8ac8d2ad66d8894776bad99ba5f83e6802058b0d98a525394af1f336b2"
+    },
+    {
+      "national": 587,
+      "id": 640,
+      "token": "SPECIES_EMOLGA",
+      "source_path": "sound/direct_sound_samples/cries/emolga.wav",
+      "rate": 13379,
+      "frames": 4971,
+      "sha256": "b6334e17faf610a0f29a66da5e9665fb40912dd5bd4d1fa55641600217816b59"
+    },
+    {
+      "national": 588,
+      "id": 641,
+      "token": "SPECIES_KARRABLAST",
+      "source_path": "sound/direct_sound_samples/cries/karrablast.wav",
+      "rate": 13379,
+      "frames": 10977,
+      "sha256": "0e860f4cc03fdf929b312fa00ac7e16d1eb0a4283b3764339568d7b0bf92187c"
+    },
+    {
+      "national": 589,
+      "id": 642,
+      "token": "SPECIES_ESCAVALIER",
+      "source_path": "sound/direct_sound_samples/cries/escavalier.wav",
+      "rate": 13379,
+      "frames": 14111,
+      "sha256": "73e713cee7ea1e96ffb979bf7a4f49bc35c84697d8f559456e837dff9f84d89e"
+    },
+    {
+      "national": 590,
+      "id": 643,
+      "token": "SPECIES_FOONGUS",
+      "source_path": "sound/direct_sound_samples/cries/foongus.wav",
+      "rate": 13379,
+      "frames": 7495,
+      "sha256": "8789397b30902aa0e9e5ea7be07e15cc365b20884c059605f05c42da83b33724"
+    },
+    {
+      "national": 591,
+      "id": 644,
+      "token": "SPECIES_AMOONGUSS",
+      "source_path": "sound/direct_sound_samples/cries/amoonguss.wav",
+      "rate": 13379,
+      "frames": 11524,
+      "sha256": "475c756429988633646d1f16811c9923f75fdea394ee6218ee04e92c81f34061"
+    },
+    {
+      "national": 592,
+      "id": 645,
+      "token": "SPECIES_FRILLISH",
+      "source_path": "sound/direct_sound_samples/cries/frillish.wav",
+      "rate": 13379,
+      "frames": 15192,
+      "sha256": "6d141e93440fe548d639835a2aefa667da4add52d4e18fa2c6a0779b1a1300a6"
+    },
+    {
+      "national": 593,
+      "id": 646,
+      "token": "SPECIES_JELLICENT",
+      "source_path": "sound/direct_sound_samples/cries/jellicent.wav",
+      "rate": 13379,
+      "frames": 13322,
+      "sha256": "a813f573ce21ca2d65ecbabe81e7cfbf9b912cd2d23171448b1a7b23d465923d"
+    },
+    {
+      "national": 594,
+      "id": 647,
+      "token": "SPECIES_ALOMOMOLA",
+      "source_path": "sound/direct_sound_samples/cries/alomomola.wav",
+      "rate": 13379,
+      "frames": 19430,
+      "sha256": "d9060af65b0c2d5d4e57fbf371b92fb3387b1ff4abaf8fd4e7f8f54457f24e07"
+    },
+    {
+      "national": 595,
+      "id": 648,
+      "token": "SPECIES_JOLTIK",
+      "source_path": "sound/direct_sound_samples/cries/joltik.wav",
+      "rate": 13379,
+      "frames": 7024,
+      "sha256": "5deaa20d58fd97ba8869ce37a91b320d60da698acbfcd676859f29171abb2592"
+    },
+    {
+      "national": 596,
+      "id": 649,
+      "token": "SPECIES_GALVANTULA",
+      "source_path": "sound/direct_sound_samples/cries/galvantula.wav",
+      "rate": 13379,
+      "frames": 13232,
+      "sha256": "ee6fb1d418561f2f6b0338d56a9aac36aab70ec0b6727e54696f99755c580c7e"
+    },
+    {
+      "national": 597,
+      "id": 650,
+      "token": "SPECIES_FERROSEED",
+      "source_path": "sound/direct_sound_samples/cries/ferroseed.wav",
+      "rate": 13379,
+      "frames": 8862,
+      "sha256": "8ad3bd2f1864315da998d2adec660e52207761e683e9b9d66d40381d33b50b94"
+    },
+    {
+      "national": 598,
+      "id": 651,
+      "token": "SPECIES_FERROTHORN",
+      "source_path": "sound/direct_sound_samples/cries/ferrothorn.wav",
+      "rate": 13379,
+      "frames": 11613,
+      "sha256": "24487bd9bb94e5526e439117b2c38a161d31bd95de21a35427a90c262eedfa65"
+    },
+    {
+      "national": 599,
+      "id": 652,
+      "token": "SPECIES_KLINK",
+      "source_path": "sound/direct_sound_samples/cries/klink.wav",
+      "rate": 13379,
+      "frames": 10362,
+      "sha256": "e82c6392b6af8e2a74b11f3f1113fa7d186525c9d879f59f7e03e15c04eb2ef4"
+    },
+    {
+      "national": 600,
+      "id": 653,
+      "token": "SPECIES_KLANG",
+      "source_path": "sound/direct_sound_samples/cries/klang.wav",
+      "rate": 13379,
+      "frames": 10834,
+      "sha256": "7b4421382cef82094cd83c287c7df8e8c62a5add3a7f3ab9e71744e4456cecd5"
+    },
+    {
+      "national": 601,
+      "id": 654,
+      "token": "SPECIES_KLINKLANG",
+      "source_path": "sound/direct_sound_samples/cries/klinklang.wav",
+      "rate": 10512,
+      "frames": 21628,
+      "sha256": "f041c44ba3b1fa35e46d37f8057afb8179ee50e4f7d42af04e33830661cd7d99"
+    },
+    {
+      "national": 602,
+      "id": 655,
+      "token": "SPECIES_TYNAMO",
+      "source_path": "sound/direct_sound_samples/cries/tynamo.wav",
+      "rate": 13379,
+      "frames": 13786,
+      "sha256": "9ebbee6c96e9430b608887d6bbae231706f971d975dda6e84d3bbe8054ca6f4c"
+    },
+    {
+      "national": 603,
+      "id": 656,
+      "token": "SPECIES_EELEKTRIK",
+      "source_path": "sound/direct_sound_samples/cries/eelektrik.wav",
+      "rate": 13379,
+      "frames": 13286,
+      "sha256": "16cde412cc2927692f9647d700a6979dd680173b82bc7cf2642368fb4942a890"
+    },
+    {
+      "national": 604,
+      "id": 657,
+      "token": "SPECIES_EELEKTROSS",
+      "source_path": "sound/direct_sound_samples/cries/eelektross.wav",
+      "rate": 13379,
+      "frames": 18313,
+      "sha256": "e91dedb60014a4bbdbb931b900e838dee7e44d56ec3f91ca70ee9d75fb39861f"
+    },
+    {
+      "national": 605,
+      "id": 658,
+      "token": "SPECIES_ELGYEM",
+      "source_path": "sound/direct_sound_samples/cries/elgyem.wav",
+      "rate": 13379,
+      "frames": 10810,
+      "sha256": "e2fb16594755ffa674987637592dd260d5917e19ebdd979cd2ad41c9259bef57"
+    },
+    {
+      "national": 606,
+      "id": 659,
+      "token": "SPECIES_BEHEEYEM",
+      "source_path": "sound/direct_sound_samples/cries/beheeyem.wav",
+      "rate": 13379,
+      "frames": 18771,
+      "sha256": "40b250e8d49e00f133b8df931418dc6b7206579e645eae75179e99e9a969b3a5"
+    },
+    {
+      "national": 607,
+      "id": 660,
+      "token": "SPECIES_LITWICK",
+      "source_path": "sound/direct_sound_samples/cries/litwick.wav",
+      "rate": 13379,
+      "frames": 11068,
+      "sha256": "64710799d9fa1b162cf9aea953f99b62ee4374388c29d3cf827877fbd18cb6b2"
+    },
+    {
+      "national": 608,
+      "id": 661,
+      "token": "SPECIES_LAMPENT",
+      "source_path": "sound/direct_sound_samples/cries/lampent.wav",
+      "rate": 13379,
+      "frames": 19349,
+      "sha256": "8e3b1559afc5d8cc8529ee371b818ee974a732107020ae9d699ac4eb00a9233c"
+    },
+    {
+      "national": 609,
+      "id": 662,
+      "token": "SPECIES_CHANDELURE",
+      "source_path": "sound/direct_sound_samples/cries/chandelure.wav",
+      "rate": 13000,
+      "frames": 22924,
+      "sha256": "044a6927ba2b1ebbd7f7212e797d10a1efca513d8390b7c6f6996be1fcebb39d"
+    },
+    {
+      "national": 610,
+      "id": 663,
+      "token": "SPECIES_AXEW",
+      "source_path": "sound/direct_sound_samples/cries/axew.wav",
+      "rate": 13379,
+      "frames": 11978,
+      "sha256": "809ffd7ed0f0c64427bae68f5bf2785a5af778c1e528fcf23fbb9fc2edeba022"
+    },
+    {
+      "national": 611,
+      "id": 664,
+      "token": "SPECIES_FRAXURE",
+      "source_path": "sound/direct_sound_samples/cries/fraxure.wav",
+      "rate": 13379,
+      "frames": 19282,
+      "sha256": "7c357c895d8262bdb333344d38c53757f4623f0ca32574315acce7700c976111"
+    },
+    {
+      "national": 612,
+      "id": 665,
+      "token": "SPECIES_HAXORUS",
+      "source_path": "sound/direct_sound_samples/cries/haxorus.wav",
+      "rate": 13379,
+      "frames": 19426,
+      "sha256": "8122ce1f8aacad685ea2d3e74de9dfd78ecba92d458f6df8da6aaabf01301e3c"
+    },
+    {
+      "national": 613,
+      "id": 666,
+      "token": "SPECIES_CUBCHOO",
+      "source_path": "sound/direct_sound_samples/cries/cubchoo.wav",
+      "rate": 13379,
+      "frames": 7837,
+      "sha256": "e34a5087f179f4878d1409b54e403a3a184b875e20e913b8e81b1837dc5a4ae4"
+    },
+    {
+      "national": 614,
+      "id": 667,
+      "token": "SPECIES_BEARTIC",
+      "source_path": "sound/direct_sound_samples/cries/beartic.wav",
+      "rate": 13379,
+      "frames": 14113,
+      "sha256": "0e4fc4d9af3bfb5b3ab461688a349a598c0b94564585d26d1b013909d51b508f"
+    },
+    {
+      "national": 615,
+      "id": 668,
+      "token": "SPECIES_CRYOGONAL",
+      "source_path": "sound/direct_sound_samples/cries/cryogonal.wav",
+      "rate": 13379,
+      "frames": 19272,
+      "sha256": "fc9b5ea08372a029fc49ad8c22ed70b8d5630aad040d1c867fcedec1b8efd512"
+    },
+    {
+      "national": 616,
+      "id": 669,
+      "token": "SPECIES_SHELMET",
+      "source_path": "sound/direct_sound_samples/cries/shelmet.wav",
+      "rate": 13379,
+      "frames": 13776,
+      "sha256": "b2f88b1df29a884842a116c201cf6bcffe629707e6f738dbf19c5f26cf71a753"
+    },
+    {
+      "national": 617,
+      "id": 670,
+      "token": "SPECIES_ACCELGOR",
+      "source_path": "sound/direct_sound_samples/cries/accelgor.wav",
+      "rate": 13379,
+      "frames": 14062,
+      "sha256": "b324056690c0f5b5250a298bb38b1307898d020f6ced19f4f35e2dab9db37363"
+    },
+    {
+      "national": 618,
+      "id": 671,
+      "token": "SPECIES_STUNFISK",
+      "source_path": "sound/direct_sound_samples/cries/stunfisk.wav",
+      "rate": 13379,
+      "frames": 17898,
+      "sha256": "59ba6e0a2c022ac69cfdd33aaf39091e5f9f5324bc17e2e985504b0f5f0d599e"
+    },
+    {
+      "national": 619,
+      "id": 672,
+      "token": "SPECIES_MIENFOO",
+      "source_path": "sound/direct_sound_samples/cries/mienfoo.wav",
+      "rate": 13379,
+      "frames": 19333,
+      "sha256": "8cfda46a86213497fb56cf9fb7f1f689120ef0f508f4f4bbb1714d845ac3b336"
+    },
+    {
+      "national": 620,
+      "id": 673,
+      "token": "SPECIES_MIENSHAO",
+      "source_path": "sound/direct_sound_samples/cries/mienshao.wav",
+      "rate": 13379,
+      "frames": 13371,
+      "sha256": "7a20a5fd5051c729ee3f23a8e1eb67444c23c801abe60970dce05d1c03bde59d"
+    },
+    {
+      "national": 621,
+      "id": 674,
+      "token": "SPECIES_DRUDDIGON",
+      "source_path": "sound/direct_sound_samples/cries/druddigon.wav",
+      "rate": 13379,
+      "frames": 19139,
+      "sha256": "9aadbcf366fa8a4c95dc6eb822e47d15e3e21c43ed962bfdfa6fcbf2cc786ead"
+    },
+    {
+      "national": 622,
+      "id": 675,
+      "token": "SPECIES_GOLETT",
+      "source_path": "sound/direct_sound_samples/cries/golett.wav",
+      "rate": 13379,
+      "frames": 10766,
+      "sha256": "6bb712ad782985e0c3731c7b697b022c747ba8f446d42966784a185603e106e0"
+    },
+    {
+      "national": 623,
+      "id": 676,
+      "token": "SPECIES_GOLURK",
+      "source_path": "sound/direct_sound_samples/cries/golurk.wav",
+      "rate": 13379,
+      "frames": 18460,
+      "sha256": "a42cb7eb10ce2dbc512b7386881592c0cb323b6a70b7070710250c382d8dfc90"
+    },
+    {
+      "national": 624,
+      "id": 677,
+      "token": "SPECIES_PAWNIARD",
+      "source_path": "sound/direct_sound_samples/cries/pawniard.wav",
+      "rate": 13379,
+      "frames": 5565,
+      "sha256": "8d9cf992e15f4edeb51de530426485b17d79a53f8592c754b59fc1159a98edba"
+    },
+    {
+      "national": 625,
+      "id": 678,
+      "token": "SPECIES_BISHARP",
+      "source_path": "sound/direct_sound_samples/cries/bisharp.wav",
+      "rate": 13379,
+      "frames": 10684,
+      "sha256": "9cd7ed04326c0934c90aa98b5af01f2bc2050e7a287a9e3e7df26658fc3ce514"
+    },
+    {
+      "national": 626,
+      "id": 679,
+      "token": "SPECIES_BOUFFALANT",
+      "source_path": "sound/direct_sound_samples/cries/bouffalant.wav",
+      "rate": 13379,
+      "frames": 19584,
+      "sha256": "84a1f8dc0d54598ba678cae7e52d25440db37f7d126f9091de7f6ae645daf10d"
+    },
+    {
+      "national": 627,
+      "id": 680,
+      "token": "SPECIES_RUFFLET",
+      "source_path": "sound/direct_sound_samples/cries/rufflet.wav",
+      "rate": 13379,
+      "frames": 7773,
+      "sha256": "b57cb6d5ffa28fbfb5fccaf10fabc1b216045df2b02a2e1b9d61ff82835fe71f"
+    },
+    {
+      "national": 628,
+      "id": 681,
+      "token": "SPECIES_BRAVIARY",
+      "source_path": "sound/direct_sound_samples/cries/braviary.wav",
+      "rate": 13379,
+      "frames": 12968,
+      "sha256": "093a439776a51167881c899ba2d17a594e5c2425b7f07d2e92678c43f0caaf6f"
+    },
+    {
+      "national": 629,
+      "id": 682,
+      "token": "SPECIES_VULLABY",
+      "source_path": "sound/direct_sound_samples/cries/vullaby.wav",
+      "rate": 13379,
+      "frames": 18667,
+      "sha256": "d3c3709213282471990e8bac75d8a8ec973015d85a6a78e20c015c9281dfc44b"
+    },
+    {
+      "national": 630,
+      "id": 683,
+      "token": "SPECIES_MANDIBUZZ",
+      "source_path": "sound/direct_sound_samples/cries/mandibuzz.wav",
+      "rate": 13379,
+      "frames": 19410,
+      "sha256": "40ce05f519b6a1d76ae27104d7b2a912689f1ac3e05c73fe46e0fdb1abb60fee"
+    },
+    {
+      "national": 631,
+      "id": 684,
+      "token": "SPECIES_HEATMOR",
+      "source_path": "sound/direct_sound_samples/cries/heatmor.wav",
+      "rate": 13379,
+      "frames": 19239,
+      "sha256": "5c69e0f6e863d3164efa50972ebc4af01522c357e6192df2d4137c632979aaea"
+    },
+    {
+      "national": 632,
+      "id": 685,
+      "token": "SPECIES_DURANT",
+      "source_path": "sound/direct_sound_samples/cries/durant.wav",
+      "rate": 13379,
+      "frames": 12601,
+      "sha256": "98e18932f69779cb35085e896b603971fc71c804d60dff6bf62580b36288665f"
+    },
+    {
+      "national": 633,
+      "id": 686,
+      "token": "SPECIES_DEINO",
+      "source_path": "sound/direct_sound_samples/cries/deino.wav",
+      "rate": 13379,
+      "frames": 19119,
+      "sha256": "9471035f231dfdd0716d5b6005c5ca59c9acb921d5639ada499f933daa122547"
+    },
+    {
+      "national": 634,
+      "id": 687,
+      "token": "SPECIES_ZWEILOUS",
+      "source_path": "sound/direct_sound_samples/cries/zweilous.wav",
+      "rate": 13379,
+      "frames": 13666,
+      "sha256": "f52eb843c73a4432b166fbec951357bc7da5a17ed3f93a65286aaa4cc60301b1"
+    },
+    {
+      "national": 635,
+      "id": 688,
+      "token": "SPECIES_HYDREIGON",
+      "source_path": "sound/direct_sound_samples/cries/hydreigon.wav",
+      "rate": 13000,
+      "frames": 23032,
+      "sha256": "d70d60647fad369fab1ded798bc6f5afa64c4dcd6c93bebaf61a456f908cede9"
+    },
+    {
+      "national": 636,
+      "id": 689,
+      "token": "SPECIES_LARVESTA",
+      "source_path": "sound/direct_sound_samples/cries/larvesta.wav",
+      "rate": 13379,
+      "frames": 12623,
+      "sha256": "8e78cf830fe9c7ff520533c44571a9a9aba75adafe0dea84f9201236dfeb768b"
+    },
+    {
+      "national": 637,
+      "id": 690,
+      "token": "SPECIES_VOLCARONA",
+      "source_path": "sound/direct_sound_samples/cries/volcarona.wav",
+      "rate": 13000,
+      "frames": 22924,
+      "sha256": "5a0fb1e484f4990fd1ee1071a2b15005a4e2cb187def5fa3a81c65244e504383"
+    },
+    {
+      "national": 638,
+      "id": 691,
+      "token": "SPECIES_COBALION",
+      "source_path": "sound/direct_sound_samples/cries/cobalion.wav",
+      "rate": 10512,
+      "frames": 17548,
+      "sha256": "375e1fa8cdc0479bd39e4c9e146d3b7d649f5293616d60d22a5b4db1ae348043"
+    },
+    {
+      "national": 639,
+      "id": 692,
+      "token": "SPECIES_TERRAKION",
+      "source_path": "sound/direct_sound_samples/cries/terrakion.wav",
+      "rate": 13379,
+      "frames": 16429,
+      "sha256": "0e569e19bac462013a5c003a3345d64c777261d28ce63005d1d0fffb05a96873"
+    },
+    {
+      "national": 640,
+      "id": 693,
+      "token": "SPECIES_VIRIZION",
+      "source_path": "sound/direct_sound_samples/cries/virizion.wav",
+      "rate": 13379,
+      "frames": 13657,
+      "sha256": "4b0d9faf9d146d11dc5c2ee728b5308bb654d3af8249f0f0335e605db0085daa"
+    },
+    {
+      "national": 641,
+      "id": 694,
+      "token": "SPECIES_TORNADUS",
+      "source_path": "sound/direct_sound_samples/cries/tornadus_incarnate.wav",
+      "rate": 13379,
+      "frames": 19413,
+      "sha256": "4c3fbc31f802408432e0926bba642ec0804e1237f2ca0b2cbffc11c9f04afcaa"
+    },
+    {
+      "national": 642,
+      "id": 695,
+      "token": "SPECIES_THUNDURUS",
+      "source_path": "sound/direct_sound_samples/cries/thundurus_incarnate.wav",
+      "rate": 13000,
+      "frames": 23032,
+      "sha256": "86cb747402d1f006777165778cba05ef7de353823001577626d64dd8828bb0db"
+    },
+    {
+      "national": 643,
+      "id": 696,
+      "token": "SPECIES_RESHIRAM",
+      "source_path": "sound/direct_sound_samples/cries/reshiram.wav",
+      "rate": 13000,
+      "frames": 23476,
+      "sha256": "e362ff6e4bb69c9aff14b14a17877fdd664833c2279c6d4d3b23dd6078432a4b"
+    },
+    {
+      "national": 644,
+      "id": 697,
+      "token": "SPECIES_ZEKROM",
+      "source_path": "sound/direct_sound_samples/cries/zekrom.wav",
+      "rate": 13379,
+      "frames": 28563,
+      "sha256": "ee010a0d38a886c1485b12cf0b2993d2edf350b0a8aedd9c46dc9054750a6674"
+    },
+    {
+      "national": 645,
+      "id": 698,
+      "token": "SPECIES_LANDORUS",
+      "source_path": "sound/direct_sound_samples/cries/landorus_incarnate.wav",
+      "rate": 13379,
+      "frames": 19329,
+      "sha256": "ab97c9c23f23d9147d4a79574269c90420e8c5e14e8671e3d054962de535dfc9"
+    },
+    {
+      "national": 646,
+      "id": 699,
+      "token": "SPECIES_KYUREM",
+      "source_path": "sound/direct_sound_samples/cries/kyurem.wav",
+      "rate": 13379,
+      "frames": 18242,
+      "sha256": "c92c2d0d9dfba98326004ce05f26ff3a4360ee9e4c4aa7f6d7321958fa347a2c"
+    },
+    {
+      "national": 647,
+      "id": 700,
+      "token": "SPECIES_KELDEO",
+      "source_path": "sound/direct_sound_samples/cries/keldeo.wav",
+      "rate": 13379,
+      "frames": 13031,
+      "sha256": "05a9ec4adeb662be50d3cee3ad4b54d3276a0e6968117abcae233866ac334d5a"
+    },
+    {
+      "national": 648,
+      "id": 701,
+      "token": "SPECIES_MELOETTA",
+      "source_path": "sound/direct_sound_samples/cries/meloetta.wav",
+      "rate": 13379,
+      "frames": 19045,
+      "sha256": "6299f5ef614b99cf3696797e11a3c9869571002554697aa82df25d015cf4b0f5"
+    },
+    {
+      "national": 649,
+      "id": 702,
+      "token": "SPECIES_GENESECT",
+      "source_path": "sound/direct_sound_samples/cries/genesect.wav",
+      "rate": 13379,
+      "frames": 13807,
+      "sha256": "fba7d3cf88c2d868fa8ef9adf988fb4928675075f35a1b1d2a4475965e0d1250"
+    },
+    {
+      "national": 650,
+      "id": 703,
+      "token": "SPECIES_CHESPIN",
+      "source_path": "sound/direct_sound_samples/cries/chespin.wav",
+      "rate": 13379,
+      "frames": 7539,
+      "sha256": "baed1d1906e33d4b319900964245f94ff35a54d971a6029d60edcacb3684dad9"
+    },
+    {
+      "national": 651,
+      "id": 704,
+      "token": "SPECIES_QUILLADIN",
+      "source_path": "sound/direct_sound_samples/cries/quilladin.wav",
+      "rate": 13379,
+      "frames": 16162,
+      "sha256": "4a6875b46c2d5ee8c373d1bff162d94651a312a104a7967054df4f1400f194cd"
+    },
+    {
+      "national": 652,
+      "id": 705,
+      "token": "SPECIES_CHESNAUGHT",
+      "source_path": "sound/direct_sound_samples/cries/chesnaught.wav",
+      "rate": 13379,
+      "frames": 20812,
+      "sha256": "96322a654dd1215bcbb0c1d59cd06ee0d0f34e34efaf54f68e1d2010c3e4dc2f"
+    },
+    {
+      "national": 653,
+      "id": 706,
+      "token": "SPECIES_FENNEKIN",
+      "source_path": "sound/direct_sound_samples/cries/fennekin.wav",
+      "rate": 13379,
+      "frames": 11646,
+      "sha256": "0468562b7f5dc093c2903692238afd2c6d7a231b849a5a47c7e47f1ca8647e29"
+    },
+    {
+      "national": 654,
+      "id": 707,
+      "token": "SPECIES_BRAIXEN",
+      "source_path": "sound/direct_sound_samples/cries/braixen.wav",
+      "rate": 13379,
+      "frames": 13611,
+      "sha256": "18820b93bb37b7a8a281e3de8b24f2a07d0874498349122657551d3d549b2656"
+    },
+    {
+      "national": 655,
+      "id": 708,
+      "token": "SPECIES_DELPHOX",
+      "source_path": "sound/direct_sound_samples/cries/delphox.wav",
+      "rate": 13379,
+      "frames": 23284,
+      "sha256": "d4f11722f101f052159349d3f7299253342f4ed316e587eca20e81575637251c"
+    },
+    {
+      "national": 656,
+      "id": 709,
+      "token": "SPECIES_FROAKIE",
+      "source_path": "sound/direct_sound_samples/cries/froakie.wav",
+      "rate": 13379,
+      "frames": 9850,
+      "sha256": "f5b061bfecae5c7b8f97481ba62d0ab12327f86ca391fa80efd0d88914a320ec"
+    },
+    {
+      "national": 657,
+      "id": 710,
+      "token": "SPECIES_FROGADIER",
+      "source_path": "sound/direct_sound_samples/cries/frogadier.wav",
+      "rate": 13379,
+      "frames": 12592,
+      "sha256": "23707fe4e6de0691f8505f664fc590aa78eaa6ce68d0e150fde2243859c927fe"
+    },
+    {
+      "national": 658,
+      "id": 711,
+      "token": "SPECIES_GRENINJA",
+      "source_path": "sound/direct_sound_samples/cries/greninja.wav",
+      "rate": 13379,
+      "frames": 15995,
+      "sha256": "64103b824ac3df3ed1b7d99042fea476c993689b67c71f41cd6ba505d68309ed"
+    },
+    {
+      "national": 659,
+      "id": 712,
+      "token": "SPECIES_BUNNELBY",
+      "source_path": "sound/direct_sound_samples/cries/bunnelby.wav",
+      "rate": 13379,
+      "frames": 7507,
+      "sha256": "921f1d23ba94d94c2d0a109dbc281337c4d19a93e4818cff8665b98db38b4a6a"
+    },
+    {
+      "national": 660,
+      "id": 713,
+      "token": "SPECIES_DIGGERSBY",
+      "source_path": "sound/direct_sound_samples/cries/diggersby.wav",
+      "rate": 13379,
+      "frames": 19780,
+      "sha256": "3effaba03436ca2659b65ddc509a13d9812866dc9aa4803dab588709d06dd485"
+    },
+    {
+      "national": 661,
+      "id": 714,
+      "token": "SPECIES_FLETCHLING",
+      "source_path": "sound/direct_sound_samples/cries/fletchling.wav",
+      "rate": 13379,
+      "frames": 10375,
+      "sha256": "c322217305681e89cfe2e6be2c0e551c011c7238d2e5ebc79e4abac5495a79ab"
+    },
+    {
+      "national": 662,
+      "id": 715,
+      "token": "SPECIES_FLETCHINDER",
+      "source_path": "sound/direct_sound_samples/cries/fletchinder.wav",
+      "rate": 13379,
+      "frames": 11406,
+      "sha256": "77a112fbb59990f5fcd708cb61dccacdc36b699b512650d7ec898b70279e6b19"
+    },
+    {
+      "national": 663,
+      "id": 716,
+      "token": "SPECIES_TALONFLAME",
+      "source_path": "sound/direct_sound_samples/cries/talonflame.wav",
+      "rate": 13379,
+      "frames": 18982,
+      "sha256": "4e298a9bbb0c45caf5314a4949511226767168a99da0f0a0298f7637449d5329"
+    },
+    {
+      "national": 664,
+      "id": 717,
+      "token": "SPECIES_SCATTERBUG",
+      "source_path": "sound/direct_sound_samples/cries/scatterbug.wav",
+      "rate": 13379,
+      "frames": 6683,
+      "sha256": "62c5fbb72704bcd9ff47cdd5f9298707021318c253a3cf8e606addbc3ef49bd8"
+    },
+    {
+      "national": 665,
+      "id": 718,
+      "token": "SPECIES_SPEWPA",
+      "source_path": "sound/direct_sound_samples/cries/spewpa.wav",
+      "rate": 13379,
+      "frames": 11878,
+      "sha256": "2fe80ab3f438cc1d72253bef1e0404f3919f9a56caab4fc2345ee7154fce94f8"
+    },
+    {
+      "national": 666,
+      "id": 719,
+      "token": "SPECIES_VIVILLON",
+      "source_path": "sound/direct_sound_samples/cries/vivillon.wav",
+      "rate": 13379,
+      "frames": 22552,
+      "sha256": "e6883f08a1c6eae4570653ae92a0a72138ffed2ef2ec876a773f6c4e815036a5"
+    },
+    {
+      "national": 667,
+      "id": 720,
+      "token": "SPECIES_LITLEO",
+      "source_path": "sound/direct_sound_samples/cries/litleo.wav",
+      "rate": 13379,
+      "frames": 17429,
+      "sha256": "ada74ee46c9654e677cc98998637786944f492a17f57edccc34f917a379acbdd"
+    },
+    {
+      "national": 668,
+      "id": 721,
+      "token": "SPECIES_PYROAR",
+      "source_path": "sound/direct_sound_samples/cries/pyroar.wav",
+      "rate": 13379,
+      "frames": 21854,
+      "sha256": "790bb0b1f29fd58e11a5ea3216e50ab98631cde88a7ed65671b50b29ea400262"
+    },
+    {
+      "national": 669,
+      "id": 722,
+      "token": "SPECIES_FLABEBE",
+      "source_path": "sound/direct_sound_samples/cries/flabebe.wav",
+      "rate": 13379,
+      "frames": 14111,
+      "sha256": "2b1f0fd34d56df0eacfb673a4b7fbb821b4b024a99a6d134c6e0f8389857468d"
+    },
+    {
+      "national": 670,
+      "id": 723,
+      "token": "SPECIES_FLOETTE",
+      "source_path": "sound/direct_sound_samples/cries/floette.wav",
+      "rate": 13379,
+      "frames": 19290,
+      "sha256": "ca3b321187c9658e43ae005e4f355e5b4333bbaa3782c70d47c2f2b894f34801"
+    },
+    {
+      "national": 671,
+      "id": 724,
+      "token": "SPECIES_FLORGES",
+      "source_path": "sound/direct_sound_samples/cries/florges.wav",
+      "rate": 13379,
+      "frames": 22460,
+      "sha256": "a13bd3a6ff723c27b6d5e5b5233a9da55e71b588b30746a0006eeb2ad04140d0"
+    },
+    {
+      "national": 672,
+      "id": 725,
+      "token": "SPECIES_SKIDDO",
+      "source_path": "sound/direct_sound_samples/cries/skiddo.wav",
+      "rate": 13379,
+      "frames": 9619,
+      "sha256": "be0420ba9b54008e614b52705ad1062ad37b9b30aa120bb87e45193390909d5c"
+    },
+    {
+      "national": 673,
+      "id": 726,
+      "token": "SPECIES_GOGOAT",
+      "source_path": "sound/direct_sound_samples/cries/gogoat.wav",
+      "rate": 13379,
+      "frames": 18948,
+      "sha256": "2d598c3ca65eec16d77746e9fc7bbcab0fc5da7980b4e0f717a2267f896130dd"
+    },
+    {
+      "national": 674,
+      "id": 727,
+      "token": "SPECIES_PANCHAM",
+      "source_path": "sound/direct_sound_samples/cries/pancham.wav",
+      "rate": 13379,
+      "frames": 10195,
+      "sha256": "fce345d87e3c3e752db9745b852680fb860f7b734682932e39dc8091b1d24c9f"
+    },
+    {
+      "national": 675,
+      "id": 728,
+      "token": "SPECIES_PANGORO",
+      "source_path": "sound/direct_sound_samples/cries/pangoro.wav",
+      "rate": 13379,
+      "frames": 13708,
+      "sha256": "1754e9f97fa6031904038a6545b2120ad1c3024c7829d33291bfaaf671030f04"
+    },
+    {
+      "national": 676,
+      "id": 729,
+      "token": "SPECIES_FURFROU",
+      "source_path": "sound/direct_sound_samples/cries/furfrou.wav",
+      "rate": 13379,
+      "frames": 7670,
+      "sha256": "9065b855d5b5bb8d4062f32220eeb8e45f0393dfadbbbea0d1503cd2415f1eea"
+    },
+    {
+      "national": 677,
+      "id": 730,
+      "token": "SPECIES_ESPURR",
+      "source_path": "sound/direct_sound_samples/cries/espurr.wav",
+      "rate": 13379,
+      "frames": 4950,
+      "sha256": "c4e019575c42bce6286e96aa0518f47e8c5f3bc4b83a5b3fc1eacebbd13126b0"
+    },
+    {
+      "national": 678,
+      "id": 731,
+      "token": "SPECIES_MEOWSTIC",
+      "source_path": "sound/direct_sound_samples/cries/meowstic.wav",
+      "rate": 13379,
+      "frames": 6409,
+      "sha256": "4aea5c7d013412c6662b4b804265ea2f106b1b5ed9e13a4c71f8022ac4e34065"
+    },
+    {
+      "national": 679,
+      "id": 732,
+      "token": "SPECIES_HONEDGE",
+      "source_path": "sound/direct_sound_samples/cries/honedge.wav",
+      "rate": 13379,
+      "frames": 12844,
+      "sha256": "cd59debf146d8dafec0475ddb8b743eae1e1238914e07fe1451e3a77dc57e92b"
+    },
+    {
+      "national": 680,
+      "id": 733,
+      "token": "SPECIES_DOUBLADE",
+      "source_path": "sound/direct_sound_samples/cries/doublade.wav",
+      "rate": 13379,
+      "frames": 12806,
+      "sha256": "54f74a61836da7f3a8283868abbd1d177429a82704598cb7d1bbe712cf2bb650"
+    },
+    {
+      "national": 681,
+      "id": 734,
+      "token": "SPECIES_AEGISLASH",
+      "source_path": "sound/direct_sound_samples/cries/aegislash.wav",
+      "rate": 13379,
+      "frames": 14443,
+      "sha256": "33dccf35c4e86195634800dfbf04007b1910de850840646088459b89faae3f89"
+    },
+    {
+      "national": 682,
+      "id": 735,
+      "token": "SPECIES_SPRITZEE",
+      "source_path": "sound/direct_sound_samples/cries/spritzee.wav",
+      "rate": 13379,
+      "frames": 11876,
+      "sha256": "c81ef937e539fd51d069043529392f8af174a6139f08697d1cb03a9fa47aa7e1"
+    },
+    {
+      "national": 683,
+      "id": 736,
+      "token": "SPECIES_AROMATISSE",
+      "source_path": "sound/direct_sound_samples/cries/aromatisse.wav",
+      "rate": 13379,
+      "frames": 23018,
+      "sha256": "e16c6c8ffeadeedd3344651b4dcafbab6b33ff35441d4e9ad3f726b856b50d00"
+    },
+    {
+      "national": 684,
+      "id": 737,
+      "token": "SPECIES_SWIRLIX",
+      "source_path": "sound/direct_sound_samples/cries/swirlix.wav",
+      "rate": 13379,
+      "frames": 14991,
+      "sha256": "99a084b99f34992f4054bdd786a62995faa385b2d775aab39d6c68607bf08699"
+    },
+    {
+      "national": 685,
+      "id": 738,
+      "token": "SPECIES_SLURPUFF",
+      "source_path": "sound/direct_sound_samples/cries/slurpuff.wav",
+      "rate": 13379,
+      "frames": 17498,
+      "sha256": "927e4ab75a244bfe6fadc4bba3e6a079ac952f2f43f848a804924316f9c6cb83"
+    },
+    {
+      "national": 686,
+      "id": 739,
+      "token": "SPECIES_INKAY",
+      "source_path": "sound/direct_sound_samples/cries/inkay.wav",
+      "rate": 13379,
+      "frames": 4279,
+      "sha256": "894949c8113e5b503be41c70623c5774df45b145a182c2b8d7a97a69cf5c4044"
+    },
+    {
+      "national": 687,
+      "id": 740,
+      "token": "SPECIES_MALAMAR",
+      "source_path": "sound/direct_sound_samples/cries/malamar.wav",
+      "rate": 13379,
+      "frames": 20169,
+      "sha256": "1c6f68e241fb4e38ee83a1805a7f68e08eddda799b4f36395b0c9e73a74ee19d"
+    },
+    {
+      "national": 688,
+      "id": 741,
+      "token": "SPECIES_BINACLE",
+      "source_path": "sound/direct_sound_samples/cries/binacle.wav",
+      "rate": 13379,
+      "frames": 15036,
+      "sha256": "4d4f70c99b223f8e0878636adfde13ebcc02fe3414f237c3c289e68e506593e1"
+    },
+    {
+      "national": 689,
+      "id": 742,
+      "token": "SPECIES_BARBARACLE",
+      "source_path": "sound/direct_sound_samples/cries/barbaracle.wav",
+      "rate": 13379,
+      "frames": 19266,
+      "sha256": "fa2d72868e3a5705ff04a8aefa4296fc44e0d19a961793532ac42a853595f98c"
+    },
+    {
+      "national": 690,
+      "id": 743,
+      "token": "SPECIES_SKRELP",
+      "source_path": "sound/direct_sound_samples/cries/skrelp.wav",
+      "rate": 13379,
+      "frames": 11559,
+      "sha256": "1d58439290690138ae5f5d1682d7f45addf920e55599d6cb60448103da0f0dc9"
+    },
+    {
+      "national": 691,
+      "id": 744,
+      "token": "SPECIES_DRAGALGE",
+      "source_path": "sound/direct_sound_samples/cries/dragalge.wav",
+      "rate": 13379,
+      "frames": 26517,
+      "sha256": "0d21a1cf0e4867ab1bb1689b442ee5dd831cf234bdb3320f924c9b55f478d604"
+    },
+    {
+      "national": 692,
+      "id": 745,
+      "token": "SPECIES_CLAUNCHER",
+      "source_path": "sound/direct_sound_samples/cries/clauncher.wav",
+      "rate": 13379,
+      "frames": 6196,
+      "sha256": "6e47b0ca948690dc6455470de53882aafbb0496afa0153407ff36923acb831c4"
+    },
+    {
+      "national": 693,
+      "id": 746,
+      "token": "SPECIES_CLAWITZER",
+      "source_path": "sound/direct_sound_samples/cries/clawitzer.wav",
+      "rate": 13379,
+      "frames": 16938,
+      "sha256": "2416f9f57085c9f2499aaa31cd52ee49f538573d5d12a0a1caed3ecc33d323c7"
+    },
+    {
+      "national": 694,
+      "id": 747,
+      "token": "SPECIES_HELIOPTILE",
+      "source_path": "sound/direct_sound_samples/cries/helioptile.wav",
+      "rate": 13379,
+      "frames": 14486,
+      "sha256": "ecac3a04e302cdb1f2ef258ae350daabc7bbbe7899ab210a0a687f3f6a00b353"
+    },
+    {
+      "national": 695,
+      "id": 748,
+      "token": "SPECIES_HELIOLISK",
+      "source_path": "sound/direct_sound_samples/cries/heliolisk.wav",
+      "rate": 13379,
+      "frames": 19598,
+      "sha256": "922e4b97c208a98f8e89e73a24b0bf0c134cbbf9ae313781dac4181e8bfa755d"
+    },
+    {
+      "national": 696,
+      "id": 749,
+      "token": "SPECIES_TYRUNT",
+      "source_path": "sound/direct_sound_samples/cries/tyrunt.wav",
+      "rate": 13379,
+      "frames": 8738,
+      "sha256": "ab58f3eec31804835e879cd0b5e15c2df37367f59a81071d2bca7870a207afb8"
+    },
+    {
+      "national": 697,
+      "id": 750,
+      "token": "SPECIES_TYRANTRUM",
+      "source_path": "sound/direct_sound_samples/cries/tyrantrum.wav",
+      "rate": 13379,
+      "frames": 19702,
+      "sha256": "9e254af23ea85f1ea00a34e2eb4ae01ee5d3d31989795ecf33b629f2548eef2f"
+    },
+    {
+      "national": 698,
+      "id": 751,
+      "token": "SPECIES_AMAURA",
+      "source_path": "sound/direct_sound_samples/cries/amaura.wav",
+      "rate": 13379,
+      "frames": 21512,
+      "sha256": "f74fd76fb58cd264546db79f07c3cdef969948800d3e938d1ee44d8d801f0b1c"
+    },
+    {
+      "national": 699,
+      "id": 752,
+      "token": "SPECIES_AURORUS",
+      "source_path": "sound/direct_sound_samples/cries/aurorus.wav",
+      "rate": 13379,
+      "frames": 27941,
+      "sha256": "f57e6d23b3668afc0124488878a9fc0c396a3a0bde389864739fd2573b68b9d3"
+    },
+    {
+      "national": 700,
+      "id": 753,
+      "token": "SPECIES_SYLVEON",
+      "source_path": "sound/direct_sound_samples/cries/sylveon.wav",
+      "rate": 13379,
+      "frames": 21427,
+      "sha256": "84db19050db5a3381217a0a51227ecfef33c1136ed83d7091fbc0fa5b85d02d5"
+    },
+    {
+      "national": 701,
+      "id": 754,
+      "token": "SPECIES_HAWLUCHA",
+      "source_path": "sound/direct_sound_samples/cries/hawlucha.wav",
+      "rate": 13379,
+      "frames": 14079,
+      "sha256": "2070b9d452b4512c97beebf414361d1fa0bcffcc145eb1864d12b4be701f2c1d"
+    },
+    {
+      "national": 702,
+      "id": 755,
+      "token": "SPECIES_DEDENNE",
+      "source_path": "sound/direct_sound_samples/cries/dedenne.wav",
+      "rate": 13379,
+      "frames": 9171,
+      "sha256": "e1e8cdcebf3010462d1e69acc24cc0c8b0fb785a10a65d5c9fa9599723147763"
+    },
+    {
+      "national": 703,
+      "id": 756,
+      "token": "SPECIES_CARBINK",
+      "source_path": "sound/direct_sound_samples/cries/carbink.wav",
+      "rate": 13379,
+      "frames": 21731,
+      "sha256": "977bc8748af8ff3c4eda133233be3c3e8bff44574e84c30cb6d74055219eec29"
+    },
+    {
+      "national": 704,
+      "id": 757,
+      "token": "SPECIES_GOOMY",
+      "source_path": "sound/direct_sound_samples/cries/goomy.wav",
+      "rate": 13379,
+      "frames": 13695,
+      "sha256": "48ffbeda7c732aa650860271d62a83ef33440588aa74c3a714a64cad2ce06d70"
+    },
+    {
+      "national": 705,
+      "id": 758,
+      "token": "SPECIES_SLIGGOO",
+      "source_path": "sound/direct_sound_samples/cries/sliggoo.wav",
+      "rate": 13379,
+      "frames": 21617,
+      "sha256": "9c4e0b48bacf7db8f72c9eba3836d3c547eae2c8b93af8e8bbef358dcfc98df0"
+    },
+    {
+      "national": 706,
+      "id": 759,
+      "token": "SPECIES_GOODRA",
+      "source_path": "sound/direct_sound_samples/cries/goodra.wav",
+      "rate": 13379,
+      "frames": 16111,
+      "sha256": "66b22182fc4b1a5437574761615bdec74dbada1e7314d8ec4e0f70c5c9ad66f9"
+    },
+    {
+      "national": 707,
+      "id": 760,
+      "token": "SPECIES_KLEFKI",
+      "source_path": "sound/direct_sound_samples/cries/klefki.wav",
+      "rate": 13379,
+      "frames": 15644,
+      "sha256": "f3a24ad51a19b1903f4edb64979ff65afa8b1f104e812879856fe3d9efe07ce4"
+    },
+    {
+      "national": 708,
+      "id": 761,
+      "token": "SPECIES_PHANTUMP",
+      "source_path": "sound/direct_sound_samples/cries/phantump.wav",
+      "rate": 13379,
+      "frames": 20026,
+      "sha256": "fcf905ec3e8412e3f5e928aa9d8dbdc7971f12c76f6b0cf07e250471d2bee16e"
+    },
+    {
+      "national": 709,
+      "id": 762,
+      "token": "SPECIES_TREVENANT",
+      "source_path": "sound/direct_sound_samples/cries/trevenant.wav",
+      "rate": 13379,
+      "frames": 24132,
+      "sha256": "1a77df5ee4908a574eeb2482bdef1d6a63b062f4853139f0cab10179da92b9b6"
+    },
+    {
+      "national": 710,
+      "id": 763,
+      "token": "SPECIES_PUMPKABOO",
+      "source_path": "sound/direct_sound_samples/cries/pumpkaboo.wav",
+      "rate": 13379,
+      "frames": 10811,
+      "sha256": "fc627c5e149155c1f688ecc6adde3384316d0aea100d9170263fe8fccea9cbb7"
+    },
+    {
+      "national": 711,
+      "id": 764,
+      "token": "SPECIES_GOURGEIST",
+      "source_path": "sound/direct_sound_samples/cries/gourgeist.wav",
+      "rate": 13379,
+      "frames": 26467,
+      "sha256": "5b711abaac9d97ad770caf566488a851010e4491468dcd222870ee8153bc7dbd"
+    },
+    {
+      "national": 712,
+      "id": 765,
+      "token": "SPECIES_BERGMITE",
+      "source_path": "sound/direct_sound_samples/cries/bergmite.wav",
+      "rate": 13379,
+      "frames": 14557,
+      "sha256": "fd387d83dcfb91caad1129b90bb8fc34f98468429dece9028ef4304b593d1a90"
+    },
+    {
+      "national": 713,
+      "id": 766,
+      "token": "SPECIES_AVALUGG",
+      "source_path": "sound/direct_sound_samples/cries/avalugg.wav",
+      "rate": 13379,
+      "frames": 22504,
+      "sha256": "6c6eb456a6d5cee4bfacf5d95e65045bbb18be4803bfab6f6dec3a82cc9952ec"
+    },
+    {
+      "national": 714,
+      "id": 767,
+      "token": "SPECIES_NOIBAT",
+      "source_path": "sound/direct_sound_samples/cries/noibat.wav",
+      "rate": 13379,
+      "frames": 14410,
+      "sha256": "fedbdcaf83d7f6263effece37eb9d46446da3796f57d0079effdf0533c914e3c"
+    },
+    {
+      "national": 715,
+      "id": 768,
+      "token": "SPECIES_NOIVERN",
+      "source_path": "sound/direct_sound_samples/cries/noivern.wav",
+      "rate": 13379,
+      "frames": 19483,
+      "sha256": "ed434c381aa265529f64cbb9ce6676a3760e3c9e20bea4a60ff03b4b06b76adb"
+    },
+    {
+      "national": 716,
+      "id": 769,
+      "token": "SPECIES_XERNEAS",
+      "source_path": "sound/direct_sound_samples/cries/xerneas.wav",
+      "rate": 13379,
+      "frames": 21680,
+      "sha256": "7aed5e521d14180fd37d8c140efdd9ea6eda4c135c2b74b2b2e90f497c7d5f81"
+    },
+    {
+      "national": 717,
+      "id": 770,
+      "token": "SPECIES_YVELTAL",
+      "source_path": "sound/direct_sound_samples/cries/yveltal.wav",
+      "rate": 13379,
+      "frames": 26740,
+      "sha256": "4b686a40267dfe5b824a08c58bb1105787839d64420d41d56de23845b0d0c662"
+    },
+    {
+      "national": 718,
+      "id": 771,
+      "token": "SPECIES_ZYGARDE",
+      "source_path": "sound/direct_sound_samples/cries/zygarde_50.wav",
+      "rate": 13379,
+      "frames": 24650,
+      "sha256": "6e709273de7c3d00403de9566486d0c7cdf24a32ffaa099ed42a6259b45b4c8d"
+    },
+    {
+      "national": 719,
+      "id": 772,
+      "token": "SPECIES_DIANCIE",
+      "source_path": "sound/direct_sound_samples/cries/diancie.wav",
+      "rate": 13379,
+      "frames": 25688,
+      "sha256": "3b12bc87b92fa90e9906ca420462d1f1f1cd0ea1c1db0c78212a46a1a9fc5713"
+    },
+    {
+      "national": 720,
+      "id": 773,
+      "token": "SPECIES_HOOPA",
+      "source_path": "sound/direct_sound_samples/cries/hoopa_confined.wav",
+      "rate": 13379,
+      "frames": 16788,
+      "sha256": "420cc91830fab8c3b0208ae3c2f5865f3e96b08494f8aaa8565e2a65b3f0e2bd"
+    },
+    {
+      "national": 721,
+      "id": 774,
+      "token": "SPECIES_VOLCANION",
+      "source_path": "sound/direct_sound_samples/cries/volcanion.wav",
+      "rate": 13379,
+      "frames": 22500,
+      "sha256": "3f8ebcb4543ea415fc3975a0f1fd3d481251eb15c1d3f7d196f979370e70826c"
+    },
+    {
+      "national": 722,
+      "id": 775,
+      "token": "SPECIES_ROWLET",
+      "source_path": "sound/direct_sound_samples/cries/rowlet.wav",
+      "rate": 13379,
+      "frames": 10414,
+      "sha256": "4ed7e88efae852181c82cd55dbe285724e8ad5e429a0e2394b499d270c89f77e"
+    },
+    {
+      "national": 723,
+      "id": 776,
+      "token": "SPECIES_DARTRIX",
+      "source_path": "sound/direct_sound_samples/cries/dartrix.wav",
+      "rate": 13379,
+      "frames": 19031,
+      "sha256": "9e16b4771ca745b4abb3907b7448c0a9715ed806a8930232712d3721235f6f37"
+    },
+    {
+      "national": 724,
+      "id": 777,
+      "token": "SPECIES_DECIDUEYE",
+      "source_path": "sound/direct_sound_samples/cries/decidueye.wav",
+      "rate": 13379,
+      "frames": 26725,
+      "sha256": "a64c87d64791fc6f8eff3fe34bf5fe25ec3d423a05c1a38883cfbc7f3807adb1"
+    },
+    {
+      "national": 725,
+      "id": 778,
+      "token": "SPECIES_LITTEN",
+      "source_path": "sound/direct_sound_samples/cries/litten.wav",
+      "rate": 13379,
+      "frames": 13675,
+      "sha256": "385b7b983a63e0689f4e2178ca235ea4c672cf774b9ee1f059b9b088ca35a1b5"
+    },
+    {
+      "national": 726,
+      "id": 779,
+      "token": "SPECIES_TORRACAT",
+      "source_path": "sound/direct_sound_samples/cries/torracat.wav",
+      "rate": 13379,
+      "frames": 21513,
+      "sha256": "3a88978580807726caf1d45c7e9407f7fde3195dc54d4100d1e3bce3f2c8ef43"
+    },
+    {
+      "national": 727,
+      "id": 780,
+      "token": "SPECIES_INCINEROAR",
+      "source_path": "sound/direct_sound_samples/cries/incineroar.wav",
+      "rate": 13379,
+      "frames": 24251,
+      "sha256": "0aa19bd85fe7dbeb55c6fbecd7f513809dcd2c3f4377286a0b95d7de5fb7302b"
+    },
+    {
+      "national": 728,
+      "id": 781,
+      "token": "SPECIES_POPPLIO",
+      "source_path": "sound/direct_sound_samples/cries/popplio.wav",
+      "rate": 13379,
+      "frames": 10008,
+      "sha256": "a61bb1f6ab2efc78658ccc9e5fe6c9acc68ba375e30085584047fa7067348f7d"
+    },
+    {
+      "national": 729,
+      "id": 782,
+      "token": "SPECIES_BRIONNE",
+      "source_path": "sound/direct_sound_samples/cries/brionne.wav",
+      "rate": 13379,
+      "frames": 17457,
+      "sha256": "2740718600b25381caf28a46e2b6c9bd3128693a09b650115dbbffcaedfe5fbf"
+    },
+    {
+      "national": 730,
+      "id": 783,
+      "token": "SPECIES_PRIMARINA",
+      "source_path": "sound/direct_sound_samples/cries/primarina.wav",
+      "rate": 13379,
+      "frames": 20548,
+      "sha256": "cedf418bff6fd67a61542c70f3e62707dbe0dd43c8ec34dcc4ff0847db5d62f8"
+    },
+    {
+      "national": 731,
+      "id": 784,
+      "token": "SPECIES_PIKIPEK",
+      "source_path": "sound/direct_sound_samples/cries/pikipek.wav",
+      "rate": 13379,
+      "frames": 12085,
+      "sha256": "fdb897001bfc886018c4aae9f73061a476b87f46941f48dd9ae3234a31c8f058"
+    },
+    {
+      "national": 732,
+      "id": 785,
+      "token": "SPECIES_TRUMBEAK",
+      "source_path": "sound/direct_sound_samples/cries/trumbeak.wav",
+      "rate": 13379,
+      "frames": 17864,
+      "sha256": "1b98a1a67e208dab47fe804e7f9ca1a0f02eccf69f5cf10ecd609b0e50fc777d"
+    },
+    {
+      "national": 733,
+      "id": 786,
+      "token": "SPECIES_TOUCANNON",
+      "source_path": "sound/direct_sound_samples/cries/toucannon.wav",
+      "rate": 13379,
+      "frames": 24082,
+      "sha256": "247bf5a665897d04cb6391d990dd90378125828ab7c74ef65c08ce31697048f9"
+    },
+    {
+      "national": 734,
+      "id": 787,
+      "token": "SPECIES_YUNGOOS",
+      "source_path": "sound/direct_sound_samples/cries/yungoos.wav",
+      "rate": 13379,
+      "frames": 15841,
+      "sha256": "0767323abf769b7b76e679cabcad08b492822c5aa9fe47fe9f387f8cc291ba96"
+    },
+    {
+      "national": 735,
+      "id": 788,
+      "token": "SPECIES_GUMSHOOS",
+      "source_path": "sound/direct_sound_samples/cries/gumshoos.wav",
+      "rate": 13379,
+      "frames": 25077,
+      "sha256": "dab10170269f7f41a383731dffc7aee0c834bd2d3f0a3820a2d1908fa5a2003a"
+    },
+    {
+      "national": 736,
+      "id": 789,
+      "token": "SPECIES_GRUBBIN",
+      "source_path": "sound/direct_sound_samples/cries/grubbin.wav",
+      "rate": 13379,
+      "frames": 10582,
+      "sha256": "bd9ad09c596e10108fdab54b9c7e51f80ba463c6b570d711b8f02965b1055f72"
+    },
+    {
+      "national": 737,
+      "id": 790,
+      "token": "SPECIES_CHARJABUG",
+      "source_path": "sound/direct_sound_samples/cries/charjabug.wav",
+      "rate": 13379,
+      "frames": 15108,
+      "sha256": "9c08a0f3344d982c79d3cfda23b9913c099bfbcbfaa66c8871c11a68073e19b6"
+    },
+    {
+      "national": 738,
+      "id": 791,
+      "token": "SPECIES_VIKAVOLT",
+      "source_path": "sound/direct_sound_samples/cries/vikavolt.wav",
+      "rate": 13379,
+      "frames": 23619,
+      "sha256": "d183a048555f26193395fe69d0782b7dd34bb05cd30662377e5b6b337ec37e49"
+    },
+    {
+      "national": 739,
+      "id": 792,
+      "token": "SPECIES_CRABRAWLER",
+      "source_path": "sound/direct_sound_samples/cries/crabrawler.wav",
+      "rate": 13379,
+      "frames": 5406,
+      "sha256": "801faf6ce9c4b58dabb8d0e56baeaee78648e025f53d8c074889fcf3d6664107"
+    },
+    {
+      "national": 740,
+      "id": 793,
+      "token": "SPECIES_CRABOMINABLE",
+      "source_path": "sound/direct_sound_samples/cries/crabominable.wav",
+      "rate": 13379,
+      "frames": 19311,
+      "sha256": "173fd68769734ad3f5d6714e56f5be6a07a4c9e7b880b6e225af71f50e025c5c"
+    },
+    {
+      "national": 741,
+      "id": 794,
+      "token": "SPECIES_ORICORIO",
+      "source_path": "sound/direct_sound_samples/cries/oricorio_baile.wav",
+      "rate": 13379,
+      "frames": 18106,
+      "sha256": "13c9b65b3fb258ea4dd08b56b2a503f1059ad1b195d9a9ff9a81fa76fc362239"
+    },
+    {
+      "national": 742,
+      "id": 795,
+      "token": "SPECIES_CUTIEFLY",
+      "source_path": "sound/direct_sound_samples/cries/cutiefly.wav",
+      "rate": 13379,
+      "frames": 12777,
+      "sha256": "14fb2abc517bde9cb13b496ba700e6158deb98c552176b5f49bcc49d71c4d155"
+    },
+    {
+      "national": 743,
+      "id": 796,
+      "token": "SPECIES_RIBOMBEE",
+      "source_path": "sound/direct_sound_samples/cries/ribombee.wav",
+      "rate": 13379,
+      "frames": 20046,
+      "sha256": "3e14691d99b9c81ae596010f6af25add7bac2b7e2d4b6e5b77b22bfd387fa305"
+    },
+    {
+      "national": 744,
+      "id": 797,
+      "token": "SPECIES_ROCKRUFF",
+      "source_path": "sound/direct_sound_samples/cries/rockruff.wav",
+      "rate": 13379,
+      "frames": 7049,
+      "sha256": "f37c26282d36539d90668e4c4ccca3d022be7416dc4cdd0824327e43c174feff"
+    },
+    {
+      "national": 745,
+      "id": 798,
+      "token": "SPECIES_LYCANROC",
+      "source_path": "sound/direct_sound_samples/cries/lycanroc_midday.wav",
+      "rate": 13379,
+      "frames": 13913,
+      "sha256": "0bc0a8055a0cde801684a2e20391d50a973b719e4d445fd21af817e1563c856d"
+    },
+    {
+      "national": 746,
+      "id": 799,
+      "token": "SPECIES_WISHIWASHI",
+      "source_path": "sound/direct_sound_samples/cries/wishiwashi_solo.wav",
+      "rate": 13379,
+      "frames": 12111,
+      "sha256": "e6021a0b906d9e23a0bf7e90bb97e6f7f84bbdecaf05ea695cf52b61a13c8453"
+    },
+    {
+      "national": 747,
+      "id": 800,
+      "token": "SPECIES_MAREANIE",
+      "source_path": "sound/direct_sound_samples/cries/mareanie.wav",
+      "rate": 13379,
+      "frames": 15732,
+      "sha256": "89f499be9e080d9dd38053fafdfbaff06d3eeae8e37b41228f5ea609e6a50dbc"
+    },
+    {
+      "national": 748,
+      "id": 801,
+      "token": "SPECIES_TOXAPEX",
+      "source_path": "sound/direct_sound_samples/cries/toxapex.wav",
+      "rate": 13379,
+      "frames": 21578,
+      "sha256": "df3bb9f27b1bf2db42c5455b8780d1d0a6574484b35ef13a13b3ac1d41c2b5ee"
+    },
+    {
+      "national": 749,
+      "id": 802,
+      "token": "SPECIES_MUDBRAY",
+      "source_path": "sound/direct_sound_samples/cries/mudbray.wav",
+      "rate": 13379,
+      "frames": 13850,
+      "sha256": "c2a488af683ea2f81c35d49d283471d541f019fd71cd65d50180aa72f8b99b96"
+    },
+    {
+      "national": 750,
+      "id": 803,
+      "token": "SPECIES_MUDSDALE",
+      "source_path": "sound/direct_sound_samples/cries/mudsdale.wav",
+      "rate": 13379,
+      "frames": 17677,
+      "sha256": "9a723ccc49e020847a21e09e22ff0015e4b18eace472fcecfd9e3e3a378b4068"
+    },
+    {
+      "national": 751,
+      "id": 804,
+      "token": "SPECIES_DEWPIDER",
+      "source_path": "sound/direct_sound_samples/cries/dewpider.wav",
+      "rate": 13379,
+      "frames": 6473,
+      "sha256": "06fe7c61132a31fca101ff4639e43b9e4d3121dbaa99c17e72521fd29fd31720"
+    },
+    {
+      "national": 752,
+      "id": 805,
+      "token": "SPECIES_ARAQUANID",
+      "source_path": "sound/direct_sound_samples/cries/araquanid.wav",
+      "rate": 13379,
+      "frames": 14663,
+      "sha256": "b69d7c101fccabae33124b9d36c853feaa82f86f9c460e35f67b4c2c3f00cb4d"
+    },
+    {
+      "national": 753,
+      "id": 806,
+      "token": "SPECIES_FOMANTIS",
+      "source_path": "sound/direct_sound_samples/cries/fomantis.wav",
+      "rate": 13379,
+      "frames": 10096,
+      "sha256": "10a0653835b3df0b57e5374ef6a769f8f806626e9b9fd16a610afeed42faf723"
+    },
+    {
+      "national": 754,
+      "id": 807,
+      "token": "SPECIES_LURANTIS",
+      "source_path": "sound/direct_sound_samples/cries/lurantis.wav",
+      "rate": 13379,
+      "frames": 14577,
+      "sha256": "87677c89e2e8275574226a11ba58af56dd0178068f7c8b0a9df73c66096134f6"
+    },
+    {
+      "national": 755,
+      "id": 808,
+      "token": "SPECIES_MORELULL",
+      "source_path": "sound/direct_sound_samples/cries/morelull.wav",
+      "rate": 13379,
+      "frames": 17769,
+      "sha256": "d79b2ac514901676e467f77540631e954bf651342881f6ab6b46146b742f9b83"
+    },
+    {
+      "national": 756,
+      "id": 809,
+      "token": "SPECIES_SHIINOTIC",
+      "source_path": "sound/direct_sound_samples/cries/shiinotic.wav",
+      "rate": 13379,
+      "frames": 22259,
+      "sha256": "d0dd15199ce1fed75a95beccda29d900e4e567dce2755b2db07c6f3563a84c3a"
+    },
+    {
+      "national": 757,
+      "id": 810,
+      "token": "SPECIES_SALANDIT",
+      "source_path": "sound/direct_sound_samples/cries/salandit.wav",
+      "rate": 13379,
+      "frames": 17982,
+      "sha256": "01b7121726c7aa987b771e543e5463c90f4e604d70291b5f3de295772420a51b"
+    },
+    {
+      "national": 758,
+      "id": 811,
+      "token": "SPECIES_SALAZZLE",
+      "source_path": "sound/direct_sound_samples/cries/salazzle.wav",
+      "rate": 13379,
+      "frames": 24669,
+      "sha256": "2f141b7c098c5c8d7045dba73b50c3ccdb8a2df3ff4cad8b62a1ac02c1f58edc"
+    },
+    {
+      "national": 759,
+      "id": 812,
+      "token": "SPECIES_STUFFUL",
+      "source_path": "sound/direct_sound_samples/cries/stufful.wav",
+      "rate": 13379,
+      "frames": 8524,
+      "sha256": "6e056bd30890f70bf9a212facee0a8c3db7d3507222d5cec0691907a0efc9559"
+    },
+    {
+      "national": 760,
+      "id": 813,
+      "token": "SPECIES_BEWEAR",
+      "source_path": "sound/direct_sound_samples/cries/bewear.wav",
+      "rate": 13379,
+      "frames": 15403,
+      "sha256": "1c95e487fc0c566d85c8033a0e711bfd53c5d7b934cac1b0c401195439af9e2b"
+    },
+    {
+      "national": 761,
+      "id": 814,
+      "token": "SPECIES_BOUNSWEET",
+      "source_path": "sound/direct_sound_samples/cries/bounsweet.wav",
+      "rate": 13379,
+      "frames": 11439,
+      "sha256": "d0d2fd3fcc898365c5369f0493c1f84044105a13c14ea0fdf458a18f9fc7b41d"
+    },
+    {
+      "national": 762,
+      "id": 815,
+      "token": "SPECIES_STEENEE",
+      "source_path": "sound/direct_sound_samples/cries/steenee.wav",
+      "rate": 13379,
+      "frames": 16132,
+      "sha256": "9df5dd144d866e38c80f767812b74e0db4ce9ee5983d2889dcae946f7e154d6c"
+    },
+    {
+      "national": 763,
+      "id": 816,
+      "token": "SPECIES_TSAREENA",
+      "source_path": "sound/direct_sound_samples/cries/tsareena.wav",
+      "rate": 13379,
+      "frames": 20861,
+      "sha256": "9d8903d03761606ef1f36b78c7610b54fe88a0caf2092f4e1a9a98f1306e8335"
+    },
+    {
+      "national": 764,
+      "id": 817,
+      "token": "SPECIES_COMFEY",
+      "source_path": "sound/direct_sound_samples/cries/comfey.wav",
+      "rate": 13379,
+      "frames": 22039,
+      "sha256": "376c82e601eabc9891183802be5dabed4b1c191075bbb9b801e1ad16c5d9cdfc"
+    },
+    {
+      "national": 765,
+      "id": 818,
+      "token": "SPECIES_ORANGURU",
+      "source_path": "sound/direct_sound_samples/cries/oranguru.wav",
+      "rate": 13379,
+      "frames": 22076,
+      "sha256": "b1810011a0902525660410fa0032de17711f1557240e35637b8b834a03760770"
+    },
+    {
+      "national": 766,
+      "id": 819,
+      "token": "SPECIES_PASSIMIAN",
+      "source_path": "sound/direct_sound_samples/cries/passimian.wav",
+      "rate": 13379,
+      "frames": 17162,
+      "sha256": "eee3ab0e4a1232345b03a58afe9a71b12b53e0d2a7f4ab5ba06d4db880f7d84b"
+    },
+    {
+      "national": 767,
+      "id": 820,
+      "token": "SPECIES_WIMPOD",
+      "source_path": "sound/direct_sound_samples/cries/wimpod.wav",
+      "rate": 13379,
+      "frames": 7204,
+      "sha256": "0748dc165796ec88058625d666cf6e3ccba22129de0428e1d264c1f820495ca8"
+    },
+    {
+      "national": 768,
+      "id": 821,
+      "token": "SPECIES_GOLISOPOD",
+      "source_path": "sound/direct_sound_samples/cries/golisopod.wav",
+      "rate": 13379,
+      "frames": 20607,
+      "sha256": "bf83d266df93167916fc975506443bdf3d99dc5dfb1156f61eb59e7b6274141b"
+    },
+    {
+      "national": 769,
+      "id": 822,
+      "token": "SPECIES_SANDYGAST",
+      "source_path": "sound/direct_sound_samples/cries/sandygast.wav",
+      "rate": 13379,
+      "frames": 21400,
+      "sha256": "08dac7377d2d737b370cf506bb67d88c1b034b6fb8374e1eee45d3231d5b8072"
+    },
+    {
+      "national": 770,
+      "id": 823,
+      "token": "SPECIES_PALOSSAND",
+      "source_path": "sound/direct_sound_samples/cries/palossand.wav",
+      "rate": 13379,
+      "frames": 26746,
+      "sha256": "bef3b52c6d3fb431e798411710b2d45679e59f93752c61176ddb9ca6bc212ea7"
+    },
+    {
+      "national": 771,
+      "id": 824,
+      "token": "SPECIES_PYUKUMUKU",
+      "source_path": "sound/direct_sound_samples/cries/pyukumuku.wav",
+      "rate": 13379,
+      "frames": 10282,
+      "sha256": "4a9c79fb3be26896805a23ef5b1ebdc135db87dcde407ecc8a8bf700bdb58a5a"
+    },
+    {
+      "national": 772,
+      "id": 825,
+      "token": "SPECIES_TYPE_NULL",
+      "source_path": "sound/direct_sound_samples/cries/type_null.wav",
+      "rate": 13379,
+      "frames": 18895,
+      "sha256": "b9814847f2bdf2b43cac04c04d754cdf3e887af72525d0c767b1fe5cc3f1bd30"
+    },
+    {
+      "national": 773,
+      "id": 826,
+      "token": "SPECIES_SILVALLY",
+      "source_path": "sound/direct_sound_samples/cries/silvally.wav",
+      "rate": 13379,
+      "frames": 23929,
+      "sha256": "c4b9ab0876246a3e5a6e49123f19240122b4077a0515f754b6714c19c3d44b69"
+    },
+    {
+      "national": 774,
+      "id": 827,
+      "token": "SPECIES_MINIOR",
+      "source_path": "sound/direct_sound_samples/cries/minior.wav",
+      "rate": 13379,
+      "frames": 18801,
+      "sha256": "027f5e2fab265d87677b801cc40f7b32572be6e5e454a6ba0fa9dbc84bec0f02"
+    },
+    {
+      "national": 775,
+      "id": 828,
+      "token": "SPECIES_KOMALA",
+      "source_path": "sound/direct_sound_samples/cries/komala.wav",
+      "rate": 13379,
+      "frames": 14391,
+      "sha256": "ddd8b2642930f5250a76e04bbf7ef039928843a6a566fcba8c4d1aad191741f6"
+    },
+    {
+      "national": 776,
+      "id": 829,
+      "token": "SPECIES_TURTONATOR",
+      "source_path": "sound/direct_sound_samples/cries/turtonator.wav",
+      "rate": 13379,
+      "frames": 26608,
+      "sha256": "9addaf21ad3e90efeb96b60f4d37da22d0d8bf77d669e6421d473bb7d12383e0"
+    },
+    {
+      "national": 777,
+      "id": 830,
+      "token": "SPECIES_TOGEDEMARU",
+      "source_path": "sound/direct_sound_samples/cries/togedemaru.wav",
+      "rate": 13379,
+      "frames": 9356,
+      "sha256": "1dd9d59de637eaf4b2cc55994512695e3bb12ce21ec15405137d55f67970547f"
+    },
+    {
+      "national": 778,
+      "id": 831,
+      "token": "SPECIES_MIMIKYU",
+      "source_path": "sound/direct_sound_samples/cries/mimikyu.wav",
+      "rate": 13379,
+      "frames": 15455,
+      "sha256": "5ffc13a8ecf78dc08dae4c80917e7bd685445cdea4038be3f036f29c2d82e31a"
+    },
+    {
+      "national": 779,
+      "id": 832,
+      "token": "SPECIES_BRUXISH",
+      "source_path": "sound/direct_sound_samples/cries/bruxish.wav",
+      "rate": 13379,
+      "frames": 14727,
+      "sha256": "28ff4afdc26d25e29c1eaf973b57b6c528cad2bcb22ee7ff7118d56449fb4c0d"
+    },
+    {
+      "national": 780,
+      "id": 833,
+      "token": "SPECIES_DRAMPA",
+      "source_path": "sound/direct_sound_samples/cries/drampa.wav",
+      "rate": 13379,
+      "frames": 22894,
+      "sha256": "98cb4db32ccae429f71e234f8836c496750527ec678da78d26ee017e1c935c95"
+    },
+    {
+      "national": 781,
+      "id": 834,
+      "token": "SPECIES_DHELMISE",
+      "source_path": "sound/direct_sound_samples/cries/dhelmise.wav",
+      "rate": 13379,
+      "frames": 24203,
+      "sha256": "33be183c7a29e661a3fb4f2eafda63d5a6e82552ff31db11c1b744e109e385a2"
+    },
+    {
+      "national": 782,
+      "id": 835,
+      "token": "SPECIES_JANGMO_O",
+      "source_path": "sound/direct_sound_samples/cries/jangmo_o.wav",
+      "rate": 13379,
+      "frames": 4302,
+      "sha256": "b56952a7cfc9803f7fa3ac1280d8829ae68519aa4276332577bed18a4744dc2a"
+    },
+    {
+      "national": 783,
+      "id": 836,
+      "token": "SPECIES_HAKAMO_O",
+      "source_path": "sound/direct_sound_samples/cries/hakamo_o.wav",
+      "rate": 13379,
+      "frames": 19853,
+      "sha256": "227bc72da11165bc2ef4dfc32967acfe8127e803f79a340a5b2358a11370190c"
+    },
+    {
+      "national": 784,
+      "id": 837,
+      "token": "SPECIES_KOMMO_O",
+      "source_path": "sound/direct_sound_samples/cries/kommo_o.wav",
+      "rate": 13379,
+      "frames": 26378,
+      "sha256": "52593eed0f284f365bdcad6d8f0d5ba088661b926fae94d187c1e0b302186fce"
+    },
+    {
+      "national": 785,
+      "id": 838,
+      "token": "SPECIES_TAPU_KOKO",
+      "source_path": "sound/direct_sound_samples/cries/tapu_koko.wav",
+      "rate": 13379,
+      "frames": 24488,
+      "sha256": "37a4f1df80bd5c6ab8ffe27906900406e85974aa99504383a3b72c3681b5a072"
+    },
+    {
+      "national": 786,
+      "id": 839,
+      "token": "SPECIES_TAPU_LELE",
+      "source_path": "sound/direct_sound_samples/cries/tapu_lele.wav",
+      "rate": 13379,
+      "frames": 25755,
+      "sha256": "fe5f83d418ab1ce090c086d8f6bb05591b23c6b1dc6e0be4d6ceb9c6e8a2142f"
+    },
+    {
+      "national": 787,
+      "id": 840,
+      "token": "SPECIES_TAPU_BULU",
+      "source_path": "sound/direct_sound_samples/cries/tapu_bulu.wav",
+      "rate": 13379,
+      "frames": 25716,
+      "sha256": "1062ec843c4aca2bc3e5e79e7d2ecde23f5cc6d358b74c65a82839bd859356c6"
+    },
+    {
+      "national": 788,
+      "id": 841,
+      "token": "SPECIES_TAPU_FINI",
+      "source_path": "sound/direct_sound_samples/cries/tapu_fini.wav",
+      "rate": 13379,
+      "frames": 26803,
+      "sha256": "112b5e746dacedef39c18196695ad0a524f86a450f3a952660b63b21965b9953"
+    },
+    {
+      "national": 789,
+      "id": 842,
+      "token": "SPECIES_COSMOG",
+      "source_path": "sound/direct_sound_samples/cries/cosmog.wav",
+      "rate": 13379,
+      "frames": 16822,
+      "sha256": "6fb52f6a4b2a2c6c15081bdc0b6f98c1610a6a1a6f7434c93725464f58cafe13"
+    },
+    {
+      "national": 790,
+      "id": 843,
+      "token": "SPECIES_COSMOEM",
+      "source_path": "sound/direct_sound_samples/cries/cosmoem.wav",
+      "rate": 13379,
+      "frames": 24639,
+      "sha256": "40d859d685def5892776c254801b9caa400a8ca2d92670cafe3d027288d9e4fa"
+    },
+    {
+      "national": 791,
+      "id": 844,
+      "token": "SPECIES_SOLGALEO",
+      "source_path": "sound/direct_sound_samples/cries/solgaleo.wav",
+      "rate": 13379,
+      "frames": 26687,
+      "sha256": "56311b717b77dbbc83854ac754eb3f67076aa8f0db30390506436b613b3aa24f"
+    },
+    {
+      "national": 792,
+      "id": 845,
+      "token": "SPECIES_LUNALA",
+      "source_path": "sound/direct_sound_samples/cries/lunala.wav",
+      "rate": 13379,
+      "frames": 23881,
+      "sha256": "d40f4e9ae3074444c986f32bb88956367d8e3ede3e2519d4856da00511c31843"
+    },
+    {
+      "national": 793,
+      "id": 846,
+      "token": "SPECIES_NIHILEGO",
+      "source_path": "sound/direct_sound_samples/cries/nihilego.wav",
+      "rate": 13379,
+      "frames": 29381,
+      "sha256": "3b2c7b1e116c29e733ed086b5afd403ce2472c6da9ad2611c5f27b018478548f"
+    },
+    {
+      "national": 794,
+      "id": 847,
+      "token": "SPECIES_BUZZWOLE",
+      "source_path": "sound/direct_sound_samples/cries/buzzwole.wav",
+      "rate": 13379,
+      "frames": 26691,
+      "sha256": "f44543ec19817bc9fb7e485af11c5df05716fbbda0802ad2accaaee5564ca25f"
+    },
+    {
+      "national": 795,
+      "id": 848,
+      "token": "SPECIES_PHEROMOSA",
+      "source_path": "sound/direct_sound_samples/cries/pheromosa.wav",
+      "rate": 13379,
+      "frames": 26742,
+      "sha256": "28f6dbad92274a445a79aee9a44706248a1330a9b14904792f53b47ea8beaf39"
+    },
+    {
+      "national": 796,
+      "id": 849,
+      "token": "SPECIES_XURKITREE",
+      "source_path": "sound/direct_sound_samples/cries/xurkitree.wav",
+      "rate": 13379,
+      "frames": 26733,
+      "sha256": "9fe053bf3ee4376f4ab5107f09c48f1e93abaaa5257c2a80a0b171186d34aa05"
+    },
+    {
+      "national": 797,
+      "id": 850,
+      "token": "SPECIES_CELESTEELA",
+      "source_path": "sound/direct_sound_samples/cries/celesteela.wav",
+      "rate": 13379,
+      "frames": 29126,
+      "sha256": "6b95c83ada8c8f55af55b8e7f76913a3c9617ce9e3e9780943d4c90c949694c9"
+    },
+    {
+      "national": 798,
+      "id": 851,
+      "token": "SPECIES_KARTANA",
+      "source_path": "sound/direct_sound_samples/cries/kartana.wav",
+      "rate": 13379,
+      "frames": 26694,
+      "sha256": "455dd053138a86b2244e0739cfd6ad133572bf201db3de6fc13169c227019771"
+    },
+    {
+      "national": 799,
+      "id": 852,
+      "token": "SPECIES_GUZZLORD",
+      "source_path": "sound/direct_sound_samples/cries/guzzlord.wav",
+      "rate": 13379,
+      "frames": 30438,
+      "sha256": "409d902f720f33cd5b300d4b392af4834e1462a8e43cc1723a7b21a9901075c8"
+    },
+    {
+      "national": 800,
+      "id": 853,
+      "token": "SPECIES_NECROZMA",
+      "source_path": "sound/direct_sound_samples/cries/necrozma.wav",
+      "rate": 13379,
+      "frames": 26738,
+      "sha256": "8a673bc08d4493e7b25e7a97f81a6f05fd9f8d9d8f5da374652e8c0b7a078d89"
+    },
+    {
+      "national": 801,
+      "id": 854,
+      "token": "SPECIES_MAGEARNA",
+      "source_path": "sound/direct_sound_samples/cries/magearna.wav",
+      "rate": 13379,
+      "frames": 18915,
+      "sha256": "31afe88a9c509aeb0e65b950de70c4c7ca7abb36b4ed27785ca316d955756d08"
+    },
+    {
+      "national": 802,
+      "id": 855,
+      "token": "SPECIES_MARSHADOW",
+      "source_path": "sound/direct_sound_samples/cries/marshadow.wav",
+      "rate": 13379,
+      "frames": 22926,
+      "sha256": "7cfe6df29ace66d0edfea8ecb973437b1ec5489e0ef45d64df86fd8439b775c3"
+    },
+    {
+      "national": 803,
+      "id": 856,
+      "token": "SPECIES_POIPOLE",
+      "source_path": "sound/direct_sound_samples/cries/poipole.wav",
+      "rate": 13379,
+      "frames": 18854,
+      "sha256": "b252e49d6ed10ba37f1cea89a5cf88694710ba9c5cb75ea414eaf657d3d74c1f"
+    },
+    {
+      "national": 804,
+      "id": 857,
+      "token": "SPECIES_NAGANADEL",
+      "source_path": "sound/direct_sound_samples/cries/naganadel.wav",
+      "rate": 13379,
+      "frames": 27592,
+      "sha256": "bf0b08cc1df1408bfc824616010d8fe5e6fa871e47e0e77035e660e0de39c11d"
+    },
+    {
+      "national": 805,
+      "id": 858,
+      "token": "SPECIES_STAKATAKA",
+      "source_path": "sound/direct_sound_samples/cries/stakataka.wav",
+      "rate": 13379,
+      "frames": 26536,
+      "sha256": "746b5a043a50d389b0749b1d4df6a5f20a4e9819e0927f59d6dbabffc46e0236"
+    },
+    {
+      "national": 806,
+      "id": 859,
+      "token": "SPECIES_BLACEPHALON",
+      "source_path": "sound/direct_sound_samples/cries/blacephalon.wav",
+      "rate": 13379,
+      "frames": 25723,
+      "sha256": "7fed6e539da57334c2e922d7786b4515fc987aaecd4e8530de480f900d08df0d"
+    },
+    {
+      "national": 807,
+      "id": 860,
+      "token": "SPECIES_ZERAORA",
+      "source_path": "sound/direct_sound_samples/cries/zeraora.wav",
+      "rate": 13379,
+      "frames": 22498,
+      "sha256": "1688586385e05ad93834ff98bd4b5e5774446bd18e91e889bf79daf8149513a1"
+    },
+    {
+      "national": 808,
+      "id": 861,
+      "token": "SPECIES_MELTAN",
+      "source_path": "sound/direct_sound_samples/cries/meltan.wav",
+      "rate": 13379,
+      "frames": 11624,
+      "sha256": "93a5b2a5bf7e3e1b7388327d03aac8164677bae40b4d5d6727b83efe7adf6d5c"
+    },
+    {
+      "national": 809,
+      "id": 862,
+      "token": "SPECIES_MELMETAL",
+      "source_path": "sound/direct_sound_samples/cries/melmetal.wav",
+      "rate": 13379,
+      "frames": 19448,
+      "sha256": "24a622fe542c4b81704ef6d8b31fc3db2c3e633284a18c6295e1c72f6ba0965b"
+    },
+    {
+      "national": 810,
+      "id": 863,
+      "token": "SPECIES_GROOKEY",
+      "source_path": "sound/direct_sound_samples/cries/grookey.wav",
+      "rate": 13379,
+      "frames": 9417,
+      "sha256": "238ac16adcaadd076121673cdddb0b42e3ed923f4d154d410fb8a055dee186ba"
+    },
+    {
+      "national": 811,
+      "id": 864,
+      "token": "SPECIES_THWACKEY",
+      "source_path": "sound/direct_sound_samples/cries/thwackey.wav",
+      "rate": 13379,
+      "frames": 14136,
+      "sha256": "5abc23a82d2ee55077a6e3c1b403fadadf8609f1667714601acc0891a7719c2f"
+    },
+    {
+      "national": 812,
+      "id": 865,
+      "token": "SPECIES_RILLABOOM",
+      "source_path": "sound/direct_sound_samples/cries/rillaboom.wav",
+      "rate": 13379,
+      "frames": 20062,
+      "sha256": "38bd9615460217b942fca0d00f8097dcd2d0ce5d5d0e0bb183bd05f1c8a7cd99"
+    },
+    {
+      "national": 813,
+      "id": 866,
+      "token": "SPECIES_SCORBUNNY",
+      "source_path": "sound/direct_sound_samples/cries/scorbunny.wav",
+      "rate": 13379,
+      "frames": 10775,
+      "sha256": "138dea7c008c4ae61db17fed6472cb3fb20b1d1283446e9e53fa6ffe43aaaa72"
+    },
+    {
+      "national": 814,
+      "id": 867,
+      "token": "SPECIES_RABOOT",
+      "source_path": "sound/direct_sound_samples/cries/raboot.wav",
+      "rate": 13379,
+      "frames": 10446,
+      "sha256": "1684211e05da630fe1f96c3e98bf73acefe7d2fc589c724180e66ffbb02272a6"
+    },
+    {
+      "national": 815,
+      "id": 868,
+      "token": "SPECIES_CINDERACE",
+      "source_path": "sound/direct_sound_samples/cries/cinderace.wav",
+      "rate": 13379,
+      "frames": 29640,
+      "sha256": "1a44be17154d1f1139e8575a365e56b6c5a5c371a1847d14c14f03f1a2aaad1f"
+    },
+    {
+      "national": 816,
+      "id": 869,
+      "token": "SPECIES_SOBBLE",
+      "source_path": "sound/direct_sound_samples/cries/sobble.wav",
+      "rate": 13379,
+      "frames": 11145,
+      "sha256": "4b372c694859df6f163fa1b0623c4936815e4dbd9bc9f342d1c8746feb687202"
+    },
+    {
+      "national": 817,
+      "id": 870,
+      "token": "SPECIES_DRIZZILE",
+      "source_path": "sound/direct_sound_samples/cries/drizzile.wav",
+      "rate": 13379,
+      "frames": 12342,
+      "sha256": "c80923578dae6de554a491b9ac92ba03f35a8ece97fb51e409e5f38816f9011e"
+    },
+    {
+      "national": 818,
+      "id": 871,
+      "token": "SPECIES_INTELEON",
+      "source_path": "sound/direct_sound_samples/cries/inteleon.wav",
+      "rate": 13379,
+      "frames": 12693,
+      "sha256": "641628ecdea73c828557f0d61df607a1ada0e5c737eb721f67c3935ef9ebbeaa"
+    },
+    {
+      "national": 819,
+      "id": 872,
+      "token": "SPECIES_SKWOVET",
+      "source_path": "sound/direct_sound_samples/cries/skwovet.wav",
+      "rate": 13379,
+      "frames": 11279,
+      "sha256": "54bf394aa7f796e4c2f67787d088bb980ff9d0061036fb87039f4f64c3873eff"
+    },
+    {
+      "national": 820,
+      "id": 873,
+      "token": "SPECIES_GREEDENT",
+      "source_path": "sound/direct_sound_samples/cries/greedent.wav",
+      "rate": 13379,
+      "frames": 17459,
+      "sha256": "83ba9d437c14337661579cd859741b4268e2222b1fa05ecf5d0d8a64f66df6fa"
+    },
+    {
+      "national": 821,
+      "id": 874,
+      "token": "SPECIES_ROOKIDEE",
+      "source_path": "sound/direct_sound_samples/cries/rookidee.wav",
+      "rate": 13379,
+      "frames": 19630,
+      "sha256": "35084cad97c772ef2554137da3a78cee04f967699eb551b7d7f588654fab0f00"
+    },
+    {
+      "national": 822,
+      "id": 875,
+      "token": "SPECIES_CORVISQUIRE",
+      "source_path": "sound/direct_sound_samples/cries/corvisquire.wav",
+      "rate": 13379,
+      "frames": 18646,
+      "sha256": "1084de7102cb7aca0bf7fdd2ca147b275332c9853b0c8489e07544d3c77897da"
+    },
+    {
+      "national": 823,
+      "id": 876,
+      "token": "SPECIES_CORVIKNIGHT",
+      "source_path": "sound/direct_sound_samples/cries/corviknight.wav",
+      "rate": 13379,
+      "frames": 24157,
+      "sha256": "22f05a12a7b604b6a3398fbfef76f8f56aab7e2b66530a13a675529f32896794"
+    },
+    {
+      "national": 824,
+      "id": 877,
+      "token": "SPECIES_BLIPBUG",
+      "source_path": "sound/direct_sound_samples/cries/blipbug.wav",
+      "rate": 13379,
+      "frames": 19661,
+      "sha256": "3adbdeb6529f6626fd2bd8a95276d2e7f0a14177f2815acbfca41f5e7d202485"
+    },
+    {
+      "national": 825,
+      "id": 878,
+      "token": "SPECIES_DOTTLER",
+      "source_path": "sound/direct_sound_samples/cries/dottler.wav",
+      "rate": 13379,
+      "frames": 23502,
+      "sha256": "6c086ad93dba0ffef66a452a4c0f63c8bed6f32caf4351183746028bb96ba310"
+    },
+    {
+      "national": 826,
+      "id": 879,
+      "token": "SPECIES_ORBEETLE",
+      "source_path": "sound/direct_sound_samples/cries/orbeetle.wav",
+      "rate": 13379,
+      "frames": 18820,
+      "sha256": "87730408665465b234e0ada0eb2a7420cbc913e7ad458cadb2f787cbf841cc70"
+    },
+    {
+      "national": 827,
+      "id": 880,
+      "token": "SPECIES_NICKIT",
+      "source_path": "sound/direct_sound_samples/cries/nickit.wav",
+      "rate": 13379,
+      "frames": 10038,
+      "sha256": "11d4c0a18e7df8d8f9684e62f52b54aea3fa84e2e322e99626198d134fa21ffe"
+    },
+    {
+      "national": 828,
+      "id": 881,
+      "token": "SPECIES_THIEVUL",
+      "source_path": "sound/direct_sound_samples/cries/thievul.wav",
+      "rate": 13379,
+      "frames": 19159,
+      "sha256": "f24e48121f3dcd51b35637e9906628a51d579130e23ab1f31b3a5b9ecbe1d59c"
+    },
+    {
+      "national": 829,
+      "id": 882,
+      "token": "SPECIES_GOSSIFLEUR",
+      "source_path": "sound/direct_sound_samples/cries/gossifleur.wav",
+      "rate": 13379,
+      "frames": 16702,
+      "sha256": "264f9f39592308635172d7a07f2b043708dba59e8c42a4c5cbcb3ed782f87070"
+    },
+    {
+      "national": 830,
+      "id": 883,
+      "token": "SPECIES_ELDEGOSS",
+      "source_path": "sound/direct_sound_samples/cries/eldegoss.wav",
+      "rate": 13379,
+      "frames": 21284,
+      "sha256": "5e9b5a083173e6cfa90bf2254f365e64e2adead85144f330ea703ce217d7d140"
+    },
+    {
+      "national": 831,
+      "id": 884,
+      "token": "SPECIES_WOOLOO",
+      "source_path": "sound/direct_sound_samples/cries/wooloo.wav",
+      "rate": 13379,
+      "frames": 15214,
+      "sha256": "7e2f9f1813bf5b867e053fc2cfd585f7b4ee8db3527f3484a77de4aef1dc85c6"
+    },
+    {
+      "national": 832,
+      "id": 885,
+      "token": "SPECIES_DUBWOOL",
+      "source_path": "sound/direct_sound_samples/cries/dubwool.wav",
+      "rate": 13379,
+      "frames": 13212,
+      "sha256": "6c394b8b1d1ef7857b922ffe89b8d680260e0a9301dc5b56484f59e9df41706d"
+    },
+    {
+      "national": 833,
+      "id": 886,
+      "token": "SPECIES_CHEWTLE",
+      "source_path": "sound/direct_sound_samples/cries/chewtle.wav",
+      "rate": 13379,
+      "frames": 14537,
+      "sha256": "5068c4defc6ad51d45b0705d1e275fe7e34eec28370f60c0b1c062746d5bbd70"
+    },
+    {
+      "national": 834,
+      "id": 887,
+      "token": "SPECIES_DREDNAW",
+      "source_path": "sound/direct_sound_samples/cries/drednaw.wav",
+      "rate": 13379,
+      "frames": 25966,
+      "sha256": "beb93f2010c030f60399183ae3d8644553fe6d35415b8f103d0f07350a7d7576"
+    },
+    {
+      "national": 835,
+      "id": 888,
+      "token": "SPECIES_YAMPER",
+      "source_path": "sound/direct_sound_samples/cries/yamper.wav",
+      "rate": 13379,
+      "frames": 8535,
+      "sha256": "e9467589ed3d685f1353e03da09b3314adcd82b5103305c783cd871be9708820"
+    },
+    {
+      "national": 836,
+      "id": 889,
+      "token": "SPECIES_BOLTUND",
+      "source_path": "sound/direct_sound_samples/cries/boltund.wav",
+      "rate": 13379,
+      "frames": 10721,
+      "sha256": "94a09cd061309fbb8a05e713e64a11f769c66a5049a194dfc6ecf81227185f96"
+    },
+    {
+      "national": 837,
+      "id": 890,
+      "token": "SPECIES_ROLYCOLY",
+      "source_path": "sound/direct_sound_samples/cries/rolycoly.wav",
+      "rate": 13379,
+      "frames": 13493,
+      "sha256": "9c63cd29ecfe242a9362b48c01e841df22135940d6a95838e84e42c850399853"
+    },
+    {
+      "national": 838,
+      "id": 891,
+      "token": "SPECIES_CARKOL",
+      "source_path": "sound/direct_sound_samples/cries/carkol.wav",
+      "rate": 13379,
+      "frames": 21967,
+      "sha256": "ebb276c1feb6730e581c0e88eeeb3e657f28e3e700630450646a9dbfedc54d11"
+    },
+    {
+      "national": 839,
+      "id": 892,
+      "token": "SPECIES_COALOSSAL",
+      "source_path": "sound/direct_sound_samples/cries/coalossal.wav",
+      "rate": 13379,
+      "frames": 29999,
+      "sha256": "7540980bd8f05e21d4afe273a9701046951022e6093677fa96a995eff663d45b"
+    },
+    {
+      "national": 840,
+      "id": 893,
+      "token": "SPECIES_APPLIN",
+      "source_path": "sound/direct_sound_samples/cries/applin.wav",
+      "rate": 13379,
+      "frames": 16828,
+      "sha256": "5f4a434a2be53aaf5de79e4eccc6dc24a4cf2f2afe90e9282af2fdd7075aacb6"
+    },
+    {
+      "national": 841,
+      "id": 894,
+      "token": "SPECIES_FLAPPLE",
+      "source_path": "sound/direct_sound_samples/cries/flapple.wav",
+      "rate": 13379,
+      "frames": 9296,
+      "sha256": "7672ec1c3766c190cc54860fd64b5c6670a2065846423061908c67e946652b72"
+    },
+    {
+      "national": 842,
+      "id": 895,
+      "token": "SPECIES_APPLETUN",
+      "source_path": "sound/direct_sound_samples/cries/appletun.wav",
+      "rate": 13379,
+      "frames": 22570,
+      "sha256": "2a3d1ba191c86f9480d9c47fb132b848b2f566d9b90a0d0e058b9f192cbe3f57"
+    },
+    {
+      "national": 843,
+      "id": 896,
+      "token": "SPECIES_SILICOBRA",
+      "source_path": "sound/direct_sound_samples/cries/silicobra.wav",
+      "rate": 13379,
+      "frames": 15301,
+      "sha256": "7ea74eab416a8890d61f71e07fda525a9ed3ffa870797cadaac300b8a7fbd72c"
+    },
+    {
+      "national": 844,
+      "id": 897,
+      "token": "SPECIES_SANDACONDA",
+      "source_path": "sound/direct_sound_samples/cries/sandaconda.wav",
+      "rate": 13379,
+      "frames": 18430,
+      "sha256": "add85db202ce10ae82f745f60996a64f8e96e27339b7b244cd6d77f9f59bf4d5"
+    },
+    {
+      "national": 845,
+      "id": 898,
+      "token": "SPECIES_CRAMORANT",
+      "source_path": "sound/direct_sound_samples/cries/cramorant.wav",
+      "rate": 13379,
+      "frames": 12720,
+      "sha256": "14941bd0bb75f9bd8780e941f93d919d49d9d1bec9940ee44f05489d9f2f15d0"
+    },
+    {
+      "national": 846,
+      "id": 899,
+      "token": "SPECIES_ARROKUDA",
+      "source_path": "sound/direct_sound_samples/cries/arrokuda.wav",
+      "rate": 13379,
+      "frames": 19013,
+      "sha256": "1e631a3249a8d66134874402b7456149ab5e392110a6dd4b8e3c3630e51a9f8d"
+    },
+    {
+      "national": 847,
+      "id": 900,
+      "token": "SPECIES_BARRASKEWDA",
+      "source_path": "sound/direct_sound_samples/cries/barraskewda.wav",
+      "rate": 13379,
+      "frames": 22549,
+      "sha256": "6e0913175322606f99a67213543c33676104e40ae0a639dfc37117262353f8f2"
+    },
+    {
+      "national": 848,
+      "id": 901,
+      "token": "SPECIES_TOXEL",
+      "source_path": "sound/direct_sound_samples/cries/toxel.wav",
+      "rate": 13379,
+      "frames": 11506,
+      "sha256": "e0e9fe396944951e3315b89811552aca39e9e9dc9e39c464a7e5a13ec816718c"
+    },
+    {
+      "national": 849,
+      "id": 902,
+      "token": "SPECIES_TOXTRICITY",
+      "source_path": "sound/direct_sound_samples/cries/toxtricity_amped.wav",
+      "rate": 13379,
+      "frames": 24536,
+      "sha256": "36f10d6a39e31d548762c73d5ba59ff80b2554aa61c3a8ae14279b3938722021"
+    },
+    {
+      "national": 850,
+      "id": 903,
+      "token": "SPECIES_SIZZLIPEDE",
+      "source_path": "sound/direct_sound_samples/cries/sizzlipede.wav",
+      "rate": 13379,
+      "frames": 17195,
+      "sha256": "b77e3d6d5b48b230cfe33c9655baf5c793788dfed0c0bbce473685fe3a987a37"
+    },
+    {
+      "national": 851,
+      "id": 904,
+      "token": "SPECIES_CENTISKORCH",
+      "source_path": "sound/direct_sound_samples/cries/centiskorch.wav",
+      "rate": 13379,
+      "frames": 23439,
+      "sha256": "297641a21fce80ef4893ef360e5d0ac2750795b10ae776db750ff411ccfeec84"
+    },
+    {
+      "national": 852,
+      "id": 905,
+      "token": "SPECIES_CLOBBOPUS",
+      "source_path": "sound/direct_sound_samples/cries/clobbopus.wav",
+      "rate": 13379,
+      "frames": 15633,
+      "sha256": "f388a3191838b4bdf4666be4a8743bbf49c3f8d6723fb5f191c9c4327b4af3dc"
+    },
+    {
+      "national": 853,
+      "id": 906,
+      "token": "SPECIES_GRAPPLOCT",
+      "source_path": "sound/direct_sound_samples/cries/grapploct.wav",
+      "rate": 13379,
+      "frames": 22790,
+      "sha256": "6c742acc4d45b131a0d8f1b431584faef027c4ff81729d24a18171a578b9ffd9"
+    },
+    {
+      "national": 854,
+      "id": 907,
+      "token": "SPECIES_SINISTEA",
+      "source_path": "sound/direct_sound_samples/cries/sinistea.wav",
+      "rate": 13379,
+      "frames": 11230,
+      "sha256": "5d4ccd347585d441c165d58f2982a81ce6e618cae9eb9c94f8f4f32c1e66e389"
+    },
+    {
+      "national": 855,
+      "id": 908,
+      "token": "SPECIES_POLTEAGEIST",
+      "source_path": "sound/direct_sound_samples/cries/polteageist.wav",
+      "rate": 13379,
+      "frames": 20000,
+      "sha256": "5a917fe840f905e3f87e26fa3f1b38f0fe891540581b05db3eba841784f77629"
+    },
+    {
+      "national": 856,
+      "id": 909,
+      "token": "SPECIES_HATENNA",
+      "source_path": "sound/direct_sound_samples/cries/hatenna.wav",
+      "rate": 13379,
+      "frames": 20104,
+      "sha256": "b56951088cd979b6f88f88cf97ea61e69bc38cda6033c683e4c49e56a1e3ad83"
+    },
+    {
+      "national": 857,
+      "id": 910,
+      "token": "SPECIES_HATTREM",
+      "source_path": "sound/direct_sound_samples/cries/hattrem.wav",
+      "rate": 13379,
+      "frames": 24750,
+      "sha256": "2c7fc1e70d7c32d518e4e2b8938bcdc3efee525e1d18f0d0d71716cf45734cfa"
+    },
+    {
+      "national": 858,
+      "id": 911,
+      "token": "SPECIES_HATTERENE",
+      "source_path": "sound/direct_sound_samples/cries/hatterene.wav",
+      "rate": 13379,
+      "frames": 32381,
+      "sha256": "151c6d7080415c43cab950c4593d7bb02d72565f2858dca90427fd219dfce89a"
+    },
+    {
+      "national": 859,
+      "id": 912,
+      "token": "SPECIES_IMPIDIMP",
+      "source_path": "sound/direct_sound_samples/cries/impidimp.wav",
+      "rate": 13379,
+      "frames": 13945,
+      "sha256": "f3c3f2d9a244cf4742f250f344ab6adf393c450c7317f85c22d783085dc97051"
+    },
+    {
+      "national": 860,
+      "id": 913,
+      "token": "SPECIES_MORGREM",
+      "source_path": "sound/direct_sound_samples/cries/morgrem.wav",
+      "rate": 13379,
+      "frames": 14651,
+      "sha256": "411fde5f83bee8dce4518c3917dd5b8498fcfa66bd5c8babc57aa1fb430f2081"
+    },
+    {
+      "national": 861,
+      "id": 914,
+      "token": "SPECIES_GRIMMSNARL",
+      "source_path": "sound/direct_sound_samples/cries/grimmsnarl.wav",
+      "rate": 13379,
+      "frames": 19957,
+      "sha256": "c2e798939b1bf911ca31fac20ec0d2215253ee66d6afd7cf06e90e5ddcdd529a"
+    },
+    {
+      "national": 862,
+      "id": 915,
+      "token": "SPECIES_OBSTAGOON",
+      "source_path": "sound/direct_sound_samples/cries/obstagoon.wav",
+      "rate": 13379,
+      "frames": 20245,
+      "sha256": "d322b23a3ebcd826469128c6ad6815141fa4099e6e3f98bef1693f694e56d37a"
+    },
+    {
+      "national": 863,
+      "id": 916,
+      "token": "SPECIES_PERRSERKER",
+      "source_path": "sound/direct_sound_samples/cries/perrserker.wav",
+      "rate": 13379,
+      "frames": 11136,
+      "sha256": "98d0de5cd28593188e729e69b71c11530712fe7913db07589fb402dcb986edae"
+    },
+    {
+      "national": 864,
+      "id": 917,
+      "token": "SPECIES_CURSOLA",
+      "source_path": "sound/direct_sound_samples/cries/cursola.wav",
+      "rate": 13379,
+      "frames": 12710,
+      "sha256": "d00d16b0eb3359940512f4f4591aec08037c3d245b2eac9bb5b0e5a7c974636c"
+    },
+    {
+      "national": 865,
+      "id": 918,
+      "token": "SPECIES_SIRFETCHD",
+      "source_path": "sound/direct_sound_samples/cries/sirfetchd.wav",
+      "rate": 13379,
+      "frames": 8839,
+      "sha256": "9c6b85e6175c2898190d6b085a1507e517fcdb6371cd55301f2582aa14279b32"
+    },
+    {
+      "national": 866,
+      "id": 919,
+      "token": "SPECIES_MR_RIME",
+      "source_path": "sound/direct_sound_samples/cries/mr_rime.wav",
+      "rate": 13379,
+      "frames": 16829,
+      "sha256": "bf3308a76c84c9b26ed5a921246ff4a80e134eb9585a16cff06ff7bf7d8ac0a8"
+    },
+    {
+      "national": 867,
+      "id": 920,
+      "token": "SPECIES_RUNERIGUS",
+      "source_path": "sound/direct_sound_samples/cries/runerigus.wav",
+      "rate": 13379,
+      "frames": 17947,
+      "sha256": "fcf70412da14806dcef1ff36207f99e2640e97d181290fc760e0bacb7f10cfc5"
+    },
+    {
+      "national": 868,
+      "id": 921,
+      "token": "SPECIES_MILCERY",
+      "source_path": "sound/direct_sound_samples/cries/milcery.wav",
+      "rate": 13379,
+      "frames": 11446,
+      "sha256": "c90e394e323a5eae92fe44f7d268355643aaa3d4ff12d6e26015ebbfd7ea1fb3"
+    },
+    {
+      "national": 869,
+      "id": 922,
+      "token": "SPECIES_ALCREMIE",
+      "source_path": "sound/direct_sound_samples/cries/alcremie.wav",
+      "rate": 13379,
+      "frames": 20558,
+      "sha256": "d149befed170b122a27fdc239925588af93f85febdb9ec608bff5b4dbba3469f"
+    },
+    {
+      "national": 870,
+      "id": 923,
+      "token": "SPECIES_FALINKS",
+      "source_path": "sound/direct_sound_samples/cries/falinks.wav",
+      "rate": 13379,
+      "frames": 23197,
+      "sha256": "ccbacbbed9fa0e7144baf196b12bb056c811eab3c593ada143e94be214024590"
+    },
+    {
+      "national": 871,
+      "id": 924,
+      "token": "SPECIES_PINCURCHIN",
+      "source_path": "sound/direct_sound_samples/cries/pincurchin.wav",
+      "rate": 13379,
+      "frames": 11730,
+      "sha256": "21491b31101c8646cb71b64c74e4ec00c23c07af5e8b41772ba658c24c70e91d"
+    },
+    {
+      "national": 872,
+      "id": 925,
+      "token": "SPECIES_SNOM",
+      "source_path": "sound/direct_sound_samples/cries/snom.wav",
+      "rate": 13379,
+      "frames": 19575,
+      "sha256": "3efe2ca5b973f04ad116c97932514ea1f5b0b88bb317aa8c5411b5f1125f3f5c"
+    },
+    {
+      "national": 873,
+      "id": 926,
+      "token": "SPECIES_FROSMOTH",
+      "source_path": "sound/direct_sound_samples/cries/frosmoth.wav",
+      "rate": 13379,
+      "frames": 29143,
+      "sha256": "4b64add5c123111b4c1b02e87552999371d96e667cb1def65cd696715cf6d479"
+    },
+    {
+      "national": 874,
+      "id": 927,
+      "token": "SPECIES_STONJOURNER",
+      "source_path": "sound/direct_sound_samples/cries/stonjourner.wav",
+      "rate": 13379,
+      "frames": 21212,
+      "sha256": "4b8873d4f55f9a564bdb209d09a4b114bcacceba31910e6478a8fa570fba002f"
+    },
+    {
+      "national": 875,
+      "id": 928,
+      "token": "SPECIES_EISCUE",
+      "source_path": "sound/direct_sound_samples/cries/eiscue_ice.wav",
+      "rate": 13379,
+      "frames": 8218,
+      "sha256": "14ddaf8f68f6dc17cf62796d2c5308897b2bb26771641c950e7052c28146f94a"
+    },
+    {
+      "national": 876,
+      "id": 929,
+      "token": "SPECIES_INDEEDEE",
+      "source_path": "sound/direct_sound_samples/cries/indeedee_m.wav",
+      "rate": 13379,
+      "frames": 17510,
+      "sha256": "d3768243a27467e3757a65e90b18e0c0a726e0976bb6c9c3854a8c8cba25296b"
+    },
+    {
+      "national": 877,
+      "id": 930,
+      "token": "SPECIES_MORPEKO",
+      "source_path": "sound/direct_sound_samples/cries/morpeko_full_belly.wav",
+      "rate": 13379,
+      "frames": 13859,
+      "sha256": "8dffd386d2548b764ab2718074656157dfc01d75c81169d50b6a7b8efa681a36"
+    },
+    {
+      "national": 878,
+      "id": 931,
+      "token": "SPECIES_CUFANT",
+      "source_path": "sound/direct_sound_samples/cries/cufant.wav",
+      "rate": 13379,
+      "frames": 14650,
+      "sha256": "2939ecfbd83b0d76703c40cd1002438989676876f23dcc436f24a5ec2aed3d46"
+    },
+    {
+      "national": 879,
+      "id": 932,
+      "token": "SPECIES_COPPERAJAH",
+      "source_path": "sound/direct_sound_samples/cries/copperajah.wav",
+      "rate": 13379,
+      "frames": 24477,
+      "sha256": "b2a98b9ac8476808fca2e8039013812b004b88d90ee173c68a4efcdf416c01db"
+    },
+    {
+      "national": 880,
+      "id": 933,
+      "token": "SPECIES_DRACOZOLT",
+      "source_path": "sound/direct_sound_samples/cries/dracozolt.wav",
+      "rate": 13379,
+      "frames": 15985,
+      "sha256": "4585098f97528322a8e2d8dbdfa1095e3d2f0c73e7476ffabf5452beaa62282a"
+    },
+    {
+      "national": 881,
+      "id": 934,
+      "token": "SPECIES_ARCTOZOLT",
+      "source_path": "sound/direct_sound_samples/cries/arctozolt.wav",
+      "rate": 13379,
+      "frames": 15821,
+      "sha256": "a2eee8b093ff9b2157048f56c61071429714e4d16af5236c62b3102788a94c91"
+    },
+    {
+      "national": 882,
+      "id": 935,
+      "token": "SPECIES_DRACOVISH",
+      "source_path": "sound/direct_sound_samples/cries/dracovish.wav",
+      "rate": 13379,
+      "frames": 26369,
+      "sha256": "9132736579f7086306d9b28a6507622956268110e2790eb4c9ffde335ff7bff3"
+    },
+    {
+      "national": 883,
+      "id": 936,
+      "token": "SPECIES_ARCTOVISH",
+      "source_path": "sound/direct_sound_samples/cries/arctovish.wav",
+      "rate": 13379,
+      "frames": 22302,
+      "sha256": "dc9c237da79bd650f14c2d65b5ced37084952e90a47755ceaaec641cb3f83049"
+    },
+    {
+      "national": 884,
+      "id": 937,
+      "token": "SPECIES_DURALUDON",
+      "source_path": "sound/direct_sound_samples/cries/duraludon.wav",
+      "rate": 13379,
+      "frames": 24728,
+      "sha256": "a772cc0bff5f758fa82557f4705f11258ae96834bb2051e4c445d6cd293af828"
+    },
+    {
+      "national": 885,
+      "id": 938,
+      "token": "SPECIES_DREEPY",
+      "source_path": "sound/direct_sound_samples/cries/dreepy.wav",
+      "rate": 13379,
+      "frames": 19272,
+      "sha256": "bd7b28ef3a50c92a27febef8245eed4127543b558292b4cc67340a0145d8e27a"
+    },
+    {
+      "national": 886,
+      "id": 939,
+      "token": "SPECIES_DRAKLOAK",
+      "source_path": "sound/direct_sound_samples/cries/drakloak.wav",
+      "rate": 13379,
+      "frames": 22418,
+      "sha256": "fcc17136e23d1e4c454ca665a81727621c96069d971caef445ebdf443484ddd1"
+    },
+    {
+      "national": 887,
+      "id": 940,
+      "token": "SPECIES_DRAGAPULT",
+      "source_path": "sound/direct_sound_samples/cries/dragapult.wav",
+      "rate": 13379,
+      "frames": 29124,
+      "sha256": "5a3393ee37c62768e84e0e099703c853f0b28a9895b25e644753104b488d70f1"
+    },
+    {
+      "national": 888,
+      "id": 941,
+      "token": "SPECIES_ZACIAN",
+      "source_path": "sound/direct_sound_samples/cries/zacian_hero.wav",
+      "rate": 13379,
+      "frames": 34571,
+      "sha256": "aa8645f5ffe4adfeed5d55ff44b239b8bb08b37a597615e394abffab4e364d03"
+    },
+    {
+      "national": 889,
+      "id": 942,
+      "token": "SPECIES_ZAMAZENTA",
+      "source_path": "sound/direct_sound_samples/cries/zamazenta_hero.wav",
+      "rate": 13379,
+      "frames": 33669,
+      "sha256": "5570c18a67f4e916b7142fc619590519e8c5a5ab5fada662bc10bcba74c26bf4"
+    },
+    {
+      "national": 890,
+      "id": 943,
+      "token": "SPECIES_ETERNATUS",
+      "source_path": "sound/direct_sound_samples/cries/eternatus.wav",
+      "rate": 13379,
+      "frames": 37669,
+      "sha256": "93b2daa72c8b844956a41650f2dcc40bbb4d21d9bc777acff44a3a9f793a436e"
+    },
+    {
+      "national": 891,
+      "id": 944,
+      "token": "SPECIES_KUBFU",
+      "source_path": "sound/direct_sound_samples/cries/kubfu.wav",
+      "rate": 13379,
+      "frames": 11318,
+      "sha256": "8e483e5552ec1469d318938d05c4571711d0edb8d8ea5398db6df4ed9824d30a"
+    },
+    {
+      "national": 892,
+      "id": 945,
+      "token": "SPECIES_URSHIFU",
+      "source_path": "sound/direct_sound_samples/cries/urshifu_single_strike.wav",
+      "rate": 13379,
+      "frames": 12910,
+      "sha256": "9a19dc74f8049f235bceac7149dac990ba3c5bfd65dbcbbdd5366dbd9173bdcf"
+    },
+    {
+      "national": 893,
+      "id": 946,
+      "token": "SPECIES_ZARUDE",
+      "source_path": "sound/direct_sound_samples/cries/zarude.wav",
+      "rate": 13379,
+      "frames": 20473,
+      "sha256": "eb89df110aaa7e3d3819e41b5feccc1456bcadc16b3ada950565cf4fc78dd8d4"
+    },
+    {
+      "national": 894,
+      "id": 947,
+      "token": "SPECIES_REGIELEKI",
+      "source_path": "sound/direct_sound_samples/cries/regieleki.wav",
+      "rate": 13379,
+      "frames": 19416,
+      "sha256": "109266da400f8e1b9ca0ad98e31972d854b0d80844a9243ed3d430843131717a"
+    },
+    {
+      "national": 895,
+      "id": 948,
+      "token": "SPECIES_REGIDRAGO",
+      "source_path": "sound/direct_sound_samples/cries/regidrago.wav",
+      "rate": 13379,
+      "frames": 21088,
+      "sha256": "01e663fe081776cd89e662f3c2206ac5bccb831e7f70e1785e34ab6636d7651e"
+    },
+    {
+      "national": 896,
+      "id": 949,
+      "token": "SPECIES_GLASTRIER",
+      "source_path": "sound/direct_sound_samples/cries/glastrier.wav",
+      "rate": 13379,
+      "frames": 38776,
+      "sha256": "b1635b65744bfae500adc2e1cc4f1a4c192cc3ee305a1ad10614a0b5fec8194e"
+    },
+    {
+      "national": 897,
+      "id": 950,
+      "token": "SPECIES_SPECTRIER",
+      "source_path": "sound/direct_sound_samples/cries/spectrier.wav",
+      "rate": 13379,
+      "frames": 37722,
+      "sha256": "3dd1538dfcd81acef22602e60d1117b8d7f84190030b585c3f64a64fe3bbd576"
+    },
+    {
+      "national": 898,
+      "id": 951,
+      "token": "SPECIES_CALYREX",
+      "source_path": "sound/direct_sound_samples/cries/calyrex.wav",
+      "rate": 13379,
+      "frames": 37838,
+      "sha256": "8f6a9d645080e7dd0eba7fbfec2ea8df699801d3dd0488ecebad8626fe0a37cd"
+    },
+    {
+      "national": 899,
+      "id": 952,
+      "token": "SPECIES_WYRDEER",
+      "source_path": "sound/direct_sound_samples/cries/wyrdeer.wav",
+      "rate": 13379,
+      "frames": 18411,
+      "sha256": "a3b3cafc431ffc20b7eb57de078dc969eedd7236980c7e9e43f0ca85389d31bb"
+    },
+    {
+      "national": 900,
+      "id": 953,
+      "token": "SPECIES_KLEAVOR",
+      "source_path": "sound/direct_sound_samples/cries/kleavor.wav",
+      "rate": 13379,
+      "frames": 14202,
+      "sha256": "24fbaa0c7fd341d174c857d9302cc7cda2e403e5d12c481cd904717dbe7b8b35"
+    },
+    {
+      "national": 901,
+      "id": 954,
+      "token": "SPECIES_URSALUNA",
+      "source_path": "sound/direct_sound_samples/cries/ursaluna.wav",
+      "rate": 13379,
+      "frames": 14813,
+      "sha256": "5b7d484f9f303fb1242b4cfe314f839fe24847edf21a9bc173f41cd99bab8dbc"
+    },
+    {
+      "national": 902,
+      "id": 955,
+      "token": "SPECIES_BASCULEGION",
+      "source_path": "sound/direct_sound_samples/cries/basculegion.wav",
+      "rate": 13379,
+      "frames": 23486,
+      "sha256": "4af2f5b08499cc91db62c9ed1d1c11e5c5aabf25e0952ce8e141e3471c441608"
+    },
+    {
+      "national": 903,
+      "id": 956,
+      "token": "SPECIES_SNEASLER",
+      "source_path": "sound/direct_sound_samples/cries/sneasler.wav",
+      "rate": 13379,
+      "frames": 13419,
+      "sha256": "1e4652d64a8ee2c754d98d32cdd58052906e5fe08e4585cfb68dd6c257f9e4c3"
+    },
+    {
+      "national": 904,
+      "id": 957,
+      "token": "SPECIES_OVERQWIL",
+      "source_path": "sound/direct_sound_samples/cries/overqwil.wav",
+      "rate": 13379,
+      "frames": 10739,
+      "sha256": "a12681fdc262b8036739c27bc09431af73dbb72d5627767ab670997c7247ba82"
+    },
+    {
+      "national": 905,
+      "id": 958,
+      "token": "SPECIES_ENAMORUS",
+      "source_path": "sound/direct_sound_samples/cries/enamorus_incarnate.wav",
+      "rate": 13379,
+      "frames": 32668,
+      "sha256": "f07f4bc8c0a8975cd298d93344a4c318beace1cc91d6718c938bff768204bbbf"
+    },
+    {
+      "national": 906,
+      "id": 959,
+      "token": "SPECIES_SPRIGATITO",
+      "source_path": "sound/direct_sound_samples/cries/sprigatito.wav",
+      "rate": 13379,
+      "frames": 18719,
+      "sha256": "0d82d8fdd4e99b4baac748e6ccc8d5924a7e3796318fdc7251df000a7b6974b7"
+    },
+    {
+      "national": 907,
+      "id": 960,
+      "token": "SPECIES_FLORAGATO",
+      "source_path": "sound/direct_sound_samples/cries/floragato.wav",
+      "rate": 13379,
+      "frames": 17381,
+      "sha256": "5231fa087e5602ce96a5ca05d376a5fa94bbc00ad27c067e597949dc5e719d7a"
+    },
+    {
+      "national": 908,
+      "id": 961,
+      "token": "SPECIES_MEOWSCARADA",
+      "source_path": "sound/direct_sound_samples/cries/meowscarada.wav",
+      "rate": 13379,
+      "frames": 32098,
+      "sha256": "826e8aafc75c2095b9fc13f3ee71ebcbc5b61be72aa03a5f344794c043f77dd5"
+    },
+    {
+      "national": 909,
+      "id": 962,
+      "token": "SPECIES_FUECOCO",
+      "source_path": "sound/direct_sound_samples/cries/fuecoco.wav",
+      "rate": 13379,
+      "frames": 21395,
+      "sha256": "4045db9c84bb120743bc52e15b1069c7eb50cb08c5d783d5790585b8650fbb90"
+    },
+    {
+      "national": 910,
+      "id": 963,
+      "token": "SPECIES_CROCALOR",
+      "source_path": "sound/direct_sound_samples/cries/crocalor.wav",
+      "rate": 13379,
+      "frames": 18384,
+      "sha256": "76e3700367a7466eba4b608e9238a058beebd92997c39c0c823ee3a8976b682e"
+    },
+    {
+      "national": 911,
+      "id": 964,
+      "token": "SPECIES_SKELEDIRGE",
+      "source_path": "sound/direct_sound_samples/cries/skeledirge.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "84741d97184b34a1669f013153929d9e25e0d1aec6cda8eac0f263fd7be19cb4"
+    },
+    {
+      "national": 912,
+      "id": 965,
+      "token": "SPECIES_QUAXLY",
+      "source_path": "sound/direct_sound_samples/cries/quaxly.wav",
+      "rate": 13379,
+      "frames": 10692,
+      "sha256": "fc9b2057b96daa07056a76f9566a8b1f448ecb4c8ec44a6231c1bd024663fd35"
+    },
+    {
+      "national": 913,
+      "id": 966,
+      "token": "SPECIES_QUAXWELL",
+      "source_path": "sound/direct_sound_samples/cries/quaxwell.wav",
+      "rate": 13379,
+      "frames": 21395,
+      "sha256": "4cc5b1d0766520d15f7b2913c892c236b90eba83533cefd460e8adc564efea46"
+    },
+    {
+      "national": 914,
+      "id": 967,
+      "token": "SPECIES_QUAQUAVAL",
+      "source_path": "sound/direct_sound_samples/cries/quaquaval.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "bfcb6aee1ad9676ecfe446b82b35015325fa6c3aa011a6165e9e2ec001445433"
+    },
+    {
+      "national": 915,
+      "id": 968,
+      "token": "SPECIES_LECHONK",
+      "source_path": "sound/direct_sound_samples/cries/lechonk.wav",
+      "rate": 13379,
+      "frames": 10692,
+      "sha256": "6e37eb724c33b9d4b0ed2428c2c61d7e2c2e282ad6b3d2a49d7487d0b1a12795"
+    },
+    {
+      "national": 916,
+      "id": 969,
+      "token": "SPECIES_OINKOLOGNE",
+      "source_path": "sound/direct_sound_samples/cries/oinkologne_m.wav",
+      "rate": 13379,
+      "frames": 16043,
+      "sha256": "6a56f016ae9c4c07deb386e84aded5dcb53174b40525d26be060c6cf8be20458"
+    },
+    {
+      "national": 917,
+      "id": 970,
+      "token": "SPECIES_TAROUNTULA",
+      "source_path": "sound/direct_sound_samples/cries/tarountula.wav",
+      "rate": 13379,
+      "frames": 10692,
+      "sha256": "fe94b8ac94bc75cb3ab743e0c0577ebb7b062fc64740b13de7c1e379a582c9c6"
+    },
+    {
+      "national": 918,
+      "id": 971,
+      "token": "SPECIES_SPIDOPS",
+      "source_path": "sound/direct_sound_samples/cries/spidops.wav",
+      "rate": 13379,
+      "frames": 32098,
+      "sha256": "a3259a48c8a3e2c8977a7f088e12acce00eeaf41cb8eaa564cc1fe73f4b7f4c9"
+    },
+    {
+      "national": 919,
+      "id": 972,
+      "token": "SPECIES_NYMBLE",
+      "source_path": "sound/direct_sound_samples/cries/nymble.wav",
+      "rate": 13379,
+      "frames": 10467,
+      "sha256": "0fa3277b6ef7d6993fcf9907ee929bcc472d4d8969131bb4e8211486b55900cb"
+    },
+    {
+      "national": 920,
+      "id": 973,
+      "token": "SPECIES_LOKIX",
+      "source_path": "sound/direct_sound_samples/cries/lokix.wav",
+      "rate": 13379,
+      "frames": 18719,
+      "sha256": "8e1bb8e41273d5f2fab16b8b69fa76e309ccf788cd8e9bc77260ccf873d0a3ba"
+    },
+    {
+      "national": 921,
+      "id": 974,
+      "token": "SPECIES_PAWMI",
+      "source_path": "sound/direct_sound_samples/cries/pawmi.wav",
+      "rate": 13379,
+      "frames": 8016,
+      "sha256": "961278e05b80f5cdd48004f5981cb2a3a1eb8b64fdeedc850c8ebe7d3ff8e5b4"
+    },
+    {
+      "national": 922,
+      "id": 975,
+      "token": "SPECIES_PAWMO",
+      "source_path": "sound/direct_sound_samples/cries/pawmo.wav",
+      "rate": 13379,
+      "frames": 16043,
+      "sha256": "0b80cc4ee80fdb1d4b2f9cabedf4a03a569aad1c74ba6f8e0a3514daf980d891"
+    },
+    {
+      "national": 923,
+      "id": 976,
+      "token": "SPECIES_PAWMOT",
+      "source_path": "sound/direct_sound_samples/cries/pawmot.wav",
+      "rate": 13379,
+      "frames": 31955,
+      "sha256": "6eb80e7fe8431902b51e02d2e8b72467dd67cda763690fe7304fb79400af5d91"
+    },
+    {
+      "national": 924,
+      "id": 977,
+      "token": "SPECIES_TANDEMAUS",
+      "source_path": "sound/direct_sound_samples/cries/tandemaus.wav",
+      "rate": 13379,
+      "frames": 16043,
+      "sha256": "30bc32a197f99df7c641bbdaef1611ef959a4961e394520a196c5a0cef57ec2e"
+    },
+    {
+      "national": 925,
+      "id": 978,
+      "token": "SPECIES_MAUSHOLD",
+      "source_path": "sound/direct_sound_samples/cries/maushold_three.wav",
+      "rate": 13379,
+      "frames": 18803,
+      "sha256": "10ee23b1c8e056250f17acd99e07950f6d40e75e94868368dcc40c1ac7a7207d"
+    },
+    {
+      "national": 926,
+      "id": 979,
+      "token": "SPECIES_FIDOUGH",
+      "source_path": "sound/direct_sound_samples/cries/fidough.wav",
+      "rate": 13379,
+      "frames": 13367,
+      "sha256": "de811eadf4f9b174547a7647a11b2733cbaa5d286f16e2bd7990ef55768138df"
+    },
+    {
+      "national": 927,
+      "id": 980,
+      "token": "SPECIES_DACHSBUN",
+      "source_path": "sound/direct_sound_samples/cries/dachsbun.wav",
+      "rate": 13379,
+      "frames": 21441,
+      "sha256": "9221d7327f8182a48e70b160bea956d5d31a89e4a41cd1d219d5ae02ce058a98"
+    },
+    {
+      "national": 928,
+      "id": 981,
+      "token": "SPECIES_SMOLIV",
+      "source_path": "sound/direct_sound_samples/cries/smoliv.wav",
+      "rate": 13379,
+      "frames": 17381,
+      "sha256": "eb347560e6b9405c6f67a30b1db69a63af12b8c83d9566f44e4885621d440011"
+    },
+    {
+      "national": 929,
+      "id": 982,
+      "token": "SPECIES_DOLLIV",
+      "source_path": "sound/direct_sound_samples/cries/dolliv.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "e702b1cb29bb2c1556d0627976a368dd41e8cff662ad30511aeee14122666675"
+    },
+    {
+      "national": 930,
+      "id": 983,
+      "token": "SPECIES_ARBOLIVA",
+      "source_path": "sound/direct_sound_samples/cries/arboliva.wav",
+      "rate": 13379,
+      "frames": 37450,
+      "sha256": "213878536f617347119e7d71e8a2d4497b9f22db81e0b9981a896910f4ad6a00"
+    },
+    {
+      "national": 931,
+      "id": 984,
+      "token": "SPECIES_SQUAWKABILLY",
+      "source_path": "sound/direct_sound_samples/cries/squawkabilly.wav",
+      "rate": 13379,
+      "frames": 27499,
+      "sha256": "6797d9c9fdbadbb41a26f6e68d70bdc8094a1e633367e059bdf5a1699efa0124"
+    },
+    {
+      "national": 932,
+      "id": 985,
+      "token": "SPECIES_NACLI",
+      "source_path": "sound/direct_sound_samples/cries/nacli.wav",
+      "rate": 13379,
+      "frames": 18719,
+      "sha256": "15099b799dbd6c8a0457dafdc4ee9a9d632e9df53291321988bb7df3db20f78f"
+    },
+    {
+      "national": 933,
+      "id": 986,
+      "token": "SPECIES_NACLSTACK",
+      "source_path": "sound/direct_sound_samples/cries/naclstack.wav",
+      "rate": 13379,
+      "frames": 33018,
+      "sha256": "c7425aca46fc6d4acb781e774b5828edbc9daf478d1f72a0e8ab2c990bd8281f"
+    },
+    {
+      "national": 934,
+      "id": 987,
+      "token": "SPECIES_GARGANACL",
+      "source_path": "sound/direct_sound_samples/cries/garganacl.wav",
+      "rate": 13379,
+      "frames": 37450,
+      "sha256": "0369f7904d9429cc352bc06f6e66e06efb7f95fcf386e055cb4491ff0d448b89"
+    },
+    {
+      "national": 935,
+      "id": 988,
+      "token": "SPECIES_CHARCADET",
+      "source_path": "sound/direct_sound_samples/cries/charcadet.wav",
+      "rate": 13379,
+      "frames": 18719,
+      "sha256": "6ec58bff8cba5a214a9bd0a5e174b0cbc9df7c7f89bdd828d9a8ecd9813e89d4"
+    },
+    {
+      "national": 936,
+      "id": 989,
+      "token": "SPECIES_ARMAROUGE",
+      "source_path": "sound/direct_sound_samples/cries/armarouge.wav",
+      "rate": 13379,
+      "frames": 26914,
+      "sha256": "37b41d1d112f10d236cc8a65307de0fd4c2e73fb2d1a9e13959bd63ce9b0c583"
+    },
+    {
+      "national": 937,
+      "id": 990,
+      "token": "SPECIES_CERULEDGE",
+      "source_path": "sound/direct_sound_samples/cries/ceruledge.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "fa4d932ee94f246b5f6c4e8247e7df6411696a0b3f6e6011c7df09f81050d5f2"
+    },
+    {
+      "national": 938,
+      "id": 991,
+      "token": "SPECIES_TADBULB",
+      "source_path": "sound/direct_sound_samples/cries/tadbulb.wav",
+      "rate": 13379,
+      "frames": 16044,
+      "sha256": "dc428a48d3af85d5b7472b5fe86653520d319218d9a871789295689a47280285"
+    },
+    {
+      "national": 939,
+      "id": 992,
+      "token": "SPECIES_BELLIBOLT",
+      "source_path": "sound/direct_sound_samples/cries/bellibolt.wav",
+      "rate": 13379,
+      "frames": 40126,
+      "sha256": "e7a91249bb2e70d0261b70104ed7ca88407e5d9f1925e439aea2eff446ee2b75"
+    },
+    {
+      "national": 940,
+      "id": 993,
+      "token": "SPECIES_WATTREL",
+      "source_path": "sound/direct_sound_samples/cries/wattrel.wav",
+      "rate": 13379,
+      "frames": 13367,
+      "sha256": "e4db22f1f68574cfc5803259044df99138bb32994ff58f92b3ae9bc830847c29"
+    },
+    {
+      "national": 941,
+      "id": 994,
+      "token": "SPECIES_KILOWATTREL",
+      "source_path": "sound/direct_sound_samples/cries/kilowattrel.wav",
+      "rate": 13379,
+      "frames": 24071,
+      "sha256": "cbf758d223d84cd1f8a5c7b954b33c87098e9b1abff8f6041699ded59d61cfc0"
+    },
+    {
+      "national": 942,
+      "id": 995,
+      "token": "SPECIES_MASCHIFF",
+      "source_path": "sound/direct_sound_samples/cries/maschiff.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "3099d751876363c682c44389bad79a76579654c927cb1c17e3adfadf9c38737d"
+    },
+    {
+      "national": 943,
+      "id": 996,
+      "token": "SPECIES_MABOSSTIFF",
+      "source_path": "sound/direct_sound_samples/cries/mabosstiff.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "372859549c89858322d45264e216556a1a9a53e388594b596fa4b80936808424"
+    },
+    {
+      "national": 944,
+      "id": 997,
+      "token": "SPECIES_SHROODLE",
+      "source_path": "sound/direct_sound_samples/cries/shroodle.wav",
+      "rate": 13379,
+      "frames": 24071,
+      "sha256": "bd11f7650b970929c761e727539f9a19f2abdc7cbe5b9e2fae5e9d17f1afdd81"
+    },
+    {
+      "national": 945,
+      "id": 998,
+      "token": "SPECIES_GRAFAIAI",
+      "source_path": "sound/direct_sound_samples/cries/grafaiai.wav",
+      "rate": 13379,
+      "frames": 22398,
+      "sha256": "139a52b422024f7b9850dcb65ab35cca3c1719b27ac310f32f6d80e7b3b43912"
+    },
+    {
+      "national": 946,
+      "id": 999,
+      "token": "SPECIES_BRAMBLIN",
+      "source_path": "sound/direct_sound_samples/cries/bramblin.wav",
+      "rate": 13379,
+      "frames": 32098,
+      "sha256": "847577d71442b3f501cffc3195a2aa3ef76b7f03a97ffbc756a0c1354b2c6c48"
+    },
+    {
+      "national": 947,
+      "id": 1000,
+      "token": "SPECIES_BRAMBLEGHAST",
+      "source_path": "sound/direct_sound_samples/cries/brambleghast.wav",
+      "rate": 13379,
+      "frames": 33770,
+      "sha256": "5f4b1f8b6326460231381fe58bbb19c6eaa1e65a3d95f944b388e4c73d83b6e8"
+    },
+    {
+      "national": 948,
+      "id": 1001,
+      "token": "SPECIES_TOEDSCOOL",
+      "source_path": "sound/direct_sound_samples/cries/toedscool.wav",
+      "rate": 13379,
+      "frames": 16043,
+      "sha256": "9934f68bba90593baf5cc94e524fe0863cd95b9248b14e144f0dc9d1d5591eaa"
+    },
+    {
+      "national": 949,
+      "id": 1002,
+      "token": "SPECIES_TOEDSCRUEL",
+      "source_path": "sound/direct_sound_samples/cries/toedscruel.wav",
+      "rate": 13379,
+      "frames": 21311,
+      "sha256": "a6059fd2cb5e60e23603db41f753a58391c89104d3637525ea014ddb991c00f2"
+    },
+    {
+      "national": 950,
+      "id": 1003,
+      "token": "SPECIES_KLAWF",
+      "source_path": "sound/direct_sound_samples/cries/klawf.wav",
+      "rate": 13379,
+      "frames": 42801,
+      "sha256": "c89274bc3abd174eb466617056c9c8da0fe18a6fec3ce25af82dde6452cb726f"
+    },
+    {
+      "national": 951,
+      "id": 1004,
+      "token": "SPECIES_CAPSAKID",
+      "source_path": "sound/direct_sound_samples/cries/capsakid.wav",
+      "rate": 13379,
+      "frames": 13368,
+      "sha256": "92325e67fbcb9442435fb4765decea417c9890c9d18644cefa15430cad0c8cf0"
+    },
+    {
+      "national": 952,
+      "id": 1005,
+      "token": "SPECIES_SCOVILLAIN",
+      "source_path": "sound/direct_sound_samples/cries/scovillain.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "7a8df198d1da976d92673ed3cfda749dbe101838f615f6a92785f6ef83847687"
+    },
+    {
+      "national": 953,
+      "id": 1006,
+      "token": "SPECIES_RELLOR",
+      "source_path": "sound/direct_sound_samples/cries/rellor.wav",
+      "rate": 13379,
+      "frames": 16043,
+      "sha256": "9d08e9d43e32e3b0cc4e0be6064bcfa761f5ba78813a38ea2aae9f90f0c1889c"
+    },
+    {
+      "national": 954,
+      "id": 1007,
+      "token": "SPECIES_RABSCA",
+      "source_path": "sound/direct_sound_samples/cries/rabsca.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "a1924ee2b7c1ec869a1ada318cc64c38cad6452e9adec33151a422404e5ce091"
+    },
+    {
+      "national": 955,
+      "id": 1008,
+      "token": "SPECIES_FLITTLE",
+      "source_path": "sound/direct_sound_samples/cries/flittle.wav",
+      "rate": 13379,
+      "frames": 21395,
+      "sha256": "e3ab26a438d62170d50970b77d8dad78fe877c8117d7c059763bbd3c8cb00806"
+    },
+    {
+      "national": 956,
+      "id": 1009,
+      "token": "SPECIES_ESPATHRA",
+      "source_path": "sound/direct_sound_samples/cries/espathra.wav",
+      "rate": 13379,
+      "frames": 40125,
+      "sha256": "75e5813371d8907c4f39c7dd55f18d898bfb3372cecb170f8d32c8c1b3ca8d40"
+    },
+    {
+      "national": 957,
+      "id": 1010,
+      "token": "SPECIES_TINKATINK",
+      "source_path": "sound/direct_sound_samples/cries/tinkatink.wav",
+      "rate": 13379,
+      "frames": 21395,
+      "sha256": "7b5bf6134715a466b07f5cbce33c24f4226e0ce8c2ffd93fb20c56431048c8da"
+    },
+    {
+      "national": 958,
+      "id": 1011,
+      "token": "SPECIES_TINKATUFF",
+      "source_path": "sound/direct_sound_samples/cries/tinkatuff.wav",
+      "rate": 13379,
+      "frames": 24071,
+      "sha256": "2e9fd8d7e0f753b1628174098a742e02b4203a82edc59814a7dd9a33f3034cd7"
+    },
+    {
+      "national": 959,
+      "id": 1012,
+      "token": "SPECIES_TINKATON",
+      "source_path": "sound/direct_sound_samples/cries/tinkaton.wav",
+      "rate": 13379,
+      "frames": 26746,
+      "sha256": "981bab7a1cd0d5eff485ac042b72806b8c95f0a750825b71b4b1d72e368e2553"
+    },
+    {
+      "national": 960,
+      "id": 1013,
+      "token": "SPECIES_WIGLETT",
+      "source_path": "sound/direct_sound_samples/cries/wiglett.wav",
+      "rate": 13379,
+      "frames": 21395,
+      "sha256": "c84f8de93ab5338ea5aef014f53d9b30c571c6514f1536d7caa11645bb9ec69a"
+    },
+    {
+      "national": 961,
+      "id": 1014,
+      "token": "SPECIES_WUGTRIO",
+      "source_path": "sound/direct_sound_samples/cries/wugtrio.wav",
+      "rate": 13379,
+      "frames": 26746,
+      "sha256": "82c11a628b22dc8ed199b5abb86270c1b810a6f5890836c9082778a4def4a73a"
+    },
+    {
+      "national": 962,
+      "id": 1015,
+      "token": "SPECIES_BOMBIRDIER",
+      "source_path": "sound/direct_sound_samples/cries/bombirdier.wav",
+      "rate": 13379,
+      "frames": 32098,
+      "sha256": "b5fd3de25104746d684f5f29d1a8ed17ae4c2ea7d080290966dd29558fbf9c3c"
+    },
+    {
+      "national": 963,
+      "id": 1016,
+      "token": "SPECIES_FINIZEN",
+      "source_path": "sound/direct_sound_samples/cries/finizen.wav",
+      "rate": 13379,
+      "frames": 32205,
+      "sha256": "994d629a6d87c2b77c97bdd76e4e50e7fdb9e46ad5430dc37db8bb5355c64e38"
+    },
+    {
+      "national": 964,
+      "id": 1017,
+      "token": "SPECIES_PALAFIN",
+      "source_path": "sound/direct_sound_samples/cries/finizen.wav",
+      "rate": 13379,
+      "frames": 32205,
+      "sha256": "994d629a6d87c2b77c97bdd76e4e50e7fdb9e46ad5430dc37db8bb5355c64e38"
+    },
+    {
+      "national": 965,
+      "id": 1018,
+      "token": "SPECIES_VAROOM",
+      "source_path": "sound/direct_sound_samples/cries/varoom.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "4e1f17c75cd016af5c70abdea4cc5366586fd6e005d2577e544f9a6f4c8d82d7"
+    },
+    {
+      "national": 966,
+      "id": 1019,
+      "token": "SPECIES_REVAVROOM",
+      "source_path": "sound/direct_sound_samples/cries/revavroom.wav",
+      "rate": 13379,
+      "frames": 34774,
+      "sha256": "3c69fe9e07bc801acd538bbf6b7e48a96137ebba3b4a5b1b1f46d2a7cb7b7fb3"
+    },
+    {
+      "national": 967,
+      "id": 1020,
+      "token": "SPECIES_CYCLIZAR",
+      "source_path": "sound/direct_sound_samples/cries/cyclizar.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "4344be7293d4264e79700448cff170b796164bf51fb0da8200b80d6a87bea47b"
+    },
+    {
+      "national": 968,
+      "id": 1021,
+      "token": "SPECIES_ORTHWORM",
+      "source_path": "sound/direct_sound_samples/cries/orthworm.wav",
+      "rate": 13379,
+      "frames": 42717,
+      "sha256": "3cdd3fd701c1ac7eba76359f30271b0a51a19aab6928b909fc6a85c2342b07b3"
+    },
+    {
+      "national": 969,
+      "id": 1022,
+      "token": "SPECIES_GLIMMET",
+      "source_path": "sound/direct_sound_samples/cries/glimmet.wav",
+      "rate": 13379,
+      "frames": 25910,
+      "sha256": "1defb7701212cde2986a1513a549e372208128089cefc4bb2f37e5e18c189635"
+    },
+    {
+      "national": 970,
+      "id": 1023,
+      "token": "SPECIES_GLIMMORA",
+      "source_path": "sound/direct_sound_samples/cries/glimmora.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "bc3c74a9bc021461197406f1b949893f7d1606738badeb898c5d52f6b3f48553"
+    },
+    {
+      "national": 971,
+      "id": 1024,
+      "token": "SPECIES_GREAVARD",
+      "source_path": "sound/direct_sound_samples/cries/greavard.wav",
+      "rate": 13379,
+      "frames": 16043,
+      "sha256": "44e4995e039fdd8bcefad052f6df1054611e90c26b1618004c2f6607543d6fda"
+    },
+    {
+      "national": 972,
+      "id": 1025,
+      "token": "SPECIES_HOUNDSTONE",
+      "source_path": "sound/direct_sound_samples/cries/houndstone.wav",
+      "rate": 13379,
+      "frames": 32098,
+      "sha256": "98a4199599b8133e411b34c19b146b8bae3abedb086452cbf634fb9ffdb27c94"
+    },
+    {
+      "national": 973,
+      "id": 1026,
+      "token": "SPECIES_FLAMIGO",
+      "source_path": "sound/direct_sound_samples/cries/flamigo.wav",
+      "rate": 13379,
+      "frames": 18719,
+      "sha256": "ffd4f1d22e0d2bfd037db88668f2074ed8729ecac0a6c2d673e05c72fa1870c3"
+    },
+    {
+      "national": 974,
+      "id": 1027,
+      "token": "SPECIES_CETODDLE",
+      "source_path": "sound/direct_sound_samples/cries/cetoddle.wav",
+      "rate": 13379,
+      "frames": 26746,
+      "sha256": "b44e3239aa142fced702b6a7b7fcd3601d030e1a50b6551920e01b027e276c89"
+    },
+    {
+      "national": 975,
+      "id": 1028,
+      "token": "SPECIES_CETITAN",
+      "source_path": "sound/direct_sound_samples/cries/cetitan.wav",
+      "rate": 13379,
+      "frames": 53588,
+      "sha256": "86ee4758abb72d72c8c0bf4cc8d19d567210a49b54c1d0bd7381dcdfa863906e"
+    },
+    {
+      "national": 976,
+      "id": 1029,
+      "token": "SPECIES_VELUZA",
+      "source_path": "sound/direct_sound_samples/cries/veluza.wav",
+      "rate": 13379,
+      "frames": 26746,
+      "sha256": "7b881e9b101bc7bf51d6e7e9894b7c0a147f78656dfccf495786ecf3fe3b9869"
+    },
+    {
+      "national": 977,
+      "id": 1030,
+      "token": "SPECIES_DONDOZO",
+      "source_path": "sound/direct_sound_samples/cries/dondozo.wav",
+      "rate": 13379,
+      "frames": 40125,
+      "sha256": "769d646f600d1150eeda5abda6758ba9626215d8f173f3de525e1a01e45c6c0b"
+    },
+    {
+      "national": 978,
+      "id": 1031,
+      "token": "SPECIES_TATSUGIRI",
+      "source_path": "sound/direct_sound_samples/cries/tatsugiri_curly.wav",
+      "rate": 13379,
+      "frames": 13367,
+      "sha256": "2151cca5362badeff8cdf096ecb3026a51fc0ba9571fa2fd43022783b451bd17"
+    },
+    {
+      "national": 979,
+      "id": 1032,
+      "token": "SPECIES_ANNIHILAPE",
+      "source_path": "sound/direct_sound_samples/cries/annihilape.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "55c2f50ce57650cd897679fb891bb0ea0b238edf64904dae169bd3f959fe7ab6"
+    },
+    {
+      "national": 980,
+      "id": 1033,
+      "token": "SPECIES_CLODSIRE",
+      "source_path": "sound/direct_sound_samples/cries/clodsire.wav",
+      "rate": 13379,
+      "frames": 18719,
+      "sha256": "c61d1e28753e8a2cc03fbbb0a8729d95b2f7d80f205a20ad40c912f04fb92feb"
+    },
+    {
+      "national": 981,
+      "id": 1034,
+      "token": "SPECIES_FARIGIRAF",
+      "source_path": "sound/direct_sound_samples/cries/farigiraf.wav",
+      "rate": 13379,
+      "frames": 21395,
+      "sha256": "ece2509b3d0b19f67aba60c281af1cde9d36082b67fe34c9b32e69fc8c300fe3"
+    },
+    {
+      "national": 982,
+      "id": 1035,
+      "token": "SPECIES_DUDUNSPARCE",
+      "source_path": "sound/direct_sound_samples/cries/dudunsparce.wav",
+      "rate": 13379,
+      "frames": 28753,
+      "sha256": "2cd9f9b453115e0cf38eec2d382c6caf68a4adfd68fa66cd507ee21347fdead6"
+    },
+    {
+      "national": 983,
+      "id": 1036,
+      "token": "SPECIES_KINGAMBIT",
+      "source_path": "sound/direct_sound_samples/cries/kingambit.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "e4043f71c7c6afb533e250ceb348f17bc783b5094b3873629e9f8d161afc9188"
+    },
+    {
+      "national": 984,
+      "id": 1037,
+      "token": "SPECIES_GREAT_TUSK",
+      "source_path": "sound/direct_sound_samples/cries/great_tusk.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "b758201c8e546074c90486136331fbe86f985c0a5306bc971d170a09d7e7c374"
+    },
+    {
+      "national": 985,
+      "id": 1038,
+      "token": "SPECIES_SCREAM_TAIL",
+      "source_path": "sound/direct_sound_samples/cries/scream_tail.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "47b4236363526cc59448d4090f3ce4d378673d3794f2fe9d4ac72898889ac6c0"
+    },
+    {
+      "national": 986,
+      "id": 1039,
+      "token": "SPECIES_BRUTE_BONNET",
+      "source_path": "sound/direct_sound_samples/cries/brute_bonnet.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "decf29dc33be44ecbb4ba68caac15f69e4d6ef335dc1fa109e2aba775f973f78"
+    },
+    {
+      "national": 987,
+      "id": 1040,
+      "token": "SPECIES_FLUTTER_MANE",
+      "source_path": "sound/direct_sound_samples/cries/flutter_mane.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "ca6543fa96773a6a4e905347cdbdbcb1e45d67bae080bd01b749f746e98498ef"
+    },
+    {
+      "national": 988,
+      "id": 1041,
+      "token": "SPECIES_SLITHER_WING",
+      "source_path": "sound/direct_sound_samples/cries/slither_wing.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "8a72f52562de717f83d0888249c41347536e5e806df98f53191637a862f49309"
+    },
+    {
+      "national": 989,
+      "id": 1042,
+      "token": "SPECIES_SANDY_SHOCKS",
+      "source_path": "sound/direct_sound_samples/cries/sandy_shocks.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "37b7cb771f7052349e79bb3fa3e13b1239b9dbd74a583ae4199b03cd4fc8f29e"
+    },
+    {
+      "national": 990,
+      "id": 1043,
+      "token": "SPECIES_IRON_TREADS",
+      "source_path": "sound/direct_sound_samples/cries/iron_treads.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "6096bee82fdd9a386fd5c7998f3314defbaa185583405fadc3c79bda438ed8f8"
+    },
+    {
+      "national": 991,
+      "id": 1044,
+      "token": "SPECIES_IRON_BUNDLE",
+      "source_path": "sound/direct_sound_samples/cries/iron_bundle.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "e65139a51940c0ce637214801c2d1e003cf009861646e0ebbac9a8aecd10a002"
+    },
+    {
+      "national": 992,
+      "id": 1045,
+      "token": "SPECIES_IRON_HANDS",
+      "source_path": "sound/direct_sound_samples/cries/iron_hands.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "56c4edd4549ad20753ab28e2d9a10d1ef773a4dee8bb645590d1e3a6f89787ab"
+    },
+    {
+      "national": 993,
+      "id": 1046,
+      "token": "SPECIES_IRON_JUGULIS",
+      "source_path": "sound/direct_sound_samples/cries/iron_jugulis.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "1b6c968c7afbcef20b54f86ceb7e6164b34b389b5084c04031c3023f09c708b5"
+    },
+    {
+      "national": 994,
+      "id": 1047,
+      "token": "SPECIES_IRON_MOTH",
+      "source_path": "sound/direct_sound_samples/cries/iron_moth.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "08e412941cf63913995a609cc1e5bc3d7e5e871e959aa9ae657a8ac88773d9dc"
+    },
+    {
+      "national": 995,
+      "id": 1048,
+      "token": "SPECIES_IRON_THORNS",
+      "source_path": "sound/direct_sound_samples/cries/iron_thorns.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "5e2cf2efc5eeb7dcb25c9dda2409dd250dedbc093c13c3a7acb731127ae63ae9"
+    },
+    {
+      "national": 996,
+      "id": 1049,
+      "token": "SPECIES_FRIGIBAX",
+      "source_path": "sound/direct_sound_samples/cries/frigibax.wav",
+      "rate": 13379,
+      "frames": 18719,
+      "sha256": "0a107379a335eee65987a2fc802bb43de5e515d352073a187d2bcd1537775a51"
+    },
+    {
+      "national": 997,
+      "id": 1050,
+      "token": "SPECIES_ARCTIBAX",
+      "source_path": "sound/direct_sound_samples/cries/arctibax.wav",
+      "rate": 13379,
+      "frames": 21478,
+      "sha256": "f105571a55e66d3cc3fb770b0cb8279824c36704f9ddf78caab314f519b28fd3"
+    },
+    {
+      "national": 998,
+      "id": 1051,
+      "token": "SPECIES_BAXCALIBUR",
+      "source_path": "sound/direct_sound_samples/cries/baxcalibur.wav",
+      "rate": 13379,
+      "frames": 37450,
+      "sha256": "1dd1a3436944d4ca433d363576e51e416002de2b72ab4f8446615f2038f61b60"
+    },
+    {
+      "national": 999,
+      "id": 1052,
+      "token": "SPECIES_GIMMIGHOUL",
+      "source_path": "sound/direct_sound_samples/cries/gimmighoul_chest.wav",
+      "rate": 13379,
+      "frames": 32182,
+      "sha256": "a79eac24e6df84a78669a31def1ca5f15b51b70a157962b1dbd21790874ccad6"
+    },
+    {
+      "national": 1000,
+      "id": 1053,
+      "token": "SPECIES_GHOLDENGO",
+      "source_path": "sound/direct_sound_samples/cries/gholdengo.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "67f040d91ddcad184d717f12f4f593d3a3690c586508b8ac8a8f5bee070745f4"
+    },
+    {
+      "national": 1001,
+      "id": 1054,
+      "token": "SPECIES_WO_CHIEN",
+      "source_path": "sound/direct_sound_samples/cries/wo_chien.wav",
+      "rate": 13379,
+      "frames": 32098,
+      "sha256": "34f4d90b98283385d4627aab30578905176da00c69e4ac01309a932cee4379b2"
+    },
+    {
+      "national": 1002,
+      "id": 1055,
+      "token": "SPECIES_CHIEN_PAO",
+      "source_path": "sound/direct_sound_samples/cries/chien_pao.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "406ba83954292ee406209664cd5587a53d6c31b47ceb27b1931dc5a3180be940"
+    },
+    {
+      "national": 1003,
+      "id": 1056,
+      "token": "SPECIES_TING_LU",
+      "source_path": "sound/direct_sound_samples/cries/ting_lu.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "465ba4d603e6eae29af6354802b1d6db059326f188995b1f3033059130b031c7"
+    },
+    {
+      "national": 1004,
+      "id": 1057,
+      "token": "SPECIES_CHI_YU",
+      "source_path": "sound/direct_sound_samples/cries/chi_yu.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "8952c2f57d18695653005e124cf4b9cf286b9c07965a387e056d61d62969c895"
+    },
+    {
+      "national": 1005,
+      "id": 1058,
+      "token": "SPECIES_ROARING_MOON",
+      "source_path": "sound/direct_sound_samples/cries/roaring_moon.wav",
+      "rate": 13379,
+      "frames": 26746,
+      "sha256": "8e18bed72d3e4a329c9632913cc55a4aec009e07b2d1fa05557d776be7941778"
+    },
+    {
+      "national": 1006,
+      "id": 1059,
+      "token": "SPECIES_IRON_VALIANT",
+      "source_path": "sound/direct_sound_samples/cries/iron_valiant.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "0d1b03a36ae14fc516b444191c49be10b3fea72507747bdb156f8dced9c9bf7d"
+    },
+    {
+      "national": 1007,
+      "id": 1060,
+      "token": "SPECIES_KORAIDON",
+      "source_path": "sound/direct_sound_samples/cries/koraidon.wav",
+      "rate": 13379,
+      "frames": 38453,
+      "sha256": "ee866633931bd6908e8d054d793f5844904e7a9937dd85bd2a69bc4a95eabc39"
+    },
+    {
+      "national": 1008,
+      "id": 1061,
+      "token": "SPECIES_MIRAIDON",
+      "source_path": "sound/direct_sound_samples/cries/miraidon.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "513c1e5742f95931176766acb1c0f8d10b78e5c8e28cf5b29e8b39749396ac06"
+    },
+    {
+      "national": 1009,
+      "id": 1062,
+      "token": "SPECIES_WALKING_WAKE",
+      "source_path": "sound/direct_sound_samples/cries/walking_wake.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "cd57fa6d8578983ca00aa0cbcf12c2d75961fdc23e475968747020016a634e57"
+    },
+    {
+      "national": 1010,
+      "id": 1063,
+      "token": "SPECIES_IRON_LEAVES",
+      "source_path": "sound/direct_sound_samples/cries/iron_leaves.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "bebfff92081d29d69f0a0bcf716a7e065436320664c78c1f7006268f479cce5b"
+    },
+    {
+      "national": 1011,
+      "id": 1064,
+      "token": "SPECIES_DIPPLIN",
+      "source_path": "sound/direct_sound_samples/cries/dipplin.wav",
+      "rate": 13379,
+      "frames": 15374,
+      "sha256": "b13f291b54ce0d5f40eb47e8100cf12aa6088e4791c381ea54642ea70395a33b"
+    },
+    {
+      "national": 1012,
+      "id": 1065,
+      "token": "SPECIES_POLTCHAGEIST",
+      "source_path": "sound/direct_sound_samples/cries/poltchageist.wav",
+      "rate": 13379,
+      "frames": 20893,
+      "sha256": "675f881655fb556d0ba27b0ed6d6745e65a6c41ec8d57932f3c6f7dcff733af4"
+    },
+    {
+      "national": 1013,
+      "id": 1066,
+      "token": "SPECIES_SINISTCHA",
+      "source_path": "sound/direct_sound_samples/cries/sinistcha.wav",
+      "rate": 13379,
+      "frames": 21395,
+      "sha256": "9cb61cf8352ad9207668eb6ed033c2b5bc199ce8863a331495ea6cef0c2ff71d"
+    },
+    {
+      "national": 1014,
+      "id": 1067,
+      "token": "SPECIES_OKIDOGI",
+      "source_path": "sound/direct_sound_samples/cries/okidogi.wav",
+      "rate": 13379,
+      "frames": 29255,
+      "sha256": "aa909d01fb66bb95646fe26ff5f767c122b8277eb0213e7f1aec795159e79645"
+    },
+    {
+      "national": 1015,
+      "id": 1068,
+      "token": "SPECIES_MUNKIDORI",
+      "source_path": "sound/direct_sound_samples/cries/munkidori.wav",
+      "rate": 13379,
+      "frames": 21395,
+      "sha256": "bd399ae536105920f8528b09f820cfa5bd8e98a9e18db37c52f13a89bb6e589a"
+    },
+    {
+      "national": 1016,
+      "id": 1069,
+      "token": "SPECIES_FEZANDIPITI",
+      "source_path": "sound/direct_sound_samples/cries/fezandipiti.wav",
+      "rate": 13379,
+      "frames": 32098,
+      "sha256": "88cc47876cff202b7663f49452828832d746341193877e3e5a5eb0ed5fda65d7"
+    },
+    {
+      "national": 1017,
+      "id": 1070,
+      "token": "SPECIES_OGERPON",
+      "source_path": "sound/direct_sound_samples/cries/ogerpon.wav",
+      "rate": 13379,
+      "frames": 18719,
+      "sha256": "d71767e47dde95ead2095e39e25679b5e68affd253725c3240481346b607674b"
+    },
+    {
+      "national": 1018,
+      "id": 1071,
+      "token": "SPECIES_ARCHALUDON",
+      "source_path": "sound/direct_sound_samples/cries/archaludon.wav",
+      "rate": 13379,
+      "frames": 30091,
+      "sha256": "64e73812cc240fc6f86713979c4da026073f290d320ce87c9c92cdd3df3b5f48"
+    },
+    {
+      "national": 1019,
+      "id": 1072,
+      "token": "SPECIES_HYDRAPPLE",
+      "source_path": "sound/direct_sound_samples/cries/hydrapple.wav",
+      "rate": 13379,
+      "frames": 25409,
+      "sha256": "bf81740ab5bcaad232f219cbf61a0a0a555674dee0accb66d71cb30e0f9dc1e9"
+    },
+    {
+      "national": 1020,
+      "id": 1073,
+      "token": "SPECIES_GOUGING_FIRE",
+      "source_path": "sound/direct_sound_samples/cries/gouging_fire.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "e8e36b79c9ab567916f49d8a7efff9af2368bd50f91903beb049566b886662e8"
+    },
+    {
+      "national": 1021,
+      "id": 1074,
+      "token": "SPECIES_RAGING_BOLT",
+      "source_path": "sound/direct_sound_samples/cries/raging_bolt.wav",
+      "rate": 13379,
+      "frames": 26747,
+      "sha256": "d29542c272376691945ad958316f62ce0c0fa52c7634560ffe1b4f17a3e0692b"
+    },
+    {
+      "national": 1022,
+      "id": 1075,
+      "token": "SPECIES_IRON_BOULDER",
+      "source_path": "sound/direct_sound_samples/cries/iron_boulder.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "201ca6b28680448dcad9c775ca0802e96830913870ebbe689abc6c1fa93ffcac"
+    },
+    {
+      "national": 1023,
+      "id": 1076,
+      "token": "SPECIES_IRON_CROWN",
+      "source_path": "sound/direct_sound_samples/cries/iron_crown.wav",
+      "rate": 13379,
+      "frames": 29422,
+      "sha256": "b9f88afb9ef22dd6e471a96144660c6f6b7b3b7fa5dcdc056a0c4d96921071ab"
+    },
+    {
+      "national": 1024,
+      "id": 1077,
+      "token": "SPECIES_TERAPAGOS",
+      "source_path": "sound/direct_sound_samples/cries/terapagos.wav",
+      "rate": 13379,
+      "frames": 26914,
+      "sha256": "95ff35e8772df924697061bb726da39cfb55d47e413f298cbd82a7f595f5ee86"
+    },
+    {
+      "national": 1025,
+      "id": 1078,
+      "token": "SPECIES_PECHARUNT",
+      "source_path": "sound/direct_sound_samples/cries/pecharunt.wav",
+      "rate": 13379,
+      "frames": 24823,
+      "sha256": "24e222e393c27ea55857479e12395692704c3ebf3845f54336ebb8466cbe10a2"
+    }
+  ]
+}

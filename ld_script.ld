@@ -1043,6 +1043,13 @@ SECTIONS {
         sound/songs/mus_europe_*.o(.rodata);
     } > ROM =0
 
+    /* Modern cry samples follow fixed graphics; no new work RAM required. */
+    eclipse_cry_data :
+    ALIGN(4)
+    {
+        data/sound_data.o(eclipse_cry_data);
+    } > ROM =0
+
     /* DWARF debug sections.
        Symbols in the DWARF debugging sections are relative to the beginning
        of the section so we begin them at 0.  */
