@@ -1803,9 +1803,32 @@ Fixtures use controlled stats/status/levels and disposable saves, not naturally
 raised campaign teams or hardware/link testing.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `25e487d3d891f973b3e7afa4cd90221220a7167ccf3ebd7d2dacdc7a1c1c73d5`.
+Previous release SHA-256: `25e487d3d891f973b3e7afa4cd90221220a7167ccf3ebd7d2dacdc7a1c1c73d5`.
 Both ROM aliases match. Campaign/country static checks pass and refresh is
 idempotent. Bronzong's complete name/description were visually verified.
 
 All three native Heatproof suites passed on the final ROM, including both
 evolution routes.
+
+## Steadfast flinch recovery
+
+`test_eclipse_steadfast.py` checks native Fake Out against no ability, Steadfast
+at stages 6/11/12 and Inner Focus. Flinched targets retain all 160 fixture
+Splash PP, while the Inner Focus target acts and spends one PP. Steadfast
+grants exactly one stage below the cap, retains the cap and still loses its
+action. A later-turn Rock Slide flinch grants a second stage; Quick Attack
+without flinch and failed later-turn Fake Out leave Speed unchanged and allow
+the next action. `test_eclipse_steadfast_doubles.py` uses the native London
+coach battle: only the damaged/flinched defender gains Speed and loses its
+action; the partner and other opponent retain their stages and act.
+`test_eclipse_steadfast_species.py` checks all six regular slots, Gallade
+Save/cold Continue, skills UI and next battle.
+`test_eclipse_steadfast_evolution.py` checks Wooloo/Dubwool retains the second
+slot and gains Steadfast. Tests use controlled stats/levels and disposable
+saves, not naturally trained campaign teams or hardware/link tests.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `cdfefca29ca7aaa394697e6b3e3d4a1293bb5f1445de82e2df0da6ba654edc9f`.
+Both ROM aliases match. All four native suites and campaign/country static
+checks pass; refresh is idempotent. Gallade's complete ability name and
+description were visually verified.

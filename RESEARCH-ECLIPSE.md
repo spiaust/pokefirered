@@ -697,3 +697,15 @@ The shared calculation covers attacks and estimates. Native ENDTURN_BURN
 halves its existing maxHP/8 damage before the minimum-one check; it does not
 convert the engine to modern burn rules. No status immunity, additional RAM,
 save fields, hidden slots or alternate-form projection.
+
+### Steadfast flinch recovery
+
+Regular slots are projected from pinned RHH family data:
+https://github.com/rh-hideout/pokeemerald-expansion/tree/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/pokemon/species_info
+Tyrogue's second slot and five imported regular slots become supported.
+Native CANCELLER_FLINCH increments Speed once below the stage cap, records
+Steadfast and runs a new native script combining the flinch message, Speed
+animation and existing ability-name Speed message. It retains the inability
+to move, multi-turn cancellation and normal MoveEnd path. Activation requires
+the actual native flinch cancellation, preserving Inner Focus prevention and
+failed/later-turn Fake Out rules. No extra RAM/save fields or hidden slots.

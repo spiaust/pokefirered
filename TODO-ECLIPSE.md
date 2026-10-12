@@ -157,3 +157,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Heatproof for three regular slots, Fire/burn damage reduction,
   status/minimum/poison/Attack-penalty guards, Bronzong cold save and evolution,
   and Rolycoly's evolution transition to Carkol's Flame Body.
+
+- [x] Add Steadfast for six regular species slots, native flinch Speed gain,
+  retained action loss/PP, cap/repeated-trigger/Inner Focus guards, doubles
+  recipient-only activation, Gallade cold save and Wooloo ability transition.

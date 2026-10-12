@@ -17,6 +17,7 @@ CLASSIC.update({name:'ABILITY_SNIPER' for name in ('HORSEA','SEADRA','KINGDRA','
 CLASSIC.update({name:'ABILITY_SNOW_CLOAK' for name in ('SWINUB','PILOSWINE')})
 CLASSIC.update({name:'ABILITY_ICE_BODY' for name in ('SNORUNT','GLALIE','SPHEAL','SEALEO','WALREIN')})
 CLASSIC.update({name:'ABILITY_TANGLED_FEET' for name in ('PIDGEY','PIDGEOTTO','PIDGEOT','SPINDA')})
+CLASSIC['TYROGUE']='ABILITY_STEADFAST'
 def family_source(gen):
     path=f'src/data/pokemon/species_info/gen_{gen}_families.h'
     cached=ROOT/'.local-tools/roster'/path

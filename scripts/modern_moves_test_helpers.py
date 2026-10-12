@@ -16,7 +16,7 @@ def single(e):
     assert e.read('gBattlerControllerFuncs')&~1==action
     return e.symbols['gBattleMons']
 
-def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,expected_hits=1,enemy_species=None,confused=False,enemy_type=0,attacker_types=(0,0),attacker_accuracy=6,enemy_evasion=6,attacker_item=None,focus_energy=False,crit_seed=None,enemy_types=None,attacker_attack_stage=6,enemy_defense_stage=6,maxhp=1000,enemy_confused=False,stop_before_enemy=False,accuracy_seed=None,attacker_status=0):
+def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,expected_hits=1,enemy_species=None,confused=False,enemy_type=0,attacker_types=(0,0),attacker_accuracy=6,enemy_evasion=6,attacker_item=None,focus_energy=False,crit_seed=None,enemy_types=None,attacker_attack_stage=6,enemy_defense_stage=6,maxhp=1000,enemy_confused=False,stop_before_enemy=False,accuracy_seed=None,attacker_status=0,enemy_speed_stage=6):
     b=e.symbols['gBattleMons'];enemy=b+88
     e.write('gRngValue',seed)
     target_types=enemy_types or (enemy_type,enemy_type)
@@ -29,6 +29,7 @@ def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,exp
         e.write(q+33,target_types[0] if q==enemy else attacker_types[0],1);e.write(q+34,target_types[1] if q==enemy else attacker_types[1],1)
         for j in range(8):e.write(q+24+j,6,1)
     e.write(b+25,attacker_attack_stage,1);e.write(enemy+26,enemy_defense_stage,1)
+    e.write(enemy+27,enemy_speed_stage,1)
     e.write(b+30,attacker_accuracy,1);e.write(enemy+31,enemy_evasion,1)
     if attacker_item is not None:e.write(b+46,attacker_item,2)
     if focus_energy:e.write(b+80,1<<20)
@@ -69,4 +70,4 @@ def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,exp
     else:raise AssertionError(('Native move did not finish',move))
     self_hit=confused and not hits and e.read(b+40,2)<ownhp and e.read(b+36,1)==pp
     assert started and (self_hit or ((expected_hits is None or len(hits)==expected_hits) and e.read(b+36,1)==expected_pp)),(move,hits)
-    return dict(accuracy_rolls=accuracy_rolls,crits=crits,crit_rolls=crit_rolls,hits=len(hits),damage=sum(hits),ownhp=e.read(b+40,2),spdef=e.read(enemy+29,1),flinched=flinched,power=e.read('gBattleMovePower',2))
+    return dict(speed=e.read(enemy+27,1),enemy_pp=sum(e.read(enemy+36+j,1) for j in range(4)),accuracy_rolls=accuracy_rolls,crits=crits,crit_rolls=crit_rolls,hits=len(hits),damage=sum(hits),ownhp=e.read(b+40,2),spdef=e.read(enemy+29,1),flinched=flinched,power=e.read('gBattleMovePower',2))

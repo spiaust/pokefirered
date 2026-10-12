@@ -8694,7 +8694,7 @@
         "EGG_GROUP_NO_EGGS_DISCOVERED"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_STEADFAST",
         "ABILITY_INNER_FOCUS"
       ],
       "source_abilities": [
@@ -8847,7 +8847,7 @@
         "EGG_GROUP_HUMAN_LIKE"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_STEADFAST",
         "ABILITY_INNER_FOCUS"
       ],
       "source_abilities": [
@@ -13151,7 +13151,7 @@
         "EGG_GROUP_AMORPHOUS"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_STEADFAST",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -65451,7 +65451,7 @@
       ],
       "abilities": [
         "ABILITY_NONE",
-        "ABILITY_NONE"
+        "ABILITY_STEADFAST"
       ],
       "source_abilities": [
         "ABILITY_FLUFFY",
@@ -69831,7 +69831,7 @@
         "EGG_GROUP_FIELD"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_STEADFAST",
         "ABILITY_NONE"
       ],
       "source_abilities": [

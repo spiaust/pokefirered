@@ -801,3 +801,12 @@ integer rounding and minimum damage rules. It permits burns and preserves
 burn's Attack penalty; other move types and poison damage remain unchanged.
 Bronzor retains Heatproof when evolving into Bronzong. Rolycoly retains its
 second slot but changes to Carkol's Flame Body when evolving.
+
+## Steadfast ability
+
+Tyrogue, Riolu, Lucario, Gallade, Dubwool and Sirfetch'd can use Steadfast
+in their regular ability slots. When a flinch prevents their action, Speed
+rises by one stage up to the normal cap. The Pokémon still loses that turn
+and spends no move PP. A later flinch can grant another stage; ordinary hits
+and failed flinch moves do not. Wooloo's second regular slot changes from
+Run Away to Steadfast when it evolves into Dubwool.
