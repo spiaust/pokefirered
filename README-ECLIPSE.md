@@ -847,3 +847,12 @@ Soundproof still blocks them. Status sounds retain their normal effects.
 Toxtricity receives a deliberate level-40 Hyper Voice campaign lesson, also
 available through free recall and shown in the Pokédex. This provides a
 damaging sound option while newer signature moves remain unsupported.
+
+## Water Bubble ability
+
+Dewpider and Araquanid can use Water Bubble in their first regular slot. It
+doubles effective Water-attack power, halves incoming Fire-attack power and
+prevents burns from status moves and secondary effects. The native immunity
+check also clears an existing burn when the ability becomes active. Other
+move types and status conditions remain unchanged. Water Absorb still blocks
+boosted Water attacks.

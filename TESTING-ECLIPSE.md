@@ -1921,7 +1921,32 @@ maximum 23 lessons. Fixtures use controlled stats/levels and disposable saves,
 not naturally trained campaign teams or hardware/link testing.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `f2876f535c6f24b4809c69fad9065d7de6210e214be999cad4e9c42eff2197e2`.
+Previous release SHA-256: `f2876f535c6f24b4809c69fad9065d7de6210e214be999cad4e9c42eff2197e2`.
 Both ROM aliases match. Native suites, compiled learnset and campaign/country
 static checks pass. Ability and lesson refreshes are idempotent. Toxtricity's
 complete ability description and Hyper Voice Dex lesson were visually verified.
+
+## Water Bubble attack, defense and burn protection
+
+`test_eclipse_water_bubble.py` checks Water Gun, Bubble Beam, Surf and Waterfall
+for doubled effective power, with non-Water, Seismic Toss and actual forced
+Struggle controls. Ember/Fire Punch/Flamethrower use the shared Fire reduction;
+Ice/Water/Normal/fixed incoming damage remains unchanged. Will-O-Wisp and a
+triggered Ember secondary burn are blocked by Water Bubble and native Water
+Veil. A controlled existing burn is cleared by both abilities without residual
+damage, while the no-ability control retains burn and loses 125 HP. Toxic
+still applies poison, Water Absorb still blocks boosted Water, and confusion
+self-damage remains unchanged. First-action fixtures isolate direct damage.
+`test_eclipse_water_bubble_species.py` checks both regular slots, Araquanid
+Save/cold Continue, skills UI and next battle.
+`test_eclipse_water_bubble_evolution.py` checks Dewpider/Araquanid retains the
+first slot. Full `test_eclipse_heatproof.py` regression passes Fire/burn power,
+status, minimum damage, poison and Attack-penalty checks. Fixtures use controlled
+stats/status/levels and disposable saves, not naturally trained teams or
+hardware/link tests.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `c717123f5c5e4074d2bcebf788e44a818ae85f74a46d22014c80be2bbd5b2db3`.
+Both ROM aliases match. Native suites, Heatproof regression and campaign/country
+static checks pass; refresh is idempotent. Araquanid's complete ability name
+and description were visually verified.

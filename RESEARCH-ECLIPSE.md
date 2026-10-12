@@ -762,3 +762,16 @@ scripts remain intact. Level-40 Hyper Voice is an explicit campaign adaptation
 in eclipse_lessons.py, rather than a claim about upstream natural level-up
 data. No extra RAM/save fields, hidden slots, alternate forms or signature
 move imports. Native Gen III sound/type behavior remains in use.
+
+### Water Bubble attack, defense and burn protection
+
+Pinned RHH doubles Water power, shares Heatproof's Fire reduction and pairs
+Water Bubble with Water Veil for burn prevention:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Two imported regular slots become supported. Native CalculateBaseDamage uses
+resolved type for the offensive bonus and shared Fire reduction, excluding
+self-damage, Struggle and power-zero moves. SetMoveEffect shares both primary
+and secondary Water Veil burn guards, recording the actual ability name.
+AbilityBattleEffects shares the existing burn immunity/cure branch. Other
+statuses, damage types, native type split and fixed-damage paths remain intact.
+No extra RAM/save fields, hidden slots or alternate-form projection.

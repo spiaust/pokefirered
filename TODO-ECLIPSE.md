@@ -176,3 +176,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Punk Rock for Toxtricity, shared sound/Soundproof classification,
   offense/defense/status/fixed/self-hit guards, level-40 Hyper Voice campaign
   lesson, free recall, native Dex display and cold-save persistence.
+
+- [x] Add Water Bubble for Dewpider/Araquanid, Water power and Fire reduction,
+  primary/secondary burn prevention/cure, other-status/immunity/self-hit guards,
+  cold-save display, evolution and Heatproof/Water Veil regression checks.

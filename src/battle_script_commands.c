@@ -2272,11 +2272,12 @@ void SetMoveEffect(bool8 primary, u8 certain)
             statusChanged = TRUE;
             break;
         case STATUS1_BURN:
-            if (gBattleMons[gEffectBattler].ability == ABILITY_WATER_VEIL
+            if ((gBattleMons[gEffectBattler].ability == ABILITY_WATER_VEIL
+                 || gBattleMons[gEffectBattler].ability == ABILITY_WATER_BUBBLE)
                 && (primary == TRUE || certain == MOVE_EFFECT_CERTAIN))
             {
-                gLastUsedAbility = ABILITY_WATER_VEIL;
-                RecordAbilityBattle(gEffectBattler, ABILITY_WATER_VEIL);
+                gLastUsedAbility = gBattleMons[gEffectBattler].ability;
+                RecordAbilityBattle(gEffectBattler, gLastUsedAbility);
 
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_BRNPrevention;
@@ -2303,7 +2304,8 @@ void SetMoveEffect(bool8 primary, u8 certain)
             }
             if (IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_FIRE))
                 break;
-            if (gBattleMons[gEffectBattler].ability == ABILITY_WATER_VEIL)
+            if (gBattleMons[gEffectBattler].ability == ABILITY_WATER_VEIL
+             || gBattleMons[gEffectBattler].ability == ABILITY_WATER_BUBBLE)
                 break;
             if (gBattleMons[gEffectBattler].status1)
                 break;

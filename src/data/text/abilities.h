@@ -1,3 +1,4 @@
+static const u8 sWaterBubbleDescription[] = _("Boosts Water; prevents burns.");
 static const u8 sPunkRockDescription[] = _("Boosts and resists sound.");
 static const u8 sFluffyDescription[] = _("Softens contact; fears Fire.");
 static const u8 sFurCoatDescription[] = _("Weakens physical attacks.");
@@ -202,6 +203,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_FUR_COAT] = sFurCoatDescription,
     [ABILITY_FLUFFY] = sFluffyDescription,
     [ABILITY_PUNK_ROCK] = sPunkRockDescription,
+    [ABILITY_WATER_BUBBLE] = sWaterBubbleDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -307,4 +309,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_FUR_COAT] = _("FUR COAT"),
     [ABILITY_FLUFFY] = _("FLUFFY"),
     [ABILITY_PUNK_ROCK] = _("PUNK ROCK"),
+    [ABILITY_WATER_BUBBLE] = _("WATER BUBBLE"),
 };
