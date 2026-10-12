@@ -748,3 +748,17 @@ The shared attack/estimate path covers real Struggle contact damage; its
 native recoil follows reduced damage. Fixed-damage scripts bypass this
 calculation. No contact-negating abilities/items, new RAM/save fields, hidden
 slots or modern physical/special split are introduced.
+
+### Punk Rock and native sound classification
+
+Pinned RHH boosts sound power by 1.3 and reduces incoming sound damage by 0.5:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Toxtricity's first regular slot becomes supported. Native IsSoundMove shares
+the existing ten-entry Soundproof table without changing its membership.
+CalculateBaseDamage applies the power bonus and defensive modifier in the
+shared attack/estimate path, excluding self-damage and retaining minimum one.
+The native damaging subset is Hyper Voice/Uproar/Snore; fixed-damage and status
+scripts remain intact. Level-40 Hyper Voice is an explicit campaign adaptation
+in eclipse_lessons.py, rather than a claim about upstream natural level-up
+data. No extra RAM/save fields, hidden slots, alternate forms or signature
+move imports. Native Gen III sound/type behavior remains in use.

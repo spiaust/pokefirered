@@ -67582,7 +67582,7 @@
         "EGG_GROUP_HUMAN_LIKE"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_PUNK_ROCK",
         "ABILITY_PLUS"
       ],
       "source_abilities": [
@@ -67653,6 +67653,10 @@
         [
           32,
           "MOVE_TOXIC"
+        ],
+        [
+          40,
+          "MOVE_HYPER_VOICE"
         ]
       ],
       "omitted_moves": [

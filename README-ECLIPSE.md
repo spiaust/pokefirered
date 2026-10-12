@@ -837,3 +837,13 @@ Contact Fire attacks receive both modifiers, giving unchanged damage.
 Non-contact attacks of other types, fixed damage and confusion self-damage
 remain unchanged. Contact classification applies to both physical and special
 attacks under the native Gen III type split.
+
+## Punk Rock and Toxtricity's sound lesson
+
+Toxtricity can use Punk Rock in its first regular slot. It boosts effective
+power of supported damaging sound moves by 30% and halves incoming sound
+damage. Hyper Voice, Uproar and Snore use the native sound classification;
+Soundproof still blocks them. Status sounds retain their normal effects.
+Toxtricity receives a deliberate level-40 Hyper Voice campaign lesson, also
+available through free recall and shown in the Pokédex. This provides a
+damaging sound option while newer signature moves remain unsupported.

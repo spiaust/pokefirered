@@ -2415,6 +2415,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         && (gBattleMoves[move].flags & FLAG_PUNCHING))
         gBattleMovePower = gBattleMovePower * 6 / 5;
 
+    if (battlerIdAtk != battlerIdDef && attacker->ability == ABILITY_PUNK_ROCK
+        && gBattleMovePower > 0 && IsSoundMove(move))
+        gBattleMovePower = gBattleMovePower * 13 / 10;
+
     if (battlerIdAtk != battlerIdDef && attacker->ability == ABILITY_STRONG_JAW
         && (gBattleMoves[move].flags & FLAG_BITING))
         gBattleMovePower = gBattleMovePower * 3 / 2;
@@ -2701,6 +2705,13 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (GetMonData(defendMon, MON_DATA_UNUSED_RIBBONS, NULL) & 1) damage = damage * 5 / 4;
     }
     damage += 2;
+    if (battlerIdAtk != battlerIdDef && defender->ability == ABILITY_PUNK_ROCK
+        && IsSoundMove(move))
+    {
+        damage /= 2;
+        if (damage == 0)
+            damage = 1;
+    }
     if (battlerIdAtk != battlerIdDef && defender->ability == ABILITY_FLUFFY)
     {
         bool8 contact = (gBattleMoves[move].flags & FLAG_MAKES_CONTACT) != 0;

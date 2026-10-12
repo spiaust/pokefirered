@@ -1897,7 +1897,31 @@ Fixtures use controlled stats/levels and disposable saves, not naturally
 raised campaign teams or hardware/link testing.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `2f2f9925f2e421ae4516a5d42f3847c8bdcd3b7957c5d4117e99c1583363560f`.
+Previous release SHA-256: `2f2f9925f2e421ae4516a5d42f3847c8bdcd3b7957c5d4117e99c1583363560f`.
 Both ROM aliases match. All three native Fluffy suites, full Fur Coat regression
 and campaign/country static checks pass; refresh is idempotent. Bewear's
 complete ability name and description were visually verified.
+
+## Punk Rock and obtainable Hyper Voice
+
+`test_eclipse_punk_rock.py` checks Hyper Voice, Uproar and usable asleep Snore
+for offensive power +30%, defensive damage reduction and both abilities
+together. Soundproof blocks each boosted move. Non-sound Normal/Water attacks,
+Seismic Toss, Sonic Boom and actual forced Struggle remain unchanged. Growl/
+Screech retain their effects under Punk Rock and remain blocked by Soundproof.
+Confusion self-damage receives no sound bonus/resistance.
+`test_eclipse_punk_rock_species.py` checks Toxtricity's regular slot, native
+Save/cold Continue, skills UI and next battle.
+`test_eclipse_punk_rock_lessons.py` checks native learning at 40, free recall
+without bag/money changes, cold-save move/ability persistence and native
+National Dex level-up display. The campaign lesson is deliberate.
+`test_eclipse_learnset_refresh.py` confirms all 639 compiled learnsets match
+metadata and preserve previous lessons: 170 additions across 143 species,
+maximum 23 lessons. Fixtures use controlled stats/levels and disposable saves,
+not naturally trained campaign teams or hardware/link testing.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `f2876f535c6f24b4809c69fad9065d7de6210e214be999cad4e9c42eff2197e2`.
+Both ROM aliases match. Native suites, compiled learnset and campaign/country
+static checks pass. Ability and lesson refreshes are idempotent. Toxtricity's
+complete ability description and Hyper Voice Dex lesson were visually verified.

@@ -172,3 +172,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Fluffy for four regular slots, contact/Fire damage combinations,
   physical/special and critical/drain/recoil/fixed/self-hit guards, Bewear
   cold save, Stufful evolution and Fur Coat regression checks.
+
+- [x] Add Punk Rock for Toxtricity, shared sound/Soundproof classification,
+  offense/defense/status/fixed/self-hit guards, level-40 Hyper Voice campaign
+  lesson, free recall, native Dex display and cold-save persistence.

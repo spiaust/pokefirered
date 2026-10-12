@@ -1,3 +1,4 @@
+static const u8 sPunkRockDescription[] = _("Boosts and resists sound.");
 static const u8 sFluffyDescription[] = _("Softens contact; fears Fire.");
 static const u8 sFurCoatDescription[] = _("Weakens physical attacks.");
 static const u8 sStrongJawDescription[] = _("Boosts biting move damage.");
@@ -200,6 +201,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_STRONG_JAW] = sStrongJawDescription,
     [ABILITY_FUR_COAT] = sFurCoatDescription,
     [ABILITY_FLUFFY] = sFluffyDescription,
+    [ABILITY_PUNK_ROCK] = sPunkRockDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -304,4 +306,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_STRONG_JAW] = _("STRONG JAW"),
     [ABILITY_FUR_COAT] = _("FUR COAT"),
     [ABILITY_FLUFFY] = _("FLUFFY"),
+    [ABILITY_PUNK_ROCK] = _("PUNK ROCK"),
 };
