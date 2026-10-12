@@ -2428,6 +2428,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     else
         type = typeOverride & DYNAMIC_TYPE_MASK;
 
+    if (battlerIdAtk != battlerIdDef && attacker->ability == ABILITY_SAND_FORCE
+        && move != MOVE_STRUGGLE && gBattleMovePower > 0
+        && (type == TYPE_ROCK || type == TYPE_GROUND || type == TYPE_STEEL)
+        && (gBattleWeather & B_WEATHER_SANDSTORM) && WEATHER_HAS_EFFECT2)
+        gBattleMovePower = gBattleMovePower * 13 / 10;
+
     attack = attacker->attack;
     defense = defender->defense;
     spAttack = attacker->spAttack;

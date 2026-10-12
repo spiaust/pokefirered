@@ -21217,7 +21217,7 @@
       ],
       "abilities": [
         "ABILITY_SAND_RUSH",
-        "ABILITY_NONE"
+        "ABILITY_SAND_FORCE"
       ],
       "source_abilities": [
         "ABILITY_SAND_RUSH",
@@ -21362,7 +21362,7 @@
       ],
       "abilities": [
         "ABILITY_SAND_RUSH",
-        "ABILITY_NONE"
+        "ABILITY_SAND_FORCE"
       ],
       "source_abilities": [
         "ABILITY_SAND_RUSH",
@@ -38490,7 +38490,7 @@
         "EGG_GROUP_NO_EGGS_DISCOVERED"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_SAND_FORCE",
         "ABILITY_NONE"
       ],
       "source_abilities": [

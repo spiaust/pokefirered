@@ -775,3 +775,12 @@ Nine and Air Lock suppress the speed bonus, including on a doubles partner.
 Move priority, Speed stages, native paralysis and badge/item modifiers still
 apply. Temporary sandstorm expiry removes the boost on the next turn. Other
 weather grants no bonus, and Sand Rush does not prevent hail damage.
+
+## Sand Force ability
+
+Drilbur, Excadrill and Landorus can use Sand Force in their regular slots.
+During active battle sandstorms, it increases the effective power of Rock,
+Ground and Steel attacks by 30%, using native integer rounding. Other move
+types receive no bonus. Cloud Nine and Air Lock suppress the boost, including
+on a doubles partner. Sand Force also prevents sandstorm damage regardless
+of typing; it grants no hail immunity.

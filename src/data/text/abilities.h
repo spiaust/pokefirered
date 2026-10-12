@@ -1,3 +1,4 @@
+static const u8 sSandForceDescription[] = _("Boosts attacks in sandstorms.");
 static const u8 sSandRushDescription[] = _("Raises SPEED in sandstorms.");
 static const u8 sSlushRushDescription[] = _("Raises SPEED in hail.");
 static const u8 sIceBodyDescription[] = _("Restores HP in hail.");
@@ -186,6 +187,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_ICE_BODY] = sIceBodyDescription,
     [ABILITY_SLUSH_RUSH] = sSlushRushDescription,
     [ABILITY_SAND_RUSH] = sSandRushDescription,
+    [ABILITY_SAND_FORCE] = sSandForceDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -283,4 +285,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ICE_BODY] = _("ICE BODY"),
     [ABILITY_SLUSH_RUSH] = _("SLUSH RUSH"),
     [ABILITY_SAND_RUSH] = _("SAND RUSH"),
+    [ABILITY_SAND_FORCE] = _("SAND FORCE"),
 };

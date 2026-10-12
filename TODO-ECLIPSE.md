@@ -145,3 +145,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Sand Rush for six regular species slots, native sandstorm Speed
   boost and damage immunity, temporary/permanent flags, expiry/priority/status
   guards, doubles partner suppression, Stoutland cold save and evolution.
+
+- [x] Add Sand Force for three regular species slots, Rock/Ground/Steel power
+  boost and sand immunity, dynamic-power/weather/fixed-damage/self-hit guards,
+  doubles spread/suppression, Excadrill cold save and evolution persistence.

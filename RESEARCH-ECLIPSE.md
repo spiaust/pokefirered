@@ -661,3 +661,16 @@ Cmd_weatherdamage excludes Sand Rush from sandstorm damage, independent of
 typing. Permanent and temporary sandstorm flags both activate the speed bonus.
 Hidden-only Sandshrew/Sandslash slots and alternate Lycanroc forms remain
 outside this projection. No extra RAM/save fields or new weather flags.
+
+### Sand Force power and residual protection
+
+Pinned RHH calculation applies a 1.3 power modifier for Rock/Ground/Steel
+moves in sandstorm:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Three imported regular slots become supported. Native CalculateBaseDamage
+applies integer power * 13 / 10 after resolving move type and dynamic power,
+using its existing weather-suppression check. The shared calculation covers
+attacks and estimates. Self-damage, Struggle and power-zero moves are excluded.
+Cmd_weatherdamage excludes Sand Force from sandstorm residuals regardless of
+typing. Permanent and temporary sandstorm flags activate the boost. No extra
+RAM, save fields, hidden abilities or alternate-form projection.

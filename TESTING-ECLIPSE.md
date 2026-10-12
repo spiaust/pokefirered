@@ -1727,9 +1727,36 @@ retains the second slot. Controlled stats/levels and disposable saves are
 fixtures, not naturally trained campaign teams or hardware/link tests.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `da0e044932595b8dce162f17242354ecc94367a53c828314c36999d8a0e32a87`.
+Previous release SHA-256: `da0e044932595b8dce162f17242354ecc94367a53c828314c36999d8a0e32a87`.
 Both ROM aliases match. Campaign/country static checks pass and refresh is
 idempotent.
 
 All four native Sand Rush suites passed. Stoutland's complete ability name
 and description were visually verified.
+
+## Sand Force power and immunity
+
+`test_eclipse_sand_force.py` compares paired native power/damage fixtures for
+Earthquake, Rock Slide, Metal Claw and variable-power Magnitude, with normal
+and Water moves, Seismic Toss and actual forced Struggle as controls. Rock/Ice
+target typing isolates direct damage from sandstorm/hail residuals. Temporary
+and permanent sandstorm activate the bonus; clear/rain/sun/hail do not. Cloud
+Nine/Air Lock suppress it, Flying/Steel preserves Ground immunity, and confusion
+self-damage remains unboosted. A separate non-sand-immune fixture retains HP
+with Sand Force during sandstorm, loses HP without it, and still takes hail.
+`test_eclipse_sand_force_doubles.py` checks Earthquake spread damage to three
+battlers and suppression by a partner's Cloud Nine/Air Lock in a native coach
+battle. Native RNG and frame timing can change individual damage rolls; the
+check asserts each hit increases with the boost and paired suppressed hits match.
+`test_eclipse_sand_force_species.py` checks all three regular slots, Excadrill
+Save/cold Continue, skills UI and next battle.
+`test_eclipse_sand_force_evolution.py` checks Drilbur/Excadrill retains the
+second slot. Tests use controlled stats/levels and disposable saves, not
+naturally trained campaign teams or hardware/link tests.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `86ec4853dd530dc271235e7102bc56f932f15aebc0ebd1c7b644c3d3378b9114`.
+Both ROM aliases match. Campaign/country static checks pass, refresh is
+idempotent, and Excadrill's complete name/description were visually verified.
+
+All four native Sand Force suites passed on the final ROM.
