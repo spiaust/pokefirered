@@ -617,3 +617,17 @@ Kiss, Hatterene's Dazzling Gleam and Petilil's Energy Ball at level 30, plus
 Vullaby's Dark Pulse at level 48. The Pokédex displays the actual lessons.
 These attacks use the native special-damage categories; doubles retains the
 Gen III spread-damage scaling. Battle animations reuse native art.
+
+
+## Technician ability
+
+Technician now boosts an attack's effective base power by 50% when that power
+is 60 or less. It works with physical, special and multi-hit attacks, including
+Double Hit and Draining Kiss. Dynamic-power moves use their calculated power;
+field reductions do not make an otherwise stronger move eligible.
+
+Regular Technician slots are restored for Meowth, Persian, Scyther, Scizor,
+Smeargle, Hitmontop, Ambipom, Minccino, Cinccino and Marshadow. The ability is
+shown on the native skills page and survives evolution and saving. Existing
+primary abilities on the six classic species remain available; hidden-only
+Technician slots are still outside the current two-regular-slot model.

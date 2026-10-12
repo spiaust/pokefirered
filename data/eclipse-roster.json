@@ -5289,7 +5289,7 @@
         "EGG_GROUP_FIELD"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_TECHNICIAN",
         "ABILITY_PICKUP"
       ],
       "source_abilities": [
@@ -27644,7 +27644,7 @@
       ],
       "abilities": [
         "ABILITY_CUTE_CHARM",
-        "ABILITY_NONE"
+        "ABILITY_TECHNICIAN"
       ],
       "source_abilities": [
         "ABILITY_CUTE_CHARM",
@@ -27793,7 +27793,7 @@
       ],
       "abilities": [
         "ABILITY_CUTE_CHARM",
-        "ABILITY_NONE"
+        "ABILITY_TECHNICIAN"
       ],
       "source_abilities": [
         "ABILITY_CUTE_CHARM",
@@ -61526,7 +61526,7 @@
         "EGG_GROUP_NO_EGGS_DISCOVERED"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_TECHNICIAN",
         "ABILITY_NONE"
       ],
       "source_abilities": [

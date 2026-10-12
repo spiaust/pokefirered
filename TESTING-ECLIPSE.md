@@ -1389,4 +1389,38 @@ abilities/moves, later-generation mechanics and balancing remain outstanding.
 
 Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
 EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `8b5b22bd41474d47d3d54435458cef56532ad369257cb84f40bc63f5488b5563`.
+Previous modern-move SHA-256: `8b5b22bd41474d47d3d54435458cef56532ad369257cb84f40bc63f5488b5563`.
+
+
+## Technician regular abilities
+
+`test_eclipse_technician_battle.py` compares native turns with explicit ability,
+normalized stats/HP and RNG fixtures. Quick Attack and Draining Kiss gain power;
+Aerial Ace demonstrates the inclusive 60 cutoff; Dark Pulse's 80 is unchanged.
+Double Hit stays two hits with power 52 on each, spending one PP. Native Low
+Kick calculates 20 against Pikachu and 120 against Snorlax, boosting only the
+former. Mud Sport tests show eligible Thunder Shock boosted before reduction,
+while reduced Thunderbolt remains ineligible. Draining Kiss keeps its 75% heal.
+
+`test_eclipse_technician_species.py` creates four modern encounters natively and
+checks their chosen regular slot in battle. Six classic slot fixtures verify
+Technician through native battle loading. The `--slots-only` run directly checks
+all four imported Technician positions, independent of randomly chosen slots.
+Native Scyther/Scizor Link Cable evolution preserves the ability flag, consumes
+Metal Coat, and survives Save/cold Continue and a subsequent battle.
+
+Visual inspection caught the original description's clipped second line. The
+final ROM uses one line; `test_eclipse_technician_summary.py` cold-continues the
+saved Scizor, opens the native skills page and returns to the field. Its final
+screenshot shows the complete Technician name and description. `test_eclipse_technician_confusion.py` checks a native self-hit with RNG seed 3:
+both ability cases lose 16 HP at power 40 without spending move PP. The same-
+battler guard also covers the engine's disobedience self-hit call sites. Final
+power, confusion, summary and title/New Game/cold Continue checks use the final
+self-damage-safe ROM. Modern attack/drain/ability-guard and real
+doubles regressions pass with normalized fixtures. Campaign/country checks pass,
+and ability refresh is idempotent. Personal saves are never accessed.
+
+Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
+EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `7ba25cf77f43be5cbc0eea6ef256df6cbbc42f170299951b72cef610a3a378bc`.
+Broader abilities/hidden slots, alternate forms and campaign balancing remain.

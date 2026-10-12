@@ -2404,6 +2404,13 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     else
         gBattleMovePower = powerOverride;
 
+    // Test effective move power before weather/field reductions. Dynamic-power
+    // callers supply powerOverride, so only attacks of 60 or less qualify.
+    // Confusion/disobedience self-damage shares this function but is not a move.
+    if (battlerIdAtk != battlerIdDef && attacker->ability == ABILITY_TECHNICIAN
+        && gBattleMovePower > 0 && gBattleMovePower <= 60)
+        gBattleMovePower = gBattleMovePower * 3 / 2;
+
     if (!typeOverride)
         type = gBattleMoves[move].type;
     else

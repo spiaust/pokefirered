@@ -464,3 +464,30 @@ without removing earlier lessons. All 639 compiled lists match metadata; the
 largest is 23 moves, within the free reminder's 24-move limit. The full roster
 importer already projects supported move constants, keeping regeneration stable.
 No new save fields, items/species IDs or global RAM are required.
+
+
+### Technician and regular ability restoration
+
+The [pinned RHH damage source](https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c)
+uses the effective-power threshold 60 and a 1.5 modifier for Technician.
+This native port adds ability ID 78 (ABILITIES_COUNT 79), name and a single-line
+skills-page description. CalculateBaseDamage applies integer 3/2 power scaling
+for positive effective power up to 60, before native field reductions. Dynamic
+callers supply their power override, so Low Kick uses calculated weight power.
+Each hit recalculates from the original power, preventing cumulative multi-hit
+boosts. Physical and special paths both share this code. Same-battler
+confusion/disobedience self-damage is excluded from the move-only boost.
+
+The existing source-ability metadata restores Ambipom, Minccino, Cinccino and
+Marshadow. Six classic regular second slots are restored from pinned Gen I/II
+family files: Meowth, Persian, Scyther, Scizor, Smeargle and Hitmontop. The
+refresh script resolves Meowth's macro and the source's modern ability branches,
+fetches missing pinned family cache files, validates both regular slots and
+preserves all other species fields. The full importer already projects supported
+ability constants for modern species; it leaves the classic table intact.
+Hidden-only Technician and a general hidden-ability system remain omitted.
+
+No stored ability flag, save layout, species/move/item IDs or global RAM change.
+Old ability IDs remain stable. Existing saved slot flags continue selecting their
+regular position; restored slots now provide the intended ability. Newly generated
+partners use the native regular-slot selection and battle loading.
