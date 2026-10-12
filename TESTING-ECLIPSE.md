@@ -1277,4 +1277,28 @@ Game/cold Continue pass. Broader abilities/forms/balancing remain outstanding.
 
 Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
 EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `48de71e2840248c5500555ebc1b3ba99c19eeeb9bceda8a9ec433f6a26866a34`.
+Previous weather-evolution SHA-256: `48de71e2840248c5500555ebc1b3ba99c19eeeb9bceda8a9ec433f6a26866a34`.
+
+
+## Modern armor, alloy and tea items
+
+`test_eclipse_modern_items.py --shop-only` purchases all five items through
+native shop menus, checks exactly 2,100 money deducted and one item added,
+and preserves the earned party. Two independent earned checkpoint branches
+keep purchases within existing funds; money is not edited.
+
+The `--cases-only` run uses explicit encrypted Pokémon/bag fixtures for twelve
+native party-menu item-use cases. All five positive routes consume exactly one
+of two items; wrong items/species, Everstone, shadow and already-evolved targets
+keep both. Duraludon's unrelated held Metal Coat survives evolution. All five
+results, remaining items and seen/caught flags survive native Save/cold Continue.
+Personal saves are never accessed. Projection tests verify all five rules.
+
+Optional researcher accept/decline, unchanged party/items/money and previous
+Pangoro/Solgaleo/Lunala cold saves pass. Campaign/country capacity and text width
+checks and title/New Game/cold Continue regressions pass. Tea authenticity and
+other alternate forms, modern abilities/moves and balancing remain outstanding.
+
+Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
+EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `ab6e7cc2803e7fbce79cd5a0bf0e3cc9b800fd5fb7f9b1a0c80873af35935cd1`.

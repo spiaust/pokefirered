@@ -39,6 +39,8 @@ The ending keeps League shelters, country travel and repeatable training availab
   including both Cosmoem branches; add an optional London evolution researcher.
 - [x] Add Sliggoo/Goodra level-50 overworld rain/fog evolution, World Gear
   rain support, battle-weather rejection and optional researcher guidance.
+- [x] Add purchasable Auspicious/Malicious Armor, Metal Alloy, Cracked Pot
+  and Unremarkable Teacup for five modern evolution paths, with researcher tips.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [x] Add individual normal/reversed cries for all 639 imported Gen IV–IX
   base species; preserve full longer normal samples and original Gen I–III audio.

@@ -369,3 +369,23 @@ no fog override or new fog map is introduced in this milestone.
 The generated audit now has 240 supported and 113 omitted rules. Species,
 items, move IDs, save offsets and global RAM are unchanged. London researcher
 text covers the new route within native dialogue width limits.
+
+
+### Modern armor, alloy and tea evolution items
+
+Five existing unconditional item rules from the pinned roster source now
+project: both Charcadet armor branches, Duraludon/Metal Alloy, Sinistea/Cracked
+Pot and Poltchageist/Unremarkable Teacup. Existing base-form aliases resolve
+Polteageist Phony and Sinistcha Unremarkable. Authenticity variants remain
+outside the current base-species model. The audit is 245 supported and 108
+omitted rules; no nested conditions are removed to unlock these routes.
+
+Unused item slots 92 and 99–102 gain native party-menu evolution items, prices
+of 2,100, descriptions and stable aliases. Short bag names AUSPIC.ARMOR,
+MALIC.ARMOR and PLAIN TEACUP fit the native name limit. Shared native evolution
+item handling consumes one only on success, honors Everstone/shadow guards and
+preserves held items. Shops append the items without changing earlier stock.
+Icons reuse Metal Coat, Fire Stone, Moon Stone, Berry Juice and Moomoo Milk
+artwork; custom modern item artwork remains future visual work. No species,
+move, save offsets or global RAM are added. Optional researcher dialogue now
+explains the routes.

@@ -3579,10 +3579,14 @@
   },
   {
     "species": "SPECIES_SINISTEA",
-    "supported": [],
-    "omitted": [
-      "{EVO_ITEM, ITEM_CRACKED_POT, SPECIES_POLTEAGEIST_PHONY}"
-    ]
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_CRACKED_POT",
+        "SPECIES_POLTEAGEIST"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_POLTEAGEIST",
@@ -3831,10 +3835,14 @@
   },
   {
     "species": "SPECIES_DURALUDON",
-    "supported": [],
-    "omitted": [
-      "{EVO_ITEM, ITEM_METAL_ALLOY, SPECIES_ARCHALUDON}"
-    ]
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_METAL_ALLOY",
+        "SPECIES_ARCHALUDON"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_DREEPY",
@@ -4205,11 +4213,19 @@
   },
   {
     "species": "SPECIES_CHARCADET",
-    "supported": [],
-    "omitted": [
-      "{EVO_ITEM, ITEM_AUSPICIOUS_ARMOR, SPECIES_ARMAROUGE}",
-      "{EVO_ITEM, ITEM_MALICIOUS_ARMOR, SPECIES_CERULEDGE}"
-    ]
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_AUSPICIOUS_ARMOR",
+        "SPECIES_ARMAROUGE"
+      ],
+      [
+        "EVO_ITEM",
+        "ITEM_MALICIOUS_ARMOR",
+        "SPECIES_CERULEDGE"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_ARMAROUGE",
@@ -4707,10 +4723,14 @@
   },
   {
     "species": "SPECIES_POLTCHAGEIST",
-    "supported": [],
-    "omitted": [
-      "{EVO_ITEM, ITEM_UNREMARKABLE_TEACUP, SPECIES_SINISTCHA_UNREMARKABLE}"
-    ]
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_UNREMARKABLE_TEACUP",
+        "SPECIES_SINISTCHA"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_SINISTCHA",

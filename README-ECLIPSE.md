@@ -553,3 +553,20 @@ rain or fog. WORLD GEAR can select RAIN outdoors; CLEAR and SNOW do not count.
 Rain Dance and other battle-only weather do not satisfy the requirement.
 Everstone and shadow status still block evolution. London's optional evolution
 researcher now explains this route alongside party/time requirements.
+
+
+## Modern evolution items
+
+Campaign and country shops sell five more evolution items for 2,100 each:
+
+- AUSPIC.ARMOR: Charcadet → Armarouge.
+- MALIC.ARMOR: Charcadet → Ceruledge.
+- METAL ALLOY: Duraludon → Archaludon.
+- CRACKED POT: Sinistea → Polteageist.
+- PLAIN TEACUP: Poltchageist → Sinistcha (Unremarkable Teacup).
+
+Use them from the bag on a matching party Pokémon. A successful evolution
+consumes one item; rejected uses keep it. Everstone and shadow restrictions
+still apply. Existing held items are preserved. London's optional researcher
+explains the routes. Tea authenticity variants remain represented by the
+roster's existing base species; these items do not add alternate forms.

@@ -92,3 +92,7 @@ for bad in (body.replace('WEATHER_RAIN','WEATHER_SNOW'),body.replace('EVO_LEVEL,
     assert not project(bad,{'SPECIES_GOODRA'},set())[0]
 assert len(next(r for r in rows if r['species']=='SPECIES_SLIGGOO')['supported'])==2
 print('PASS: minimum-level rain/fog conditions preserve unknown-weather and extra-condition rejection')
+
+for token,item,target in [('CHARCADET','AUSPICIOUS_ARMOR','ARMAROUGE'),('CHARCADET','MALICIOUS_ARMOR','CERULEDGE'),('DURALUDON','METAL_ALLOY','ARCHALUDON'),('SINISTEA','CRACKED_POT','POLTEAGEIST'),('POLTCHAGEIST','UNREMARKABLE_TEACUP','SINISTCHA')]:
+    assert ['EVO_ITEM','ITEM_'+item,'SPECIES_'+target] in rules.get('SPECIES_'+token,[])
+print('PASS: five modern evolution-item paths and existing base-form aliases')

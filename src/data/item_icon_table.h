@@ -102,7 +102,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_TART_APPLE] = {gItemIcon_AspearBerry, gItemIconPalette_AspearBerry},
     [ITEM_SWEET_APPLE] = {gItemIcon_CheriBerry, gItemIconPalette_CheriBerry},
     [ITEM_SYRUPY_APPLE] = {gItemIcon_SitrusBerry, gItemIconPalette_SitrusBerry},
-    [ITEM_05C]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_METAL_ALLOY] = {gItemIcon_MetalCoat, gItemIconPalette_MetalCoat},
     // Evolution stones
     [ITEM_SUN_STONE]      = {gItemIcon_SunStone, gItemIconPalette_SunStone},
     [ITEM_MOON_STONE]     = {gItemIcon_MoonStone, gItemIconPalette_MoonStone},
@@ -111,10 +111,10 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_WATER_STONE]    = {gItemIcon_WaterStone, gItemIconPalette_WaterStone},
     [ITEM_LEAF_STONE]     = {gItemIcon_LeafStone, gItemIconPalette_LeafStone},
     // ????????
-    [ITEM_063]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_064]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_065]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_066]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_AUSPICIOUS_ARMOR] = {gItemIcon_FireStone, gItemIconPalette_FireStone},
+    [ITEM_MALICIOUS_ARMOR] = {gItemIcon_MoonStone, gItemIconPalette_MoonStone},
+    [ITEM_CRACKED_POT] = {gItemIcon_BerryJuice, gItemIconPalette_BerryJuice},
+    [ITEM_UNREMARKABLE_TEACUP] = {gItemIcon_MoomooMilk, gItemIconPalette_MoomooMilk},
     // Valuables
     [ITEM_TINY_MUSHROOM]  = {gItemIcon_TinyMushroom, gItemIconPalette_Mushroom},
     [ITEM_BIG_MUSHROOM]   = {gItemIcon_BigMushroom, gItemIconPalette_Mushroom},
