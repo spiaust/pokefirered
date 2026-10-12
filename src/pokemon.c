@@ -2700,7 +2700,20 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (GetMonData(attackMon, MON_DATA_UNUSED_RIBBONS, NULL) & 1) damage = damage * 5 / 4;
         if (GetMonData(defendMon, MON_DATA_UNUSED_RIBBONS, NULL) & 1) damage = damage * 5 / 4;
     }
-    return damage + 2;
+    damage += 2;
+    if (battlerIdAtk != battlerIdDef && defender->ability == ABILITY_FLUFFY)
+    {
+        bool8 contact = (gBattleMoves[move].flags & FLAG_MAKES_CONTACT) != 0;
+        if (type == TYPE_FIRE && !contact)
+            damage *= 2;
+        else if (type != TYPE_FIRE && contact)
+        {
+            damage /= 2;
+            if (damage == 0)
+                damage = 1;
+        }
+    }
+    return damage;
 }
 
 u8 CountAliveMonsInBattle(u8 caseId)

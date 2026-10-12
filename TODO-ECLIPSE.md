@@ -168,3 +168,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 
 - [x] Add Fur Coat for Furfrou, native physical Defense bonus, special/fixed/
   confusion guards, critical/stage/drain/Struggle checks and cold-save display.
+
+- [x] Add Fluffy for four regular slots, contact/Fire damage combinations,
+  physical/special and critical/drain/recoil/fixed/self-hit guards, Bewear
+  cold save, Stufful evolution and Fur Coat regression checks.

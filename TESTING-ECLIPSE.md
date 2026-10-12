@@ -1874,6 +1874,30 @@ and disposable saves, not naturally trained campaign teams or hardware/link.
 Furfrou has no native evolution route, so no evolution fixture is needed.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `be27a64cde6c54b60bdcf164a99077c8c17b78d9e64e497ae4de11991d5d5310`.
+Previous release SHA-256: `be27a64cde6c54b60bdcf164a99077c8c17b78d9e64e497ae4de11991d5d5310`.
 Both ROM aliases match. Native suites and campaign/country static checks pass;
 refresh is idempotent. Furfrou's complete name/description were visually verified.
+
+## Fluffy contact and Fire damage
+
+`test_eclipse_fluffy.py` checks contact Quick Attack, Bite, Drain Punch and
+Poison Fang reduction, unchanged non-contact Earthquake/Rock Slide/Water Gun,
+and doubled Ember/Flamethrower damage. Fire Punch/Blaze Kick/Flame Wheel are
+contact Fire and remain unchanged. Move power stays unchanged. Critical hits
+retain the reduction; Drain Punch heals from reduced damage. Seismic Toss
+and Super Fang remain fixed damage, actual forced Struggle contact damage
+is reduced with matching native quarter-damage recoil, and Ghost immunity
+and confusion self-damage remain intact. First-action fixtures isolate move
+damage from secondary-status residuals and later enemy actions.
+`test_eclipse_fluffy_species.py` checks all four slots, Bewear Save/cold
+Continue, skills UI and next battle. `test_eclipse_fluffy_evolution.py` checks
+Stufful/Bewear retains the first slot. Full `test_eclipse_fur_coat.py` regression
+passes physical/special, critical/stage, drain/recoil, fixed and self-hit checks.
+Fixtures use controlled stats/levels and disposable saves, not naturally
+raised campaign teams or hardware/link testing.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `2f2f9925f2e421ae4516a5d42f3847c8bdcd3b7957c5d4117e99c1583363560f`.
+Both ROM aliases match. All three native Fluffy suites, full Fur Coat regression
+and campaign/country static checks pass; refresh is idempotent. Bewear's
+complete ability name and description were visually verified.

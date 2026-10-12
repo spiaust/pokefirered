@@ -828,3 +828,12 @@ Critical hits retain this ability bonus while using native stat-stage rules.
 Special attacks, fixed damage and confusion self-damage remain unchanged.
 The existing Gen III type-based split still applies: Dark and Fire attacks
 are special, even when they make contact. Alternate forms remain unsupported.
+
+## Fluffy ability
+
+Stufful, Bewear, Wooloo and Dubwool can use Fluffy in their first regular slot.
+It halves non-Fire contact damage and doubles non-contact Fire damage.
+Contact Fire attacks receive both modifiers, giving unchanged damage.
+Non-contact attacks of other types, fixed damage and confusion self-damage
+remain unchanged. Contact classification applies to both physical and special
+attacks under the native Gen III type split.

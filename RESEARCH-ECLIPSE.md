@@ -735,3 +735,16 @@ and damage calculations retain their behavior. This shared attack/estimate
 path changes neither saved stats nor the summary Defense number. Alolan
 Persian and Furfrou trims are not projected onto existing base forms. No extra
 RAM/save fields, hidden slots or modern category split.
+
+### Fluffy contact and Fire damage
+
+Pinned RHH applies a 0.5 modifier for non-Fire contact and 2.0 for non-contact
+Fire attacks, leaving contact Fire unchanged:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Four imported regular slots become supported. Native CalculateBaseDamage
+applies the modifier after base damage's +2 term, using the resolved type
+and existing contact flag; it excludes self-damage and retains minimum one.
+The shared attack/estimate path covers real Struggle contact damage; its
+native recoil follows reduced damage. Fixed-damage scripts bypass this
+calculation. No contact-negating abilities/items, new RAM/save fields, hidden
+slots or modern physical/special split are introduced.
