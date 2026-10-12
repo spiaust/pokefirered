@@ -664,3 +664,13 @@ Liquid Ooze, and receives the Iron Fist boost. It uses the native Mega Punch
 animation. Hitmonchan can recall it at a free reminder; imported level lessons
 are Seismitoad 1, Mienfoo/Mienshao 35, Marshadow 54 and Koraidon 21. The Dex
 level-up tab displays the imported lessons.
+
+## Adaptability ability
+
+Adaptability increases the same-type attack bonus from 1.5 to 2.0 for Eevee,
+Porygon-Z, Basculin and Basculegion's supported regular slots. It matches either
+current type of a dual-type battler and applies only once. Off-type attacks,
+fixed-damage attacks, Struggle and confusion self-damage remain unchanged;
+type immunities still apply. Actual attacks and native damage estimates share
+the bonus calculation. Existing saves retain their selected ability slot.
+Hidden-only Adaptability slots and alternate forms remain outside this update.

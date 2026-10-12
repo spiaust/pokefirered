@@ -532,3 +532,15 @@ Draining Kiss three-quarter exception intact. Five imported level lessons
 come from the cached Gen IX learnsets. Hitmonchan's upstream evolution lesson
 at level 0 is mapped to level 1 for native free recall, preserving its other
 classic lessons. Native Mega Punch animation supplies the battle visual.
+
+### Adaptability regular abilities
+
+Pinned RHH battle damage calculation uses 2.0 rather than 1.5 for a matching
+type when Adaptability is active:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+The cached Gen I family source supplies Eevee's Run Away/Adaptability slots;
+existing imported metadata supplies Porygon-Z, Basculin and Basculegion.
+This native implementation shares the same-type modifier between Cmd_typecalc
+and TypeCalc. Struggle returns before that modifier; native fixed-damage
+scripts preserve their own damage assignment. No new RAM or save fields.
+Hidden-only slots and the upstream Terastallization system are not imported.

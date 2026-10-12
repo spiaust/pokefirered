@@ -1281,6 +1281,18 @@ static void ModulateDmgByType(u8 multiplier)
     }
 }
 
+// Shared by actual attacks and native damage estimates. Struggle callers return first.
+static void ApplySameTypeDamageBonus(u8 attacker, u8 moveType)
+{
+    if (IS_BATTLER_OF_TYPE(attacker, moveType))
+    {
+        if (gBattleMons[attacker].ability == ABILITY_ADAPTABILITY)
+            gBattleMoveDamage *= 2;
+        else
+            gBattleMoveDamage = gBattleMoveDamage * 15 / 10;
+    }
+}
+
 static void Cmd_typecalc(void)
 {
     s32 i = 0;
@@ -1294,12 +1306,7 @@ static void Cmd_typecalc(void)
 
     GET_MOVE_TYPE(gCurrentMove, moveType);
 
-    // check stab
-    if (IS_BATTLER_OF_TYPE(gBattlerAttacker, moveType))
-    {
-        gBattleMoveDamage = gBattleMoveDamage * 15;
-        gBattleMoveDamage = gBattleMoveDamage / 10;
-    }
+    ApplySameTypeDamageBonus(gBattlerAttacker, moveType);
 
     if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
     {
@@ -1473,12 +1480,7 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
 
     moveType = gBattleMoves[move].type;
 
-    // check stab
-    if (IS_BATTLER_OF_TYPE(attacker, moveType))
-    {
-        gBattleMoveDamage = gBattleMoveDamage * 15;
-        gBattleMoveDamage = gBattleMoveDamage / 10;
-    }
+    ApplySameTypeDamageBonus(attacker, moveType);
 
     if (gBattleMons[defender].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
     {

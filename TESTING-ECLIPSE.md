@@ -1482,9 +1482,34 @@ imported learnsets match metadata and retain prior lessons; maximum 23 entries.
 
 Campaign/country static and animation/evolution-projection checks pass.
 Memory: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `1cef2f780e5d874dc1a6f7546a79ea1602a9647620fc7ebd81a2de9b5cdafe40`.
+Previous release SHA-256: `1cef2f780e5d874dc1a6f7546a79ea1602a9647620fc7ebd81a2de9b5cdafe40`.
 
 All three Iron Fist/Drain Punch native suites passed on the final ROM. Existing
 modern drain/secondary/spread and Technician battle regressions also passed.
 Visual inspection confirms the full Iron Fist description and Mienfoo's level-35
 Drain Punch Dex entry. Re-running both refresh scripts makes zero changes.
+
+## Adaptability regular slots
+
+`test_eclipse_adaptability.py` compares native matching Normal/Water/Electric/
+Fighting attacks, both slots of dual-type battlers, off-type Fire Punch and
+Drain Punch healing. Native Seismic Toss, real out-of-PP Struggle, Normal
+immunity to Ghost and confusion self-damage remain unchanged. Base power and
+PP transitions are checked; HP damage reflects native integer rounding.
+`test_eclipse_adaptability_species.py` checks all four ability slots in native
+battles, Eevee Save/cold Continue and complete skills description rendering.
+`test_eclipse_adaptability_evolution.py` evolves Porygon2 with Dubious Disc and
+Link Cable, checks exact item consumption, then cold Continues and verifies
+Porygon-Z's Adaptability in the next battle. Tests use isolated controlled
+fixtures, not naturally trained teams or personal saves.
+
+Campaign and country static checks passed. Build memory remains EWRAM 261,196
+bytes, IWRAM 29,824 bytes and ROM content 23,288,035 bytes.
+Current release SHA-256: `a990c68308257f50d795f276afd064fadfdc9b31d848b11d50faa0aebe2a802d`.
+
+Adaptability battle, species and evolution suites passed. The targeted
+`--quick-types-only` run confirms identical matching damage for single-type,
+first-slot dual-type and second-slot dual-type battlers. Iron Fist and modern
+drain/secondary/spread regression suites passed. Eevee's complete Adaptability
+name and description were visually verified; another ability refresh changes
+zero imported slots.

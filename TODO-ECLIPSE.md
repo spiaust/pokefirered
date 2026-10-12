@@ -101,3 +101,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Iron Fist for eight regular species slots and punching flags for
   thirteen native moves; add Drain Punch with six obtainable species lessons,
   free recall, Dex display, healing/guard QA, evolution and cold-save coverage.
+
+- [x] Add Adaptability for four regular species slots, shared native attack/
+  estimate logic, dual-type matching, fixed-damage/Struggle/immunity guards,
+  Eevee cold-save display and Porygon-Z evolution persistence.
