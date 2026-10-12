@@ -28,6 +28,8 @@ The ending keeps League shelters, country travel and repeatable training availab
   matching held-item requirements and obtainable classic trade items.
 - [x] Add seven modern held trade items and Link Cable routes for Rhyperior,
   Electivire, Magmortar, Porygon-Z, Dusknoir, Aromatisse and Slurpuff.
+- [x] Add Thunder Stone paths for Magneton/Nosepass and required-move paths
+  for Lickitung, Aipom and Girafarig; add obtainable Double Hit/Twin Beam.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [ ] Expand modern ability/move/evolution coverage and species-specific cries;
   tune reserve habitats and encounter balance across countries.

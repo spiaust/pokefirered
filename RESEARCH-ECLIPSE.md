@@ -224,3 +224,29 @@ Five original-species rows are manual; Spritzee/Swirlix add two generated
 trade rules. The 639-row audit now has 223 supported and 130 omitted rules.
 Link Cable supports twenty-three paths. Native link-trade checks see the same
 new table rows, although hardware link trading remains untested in this pass.
+
+### Thunder Stone and required-move cross-generation paths
+
+The pinned RHH family data supplies Thunder Stone alternatives for Magneton
+and Nosepass, alongside magnetic-field rules. This pass uses the stone paths;
+Charjabug's already projected Thunder Stone path remains unchanged. Five manual
+original-species rows add Magnezone, Probopass, Lickilicky, Ambipom and Farigiraf.
+Lickitung's source condition is known Rollout; Aipom's is known Double Hit;
+Girafarig's is known Twin Beam. No new evolution method is needed.
+
+The cached Gen IX level-up source provides Rollout at Lickitung level 6,
+Double Hit at Aipom 32 and Girafarig 28, and Twin Beam at Girafarig 32. Those
+lessons are inserted in order while preserving the original classic moves.
+Native free reminders and Pokédex level-up lists use the resulting learnsets.
+Imported evolved-species learnsets are not regenerated in this pass; evolved
+partners retain newly learned moves, while broader learnset coverage is pending.
+The imported audit remains 223 supported/130 omitted rules.
+
+Moves 361/362 implement Double Hit/Twin Beam using EFFECT_DOUBLE_HIT: exactly
+two strikes with one PP deduction. Double Hit is Normal, power 35 per strike,
+accuracy 85, PP 10 and contact; Twin Beam is Psychic, power 40 per strike,
+accuracy 100, PP 10 and non-contact. Both retain native Protect/Mirror Move and
+eligible King's Rock flags. Animations reuse Double Slap and Psybeam respectively;
+names/descriptions are native and original move IDs/animation positions stay
+fixed. Gen III's Normal physical/Psychic special categories fit these moves.
+No new global RAM, save fields, item IDs or graphics assets are introduced.

@@ -1092,4 +1092,35 @@ trading, newer special rules and broader balancing remain pending.
 
 Both ROM aliases are 32 MiB; content remains 17,299,532 bytes.
 EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `384abe2ab43cc240de509208db43109ca3f86620f2426cfb3dba3ff16dfed855`.
+Previous modern-trade release SHA-256: `384abe2ab43cc240de509208db43109ca3f86620f2426cfb3dba3ff16dfed855`.
+
+### Thunder Stone and move-known cross-generation coverage
+
+`test_eclipse_cross_gen.py stones` passes Magneton/Magnezone and
+Nosepass/Probopass, existing Charjabug/Vikavolt and Eevee/Jolteon regressions,
+wrong-stone rejection, Everstone and shadow restrictions with exact stone
+consumption. `moves` passes Lickitung/Rollout, Aipom/Double Hit and
+Girafarig/Twin Beam, including a fourth-slot required move, missing/wrong moves,
+Everstone and shadow. Native level-up menus learn Rollout at 6, Double Hit at
+32 and Twin Beam at 32, then evolve immediately. Farigiraf, learned Twin Beam
+and extended seen/caught flags survive native Save/cold Continue.
+
+`reminders` learns each of the three required moves through a native free NPC
+lesson, verifies no money or inventory charge, then evolves through native
+level-up. `test_eclipse_two_hit_moves.py` uses explicit combat fixtures with a
+harmless opponent and sufficient enemy HP. Double Hit produces exactly two
+native damage events (45, 42); Twin Beam produces two (93, 81). Both consume
+one PP, use native counters 2/1 and finish their reused animations normally.
+The harness can retry natural accuracy misses; none occurred in this run.
+
+Original move animation positions and appended move/sentinel alignment pass
+projection regressions. Campaign/continent static checks and 2026 title/New
+Game/cold Continue checks pass. The tests use isolated species/move/level or
+combat fixtures, not personal saves. Original classic learnset entries remain
+in order; broader imported learnset coverage and balancing remain pending.
+The imported evolution audit stays 223 supported/130 omitted because the five
+new evolution rows belong to original species.
+
+ROM content remains 17,299,532 bytes; both padded aliases are 32 MiB.
+EWRAM stays 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `63e020938b6c1d28916581866b4c69334158637ae038ac68c763dd466e4ebb44`.

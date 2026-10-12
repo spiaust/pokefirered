@@ -458,3 +458,23 @@ item and one cable. Missing/wrong items and shadow restrictions preserve both.
 Porygon can first use Up-Grade and Link Cable to become Porygon2, then use
 Dubious Disc and another cable to complete its evolution line. Existing link
 trade rules also recognize these held items. Their icons reuse native item art.
+
+## More cross-generation evolutions
+
+Use Thunder Stone on Magneton for Magnezone or Nosepass for Probopass.
+Charjabug's existing Thunder Stone path to Vikavolt and Eevee's Jolteon path
+remain available. Successful use consumes one stone; Everstone and shadow
+restrictions apply. These use the modern stone alternative rather than a
+magnetic-field location requirement.
+
+Lickitung learns Rollout at level 6, Aipom learns Double Hit at 32, and Girafarig
+learns Twin Beam at 32 (plus Double Hit at 28). Level up while knowing the
+required move to evolve into Lickilicky, Ambipom or Farigiraf respectively.
+Learning the move at that level can trigger the evolution immediately.
+Older partners can recover the move through a free reminder, then gain a level.
+Girafarig needs Twin Beam specifically; Double Hit does not evolve it.
+
+Double Hit is a Normal physical attack: two 35-power strikes, 85 accuracy,
+10 PP. Twin Beam is a Psychic special attack: two 40-power strikes, 100
+accuracy, 10 PP. Both use the existing native two-hit battle mechanic with
+reused strike/beam animations. Other modern learnsets remain projected.

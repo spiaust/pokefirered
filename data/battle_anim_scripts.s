@@ -381,6 +381,8 @@ gBattleAnims_Moves::
 	.4byte Move_DOUBLE_SLAP @ PLAY_ROUGH
 	.4byte Move_RAZOR_LEAF @ LEAFAGE
 	.4byte Move_CHARM @ BABY_DOLL_EYES
+	.4byte Move_DOUBLE_SLAP @ DOUBLE_HIT
+	.4byte Move_PSYBEAM @ TWIN_BEAM
 	.4byte Move_COUNT
 
 	.align 2

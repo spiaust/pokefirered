@@ -365,7 +365,10 @@
 
 #define MOVE_BABY_DOLL_EYES 360
 
-#define MOVES_COUNT 361
+#define MOVE_DOUBLE_HIT 361
+#define MOVE_TWIN_BEAM 362
+
+#define MOVES_COUNT 363
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

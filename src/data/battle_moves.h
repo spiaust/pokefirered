@@ -4619,5 +4619,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 [MOVE_MOONBLAST] = {.effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT, .power = 95, .type = TYPE_FAIRY, .accuracy = 100, .pp = 15, .secondaryEffectChance = 30, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
 [MOVE_PLAY_ROUGH] = {.effect = EFFECT_ATTACK_DOWN_HIT, .power = 90, .type = TYPE_FAIRY, .accuracy = 90, .pp = 10, .secondaryEffectChance = 10, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
 [MOVE_BABY_DOLL_EYES] = {.effect = EFFECT_ATTACK_DOWN, .power = 0, .type = TYPE_FAIRY, .accuracy = 100, .pp = 30, .priority = 1, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
+[MOVE_DOUBLE_HIT] = {.effect = EFFECT_DOUBLE_HIT, .power = 35, .type = TYPE_NORMAL, .accuracy = 85, .pp = 10, .target = MOVE_TARGET_SELECTED, .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED},
+[MOVE_TWIN_BEAM] = {.effect = EFFECT_DOUBLE_HIT, .power = 40, .type = TYPE_PSYCHIC, .accuracy = 100, .pp = 10, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED},
 [MOVE_LEAFAGE] = {.effect = EFFECT_HIT, .power = 40, .type = TYPE_GRASS, .accuracy = 100, .pp = 40, .secondaryEffectChance = 0, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
 };
