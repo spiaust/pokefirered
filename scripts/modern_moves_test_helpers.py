@@ -16,12 +16,12 @@ def single(e):
     assert e.read('gBattlerControllerFuncs')&~1==action
     return e.symbols['gBattleMons']
 
-def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,expected_hits=1,enemy_species=None,confused=False,enemy_type=0,attacker_types=(0,0),attacker_accuracy=6,enemy_evasion=6,attacker_item=None,focus_energy=False,crit_seed=None,enemy_types=None,attacker_attack_stage=6,enemy_defense_stage=6):
+def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,expected_hits=1,enemy_species=None,confused=False,enemy_type=0,attacker_types=(0,0),attacker_accuracy=6,enemy_evasion=6,attacker_item=None,focus_energy=False,crit_seed=None,enemy_types=None,attacker_attack_stage=6,enemy_defense_stage=6,maxhp=1000):
     b=e.symbols['gBattleMons'];enemy=b+88
     e.write('gRngValue',seed)
     target_types=enemy_types or (enemy_type,enemy_type)
     for q,hp in [(b,ownhp),(enemy,enemyhp)]:
-        e.write(q+40,hp,2);e.write(q+44,1000,2);e.write(q+76,0);e.write(q+80,0)
+        e.write(q+40,hp,2);e.write(q+44,maxhp,2);e.write(q+76,0);e.write(q+80,0)
         e.write(q+2,100,2);e.write(q+4,100,2)
         e.write(q+8,100,2);e.write(q+10,100,2)
         e.write(q+6,100 if q==b else 40,2)

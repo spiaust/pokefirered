@@ -746,3 +746,13 @@ Nine and Air Lock suppress the evasion bonus; other weather grants no bonus.
 It is available to Swinub, Piloswine, Glaceon, Mamoswine, Froslass, Vanillite,
 Vanillish, Cubchoo, Beartic and Cetoddle. Glaceon has it in both regular slots.
 This uses the existing battle Hail weather; overworld snowfall remains visual.
+
+## Ice Body ability
+
+Ice Body restores 1/16 of maximum HP after each turn of active battle hail,
+with a minimum of one HP and no healing beyond maximum HP. It also prevents
+hail damage after type changes. Cloud Nine and Air Lock suppress its healing;
+underground or underwater Pokémon receive no Ice Body healing. Other weather
+grants no healing, and sandstorm can still damage the Pokémon. Available for
+Snorunt, Glalie, Spheal, Sealeo, Walrein, Vanillite, Vanillish, Vanilluxe,
+Bergmite, Avalugg and Arctovish. Overworld snowfall remains visual.

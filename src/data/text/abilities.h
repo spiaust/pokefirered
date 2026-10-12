@@ -1,3 +1,4 @@
+static const u8 sIceBodyDescription[] = _("Restores HP in hail.");
 static const u8 sSnowCloakDescription[] = _("Raises evasion in hail.");
 static const u8 sBigPecksDescription[] = _("Prevents DEFENSE reduction.");
 static const u8 sSniperDescription[] = _("Boosts critical-hit damage.");
@@ -180,6 +181,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_SNIPER] = sSniperDescription,
     [ABILITY_BIG_PECKS] = sBigPecksDescription,
     [ABILITY_SNOW_CLOAK] = sSnowCloakDescription,
+    [ABILITY_ICE_BODY] = sIceBodyDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -274,4 +276,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SNIPER] = _("SNIPER"),
     [ABILITY_BIG_PECKS] = _("BIG PECKS"),
     [ABILITY_SNOW_CLOAK] = _("SNOW CLOAK"),
+    [ABILITY_ICE_BODY] = _("ICE BODY"),
 };

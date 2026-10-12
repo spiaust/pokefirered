@@ -29129,7 +29129,7 @@
         "EGG_GROUP_MINERAL"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_ICE_BODY",
         "ABILITY_SNOW_CLOAK"
       ],
       "source_abilities": [
@@ -29271,7 +29271,7 @@
         "EGG_GROUP_MINERAL"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_ICE_BODY",
         "ABILITY_SNOW_CLOAK"
       ],
       "source_abilities": [
@@ -29413,7 +29413,7 @@
         "EGG_GROUP_MINERAL"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_ICE_BODY",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -48419,7 +48419,7 @@
       ],
       "abilities": [
         "ABILITY_OWN_TEMPO",
-        "ABILITY_NONE"
+        "ABILITY_ICE_BODY"
       ],
       "source_abilities": [
         "ABILITY_OWN_TEMPO",
@@ -48565,7 +48565,7 @@
       ],
       "abilities": [
         "ABILITY_OWN_TEMPO",
-        "ABILITY_NONE"
+        "ABILITY_ICE_BODY"
       ],
       "source_abilities": [
         "ABILITY_OWN_TEMPO",
@@ -72283,7 +72283,7 @@
       ],
       "abilities": [
         "ABILITY_WATER_ABSORB",
-        "ABILITY_NONE"
+        "ABILITY_ICE_BODY"
       ],
       "source_abilities": [
         "ABILITY_WATER_ABSORB",

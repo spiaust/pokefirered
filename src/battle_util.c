@@ -1820,10 +1820,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 switch (gLastUsedAbility)
                 {
                 case ABILITY_RAIN_DISH:
-                    if (WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN)
+                case ABILITY_ICE_BODY:
+                    if (WEATHER_HAS_EFFECT
+                     && ((gLastUsedAbility == ABILITY_RAIN_DISH && (gBattleWeather & B_WEATHER_RAIN))
+                         || (gLastUsedAbility == ABILITY_ICE_BODY && (gBattleWeather & B_WEATHER_HAIL)
+                             && !(gStatuses3[battler] & (STATUS3_UNDERGROUND | STATUS3_UNDERWATER))))
                      && gBattleMons[battler].maxHP > gBattleMons[battler].hp)
                     {
-                        gLastUsedAbility = ABILITY_RAIN_DISH; // why
                         BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
                         gBattleMoveDamage = gBattleMons[battler].maxHP / 16;
                         if (gBattleMoveDamage == 0)

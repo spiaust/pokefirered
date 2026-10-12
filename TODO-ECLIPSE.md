@@ -133,3 +133,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Snow Cloak for ten species/eleven regular slots, hail evasion and
   damage immunity, weather suppression/non-hail guards, Glaceon cold-save
   display and Cubchoo/Beartic evolution persistence.
+
+- [x] Add Ice Body for eleven regular species slots, hail recovery/immunity,
+  HP caps/minimum healing, suppression/submerged guards, native Rain Dish
+  regressions, Walrein cold-save display and Spheal/Sealeo evolution persistence.

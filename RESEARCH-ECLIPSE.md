@@ -625,3 +625,15 @@ residual damage for Snow Cloak regardless of typing. Gen II pinned family data
 restore Swinub/Piloswine's second slots; imported metadata restore eight modern
 species (nine regular slots because Glaceon has two). No added RAM/save fields,
 hidden abilities, alternate forms, or conversion of visual snowfall to Hail.
+
+### Ice Body hail recovery
+
+Pinned RHH end-turn logic supplies Ice Body's hail healing and submerged guards:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Five Gen III family regular slots and six imported slots become supported.
+The native ability handler shares Rain Dish's generic ability-name recovery
+script and 1/16 healing calculation, keeping the active ability ID for text
+and recording. Its hail branch excludes underground/underwater battlers.
+Cmd_weatherdamage excludes Ice Body from hail damage regardless of typing.
+Native Rain Dish retains its original submerged behavior. No additional RAM,
+save fields, hidden abilities, modern snow rules or Heal Block support.

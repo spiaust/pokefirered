@@ -1659,6 +1659,28 @@ retains Snow Cloak. Controlled levels/stats and disposable saves are fixtures,
 not naturally raised campaign teams, personal saves or hardware RTC testing.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `189f55f598b8a29fd03f7f54e1edeb0aad9b9989db7e7f50cd7cf7c7085a4bce`.
+Previous release SHA-256: `189f55f598b8a29fd03f7f54e1edeb0aad9b9989db7e7f50cd7cf7c7085a4bce`.
 Both ROM aliases match. Glaceon's complete ability name and description were
 visually verified. Campaign/country static checks pass; refresh is idempotent.
+
+## Ice Body hail recovery
+
+`test_eclipse_ice_body.py` verifies 62 HP recovery at max HP 1000, a 999-to-1000
+cap, no overheal at full HP and minimum one HP recovery at max HP 12. It checks
+no healing in clear/rain/sand/sun, Cloud Nine/Air Lock suppression and hail
+immunity with a controlled non-Ice typing. The same non-Ice fixture retains
+hail HP with Snow Cloak, takes hail damage without an immunity, and sandstorm
+still damages Ice Body. Original Rain Dish rain recovery/suppression checks pass.
+`test_eclipse_ice_body_submerged.py` checks underground and underwater Ice Body
+healing exclusions while preserving native Rain Dish recovery in those states.
+`test_eclipse_ice_body_species.py` checks all eleven regular slots, Walrein
+Save/cold Continue, skills UI and the next battle.
+`test_eclipse_ice_body_evolution.py` checks native Spheal/Sealeo evolution
+retains the second ability slot. Tests use disposable saves and controlled
+stats/levels/status flags, not naturally raised campaign teams or hardware.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `5e54410d2f6af12e31e20cf0e4738954d72f3e04a1da871f67411476145772f2`.
+Both ROM aliases match. All four native suites and campaign/country static
+checks pass; refresh is idempotent. Walrein's complete name/description were
+visually verified.
