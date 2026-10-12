@@ -1,3 +1,4 @@
+static const u8 sSkillLinkDescription[] = _("Maximizes multi-hit attacks.");
 static const u8 sTechnicianDescription[] = _("Boosts moves of 60 power or less.");
 static const u8 sNoneDescription[] = _("No special ability.");
 static const u8 sStenchDescription[] = _("Helps repel wild POKéMON.");
@@ -159,6 +160,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_CACOPHONY] = sCacophonyDescription,
     [ABILITY_AIR_LOCK] = sAirLockDescription,
     [ABILITY_TECHNICIAN] = sTechnicianDescription,
+    [ABILITY_SKILL_LINK] = sSkillLinkDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -242,4 +244,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_CACOPHONY] = _("CACOPHONY"),
     [ABILITY_AIR_LOCK] = _("AIR LOCK"),
     [ABILITY_TECHNICIAN] = _("TECHNICIAN"),
+    [ABILITY_SKILL_LINK] = _("SKILL LINK"),
 };

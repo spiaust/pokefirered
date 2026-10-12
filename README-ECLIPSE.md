@@ -631,3 +631,12 @@ Smeargle, Hitmontop, Ambipom, Minccino, Cinccino and Marshadow. The ability is
 shown on the native skills page and survives evolution and saving. Existing
 primary abilities on the six classic species remain available; hidden-only
 Technician slots are still outside the current two-regular-slot model.
+
+## Skill Link ability
+
+Skill Link is available in the second regular ability slot for Shellder, Cloyster,
+Pikipek, Trumbeak and Toucannon. Variable two-to-five-hit attacks now choose five
+hits after passing accuracy. Fixed two-hit moves retain two hits; Triple Kick
+retains three strikes and checks accuracy only for its first strike. A knockout
+or other native interruption can end an attack early. Hidden ability slots
+remain outside the current two-slot model.

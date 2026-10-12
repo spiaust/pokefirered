@@ -36,16 +36,16 @@ def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,exp
     e.press('UP',2);e.press('LEFT',2);e.press('A',90);e.press('UP',2);e.press('LEFT',2);e.frames(2,'A')
     hp=enemyhp;hits=[];started=False;flinched=False
     flinch=e.symbols['BattleScript_MoveUsedFlinched']
-    for n in range(4200):
+    for n in range(9000):
         current=e.read(enemy+40,2)
         if current<hp:hits.append(hp-current)
         hp=current
         script=e.read('gBattlescriptCurrInstr')
         flinched |= bool(e.read(enemy+80)&8) or flinch<=script<flinch+11
         started |= e.read(b+36,1)==pp-1 or (confused and e.read(b+40,2)<ownhp)
-        if started and ((enemyhp==1 and e.read(b+40,2)!=ownhp) or e.read('gBattlerControllerFuncs')&~1==action):break
+        if started and ((enemyhp==1 and (hp==0 or e.read(b+40,2)!=ownhp)) or e.read('gBattlerControllerFuncs')&~1==action):break
         e.frames(1,'A' if n%60==0 else 0)
     else:raise AssertionError(('Native move did not finish',move))
     self_hit=confused and not hits and e.read(b+40,2)<ownhp and e.read(b+36,1)==pp
-    assert started and (self_hit or (len(hits)==expected_hits and e.read(b+36,1)==pp-1)),(move,hits)
-    return dict(damage=sum(hits),ownhp=e.read(b+40,2),spdef=e.read(enemy+29,1),flinched=flinched,power=e.read('gBattleMovePower',2))
+    assert started and (self_hit or ((expected_hits is None or len(hits)==expected_hits) and e.read(b+36,1)==pp-1)),(move,hits)
+    return dict(hits=len(hits),damage=sum(hits),ownhp=e.read(b+40,2),spdef=e.read(enemy+29,1),flinched=flinched,power=e.read('gBattleMovePower',2))

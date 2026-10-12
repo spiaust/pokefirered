@@ -1005,6 +1005,14 @@ static void Cmd_accuracycheck(void)
 {
     u16 move = T2_READ_16(gBattlescriptCurrInstr + 5);
 
+    // Triple Kick checks accuracy once with Skill Link; later strikes keep its three-hit limit.
+    if (gCurrentMove == MOVE_TRIPLE_KICK && gMultiHitCounter < 3
+        && gBattleMons[gBattlerAttacker].ability == ABILITY_SKILL_LINK)
+    {
+        gBattlescriptCurrInstr += 7;
+        return;
+    }
+
     if ((gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE
         && !BtlCtrl_OakOldMan_TestState2Flag(1)
         && gBattleMoves[move].power != 0
@@ -6869,6 +6877,10 @@ static void Cmd_setmultihitcounter(void)
     if (gBattlescriptCurrInstr[1])
     {
         gMultiHitCounter = gBattlescriptCurrInstr[1];
+    }
+    else if (gBattleMons[gBattlerAttacker].ability == ABILITY_SKILL_LINK)
+    {
+        gMultiHitCounter = 5;
     }
     else
     {

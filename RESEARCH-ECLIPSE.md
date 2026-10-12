@@ -491,3 +491,14 @@ No stored ability flag, save layout, species/move/item IDs or global RAM change.
 Old ability IDs remain stable. Existing saved slot flags continue selecting their
 regular position; restored slots now provide the intended ability. Newly generated
 partners use the native regular-slot selection and battle loading.
+
+### Skill Link regular ability restoration
+
+The pinned RHH family data supplies Shellder/Cloyster's modern second slot:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/pokemon/species_info/gen_1_families.h
+The previously imported Gen VII metadata supplies the Pikipek family slots.
+Behavior reference: https://bulbapedia.bulbagarden.net/wiki/Skill_Link
+Native FireRed's random-hit counter now selects five for Skill Link. Fixed
+counters are unchanged; Triple Kick bypasses later accuracy rolls after its
+first successful strike. This is a small native implementation, not an import
+of the expansion battle engine. No hidden abilities or new RAM are introduced.

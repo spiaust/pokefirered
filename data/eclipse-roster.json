@@ -51341,7 +51341,7 @@
       ],
       "abilities": [
         "ABILITY_KEEN_EYE",
-        "ABILITY_NONE"
+        "ABILITY_SKILL_LINK"
       ],
       "source_abilities": [
         "ABILITY_KEEN_EYE",
@@ -51481,7 +51481,7 @@
       ],
       "abilities": [
         "ABILITY_KEEN_EYE",
-        "ABILITY_NONE"
+        "ABILITY_SKILL_LINK"
       ],
       "source_abilities": [
         "ABILITY_KEEN_EYE",
@@ -51625,7 +51625,7 @@
       ],
       "abilities": [
         "ABILITY_KEEN_EYE",
-        "ABILITY_NONE"
+        "ABILITY_SKILL_LINK"
       ],
       "source_abilities": [
         "ABILITY_KEEN_EYE",

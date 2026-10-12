@@ -1422,5 +1422,24 @@ and ability refresh is idempotent. Personal saves are never accessed.
 
 Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
 EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `7ba25cf77f43be5cbc0eea6ef256df6cbbc42f170299951b72cef610a3a378bc`.
+Previous release SHA-256: `7ba25cf77f43be5cbc0eea6ef256df6cbbc42f170299951b72cef610a3a378bc`.
 Broader abilities/hidden slots, alternate forms and campaign balancing remain.
+
+## Skill Link regular abilities
+
+`test_eclipse_skill_link.py` exercises Bullet Seed, Icicle Spear and Fury Swipes
+with multiple RNG seeds, normal ability controls, fixed Double Hit/Twin Beam,
+Triple Kick and a one-HP knockout. Native PP use and HP transitions are checked.
+Fury Swipes may miss its initial accuracy check, which Skill Link does not bypass.
+`test_eclipse_skill_link_species.py` checks native ability-slot loading for all
+five species, then saves Cloyster, cold Continues, opens its skills description
+and confirms Skill Link in the next battle. Fixtures use disposable saves and
+controlled stats, not naturally trained campaign parties.
+
+Build memory: EWRAM 261,196 bytes; IWRAM 29,824 bytes; ROM content 23,288,035 bytes.
+Current release SHA-256: `569e600d06f66a9f7c7ab00a54a74cabc14d8feeaa1aeb73158c889e4761d902`.
+
+Skill Link battle and species suites passed on the final ROM. Technician battle
+regression and campaign/country static checks passed. Cloyster's native skills
+screenshot shows the complete Skill Link name and description. Refreshing
+abilities again reports zero imported changes.

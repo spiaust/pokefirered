@@ -4,7 +4,8 @@ Pinned families are fetched into the roster cache when missing; hidden slots sta
 import json,re,urllib.request
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-CLASSIC=('MEOWTH','PERSIAN','SCYTHER','SCIZOR','SMEARGLE','HITMONTOP')
+CLASSIC={name:'ABILITY_TECHNICIAN' for name in ('MEOWTH','PERSIAN','SCYTHER','SCIZOR','SMEARGLE','HITMONTOP')}
+CLASSIC.update({name:'ABILITY_SKILL_LINK' for name in ('SHELLDER','CLOYSTER')})
 def family_source(gen):
     path=f'src/data/pokemon/species_info/gen_{gen}_families.h'
     cached=ROOT/'.local-tools/roster'/path
@@ -28,7 +29,7 @@ def refresh():
         assert count==1,row['token']
     families=''.join(family_source(gen) for gen in (1,2))
     classic_path=ROOT/'src/data/pokemon/species_info.h';classic=classic_path.read_text(encoding='utf-8')
-    for name in CLASSIC:
+    for name,expected in CLASSIC.items():
         body=re.search(r'\[SPECIES_'+name+r'\]\s*=\s*\{(.*?)(?=\n\s*\[SPECIES_|\Z)',families,re.S)[1]
         match=re.search(r'\.abilities\s*=\s*\{([^}]*)\}',body)
         if match:
@@ -36,13 +37,13 @@ def refresh():
         else:
             macro=re.search(r'\.abilities\s*=\s*(\w+)',body)[1]
             candidates=re.findall(r'#define\s+'+macro+r'\s+\{([^}]*)\}',families)
-            ability_text=next(v for v in candidates if 'ABILITY_TECHNICIAN' in v)
+            ability_text=next(v for v in candidates if expected in v)
         values=re.findall(r'ABILITY_\w+',ability_text)[:2]
-        assert 'ABILITY_TECHNICIAN' in values and all(v in supported for v in values),name
+        assert expected in values and all(v in supported for v in values),name
         pattern=r'(\[SPECIES_'+name+r'\]\s*=\s*\{.*?\.abilities\s*=\s*)\{[^}]*\}'
         classic,count=re.subn(pattern,lambda m:m[1]+'{'+', '.join(values)+'}',classic,flags=re.S)
         assert count==1,name
     p.write_bytes((json.dumps(meta,ensure_ascii=False,indent=2)+'\n').encode())
     stats_path.write_bytes(stats.encode());classic_path.write_bytes(classic.encode())
-    print('Restored',len(changed),'imported ability slots:',', '.join(changed),'; six classic regular slots verified')
+    print('Restored',len(changed),'imported ability slots:',', '.join(changed),';',len(CLASSIC),'classic regular slots verified')
 if __name__=='__main__':refresh()

@@ -91,3 +91,6 @@ The ending keeps League shelters, country travel and repeatable training availab
 
 - [x] Update the intro dates to 2026 and replace the flat title with custom
   temporal-eclipse artwork, a larger logo and animated Celebi.
+
+- [x] Implement Skill Link for five regular species slots, preserving fixed-hit
+  counts, first-strike accuracy, native interruptions and saved ability choices.
