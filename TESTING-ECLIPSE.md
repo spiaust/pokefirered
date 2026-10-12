@@ -1638,6 +1638,27 @@ Keen Eye, Hyper Cutter, Clear Body and White Smoke behavior. These use controlle
 stats/levels and disposable saves, not naturally trained teams or personal saves.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `9c36f0dda379bd551dd2e8b665f7856cafc100f70115f3f3af981aa5cf7ea019`.
+Previous release SHA-256: `9c36f0dda379bd551dd2e8b665f7856cafc100f70115f3f3af981aa5cf7ea019`.
 Campaign and country static checks pass. Ability refresh is idempotent. Pidove's
 complete Big Pecks name and description were visually verified.
+
+## Snow Cloak battle weather
+
+`test_eclipse_snow_cloak.py` finds a native hail accuracy miss using paired
+controlled RNG fixtures, then verifies identical control/Snow Cloak attacks
+without weather and in rain, sandstorm and sun. Cloud Nine and Air Lock cancel
+the hail evasion bonus. Non-Ice fixtures lose 62 HP in hail without Snow Cloak,
+retain full HP with it, and still lose sandstorm HP. Native Ice immunity and
+Cloud Nine suppression remain intact. Sandstorm's separate residual HP drop
+is included when comparing damage. This is behavior QA, not a statistical
+measurement of long-run accuracy probabilities.
+`test_eclipse_snow_cloak_species.py` checks eleven slots across ten species,
+Glaceon Save/cold Continue, skills display and the next battle.
+`test_eclipse_snow_cloak_evolution.py` checks native Cubchoo/Beartic evolution
+retains Snow Cloak. Controlled levels/stats and disposable saves are fixtures,
+not naturally raised campaign teams, personal saves or hardware RTC testing.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `189f55f598b8a29fd03f7f54e1edeb0aad9b9989db7e7f50cd7cf7c7085a4bce`.
+Both ROM aliases match. Glaceon's complete ability name and description were
+visually verified. Campaign/country static checks pass; refresh is idempotent.

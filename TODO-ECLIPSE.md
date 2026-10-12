@@ -129,3 +129,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Big Pecks for nine regular species slots, opponent Defense-drop
   protection with damage retained, self-cost/other-stat checks, original stat
   guard regressions, Pidove cold-save display and Tranquill evolution persistence.
+
+- [x] Add Snow Cloak for ten species/eleven regular slots, hail evasion and
+  damage immunity, weather suppression/non-hail guards, Glaceon cold-save
+  display and Cubchoo/Beartic evolution persistence.

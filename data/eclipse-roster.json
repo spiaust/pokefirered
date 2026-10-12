@@ -12491,8 +12491,8 @@
         "EGG_GROUP_FIELD"
       ],
       "abilities": [
-        "ABILITY_NONE",
-        "ABILITY_NONE"
+        "ABILITY_SNOW_CLOAK",
+        "ABILITY_SNOW_CLOAK"
       ],
       "source_abilities": [
         "ABILITY_SNOW_CLOAK",
@@ -12834,7 +12834,7 @@
       ],
       "abilities": [
         "ABILITY_OBLIVIOUS",
-        "ABILITY_NONE"
+        "ABILITY_SNOW_CLOAK"
       ],
       "source_abilities": [
         "ABILITY_OBLIVIOUS",
@@ -13728,7 +13728,7 @@
         "EGG_GROUP_MINERAL"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_SNOW_CLOAK",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -29130,7 +29130,7 @@
       ],
       "abilities": [
         "ABILITY_NONE",
-        "ABILITY_NONE"
+        "ABILITY_SNOW_CLOAK"
       ],
       "source_abilities": [
         "ABILITY_ICE_BODY",
@@ -29272,7 +29272,7 @@
       ],
       "abilities": [
         "ABILITY_NONE",
-        "ABILITY_NONE"
+        "ABILITY_SNOW_CLOAK"
       ],
       "source_abilities": [
         "ABILITY_ICE_BODY",
@@ -33601,7 +33601,7 @@
         "EGG_GROUP_FIELD"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_SNOW_CLOAK",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -33757,7 +33757,7 @@
         "EGG_GROUP_FIELD"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_SNOW_CLOAK",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -85069,7 +85069,7 @@
       ],
       "abilities": [
         "ABILITY_THICK_FAT",
-        "ABILITY_NONE"
+        "ABILITY_SNOW_CLOAK"
       ],
       "source_abilities": [
         "ABILITY_THICK_FAT",

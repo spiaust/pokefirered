@@ -614,3 +614,14 @@ uses the existing specific-stat protection script and records the ability;
 the stat-animation eligibility check also excludes protected Defense drops.
 Both checks allow self-inflicted changes, and certain native stat costs bypass
 protection. No extra RAM, save fields, hidden slots or modern Crunch conversion.
+
+### Snow Cloak battle weather
+
+Pinned RHH accuracy calculation applies an 80% modifier in icy weather:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+The native engine supports Hail, so Snow Cloak uses its weather flag and existing
+WEATHER_HAS_EFFECT guard alongside Sand Veil. Cmd_weatherdamage skips hail
+residual damage for Snow Cloak regardless of typing. Gen II pinned family data
+restore Swinub/Piloswine's second slots; imported metadata restore eight modern
+species (nine regular slots because Glaceon has two). No added RAM/save fields,
+hidden abilities, alternate forms, or conversion of visual snowfall to Hail.

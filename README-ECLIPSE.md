@@ -737,3 +737,12 @@ Unfezant, Ducklett, Swanna, Vullaby, Mandibuzz, Fletchling and Bombirdier.
 Damaging attacks still deal damage; Superpower still pays its own Defense
 cost. Other stats remain vulnerable, including native Gen III Crunch's
 Special Defense reduction. Saved regular ability slots remain compatible.
+
+## Snow Cloak ability
+
+Snow Cloak reduces opponents' effective move accuracy to 80% during active
+battle hail and prevents hail damage, including after a type change. Cloud
+Nine and Air Lock suppress the evasion bonus; other weather grants no bonus.
+It is available to Swinub, Piloswine, Glaceon, Mamoswine, Froslass, Vanillite,
+Vanillish, Cubchoo, Beartic and Cetoddle. Glaceon has it in both regular slots.
+This uses the existing battle Hail weather; overworld snowfall remains visual.
