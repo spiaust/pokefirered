@@ -756,3 +756,12 @@ underground or underwater Pokémon receive no Ice Body healing. Other weather
 grants no healing, and sandstorm can still damage the Pokémon. Available for
 Snorunt, Glalie, Spheal, Sealeo, Walrein, Vanillite, Vanillish, Vanilluxe,
 Bergmite, Avalugg and Arctovish. Overworld snowfall remains visual.
+
+## Slush Rush ability
+
+Cubchoo, Beartic and Cetitan can use Slush Rush in their second regular slot.
+It doubles effective Speed during active battle hail. Cloud Nine and Air Lock
+cancel the bonus, including when held by a doubles partner. Move priority,
+Speed stages, native paralysis and badge/item modifiers still apply. Hail
+expiry removes the bonus on the next turn; Slush Rush grants no hail immunity
+after a type change. Overworld snowfall remains visual.

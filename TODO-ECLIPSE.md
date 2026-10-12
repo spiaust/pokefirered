@@ -137,3 +137,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Ice Body for eleven regular species slots, hail recovery/immunity,
   HP caps/minimum healing, suppression/submerged guards, native Rain Dish
   regressions, Walrein cold-save display and Spheal/Sealeo evolution persistence.
+
+- [x] Add Slush Rush for Cubchoo, Beartic and Cetitan, native hail turn-order
+  boost, expiry/priority/paralysis/stage guards, both battler positions, doubles
+  partner suppression, Beartic cold-save display and evolution persistence.

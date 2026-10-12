@@ -1680,7 +1680,31 @@ retains the second ability slot. Tests use disposable saves and controlled
 stats/levels/status flags, not naturally raised campaign teams or hardware.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `5e54410d2f6af12e31e20cf0e4738954d72f3e04a1da871f67411476145772f2`.
+Previous release SHA-256: `5e54410d2f6af12e31e20cf0e4738954d72f3e04a1da871f67411476145772f2`.
 Both ROM aliases match. All four native suites and campaign/country static
 checks pass; refresh is idempotent. Walrein's complete name/description were
 visually verified.
+
+## Slush Rush turn order
+
+`test_eclipse_slush_rush.py` observes native first-move PP consumption and
+turn-order arrays. A controlled 60-Speed Slush Rush user acts before a
+100-Speed opponent in hail; clear/rain/sand/sun and Cloud Nine/Air Lock restore
+the slower order. The opposing battler receives the same ability bonus.
+Paralysis, lowered Speed stages, priority attacks and a faster 135-Speed foe
+still prevail. The fixture includes the native player badge modifier.
+Swift Swim/Chlorophyll retain their rain/sun behavior. Hail expiry restores
+normal order on the next turn. A non-Ice Slush Rush fixture still takes hail
+damage, confirming the ability does not confer immunity.
+`test_eclipse_slush_rush_doubles.py` uses the native London coach's four-battler
+battle, checking the boosted lead and Cloud Nine/Air Lock on its partner.
+`test_eclipse_slush_rush_species.py` checks all three slots, Beartic Save/cold
+Continue, skills display and next battle; `test_eclipse_slush_rush_evolution.py`
+checks Cubchoo/Beartic retains the second slot. Fixtures use controlled stats
+and levels and disposable saves, not naturally trained teams or hardware.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `a4146578c42ec3c74eb6ef51cfd410f0636950635d20cd7773d03a13101aae2e`.
+Both ROM aliases match. All four native suites and campaign/country static
+checks pass; roster refresh is idempotent. Beartic's complete ability name and
+description were visually verified.

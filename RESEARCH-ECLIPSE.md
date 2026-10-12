@@ -637,3 +637,15 @@ and recording. Its hail branch excludes underground/underwater battlers.
 Cmd_weatherdamage excludes Ice Body from hail damage regardless of typing.
 Native Rain Dish retains its original submerged behavior. No additional RAM,
 save fields, hidden abilities, modern snow rules or Heal Block support.
+
+### Slush Rush turn order
+
+Regular slots are projected from pinned RHH Gen V and IX family data:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/pokemon/species_info/gen_5_families.h
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/pokemon/species_info/gen_9_families.h
+The native GetWhoStrikesFirst weather multiplier now includes Slush Rush for
+both battler arguments, using the existing active-weather suppression guard.
+It preserves subsequent native Speed-stage, item, badge, paralysis and move
+priority calculations. No additional RAM, save fields, hidden slots, alternate
+forms or modern snow conversion. Alolan Sandshrew/Sandslash are not projected
+onto the existing base forms; hidden-only users remain unsupported.

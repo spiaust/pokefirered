@@ -33602,7 +33602,7 @@
       ],
       "abilities": [
         "ABILITY_SNOW_CLOAK",
-        "ABILITY_NONE"
+        "ABILITY_SLUSH_RUSH"
       ],
       "source_abilities": [
         "ABILITY_SNOW_CLOAK",
@@ -33758,7 +33758,7 @@
       ],
       "abilities": [
         "ABILITY_SNOW_CLOAK",
-        "ABILITY_NONE"
+        "ABILITY_SLUSH_RUSH"
       ],
       "source_abilities": [
         "ABILITY_SNOW_CLOAK",
@@ -85209,7 +85209,7 @@
       ],
       "abilities": [
         "ABILITY_THICK_FAT",
-        "ABILITY_NONE"
+        "ABILITY_SLUSH_RUSH"
       ],
       "source_abilities": [
         "ABILITY_THICK_FAT",
