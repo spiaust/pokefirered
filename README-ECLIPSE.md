@@ -729,3 +729,11 @@ Sniper adds a separate 1.5 damage modifier, preserving critical stat-stage
 rules and armor protection. Ordinary hits, fixed damage and confusion damage
 remain unchanged. Drain healing uses actual boosted damage, and Solid Rock/
 Filter still reduce critical weakness damage. Hidden-only slots remain omitted.
+
+## Big Pecks ability
+
+Big Pecks protects Defense from opponents' stat drops for Pidove, Tranquill,
+Unfezant, Ducklett, Swanna, Vullaby, Mandibuzz, Fletchling and Bombirdier.
+Damaging attacks still deal damage; Superpower still pays its own Defense
+cost. Other stats remain vulnerable, including native Gen III Crunch's
+Special Defense reduction. Saved regular ability slots remain compatible.

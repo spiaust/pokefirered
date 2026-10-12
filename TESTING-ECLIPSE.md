@@ -1617,9 +1617,27 @@ disposable saves and controlled stats/levels, not naturally trained campaign
 teams or personal saves. Campaign/country static checks pass.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `ed8e05ba11df69054f7ea5bcaa2d9517b2785144e696f5d77287e45e529c1edc`.
+Previous release SHA-256: `ed8e05ba11df69054f7ea5bcaa2d9517b2785144e696f5d77287e45e529c1edc`.
 
 Sniper battle and species/evolution suites passed on the final ROM. Full
 Super Luck and Solid Rock/Filter regressions also passed. Kingdra's complete
 Sniper description was visually verified. Re-running the ability refresh
 reports zero imported changes.
+
+## Big Pecks stat protection
+
+`test_eclipse_big_pecks.py` checks Tail Whip, Leer and Screech; Growl and Sand
+Attack remain effective. Rock Smash, Iron Tail and Crush Claw retain identical
+damage while their Defense drops are blocked. Native Crunch's Special Defense
+drop remains allowed; Superpower retains both self-inflicted stat costs.
+`test_eclipse_big_pecks_species.py` checks all nine regular slots, native
+Save/cold Continue, skills display and the next battle.
+`test_eclipse_big_pecks_evolution.py` verifies native Pidove/Tranquill evolution
+retains the first ability slot. `test_eclipse_stat_guards.py` checks original
+Keen Eye, Hyper Cutter, Clear Body and White Smoke behavior. These use controlled
+stats/levels and disposable saves, not naturally trained teams or personal saves.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `9c36f0dda379bd551dd2e8b665f7856cafc100f70115f3f3af981aa5cf7ea019`.
+Campaign and country static checks pass. Ability refresh is idempotent. Pidove's
+complete Big Pecks name and description were visually verified.

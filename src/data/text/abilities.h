@@ -1,3 +1,4 @@
+static const u8 sBigPecksDescription[] = _("Prevents DEFENSE reduction.");
 static const u8 sSniperDescription[] = _("Boosts critical-hit damage.");
 static const u8 sTypeGuardDescription[] = _("Softens super-effective hits.");
 static const u8 sTintedLensDescription[] = _("Boosts resisted attack damage.");
@@ -176,6 +177,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_SOLID_ROCK] = sTypeGuardDescription,
     [ABILITY_FILTER] = sTypeGuardDescription,
     [ABILITY_SNIPER] = sSniperDescription,
+    [ABILITY_BIG_PECKS] = sBigPecksDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -268,4 +270,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SOLID_ROCK] = _("SOLID ROCK"),
     [ABILITY_FILTER] = _("FILTER"),
     [ABILITY_SNIPER] = _("SNIPER"),
+    [ABILITY_BIG_PECKS] = _("BIG PECKS"),
 };

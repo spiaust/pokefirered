@@ -604,3 +604,13 @@ Sniper modifier in Cmd_damagecalc and AI_CalcDmg. Keeping gCritMultiplier at
 its native value preserves stat-stage bypass and critical message behavior.
 Native critical odds/damage rules otherwise stay intact. No new RAM/save
 fields, hidden abilities or alternate-form data.
+
+### Big Pecks stat protection
+
+Imported regular slots come from the pinned RHH species family data:
+https://github.com/rh-hideout/pokeemerald-expansion/tree/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/pokemon/species_info
+Nine regular slots become supported with ability ID 88. Native ChangeStatBuffs
+uses the existing specific-stat protection script and records the ability;
+the stat-animation eligibility check also excludes protected Defense drops.
+Both checks allow self-inflicted changes, and certain native stat costs bypass
+protection. No extra RAM, save fields, hidden slots or modern Crunch conversion.

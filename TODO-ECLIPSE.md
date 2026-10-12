@@ -125,3 +125,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Sniper for nine regular species slots, shared attack/estimate critical
   damage logic, unchanged critical odds/stat rules, armor/drain/type-guard checks,
   Kingdra cold-save display and Skorupi/Drapion evolution persistence.
+
+- [x] Add Big Pecks for nine regular species slots, opponent Defense-drop
+  protection with damage retained, self-cost/other-stat checks, original stat
+  guard regressions, Pidove cold-save display and Tranquill evolution persistence.

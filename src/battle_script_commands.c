@@ -4044,7 +4044,9 @@ static void Cmd_playstatchangeanimation(void)
                         && gBattleMons[gActiveBattler].ability != ABILITY_CLEAR_BODY
                         && gBattleMons[gActiveBattler].ability != ABILITY_WHITE_SMOKE
                         && !(gBattleMons[gActiveBattler].ability == ABILITY_KEEN_EYE && currStat == STAT_ACC)
-                        && !(gBattleMons[gActiveBattler].ability == ABILITY_HYPER_CUTTER && currStat == STAT_ATK))
+                        && !(gBattleMons[gActiveBattler].ability == ABILITY_HYPER_CUTTER && currStat == STAT_ATK)
+                        && !(gBattleMons[gActiveBattler].ability == ABILITY_BIG_PECKS && currStat == STAT_DEF
+                             && gActiveBattler != gBattlerAttacker))
                 {
                     if (gBattleMons[gActiveBattler].statStages[currStat] > MIN_STAT_STAGE)
                     {
@@ -6796,8 +6798,10 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
             }
             return STAT_CHANGE_DIDNT_WORK;
         }
-        else if (gBattleMons[gActiveBattler].ability == ABILITY_HYPER_CUTTER
-                 && !certain && statId == STAT_ATK)
+        else if (((gBattleMons[gActiveBattler].ability == ABILITY_HYPER_CUTTER && statId == STAT_ATK)
+                  || (gBattleMons[gActiveBattler].ability == ABILITY_BIG_PECKS && statId == STAT_DEF
+                      && gActiveBattler != gBattlerAttacker))
+                 && !certain)
         {
             if (flags == STAT_CHANGE_ALLOW_PTR)
             {
