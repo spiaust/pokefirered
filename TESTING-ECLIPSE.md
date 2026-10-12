@@ -1704,7 +1704,32 @@ checks Cubchoo/Beartic retains the second slot. Fixtures use controlled stats
 and levels and disposable saves, not naturally trained teams or hardware.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `a4146578c42ec3c74eb6ef51cfd410f0636950635d20cd7773d03a13101aae2e`.
+Previous release SHA-256: `a4146578c42ec3c74eb6ef51cfd410f0636950635d20cd7773d03a13101aae2e`.
 Both ROM aliases match. All four native suites and campaign/country static
 checks pass; roster refresh is idempotent. Beartic's complete ability name and
 description were visually verified.
+
+## Sand Rush turn order and immunity
+
+`test_eclipse_sand_rush.py` observes native first-move PP consumption and
+turn-order arrays for temporary/permanent sandstorm, clear/rain/hail/sun,
+Cloud Nine/Air Lock, both battler positions, paralysis, lowered Speed stages,
+priority attacks and a faster opponent. The fixture includes the native badge
+modifier. Swift Swim/Chlorophyll retain rain/sun behavior. Temporary sandstorm
+expiry removes the boost on the next turn. Non-Ice/non-sand-immune typing retains
+HP during sandstorm with Sand Rush but still loses 62 HP during hail.
+`test_eclipse_sand_rush_doubles.py` uses the native London coach's four-battler
+battle and verifies partner Cloud Nine/Air Lock cancels the lead's Speed boost.
+`test_eclipse_sand_rush_species.py` checks all six regular slots, Stoutland
+Save/cold Continue, skills display and next battle.
+`test_eclipse_sand_rush_evolution.py` checks native Herdier/Stoutland evolution
+retains the second slot. Controlled stats/levels and disposable saves are
+fixtures, not naturally trained campaign teams or hardware/link tests.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `da0e044932595b8dce162f17242354ecc94367a53c828314c36999d8a0e32a87`.
+Both ROM aliases match. Campaign/country static checks pass and refresh is
+idempotent.
+
+All four native Sand Rush suites passed. Stoutland's complete ability name
+and description were visually verified.

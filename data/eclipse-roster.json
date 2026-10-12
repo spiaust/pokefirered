@@ -18206,7 +18206,7 @@
       ],
       "abilities": [
         "ABILITY_INTIMIDATE",
-        "ABILITY_NONE"
+        "ABILITY_SAND_RUSH"
       ],
       "source_abilities": [
         "ABILITY_INTIMIDATE",
@@ -18355,7 +18355,7 @@
       ],
       "abilities": [
         "ABILITY_INTIMIDATE",
-        "ABILITY_NONE"
+        "ABILITY_SAND_RUSH"
       ],
       "source_abilities": [
         "ABILITY_INTIMIDATE",
@@ -21216,7 +21216,7 @@
         "EGG_GROUP_FIELD"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_SAND_RUSH",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -21361,7 +21361,7 @@
         "EGG_GROUP_FIELD"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_SAND_RUSH",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -53343,7 +53343,7 @@
       ],
       "abilities": [
         "ABILITY_KEEN_EYE",
-        "ABILITY_NONE"
+        "ABILITY_SAND_RUSH"
       ],
       "source_abilities": [
         "ABILITY_KEEN_EYE",
@@ -84792,7 +84792,7 @@
         "EGG_GROUP_FIELD"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_SAND_RUSH",
         "ABILITY_NONE"
       ],
       "source_abilities": [

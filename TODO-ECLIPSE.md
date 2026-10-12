@@ -141,3 +141,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Slush Rush for Cubchoo, Beartic and Cetitan, native hail turn-order
   boost, expiry/priority/paralysis/stage guards, both battler positions, doubles
   partner suppression, Beartic cold-save display and evolution persistence.
+
+- [x] Add Sand Rush for six regular species slots, native sandstorm Speed
+  boost and damage immunity, temporary/permanent flags, expiry/priority/status
+  guards, doubles partner suppression, Stoutland cold save and evolution.

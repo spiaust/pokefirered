@@ -765,3 +765,13 @@ cancel the bonus, including when held by a doubles partner. Move priority,
 Speed stages, native paralysis and badge/item modifiers still apply. Hail
 expiry removes the bonus on the next turn; Slush Rush grants no hail immunity
 after a type change. Overworld snowfall remains visual.
+
+## Sand Rush ability
+
+Herdier, Stoutland, Drilbur, Excadrill, Lycanroc and Houndstone can use Sand
+Rush in their regular ability slots. It doubles effective Speed during active
+battle sandstorms and prevents sandstorm damage regardless of typing. Cloud
+Nine and Air Lock suppress the speed bonus, including on a doubles partner.
+Move priority, Speed stages, native paralysis and badge/item modifiers still
+apply. Temporary sandstorm expiry removes the boost on the next turn. Other
+weather grants no bonus, and Sand Rush does not prevent hail damage.

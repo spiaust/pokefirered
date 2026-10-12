@@ -649,3 +649,15 @@ It preserves subsequent native Speed-stage, item, badge, paralysis and move
 priority calculations. No additional RAM, save fields, hidden slots, alternate
 forms or modern snow conversion. Alolan Sandshrew/Sandslash are not projected
 onto the existing base forms; hidden-only users remain unsupported.
+
+### Sand Rush turn order and residual protection
+
+The six supported regular users are projected from pinned RHH family data:
+https://github.com/rh-hideout/pokeemerald-expansion/tree/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/pokemon/species_info
+The native GetWhoStrikesFirst weather multiplier includes Sand Rush for both
+battler arguments and retains its existing active-weather suppression guard
+and subsequent native Speed-stage, item, badge, paralysis and priority rules.
+Cmd_weatherdamage excludes Sand Rush from sandstorm damage, independent of
+typing. Permanent and temporary sandstorm flags both activate the speed bonus.
+Hidden-only Sandshrew/Sandslash slots and alternate Lycanroc forms remain
+outside this projection. No extra RAM/save fields or new weather flags.
