@@ -1596,9 +1596,30 @@ fixtures, not naturally trained campaign teams or hardware link validation.
 Campaign/country static checks pass.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `669a2e9eb00381c3adcb0411f2c59e1e4f98a99e54da6395511e12735ab5db5f`.
+Previous release SHA-256: `669a2e9eb00381c3adcb0411f2c59e1e4f98a99e54da6395511e12735ab5db5f`.
 
 Both defensive-ability suites passed on the final ROM. Full Tinted Lens and
 targeted Adaptability regressions also passed. Camerupt's Solid Rock name and
 complete description were visually verified. The ability refresh reports zero
 imported changes when repeated.
+
+## Sniper critical damage
+
+`test_eclipse_sniper.py` compares controlled native critical/noncritical rolls,
+physical/special damage, Drain Punch healing, Seismic Toss, Battle/Shell Armor
+and confusion. A critical with lowered Attack and raised Defense matches the
+neutral-stage critical, verifying preserved native critical stat-stage bypass.
+Sniper and Solid Rock/Filter modifiers combine on critical weaknesses.
+`test_eclipse_sniper_species.py` checks all nine regular slots in battle,
+Kingdra native Save/cold Continue and complete skills description, then native
+Skorupi/Drapion evolution with the retained second ability slot. Fixtures use
+disposable saves and controlled stats/levels, not naturally trained campaign
+teams or personal saves. Campaign/country static checks pass.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `ed8e05ba11df69054f7ea5bcaa2d9517b2785144e696f5d77287e45e529c1edc`.
+
+Sniper battle and species/evolution suites passed on the final ROM. Full
+Super Luck and Solid Rock/Filter regressions also passed. Kingdra's complete
+Sniper description was visually verified. Re-running the ability refresh
+reports zero imported changes.

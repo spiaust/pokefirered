@@ -13,6 +13,7 @@ CLASSIC.update({name:'ABILITY_SUPER_LUCK' for name in ('MURKROW','ABSOL')})
 CLASSIC.update({name:'ABILITY_TINTED_LENS' for name in ('VENONAT','VENOMOTH','ILLUMISE')})
 CLASSIC['CAMERUPT']='ABILITY_SOLID_ROCK'
 CLASSIC['MR_MIME']='ABILITY_FILTER'
+CLASSIC.update({name:'ABILITY_SNIPER' for name in ('HORSEA','SEADRA','KINGDRA','REMORAID','OCTILLERY')})
 def family_source(gen):
     path=f'src/data/pokemon/species_info/gen_{gen}_families.h'
     cached=ROOT/'.local-tools/roster'/path

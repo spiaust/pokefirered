@@ -9356,7 +9356,7 @@
       ],
       "abilities": [
         "ABILITY_BATTLE_ARMOR",
-        "ABILITY_NONE"
+        "ABILITY_SNIPER"
       ],
       "source_abilities": [
         "ABILITY_BATTLE_ARMOR",
@@ -9526,7 +9526,7 @@
       ],
       "abilities": [
         "ABILITY_BATTLE_ARMOR",
-        "ABILITY_NONE"
+        "ABILITY_SNIPER"
       ],
       "source_abilities": [
         "ABILITY_BATTLE_ARMOR",
@@ -44790,7 +44790,7 @@
       ],
       "abilities": [
         "ABILITY_NONE",
-        "ABILITY_NONE"
+        "ABILITY_SNIPER"
       ],
       "source_abilities": [
         "ABILITY_TOUGH_CLAWS",
@@ -44938,7 +44938,7 @@
       ],
       "abilities": [
         "ABILITY_NONE",
-        "ABILITY_NONE"
+        "ABILITY_SNIPER"
       ],
       "source_abilities": [
         "ABILITY_TOUGH_CLAWS",

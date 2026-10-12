@@ -121,3 +121,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Solid Rock/Filter for six regular species slots, native and AI damage
   paths, combined typing/critical/drain checks, fixed-damage/Struggle guards,
   Camerupt cold-save display and Mime Jr./Mr. Mime evolution persistence.
+
+- [x] Add Sniper for nine regular species slots, shared attack/estimate critical
+  damage logic, unchanged critical odds/stat rules, armor/drain/type-guard checks,
+  Kingdra cold-save display and Skorupi/Drapion evolution persistence.

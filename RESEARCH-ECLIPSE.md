@@ -592,3 +592,15 @@ TypeCalc and AI_TypeCalc, preserves effectiveness flags, and excludes zero/
 negative damage, Struggle, fixed power-zero moves and no-effect cases.
 No new RAM/save fields or hidden abilities. Mold Breaker-style bypass and
 alternate-form abilities remain outside the current engine support.
+
+### Sniper critical damage
+
+Pinned RHH battle calculation applies a 1.5 modifier when Sniper scores a crit:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Cached Gen I/II family data supply the Horsea and Remoraid families' regular
+slots; imported metadata supply Skorupi/Drapion and Binacle/Barbaracle.
+A shared native helper applies the existing critical multiplier and then the
+Sniper modifier in Cmd_damagecalc and AI_CalcDmg. Keeping gCritMultiplier at
+its native value preserves stat-stage bypass and critical message behavior.
+Native critical odds/damage rules otherwise stay intact. No new RAM/save
+fields, hidden abilities or alternate-form data.

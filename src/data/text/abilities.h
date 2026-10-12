@@ -1,3 +1,4 @@
+static const u8 sSniperDescription[] = _("Boosts critical-hit damage.");
 static const u8 sTypeGuardDescription[] = _("Softens super-effective hits.");
 static const u8 sTintedLensDescription[] = _("Boosts resisted attack damage.");
 static const u8 sSuperLuckDescription[] = _("Higher chance of critical hits.");
@@ -174,6 +175,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_TINTED_LENS] = sTintedLensDescription,
     [ABILITY_SOLID_ROCK] = sTypeGuardDescription,
     [ABILITY_FILTER] = sTypeGuardDescription,
+    [ABILITY_SNIPER] = sSniperDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -265,4 +267,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_TINTED_LENS] = _("TINTED LENS"),
     [ABILITY_SOLID_ROCK] = _("SOLID ROCK"),
     [ABILITY_FILTER] = _("FILTER"),
+    [ABILITY_SNIPER] = _("SNIPER"),
 };

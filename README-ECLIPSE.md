@@ -719,3 +719,13 @@ Neutral, resisted, immune and fixed-damage attacks remain unchanged, as does
 Struggle. Drain moves heal from the damage actually dealt after reduction.
 Native damage estimates share the modifier; zero-damage queries stay zero.
 Hidden slots, alternate forms and ability-bypassing mechanics remain unfinished.
+
+## Sniper ability
+
+Sniper increases critical-hit damage by 50%, without changing critical chance,
+for Horsea, Seadra, Kingdra, Remoraid, Octillery, Skorupi, Drapion, Binacle and
+Barbaracle's second regular slots. The native critical multiplier remains 2;
+Sniper adds a separate 1.5 damage modifier, preserving critical stat-stage
+rules and armor protection. Ordinary hits, fixed damage and confusion damage
+remain unchanged. Drain healing uses actual boosted damage, and Solid Rock/
+Filter still reduce critical weakness damage. Hidden-only slots remain omitted.
