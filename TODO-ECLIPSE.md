@@ -161,3 +161,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Steadfast for six regular species slots, native flinch Speed gain,
   retained action loss/PP, cap/repeated-trigger/Inner Focus guards, doubles
   recipient-only activation, Gallade cold save and Wooloo ability transition.
+
+- [x] Add Strong Jaw for nine regular slots and four supported biting moves,
+  native contact/punch-flag guards, physical/special/fixed-damage/immunity/self-hit
+  checks, Tyrantrum cold save, Chewtle evolution and Iron Fist regression.

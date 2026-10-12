@@ -1828,7 +1828,31 @@ slot and gains Steadfast. Tests use controlled stats/levels and disposable
 saves, not naturally trained campaign teams or hardware/link tests.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `cdfefca29ca7aaa394697e6b3e3d4a1293bb5f1445de82e2df0da6ba654edc9f`.
+Previous release SHA-256: `cdfefca29ca7aaa394697e6b3e3d4a1293bb5f1445de82e2df0da6ba654edc9f`.
 Both ROM aliases match. All four native suites and campaign/country static
 checks pass; refresh is idempotent. Gallade's complete ability name and
 description were visually verified.
+
+## Strong Jaw biting attacks
+
+`test_eclipse_strong_jaw.py` verifies exactly four compiled bit-7 biting flags,
+retained contact flags and no punch-flag overlap. Bite/Crunch exercise native
+Dark special damage; Hyper Fang/Poison Fang exercise physical damage. Their
+power increases by 50%, while Normal/punch/Water moves, Seismic Toss and actual
+forced Struggle controls remain unchanged. Super Fang still deals exactly
+half target HP, Hyper Fang retains Ghost immunity, and confusion self-damage
+receives no boost or move PP consumption. First-action fixtures isolate attack
+damage from target secondary-status residuals and later enemy actions.
+`test_eclipse_strong_jaw_species.py` checks all nine regular slots, Tyrantrum
+Save/cold Continue, skills UI and next battle.
+`test_eclipse_strong_jaw_evolution.py` checks Chewtle/Drednaw retains the first
+slot. The full `test_eclipse_iron_fist.py` regression retains punching flags,
+native damage/healing, HP caps, Liquid Ooze, immunity and self-hit behavior.
+Fixtures use controlled stats/levels and disposable saves, not naturally
+raised campaign teams or hardware/link tests.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `51fff01a75d0969f05bea5bdc546687c6fefde76ac2fa54b9e441c541dc71224`.
+Both ROM aliases match. All three native Strong Jaw suites, the Iron Fist
+regression and campaign/country static checks pass; refresh is idempotent.
+Tyrantrum's complete ability name and description were visually verified.

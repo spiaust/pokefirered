@@ -709,3 +709,17 @@ animation and existing ability-name Speed message. It retains the inability
 to move, multi-turn cancellation and normal MoveEnd path. Activation requires
 the actual native flinch cancellation, preserving Inner Focus prevention and
 failed/later-turn Fake Out rules. No extra RAM/save fields or hidden slots.
+
+### Strong Jaw biting classification
+
+Pinned RHH marks Bite, Crunch, Hyper Fang and Poison Fang as biting moves:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/moves_info.h
+Its Strong Jaw calculation uses a 1.5 power modifier:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Nine imported regular slots become supported. Native move flags use the
+remaining bit 7 for FLAG_BITING, retaining original contact/protection flags
+and separate bit-6 punching classification. CalculateBaseDamage applies
+power * 3 / 2 for biting moves and excludes self-damage; its shared path
+covers attacks and estimates. Modern fang moves, Fishious Rend, Jaw Lock
+and Psychic Fangs remain outside the supported move subset. No additional
+RAM/save fields, hidden abilities or alternate-form projection.

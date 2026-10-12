@@ -810,3 +810,12 @@ rises by one stage up to the normal cap. The Pokémon still loses that turn
 and spends no move PP. A later flinch can grant another stage; ordinary hits
 and failed flinch moves do not. Wooloo's second regular slot changes from
 Run Away to Steadfast when it evolves into Dubwool.
+
+## Strong Jaw ability
+
+Tyrunt, Tyrantrum, Yungoos, Gumshoos, Bruxish, Chewtle, Drednaw, Boltund and
+Dracovish can use Strong Jaw in their regular slots. It boosts effective
+power of supported biting attacks by 50%: Bite, Crunch, Hyper Fang and Poison
+Fang. These retain native contact and secondary effects. Other attacks,
+Super Fang's fixed half-HP damage and confusion self-damage remain unchanged.
+The existing Gen III type-based physical/special rules still apply.
