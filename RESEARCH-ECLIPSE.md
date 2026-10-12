@@ -557,3 +557,15 @@ Pinned moves_info.h supplies Head Charge power 120, Normal type, accuracy 100,
 level 40. The native recoil effect and Take Down animation implement it.
 Regular slots come from cached family/metadata sources. No hidden abilities,
 new RAM or save fields are introduced.
+
+### Super Luck regular slots
+
+Pinned RHH battle calculation adds one critical stage for Super Luck:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Cached Gen II/III family data supply Murkrow/Absol's regular slots; existing
+imported metadata supply Honchkrow and the Pidove family. Ability refresh now
+reads pinned Gen I–III families and remains reproducible on a fresh checkout.
+Native critcalc adds the ability stage before the existing cap and armor guards.
+The legacy odds table and critical damage multiplier stay intact; this does
+not introduce the modern guaranteed-critical stage or hidden abilities.
+No new RAM or save fields are needed.

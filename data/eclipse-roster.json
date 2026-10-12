@@ -6194,7 +6194,7 @@
       ],
       "abilities": [
         "ABILITY_INSOMNIA",
-        "ABILITY_NONE"
+        "ABILITY_SUPER_LUCK"
       ],
       "source_abilities": [
         "ABILITY_INSOMNIA",
@@ -19837,7 +19837,7 @@
       ],
       "abilities": [
         "ABILITY_NONE",
-        "ABILITY_NONE"
+        "ABILITY_SUPER_LUCK"
       ],
       "source_abilities": [
         "ABILITY_BIG_PECKS",
@@ -19976,7 +19976,7 @@
       ],
       "abilities": [
         "ABILITY_NONE",
-        "ABILITY_NONE"
+        "ABILITY_SUPER_LUCK"
       ],
       "source_abilities": [
         "ABILITY_BIG_PECKS",
@@ -20115,7 +20115,7 @@
       ],
       "abilities": [
         "ABILITY_NONE",
-        "ABILITY_NONE"
+        "ABILITY_SUPER_LUCK"
       ],
       "source_abilities": [
         "ABILITY_BIG_PECKS",

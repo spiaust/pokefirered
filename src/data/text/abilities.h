@@ -1,3 +1,4 @@
+static const u8 sSuperLuckDescription[] = _("Higher chance of critical hits.");
 static const u8 sRecklessDescription[] = _("Boosts recoil moves by 20%.");
 static const u8 sAdaptabilityDescription[] = _("Boosts same-type attack damage.");
 static const u8 sIronFistDescription[] = _("Boosts punching moves by 20%.");
@@ -167,6 +168,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_IRON_FIST] = sIronFistDescription,
     [ABILITY_ADAPTABILITY] = sAdaptabilityDescription,
     [ABILITY_RECKLESS] = sRecklessDescription,
+    [ABILITY_SUPER_LUCK] = sSuperLuckDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -254,4 +256,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_IRON_FIST] = _("IRON FIST"),
     [ABILITY_ADAPTABILITY] = _("ADAPTABILITY"),
     [ABILITY_RECKLESS] = _("RECKLESS"),
+    [ABILITY_SUPER_LUCK] = _("SUPER LUCK"),
 };

@@ -109,3 +109,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Reckless for four regular species slots and obtainable level-40
   Head Charge for Bouffalant, with native recoil/crash, Struggle/confusion and
   Rock Head guards, free recall, Dex display and cold-save verification.
+
+- [x] Add Super Luck for six regular species slots with exact native critical
+  boundaries, item/move/Dragon Cheer combinations, armor/no-critical guards,
+  Absol cold-save display and Murkrow/Honchkrow evolution persistence.

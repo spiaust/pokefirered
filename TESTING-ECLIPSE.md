@@ -1529,9 +1529,33 @@ campaign teams. All 639 compiled imported learnsets match metadata; max 23.
 Campaign/country static and animation/evolution projection checks pass.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `7b872162d7b66b5ac94bd735b347561848bd5735b3aa84df5989318f8cafc562`.
+Previous release SHA-256: `7b872162d7b66b5ac94bd735b347561848bd5735b3aa84df5989318f8cafc562`.
 
 All Reckless, regular-slot and Head Charge lesson suites passed on the final
 build. Iron Fist/drain and targeted Adaptability regressions passed. Visual
 inspection confirms Hitmonlee's full Reckless description and Bouffalant's
 level-40 Head Charge Dex entry. Both refresh scripts report zero changes.
+
+## Super Luck critical stages
+
+`test_eclipse_super_luck.py` sets controlled RNG before the native critcalc
+command, accounting for both native VBlank RNG advances. It records the actual
+roll and multiplier immediately after that command, before the next battler
+resets them. Exact roll boundaries verify one added stage, Scope Lens, Focus
+Energy, Slash, capped legacy odds and Battle/Shell Armor/no-critical guards.
+The targeted `--cheer-only` run checks combination with the existing Cheer flag.
+`test_eclipse_super_luck_species.py` verifies all six regular slots in battle,
+Absol Save/cold Continue and complete native skills description.
+`test_eclipse_super_luck_evolution.py` uses a Dusk Stone on Murkrow, checks one
+stone consumed and the preserved second ability slot, then cold Continues
+and verifies Honchkrow's Super Luck in battle. All fixtures are disposable and
+use controlled stats/levels; these are not naturally trained campaign teams.
+Campaign/country static checks pass.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `eab35f115b9b786cc581e6020df2c169f31985fc327603f8b7378813ee105ace`.
+
+Super Luck critical-boundary, Cheer-combination, species and evolution tests
+passed on the final build. Reckless/recoil and native doubles Cheer regressions
+also passed. Absol's full Super Luck description was visually verified.
+Repeating the ability refresh reports zero imported changes.

@@ -687,3 +687,13 @@ Bouffalant learns Head Charge at level 40 and can recall it at a free reminder.
 It has 120 Normal power, 100 accuracy and 15 PP, with recoil equal to one quarter
 of actual damage dealt (minimum one). Reckless raises its power to 144. It uses
 the native Take Down animation; its new lesson appears in the Pokédex.
+
+## Super Luck ability
+
+Super Luck adds one critical-hit stage for Murkrow, Absol, Honchkrow, Pidove,
+Tranquill and Unfezant's regular slots. It combines with Scope Lens/Razor Claw,
+Focus Energy, Dragon Cheer and high-critical moves. Battle Armor, Shell Armor
+and existing no-critical rules still block critical hits. Native Gen III odds
+remain 1/16, 1/8, 1/4, 1/3 and 1/2 across the five capped stages; critical
+damage retains the native multiplier. Hidden-only slots remain omitted.
+Murkrow keeps its chosen Super Luck slot when a Dusk Stone evolves it.

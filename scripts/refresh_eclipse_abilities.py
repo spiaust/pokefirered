@@ -9,6 +9,7 @@ CLASSIC.update({name:'ABILITY_SKILL_LINK' for name in ('SHELLDER','CLOYSTER')})
 CLASSIC['HITMONCHAN']='ABILITY_IRON_FIST'
 CLASSIC['EEVEE']='ABILITY_ADAPTABILITY'
 CLASSIC['HITMONLEE']='ABILITY_RECKLESS'
+CLASSIC.update({name:'ABILITY_SUPER_LUCK' for name in ('MURKROW','ABSOL')})
 def family_source(gen):
     path=f'src/data/pokemon/species_info/gen_{gen}_families.h'
     cached=ROOT/'.local-tools/roster'/path
@@ -30,7 +31,7 @@ def refresh():
         pattern=r'(\['+row['token']+r'\].*?\.abilities\s*=\s*)\{[^}]*\}'
         stats,count=re.subn(pattern,lambda m:m[1]+'{'+', '.join(values)+'}',stats)
         assert count==1,row['token']
-    families=''.join(family_source(gen) for gen in (1,2))
+    families=''.join(family_source(gen) for gen in (1,2,3))
     classic_path=ROOT/'src/data/pokemon/species_info.h';classic=classic_path.read_text(encoding='utf-8')
     for name,expected in CLASSIC.items():
         body=re.search(r'\[SPECIES_'+name+r'\]\s*=\s*\{(.*?)(?=\n\s*\[SPECIES_|\Z)',families,re.S)[1]
