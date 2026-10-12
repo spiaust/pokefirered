@@ -2258,9 +2258,14 @@
   },
   {
     "species": "SPECIES_SPRITZEE",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_TRADE_ITEM",
+        "ITEM_SACHET",
+        "SPECIES_AROMATISSE"
+      ]
+    ],
     "omitted": [
-      "{EVO_TRADE, 0, SPECIES_AROMATISSE, CONDITIONS({IF_HOLD_ITEM, ITEM_SACHET})}",
       "{EVO_ITEM, ITEM_SACHET, SPECIES_AROMATISSE}"
     ]
   },
@@ -2271,9 +2276,14 @@
   },
   {
     "species": "SPECIES_SWIRLIX",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_TRADE_ITEM",
+        "ITEM_WHIPPED_DREAM",
+        "SPECIES_SLURPUFF"
+      ]
+    ],
     "omitted": [
-      "{EVO_TRADE, 0, SPECIES_SLURPUFF, CONDITIONS({IF_HOLD_ITEM, ITEM_WHIPPED_DREAM})}",
       "{EVO_ITEM, ITEM_WHIPPED_DREAM, SPECIES_SLURPUFF}"
     ]
   },

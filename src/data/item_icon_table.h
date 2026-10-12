@@ -64,9 +64,9 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_RAZOR_CLAW] = {gItemIcon_QuickClaw, gItemIconPalette_QuickClaw},
     [ITEM_RAZOR_FANG] = {gItemIcon_DragonFang, gItemIconPalette_DragonFang},
     [ITEM_LINK_CABLE] = {gItemIcon_UpGrade, gItemIconPalette_UpGrade},
-    [ITEM_03C]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_03D]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_03E]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_ELECTIRIZER] = {gItemIcon_Magnet, gItemIconPalette_Magnet},
+    [ITEM_MAGMARIZER] = {gItemIcon_Charcoal, gItemIconPalette_Charcoal},
+    [ITEM_PROTECTOR] = {gItemIcon_MetalCoat, gItemIconPalette_MetalCoat},
     // Vitamins
     [ITEM_HP_UP]          = {gItemIcon_HPUp, gItemIconPalette_HPUp},
     [ITEM_PROTEIN]        = {gItemIcon_Vitamin, gItemIconPalette_Protein},
@@ -78,7 +78,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_ZINC]           = {gItemIcon_Vitamin, gItemIconPalette_Zinc},
     [ITEM_PP_MAX]         = {gItemIcon_PPMax, gItemIconPalette_PPMax},
     // ????????
-    [ITEM_048]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_DUBIOUS_DISC] = {gItemIcon_UpGrade, gItemIconPalette_UpGrade},
     // Battle items
     [ITEM_GUARD_SPEC]     = {gItemIcon_BattleStatItem, gItemIconPalette_GuardSpec},
     [ITEM_DIRE_HIT]       = {gItemIcon_BattleStatItem, gItemIconPalette_DireHit},
@@ -90,15 +90,15 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_POKE_DOLL]      = {gItemIcon_PokeDoll, gItemIconPalette_PokeDoll},
     [ITEM_FLUFFY_TAIL]    = {gItemIcon_FluffyTail, gItemIconPalette_FluffyTail},
     // ????????
-    [ITEM_052]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_REAPER_CLOTH] = {gItemIcon_CleanseTag, gItemIconPalette_CleanseTag},
     // Field items
     [ITEM_SUPER_REPEL]    = {gItemIcon_Repel, gItemIconPalette_SuperRepel},
     [ITEM_MAX_REPEL]      = {gItemIcon_Repel, gItemIconPalette_MaxRepel},
     [ITEM_ESCAPE_ROPE]    = {gItemIcon_EscapeRope, gItemIconPalette_EscapeRope},
     [ITEM_REPEL]          = {gItemIcon_Repel, gItemIconPalette_Repel},
     // ????????
-    [ITEM_057]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_058]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_SACHET] = {gItemIcon_CleanseTag, gItemIconPalette_CleanseTag},
+    [ITEM_WHIPPED_DREAM] = {gItemIcon_Leftovers, gItemIconPalette_Leftovers},
     [ITEM_059]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_05A]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_05B]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},

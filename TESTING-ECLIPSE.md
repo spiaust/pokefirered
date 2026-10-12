@@ -1062,4 +1062,34 @@ do 2026 title/New Game/cold Continue checks. Real hardware link trading is not
 newly tested; its existing handling is unchanged. Newer trade items and paired
 trade conditions remain pending. ROM content remains 17,299,532 bytes, padded
 to 32 MiB. EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `65e84ac58013c9b4c90349b57e057edaa81847a80ce1340586e5a38918dcae9a`.
+Previous Link Cable release SHA-256: `65e84ac58013c9b4c90349b57e057edaa81847a80ce1340586e5a38918dcae9a`.
+
+### Seven modern trade-item paths
+
+`test_eclipse_modern_trade.py --shop-only` purchases all seven items at 2,100
+through native shops, verifies exact deductions and preserves the original
+party. The earned checkpoint has 8,544, so purchases use separate four-item and
+three-item checkpoint branches; no money/inventory edits fund these purchases.
+Split `--cases=0,1,2,3,4,5,6` and `--cases=7,8,9,10,11,12,13,14,15,16,17,18`
+runs pass seven positive evolutions, missing-item rejection for all seven,
+Sachet/Whipped Dream mismatch, shadow, Everstone and incompatible-species guards.
+Positive paths consume exactly one cable and the matching held item; rejected
+paths retain both. Porygon-Z and extended seen/caught flags survive native
+Save/cold Continue with exact cable/held-item consumption.
+
+`--chain-only` uses explicit Porygon/inventory fixtures, then native Link Cable,
+Bag Give Dubious Disc and a second cable to complete Porygon -> Porygon2 ->
+Porygon-Z. Exactly two cables, Up-Grade and Dubious Disc are consumed. The final
+partner and exact remaining inventory survive native Save/cold Continue.
+
+Projection regressions accept a single known held-item trade condition while
+rejecting unavailable items, paired trade requirements, added conditions and
+nonzero parameters. Direct-use alternatives for these held-only items remain
+audited, including gender-conditioned variants. The audit is 223 supported and
+130 omitted rules; prior aliases and supported paths remain covered. Campaign,
+continent and native title/New Game/Continue regressions pass. Hardware link
+trading, newer special rules and broader balancing remain pending.
+
+Both ROM aliases are 32 MiB; content remains 17,299,532 bytes.
+EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `384abe2ab43cc240de509208db43109ca3f86620f2426cfb3dba3ff16dfed855`.

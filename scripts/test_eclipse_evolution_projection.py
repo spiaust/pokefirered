@@ -57,3 +57,16 @@ for bad in (body.replace('TIME_NIGHT','TIME_EVENING'),body.replace('{IF_HOLD_ITE
 assert not project(body,{'SPECIES_CHANSEY'},set())[0]
 assert next(r for r in rows if r['species']=='SPECIES_HAPPINY')['supported']==[['EVO_LEVEL_ITEM_DAY','ITEM_OVAL_STONE','SPECIES_CHANSEY']]
 print('PASS: held-item time conditions, item availability and additional-condition rejection')
+
+body='.evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_AROMATISSE, CONDITIONS({IF_HOLD_ITEM, ITEM_SACHET})}),'
+assert project(body,{'SPECIES_AROMATISSE'},{'ITEM_SACHET'})[0]==[('EVO_TRADE_ITEM','ITEM_SACHET','SPECIES_AROMATISSE')]
+for bad in (body.replace('IF_HOLD_ITEM','IF_TRADE_PARTNER'),body.replace('{IF_HOLD_ITEM, ITEM_SACHET}','{IF_HOLD_ITEM, ITEM_SACHET},{IF_TIME, TIME_NIGHT}'),body.replace('EVO_TRADE, 0','EVO_TRADE, 1')):
+    assert not project(bad,{'SPECIES_AROMATISSE'},{'ITEM_SACHET'})[0]
+assert not project(body,{'SPECIES_AROMATISSE'},set())[0]
+assert not project('.evolutions = EVOLUTION({EVO_ITEM, ITEM_SACHET, SPECIES_AROMATISSE}),',{'SPECIES_AROMATISSE'},{'ITEM_SACHET'})[0]
+for token,item,target in [('SPRITZEE','SACHET','AROMATISSE'),('SWIRLIX','WHIPPED_DREAM','SLURPUFF')]:
+    r=next(r for r in rows if r['species']=='SPECIES_'+token)
+    assert r['supported']==[['EVO_TRADE_ITEM','ITEM_'+item,'SPECIES_'+target]] and len(r['omitted'])==1
+print('PASS: known held-item trade conditions, unavailable/extra/paired rules and direct-use alternatives')
+
+assert not project('.evolutions = EVOLUTION({EVO_ITEM, ITEM_SACHET, SPECIES_AROMATISSE, CONDITIONS({IF_GENDER, MON_FEMALE})}),',{'SPECIES_AROMATISSE'},{'ITEM_SACHET'})[0]

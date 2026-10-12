@@ -202,3 +202,25 @@ Tooth and Deep Sea Scale are now sold at their existing native prices. Additiona
 modern trade items, paired Karrablast/Shelmet conditions, forms and newer special
 rules remain outside this pass. The 639-row imported evolution audit is still
 221 supported/132 omitted because no new table rules are projected here.
+
+### Seven modern held trade items
+
+The pinned RHH gen_1/gen_3 family sources provide Rhydon, Electabuzz, Magmar,
+Porygon2 and Dusclops's held-item trade conditions. Cached imported Spritzee and
+Swirlix bodies provide Sachet/Whipped Dream conditions. This pass implements
+those classic trade conditions consistently with Link Cable, not the source's
+optional direct-use item alternatives. The parser projects only exactly one
+known IF_HOLD_ITEM condition at EVO_TRADE level zero into EVO_TRADE_ITEM; it
+rejects unavailable items, paired-trade rules, extra conditions and nonzero
+parameters. Direct use for these seven held-only items stays explicitly omitted.
+
+Unused item slots 60, 61, 62, 72, 82, 87 and 88 now hold Electirizer, Magmarizer,
+Protector, Dubious Disc, Reaper Cloth, Sachet and Whipped Dream. Existing IDs,
+old unused-slot aliases, save fields and global RAM stay fixed. All seven items
+are held-only with no added battle effect and cost 2,100. Icons reuse native
+Magnet, Charcoal, Metal Coat, Up-Grade, Cleanse Tag and Leftovers art.
+
+Five original-species rows are manual; Spritzee/Swirlix add two generated
+trade rules. The 639-row audit now has 223 supported and 130 omitted rules.
+Link Cable supports twenty-three paths. Native link-trade checks see the same
+new table rows, although hardware link trading remains untested in this pass.

@@ -439,3 +439,22 @@ or Deep Sea Scale for Gorebyss. These held items are now sold in shops too.
 Success consumes one cable and the required held item. Incompatible partners,
 missing/wrong held items, Everstone and shadow restrictions consume neither.
 Unrelated held items remain equipped on plain trade evolutions.
+
+## Modern held trade items
+
+Shops also sell the following items for 2,100 each. Give the item to the matching
+partner, then use a Link Cable (also 2,100):
+
+- Electabuzz + Electirizer → Electivire.
+- Magmar + Magmarizer → Magmortar.
+- Rhydon + Protector → Rhyperior.
+- Porygon2 + Dubious Disc → Porygon-Z.
+- Dusclops + Reaper Cloth → Dusknoir.
+- Spritzee + Sachet → Aromatisse.
+- Swirlix + Whipped Dream → Slurpuff.
+
+These are held items; choose Give rather than Use. Success consumes the held
+item and one cable. Missing/wrong items and shadow restrictions preserve both.
+Porygon can first use Up-Grade and Link Cable to become Porygon2, then use
+Dubious Disc and another cable to complete its evolution line. Existing link
+trade rules also recognize these held items. Their icons reuse native item art.

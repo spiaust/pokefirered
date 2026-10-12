@@ -9,6 +9,8 @@ GENDER_FORM_ALIASES = {
     "SPECIES_OINKOLOGNE_F": "SPECIES_OINKOLOGNE",
 }
 
+HELD_TRADE_ITEMS = {'ITEM_ELECTIRIZER','ITEM_MAGMARIZER','ITEM_PROTECTOR','ITEM_DUBIOUS_DISC','ITEM_REAPER_CLOTH','ITEM_SACHET','ITEM_WHIPPED_DREAM'}
+
 def project(body, species, items, aliases=None, moves=None):
     accepted, omitted = [], []
     match = re.search(r"\.evolutions\s*=\s*EVOLUTION\(", body)
@@ -53,11 +55,15 @@ def project(body, species, items, aliases=None, moves=None):
                     elif len(rules) == 2 and rules.get('IF_NOT_TIME') == 'TIME_NIGHT': method = 'EVO_FRIENDSHIP_DAY'; supported = True
                     elif len(rules) == 2 and rules.get('IF_TIME') == 'TIME_NIGHT': method = 'EVO_FRIENDSHIP_NIGHT'; supported = True
                     elif len(rules) == 2 and rules.get('IF_KNOWS_MOVE_TYPE') == 'TYPE_FAIRY': method = 'EVO_FRIENDSHIP_MOVE_TYPE'; param = 'TYPE_FAIRY'; supported = True
+            if method == 'EVO_TRADE' and param == '0' and len(conditions) == 1 and conditions[0][0] == 'IF_HOLD_ITEM':
+                item = conditions[0][1].strip()
+                if item in items: method = 'EVO_TRADE_ITEM'; param = item; supported = True
             if method == 'EVO_ITEM' and len(conditions) == 1 and conditions[0][0] == 'IF_GENDER':
                 gender = conditions[0][1].strip()
                 if gender in ('MON_MALE','MON_FEMALE'):
                     method = 'EVO_ITEM_MALE' if gender == 'MON_MALE' else 'EVO_ITEM_FEMALE'; supported = True
             if method not in ('EVO_LEVEL','EVO_LEVEL_MALE','EVO_LEVEL_FEMALE','EVO_LEVEL_MOVE','EVO_FRIENDSHIP','EVO_FRIENDSHIP_DAY','EVO_FRIENDSHIP_NIGHT','EVO_FRIENDSHIP_MOVE_TYPE','EVO_TRADE','EVO_TRADE_ITEM','EVO_ITEM','EVO_ITEM_MALE','EVO_ITEM_FEMALE','EVO_LEVEL_ITEM_DAY','EVO_LEVEL_ITEM_NIGHT'): supported = False
+            if method in ('EVO_ITEM','EVO_ITEM_MALE','EVO_ITEM_FEMALE') and param in HELD_TRADE_ITEMS: supported = False
             if method == 'EVO_LEVEL_MOVE' and param not in (moves or set()): supported = False
             if target not in species or (method in ('EVO_ITEM','EVO_TRADE_ITEM','EVO_ITEM_MALE','EVO_ITEM_FEMALE','EVO_LEVEL_ITEM_DAY','EVO_LEVEL_ITEM_NIGHT') and param not in items): supported = False
             if supported: accepted.append((method,param,target))

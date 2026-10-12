@@ -26,6 +26,8 @@ The ending keeps League shelters, country travel and repeatable training availab
   Sneasel and Gligar with time-dependent held-item level-up and safe cancellation.
 - [x] Add a purchasable Link Cable for sixteen supported trade paths, with
   matching held-item requirements and obtainable classic trade items.
+- [x] Add seven modern held trade items and Link Cable routes for Rhyperior,
+  Electivire, Magmortar, Porygon-Z, Dusknoir, Aromatisse and Slurpuff.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [ ] Expand modern ability/move/evolution coverage and species-specific cries;
   tune reserve habitats and encounter balance across countries.

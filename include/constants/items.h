@@ -69,8 +69,11 @@
 #define ITEM_03A 58
 #define ITEM_LINK_CABLE 59
 #define ITEM_03B 59
+#define ITEM_ELECTIRIZER 60
 #define ITEM_03C 60
+#define ITEM_MAGMARIZER 61
 #define ITEM_03D 61
+#define ITEM_PROTECTOR 62
 #define ITEM_03E 62
 #define ITEM_HP_UP 63
 #define ITEM_PROTEIN 64
@@ -81,6 +84,7 @@
 #define ITEM_PP_UP 69
 #define ITEM_ZINC 70
 #define ITEM_PP_MAX 71
+#define ITEM_DUBIOUS_DISC 72
 #define ITEM_048 72
 #define ITEM_GUARD_SPEC 73
 #define ITEM_DIRE_HIT 74
@@ -91,12 +95,15 @@
 #define ITEM_X_SPECIAL 79
 #define ITEM_POKE_DOLL 80
 #define ITEM_FLUFFY_TAIL 81
+#define ITEM_REAPER_CLOTH 82
 #define ITEM_052 82
 #define ITEM_SUPER_REPEL 83
 #define ITEM_MAX_REPEL 84
 #define ITEM_ESCAPE_ROPE 85
 #define ITEM_REPEL 86
+#define ITEM_SACHET 87
 #define ITEM_057 87
+#define ITEM_WHIPPED_DREAM 88
 #define ITEM_058 88
 #define ITEM_059 89
 #define ITEM_05A 90
