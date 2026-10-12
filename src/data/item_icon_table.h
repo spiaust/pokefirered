@@ -99,9 +99,9 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     // ????????
     [ITEM_SACHET] = {gItemIcon_CleanseTag, gItemIconPalette_CleanseTag},
     [ITEM_WHIPPED_DREAM] = {gItemIcon_Leftovers, gItemIconPalette_Leftovers},
-    [ITEM_059]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_05A]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_05B]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_TART_APPLE] = {gItemIcon_AspearBerry, gItemIconPalette_AspearBerry},
+    [ITEM_SWEET_APPLE] = {gItemIcon_CheriBerry, gItemIconPalette_CheriBerry},
+    [ITEM_SYRUPY_APPLE] = {gItemIcon_SitrusBerry, gItemIconPalette_SitrusBerry},
     [ITEM_05C]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Evolution stones
     [ITEM_SUN_STONE]      = {gItemIcon_SunStone, gItemIconPalette_SunStone},

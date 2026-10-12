@@ -478,3 +478,23 @@ Double Hit is a Normal physical attack: two 35-power strikes, 85 accuracy,
 10 PP. Twin Beam is a Psychic special attack: two 40-power strikes, 100
 accuracy, 10 PP. Both use the existing native two-hit battle mechanic with
 reused strike/beam animations. Other modern learnsets remain projected.
+
+## Evolution apples and Dragon Pulse
+
+Shops sell Tart Apple, Sweet Apple and Syrupy Apple for 2,100 each. Use them
+from the Bag on Applin to obtain Flapple, Appletun and Dipplin respectively.
+Success consumes one apple. Wrong species, Everstone and shadow restrictions
+preserve the apple; unrelated held items stay equipped.
+
+Poipole can recall its level-1 Dragon Pulse through any free move reminder,
+then evolve into Naganadel on its next level-up while knowing the move.
+Dragon Breath does not satisfy this requirement. Dragon Pulse is a special
+Dragon attack with 85 power, 100 accuracy and 10 PP; it deals one hit and has
+no paralysis effect. Its animation reuses Dragon Breath.
+
+Imported learnsets now include 88 additional lessons across 80 species for
+Baby-Doll Eyes, Double Hit, Twin Beam and Dragon Pulse where the pinned source
+learnset supports them. Existing lessons remain available. Dipplin learns
+Dragon Pulse at level 32, and imported evolved partners can recall their
+newly supported moves. Dipplin/Hydrapple's Dragon Cheer requirement remains
+pending, along with broader modern move and ability coverage.

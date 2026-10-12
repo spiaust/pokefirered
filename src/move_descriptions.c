@@ -363,6 +363,8 @@ static const u8 sBabyDollEyesDescription[] = _("The user acts first\nand lowers 
 static const u8 sDoubleHitDescription[] = _("The user strikes\nthe foe twice with\nits tail or limbs.");
 static const u8 sTwinBeamDescription[] = _("Twin psychic beams\nstrike the foe\nexactly twice.");
 
+static const u8 sDragonPulseDescription[] = _("A powerful wave of\ndragon energy\nstrikes the foe.");
+
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
     [MOVE_KARATE_CHOP   - 1] = gMoveDescription_KarateChop,
@@ -726,4 +728,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 [MOVE_BABY_DOLL_EYES - 1] = sBabyDollEyesDescription,
 [MOVE_DOUBLE_HIT - 1] = sDoubleHitDescription,
 [MOVE_TWIN_BEAM - 1] = sTwinBeamDescription,
+[MOVE_DRAGON_PULSE - 1] = sDragonPulseDescription,
 };

@@ -250,3 +250,30 @@ eligible King's Rock flags. Animations reuse Double Slap and Psybeam respectivel
 names/descriptions are native and original move IDs/animation positions stay
 fixed. Gen III's Normal physical/Psychic special categories fit these moves.
 No new global RAM, save fields, item IDs or graphics assets are introduced.
+
+### Evolution apples, Dragon Pulse and imported lesson refresh
+
+The pinned cached Gen VIII/IX species data supplies Applin's Tart/Sweet/Syrupy
+Apple branches and Poipole's known-Dragon-Pulse requirement. Items 89–91 reuse
+unused slots and retain their old aliases. Native item evolution handling,
+shop purchases and consumption are used; each apple costs 2,100. Icons reuse
+Aspear, Cheri and Sitrus Berry art respectively. Existing item/save IDs remain
+fixed. Dragon Pulse is move 363: 85 power, Dragon type, 100 accuracy, 10 PP,
+native single-hit effect and a reused Dragon Breath animation without paralysis.
+Gen III's Dragon special category fits this move.
+
+`scripts/refresh_eclipse_learnsets.py` reads the pinned cached Gen IX learnsets
+and current supported move constants. It adds missing supported lessons while
+retaining all prior projected lessons and their order at equal levels. It
+normalizes evolution level zero to one, as the original importer does, and
+rejects lists beyond the native reminder's 24-move capacity before writing.
+Only learnsets/metadata are refreshed; stats, assets and machine compatibility
+are unchanged. This adds 88 lessons across 80 imported species, including
+Poipole's level-1 Dragon Pulse and Dipplin's level-32 Dragon Pulse. The maximum
+learnset remains 22 moves. Running the refresh again adds zero lessons.
+
+All three Applin item rules and Poipole's move-known rule now project, raising
+the audit to 227 supported and 126 omitted imported evolution rules. Dipplin's
+Dragon Cheer rule stays omitted: a faithful ally-targeted critical-stage
+support effect and an obtainable lesson are still required. No new global RAM
+or save fields are introduced.

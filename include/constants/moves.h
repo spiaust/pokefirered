@@ -368,7 +368,9 @@
 #define MOVE_DOUBLE_HIT 361
 #define MOVE_TWIN_BEAM 362
 
-#define MOVES_COUNT 363
+#define MOVE_DRAGON_PULSE 363
+
+#define MOVES_COUNT 364
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

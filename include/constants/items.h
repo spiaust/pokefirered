@@ -105,8 +105,11 @@
 #define ITEM_057 87
 #define ITEM_WHIPPED_DREAM 88
 #define ITEM_058 88
+#define ITEM_TART_APPLE 89
 #define ITEM_059 89
+#define ITEM_SWEET_APPLE 90
 #define ITEM_05A 90
+#define ITEM_SYRUPY_APPLE 91
 #define ITEM_05B 91
 #define ITEM_05C 92
 #define ITEM_SUN_STONE 93

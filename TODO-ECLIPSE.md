@@ -30,6 +30,10 @@ The ending keeps League shelters, country travel and repeatable training availab
   Electivire, Magmortar, Porygon-Z, Dusknoir, Aromatisse and Slurpuff.
 - [x] Add Thunder Stone paths for Magneton/Nosepass and required-move paths
   for Lickitung, Aipom and Girafarig; add obtainable Double Hit/Twin Beam.
+- [x] Add purchasable Tart/Sweet/Syrupy Apples and Applin branches; add Dragon
+  Pulse and Poipole/Naganadel; refresh 88 lessons across 80 imported species.
+- [ ] Add Dragon Cheer with its ally/Dragon critical-stage behavior and an
+  obtainable lesson to unlock Dipplin/Hydrapple.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [ ] Expand modern ability/move/evolution coverage and species-specific cries;
   tune reserve habitats and encounter balance across countries.

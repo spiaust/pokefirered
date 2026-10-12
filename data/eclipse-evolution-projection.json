@@ -3121,10 +3121,14 @@
   },
   {
     "species": "SPECIES_POIPOLE",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 0, SPECIES_NAGANADEL, CONDITIONS({IF_KNOWS_MOVE, MOVE_DRAGON_PULSE})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_MOVE",
+        "MOVE_DRAGON_PULSE",
+        "SPECIES_NAGANADEL"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_NAGANADEL",
@@ -3416,12 +3420,24 @@
   },
   {
     "species": "SPECIES_APPLIN",
-    "supported": [],
-    "omitted": [
-      "{EVO_ITEM, ITEM_TART_APPLE, SPECIES_FLAPPLE}",
-      "{EVO_ITEM, ITEM_SWEET_APPLE, SPECIES_APPLETUN}",
-      "{EVO_ITEM, ITEM_SYRUPY_APPLE, SPECIES_DIPPLIN}"
-    ]
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_TART_APPLE",
+        "SPECIES_FLAPPLE"
+      ],
+      [
+        "EVO_ITEM",
+        "ITEM_SWEET_APPLE",
+        "SPECIES_APPLETUN"
+      ],
+      [
+        "EVO_ITEM",
+        "ITEM_SYRUPY_APPLE",
+        "SPECIES_DIPPLIN"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_FLAPPLE",

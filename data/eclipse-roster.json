@@ -4468,6 +4468,10 @@
           "MOVE_SWIFT"
         ],
         [
+          27,
+          "MOVE_DOUBLE_HIT"
+        ],
+        [
           31,
           "MOVE_WHIRLPOOL"
         ],
@@ -4625,6 +4629,10 @@
         [
           21,
           "MOVE_SWIFT"
+        ],
+        [
+          29,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           35,
@@ -5340,6 +5348,10 @@
         [
           29,
           "MOVE_AGILITY"
+        ],
+        [
+          32,
+          "MOVE_DOUBLE_HIT"
         ]
       ],
       "omitted_moves": [
@@ -5777,6 +5789,10 @@
           "MOVE_DEFENSE_CURL"
         ],
         [
+          8,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           16,
           "MOVE_QUICK_ATTACK"
         ],
@@ -5931,6 +5947,10 @@
         [
           1,
           "MOVE_DEFENSE_CURL"
+        ],
+        [
+          1,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           16,
@@ -8886,6 +8906,10 @@
         [
           48,
           "MOVE_METEOR_MASH"
+        ],
+        [
+          52,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           56,
@@ -12339,6 +12363,10 @@
           "MOVE_QUICK_ATTACK"
         ],
         [
+          15,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           20,
           "MOVE_LEECH_SEED"
         ],
@@ -12518,6 +12546,10 @@
         [
           10,
           "MOVE_QUICK_ATTACK"
+        ],
+        [
+          15,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           25,
@@ -12824,6 +12856,10 @@
         [
           1,
           "MOVE_MUD_SLAP"
+        ],
+        [
+          1,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           20,
@@ -18022,6 +18058,10 @@
           "MOVE_BITE"
         ],
         [
+          17,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           20,
           "MOVE_PLAY_ROUGH"
         ],
@@ -18164,6 +18204,10 @@
         [
           1,
           "MOVE_TACKLE"
+        ],
+        [
+          19,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           24,
@@ -18309,6 +18353,10 @@
         [
           1,
           "MOVE_TACKLE"
+        ],
+        [
+          19,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           24,
@@ -21447,6 +21495,10 @@
         [
           1,
           "MOVE_POUND"
+        ],
+        [
+          9,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           12,
@@ -27560,6 +27612,10 @@
           "MOVE_POUND"
         ],
         [
+          1,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           4,
           "MOVE_HELPING_HAND"
         ],
@@ -27743,6 +27799,10 @@
         [
           1,
           "MOVE_HYPER_VOICE"
+        ],
+        [
+          1,
+          "MOVE_BABY_DOLL_EYES"
         ]
       ],
       "omitted_moves": [
@@ -33039,6 +33099,10 @@
           "MOVE_FOCUS_ENERGY"
         ],
         [
+          36,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           39,
           "MOVE_SWORDS_DANCE"
         ],
@@ -33203,6 +33267,10 @@
           "MOVE_FOCUS_ENERGY"
         ],
         [
+          36,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           41,
           "MOVE_SWORDS_DANCE"
         ],
@@ -33365,6 +33433,10 @@
         [
           33,
           "MOVE_FOCUS_ENERGY"
+        ],
+        [
+          36,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           41,
@@ -36518,6 +36590,10 @@
           "MOVE_SCARY_FACE"
         ],
         [
+          40,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           44,
           "MOVE_BODY_SLAM"
         ],
@@ -36653,6 +36729,10 @@
           "MOVE_FOCUS_ENERGY"
         ],
         [
+          1,
+          "MOVE_DOUBLE_HIT"
+        ],
+        [
           12,
           "MOVE_ROAR"
         ],
@@ -36671,6 +36751,10 @@
         [
           36,
           "MOVE_SCARY_FACE"
+        ],
+        [
+          40,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           44,
@@ -36816,6 +36900,10 @@
           "MOVE_FOCUS_ENERGY"
         ],
         [
+          1,
+          "MOVE_DOUBLE_HIT"
+        ],
+        [
           12,
           "MOVE_ROAR"
         ],
@@ -36834,6 +36922,10 @@
         [
           36,
           "MOVE_SCARY_FACE"
+        ],
+        [
+          40,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           44,
@@ -38045,6 +38137,10 @@
           "MOVE_EXTRASENSORY"
         ],
         [
+          32,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           40,
           "MOVE_FLAMETHROWER"
         ],
@@ -38499,6 +38595,10 @@
         [
           16,
           "MOVE_ENDEAVOR"
+        ],
+        [
+          24,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           32,
@@ -41754,7 +41854,7 @@
       "id": 722,
       "token": "SPECIES_FLABEBE",
       "source_token": "SPECIES_FLABEBE_RED",
-      "name": "Flab\u00e9b\u00e9",
+      "name": "Flabébé",
       "generation": 6,
       "stats": {
         "baseHP": 44,
@@ -42836,6 +42936,10 @@
         [
           5,
           "MOVE_SAND_ATTACK"
+        ],
+        [
+          9,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           12,
@@ -44929,6 +45033,10 @@
           "MOVE_TOXIC"
         ],
         [
+          40,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           50,
           "MOVE_SLUDGE_BOMB"
         ],
@@ -45072,6 +45180,10 @@
         [
           35,
           "MOVE_TOXIC"
+        ],
+        [
+          40,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           52,
@@ -45335,6 +45447,10 @@
         [
           1,
           "MOVE_SPLASH"
+        ],
+        [
+          1,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           30,
@@ -46416,6 +46532,10 @@
           "MOVE_QUICK_ATTACK"
         ],
         [
+          15,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           20,
           "MOVE_SWIFT"
         ],
@@ -47022,6 +47142,10 @@
           "MOVE_RAIN_DANCE"
         ],
         [
+          35,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           41,
           "MOVE_CURSE"
         ],
@@ -47152,6 +47276,10 @@
         [
           30,
           "MOVE_RAIN_DANCE"
+        ],
+        [
+          35,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           43,
@@ -48666,6 +48794,10 @@
           "MOVE_GUST"
         ],
         [
+          1,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           12,
           "MOVE_DOUBLE_TEAM"
         ],
@@ -49157,6 +49289,10 @@
         [
           32,
           "MOVE_CRUNCH"
+        ],
+        [
+          40,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           56,
@@ -50666,6 +50802,10 @@
           "MOVE_WATER_GUN"
         ],
         [
+          12,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           15,
           "MOVE_ICY_WIND"
         ],
@@ -50810,6 +50950,10 @@
         [
           1,
           "MOVE_GROWL"
+        ],
+        [
+          12,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           15,
@@ -50957,6 +51101,10 @@
         [
           1,
           "MOVE_GROWL"
+        ],
+        [
+          12,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           15,
@@ -54776,6 +54924,10 @@
           "MOVE_SWEET_SCENT"
         ],
         [
+          40,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           45,
           "MOVE_FLAMETHROWER"
         ],
@@ -54948,6 +55100,10 @@
           "MOVE_SWEET_SCENT"
         ],
         [
+          44,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           51,
           "MOVE_FLAMETHROWER"
         ],
@@ -55068,6 +55224,10 @@
         [
           1,
           "MOVE_TACKLE"
+        ],
+        [
+          4,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           16,
@@ -55216,6 +55376,10 @@
         [
           1,
           "MOVE_BIND"
+        ],
+        [
+          1,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           16,
@@ -56878,6 +57042,10 @@
           "MOVE_SCARY_FACE"
         ],
         [
+          15,
+          "MOVE_DOUBLE_HIT"
+        ],
+        [
           20,
           "MOVE_METAL_SOUND"
         ],
@@ -57021,6 +57189,10 @@
         [
           1,
           "MOVE_TACKLE"
+        ],
+        [
+          15,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           20,
@@ -57483,6 +57655,10 @@
           "MOVE_IRON_DEFENSE"
         ],
         [
+          28,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           32,
           "MOVE_BODY_SLAM"
         ],
@@ -57755,6 +57931,10 @@
         [
           12,
           "MOVE_DOUBLE_TEAM"
+        ],
+        [
+          18,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           24,
@@ -58051,6 +58231,10 @@
         [
           30,
           "MOVE_EXTRASENSORY"
+        ],
+        [
+          35,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           40,
@@ -61379,6 +61563,10 @@
           "MOVE_GROWL"
         ],
         [
+          1,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           7,
           "MOVE_FURY_ATTACK"
         ],
@@ -61512,6 +61700,10 @@
         [
           1,
           "MOVE_GROWL"
+        ],
+        [
+          1,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           7,
@@ -62466,6 +62658,10 @@
           "MOVE_GROWL"
         ],
         [
+          1,
+          "MOVE_DOUBLE_HIT"
+        ],
+        [
           12,
           "MOVE_RAZOR_LEAF"
         ],
@@ -62594,6 +62790,10 @@
         [
           1,
           "MOVE_GROWL"
+        ],
+        [
+          1,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           12,
@@ -66243,6 +66443,10 @@
           "MOVE_DRAGON_DANCE"
         ],
         [
+          28,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           36,
           "MOVE_IRON_DEFENSE"
         ],
@@ -66403,6 +66607,10 @@
         [
           36,
           "MOVE_IRON_DEFENSE"
+        ],
+        [
+          40,
+          "MOVE_DRAGON_PULSE"
         ]
       ],
       "omitted_moves": [
@@ -69006,6 +69214,10 @@
           "MOVE_CROSS_CHOP"
         ],
         [
+          1,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           12,
           "MOVE_HEADBUTT"
         ],
@@ -71496,6 +71708,10 @@
         [
           49,
           "MOVE_SLAM"
+        ],
+        [
+          70,
+          "MOVE_DRAGON_PULSE"
         ]
       ],
       "omitted_moves": [
@@ -71769,6 +71985,10 @@
         [
           56,
           "MOVE_CRUNCH"
+        ],
+        [
+          70,
+          "MOVE_DRAGON_PULSE"
         ]
       ],
       "omitted_moves": [
@@ -72238,12 +72458,20 @@
           "MOVE_ASTONISH"
         ],
         [
+          1,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           6,
           "MOVE_LOCK_ON"
         ],
         [
           24,
           "MOVE_AGILITY"
+        ],
+        [
+          30,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           42,
@@ -72405,6 +72633,10 @@
         [
           24,
           "MOVE_AGILITY"
+        ],
+        [
+          30,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           42,
@@ -72819,6 +73051,10 @@
         [
           24,
           "MOVE_DRAGON_DANCE"
+        ],
+        [
+          40,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           48,
@@ -74224,6 +74460,10 @@
         [
           16,
           "MOVE_DOUBLE_TEAM"
+        ],
+        [
+          20,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           24,
@@ -75946,6 +76186,10 @@
           "MOVE_WING_ATTACK"
         ],
         [
+          17,
+          "MOVE_DOUBLE_HIT"
+        ],
+        [
           28,
           "MOVE_FOCUS_ENERGY"
         ]
@@ -76066,6 +76310,10 @@
         [
           1,
           "MOVE_GROWL"
+        ],
+        [
+          1,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           10,
@@ -76210,6 +76458,10 @@
         [
           1,
           "MOVE_GROWL"
+        ],
+        [
+          1,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           10,
@@ -77594,12 +77846,20 @@
           "MOVE_POUND"
         ],
         [
+          1,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           8,
           "MOVE_HELPING_HAND"
         ],
         [
           11,
           "MOVE_SUPER_FANG"
+        ],
+        [
+          14,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           18,
@@ -77731,12 +77991,20 @@
           "MOVE_FOLLOW_ME"
         ],
         [
+          1,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           8,
           "MOVE_HELPING_HAND"
         ],
         [
           11,
           "MOVE_SUPER_FANG"
+        ],
+        [
+          14,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           18,
@@ -77889,6 +78157,10 @@
           "MOVE_BITE"
         ],
         [
+          15,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           18,
           "MOVE_PLAY_ROUGH"
         ],
@@ -78026,6 +78298,10 @@
         [
           11,
           "MOVE_BITE"
+        ],
+        [
+          15,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           18,
@@ -81891,6 +82167,10 @@
           "MOVE_CONFUSION"
         ],
         [
+          8,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           15,
           "MOVE_QUICK_ATTACK"
         ],
@@ -82020,6 +82300,10 @@
         [
           5,
           "MOVE_CONFUSION"
+        ],
+        [
+          8,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           15,
@@ -82153,6 +82437,10 @@
         [
           1,
           "MOVE_ASTONISH"
+        ],
+        [
+          5,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           8,
@@ -82299,6 +82587,10 @@
           "MOVE_ASTONISH"
         ],
         [
+          5,
+          "MOVE_BABY_DOLL_EYES"
+        ],
+        [
           8,
           "MOVE_METAL_CLAW"
         ],
@@ -82442,6 +82734,10 @@
         [
           1,
           "MOVE_ASTONISH"
+        ],
+        [
+          5,
+          "MOVE_BABY_DOLL_EYES"
         ],
         [
           8,
@@ -82994,6 +83290,10 @@
           "MOVE_FOCUS_ENERGY"
         ],
         [
+          17,
+          "MOVE_DOUBLE_HIT"
+        ],
+        [
           21,
           "MOVE_DIVE"
         ],
@@ -83125,6 +83425,10 @@
         [
           10,
           "MOVE_FOCUS_ENERGY"
+        ],
+        [
+          17,
+          "MOVE_DOUBLE_HIT"
         ],
         [
           21,
@@ -83572,6 +83876,10 @@
         [
           36,
           "MOVE_DRAGON_CLAW"
+        ],
+        [
+          45,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           51,
@@ -85084,6 +85392,10 @@
         [
           47,
           "MOVE_MIRROR_COAT"
+        ],
+        [
+          52,
+          "MOVE_DRAGON_PULSE"
         ]
       ],
       "omitted_moves": [
@@ -85491,6 +85803,14 @@
         [
           23,
           "MOVE_AGILITY"
+        ],
+        [
+          28,
+          "MOVE_DOUBLE_HIT"
+        ],
+        [
+          32,
+          "MOVE_TWIN_BEAM"
         ],
         [
           37,
@@ -87253,6 +87573,10 @@
         [
           77,
           "MOVE_OUTRAGE"
+        ],
+        [
+          84,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           91,
@@ -89376,6 +89700,10 @@
           "MOVE_AGILITY"
         ],
         [
+          42,
+          "MOVE_DRAGON_PULSE"
+        ],
+        [
           63,
           "MOVE_METAL_SOUND"
         ],
@@ -89525,6 +89853,10 @@
         [
           28,
           "MOVE_DRAGON_BREATH"
+        ],
+        [
+          63,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           70,
@@ -89814,6 +90146,10 @@
           "MOVE_WITHDRAW"
         ],
         [
+          1,
+          "MOVE_DOUBLE_HIT"
+        ],
+        [
           8,
           "MOVE_GROWTH"
         ],
@@ -89828,6 +90164,10 @@
         [
           20,
           "MOVE_BULLET_SEED"
+        ],
+        [
+          32,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           36,
@@ -90905,6 +91245,10 @@
           "MOVE_WITHDRAW"
         ],
         [
+          1,
+          "MOVE_DOUBLE_HIT"
+        ],
+        [
           8,
           "MOVE_GROWTH"
         ],
@@ -90919,6 +91263,10 @@
         [
           20,
           "MOVE_BULLET_SEED"
+        ],
+        [
+          32,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           36,
@@ -91225,6 +91573,10 @@
         [
           42,
           "MOVE_CALM_MIND"
+        ],
+        [
+          70,
+          "MOVE_DRAGON_PULSE"
         ],
         [
           77,

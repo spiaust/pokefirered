@@ -1123,4 +1123,37 @@ new evolution rows belong to original species.
 
 ROM content remains 17,299,532 bytes; both padded aliases are 32 MiB.
 EWRAM stays 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `63e020938b6c1d28916581866b4c69334158637ae038ac68c763dd466e4ebb44`.
+Previous cross-generation release SHA-256: `63e020938b6c1d28916581866b4c69334158637ae038ac68c763dd466e4ebb44`.
+
+### Evolution apples, Dragon Pulse and imported lesson refresh
+
+`test_eclipse_apples.py --shop-only` purchases all three apples at 2,100 each
+with earned funds, verifies exact price/quantity changes and preserves the
+original party. `--cases-only` passes three Applin branches, wrong item/species,
+Everstone, shadow and no repeated Dipplin evolution. An unrelated Sachet stays
+held during Syrupy Apple evolution. Native Save/cold Continue preserves Dipplin,
+one remaining Syrupy Apple and extended seen/caught flags.
+
+`test_eclipse_poipole.py` passes known Dragon Pulse (fourth slot), wrong Dragon
+Breath, Everstone and shadow guards. A native free level-1 reminder teaches
+Dragon Pulse without money/inventory charges, then a native level-up evolves
+Naganadel. The partner, move and seen/caught flags survive Save/cold Continue.
+`test_eclipse_dragon_pulse.py` verifies actual target species/types before
+combat: Pikachu takes one damage event (346), Sylveon takes zero. Both attempts
+consume one PP, cause no paralysis and finish the reused animation. The initial
+fixture incorrectly set the target before movement overwrote it; correcting
+the fixture and asserting species/types resolves the test without game changes.
+
+The refresh adds 88 supported lessons across 80 imported species and is
+idempotent (second run: zero additions). `test_eclipse_learnset_refresh.py`
+compares all 639 compiled learnsets to metadata, checks the native capacity and
+preserves all lessons from the prior committed projection. Maximum list length
+remains 22. Evolution/animation projection, campaign/country static checks and
+2026 title/New Game/Continue checks pass. The evolution audit is now 227
+supported/126 omitted. Dragon Cheer/Hydrapple, broader moves/abilities/forms and
+balancing remain pending. Runtime tests use isolated fixtures/checkpoints;
+personal saves are untouched.
+
+Both ROM aliases are 32 MiB; content remains 17,299,532 bytes.
+EWRAM stays 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `aaa9deeed43f910374205096d465dbbcda972723f2d1c5fa71e0d396358b428f`.
