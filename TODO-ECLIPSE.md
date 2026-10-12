@@ -188,3 +188,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Sharpness for Gallade with seven supported slicing moves, dynamic
   Fury Cutter/STAB/other-move/fixed/immunity/self-hit guards, free slicing recall,
   cold saves, male Kirlia Dawn Stone evolution and Steelworker regression.
+
+- [x] Add Tough Claws for three regular slots, physical/special contact power,
+  drain/recoil/Struggle/fixed/immunity/self-hit guards, Perrserker cold save,
+  Binacle evolution and full Fluffy contact regression checks.

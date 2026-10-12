@@ -804,3 +804,16 @@ Fury Cutter's native dynamic progression, while excluding self-damage. The
 shared path covers attacks and estimates. Existing Gallade recall lessons are
 used without adding invented level-up moves. Hidden-only users and alternate
 forms remain omitted. No added RAM/save fields or modern category split.
+
+### Tough Claws contact power
+
+Pinned RHH applies a 1.3 power modifier to contact moves:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Three imported regular slots become supported. CalculateBaseDamage applies
+integer power * 13 / 10 for the existing native contact flag, after effective
+power resolution and excluding self-damage/power-zero moves. Actual Struggle
+is a contact attack and qualifies, unlike Reckless's explicit exclusion.
+Shared attack/estimate logic leaves fixed-damage scripts intact. Binacle's
+second Sniper slot and Perrserker's first Battle Armor slot remain supported.
+No contact-negating abilities/items, hidden slots, extra RAM/save fields or
+alternate-form projection are introduced.

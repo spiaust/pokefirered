@@ -1999,7 +1999,30 @@ behavior. Fixtures use controlled stats/levels/gender and disposable saves,
 not naturally raised campaign teams or hardware/link tests.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `d316a72317f250348d7801f5ee1b4219251774dabf290041a6722d08a44a9835`.
+Previous release SHA-256: `d316a72317f250348d7801f5ee1b4219251774dabf290041a6722d08a44a9835`.
 Both ROM aliases match. All three native Sharpness suites, Steelworker
 regression and campaign/country static checks pass; refresh is idempotent.
 Gallade's complete ability name and description were visually verified.
+
+## Tough Claws contact power
+
+`test_eclipse_tough_claws.py` checks Quick Attack, Bite, Fire Punch, Iron Head
+and Drain Punch for 30% power increases, while Earthquake/Water Gun/Seismic
+Toss remain unchanged. Native Dark/Fire special contact moves still qualify.
+Drain Punch heals from increased damage. Super Fang retains fixed half-HP
+damage; Take Down and actual forced Struggle gain contact power while their
+native quarter-damage recoil matches the resulting hits. Ghost immunity and
+confusion self-damage remain intact. First-action fixtures isolate move damage.
+`test_eclipse_tough_claws_species.py` checks all three regular slots, Perrserker
+Save/cold Continue, skills UI and next battle.
+`test_eclipse_tough_claws_evolution.py` checks Binacle/Barbaracle retains its
+first slot. Full `test_eclipse_fluffy.py` regression passes contact/Fire,
+critical, drain/recoil, fixed, immunity and self-hit checks. Fixtures use
+controlled stats/levels and disposable saves, not naturally trained campaign
+teams or hardware/link testing.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `0b3803d627c94fcccae4f8b0635b41b8ceb1e05133cbaf3ac47fffd9bca87131`.
+Both ROM aliases match. Native suites, full Fluffy regression and campaign/
+country static checks pass; refresh is idempotent. Perrserker's complete
+ability name and description were visually verified.

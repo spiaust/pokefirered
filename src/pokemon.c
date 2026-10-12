@@ -2423,6 +2423,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         && gBattleMovePower > 0 && IsSlicingMove(move))
         gBattleMovePower = gBattleMovePower * 3 / 2;
 
+    if (battlerIdAtk != battlerIdDef && attacker->ability == ABILITY_TOUGH_CLAWS
+        && gBattleMovePower > 0 && (gBattleMoves[move].flags & FLAG_MAKES_CONTACT))
+        gBattleMovePower = gBattleMovePower * 13 / 10;
+
     if (battlerIdAtk != battlerIdDef && attacker->ability == ABILITY_STRONG_JAW
         && (gBattleMoves[move].flags & FLAG_BITING))
         gBattleMovePower = gBattleMovePower * 3 / 2;

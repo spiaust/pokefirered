@@ -876,3 +876,11 @@ power combines with the bonus. Gallade can freely recall Slash, Leaf Blade
 and Fury Cutter from its existing lessons. A male Kirlia retaining its second
 slot gains Sharpness upon Dawn Stone evolution. Other attacks, fixed damage
 and confusion self-damage remain unchanged.
+
+## Tough Claws ability
+
+Binacle, Barbaracle and Perrserker can use Tough Claws in their regular slots.
+It boosts effective contact-move power by 30%, applying to physical and special
+contact attacks under the native type split. Non-contact attacks, fixed damage
+and confusion self-damage remain unchanged. Drain Punch healing and native
+recoil follow the increased damage, including real contact Struggle.

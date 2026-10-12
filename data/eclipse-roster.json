@@ -44845,7 +44845,7 @@
         "EGG_GROUP_WATER_3"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_TOUGH_CLAWS",
         "ABILITY_SNIPER"
       ],
       "source_abilities": [
@@ -44993,7 +44993,7 @@
         "EGG_GROUP_WATER_3"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_TOUGH_CLAWS",
         "ABILITY_SNIPER"
       ],
       "source_abilities": [
@@ -69626,7 +69626,7 @@
       ],
       "abilities": [
         "ABILITY_BATTLE_ARMOR",
-        "ABILITY_NONE"
+        "ABILITY_TOUGH_CLAWS"
       ],
       "source_abilities": [
         "ABILITY_BATTLE_ARMOR",

@@ -1,3 +1,4 @@
+static const u8 sToughClawsDescription[] = _("Boosts contact move damage.");
 static const u8 sSharpnessDescription[] = _("Boosts slicing move damage.");
 static const u8 sSteelworkerDescription[] = _("Boosts Steel move damage.");
 static const u8 sWaterBubbleDescription[] = _("Boosts Water; prevents burns.");
@@ -208,6 +209,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_WATER_BUBBLE] = sWaterBubbleDescription,
     [ABILITY_STEELWORKER] = sSteelworkerDescription,
     [ABILITY_SHARPNESS] = sSharpnessDescription,
+    [ABILITY_TOUGH_CLAWS] = sToughClawsDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -316,4 +318,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_WATER_BUBBLE] = _("WATER BUBBLE"),
     [ABILITY_STEELWORKER] = _("STEELWORKER"),
     [ABILITY_SHARPNESS] = _("SHARPNESS"),
+    [ABILITY_TOUGH_CLAWS] = _("TOUGH CLAWS"),
 };
