@@ -723,3 +723,15 @@ power * 3 / 2 for biting moves and excludes self-damage; its shared path
 covers attacks and estimates. Modern fang moves, Fishious Rend, Jaw Lock
 and Psychic Fangs remain outside the supported move subset. No additional
 RAM/save fields, hidden abilities or alternate-form projection.
+
+### Fur Coat effective Defense
+
+Pinned RHH doubles the defensive modifier when damage uses Defense:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Furfrou's imported regular slot becomes supported. CalculateBaseDamage doubles
+the local Defense value for a Fur Coat defender on native physical types,
+excluding self-damage. Subsequent native stages, critical rules, badge boosts
+and damage calculations retain their behavior. This shared attack/estimate
+path changes neither saved stats nor the summary Defense number. Alolan
+Persian and Furfrou trims are not projected onto existing base forms. No extra
+RAM/save fields, hidden slots or modern category split.

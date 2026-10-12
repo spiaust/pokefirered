@@ -819,3 +819,12 @@ power of supported biting attacks by 50%: Bite, Crunch, Hyper Fang and Poison
 Fang. These retain native contact and secondary effects. Other attacks,
 Super Fang's fixed half-HP damage and confusion self-damage remain unchanged.
 The existing Gen III type-based physical/special rules still apply.
+
+## Fur Coat ability
+
+Furfrou can use Fur Coat in its regular slot. Its effective Defense doubles
+against physical attacks, without changing its saved or summary stats.
+Critical hits retain this ability bonus while using native stat-stage rules.
+Special attacks, fixed damage and confusion self-damage remain unchanged.
+The existing Gen III type-based split still applies: Dark and Fire attacks
+are special, even when they make contact. Alternate forms remain unsupported.

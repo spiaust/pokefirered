@@ -1852,7 +1852,28 @@ Fixtures use controlled stats/levels and disposable saves, not naturally
 raised campaign teams or hardware/link tests.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `51fff01a75d0969f05bea5bdc546687c6fefde76ac2fa54b9e441c541dc71224`.
+Previous release SHA-256: `51fff01a75d0969f05bea5bdc546687c6fefde76ac2fa54b9e441c541dc71224`.
 Both ROM aliases match. All three native Strong Jaw suites, the Iron Fist
 regression and campaign/country static checks pass; refresh is idempotent.
 Tyrantrum's complete ability name and description were visually verified.
+
+## Fur Coat effective Defense
+
+`test_eclipse_fur_coat.py` checks native physical Quick Attack, Earthquake,
+Rock Slide, Poison Fang and Drain Punch; Water Gun, Fire Punch and Bite remain
+special under the native type split. Move power stays unchanged while physical
+damage decreases. Drain Punch heals from reduced damage. Controlled critical
+rolls retain Fur Coat while bypassing raised Defense stages; lowered/raised
+stages still combine with the ability on noncritical hits. Seismic Toss and
+Super Fang remain fixed damage. Actual forced Struggle is reduced and native
+quarter-damage recoil follows its reduced hit. Ghost immunity remains intact,
+and confusion self-damage receives no reduction.
+`test_eclipse_fur_coat_species.py` checks Furfrou's regular slot, native Save/
+cold Continue, skills UI and next battle. Fixtures use controlled stats/levels
+and disposable saves, not naturally trained campaign teams or hardware/link.
+Furfrou has no native evolution route, so no evolution fixture is needed.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `be27a64cde6c54b60bdcf164a99077c8c17b78d9e64e497ae4de11991d5d5310`.
+Both ROM aliases match. Native suites and campaign/country static checks pass;
+refresh is idempotent. Furfrou's complete name/description were visually verified.

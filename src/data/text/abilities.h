@@ -1,3 +1,4 @@
+static const u8 sFurCoatDescription[] = _("Weakens physical attacks.");
 static const u8 sStrongJawDescription[] = _("Boosts biting move damage.");
 static const u8 sSteadfastDescription[] = _("Raises SPEED when flinched.");
 static const u8 sHeatproofDescription[] = _("Weakens Fire and burn damage.");
@@ -196,6 +197,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_HEATPROOF] = sHeatproofDescription,
     [ABILITY_STEADFAST] = sSteadfastDescription,
     [ABILITY_STRONG_JAW] = sStrongJawDescription,
+    [ABILITY_FUR_COAT] = sFurCoatDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -298,4 +300,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_HEATPROOF] = _("HEATPROOF"),
     [ABILITY_STEADFAST] = _("STEADFAST"),
     [ABILITY_STRONG_JAW] = _("STRONG JAW"),
+    [ABILITY_FUR_COAT] = _("FUR COAT"),
 };

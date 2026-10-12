@@ -165,3 +165,6 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Strong Jaw for nine regular slots and four supported biting moves,
   native contact/punch-flag guards, physical/special/fixed-damage/immunity/self-hit
   checks, Tyrantrum cold save, Chewtle evolution and Iron Fist regression.
+
+- [x] Add Fur Coat for Furfrou, native physical Defense bonus, special/fixed/
+  confusion guards, critical/stage/drain/Struggle checks and cold-save display.
