@@ -1779,9 +1779,33 @@ second slot. These use controlled stats/status/levels and disposable saves,
 not naturally raised campaign teams or hardware/link tests.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `683af97f592624bb6aa5fd4a365bbb25b83f574ed36b83cc356ae690d4a40477`.
+Previous release SHA-256: `683af97f592624bb6aa5fd4a365bbb25b83f574ed36b83cc356ae690d4a40477`.
 Both ROM aliases match. Campaign/country static checks pass and ability
 refresh is idempotent.
 
 All three Tangled Feet native suites and the full Snow Cloak regression
 passed. Pidgeot's complete ability name and description were visually verified.
+
+## Heatproof Fire and burn reduction
+
+`test_eclipse_heatproof.py` checks Ember, Fire Punch, Flamethrower and Fire
+Blast power/damage reductions, with Ice, Water, Normal, Seismic Toss and actual
+forced Struggle controls. Weakness/resistance typing retains the reduction.
+First-action fixtures isolate attack damage from later burn residuals.
+Will-O-Wisp still applies burn with Heatproof. At max HP 1000, native burn
+deals 125 HP without Heatproof and 62 with it; max HP 12 still deals minimum
+one HP. Burn persists, poison still deals 125 HP, and burn's physical Attack
+penalty remains unchanged. `test_eclipse_heatproof_species.py` checks all
+three regular slots, Bronzong native Save/cold Continue, skills UI and next
+battle. `test_eclipse_heatproof_evolution.py` checks Bronzor/Bronzong retains
+Heatproof and Rolycoly/Carkol retains the slot while changing to Flame Body.
+Fixtures use controlled stats/status/levels and disposable saves, not naturally
+raised campaign teams or hardware/link testing.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `25e487d3d891f973b3e7afa4cd90221220a7167ccf3ebd7d2dacdc7a1c1c73d5`.
+Both ROM aliases match. Campaign/country static checks pass and refresh is
+idempotent. Bronzong's complete name/description were visually verified.
+
+All three native Heatproof suites passed on the final ROM, including both
+evolution routes.

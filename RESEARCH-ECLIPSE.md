@@ -685,3 +685,15 @@ Cmd_accuracycheck applies the modifier only to the target with Tangled Feet
 and nonzero STATUS2_CONFUSION. Existing accuracy/evasion stages, Compound
 Eyes and always-hit script paths remain intact. No new RAM/save fields or
 hidden slots; Doduo/Dodrio hidden-only Tangled Feet remains omitted.
+
+### Heatproof Fire and burn reduction
+
+Pinned RHH defender power modifiers halve Fire attacks for Heatproof:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Three imported regular slots become supported. Native CalculateBaseDamage
+halves effective Fire power after dynamic type/power resolution, excluding
+self-damage, Struggle and power-zero moves and retaining minimum power one.
+The shared calculation covers attacks and estimates. Native ENDTURN_BURN
+halves its existing maxHP/8 damage before the minimum-one check; it does not
+convert the engine to modern burn rules. No status immunity, additional RAM,
+save fields, hidden slots or alternate-form projection.

@@ -153,3 +153,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Tangled Feet for seven regular species slots, exact native confusion
   accuracy boundaries, stage/Compound Eyes/always-hit guards, Pidgeot cold-save
   display, evolution persistence and weather-evasion regression checks.
+
+- [x] Add Heatproof for three regular slots, Fire/burn damage reduction,
+  status/minimum/poison/Attack-penalty guards, Bronzong cold save and evolution,
+  and Rolycoly's evolution transition to Carkol's Flame Body.

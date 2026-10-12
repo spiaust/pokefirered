@@ -7076,7 +7076,7 @@
       ],
       "abilities": [
         "ABILITY_LEVITATE",
-        "ABILITY_NONE"
+        "ABILITY_HEATPROOF"
       ],
       "source_abilities": [
         "ABILITY_LEVITATE",
@@ -7222,7 +7222,7 @@
       ],
       "abilities": [
         "ABILITY_LEVITATE",
-        "ABILITY_NONE"
+        "ABILITY_HEATPROOF"
       ],
       "source_abilities": [
         "ABILITY_LEVITATE",
@@ -66078,7 +66078,7 @@
       ],
       "abilities": [
         "ABILITY_NONE",
-        "ABILITY_NONE"
+        "ABILITY_HEATPROOF"
       ],
       "source_abilities": [
         "ABILITY_STEAM_ENGINE",

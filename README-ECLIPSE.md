@@ -792,3 +792,12 @@ Tangled Feet in their regular ability slots. While its user is confused,
 attacks against it have their calculated accuracy halved, using native
 integer rounding. The bonus ends when confusion clears. Accuracy/evasion
 stages and Compound Eyes still apply; always-hit moves remain reliable.
+
+## Heatproof ability
+
+Bronzor, Bronzong and Rolycoly can use Heatproof in their second regular slot.
+It halves effective Fire-attack power and burn residual damage, with native
+integer rounding and minimum damage rules. It permits burns and preserves
+burn's Attack penalty; other move types and poison damage remain unchanged.
+Bronzor retains Heatproof when evolving into Bronzong. Rolycoly retains its
+second slot but changes to Carkol's Flame Body when evolving.
