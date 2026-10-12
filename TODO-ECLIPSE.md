@@ -97,3 +97,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 
 - [x] Add purchasable Prism Scale and Feebas/Milotic Link Cable evolution,
   researcher guidance, native purchase/Give flow, Beauty boundary and cold saves.
+
+- [x] Add Iron Fist for eight regular species slots and punching flags for
+  thirteen native moves; add Drain Punch with six obtainable species lessons,
+  free recall, Dex display, healing/guard QA, evolution and cold-save coverage.

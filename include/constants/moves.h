@@ -377,7 +377,9 @@
 #define MOVE_DARK_PULSE 367
 #define MOVE_DRAINING_KISS 368
 
-#define MOVES_COUNT 369
+#define MOVE_DRAIN_PUNCH 369
+
+#define MOVES_COUNT 370
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

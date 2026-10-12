@@ -516,3 +516,19 @@ existing item IDs move. Dragon Scale supplies an existing native icon.
 Held-item consumption now distinguishes item-triggered evolution from level-up
 evolution, so reaching Beauty 170 while holding Prism Scale does not lose it.
 Hardware link trading remains unverified.
+
+### Iron Fist and Drain Punch
+
+Pinned RHH `src/battle_util.c` applies a 1.2 modifier to punching moves for
+Iron Fist. `src/data/moves_info.h` supplies the punching classification:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/moves_info.h
+The native implementation marks the twelve already supported punching moves
+and Drain Punch using unused move flag bit 6, then modifies effective base
+power before field/type reductions. No RAM or move struct size changes.
+Ability slots use the pinned family data and cached imported metadata.
+
+Drain Punch reuses native ABSORB with its normal half-drain, leaving the
+Draining Kiss three-quarter exception intact. Five imported level lessons
+come from the cached Gen IX learnsets. Hitmonchan's upstream evolution lesson
+at level 0 is mapped to level 1 for native free recall, preserving its other
+classic lessons. Native Mega Punch animation supplies the battle visual.

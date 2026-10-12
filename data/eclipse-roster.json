@@ -22421,6 +22421,10 @@
           "MOVE_GROWL"
         ],
         [
+          1,
+          "MOVE_DRAIN_PUNCH"
+        ],
+        [
           12,
           "MOVE_MUD_SHOT"
         ],
@@ -34571,6 +34575,10 @@
           "MOVE_FURY_SWIPES"
         ],
         [
+          35,
+          "MOVE_DRAIN_PUNCH"
+        ],
+        [
           51,
           "MOVE_BOUNCE"
         ],
@@ -34717,6 +34725,10 @@
         [
           15,
           "MOVE_FURY_SWIPES"
+        ],
+        [
+          35,
+          "MOVE_DRAIN_PUNCH"
         ],
         [
           53,
@@ -34967,7 +34979,7 @@
         "EGG_GROUP_MINERAL"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_IRON_FIST",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -35125,7 +35137,7 @@
         "EGG_GROUP_MINERAL"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_IRON_FIST",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -42683,7 +42695,7 @@
         "EGG_GROUP_HUMAN_LIKE"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_IRON_FIST",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -42823,7 +42835,7 @@
         "EGG_GROUP_HUMAN_LIKE"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_IRON_FIST",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -52475,7 +52487,7 @@
       ],
       "abilities": [
         "ABILITY_HYPER_CUTTER",
-        "ABILITY_NONE"
+        "ABILITY_IRON_FIST"
       ],
       "source_abilities": [
         "ABILITY_HYPER_CUTTER",
@@ -52617,7 +52629,7 @@
       ],
       "abilities": [
         "ABILITY_HYPER_CUTTER",
-        "ABILITY_NONE"
+        "ABILITY_IRON_FIST"
       ],
       "source_abilities": [
         "ABILITY_HYPER_CUTTER",
@@ -61571,6 +61583,10 @@
           "MOVE_SHADOW_PUNCH"
         ],
         [
+          54,
+          "MOVE_DRAIN_PUNCH"
+        ],
+        [
           63,
           "MOVE_PSYCH_UP"
         ],
@@ -62514,7 +62530,7 @@
         "EGG_GROUP_NO_EGGS_DISCOVERED"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_IRON_FIST",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -89828,6 +89844,10 @@
         [
           14,
           "MOVE_ANCIENT_POWER"
+        ],
+        [
+          21,
+          "MOVE_DRAIN_PUNCH"
         ],
         [
           28,

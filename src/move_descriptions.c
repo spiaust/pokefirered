@@ -372,6 +372,8 @@ static const u8 sEnergyBallDescription[] = _("Nature's energy\nstrikes the foe.\
 static const u8 sDarkPulseDescription[] = _("A dark aura strikes\nthe foe and may\ncause flinching.");
 static const u8 sDrainingKissDescription[] = _("A draining kiss\nrestores HP equal\nto three quarters\nof damage dealt.");
 
+static const u8 sDrainPunchDescription[] = _("A draining punch\nrestores HP equal\nto half the damage\ndealt to the foe.");
+
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
     [MOVE_KARATE_CHOP   - 1] = gMoveDescription_KarateChop,
@@ -741,4 +743,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 [MOVE_ENERGY_BALL - 1] = sEnergyBallDescription,
 [MOVE_DARK_PULSE - 1] = sDarkPulseDescription,
 [MOVE_DRAINING_KISS - 1] = sDrainingKissDescription,
+[MOVE_DRAIN_PUNCH - 1] = sDrainPunchDescription,
 };

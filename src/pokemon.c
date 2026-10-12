@@ -2411,6 +2411,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         && gBattleMovePower > 0 && gBattleMovePower <= 60)
         gBattleMovePower = gBattleMovePower * 3 / 2;
 
+    if (battlerIdAtk != battlerIdDef && attacker->ability == ABILITY_IRON_FIST
+        && (gBattleMoves[move].flags & FLAG_PUNCHING))
+        gBattleMovePower = gBattleMovePower * 6 / 5;
+
     if (!typeOverride)
         type = gBattleMoves[move].type;
     else

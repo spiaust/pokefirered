@@ -389,6 +389,7 @@ gBattleAnims_Moves::
 	.4byte Move_MAGICAL_LEAF @ ENERGY_BALL
 	.4byte Move_SHADOW_BALL @ DARK_PULSE
 	.4byte Move_SWEET_KISS @ DRAINING_KISS
+	.4byte Move_MEGA_PUNCH @ DRAIN_PUNCH
 	.4byte Move_COUNT
 
 	.align 2

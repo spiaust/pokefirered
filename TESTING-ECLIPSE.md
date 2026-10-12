@@ -1458,9 +1458,33 @@ fixtures, not naturally raised campaign Pokémon or hardware link validation.
 Campaign/country static and evolution-projection checks pass. The native
 Happiny/Sneasel/Gligar held-item and Kadabra/Onix Link Cable regressions pass.
 Build: 261,196 bytes EWRAM, 29,824 bytes IWRAM and 23,288,035 bytes ROM content.
-Current release SHA-256: `e4e543bc34223c1e2805c5290b1eeb73e8b2a8ec142c71f5627b28a4b6adede9`.
+Previous release SHA-256: `e4e543bc34223c1e2805c5290b1eeb73e8b2a8ec142c71f5627b28a4b6adede9`.
 
 The complete Prism Scale suite passed on the final build. Native researcher
 accept/decline checks preserve party, inventory and funds; cold Pangoro,
 Solgaleo and Lunala saves also remain compatible. The shop screenshot shows
 PRISM SCALE in stock at the expected 2,100 price.
+
+## Iron Fist and Drain Punch
+
+`test_eclipse_iron_fist.py` verifies all thirteen compiled punching flags and
+native power/damage comparisons for Mach Punch, Fire Punch, Shadow Punch,
+Meteor Mash and Drain Punch. Quick Attack, Karate Chop and Draining Kiss
+remain unchanged. Tests cover Normal immunity to Ghost, half-drain, HP cap,
+overkill minimum healing, Liquid Ooze and confusion self-damage without PP use.
+`test_eclipse_iron_fist_species.py` verifies all eight regular slots in battle,
+Hitmonchan's free recall, native Save/cold Continue and summary/move display,
+then checks Golett/Golurk evolution and preserved Iron Fist. Controlled fixtures
+are used; this is not natural-level campaign balancing or hardware validation.
+`test_eclipse_drain_punch_lessons.py` checks Mienfoo/Koraidon native level-up,
+Seismitoad free recall and Mienfoo's native Dex lesson page. All 639 compiled
+imported learnsets match metadata and retain prior lessons; maximum 23 entries.
+
+Campaign/country static and animation/evolution-projection checks pass.
+Memory: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `1cef2f780e5d874dc1a6f7546a79ea1602a9647620fc7ebd81a2de9b5cdafe40`.
+
+All three Iron Fist/Drain Punch native suites passed on the final ROM. Existing
+modern drain/secondary/spread and Technician battle regressions also passed.
+Visual inspection confirms the full Iron Fist description and Mienfoo's level-35
+Drain Punch Dex entry. Re-running both refresh scripts makes zero changes.

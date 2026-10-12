@@ -649,3 +649,18 @@ scale. No Beauty threshold is required for this route. The optional London
 evolution researcher explains it. Feebas remains available in country reserves.
 The original Beauty-170 level-up rule remains supported and keeps a held scale.
 Prism Scale uses the native Dragon Scale icon and an unused item slot (105).
+
+## Iron Fist and Drain Punch
+
+Iron Fist boosts punching move power by 20%. Regular slots are restored for
+Hitmonchan, Golett, Golurk, Pancham, Pangoro, Crabrawler, Crabominable and
+Melmetal. Thirteen supported moves have explicit punching flags; other contact
+attacks do not qualify. Existing type immunities and Gen III type-based
+physical/special calculations remain in place. Hidden-only slots are omitted.
+
+Drain Punch is a 75-power Fighting move with 100 accuracy and 10 PP. It restores
+half the HP actually removed from the target, respects the user's HP cap and
+Liquid Ooze, and receives the Iron Fist boost. It uses the native Mega Punch
+animation. Hitmonchan can recall it at a free reminder; imported level lessons
+are Seismitoad 1, Mienfoo/Mienshao 35, Marshadow 54 and Koraidon 21. The Dex
+level-up tab displays the imported lessons.

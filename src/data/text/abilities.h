@@ -1,3 +1,4 @@
+static const u8 sIronFistDescription[] = _("Boosts punching moves by 20%.");
 static const u8 sSkillLinkDescription[] = _("Maximizes multi-hit attacks.");
 static const u8 sTechnicianDescription[] = _("Boosts moves of 60 power or less.");
 static const u8 sNoneDescription[] = _("No special ability.");
@@ -161,6 +162,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_AIR_LOCK] = sAirLockDescription,
     [ABILITY_TECHNICIAN] = sTechnicianDescription,
     [ABILITY_SKILL_LINK] = sSkillLinkDescription,
+    [ABILITY_IRON_FIST] = sIronFistDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -245,4 +247,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_AIR_LOCK] = _("AIR LOCK"),
     [ABILITY_TECHNICIAN] = _("TECHNICIAN"),
     [ABILITY_SKILL_LINK] = _("SKILL LINK"),
+    [ABILITY_IRON_FIST] = _("IRON FIST"),
 };

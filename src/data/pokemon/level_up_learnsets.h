@@ -1501,6 +1501,7 @@ static const u16 sHitmonleeLevelUpLearnset[] = {
 };
 
 static const u16 sHitmonchanLevelUpLearnset[] = {
+    LEVEL_UP_MOVE(1, MOVE_DRAIN_PUNCH),
     LEVEL_UP_MOVE(1, MOVE_REVENGE),
     LEVEL_UP_MOVE(1, MOVE_COMET_PUNCH),
     LEVEL_UP_MOVE(7, MOVE_AGILITY),
