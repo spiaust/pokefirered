@@ -389,3 +389,23 @@ Icons reuse Metal Coat, Fire Stone, Moon Stone, Berry Juice and Moomoo Milk
 artwork; custom modern item artwork remains future visual work. No species,
 move, save offsets or global RAM are added. Optional researcher dialogue now
 explains the routes.
+
+
+### Explicit Europe region adaptations
+
+The pinned source gates standard Dewott, Dartrix, Goomy, Bergmite and Rufflet
+level routes, plus Petilil's Sun Stone, with IF_NOT_REGION/REGION_HISUI.
+Mime Jr.'s standard Mr. Mime route requires both Mimic and not REGION_GALAR.
+This campaign deliberately treats Europe as outside those fictional source
+regions. `project(..., campaign_region='EUROPE')` accepts only those exact known
+negative-region patterns, keeping minimum levels, Sun Stone and Mimic intact.
+Default callers still reject these conditions. Unknown regions, positive-region
+requirements, additional conditions and invalid levels remain omitted. The
+Hisuian/Galarian variants are neither redirected nor silently merged.
+
+Both the full roster importer and standalone evolution generator pass the
+explicit campaign context, so regeneration retains these seven routes. The
+audit now has 252 supported and 101 omitted rules. Existing native level,
+item and move-known methods handle them; there are no new engine methods,
+species/move/item IDs, save offsets or global RAM changes. Optional researcher
+tips provide all levels and requirements.

@@ -41,6 +41,8 @@ The ending keeps League shelters, country travel and repeatable training availab
   rain support, battle-weather rejection and optional researcher guidance.
 - [x] Add purchasable Auspicious/Malicious Armor, Metal Alloy, Cracked Pot
   and Unremarkable Teacup for five modern evolution paths, with researcher tips.
+- [x] Add explicit Europe standard-form adaptations for Dewott, Dartrix,
+  Goomy, Bergmite, Rufflet, Petilil and Mime Jr.; preserve source requirements.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [x] Add individual normal/reversed cries for all 639 imported Gen IV–IX
   base species; preserve full longer normal samples and original Gen I–III audio.

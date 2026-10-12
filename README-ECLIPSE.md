@@ -570,3 +570,18 @@ consumes one item; rejected uses keep it. Everstone and shadow restrictions
 still apply. Existing held items are preserved. London's optional researcher
 explains the routes. Tea authenticity variants remain represented by the
 roster's existing base species; these items do not add alternate forms.
+
+
+## Standard evolutions in Europe
+
+The campaign now explicitly selects standard forms for source rules tied to
+regions outside this Europe setting:
+
+- Dewott → Samurott at level 36; Dartrix → Decidueye at level 34.
+- Goomy → Sliggoo at level 40; its level-50 rain/fog route then leads to Goodra.
+- Bergmite → Avalugg at level 37; Rufflet → Braviary at level 54.
+- Petilil → Lilligant with a Sun Stone.
+- Mime Jr. → Mr. Mime when it levels up knowing Mimic (learned at level 32).
+
+The London researcher explains these routes. Everstone and shadow status still
+block them. Hisuian/Galarian variants remain future alternate-form work.

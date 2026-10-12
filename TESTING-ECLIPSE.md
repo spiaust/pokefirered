@@ -1301,4 +1301,33 @@ other alternate forms, modern abilities/moves and balancing remain outstanding.
 
 Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
 EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `ab6e7cc2803e7fbce79cd5a0bf0e3cc9b800fd5fb7f9b1a0c80873af35935cd1`.
+Previous modern-item SHA-256: `ab6e7cc2803e7fbce79cd5a0bf0e3cc9b800fd5fb7f9b1a0c80873af35935cd1`.
+
+
+## Europe standard-form progression
+
+`test_eclipse_europe_evolutions.py` uses explicit encrypted species, level,
+move and Rare Candy fixtures with native level-up UI. Twelve cases cover the
+five standard level routes, three below-threshold rejections, Mime Jr. learning
+Mimic natively at level 32 and immediately evolving, missing-Mimic rejection,
+Everstone and shadow. Two native Petilil item-use cases check Sun Stone success,
+Moon Stone rejection and exact consumption. A separate Goomy/Sliggoo/Goodra
+chain uses native evolutions at explicitly fixture-set levels 39 and 49 and
+real World Gear rain; it is not a naturally trained level-1-to-50 run.
+Samurott, Decidueye, Mr. Mime and Goodra survive native Save/cold Continue.
+The chain/cold-save portion is rerun with `--chain-only` after correcting a test
+fixture that replenished Rare Candy quantity without restoring its consumed
+item ID. The twelve preceding level cases and both Petilil cases passed in the
+initial run; no production change was needed for this fixture correction.
+
+
+Projection tests require the explicit Europe context and reject unknown,
+positive or extra region conditions, unavailable Mimic and out-of-range levels.
+Updated researcher accept/decline preserves party/items/money, and previous
+Pangoro/Solgaleo/Lunala saves still cold-continue. Campaign/country text and
+capacity checks and title/New Game/cold Continue pass. Alternate forms,
+broader move/ability support and campaign balancing remain outstanding.
+
+Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
+EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `b438cf5d52cefcf3d4202e82cc166011fd4fa986545d8de6e533e5cd9bd53658`.

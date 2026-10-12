@@ -121,7 +121,7 @@ for r in rows:
  category=r['category'].upper()[:11];desc=f'GENERATION {r["generation"]} - {category}.\\nFind partners across Europe.\\nSELECT shows its learnable moves.'
  dex.append(f'[NATIONAL_DEX_{token[8:]}] = {{.categoryName = _("{category}"), .height = {r["height"]}, .weight = {r["weight"]}, .description = sEclipseDex{n}, .unusedDescription = sEclipseDex{n}, .pokemonScale = 256, .trainerScale = 256}},')
  dextexts.append(f'static const u8 sEclipseDex{n}[] = _("{desc}");')
- supported, omitted = project(ENTRIES[str(n)]['body'], existing_species | set(source_to_token.values()), set(re.findall(r'#define (ITEM_\w+)\s+', (ROOT/'include/constants/items.h').read_text())), source_to_token, MOVES)
+ supported, omitted = project(ENTRIES[str(n)]['body'], existing_species | set(source_to_token.values()), set(re.findall(r'#define (ITEM_\w+)\s+', (ROOT/'include/constants/items.h').read_text())), source_to_token, MOVES, campaign_region='EUROPE')
  evo_audit.append(dict(species=token, supported=supported, omitted=omitted))
  evos=['{'+', '.join(rule)+'}' for rule in supported]
  if evos:evo.append(f'[{token}] = {{'+', '.join(evos[:8])+'},')

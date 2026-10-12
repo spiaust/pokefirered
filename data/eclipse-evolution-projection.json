@@ -428,9 +428,14 @@
   },
   {
     "species": "SPECIES_MIME_JR",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_LEVEL_MOVE",
+        "MOVE_MIMIC",
+        "SPECIES_MR_MIME"
+      ]
+    ],
     "omitted": [
-      "{EVO_LEVEL, 0, SPECIES_MR_MIME, CONDITIONS({IF_KNOWS_MOVE, MOVE_MIMIC}, {IF_NOT_REGION, REGION_GALAR})}",
       "{EVO_LEVEL, 0, SPECIES_MR_MIME_GALAR, CONDITIONS({IF_KNOWS_MOVE, MOVE_MIMIC}, {IF_REGION, REGION_GALAR})}"
     ]
   },
@@ -844,9 +849,14 @@
   },
   {
     "species": "SPECIES_DEWOTT",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_LEVEL",
+        "36",
+        "SPECIES_SAMUROTT"
+      ]
+    ],
     "omitted": [
-      "{EVO_LEVEL, 36, SPECIES_SAMUROTT, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}",
       "{EVO_LEVEL, 36, SPECIES_SAMUROTT_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}"
     ]
   },
@@ -1225,9 +1235,14 @@
   },
   {
     "species": "SPECIES_PETILIL",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_ITEM",
+        "ITEM_SUN_STONE",
+        "SPECIES_LILLIGANT"
+      ]
+    ],
     "omitted": [
-      "{EVO_ITEM, ITEM_SUN_STONE, SPECIES_LILLIGANT, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}",
       "{EVO_ITEM, ITEM_SUN_STONE, SPECIES_LILLIGANT_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}"
     ]
   },
@@ -1845,9 +1860,14 @@
   },
   {
     "species": "SPECIES_RUFFLET",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_LEVEL",
+        "54",
+        "SPECIES_BRAVIARY"
+      ]
+    ],
     "omitted": [
-      "{EVO_LEVEL, 54, SPECIES_BRAVIARY, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}",
       "{EVO_LEVEL, 54, SPECIES_BRAVIARY_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}"
     ]
   },
@@ -2434,9 +2454,14 @@
   },
   {
     "species": "SPECIES_GOOMY",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_LEVEL",
+        "40",
+        "SPECIES_SLIGGOO"
+      ]
+    ],
     "omitted": [
-      "{EVO_LEVEL, 40, SPECIES_SLIGGOO, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}",
       "{EVO_LEVEL, 40, SPECIES_SLIGGOO_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}"
     ]
   },
@@ -2504,9 +2529,14 @@
   },
   {
     "species": "SPECIES_BERGMITE",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_LEVEL",
+        "37",
+        "SPECIES_AVALUGG"
+      ]
+    ],
     "omitted": [
-      "{EVO_LEVEL, 37, SPECIES_AVALUGG, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}",
       "{EVO_LEVEL, 37, SPECIES_AVALUGG_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}"
     ]
   },
@@ -2574,9 +2604,14 @@
   },
   {
     "species": "SPECIES_DARTRIX",
-    "supported": [],
+    "supported": [
+      [
+        "EVO_LEVEL",
+        "34",
+        "SPECIES_DECIDUEYE"
+      ]
+    ],
     "omitted": [
-      "{EVO_LEVEL, 34, SPECIES_DECIDUEYE, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}",
       "{EVO_LEVEL, 36, SPECIES_DECIDUEYE_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}"
     ]
   },

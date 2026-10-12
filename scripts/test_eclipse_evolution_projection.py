@@ -96,3 +96,25 @@ print('PASS: minimum-level rain/fog conditions preserve unknown-weather and extr
 for token,item,target in [('CHARCADET','AUSPICIOUS_ARMOR','ARMAROUGE'),('CHARCADET','MALICIOUS_ARMOR','CERULEDGE'),('DURALUDON','METAL_ALLOY','ARCHALUDON'),('SINISTEA','CRACKED_POT','POLTEAGEIST'),('POLTCHAGEIST','UNREMARKABLE_TEACUP','SINISTCHA')]:
     assert ['EVO_ITEM','ITEM_'+item,'SPECIES_'+target] in rules.get('SPECIES_'+token,[])
 print('PASS: five modern evolution-item paths and existing base-form aliases')
+
+body='.evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SAMUROTT, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}),'
+assert not project(body,{'SPECIES_SAMUROTT'},set())[0]
+assert project(body,{'SPECIES_SAMUROTT'},set(),campaign_region='EUROPE')[0]==[('EVO_LEVEL','36','SPECIES_SAMUROTT')]
+for bad in (body.replace('REGION_HISUI','REGION_UNKNOWN'),body.replace('IF_NOT_REGION','IF_REGION'),body.replace('EVO_LEVEL, 36','EVO_LEVEL, 101'),body.replace('{IF_NOT_REGION, REGION_HISUI}','{IF_NOT_REGION, REGION_HISUI},{IF_GENDER, MON_MALE}')):
+    assert not project(bad,{'SPECIES_SAMUROTT'},set(),campaign_region='EUROPE')[0]
+body='.evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_MR_MIME, CONDITIONS({IF_KNOWS_MOVE, MOVE_MIMIC},{IF_NOT_REGION, REGION_GALAR})}),'
+assert project(body,{'SPECIES_MR_MIME'},set(),moves={'MOVE_MIMIC'},campaign_region='EUROPE')[0]==[('EVO_LEVEL_MOVE','MOVE_MIMIC','SPECIES_MR_MIME')]
+assert not project(body,{'SPECIES_MR_MIME'},set(),moves=set(),campaign_region='EUROPE')[0]
+assert not project(body,{'SPECIES_MR_MIME'},set(),moves={'MOVE_MIMIC'})[0]
+for token in ('DEWOTT','RUFFLET','GOOMY','BERGMITE','DARTRIX','PETILIL','MIME_JR'):
+    assert rules.get('SPECIES_'+token),token
+print('PASS: explicit Europe region projection preserves unknown/positive/extra region conditions and Mime Jr move requirement')
+
+body='.evolutions = EVOLUTION({EVO_ITEM, ITEM_SUN_STONE, SPECIES_LILLIGANT, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}),'
+assert not project(body,{'SPECIES_LILLIGANT'},{'ITEM_SUN_STONE'})[0]
+assert project(body,{'SPECIES_LILLIGANT'},{'ITEM_SUN_STONE'},campaign_region='EUROPE')[0]==[('EVO_ITEM','ITEM_SUN_STONE','SPECIES_LILLIGANT')]
+assert not project(body,{'SPECIES_LILLIGANT'},set(),campaign_region='EUROPE')[0]
+assert not project(body,{'SPECIES_LILLIGANT'},{'ITEM_SUN_STONE'},campaign_region='HISUI')[0]
+for bad in (body.replace('IF_NOT_REGION','IF_REGION'),body.replace('REGION_HISUI','REGION_UNKNOWN'),body.replace('{IF_NOT_REGION, REGION_HISUI}','{IF_NOT_REGION, REGION_HISUI},{IF_GENDER, MON_FEMALE}')):
+    assert not project(bad,{'SPECIES_LILLIGANT'},{'ITEM_SUN_STONE'},campaign_region='EUROPE')[0]
+print('PASS: Europe item projection requires available item and rejects other context/positive/unknown/extra region rules')
