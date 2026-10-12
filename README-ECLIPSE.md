@@ -425,3 +425,17 @@ the item, and wrong-time attempts leave it equipped. Shadow partners must be
 purified first. Razor Claw also boosts critical-hit ratio, while Razor Fang
 adds the native 10% flinch chance to eligible damaging moves. Their icons reuse
 existing stone/claw/fang art.
+
+## Solo trade evolutions
+
+Shops sell Link Cable for 2,100. Use it from the Bag on Kadabra, Machoke,
+Graveler, Haunter, Boldore, Gurdurr, Phantump or Pumpkaboo to evolve without
+connecting another game. Existing link-trade rules remain in place.
+
+For held-item trade paths, equip the matching item first, then use Link Cable:
+Poliwhirl/Slowpoke need King's Rock; Onix/Scyther need Metal Coat; Seadra needs
+Dragon Scale; Porygon needs Up-Grade; Clamperl needs Deep Sea Tooth for Huntail
+or Deep Sea Scale for Gorebyss. These held items are now sold in shops too.
+Success consumes one cable and the required held item. Incompatible partners,
+missing/wrong held items, Everstone and shadow restrictions consume neither.
+Unrelated held items remain equipped on plain trade evolutions.

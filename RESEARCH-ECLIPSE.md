@@ -183,3 +183,22 @@ unsupported times/level requirements. Happiny adds one generated rule: 221
 supported, 132 omitted across 639 imported rows. Sneasel/Gligar remain manual
 original-species branches. Generated files now use UTF-8/LF consistently on
 Windows. Item/species/save IDs and global RAM allocations remain fixed.
+
+### Link Cable for solo trade paths
+
+Link Cable is a deliberate single-player adaptation, using unused item ID 59
+and the native evolution-item effect/party flow. It costs 2,100 and reuses the
+Up-Grade icon. Existing item/save IDs remain fixed and ITEM_03B stays an alias.
+The eligibility query reuses existing EVO_TRADE/EVO_TRADE_ITEM table entries;
+it accepts a held-item path only when the current held item matches. It never
+mutates the held item during preview. The successful normal evolution commit
+consumes matching trade items; plain trade evolutions preserve unrelated items.
+The native item flow consumes one cable and uses the same National Dex,
+Everstone and shadow restrictions. Existing link-trade handling is unchanged.
+
+Eight plain paths (four original, four imported) and eight original held-item
+paths are supported. King's Rock, Metal Coat, Dragon Scale, Up-Grade, Deep Sea
+Tooth and Deep Sea Scale are now sold at their existing native prices. Additional
+modern trade items, paired Karrablast/Shelmet conditions, forms and newer special
+rules remain outside this pass. The 639-row imported evolution audit is still
+221 supported/132 omitted because no new table rules are projected here.

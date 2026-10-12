@@ -5046,7 +5046,7 @@ void ConsumeHeldEvolutionItem(struct Pokemon *mon, u16 preSpecies, u16 postSpeci
     for (i = 0; i < EVOS_PER_MON; i++)
     {
         const struct Evolution *evo = &gEvolutionTable[preSpecies][i];
-        if ((evo->method == EVO_LEVEL_ITEM_DAY || evo->method == EVO_LEVEL_ITEM_NIGHT)
+        if ((evo->method == EVO_LEVEL_ITEM_DAY || evo->method == EVO_LEVEL_ITEM_NIGHT || evo->method == EVO_TRADE_ITEM)
             && evo->param == heldItem && evo->targetSpecies == postSpecies)
         {
             heldItem = ITEM_NONE;
@@ -5209,6 +5209,20 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
         break;
     case EVO_MODE_ITEM_USE:
     case EVO_MODE_ITEM_CHECK:
+        if (evolutionItem == ITEM_LINK_CABLE)
+        {
+            for (i = 0; i < EVOS_PER_MON; i++)
+            {
+                if (gEvolutionTable[species][i].method == EVO_TRADE
+                    || (gEvolutionTable[species][i].method == EVO_TRADE_ITEM
+                        && heldItem == gEvolutionTable[species][i].param))
+                {
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                    break;
+                }
+            }
+            break;
+        }
         for (i = 0; i < EVOS_PER_MON; i++)
         {
             if (gEvolutionTable[species][i].param == evolutionItem

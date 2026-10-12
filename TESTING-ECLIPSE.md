@@ -1041,4 +1041,25 @@ isolated checkpoints/fixtures rather than personal saves.
 
 ROM content is 17,299,532 bytes; both padded aliases are 32 MiB.
 EWRAM remains 261,196 / 262,144 bytes, and IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `39546fd3fffbb1bccf4afa65cad66b44ef8b63f09edf71514a13b213b0fae398`.
+Previous held-evolution release SHA-256: `39546fd3fffbb1bccf4afa65cad66b44ef8b63f09edf71514a13b213b0fae398`.
+
+### Single-player Link Cable trade evolution
+
+`test_eclipse_link_cable.py --shop-only` buys Link Cable and all six classic
+held trade items through the native country shop with earned funds, verifies
+exact existing prices and preserves the original party. Split case runs
+`--cases=0,1,2,3,4,5,6,7,8,9,10` and
+`--cases=11,12,13,14,15,16,17,18,19,20,21` pass all sixteen supported trade paths,
+missing/wrong held items, Everstone, shadow and incompatible-species rejection.
+A plain Machoke trade evolution retains an unrelated Razor Fang.
+Successful paths consume one cable; required held items are consumed only on
+successful evolution. Rejected paths consume neither. Steelix, one remaining
+cable and consumed Metal Coat survive native Save/cold Continue. These are
+explicit species/inventory fixtures in isolated checkpoints, not personal saves.
+
+Existing evolution-projection, campaign and continent static checks pass, as
+do 2026 title/New Game/cold Continue checks. Real hardware link trading is not
+newly tested; its existing handling is unchanged. Newer trade items and paired
+trade conditions remain pending. ROM content remains 17,299,532 bytes, padded
+to 32 MiB. EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `65e84ac58013c9b4c90349b57e057edaa81847a80ce1340586e5a38918dcae9a`.

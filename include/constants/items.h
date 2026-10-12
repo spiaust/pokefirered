@@ -67,6 +67,7 @@
 #define ITEM_039 57
 #define ITEM_RAZOR_FANG 58
 #define ITEM_03A 58
+#define ITEM_LINK_CABLE 59
 #define ITEM_03B 59
 #define ITEM_03C 60
 #define ITEM_03D 61
