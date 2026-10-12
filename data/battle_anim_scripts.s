@@ -391,6 +391,7 @@ gBattleAnims_Moves::
 	.4byte Move_SWEET_KISS @ DRAINING_KISS
 	.4byte Move_MEGA_PUNCH @ DRAIN_PUNCH
 	.4byte Move_TAKE_DOWN @ HEAD_CHARGE
+	.4byte Move_IRON_TAIL @ IRON_HEAD
 	.4byte Move_COUNT
 
 	.align 2

@@ -46,7 +46,7 @@ print('PASS: friendship plus Fairy move type; unknown types and extra conditions
 # Original animation indices must remain stable when new moves are appended.
 anims=(ROOT/'data/battle_anim_scripts.s').read_text().split('gBattleAnims_Moves::',1)[1].split('gBattleAnims_StatusConditions::',1)[0]
 pointers=re.findall(r'\.4byte (Move_\w+)',anims)
-assert len(pointers)==372 and pointers[68]=='Move_COUNTER' and pointers[360]=='Move_CHARM' and pointers[361]=='Move_DOUBLE_SLAP' and pointers[362]=='Move_PSYBEAM' and pointers[363]=='Move_DRAGON_BREATH' and pointers[364]=='Move_HELPING_HAND' and pointers[365]=='Move_SWIFT' and pointers[366]=='Move_MAGICAL_LEAF' and pointers[367]=='Move_SHADOW_BALL' and pointers[368]=='Move_SWEET_KISS' and pointers[369]=='Move_MEGA_PUNCH' and pointers[370]=='Move_TAKE_DOWN' and pointers[371]=='Move_COUNT'
+assert len(pointers)==373 and pointers[68]=='Move_COUNTER' and pointers[360]=='Move_CHARM' and pointers[361]=='Move_DOUBLE_SLAP' and pointers[362]=='Move_PSYBEAM' and pointers[363]=='Move_DRAGON_BREATH' and pointers[364]=='Move_HELPING_HAND' and pointers[365]=='Move_SWIFT' and pointers[366]=='Move_MAGICAL_LEAF' and pointers[367]=='Move_SHADOW_BALL' and pointers[368]=='Move_SWEET_KISS' and pointers[369]=='Move_MEGA_PUNCH' and pointers[370]=='Move_TAKE_DOWN' and pointers[371]=='Move_IRON_TAIL' and pointers[372]=='Move_COUNT'
 print('PASS: original move animation indices and appended move/sentinel remain aligned')
 
 body='.evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CHANSEY, CONDITIONS({IF_NOT_TIME, TIME_NIGHT},{IF_HOLD_ITEM, ITEM_OVAL_STONE})}),'

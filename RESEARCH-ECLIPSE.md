@@ -775,3 +775,18 @@ and secondary Water Veil burn guards, recording the actual ability name.
 AbilityBattleEffects shares the existing burn immunity/cure branch. Other
 statuses, damage types, native type split and fixed-damage paths remain intact.
 No extra RAM/save fields, hidden slots or alternate-form projection.
+
+### Steelworker and native Iron Head
+
+Pinned RHH applies a 1.5 power modifier for Steelworker's Steel attacks:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Iron Head data provide 80 power, Steel typing, 100 accuracy, 15 PP, contact
+and 30% flinch:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/moves_info.h
+Dhelmise's regular slot becomes supported. CalculateBaseDamage boosts resolved
+Steel power while excluding self-damage, Struggle and power-zero moves. New
+move ID 371 uses native EFFECT_FLINCH_HIT and reuses Iron Tail's animation;
+existing indices stay stable and the animation sentinel moves to 372. Cached
+Gen IX refresh adds 31 upstream lessons plus Dhelmise's deliberate level-40
+Iron Head campaign lesson, without replacing previous lessons. No new RAM,
+save fields, hidden slots or alternate forms.

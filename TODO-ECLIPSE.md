@@ -180,3 +180,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Water Bubble for Dewpider/Araquanid, Water power and Fire reduction,
   primary/secondary burn prevention/cure, other-status/immunity/self-hit guards,
   cold-save display, evolution and Heatproof/Water Veil regression checks.
+
+- [x] Add Steelworker for Dhelmise and native Iron Head with 32 obtainable
+  species lessons, type/STAB/self-hit and flinch/prevention/Steadfast checks,
+  free recall, Dex display, cold saves and compiled roster/animation checks.

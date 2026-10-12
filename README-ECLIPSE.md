@@ -856,3 +856,13 @@ prevents burns from status moves and secondary effects. The native immunity
 check also clears an existing burn when the ability becomes active. Other
 move types and status conditions remain unchanged. Water Absorb still blocks
 boosted Water attacks.
+
+## Steelworker and Iron Head
+
+Dhelmise can use Steelworker in its regular slot, boosting effective Steel
+move power by 50% without changing its typing. The bonus also stacks with
+actual Steel STAB when both apply. Iron Head is now supported: 80-power Steel,
+100 accuracy, 15 PP, contact and a 30% flinch chance, using native Iron Tail
+animation. Thirty-two species receive new lessons from the cached roster
+refresh, including Dhelmise's deliberate level-40 campaign lesson. It is
+available through free recall and appears in the Pokédex.

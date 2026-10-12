@@ -1946,7 +1946,36 @@ stats/status/levels and disposable saves, not naturally trained teams or
 hardware/link tests.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `c717123f5c5e4074d2bcebf788e44a818ae85f74a46d22014c80be2bbd5b2db3`.
+Previous release SHA-256: `c717123f5c5e4074d2bcebf788e44a818ae85f74a46d22014c80be2bbd5b2db3`.
 Both ROM aliases match. Native suites, Heatproof regression and campaign/country
 static checks pass; refresh is idempotent. Araquanid's complete ability name
 and description were visually verified.
+
+## Steelworker and obtainable Iron Head
+
+`test_eclipse_steelworker.py` verifies compiled Iron Head metadata and contact
+with no punch/bite flag overlap. Iron Head, Metal Claw, Iron Tail, Meteor Mash
+and Steel Wing receive Steelworker's 1.5 power bonus. Non-Steel, Seismic Toss
+and actual forced Struggle controls remain unchanged; actual Steel STAB stacks
+with the ability. A triggered native Iron Head flinch loses the target action;
+Shield Dust/Inner Focus prevent it while preserving damage. Steadfast gains
+Speed while retaining the flinched turn loss. Confusion self-damage is unchanged.
+`test_eclipse_steelworker_species.py` checks Dhelmise's slot, native Save/cold
+Continue, skills UI and next battle. `test_eclipse_iron_head_lessons.py` checks
+Dhelmise learning at 40, free recall without bag/money changes, cold-save move/
+ability persistence and native Dex level-up display. The campaign lesson is
+deliberate. `test_eclipse_learnset_refresh.py` confirms all 639 compiled tables
+match metadata, retain old lessons, and now contain 202 additions across 172
+species, maximum 23 lessons. Evolution-projection/static animation checks pass
+with 373 pointers, new move 371 and sentinel 372. Controlled stats/levels and
+disposable saves are fixtures, not naturally trained campaign teams or hardware.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `11aaaec040a97ec490a92778e4e74ab714019f2a7c0d36e0572cab9f1ec0ba7d`.
+Both ROM aliases match. Native Steelworker/lesson suites, compiled learnsets
+and campaign/country static checks pass; ability/lesson refreshes are idempotent.
+Dhelmise's complete ability description and Iron Head Dex lesson were visually
+verified.
+
+Full Iron Fist regression also passes on the final ROM, including compiled
+punching flags and native Drain Punch healing/guards.

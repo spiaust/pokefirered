@@ -4630,4 +4630,5 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 [MOVE_DRAINING_KISS] = {.effect = EFFECT_ABSORB, .power = 50, .type = TYPE_FAIRY, .accuracy = 100, .pp = 10, .secondaryEffectChance = 0, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAKES_CONTACT},
 [MOVE_DRAIN_PUNCH] = {.effect = EFFECT_ABSORB, .power = 75, .type = TYPE_FIGHTING, .accuracy = 100, .pp = 10, .secondaryEffectChance = 0, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAKES_CONTACT | FLAG_KINGS_ROCK_AFFECTED | FLAG_PUNCHING},
 [MOVE_HEAD_CHARGE] = {.effect = EFFECT_RECOIL, .power = 120, .type = TYPE_NORMAL, .accuracy = 100, .pp = 15, .secondaryEffectChance = 0, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAKES_CONTACT | FLAG_KINGS_ROCK_AFFECTED},
+[MOVE_IRON_HEAD] = {.effect = EFFECT_FLINCH_HIT, .power = 80, .type = TYPE_STEEL, .accuracy = 100, .pp = 15, .secondaryEffectChance = 30, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAKES_CONTACT},
 };

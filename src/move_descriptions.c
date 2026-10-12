@@ -1,6 +1,8 @@
 #include "global.h"
 #include "constants/moves.h"
 
+static const u8 sIronHeadDescription[] = _("A hard head strike\nmay make the foe\nflinch.");
+
 const u8 gMoveDescription_Pound[] = _("A physical attack\ndelivered with a\nlong tail or a\nforeleg, etc.");
 const u8 gMoveDescription_KarateChop[] = _("The foe is attacked\nwith a sharp chop.\nIt has a high\ncritical-hit ratio.");
 const u8 gMoveDescription_DoubleSlap[] = _("The foe is slapped\nrepeatedly, back\nand forth, two to\nfive times.");
@@ -747,4 +749,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 [MOVE_DRAINING_KISS - 1] = sDrainingKissDescription,
 [MOVE_DRAIN_PUNCH - 1] = sDrainPunchDescription,
 [MOVE_HEAD_CHARGE - 1] = sHeadChargeDescription,
+[MOVE_IRON_HEAD - 1] = sIronHeadDescription,
 };

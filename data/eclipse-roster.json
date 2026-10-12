@@ -3383,6 +3383,10 @@
         [
           33,
           "MOVE_ENDURE"
+        ],
+        [
+          42,
+          "MOVE_IRON_HEAD"
         ]
       ],
       "omitted_moves": [
@@ -3535,6 +3539,10 @@
         [
           36,
           "MOVE_ENDURE"
+        ],
+        [
+          51,
+          "MOVE_IRON_HEAD"
         ]
       ],
       "omitted_moves": [
@@ -14962,6 +14970,10 @@
         [
           24,
           "MOVE_SCARY_FACE"
+        ],
+        [
+          30,
+          "MOVE_IRON_HEAD"
         ],
         [
           36,
@@ -30189,6 +30201,10 @@
         [
           36,
           "MOVE_SWORDS_DANCE"
+        ],
+        [
+          40,
+          "MOVE_IRON_HEAD"
         ]
       ],
       "omitted_moves": [
@@ -31338,6 +31354,10 @@
           "MOVE_INGRAIN"
         ],
         [
+          25,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           30,
           "MOVE_SELF_DESTRUCT"
         ],
@@ -31471,6 +31491,10 @@
         [
           15,
           "MOVE_INGRAIN"
+        ],
+        [
+          25,
+          "MOVE_IRON_HEAD"
         ],
         [
           30,
@@ -34890,6 +34914,10 @@
           "MOVE_CRUNCH"
         ],
         [
+          45,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           50,
           "MOVE_OUTRAGE"
         ],
@@ -35358,6 +35386,10 @@
           "MOVE_IRON_DEFENSE"
         ],
         [
+          55,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           60,
           "MOVE_SWORDS_DANCE"
         ],
@@ -35506,6 +35538,10 @@
         [
           45,
           "MOVE_IRON_DEFENSE"
+        ],
+        [
+          57,
+          "MOVE_IRON_HEAD"
         ],
         [
           64,
@@ -36535,6 +36571,10 @@
           "MOVE_METAL_SOUND"
         ],
         [
+          44,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           52,
           "MOVE_IRON_DEFENSE"
         ],
@@ -37489,6 +37529,10 @@
         [
           56,
           "MOVE_SWORDS_DANCE"
+        ],
+        [
+          63,
+          "MOVE_IRON_HEAD"
         ]
       ],
       "omitted_moves": [
@@ -43467,6 +43511,10 @@
           "MOVE_IRON_DEFENSE"
         ],
         [
+          36,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           44,
           "MOVE_SWORDS_DANCE"
         ]
@@ -43606,6 +43654,10 @@
         [
           32,
           "MOVE_IRON_DEFENSE"
+        ],
+        [
+          38,
+          "MOVE_IRON_HEAD"
         ],
         [
           50,
@@ -43751,6 +43803,10 @@
         [
           1,
           "MOVE_FURY_CUTTER"
+        ],
+        [
+          1,
+          "MOVE_IRON_HEAD"
         ]
       ],
       "omitted_moves": [
@@ -57218,6 +57274,10 @@
           "MOVE_TRI_ATTACK"
         ],
         [
+          45,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           50,
           "MOVE_TAKE_DOWN"
         ],
@@ -57349,6 +57409,10 @@
         [
           1,
           "MOVE_TACKLE"
+        ],
+        [
+          1,
+          "MOVE_IRON_HEAD"
         ],
         [
           15,
@@ -58499,7 +58563,7 @@
         "EGG_GROUP_MINERAL"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_STEELWORKER",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -58554,6 +58618,10 @@
         [
           40,
           "MOVE_SLAM"
+        ],
+        [
+          40,
+          "MOVE_IRON_HEAD"
         ],
         [
           44,
@@ -59935,6 +60003,10 @@
         [
           1,
           "MOVE_COSMIC_POWER"
+        ],
+        [
+          7,
+          "MOVE_IRON_HEAD"
         ],
         [
           14,
@@ -61442,6 +61514,10 @@
           "MOVE_TRICK"
         ],
         [
+          60,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           78,
           "MOVE_PAIN_SPLIT"
         ],
@@ -62044,6 +62120,10 @@
         [
           50,
           "MOVE_IRON_DEFENSE"
+        ],
+        [
+          55,
+          "MOVE_IRON_HEAD"
         ],
         [
           60,
@@ -69582,6 +69662,10 @@
           "MOVE_GROWL"
         ],
         [
+          1,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           12,
           "MOVE_PAY_DAY"
         ],
@@ -71672,6 +71756,10 @@
           "MOVE_STRENGTH"
         ],
         [
+          40,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           45,
           "MOVE_PLAY_ROUGH"
         ],
@@ -71803,6 +71891,10 @@
         [
           37,
           "MOVE_STRENGTH"
+        ],
+        [
+          44,
+          "MOVE_IRON_HEAD"
         ],
         [
           51,
@@ -73020,6 +73112,10 @@
           "MOVE_SWORDS_DANCE"
         ],
         [
+          33,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           55,
           "MOVE_CRUNCH"
         ],
@@ -73146,6 +73242,10 @@
         [
           22,
           "MOVE_IRON_DEFENSE"
+        ],
+        [
+          33,
+          "MOVE_IRON_HEAD"
         ],
         [
           55,
@@ -73441,6 +73541,10 @@
           "MOVE_BULK_UP"
         ],
         [
+          36,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           40,
           "MOVE_DYNAMIC_PUNCH"
         ],
@@ -73595,6 +73699,10 @@
         [
           32,
           "MOVE_BULK_UP"
+        ],
+        [
+          36,
+          "MOVE_IRON_HEAD"
         ],
         [
           40,
@@ -83870,6 +83978,10 @@
           "MOVE_SCREECH"
         ],
         [
+          28,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           32,
           "MOVE_SWAGGER"
         ],
@@ -84010,6 +84122,10 @@
         [
           25,
           "MOVE_SCREECH"
+        ],
+        [
+          28,
+          "MOVE_IRON_HEAD"
         ],
         [
           32,
@@ -84281,6 +84397,10 @@
         [
           7,
           "MOVE_MUD_SLAP"
+        ],
+        [
+          21,
+          "MOVE_IRON_HEAD"
         ],
         [
           26,
@@ -86402,6 +86522,10 @@
           "MOVE_IRON_DEFENSE"
         ],
         [
+          57,
+          "MOVE_IRON_HEAD"
+        ],
+        [
           64,
           "MOVE_SWORDS_DANCE"
         ],
@@ -87415,6 +87539,10 @@
         [
           21,
           "MOVE_RAPID_SPIN"
+        ],
+        [
+          28,
+          "MOVE_IRON_HEAD"
         ],
         [
           42,

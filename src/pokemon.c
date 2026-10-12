@@ -2442,6 +2442,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         && (gBattleWeather & B_WEATHER_SANDSTORM) && WEATHER_HAS_EFFECT2)
         gBattleMovePower = gBattleMovePower * 13 / 10;
 
+    if (battlerIdAtk != battlerIdDef && attacker->ability == ABILITY_STEELWORKER
+        && move != MOVE_STRUGGLE && type == TYPE_STEEL && gBattleMovePower > 0)
+        gBattleMovePower = gBattleMovePower * 3 / 2;
+
     if (battlerIdAtk != battlerIdDef && attacker->ability == ABILITY_WATER_BUBBLE
         && move != MOVE_STRUGGLE && type == TYPE_WATER && gBattleMovePower > 0)
         gBattleMovePower *= 2;
