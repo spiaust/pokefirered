@@ -674,3 +674,14 @@ attacks and estimates. Self-damage, Struggle and power-zero moves are excluded.
 Cmd_weatherdamage excludes Sand Force from sandstorm residuals regardless of
 typing. Permanent and temporary sandstorm flags activate the boost. No extra
 RAM, save fields, hidden abilities or alternate-form projection.
+
+### Tangled Feet confusion evasion
+
+Pinned RHH accuracy calculation applies calc * 50 / 100 while the defender
+is confused:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Four classic regular slots and three imported slots become supported. Native
+Cmd_accuracycheck applies the modifier only to the target with Tangled Feet
+and nonzero STATUS2_CONFUSION. Existing accuracy/evasion stages, Compound
+Eyes and always-hit script paths remain intact. No new RAM/save fields or
+hidden slots; Doduo/Dodrio hidden-only Tangled Feet remains omitted.

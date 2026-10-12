@@ -7796,7 +7796,7 @@
       ],
       "abilities": [
         "ABILITY_KEEN_EYE",
-        "ABILITY_NONE"
+        "ABILITY_TANGLED_FEET"
       ],
       "source_abilities": [
         "ABILITY_KEEN_EYE",
@@ -69976,7 +69976,7 @@
         "EGG_GROUP_HUMAN_LIKE"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_TANGLED_FEET",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -84934,7 +84934,7 @@
       ],
       "abilities": [
         "ABILITY_NONE",
-        "ABILITY_NONE"
+        "ABILITY_TANGLED_FEET"
       ],
       "source_abilities": [
         "ABILITY_SCRAPPY",

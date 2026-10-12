@@ -149,3 +149,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Sand Force for three regular species slots, Rock/Ground/Steel power
   boost and sand immunity, dynamic-power/weather/fixed-damage/self-hit guards,
   doubles spread/suppression, Excadrill cold save and evolution persistence.
+
+- [x] Add Tangled Feet for seven regular species slots, exact native confusion
+  accuracy boundaries, stage/Compound Eyes/always-hit guards, Pidgeot cold-save
+  display, evolution persistence and weather-evasion regression checks.

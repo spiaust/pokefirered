@@ -16,6 +16,7 @@ CLASSIC['MR_MIME']='ABILITY_FILTER'
 CLASSIC.update({name:'ABILITY_SNIPER' for name in ('HORSEA','SEADRA','KINGDRA','REMORAID','OCTILLERY')})
 CLASSIC.update({name:'ABILITY_SNOW_CLOAK' for name in ('SWINUB','PILOSWINE')})
 CLASSIC.update({name:'ABILITY_ICE_BODY' for name in ('SNORUNT','GLALIE','SPHEAL','SEALEO','WALREIN')})
+CLASSIC.update({name:'ABILITY_TANGLED_FEET' for name in ('PIDGEY','PIDGEOTTO','PIDGEOT','SPINDA')})
 def family_source(gen):
     path=f'src/data/pokemon/species_info/gen_{gen}_families.h'
     cached=ROOT/'.local-tools/roster'/path

@@ -1755,8 +1755,33 @@ second slot. Tests use controlled stats/levels and disposable saves, not
 naturally trained campaign teams or hardware/link tests.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `86ec4853dd530dc271235e7102bc56f932f15aebc0ebd1c7b644c3d3378b9114`.
+Previous release SHA-256: `86ec4853dd530dc271235e7102bc56f932f15aebc0ebd1c7b644c3d3378b9114`.
 Both ROM aliases match. Campaign/country static checks pass, refresh is
 idempotent, and Excadrill's complete name/description were visually verified.
 
 All four native Sand Force suites passed on the final ROM.
+
+## Tangled Feet confusion evasion
+
+`test_eclipse_tangled_feet.py` seeds the native accuracy command and captures
+its actual RNG roll. Normal 100-accuracy physical/special moves hit with rolls
+0/49 and miss with 50/99 against a confused Tangled Feet target (roll + 1 is
+compared to calculated accuracy). No ability, no confusion and Keen Eye
+controls hit at roll 99. One evasion stage gives a 37% boundary; Compound Eyes
+gives 65%. Swift/Aerial Ace always hit. Fixtures stop after the player's first
+action so enemy confusion self-damage cannot be counted as attack damage.
+The optional accuracy seed/first-action stop leave existing helper defaults
+unchanged. `test_eclipse_snow_cloak.py` checks weather evasion regressions.
+`test_eclipse_tangled_feet_species.py` checks all seven slots, Pidgeot native
+Save/cold Continue, skills UI and next battle.
+`test_eclipse_tangled_feet_evolution.py` checks Pidgey/Pidgeotto retains the
+second slot. These use controlled stats/status/levels and disposable saves,
+not naturally raised campaign teams or hardware/link tests.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `683af97f592624bb6aa5fd4a365bbb25b83f574ed36b83cc356ae690d4a40477`.
+Both ROM aliases match. Campaign/country static checks pass and ability
+refresh is idempotent.
+
+All three Tangled Feet native suites and the full Snow Cloak regression
+passed. Pidgeot's complete ability name and description were visually verified.

@@ -1,3 +1,4 @@
+static const u8 sTangledFeetDescription[] = _("Evades attacks if confused.");
 static const u8 sSandForceDescription[] = _("Boosts attacks in sandstorms.");
 static const u8 sSandRushDescription[] = _("Raises SPEED in sandstorms.");
 static const u8 sSlushRushDescription[] = _("Raises SPEED in hail.");
@@ -188,6 +189,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_SLUSH_RUSH] = sSlushRushDescription,
     [ABILITY_SAND_RUSH] = sSandRushDescription,
     [ABILITY_SAND_FORCE] = sSandForceDescription,
+    [ABILITY_TANGLED_FEET] = sTangledFeetDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -286,4 +288,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SLUSH_RUSH] = _("SLUSH RUSH"),
     [ABILITY_SAND_RUSH] = _("SAND RUSH"),
     [ABILITY_SAND_FORCE] = _("SAND FORCE"),
+    [ABILITY_TANGLED_FEET] = _("TANGLED FEET"),
 };

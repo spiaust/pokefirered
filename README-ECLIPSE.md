@@ -784,3 +784,11 @@ Ground and Steel attacks by 30%, using native integer rounding. Other move
 types receive no bonus. Cloud Nine and Air Lock suppress the boost, including
 on a doubles partner. Sand Force also prevents sandstorm damage regardless
 of typing; it grants no hail immunity.
+
+## Tangled Feet ability
+
+Pidgey, Pidgeotto, Pidgeot, Spinda, Chatot, Mr. Rime and Flamigo can use
+Tangled Feet in their regular ability slots. While its user is confused,
+attacks against it have their calculated accuracy halved, using native
+integer rounding. The bonus ends when confusion clears. Accuracy/evasion
+stages and Compound Eyes still apply; always-hit moves remain reliable.

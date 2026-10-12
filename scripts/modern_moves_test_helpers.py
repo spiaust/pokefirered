@@ -16,7 +16,7 @@ def single(e):
     assert e.read('gBattlerControllerFuncs')&~1==action
     return e.symbols['gBattleMons']
 
-def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,expected_hits=1,enemy_species=None,confused=False,enemy_type=0,attacker_types=(0,0),attacker_accuracy=6,enemy_evasion=6,attacker_item=None,focus_energy=False,crit_seed=None,enemy_types=None,attacker_attack_stage=6,enemy_defense_stage=6,maxhp=1000):
+def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,expected_hits=1,enemy_species=None,confused=False,enemy_type=0,attacker_types=(0,0),attacker_accuracy=6,enemy_evasion=6,attacker_item=None,focus_energy=False,crit_seed=None,enemy_types=None,attacker_attack_stage=6,enemy_defense_stage=6,maxhp=1000,enemy_confused=False,stop_before_enemy=False,accuracy_seed=None):
     b=e.symbols['gBattleMons'];enemy=b+88
     e.write('gRngValue',seed)
     target_types=enemy_types or (enemy_type,enemy_type)
@@ -33,6 +33,7 @@ def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,exp
     if attacker_item is not None:e.write(b+46,attacker_item,2)
     if focus_energy:e.write(b+80,1<<20)
     if confused:e.write(b+80,3)
+    if enemy_confused:e.write(enemy+80,3)
     if enemy_species is not None:e.write(enemy,enemy_species,2)
     for slot in range(4):e.write(enemy+12+slot*2,moves['MOVE_SPLASH'],2);e.write(enemy+36+slot,40,1)
     pp=e.read(e.symbols['gBattleMoves']+12*moves[move]+4,1)
@@ -44,7 +45,7 @@ def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,exp
     expected_pp=pp if move=='MOVE_STRUGGLE' else pp-1
     action=first_symbol('HandleInputChooseAction')
     e.press('UP',2);e.press('LEFT',2);e.press('A',90);e.press('UP',2);e.press('LEFT',2);e.frames(2,'A')
-    hp=enemyhp;hits=[];started=False;flinched=False;crits=[];crit_rolls=[]
+    hp=enemyhp;hits=[];started=False;flinched=False;crits=[];crit_rolls=[];accuracy_rolls=[]
     flinch=e.symbols['BattleScript_MoveUsedFlinched']
     for n in range(9000):
         current=e.read(enemy+40,2)
@@ -54,12 +55,17 @@ def attack(e,move,seed=1,ownhp=100,enemyhp=1000,ability=0,attacker_ability=0,exp
         flinched |= bool(e.read(enemy+80)&8) or flinch<=script<flinch+11
         started |= (move!='MOVE_STRUGGLE' and e.read(b+36,1)==expected_pp) or (move=='MOVE_STRUGGLE' and bool(hits)) or (confused and e.read(b+40,2)<ownhp)
         if started and ((enemyhp==1 and (e.read(b+40,2)!=ownhp or (hp==0 and move not in ('MOVE_ABSORB','MOVE_MEGA_DRAIN','MOVE_GIGA_DRAIN','MOVE_DRAINING_KISS','MOVE_DRAIN_PUNCH','MOVE_TAKE_DOWN','MOVE_DOUBLE_EDGE','MOVE_SUBMISSION','MOVE_HEAD_CHARGE','MOVE_STRUGGLE')))) or e.read('gBattlerControllerFuncs')&~1==action):break
+        if stop_before_enemy and started and e.read('gCurrentTurnActionNumber',1)>=1:break
+        accuracy_step=e.read('gBattlerAttacker',1)==0 and e.read(script,1)==1 and e.read('gBattleControllerExecFlags')==0
+        if accuracy_step and accuracy_seed is not None:e.write('gRngValue',accuracy_seed)
         crit_step=e.read('gBattlerAttacker',1)==0 and e.read(script,1)==4 and e.read('gBattleControllerExecFlags')==0
         if crit_step and crit_seed is not None:e.write('gRngValue',crit_seed)
         e.frames(1,'A' if n%60==0 else 0)
+        if accuracy_step and e.read('gBattlescriptCurrInstr')!=script:
+            accuracy_rolls.append(e.read('gRngValue')>>16)
         if crit_step and e.read('gBattlescriptCurrInstr')==script+1:
             crits.append(e.read('gCritMultiplier',1));crit_rolls.append(e.read('gRngValue')>>16)
     else:raise AssertionError(('Native move did not finish',move))
     self_hit=confused and not hits and e.read(b+40,2)<ownhp and e.read(b+36,1)==pp
     assert started and (self_hit or ((expected_hits is None or len(hits)==expected_hits) and e.read(b+36,1)==expected_pp)),(move,hits)
-    return dict(crits=crits,crit_rolls=crit_rolls,hits=len(hits),damage=sum(hits),ownhp=e.read(b+40,2),spdef=e.read(enemy+29,1),flinched=flinched,power=e.read('gBattleMovePower',2))
+    return dict(accuracy_rolls=accuracy_rolls,crits=crits,crit_rolls=crit_rolls,hits=len(hits),damage=sum(hits),ownhp=e.read(b+40,2),spdef=e.read(enemy+29,1),flinched=flinched,power=e.read('gBattleMovePower',2))
