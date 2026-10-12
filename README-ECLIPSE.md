@@ -585,3 +585,20 @@ regions outside this Europe setting:
 
 The London researcher explains these routes. Everstone and shadow status still
 block them. Hisuian/Galarian variants remain future alternate-form work.
+
+
+## Paired Karrablast and Shelmet evolutions
+
+Use Link Cable on Karrablast with a hatched Shelmet in your party to obtain
+Escavalier, or on Shelmet with a hatched Karrablast to obtain Accelgor. The
+counterpart stays unchanged. Eggs and PC-only partners do not count; fainted
+partners do. Everstone on either partner blocks the route, and shadow status
+still blocks the Pokémon being evolved. Success consumes one cable and
+preserves unrelated held items.
+
+Evelyn, London's exchange researcher beside the doubles coach, also offers
+both actual trades: give Karrablast for Shelmet (which evolves into Accelgor),
+or give Shelmet for Karrablast (which evolves into Escavalier). Exchanges are
+repeatable, use the offered Pokémon's level, and grant no extra item. A held
+item leaves with the Pokémon you trade away. Decline either offer, cancel
+party selection, or choose an incorrect species without losing a Pokémon.

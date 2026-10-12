@@ -409,3 +409,31 @@ audit now has 252 supported and 101 omitted rules. Existing native level,
 item and move-known methods handle them; there are no new engine methods,
 species/move/item IDs, save offsets or global RAM changes. Optional researcher
 tips provide all levels and requirements.
+
+
+### Paired-trade evolution and solo adaptation
+
+Pinned species rules require Karrablast traded for Shelmet and vice versa.
+The [pinned native source's IF_TRADE_PARTNER_SPECIES check](https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/pokemon.c)
+also checks that the counterpart's held effect does not prevent evolution.
+The projection accepts only a known single counterpart condition on level-zero
+trade rules; extra/unavailable conditions stay audited. The new EVO_TRADE_PARTNER
+parameter holds the counterpart species. The audit is 254 supported, 99 omitted.
+
+For actual trades, all three FireRed trade-scene evolution callers pass the
+sent Pokémon's species after TradeMons swaps it into the enemy party. Sending
+an Egg or Everstone cannot satisfy the paired requirement; the received
+Pokémon's existing Everstone/shadow guard also applies. Other trade methods
+ignore this mode-specific argument and retain their original behavior.
+
+Link Cable deliberately adapts the rule to a current-party hatched counterpart,
+excluding Eggs, PC-only partners and Everstone holders. Fainted counterparts
+count. Only the selected Pokémon evolves; the buddy is unchanged. Native
+successful item-use consumes one cable, preserving unrelated held items.
+
+Two appended native NPC trade profiles share Evelyn's London actor (fourteen
+objects, within sixteen). They use level-matched partners, neutral IVs, no
+held reward and repeatable optional offers. The script uses native party
+selection, requested-species/Egg rejection and trade scenes. Existing trade
+indices, sprite/local IDs, save fields and global RAM remain unchanged.
+Actual emulator-to-emulator or hardware link sessions remain unverified.

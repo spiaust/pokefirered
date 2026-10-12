@@ -1330,4 +1330,32 @@ broader move/ability support and campaign balancing remain outstanding.
 
 Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
 EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `b438cf5d52cefcf3d4202e82cc166011fd4fa986545d8de6e533e5cd9bd53658`.
+Previous Europe-route SHA-256: `b438cf5d52cefcf3d4202e82cc166011fd4fa986545d8de6e533e5cd9bd53658`.
+
+
+## Paired trade and Link Cable evolution
+
+`test_eclipse_paired_cable.py` checks both positive routes, missing/wrong/Egg
+counterparts, either partner's Everstone, shadow, fainted and sixth-slot buddies,
+exact cable consumption, preserved held items and unchanged counterparts.
+Both results and buddies survive native Save/cold Continue. A separate
+`--cases=10` run rejects a PC-only counterpart without consuming the cable.
+Species/party/bag data are explicit encrypted fixtures; actions use native menus.
+
+`test_eclipse_paired_exchange.py` executes actual native NPC trade scenes.
+Declining both offers, cancelling party selection and choosing a wrong species
+preserve both partners. Sending an Everstone Karrablast yields unevolved Shelmet.
+The same NPC then performs both directions sequentially, producing Accelgor and
+Escavalier from two fixture partners. Bag and money remain unchanged; both
+traded evolutions and seen/caught entries survive native cold Continue.
+These are NPC exchanges, not two linked emulator cores or hardware tests.
+
+Classic Kadabra and held-Metal-Coat Onix Link Cable regressions pass, including
+Steelix/item consumption through cold Continue. Conservative projection rejects
+extra/unknown counterparts. Campaign/country text/capacity and title/New Game/
+cold Continue checks pass. Personal saves are never opened. Broader forms,
+abilities/moves, link hardware and campaign balancing remain outstanding.
+
+Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
+EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `768b340cd1d8c66b087370bd2ea2f73c28ce1f106b79b528097c1c219a1b57af`.

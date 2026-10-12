@@ -118,3 +118,12 @@ assert not project(body,{'SPECIES_LILLIGANT'},{'ITEM_SUN_STONE'},campaign_region
 for bad in (body.replace('IF_NOT_REGION','IF_REGION'),body.replace('REGION_HISUI','REGION_UNKNOWN'),body.replace('{IF_NOT_REGION, REGION_HISUI}','{IF_NOT_REGION, REGION_HISUI},{IF_GENDER, MON_FEMALE}')):
     assert not project(bad,{'SPECIES_LILLIGANT'},{'ITEM_SUN_STONE'},campaign_region='EUROPE')[0]
 print('PASS: Europe item projection requires available item and rejects other context/positive/unknown/extra region rules')
+
+body='.evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_ESCAVALIER, CONDITIONS({IF_TRADE_PARTNER_SPECIES, SPECIES_SHELMET})}),'
+assert project(body,{'SPECIES_ESCAVALIER','SPECIES_SHELMET'},set())[0]==[('EVO_TRADE_PARTNER','SPECIES_SHELMET','SPECIES_ESCAVALIER')]
+assert not project(body,{'SPECIES_ESCAVALIER'},set())[0]
+for bad in (body.replace('EVO_TRADE, 0','EVO_TRADE, 1'),body.replace('{IF_TRADE_PARTNER_SPECIES, SPECIES_SHELMET}','{IF_TRADE_PARTNER_SPECIES, SPECIES_SHELMET},{IF_GENDER, MON_MALE}')):
+    assert not project(bad,{'SPECIES_ESCAVALIER','SPECIES_SHELMET'},set())[0]
+for token,partner,target in [('KARRABLAST','SHELMET','ESCAVALIER'),('SHELMET','KARRABLAST','ACCELGOR')]:
+    assert rules['SPECIES_'+token]==[['EVO_TRADE_PARTNER','SPECIES_'+partner,'SPECIES_'+target]]
+print('PASS: paired-trade requirements preserve known counterpart and reject extra/unavailable conditions')

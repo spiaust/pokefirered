@@ -1557,10 +1557,14 @@
   },
   {
     "species": "SPECIES_KARRABLAST",
-    "supported": [],
-    "omitted": [
-      "{EVO_TRADE, 0, SPECIES_ESCAVALIER, CONDITIONS({IF_TRADE_PARTNER_SPECIES, SPECIES_SHELMET})}"
-    ]
+    "supported": [
+      [
+        "EVO_TRADE_PARTNER",
+        "SPECIES_SHELMET",
+        "SPECIES_ESCAVALIER"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_ESCAVALIER",
@@ -1783,10 +1787,14 @@
   },
   {
     "species": "SPECIES_SHELMET",
-    "supported": [],
-    "omitted": [
-      "{EVO_TRADE, 0, SPECIES_ACCELGOR, CONDITIONS({IF_TRADE_PARTNER_SPECIES, SPECIES_KARRABLAST})}"
-    ]
+    "supported": [
+      [
+        "EVO_TRADE_PARTNER",
+        "SPECIES_KARRABLAST",
+        "SPECIES_ACCELGOR"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_ACCELGOR",

@@ -71,6 +71,8 @@ def project(body, species, items, aliases=None, moves=None, campaign_region=None
                     elif len(rules) == 2 and rules.get('IF_NOT_TIME') == 'TIME_NIGHT': method = 'EVO_FRIENDSHIP_DAY'; supported = True
                     elif len(rules) == 2 and rules.get('IF_TIME') == 'TIME_NIGHT': method = 'EVO_FRIENDSHIP_NIGHT'; supported = True
                     elif len(rules) == 2 and rules.get('IF_KNOWS_MOVE_TYPE') == 'TYPE_FAIRY': method = 'EVO_FRIENDSHIP_MOVE_TYPE'; param = 'TYPE_FAIRY'; supported = True
+            if method == 'EVO_TRADE' and param == '0' and len(conditions) == 1 and conditions[0][0] == 'IF_TRADE_PARTNER_SPECIES' and conditions[0][1].strip() in species:
+                method = 'EVO_TRADE_PARTNER'; param = conditions[0][1].strip(); supported = True
             if method == 'EVO_TRADE' and param == '0' and len(conditions) == 1 and conditions[0][0] == 'IF_HOLD_ITEM':
                 item = conditions[0][1].strip()
                 if item in items: method = 'EVO_TRADE_ITEM'; param = item; supported = True
@@ -80,7 +82,7 @@ def project(body, species, items, aliases=None, moves=None, campaign_region=None
                 gender = conditions[0][1].strip()
                 if gender in ('MON_MALE','MON_FEMALE'):
                     method = 'EVO_ITEM_MALE' if gender == 'MON_MALE' else 'EVO_ITEM_FEMALE'; supported = True
-            if method not in ('EVO_LEVEL','EVO_LEVEL_MALE','EVO_LEVEL_FEMALE','EVO_LEVEL_MOVE','EVO_FRIENDSHIP','EVO_FRIENDSHIP_DAY','EVO_FRIENDSHIP_NIGHT','EVO_FRIENDSHIP_MOVE_TYPE','EVO_TRADE','EVO_TRADE_ITEM','EVO_ITEM','EVO_ITEM_MALE','EVO_ITEM_FEMALE','EVO_LEVEL_ITEM_DAY','EVO_LEVEL_ITEM_NIGHT','EVO_LEVEL_PARTY_SPECIES','EVO_LEVEL_PARTY_TYPE','EVO_LEVEL_DAY','EVO_LEVEL_NIGHT','EVO_LEVEL_RAIN','EVO_LEVEL_FOG'): supported = False
+            if method not in ('EVO_LEVEL','EVO_LEVEL_MALE','EVO_LEVEL_FEMALE','EVO_LEVEL_MOVE','EVO_FRIENDSHIP','EVO_FRIENDSHIP_DAY','EVO_FRIENDSHIP_NIGHT','EVO_FRIENDSHIP_MOVE_TYPE','EVO_TRADE','EVO_TRADE_ITEM','EVO_ITEM','EVO_ITEM_MALE','EVO_ITEM_FEMALE','EVO_LEVEL_ITEM_DAY','EVO_LEVEL_ITEM_NIGHT','EVO_LEVEL_PARTY_SPECIES','EVO_LEVEL_PARTY_TYPE','EVO_LEVEL_DAY','EVO_LEVEL_NIGHT','EVO_LEVEL_RAIN','EVO_LEVEL_FOG','EVO_TRADE_PARTNER'): supported = False
             if method in ('EVO_ITEM','EVO_ITEM_MALE','EVO_ITEM_FEMALE') and param in HELD_TRADE_ITEMS: supported = False
             if method == 'EVO_LEVEL_PARTY_SPECIES' and param not in species: supported = False
             if method == 'EVO_LEVEL_MOVE' and param not in (moves or set()): supported = False

@@ -43,6 +43,8 @@ The ending keeps League shelters, country travel and repeatable training availab
   and Unremarkable Teacup for five modern evolution paths, with researcher tips.
 - [x] Add explicit Europe standard-form adaptations for Dewott, Dartrix,
   Goomy, Bergmite, Rufflet, Petilil and Mime Jr.; preserve source requirements.
+- [x] Add Karrablast/Shelmet paired evolution requirements, Link Cable
+  counterpart checks and repeatable native London exchanges for both routes.
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [x] Add individual normal/reversed cries for all 639 imported Gen IV–IX
   base species; preserve full longer normal samples and original Gen I–III audio.

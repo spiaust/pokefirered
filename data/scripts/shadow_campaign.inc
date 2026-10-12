@@ -7449,3 +7449,34 @@ Shadow_PartyTimeOffer::
  .string "Partners and time can shape an\nevolution. Want some tips?$"
 Shadow_PartyTimeTips::
  .string "MANTYKE needs REMORAID alongside\nwhen it gains a level.\pPANCHAM needs a DARK partner\nand level 32. Hatched partners\pmust be in your party. Fainted\npartners count; EGGS and storage\ppartners do not. Day runs from\n06:00 to 19:59; night is\p20:00 to 05:59. WORLD GEAR can\noverride the clock.\pDay: TYRUNT 39, YUNGOOS 20,\nROCKRUFF 25, FOMANTIS 34.\pNight: AMAURA 39, GREAVARD 30.\nCOSMOEM at 53: day SOLGALEO,\pnight LUNALA.\pSLIGGOO needs level 50 and rain\nor fog outside. WORLD GEAR can\pchoose RAIN. CLEAR and SNOW\nwill not help it evolve.\pShops carry armor for CHARCADET:\nAUSPIC. for ARMAROUGE, MALIC.\pfor CERULEDGE. METAL ALLOY turns\nDURALUDON into ARCHALUDON.\pCRACKED POT helps SINISTEA.\nPLAIN TEACUP helps POLTCHAGEIST.\pHere in EUROPE, DEWOTT evolves\nat 36; DARTRIX at 34.\pGOOMY evolves at 40; BERGMITE\nat 37; RUFFLET at 54.\pPETILIL needs a SUN STONE.\nMIME JR. must know MIMIC.$"
+
+
+Shadow_PairedExchange::
+ lock
+ faceplayer
+ msgbox Shadow_PairedExchangeHelp
+ setvar VAR_0x8008, INGAME_TRADE_ECLIPSE_SHELMET
+ call EventScript_GetInGameTradeSpeciesInfo
+ msgbox Trade_Text_DoYouHaveMonWouldYouTradeForMon, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, YES, Shadow_PairedExchangeChoose
+ setvar VAR_0x8008, INGAME_TRADE_ECLIPSE_KARRABLAST
+ call EventScript_GetInGameTradeSpeciesInfo
+ msgbox Trade_Text_DoYouHaveMonWouldYouTradeForMon, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+Shadow_PairedExchangeChoose::
+ call EventScript_ChooseMonForInGameTrade
+ goto_if_ge VAR_0x8004, PARTY_SIZE, Shadow_End
+ call EventScript_GetInGameTradeSpecies
+ goto_if_ne VAR_RESULT, VAR_0x8009, Shadow_PairedExchangeWrong
+ call EventScript_DoInGameTrade
+ msgbox Shadow_PairedExchangeDone
+ goto Shadow_End
+Shadow_PairedExchangeWrong::
+ msgbox Shadow_PairedExchangeMismatch
+ goto Shadow_End
+Shadow_PairedExchangeHelp::
+ .string "KARRABLAST and SHELMET evolve\nwhen exchanged for each other.\pI can arrange either exchange.\nOr use LINK CABLE with the other\ppartner hatched in your party.\nEVERSTONE on either stops it.\pLINK CABLE evolves only the\nchosen partner; it keeps the other.$"
+Shadow_PairedExchangeMismatch::
+ .string "Please choose the requested\npartner. EGGS cannot be traded.$"
+Shadow_PairedExchangeDone::
+ .string "Exchange complete! Care for your\nnew partner. Come back any time.$"

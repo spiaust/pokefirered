@@ -5058,6 +5058,19 @@ static bool8 PartyHasEvolutionPartner(u16 requirement, bool8 checkType)
     return FALSE;
 }
 
+// Link Cable adapts paired trades to a hatched current-party counterpart.
+static bool8 PartyHasLinkedEvolutionPartner(u16 requirement)
+{
+    u8 slot;
+    for (slot = 0; slot < gPlayerPartyCount && slot < PARTY_SIZE; slot++)
+    {
+        if (GetMonData(&gPlayerParty[slot], MON_DATA_SPECIES_OR_EGG, NULL) == requirement
+            && GetMonData(&gPlayerParty[slot], MON_DATA_HELD_ITEM, NULL) != ITEM_EVERSTONE)
+            return TRUE;
+    }
+    return FALSE;
+}
+
 // Commit held-item consumption only after the normal evolution succeeds.
 void ConsumeHeldEvolutionItem(struct Pokemon *mon, u16 preSpecies, u16 postSpecies)
 {
@@ -5237,6 +5250,11 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
             case EVO_TRADE:
                 targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_TRADE_PARTNER:
+                // In trade mode evolutionItem carries the sent counterpart species.
+                if (evolutionItem == gEvolutionTable[species][i].param)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
             case EVO_TRADE_ITEM:
                 if (gEvolutionTable[species][i].param == heldItem)
                 {
@@ -5261,6 +5279,8 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
             for (i = 0; i < EVOS_PER_MON; i++)
             {
                 if (gEvolutionTable[species][i].method == EVO_TRADE
+                    || (gEvolutionTable[species][i].method == EVO_TRADE_PARTNER
+                        && PartyHasLinkedEvolutionPartner(gEvolutionTable[species][i].param))
                     || (gEvolutionTable[species][i].method == EVO_TRADE_ITEM
                         && heldItem == gEvolutionTable[species][i].param))
                 {
