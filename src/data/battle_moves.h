@@ -4624,4 +4624,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 [MOVE_DRAGON_PULSE] = {.effect = EFFECT_HIT, .power = 85, .type = TYPE_DRAGON, .accuracy = 100, .pp = 10, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED},
 [MOVE_DRAGON_CHEER] = {.effect = EFFECT_DRAGON_CHEER, .power = 0, .type = TYPE_DRAGON, .accuracy = 0, .pp = 15, .target = MOVE_TARGET_USER},
 [MOVE_LEAFAGE] = {.effect = EFFECT_HIT, .power = 40, .type = TYPE_GRASS, .accuracy = 100, .pp = 40, .secondaryEffectChance = 0, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
+[MOVE_DAZZLING_GLEAM] = {.effect = EFFECT_HIT, .power = 80, .type = TYPE_FAIRY, .accuracy = 100, .pp = 10, .secondaryEffectChance = 0, .target = MOVE_TARGET_BOTH, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
+[MOVE_ENERGY_BALL] = {.effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT, .power = 90, .type = TYPE_GRASS, .accuracy = 100, .pp = 10, .secondaryEffectChance = 10, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
+[MOVE_DARK_PULSE] = {.effect = EFFECT_FLINCH_HIT, .power = 80, .type = TYPE_DARK, .accuracy = 100, .pp = 15, .secondaryEffectChance = 20, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED},
+[MOVE_DRAINING_KISS] = {.effect = EFFECT_ABSORB, .power = 50, .type = TYPE_FAIRY, .accuracy = 100, .pp = 10, .secondaryEffectChance = 0, .target = MOVE_TARGET_SELECTED, .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_MAKES_CONTACT},
 };

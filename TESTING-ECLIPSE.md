@@ -1358,4 +1358,35 @@ abilities/moves, link hardware and campaign balancing remain outstanding.
 
 Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
 EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `768b340cd1d8c66b087370bd2ea2f73c28ce1f106b79b528097c1c219a1b57af`.
+Previous paired-trade SHA-256: `768b340cd1d8c66b087370bd2ea2f73c28ce1f106b79b528097c1c219a1b57af`.
+
+
+## Modern attacks and 73 additional lessons
+
+`test_eclipse_modern_moves.py` uses real native singles/doubles battles with
+explicit move/stat/HP/RNG fixtures. Draining Kiss heals floor(75% actual damage),
+with native minimum-one handling, HP cap and one-HP overkill; Liquid Ooze
+reverses the amount. Giga Drain's legacy 50% calculation passes unchanged.
+Energy Ball lowers Special Defense with native RNG seed 4, while Clear Body
+blocks it. Dark Pulse flinches with seed 1, while Inner Focus blocks it. Each
+attack produces one damage event and spends one PP. Real London-coach doubles
+confirm Dazzling Gleam damages both foes, spares the ally and spends one PP.
+
+`test_eclipse_modern_lessons.py` learns all four attacks through native level-up
+at Sylveon/Hatterene/Petilil 30 and Vullaby 48. Sylveon and Vullaby recall the
+new moves through the free NPC without item/money costs. Native Save/cold
+Continue preserves Sylveon and Draining Kiss. A complete-Dex flag fixture is
+used only to make native National-list navigation practical: the test navigates
+to Sylveon and renders the actual Draining Kiss level-up page, visually inspected.
+
+`test_eclipse_learnset_refresh.py` checks all 639 compiled lists against metadata,
+including every previous lesson and packed-move/reminder limits. Relative to its
+historical baseline there are now 163 added lessons across 136 species; this
+milestone alone adds 73 across 66. The largest imported list has 23 moves.
+Projection/animation alignment, campaign/country constraints and title/New Game/
+cold Continue checks pass. Personal saves are never accessed. Broader forms,
+abilities/moves, later-generation mechanics and balancing remain outstanding.
+
+Both ROM aliases remain 32 MiB; content is 23,288,035 bytes.
+EWRAM remains 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `8b5b22bd41474d47d3d54435458cef56532ad369257cb84f40bc63f5488b5563`.

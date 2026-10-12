@@ -437,3 +437,30 @@ held reward and repeatable optional offers. The script uses native party
 selection, requested-species/Egg rejection and trade scenes. Existing trade
 indices, sprite/local IDs, save fields and global RAM remain unchanged.
 Actual emulator-to-emulator or hardware link sessions remain unverified.
+
+
+### Four additional modern special attacks
+
+Metadata comes from the [pinned RHH move definitions](https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/moves_info.h):
+Dazzling Gleam 80 power/10 PP/both foes; Energy Ball 90/10 with a 10% Special
+Defense drop; Dark Pulse 80/15 with 20% flinch; Draining Kiss 50/10/contact and
+75% absorption. All have 100 accuracy and ordinary priority. They occupy move
+IDs 365–368; MOVES_COUNT is 369, below the packed learnset's 9-bit move limit.
+Fairy, Grass and Dark use native special damage, matching these four attacks.
+Dazzling Gleam retains native Gen III spread-damage scaling rather than adding
+a new damage-system migration. Later-generation ability/flag interactions
+outside the current engine remain unimplemented.
+
+Dazzling Gleam uses native both-target hit handling; Energy Ball and Dark Pulse
+reuse native stat-drop/flinch effects. Draining Kiss uses the native absorption
+script with a move-specific 3/4 calculation from actual HP dealt. Legacy drain
+moves keep 1/2. Minimum-one healing, HP caps, overkill and Liquid Ooze continue
+through the native script. Swift, Magical Leaf, Shadow Ball and Sweet Kiss
+animations provide compatible native visual assets. Names/descriptions and
+animation table/sentinel indices are extended without shifting earlier moves.
+
+Refreshing cached Gen IX learnsets adds 73 lessons across 66 imported species,
+without removing earlier lessons. All 639 compiled lists match metadata; the
+largest is 23 moves, within the free reminder's 24-move limit. The full roster
+importer already projects supported move constants, keeping regeneration stable.
+No new save fields, items/species IDs or global RAM are required.

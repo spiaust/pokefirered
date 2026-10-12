@@ -385,6 +385,10 @@ gBattleAnims_Moves::
 	.4byte Move_PSYBEAM @ TWIN_BEAM
 	.4byte Move_DRAGON_BREATH @ DRAGON_PULSE
 	.4byte Move_HELPING_HAND @ DRAGON_CHEER
+	.4byte Move_SWIFT @ DAZZLING_GLEAM
+	.4byte Move_MAGICAL_LEAF @ ENERGY_BALL
+	.4byte Move_SHADOW_BALL @ DARK_PULSE
+	.4byte Move_SWEET_KISS @ DRAINING_KISS
 	.4byte Move_COUNT
 
 	.align 2

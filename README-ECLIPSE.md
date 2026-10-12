@@ -602,3 +602,18 @@ or give Shelmet for Karrablast (which evolves into Escavalier). Exchanges are
 repeatable, use the offered Pokémon's level, and grant no extra item. A held
 item leaves with the Pokémon you trade away. Decline either offer, cancel
 party selection, or choose an incorrect species without losing a Pokémon.
+
+
+## More modern battle moves
+
+Four more attacks are available through imported level-up lessons and free
+reminders: Dazzling Gleam (both foes), Energy Ball (may lower Special Defense),
+Dark Pulse (may cause flinching) and Draining Kiss (heals 75% of damage dealt).
+Draining Kiss respects maximum HP and Liquid Ooze; its contact flag also applies.
+Short names DAZZL.GLEAM and DRAIN.KISS fit the native move-name limit.
+
+This adds 73 lessons across 66 Pokémon. Examples include Sylveon's Draining
+Kiss, Hatterene's Dazzling Gleam and Petilil's Energy Ball at level 30, plus
+Vullaby's Dark Pulse at level 48. The Pokédex displays the actual lessons.
+These attacks use the native special-damage categories; doubles retains the
+Gen III spread-damage scaling. Battle animations reuse native art.

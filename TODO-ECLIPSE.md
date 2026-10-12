@@ -48,6 +48,8 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [ ] Add separate gender-form artwork/stats and alternate Burmy coats.
 - [x] Add individual normal/reversed cries for all 639 imported Gen IV–IX
   base species; preserve full longer normal samples and original Gen I–III audio.
+- [x] Add Dazzling Gleam, Energy Ball, Dark Pulse and 75%-drain Draining Kiss;
+  add 73 lessons across 66 species, native reminder/Dex display and battle QA.
 - [ ] Expand modern ability/move/evolution coverage; tune reserve habitats
   and encounter balance across countries.
 

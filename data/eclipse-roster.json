@@ -6228,6 +6228,10 @@
         [
           25,
           "MOVE_SWAGGER"
+        ],
+        [
+          55,
+          "MOVE_DARK_PULSE"
         ]
       ],
       "omitted_moves": [
@@ -7579,6 +7583,10 @@
           "MOVE_REFLECT"
         ],
         [
+          44,
+          "MOVE_DAZZLING_GLEAM"
+        ],
+        [
           48,
           "MOVE_PSYCHIC"
         ],
@@ -7985,6 +7993,10 @@
         [
           45,
           "MOVE_SHADOW_BALL"
+        ],
+        [
+          50,
+          "MOVE_DARK_PULSE"
         ],
         [
           55,
@@ -10910,6 +10922,10 @@
         [
           54,
           "MOVE_SCREECH"
+        ],
+        [
+          66,
+          "MOVE_DARK_PULSE"
         ]
       ],
       "omitted_moves": [
@@ -13216,6 +13232,10 @@
           "MOVE_PSYBEAM"
         ],
         [
+          1,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           9,
           "MOVE_HELPING_HAND"
         ],
@@ -13763,6 +13783,10 @@
         [
           1,
           "MOVE_DOUBLE_TEAM"
+        ],
+        [
+          20,
+          "MOVE_DRAINING_KISS"
         ],
         [
           25,
@@ -15805,6 +15829,10 @@
         [
           84,
           "MOVE_DREAM_EATER"
+        ],
+        [
+          93,
+          "MOVE_DARK_PULSE"
         ]
       ],
       "omitted_moves": [
@@ -15941,6 +15969,10 @@
         [
           46,
           "MOVE_PLAY_ROUGH"
+        ],
+        [
+          73,
+          "MOVE_ENERGY_BALL"
         ],
         [
           82,
@@ -23659,6 +23691,10 @@
           "MOVE_COTTON_SPORE"
         ],
         [
+          36,
+          "MOVE_ENERGY_BALL"
+        ],
+        [
           39,
           "MOVE_SUNNY_DAY"
         ],
@@ -23836,6 +23872,10 @@
         [
           1,
           "MOVE_COTTON_SPORE"
+        ],
+        [
+          1,
+          "MOVE_ENERGY_BALL"
         ]
       ],
       "omitted_moves": [
@@ -23976,6 +24016,10 @@
         [
           24,
           "MOVE_LEECH_SEED"
+        ],
+        [
+          30,
+          "MOVE_ENERGY_BALL"
         ],
         [
           33,
@@ -24131,6 +24175,10 @@
         [
           1,
           "MOVE_HELPING_HAND"
+        ],
+        [
+          1,
+          "MOVE_ENERGY_BALL"
         ],
         [
           5,
@@ -26095,6 +26143,10 @@
           "MOVE_SHADOW_BALL"
         ],
         [
+          44,
+          "MOVE_DARK_PULSE"
+        ],
+        [
           52,
           "MOVE_DESTINY_BOND"
         ]
@@ -26249,6 +26301,10 @@
         [
           44,
           "MOVE_SHADOW_BALL"
+        ],
+        [
+          50,
+          "MOVE_DARK_PULSE"
         ],
         [
           62,
@@ -29552,6 +29608,10 @@
           "MOVE_TAKE_DOWN"
         ],
         [
+          28,
+          "MOVE_ENERGY_BALL"
+        ],
+        [
           32,
           "MOVE_CHARM"
         ],
@@ -29692,6 +29752,10 @@
         [
           20,
           "MOVE_TAKE_DOWN"
+        ],
+        [
+          28,
+          "MOVE_ENERGY_BALL"
         ],
         [
           36,
@@ -35983,6 +36047,10 @@
           "MOVE_WHIRLWIND"
         ],
         [
+          48,
+          "MOVE_DARK_PULSE"
+        ],
+        [
           66,
           "MOVE_ATTRACT"
         ]
@@ -36140,6 +36208,10 @@
         [
           36,
           "MOVE_WHIRLWIND"
+        ],
+        [
+          48,
+          "MOVE_DARK_PULSE"
         ],
         [
           72,
@@ -41491,6 +41563,10 @@
           "MOVE_SUPERSONIC"
         ],
         [
+          25,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           31,
           "MOVE_SAFEGUARD"
         ]
@@ -43798,6 +43874,10 @@
           "MOVE_AROMATHERAPY"
         ],
         [
+          12,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           18,
           "MOVE_ATTRACT"
         ],
@@ -43941,6 +44021,10 @@
         [
           12,
           "MOVE_AROMATHERAPY"
+        ],
+        [
+          15,
+          "MOVE_DRAINING_KISS"
         ],
         [
           18,
@@ -44100,6 +44184,10 @@
           "MOVE_AROMATHERAPY"
         ],
         [
+          12,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           15,
           "MOVE_FAKE_TEARS"
         ],
@@ -44110,6 +44198,10 @@
         [
           24,
           "MOVE_COTTON_SPORE"
+        ],
+        [
+          27,
+          "MOVE_ENERGY_BALL"
         ],
         [
           30,
@@ -44250,6 +44342,10 @@
           "MOVE_AROMATHERAPY"
         ],
         [
+          12,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           15,
           "MOVE_FAKE_TEARS"
         ],
@@ -44260,6 +44356,10 @@
         [
           24,
           "MOVE_COTTON_SPORE"
+        ],
+        [
+          27,
+          "MOVE_ENERGY_BALL"
         ],
         [
           30,
@@ -45453,6 +45553,10 @@
           "MOVE_DRAGON_PULSE"
         ],
         [
+          1,
+          "MOVE_DARK_PULSE"
+        ],
+        [
           30,
           "MOVE_WATER_PULSE"
         ],
@@ -46544,6 +46648,10 @@
           "MOVE_LIGHT_SCREEN"
         ],
         [
+          30,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           40,
           "MOVE_SKILL_SWAP"
         ],
@@ -47563,6 +47671,10 @@
         [
           20,
           "MOVE_METAL_SOUND"
+        ],
+        [
+          24,
+          "MOVE_DRAINING_KISS"
         ],
         [
           28,
@@ -49115,6 +49227,10 @@
         [
           15,
           "MOVE_DISABLE"
+        ],
+        [
+          40,
+          "MOVE_DARK_PULSE"
         ],
         [
           45,
@@ -52822,12 +52938,20 @@
           "MOVE_SWEET_SCENT"
         ],
         [
+          18,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           24,
           "MOVE_STRUGGLE_BUG"
         ],
         [
           30,
           "MOVE_COVET"
+        ],
+        [
+          42,
+          "MOVE_DAZZLING_GLEAM"
         ]
       ],
       "omitted_moves": [
@@ -52962,12 +53086,20 @@
           "MOVE_SWEET_SCENT"
         ],
         [
+          18,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           24,
           "MOVE_STRUGGLE_BUG"
         ],
         [
           32,
           "MOVE_COVET"
+        ],
+        [
+          48,
+          "MOVE_DAZZLING_GLEAM"
         ]
       ],
       "omitted_moves": [
@@ -54657,6 +54789,10 @@
           "MOVE_GIGA_DRAIN"
         ],
         [
+          32,
+          "MOVE_DAZZLING_GLEAM"
+        ],
+        [
           36,
           "MOVE_SPORE"
         ],
@@ -54794,6 +54930,10 @@
         [
           32,
           "MOVE_GIGA_DRAIN"
+        ],
+        [
+          38,
+          "MOVE_DAZZLING_GLEAM"
         ],
         [
           44,
@@ -55918,6 +56058,10 @@
         [
           6,
           "MOVE_HELPING_HAND"
+        ],
+        [
+          9,
+          "MOVE_DRAINING_KISS"
         ],
         [
           12,
@@ -58402,6 +58546,10 @@
         [
           48,
           "MOVE_METAL_SOUND"
+        ],
+        [
+          56,
+          "MOVE_ENERGY_BALL"
         ]
       ],
       "omitted_moves": [
@@ -59151,6 +59299,10 @@
         [
           10,
           "MOVE_AROMATHERAPY"
+        ],
+        [
+          15,
+          "MOVE_DRAINING_KISS"
         ],
         [
           20,
@@ -66611,6 +66763,10 @@
         [
           40,
           "MOVE_DRAGON_PULSE"
+        ],
+        [
+          44,
+          "MOVE_ENERGY_BALL"
         ]
       ],
       "omitted_moves": [
@@ -68385,6 +68541,10 @@
           "MOVE_PSYBEAM"
         ],
         [
+          30,
+          "MOVE_DAZZLING_GLEAM"
+        ],
+        [
           35,
           "MOVE_CALM_MIND"
         ],
@@ -68509,6 +68669,10 @@
         [
           20,
           "MOVE_PSYBEAM"
+        ],
+        [
+          30,
+          "MOVE_DAZZLING_GLEAM"
         ],
         [
           37,
@@ -68640,6 +68804,10 @@
         [
           20,
           "MOVE_PSYBEAM"
+        ],
+        [
+          30,
+          "MOVE_DAZZLING_GLEAM"
         ],
         [
           37,
@@ -68794,6 +68962,10 @@
           "MOVE_TORMENT"
         ],
         [
+          33,
+          "MOVE_DARK_PULSE"
+        ],
+        [
           40,
           "MOVE_PLAY_ROUGH"
         ]
@@ -68925,6 +69097,10 @@
         [
           28,
           "MOVE_TORMENT"
+        ],
+        [
+          35,
+          "MOVE_DARK_PULSE"
         ],
         [
           46,
@@ -69066,6 +69242,10 @@
         [
           28,
           "MOVE_TORMENT"
+        ],
+        [
+          35,
+          "MOVE_DARK_PULSE"
         ],
         [
           48,
@@ -69853,6 +70033,10 @@
           "MOVE_ROLE_PLAY"
         ],
         [
+          1,
+          "MOVE_DAZZLING_GLEAM"
+        ],
+        [
           12,
           "MOVE_CONFUSION"
         ],
@@ -70177,6 +70361,10 @@
           "MOVE_SWEET_SCENT"
         ],
         [
+          15,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           20,
           "MOVE_CHARM"
         ],
@@ -70187,6 +70375,10 @@
         [
           30,
           "MOVE_ACID_ARMOR"
+        ],
+        [
+          35,
+          "MOVE_DAZZLING_GLEAM"
         ],
         [
           40,
@@ -70295,6 +70487,10 @@
           "MOVE_SWEET_SCENT"
         ],
         [
+          15,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           20,
           "MOVE_CHARM"
         ],
@@ -70305,6 +70501,10 @@
         [
           30,
           "MOVE_ACID_ARMOR"
+        ],
+        [
+          35,
+          "MOVE_DAZZLING_GLEAM"
         ],
         [
           40,
@@ -73515,6 +73715,10 @@
           "MOVE_SWAGGER"
         ],
         [
+          60,
+          "MOVE_ENERGY_BALL"
+        ],
+        [
           66,
           "MOVE_SYNTHESIS"
         ],
@@ -74175,6 +74379,10 @@
         [
           32,
           "MOVE_HELPING_HAND"
+        ],
+        [
+          48,
+          "MOVE_ENERGY_BALL"
         ],
         [
           56,
@@ -75195,12 +75403,20 @@
           "MOVE_TWISTER"
         ],
         [
+          20,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           25,
           "MOVE_IRON_DEFENSE"
         ],
         [
           30,
           "MOVE_IMPRISON"
+        ],
+        [
+          40,
+          "MOVE_DAZZLING_GLEAM"
         ],
         [
           45,
@@ -75348,6 +75564,10 @@
           "MOVE_SLASH"
         ],
         [
+          32,
+          "MOVE_ENERGY_BALL"
+        ],
+        [
           36,
           "MOVE_PLAY_ROUGH"
         ]
@@ -75477,6 +75697,10 @@
         [
           33,
           "MOVE_SLASH"
+        ],
+        [
+          38,
+          "MOVE_ENERGY_BALL"
         ],
         [
           42,
@@ -75622,6 +75846,10 @@
         [
           33,
           "MOVE_SLASH"
+        ],
+        [
+          42,
+          "MOVE_ENERGY_BALL"
         ],
         [
           47,
@@ -78446,6 +78674,10 @@
           "MOVE_MEGA_DRAIN"
         ],
         [
+          30,
+          "MOVE_ENERGY_BALL"
+        ],
+        [
           34,
           "MOVE_LEECH_SEED"
         ]
@@ -78575,6 +78807,10 @@
         [
           20,
           "MOVE_MEGA_DRAIN"
+        ],
+        [
+          34,
+          "MOVE_ENERGY_BALL"
         ],
         [
           37,
@@ -78714,6 +78950,10 @@
         [
           20,
           "MOVE_MEGA_DRAIN"
+        ],
+        [
+          34,
+          "MOVE_ENERGY_BALL"
         ],
         [
           39,
@@ -82322,6 +82562,10 @@
           "MOVE_UPROAR"
         ],
         [
+          43,
+          "MOVE_DAZZLING_GLEAM"
+        ],
+        [
           49,
           "MOVE_PSYCHIC"
         ]
@@ -82453,6 +82697,10 @@
         [
           14,
           "MOVE_ROCK_SMASH"
+        ],
+        [
+          17,
+          "MOVE_DRAINING_KISS"
         ],
         [
           21,
@@ -82603,6 +82851,10 @@
           "MOVE_ROCK_SMASH"
         ],
         [
+          17,
+          "MOVE_DRAINING_KISS"
+        ],
+        [
           21,
           "MOVE_SWEET_KISS"
         ],
@@ -82750,6 +83002,10 @@
         [
           14,
           "MOVE_ROCK_SMASH"
+        ],
+        [
+          17,
+          "MOVE_DRAINING_KISS"
         ],
         [
           21,
@@ -86707,6 +86963,10 @@
           "MOVE_WISH"
         ],
         [
+          35,
+          "MOVE_DAZZLING_GLEAM"
+        ],
+        [
           42,
           "MOVE_SHADOW_BALL"
         ],
@@ -87569,6 +87829,10 @@
         [
           63,
           "MOVE_KNOCK_OFF"
+        ],
+        [
+          70,
+          "MOVE_DARK_PULSE"
         ],
         [
           77,
@@ -88651,6 +88915,10 @@
           "MOVE_INGRAIN"
         ],
         [
+          40,
+          "MOVE_DARK_PULSE"
+        ],
+        [
           45,
           "MOVE_GIGA_DRAIN"
         ],
@@ -88791,6 +89059,10 @@
         [
           25,
           "MOVE_SWORDS_DANCE"
+        ],
+        [
+          40,
+          "MOVE_DARK_PULSE"
         ],
         [
           65,
@@ -88948,6 +89220,10 @@
           "MOVE_THRASH"
         ],
         [
+          40,
+          "MOVE_DARK_PULSE"
+        ],
+        [
           60,
           "MOVE_ROCK_SLIDE"
         ],
@@ -89086,6 +89362,10 @@
         [
           30,
           "MOVE_CONFUSE_RAY"
+        ],
+        [
+          40,
+          "MOVE_DARK_PULSE"
         ],
         [
           55,
@@ -89397,6 +89677,10 @@
         [
           21,
           "MOVE_FUTURE_SIGHT"
+        ],
+        [
+          28,
+          "MOVE_DAZZLING_GLEAM"
         ],
         [
           49,
@@ -90176,6 +90460,10 @@
         [
           40,
           "MOVE_DRAGON_CHEER"
+        ],
+        [
+          40,
+          "MOVE_ENERGY_BALL"
         ],
         [
           44,
@@ -91279,6 +91567,10 @@
         [
           40,
           "MOVE_DRAGON_CHEER"
+        ],
+        [
+          40,
+          "MOVE_ENERGY_BALL"
         ],
         [
           44,

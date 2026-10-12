@@ -367,6 +367,11 @@ static const u8 sDragonPulseDescription[] = _("A powerful wave of\ndragon energy
 
 static const u8 sDragonCheerDescription[] = _("Cheers an ally to\nboost critical hits.\nDRAGON allies gain\na greater boost.");
 
+static const u8 sDazzlingGleamDescription[] = _("A bright flash\nstrikes both foes.");
+static const u8 sEnergyBallDescription[] = _("Nature's energy\nstrikes the foe.\nMay lower SP. DEF.");
+static const u8 sDarkPulseDescription[] = _("A dark aura strikes\nthe foe and may\ncause flinching.");
+static const u8 sDrainingKissDescription[] = _("A draining kiss\nrestores HP equal\nto three quarters\nof damage dealt.");
+
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
     [MOVE_KARATE_CHOP   - 1] = gMoveDescription_KarateChop,
@@ -732,4 +737,8 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 [MOVE_TWIN_BEAM - 1] = sTwinBeamDescription,
 [MOVE_DRAGON_PULSE - 1] = sDragonPulseDescription,
 [MOVE_DRAGON_CHEER - 1] = sDragonCheerDescription,
+[MOVE_DAZZLING_GLEAM - 1] = sDazzlingGleamDescription,
+[MOVE_ENERGY_BALL - 1] = sEnergyBallDescription,
+[MOVE_DARK_PULSE - 1] = sDarkPulseDescription,
+[MOVE_DRAINING_KISS - 1] = sDrainingKissDescription,
 };
