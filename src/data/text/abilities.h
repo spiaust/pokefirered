@@ -1,3 +1,4 @@
+static const u8 sSharpnessDescription[] = _("Boosts slicing move damage.");
 static const u8 sSteelworkerDescription[] = _("Boosts Steel move damage.");
 static const u8 sWaterBubbleDescription[] = _("Boosts Water; prevents burns.");
 static const u8 sPunkRockDescription[] = _("Boosts and resists sound.");
@@ -206,6 +207,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_PUNK_ROCK] = sPunkRockDescription,
     [ABILITY_WATER_BUBBLE] = sWaterBubbleDescription,
     [ABILITY_STEELWORKER] = sSteelworkerDescription,
+    [ABILITY_SHARPNESS] = sSharpnessDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -313,4 +315,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_PUNK_ROCK] = _("PUNK ROCK"),
     [ABILITY_WATER_BUBBLE] = _("WATER BUBBLE"),
     [ABILITY_STEELWORKER] = _("STEELWORKER"),
+    [ABILITY_SHARPNESS] = _("SHARPNESS"),
 };

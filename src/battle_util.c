@@ -45,6 +45,23 @@ bool8 IsSoundMove(u16 move)
     return FALSE;
 }
 
+bool8 IsSlicingMove(u16 move)
+{
+    switch (move)
+    {
+    case MOVE_CUT:
+    case MOVE_RAZOR_LEAF:
+    case MOVE_SLASH:
+    case MOVE_FURY_CUTTER:
+    case MOVE_AIR_CUTTER:
+    case MOVE_AERIAL_ACE:
+    case MOVE_LEAF_BLADE:
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
 u8 GetBattlerForBattleScript(u8 caseId)
 {
     u8 ret = 0;

@@ -790,3 +790,17 @@ existing indices stay stable and the animation sentinel moves to 372. Cached
 Gen IX refresh adds 31 upstream lessons plus Dhelmise's deliberate level-40
 Iron Head campaign lesson, without replacing previous lessons. No new RAM,
 save fields, hidden slots or alternate forms.
+
+### Sharpness slicing classification
+
+Pinned RHH applies a 1.5 power modifier for slicing attacks:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Seven currently supported moves have its slicingMove marker:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/data/moves_info.h
+Gallade's second imported slot becomes supported. IsSlicingMove uses a ROM
+switch rather than another flag bit; existing contact/punch/bite flags stay
+intact. CalculateBaseDamage applies power * 3 / 2 to effective power, including
+Fury Cutter's native dynamic progression, while excluding self-damage. The
+shared path covers attacks and estimates. Existing Gallade recall lessons are
+used without adding invented level-up moves. Hidden-only users and alternate
+forms remain omitted. No added RAM/save fields or modern category split.

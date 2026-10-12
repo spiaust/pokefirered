@@ -184,3 +184,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Steelworker for Dhelmise and native Iron Head with 32 obtainable
   species lessons, type/STAB/self-hit and flinch/prevention/Steadfast checks,
   free recall, Dex display, cold saves and compiled roster/animation checks.
+
+- [x] Add Sharpness for Gallade with seven supported slicing moves, dynamic
+  Fury Cutter/STAB/other-move/fixed/immunity/self-hit guards, free slicing recall,
+  cold saves, male Kirlia Dawn Stone evolution and Steelworker regression.

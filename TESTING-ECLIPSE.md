@@ -1971,7 +1971,7 @@ with 373 pointers, new move 371 and sentinel 372. Controlled stats/levels and
 disposable saves are fixtures, not naturally trained campaign teams or hardware.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `11aaaec040a97ec490a92778e4e74ab714019f2a7c0d36e0572cab9f1ec0ba7d`.
+Previous release SHA-256: `11aaaec040a97ec490a92778e4e74ab714019f2a7c0d36e0572cab9f1ec0ba7d`.
 Both ROM aliases match. Native Steelworker/lesson suites, compiled learnsets
 and campaign/country static checks pass; ability/lesson refreshes are idempotent.
 Dhelmise's complete ability description and Iron Head Dex lesson were visually
@@ -1979,3 +1979,27 @@ verified.
 
 Full Iron Fist regression also passes on the final ROM, including compiled
 punching flags and native Drain Punch healing/guards.
+
+## Sharpness slicing attacks
+
+`test_eclipse_sharpness.py` checks all seven supported slicing moves and
+non-slicing False Swipe, Iron Head, Bite, Drain Punch, Seismic Toss and actual
+forced Struggle controls. Native consecutive Fury Cutter powers 10/20/40/80/160
+become 15/30/60/120/240 with Sharpness. Actual Grass STAB stacks with the ability,
+Normal/Ghost immunity remains intact and confusion self-damage is unchanged.
+Tests include physical and special damage under the native type-based split.
+`test_eclipse_sharpness_species.py` checks Gallade's second slot, native Save/
+cold Continue, skills display and next battle.
+`test_eclipse_sharpness_recall.py` checks free Slash/Leaf Blade/Fury Cutter
+recall without bag/money changes, cold-save move/ability persistence, and male
+Kirlia Dawn Stone evolution retaining the second slot and gaining Sharpness.
+One stone is consumed. Full `test_eclipse_steelworker.py` regression preserves
+Steel power/STAB, Iron Head metadata/flinch/prevention/Steadfast and self-hit
+behavior. Fixtures use controlled stats/levels/gender and disposable saves,
+not naturally raised campaign teams or hardware/link tests.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `d316a72317f250348d7801f5ee1b4219251774dabf290041a6722d08a44a9835`.
+Both ROM aliases match. All three native Sharpness suites, Steelworker
+regression and campaign/country static checks pass; refresh is idempotent.
+Gallade's complete ability name and description were visually verified.

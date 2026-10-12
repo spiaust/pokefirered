@@ -866,3 +866,13 @@ actual Steel STAB when both apply. Iron Head is now supported: 80-power Steel,
 animation. Thirty-two species receive new lessons from the cached roster
 refresh, including Dhelmise's deliberate level-40 campaign lesson. It is
 available through free recall and appears in the Pokédex.
+
+## Sharpness ability
+
+Gallade can use Sharpness in its second regular slot. It boosts effective
+power of the seven supported slicing moves by 50%: Cut, Razor Leaf, Slash,
+Fury Cutter, Air Cutter, Aerial Ace and Leaf Blade. Fury Cutter's increasing
+power combines with the bonus. Gallade can freely recall Slash, Leaf Blade
+and Fury Cutter from its existing lessons. A male Kirlia retaining its second
+slot gains Sharpness upon Dawn Stone evolution. Other attacks, fixed damage
+and confusion self-damage remain unchanged.

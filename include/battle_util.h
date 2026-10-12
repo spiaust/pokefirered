@@ -4,6 +4,7 @@
 #include "global.h"
 
 bool8 IsSoundMove(u16 move);
+bool8 IsSlicingMove(u16 move);
 
 #define MOVE_LIMITATION_ZEROMOVE                (1 << 0)
 #define MOVE_LIMITATION_PP                      (1 << 1)
