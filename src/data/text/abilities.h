@@ -1,3 +1,4 @@
+static const u8 sRecklessDescription[] = _("Boosts recoil moves by 20%.");
 static const u8 sAdaptabilityDescription[] = _("Boosts same-type attack damage.");
 static const u8 sIronFistDescription[] = _("Boosts punching moves by 20%.");
 static const u8 sSkillLinkDescription[] = _("Maximizes multi-hit attacks.");
@@ -165,6 +166,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_SKILL_LINK] = sSkillLinkDescription,
     [ABILITY_IRON_FIST] = sIronFistDescription,
     [ABILITY_ADAPTABILITY] = sAdaptabilityDescription,
+    [ABILITY_RECKLESS] = sRecklessDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -251,4 +253,5 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SKILL_LINK] = _("SKILL LINK"),
     [ABILITY_IRON_FIST] = _("IRON FIST"),
     [ABILITY_ADAPTABILITY] = _("ADAPTABILITY"),
+    [ABILITY_RECKLESS] = _("RECKLESS"),
 };

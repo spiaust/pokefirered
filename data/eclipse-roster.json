@@ -24273,7 +24273,7 @@
         "EGG_GROUP_WATER_2"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_RECKLESS",
         "ABILITY_ADAPTABILITY"
       ],
       "source_abilities": [
@@ -35599,7 +35599,7 @@
         "EGG_GROUP_FIELD"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_RECKLESS",
         "ABILITY_NONE"
       ],
       "source_abilities": [
@@ -35650,6 +35650,10 @@
         [
           30,
           "MOVE_REVERSAL"
+        ],
+        [
+          40,
+          "MOVE_HEAD_CHARGE"
         ],
         [
           45,
@@ -69361,7 +69365,7 @@
         "EGG_GROUP_FIELD"
       ],
       "abilities": [
-        "ABILITY_NONE",
+        "ABILITY_RECKLESS",
         "ABILITY_GUTS"
       ],
       "source_abilities": [

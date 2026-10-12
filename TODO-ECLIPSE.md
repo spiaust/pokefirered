@@ -105,3 +105,7 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Adaptability for four regular species slots, shared native attack/
   estimate logic, dual-type matching, fixed-damage/Struggle/immunity guards,
   Eevee cold-save display and Porygon-Z evolution persistence.
+
+- [x] Add Reckless for four regular species slots and obtainable level-40
+  Head Charge for Bouffalant, with native recoil/crash, Struggle/confusion and
+  Rock Head guards, free recall, Dex display and cold-save verification.

@@ -2415,6 +2415,14 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         && (gBattleMoves[move].flags & FLAG_PUNCHING))
         gBattleMovePower = gBattleMovePower * 6 / 5;
 
+    // Struggle shares the legacy recoil effect but never qualifies for Reckless.
+    if (battlerIdAtk != battlerIdDef && attacker->ability == ABILITY_RECKLESS
+        && move != MOVE_STRUGGLE
+        && (gBattleMoves[move].effect == EFFECT_RECOIL
+            || gBattleMoves[move].effect == EFFECT_DOUBLE_EDGE
+            || gBattleMoves[move].effect == EFFECT_RECOIL_IF_MISS))
+        gBattleMovePower = gBattleMovePower * 6 / 5;
+
     if (!typeOverride)
         type = gBattleMoves[move].type;
     else

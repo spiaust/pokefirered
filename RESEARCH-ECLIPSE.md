@@ -544,3 +544,16 @@ This native implementation shares the same-type modifier between Cmd_typecalc
 and TypeCalc. Struggle returns before that modifier; native fixed-damage
 scripts preserve their own damage assignment. No new RAM or save fields.
 Hidden-only slots and the upstream Terastallization system are not imported.
+
+### Reckless and Head Charge
+
+Pinned RHH battle calculation applies a 1.2 modifier to recoil/crash attacks:
+https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_util.c
+Native FireRed has a separate EFFECT_DOUBLE_EDGE, included explicitly. Its
+Struggle shares EFFECT_RECOIL, so Struggle is excluded explicitly. Existing
+Gen III recoil and missed-kick crash scripts remain intact.
+Pinned moves_info.h supplies Head Charge power 120, Normal type, accuracy 100,
+15 PP, contact and 25-percent recoil. Cached Gen IX lessons supply Bouffalant
+level 40. The native recoil effect and Take Down animation implement it.
+Regular slots come from cached family/metadata sources. No hidden abilities,
+new RAM or save fields are introduced.

@@ -1505,7 +1505,7 @@ fixtures, not naturally trained teams or personal saves.
 
 Campaign and country static checks passed. Build memory remains EWRAM 261,196
 bytes, IWRAM 29,824 bytes and ROM content 23,288,035 bytes.
-Current release SHA-256: `a990c68308257f50d795f276afd064fadfdc9b31d848b11d50faa0aebe2a802d`.
+Previous release SHA-256: `a990c68308257f50d795f276afd064fadfdc9b31d848b11d50faa0aebe2a802d`.
 
 Adaptability battle, species and evolution suites passed. The targeted
 `--quick-types-only` run confirms identical matching damage for single-type,
@@ -1513,3 +1513,25 @@ first-slot dual-type and second-slot dual-type battlers. Iron Fist and modern
 drain/secondary/spread regression suites passed. Eevee's complete Adaptability
 name and description were visually verified; another ability refresh changes
 zero imported slots.
+
+## Reckless and Head Charge
+
+`test_eclipse_reckless.py` checks all six supported attacks with native battle
+inputs and controlled accuracy stages. It compares base power and actual damage,
+checks quarter/third recoil, missed-kick crashes, overkill minimum recoil, native
+Rock Head protection and exclusion of Mega Kick, Drain Punch, true out-of-PP
+Struggle and confusion self-damage. `test_eclipse_reckless_species.py` checks
+all four regular slots and Hitmonlee's native save/summary/next battle.
+`test_eclipse_head_charge_lessons.py` checks Bouffalant's level-40 lesson, free
+reminder, cold Continue with Head Charge/Reckless in battle and native Dex page.
+Fixtures use disposable saves and controlled stats/levels, not naturally trained
+campaign teams. All 639 compiled imported learnsets match metadata; max 23.
+Campaign/country static and animation/evolution projection checks pass.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `7b872162d7b66b5ac94bd735b347561848bd5735b3aa84df5989318f8cafc562`.
+
+All Reckless, regular-slot and Head Charge lesson suites passed on the final
+build. Iron Fist/drain and targeted Adaptability regressions passed. Visual
+inspection confirms Hitmonlee's full Reckless description and Bouffalant's
+level-40 Head Charge Dex entry. Both refresh scripts report zero changes.

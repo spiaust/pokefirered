@@ -379,7 +379,9 @@
 
 #define MOVE_DRAIN_PUNCH 369
 
-#define MOVES_COUNT 370
+#define MOVE_HEAD_CHARGE 370
+
+#define MOVES_COUNT 371
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

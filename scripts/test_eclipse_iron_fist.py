@@ -6,7 +6,8 @@ from test_eclipse_move_evolution import moves,ids
 PUNCHES=('COMET_PUNCH','MEGA_PUNCH','FIRE_PUNCH','ICE_PUNCH','THUNDER_PUNCH','DIZZY_PUNCH','MACH_PUNCH','DYNAMIC_PUNCH','FOCUS_PUNCH','METEOR_MASH','SHADOW_PUNCH','SKY_UPPERCUT','DRAIN_PUNCH')
 e=Emulator(ROOT/'pokefirered.gba')
 try:
-    flagged={name for name,value in moves.items() if value<370 and e.read(e.symbols['gBattleMoves']+12*value+8,1)&64}
+    move_count=int(re.search(r'#define MOVES_COUNT (\d+)',(ROOT/'include/constants/moves.h').read_text())[1])
+    flagged={name for name,value in moves.items() if value<move_count and e.read(e.symbols['gBattleMoves']+12*value+8,1)&64}
     assert flagged=={'MOVE_'+name for name in PUNCHES},flagged
     single(e);base=ROOT/'test-output/iron-fist-base.state';e.state(base)
     for move in ('MOVE_MACH_PUNCH','MOVE_FIRE_PUNCH','MOVE_SHADOW_PUNCH','MOVE_METEOR_MASH','MOVE_DRAIN_PUNCH','MOVE_QUICK_ATTACK','MOVE_KARATE_CHOP','MOVE_DRAINING_KISS'):

@@ -674,3 +674,16 @@ fixed-damage attacks, Struggle and confusion self-damage remain unchanged;
 type immunities still apply. Actual attacks and native damage estimates share
 the bonus calculation. Existing saves retain their selected ability slot.
 Hidden-only Adaptability slots and alternate forms remain outside this update.
+
+## Reckless and Head Charge
+
+Reckless boosts recoil/crash move power by 20% for Hitmonlee, Basculin,
+Bouffalant and Obstagoon's regular slots. Supported attacks are Take Down,
+Double Edge, Submission, Jump Kick, Hi Jump Kick and Head Charge. Recoil and
+missed-kick crashes still occur; Struggle and confusion self-damage are excluded.
+Hidden-only Reckless slots remain omitted. Existing Gen III crash rules apply.
+
+Bouffalant learns Head Charge at level 40 and can recall it at a free reminder.
+It has 120 Normal power, 100 accuracy and 15 PP, with recoil equal to one quarter
+of actual damage dealt (minimum one). Reckless raises its power to 144. It uses
+the native Take Down animation; its new lesson appears in the Pokédex.

@@ -374,6 +374,8 @@ static const u8 sDrainingKissDescription[] = _("A draining kiss\nrestores HP equ
 
 static const u8 sDrainPunchDescription[] = _("A draining punch\nrestores HP equal\nto half the damage\ndealt to the foe.");
 
+static const u8 sHeadChargeDescription[] = _("A powerful charge\nhits the foe.\nThe user takes\na quarter recoil.");
+
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
     [MOVE_KARATE_CHOP   - 1] = gMoveDescription_KarateChop,
@@ -744,4 +746,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 [MOVE_DARK_PULSE - 1] = sDarkPulseDescription,
 [MOVE_DRAINING_KISS - 1] = sDrainingKissDescription,
 [MOVE_DRAIN_PUNCH - 1] = sDrainPunchDescription,
+[MOVE_HEAD_CHARGE - 1] = sHeadChargeDescription,
 };

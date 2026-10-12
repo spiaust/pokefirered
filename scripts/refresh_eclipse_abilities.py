@@ -8,6 +8,7 @@ CLASSIC={name:'ABILITY_TECHNICIAN' for name in ('MEOWTH','PERSIAN','SCYTHER','SC
 CLASSIC.update({name:'ABILITY_SKILL_LINK' for name in ('SHELLDER','CLOYSTER')})
 CLASSIC['HITMONCHAN']='ABILITY_IRON_FIST'
 CLASSIC['EEVEE']='ABILITY_ADAPTABILITY'
+CLASSIC['HITMONLEE']='ABILITY_RECKLESS'
 def family_source(gen):
     path=f'src/data/pokemon/species_info/gen_{gen}_families.h'
     cached=ROOT/'.local-tools/roster'/path
