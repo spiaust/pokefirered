@@ -370,7 +370,9 @@
 
 #define MOVE_DRAGON_PULSE 363
 
-#define MOVES_COUNT 364
+#define MOVE_DRAGON_CHEER 364
+
+#define MOVES_COUNT 365
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

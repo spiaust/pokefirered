@@ -7417,3 +7417,23 @@ Shadow_ReminderEggText::
  .string "An EGG cannot take lessons yet.$"
 Shadow_ReminderNoneText::
  .string "This partner has no earlier\nlevel-up moves to recall.$"
+
+Shadow_DoublesCoach::
+ lock
+ faceplayer
+ msgbox Shadow_DoublesOffer, MSGBOX_YESNO
+ goto_if_eq VAR_RESULT, NO, Shadow_End
+ cleartrainerflag TRAINER_ECLIPSE_DOUBLES_COACH
+ trainerbattle_double TRAINER_ECLIPSE_DOUBLES_COACH, Shadow_DoublesIntro, Shadow_DoublesDefeat, Shadow_DoublesTooFew
+ msgbox Shadow_DoublesAfter
+ goto Shadow_End
+Shadow_DoublesOffer::
+ .string "LYRA: Try advanced doubles?\nOur partners are level 40.\pBring two fit partners. Allies\ncan support each other here.$"
+Shadow_DoublesIntro::
+ .string "Let your partners work together!$"
+Shadow_DoublesDefeat::
+ .string "A strong partnership!$"
+Shadow_DoublesTooFew::
+ .string "You need two fit partners\nto enter a double battle.$"
+Shadow_DoublesAfter::
+ .string "Come back for another match.\nDIPPLIN learns DRAGON CHEER at\plevel 40. Cheer a DRAGON ally\nfor a stronger critical boost.$"

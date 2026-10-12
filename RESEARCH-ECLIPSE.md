@@ -277,3 +277,33 @@ the audit to 227 supported and 126 omitted imported evolution rules. Dipplin's
 Dragon Cheer rule stays omitted: a faithful ally-targeted critical-stage
 support effect and an obtainable lesson are still required. No new global RAM
 or save fields are introduced.
+
+### Dragon Cheer and native doubles training
+
+The pinned RHH [battle command implementation](https://github.com/rh-hideout/pokeemerald-expansion/blob/7b4344c7ee867c98c8fb9d6026791df4f8eaecf7/src/battle_script_commands.c)
+checks for a live ally in doubles, rejects existing Cheer/Focus Energy, and
+uses a one-stage Cheer volatile for non-Dragon allies or two-stage Focus
+Energy for Dragon allies. Its pinned move metadata specifies 15 PP, Dragon
+status, ally target, priority zero and substitute bypass. This implements the
+Gen IX behavior; the newer Champions sound-move flag is outside this pass.
+
+Move 364/effect 214 use an ally-selecting native script command, Helping Hand
+animation and an ally-name message. STATUS3 bit 21 stores the one-stage boost;
+existing Focus Energy stores two stages. Critical calculation adds one for the
+new bit, retaining the Gen III rate table and other item/move modifiers.
+Focus Energy, Dire Hit and the Focus Energy berry cannot stack over Cheer.
+Normal switching clears the new volatile, and Baton Pass preserves it alongside
+existing transferable statuses. No new global RAM is allocated.
+
+The pinned Dipplin evolution requires known Dragon Cheer. Its upstream lesson
+is TM-based, so this campaign deliberately adds a level-40 lesson to Dipplin
+and Hydrapple. `scripts/eclipse_lessons.py` supplies the override to both the
+full importer and cached refresh, so regeneration cannot remove it. One new
+evolution rule brings the imported audit to 228 supported and 125 omitted.
+
+A new optional modern-London NPC uses native doubles trainer 759, Lyra & Finn,
+with level-40 Dragonair/Raichu and custom moves. It requires two fit partners
+and clears only its own trainer flag for repeat matches. Existing NPC IDs are
+preserved by appending the object. NUM_TRAINERS becomes 760; the existing
+768-trainer flag capacity and save layout remain unchanged. Other countries,
+wartime maps and main story gates are unchanged.

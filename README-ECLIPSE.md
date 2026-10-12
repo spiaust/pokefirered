@@ -496,5 +496,24 @@ Imported learnsets now include 88 additional lessons across 80 species for
 Baby-Doll Eyes, Double Hit, Twin Beam and Dragon Pulse where the pinned source
 learnset supports them. Existing lessons remain available. Dipplin learns
 Dragon Pulse at level 32, and imported evolved partners can recall their
-newly supported moves. Dipplin/Hydrapple's Dragon Cheer requirement remains
-pending, along with broader modern move and ability coverage.
+newly supported moves. Dipplin/Hydrapple uses the campaign Dragon Cheer lesson described below.
+Broader modern move and ability coverage remains pending.
+
+## Dragon Cheer, Hydrapple and doubles practice
+
+Dipplin learns Dragon Cheer at level 40 and can evolve into Hydrapple on that
+level-up while knowing the move. Older Dipplin can recall it free, then gain a
+level. Hydrapple can also recall the level-40 lesson. This is a campaign lesson
+adaptation; the upstream move is normally taught by TM. Everstone and shadow
+restrictions still prevent evolution.
+
+Dragon Cheer has 15 PP and supports the user's ally in a double battle. It
+raises the ally's critical-hit stage by one, or two for a Dragon-type ally,
+using the existing classic critical-hit rate table. It does not boost its user,
+fails in a single battle or without a fit ally, and cannot stack with another
+Cheer or Focus Energy. Ordinary switching clears the effect; Baton Pass can
+transfer it. Its animation reuses Helping Hand.
+
+In modern London, find Lyra and Finn beside the nurse, just right of the free
+move reminder. They offer optional, repeatable level-40 double battles. Bring
+two fit partners; the nurse next door can heal your team before another match.

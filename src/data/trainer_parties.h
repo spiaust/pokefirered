@@ -12457,3 +12457,8 @@ static const struct TrainerMonItemCustomMoves EclipseCircuitParty391[] = {
     {.iv = 200, .lvl = 80, .species = SPECIES_METAGROSS, .heldItem = ITEM_LUM_BERRY, .moves = {MOVE_METEOR_MASH, MOVE_EARTHQUAKE, MOVE_SHADOW_BALL, MOVE_AGILITY}},
     {.iv = 200, .lvl = 80, .species = SPECIES_VENUSAUR, .heldItem = ITEM_LUM_BERRY, .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_SLEEP_POWDER, MOVE_SYNTHESIS}},
 };
+
+static const struct TrainerMonNoItemCustomMoves sEclipseDoublesCoach[] = {
+    {.iv = 80, .lvl = 40, .species = SPECIES_DRAGONAIR, .moves = {MOVE_DRAGON_PULSE, MOVE_DRAGON_CHEER, MOVE_PROTECT, MOVE_THUNDER_WAVE}},
+    {.iv = 80, .lvl = 40, .species = SPECIES_RAICHU, .moves = {MOVE_THUNDERBOLT, MOVE_QUICK_ATTACK, MOVE_TAIL_WHIP, MOVE_PROTECT}},
+};

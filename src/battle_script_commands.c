@@ -1182,7 +1182,8 @@ static void Cmd_critcalc(void)
 
     gPotentialItemEffectBattler = gBattlerAttacker;
 
-    critChance  = 2 * ((gBattleMons[gBattlerAttacker].status2 & STATUS2_FOCUS_ENERGY) != 0)
+    critChance  = ((gStatuses3[gBattlerAttacker] & STATUS3_DRAGON_CHEER) != 0)
+                + 2 * ((gBattleMons[gBattlerAttacker].status2 & STATUS2_FOCUS_ENERGY) != 0)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_HIGH_CRITICAL)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_SKY_ATTACK)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_BLAZE_KICK)
@@ -7388,7 +7389,31 @@ static void Cmd_setmist(void)
 
 static void Cmd_setfocusenergy(void)
 {
-    if (gBattleMons[gBattlerAttacker].status2 & STATUS2_FOCUS_ENERGY)
+    if (gCurrentMove == MOVE_DRAGON_CHEER)
+    {
+        gBattlerTarget = GetBattlerAtPosition(GetBattlerPosition(gBattlerAttacker) ^ BIT_FLANK);
+        if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+            || (gAbsentBattlerFlags & gBitTable[gBattlerTarget])
+            || gBattleMons[gBattlerTarget].hp == 0
+            || (gBattleMons[gBattlerTarget].status2 & STATUS2_FOCUS_ENERGY)
+            || (gStatuses3[gBattlerTarget] & STATUS3_DRAGON_CHEER))
+        {
+            gMoveResultFlags |= MOVE_RESULT_FAILED;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_FOCUS_ENERGY_FAILED;
+        }
+        else
+        {
+            if (gBattleMons[gBattlerTarget].type1 == TYPE_DRAGON || gBattleMons[gBattlerTarget].type2 == TYPE_DRAGON)
+                gBattleMons[gBattlerTarget].status2 |= STATUS2_FOCUS_ENERGY;
+            else
+                gStatuses3[gBattlerTarget] |= STATUS3_DRAGON_CHEER;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_GETTING_PUMPED;
+        }
+        gBattlescriptCurrInstr++;
+        return;
+    }
+    if ((gBattleMons[gBattlerAttacker].status2 & STATUS2_FOCUS_ENERGY)
+        || (gStatuses3[gBattlerAttacker] & STATUS3_DRAGON_CHEER))
     {
         gMoveResultFlags |= MOVE_RESULT_FAILED;
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_FOCUS_ENERGY_FAILED;

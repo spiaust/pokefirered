@@ -90174,6 +90174,10 @@
           "MOVE_RECOVER"
         ],
         [
+          40,
+          "MOVE_DRAGON_CHEER"
+        ],
+        [
           44,
           "MOVE_SUBSTITUTE"
         ]
@@ -91271,6 +91275,10 @@
         [
           36,
           "MOVE_RECOVER"
+        ],
+        [
+          40,
+          "MOVE_DRAGON_CHEER"
         ],
         [
           44,

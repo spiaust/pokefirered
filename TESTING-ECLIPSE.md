@@ -1156,4 +1156,47 @@ personal saves are untouched.
 
 Both ROM aliases are 32 MiB; content remains 17,299,532 bytes.
 EWRAM stays 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
-Current release SHA-256: `aaa9deeed43f910374205096d465dbbcda972723f2d1c5fa71e0d396358b428f`.
+Previous apples/learnset release SHA-256: `aaa9deeed43f910374205096d465dbbcda972723f2d1c5fa71e0d396358b428f`.
+
+### Dragon Cheer, Hydrapple and repeatable native doubles
+
+`test_eclipse_hydrapple.py` passes fourth-slot Dragon Cheer evolution, wrong
+Dragon Pulse, Everstone and shadow guards. Dipplin stays unchanged at 39 and
+learns the campaign lesson at 40, then evolves through the native level-up UI.
+A free reminder teaches the level-40 lesson without charges; evolved Hydrapple,
+Dragon Cheer and extended seen/caught flags survive native Save/cold Continue.
+Campaign overrides cover Dipplin and Hydrapple and are shared by full import
+and cached refresh; all 639 compiled learnsets match metadata.
+
+`test_eclipse_dragon_cheer.py` enters the real London doubles coach battle,
+asserting four native battlers, with explicit move/type/HP combat fixtures.
+Non-Dragon allies get the one-stage STATUS3 bit, Dragon allies get the existing
+two-stage Focus Energy flag, and the user/opponents receive neither. Existing
+Cheer/Focus Energy prevents stacking; every attempt spends one PP. Repeated
+Cheer and a Focus Energy attempt by a cheered ally also leave the boost
+unchanged. `test_eclipse_dragon_cheer_single.py` confirms failure without
+boosting user/opponent in single battles, with one PP spent.
+
+`test_eclipse_dragon_cheer_switch.py` uses native party menus: normal switching
+clears the one-stage boost, and Baton Pass preserves it. The critical formula
+adds the new one-stage bit to the existing item/move modifiers and keeps the
+Gen III chance table. No stochastic probability sampling is claimed.
+
+`test_eclipse_doubles_coach.py` passes decline and fewer-than-two-fit-partners
+without battle entry or charge. A fixture-assisted Swift victory returns to
+London, and the same NPC immediately starts a repeat double battle. The first
+gate fixtures used a party-count shortcut and then an incorrect cached HP
+offset; native party-count recalculation and the verified current HP field
+resolve those test setup errors without game changes. Core battles use original
+native trainers/controllers, not injected double-battle mode flags.
+
+Projection/animation alignment, campaign/country capacity/approach checks and
+2026 title/New Game/Continue pass. NPC IDs are preserved, trainer 759 stays
+within the existing 768-flag capacity, and no global RAM/save fields are added.
+The imported evolution audit is 228 supported/125 omitted. Tests use isolated
+checkpoints/fixtures, not personal saves. Broader forms, abilities, cries,
+difficulty/campaign balancing and hardware checks remain pending.
+
+Both ROM aliases are 32 MiB; content remains 17,299,532 bytes.
+EWRAM stays 261,196 / 262,144 bytes; IWRAM 29,824 / 32,768 bytes.
+Current release SHA-256: `b5896208a09e50b156f173b8ce1d2d9b293f7bafa2547f58bb74cbdeda088eb2`.

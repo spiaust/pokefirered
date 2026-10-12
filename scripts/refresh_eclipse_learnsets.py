@@ -3,6 +3,7 @@ No network/art import; outputs remain UTF-8/LF and native reminder-safe.
 """
 import json, re
 from pathlib import Path
+from eclipse_lessons import CAMPAIGN_LESSONS
 ROOT=Path(__file__).resolve().parents[1]
 def refresh():
     meta_path=ROOT/'data/eclipse-roster.json'
@@ -18,6 +19,9 @@ def refresh():
         previous=[list(x) for x in row['moves']];values=list(previous)
         for level,move in learn[match[1]]:
             pair=[max(1,int(level)),move]
+            if move in native and pair not in values:values.append(pair)
+        for level,move in CAMPAIGN_LESSONS.get(row['national'],[]):
+            pair=[level,move]
             if move in native and pair not in values:values.append(pair)
         values.sort(key=lambda x:x[0])
         assert len(values)<=24,(row['name'],len(values))

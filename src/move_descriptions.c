@@ -365,6 +365,8 @@ static const u8 sTwinBeamDescription[] = _("Twin psychic beams\nstrike the foe\n
 
 static const u8 sDragonPulseDescription[] = _("A powerful wave of\ndragon energy\nstrikes the foe.");
 
+static const u8 sDragonCheerDescription[] = _("Cheers an ally to\nboost critical hits.\nDRAGON allies gain\na greater boost.");
+
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_POUND         - 1] = gMoveDescription_Pound,
     [MOVE_KARATE_CHOP   - 1] = gMoveDescription_KarateChop,
@@ -729,4 +731,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
 [MOVE_DOUBLE_HIT - 1] = sDoubleHitDescription,
 [MOVE_TWIN_BEAM - 1] = sTwinBeamDescription,
 [MOVE_DRAGON_PULSE - 1] = sDragonPulseDescription,
+[MOVE_DRAGON_CHEER - 1] = sDragonCheerDescription,
 };

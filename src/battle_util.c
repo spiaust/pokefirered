@@ -2680,7 +2680,8 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 break;
             case HOLD_EFFECT_CRITICAL_UP:
                 if (gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / battlerHoldEffectParam && !moveTurn
-                    && !(gBattleMons[battlerId].status2 & STATUS2_FOCUS_ENERGY))
+                    && !(gBattleMons[battlerId].status2 & STATUS2_FOCUS_ENERGY)
+                    && !(gStatuses3[battlerId] & STATUS3_DRAGON_CHEER))
                 {
                     gBattleMons[battlerId].status2 |= STATUS2_FOCUS_ENERGY;
                     BattleScriptExecute(BattleScript_BerryFocusEnergyEnd2);

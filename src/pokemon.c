@@ -4103,7 +4103,8 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 
             // Dire Hit
             if ((itemEffect[cmdIndex] & ITEM0_DIRE_HIT)
-             && !(gBattleMons[gActiveBattler].status2 & STATUS2_FOCUS_ENERGY))
+             && !(gBattleMons[gActiveBattler].status2 & STATUS2_FOCUS_ENERGY)
+             && !(gStatuses3[gActiveBattler] & STATUS3_DRAGON_CHEER))
             {
                 gBattleMons[gActiveBattler].status2 |= STATUS2_FOCUS_ENERGY;
                 retVal = FALSE;
@@ -4624,7 +4625,8 @@ bool8 PokemonItemUseNoEffect(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mo
                 retVal = FALSE;
 
             // Dire Hit
-            if (itemEffect[cmdIndex] & ITEM0_DIRE_HIT && !(gBattleMons[gActiveBattler].status2 & STATUS2_FOCUS_ENERGY))
+            if (itemEffect[cmdIndex] & ITEM0_DIRE_HIT && !(gBattleMons[gActiveBattler].status2 & STATUS2_FOCUS_ENERGY)
+             && !(gStatuses3[gActiveBattler] & STATUS3_DRAGON_CHEER))
                 retVal = FALSE;
 
             // X Attack

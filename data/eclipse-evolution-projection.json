@@ -4646,10 +4646,14 @@
   },
   {
     "species": "SPECIES_DIPPLIN",
-    "supported": [],
-    "omitted": [
-      "{EVO_LEVEL, 0, SPECIES_HYDRAPPLE, CONDITIONS({IF_KNOWS_MOVE, MOVE_DRAGON_CHEER})}"
-    ]
+    "supported": [
+      [
+        "EVO_LEVEL_MOVE",
+        "MOVE_DRAGON_CHEER",
+        "SPECIES_HYDRAPPLE"
+      ]
+    ],
+    "omitted": []
   },
   {
     "species": "SPECIES_POLTCHAGEIST",

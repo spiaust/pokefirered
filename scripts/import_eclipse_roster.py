@@ -8,6 +8,7 @@ import json,re,urllib.request,time
 from concurrent.futures import ThreadPoolExecutor
 from PIL import Image
 from eclipse_evolutions import project, GENDER_FORM_ALIASES
+from eclipse_lessons import CAMPAIGN_LESSONS
 ROOT=Path(__file__).resolve().parents[1]; CACHE=ROOT/'.local-tools/roster'
 SHA='7b4344c7ee867c98c8fb9d6026791df4f8eaecf7'
 ENTRIES=json.loads((ROOT/'data/eclipse-roster-source.json').read_text())
@@ -45,6 +46,7 @@ for nat in range(387,1026):
  source=r['token'][8:];name=text(b,'speciesName',source.title())
  learn=LEARN.get(field(b,'levelUpLearnset'),[])
  adapted=[(max(1,int(l)),m) for l,m in learn if m in MOVES]
+ adapted.extend((level,move) for level,move in CAMPAIGN_LESSONS.get(nat,[]) if move in MOVES)
  adapted=sorted(set(adapted),key=lambda x:x[0])
  if not adapted:raise ValueError(('No supported level moves',nat,name))
  teach=set()

@@ -774,7 +774,8 @@
 
 #define TRAINER_EUROPE_COUNCIL_COACH 758
 
-#define NUM_TRAINERS                             759
+#define TRAINER_ECLIPSE_DOUBLES_COACH             759
+#define NUM_TRAINERS                             760
 #define MAX_TRAINERS_COUNT                       768
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

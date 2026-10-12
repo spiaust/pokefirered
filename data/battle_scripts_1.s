@@ -235,6 +235,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
+	.4byte BattleScript_EffectDragonCheer            @ EFFECT_DRAGON_CHEER
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -881,11 +882,24 @@ BattleScript_EffectMist::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectDragonCheer::
+	attackcanceler
+	attackstring
+	ppreduce
+	setfocusenergy
+	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_FAILED, BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_DRAGONCHEERALLY
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_EffectFocusEnergy::
 	attackcanceler
 	attackstring
 	ppreduce
 	jumpifstatus2 BS_ATTACKER, STATUS2_FOCUS_ENERGY, BattleScript_ButItFailed
+	jumpifstatus3 BS_ATTACKER, STATUS3_DRAGON_CHEER, BattleScript_ButItFailed
 	setfocusenergy
 	attackanimation
 	waitanimation

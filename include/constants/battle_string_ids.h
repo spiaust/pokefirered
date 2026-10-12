@@ -386,7 +386,8 @@
 #define STRINGID_TRAINER1MON1AND2COMEBACK 385
 
 #define STRINGID_NUZLOCKEENCOUNTERUSED 386
-#define BATTLESTRINGS_COUNT     387
+#define STRINGID_DRAGONCHEERALLY 387
+#define BATTLESTRINGS_COUNT     388
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
