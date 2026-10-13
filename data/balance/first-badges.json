@@ -1,0 +1,47 @@
+{
+  "method": "Native earned openings, repeated trainer battles and native EXP/evolution; no party/stat edits. Exact party survives Save/cold Continue. Hard Bulbasaur uses practice trainer 4; Normal starters use trainer 1.",
+  "results": [
+    {
+      "country": "france",
+      "starter": 1,
+      "initial_species": 280,
+      "mode": 0,
+      "nuzlocke": false,
+      "practices": 12,
+      "training_turns": 47,
+      "gym_outcome": 1,
+      "gym_turns": 2,
+      "level": 17,
+      "party_count": 1,
+      "stage": 2
+    },
+    {
+      "country": "germany",
+      "starter": 1,
+      "initial_species": 4,
+      "mode": 0,
+      "nuzlocke": false,
+      "practices": 12,
+      "training_turns": 45,
+      "gym_outcome": 1,
+      "gym_turns": 5,
+      "level": 17,
+      "party_count": 1,
+      "stage": 2
+    },
+    {
+      "country": "england",
+      "starter": 0,
+      "initial_species": 1,
+      "mode": 2,
+      "nuzlocke": false,
+      "practices": 6,
+      "training_turns": 57,
+      "gym_outcome": 1,
+      "gym_turns": 2,
+      "level": 17,
+      "party_count": 1,
+      "stage": 2
+    }
+  ]
+}

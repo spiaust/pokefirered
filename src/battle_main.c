@@ -1661,7 +1661,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
             u32 experience;
             u16 species = GetMonData(&party[i], MON_DATA_SPECIES, NULL);
             if (mode == 1) level = level > 5 ? level - 4 : 2;
-            if (mode == 2) level = level < 95 ? level + 5 : 100;
+            // The first rival precedes the campaign training loop. Keep its
+            // Hard opener near the level-eight starter; later battles retain +5.
+            if (mode == 2) level = trainerNum == 100 ? level + 1 : level < 95 ? level + 5 : 100;
             experience = gExperienceTables[gSpeciesInfo[species].growthRate][level];
             SetMonData(&party[i], MON_DATA_EXP, &experience);
             CalculateMonStats(&party[i]);

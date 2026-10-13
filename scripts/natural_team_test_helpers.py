@@ -41,7 +41,16 @@ def lead(e,index):
   if cur==index:break
   e.press('RIGHT' if cur==0 else 'DOWN' if cur<index else 'UP',30)
  assert cur==index
- e.press('A',60);wait_task(e,'Task_HandleSelectionMenuInput');e.frames(120);e.press('DOWN',60);e.press('A',120)
+ e.press('A',60);wait_task(e,'Task_HandleSelectionMenuInput');e.frames(120)
+ # Field moves can appear before Switch, so inspect the native action list.
+ menu=e.read('sPartyMenuInternal');count=e.read(menu+23,1)
+ target=next(i for i in range(count) if e.read(menu+15+i,1)==1)
+ for _ in range(8):
+  cursor=e.read(e.symbols['sMenu']+2,1)
+  if cursor==target:break
+  e.press('DOWN' if cursor<target else 'UP',30)
+ assert e.read(e.symbols['sMenu']+2,1)==target
+ e.press('A',120)
  wait_task(e,'Task_HandleChooseMonInput');e.frames(120)
  # Switch mode uses slotId2 as the destination; slotId remains the source.
  e.press('LEFT',60)

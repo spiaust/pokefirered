@@ -2022,7 +2022,56 @@ controlled stats/levels and disposable saves, not naturally trained campaign
 teams or hardware/link testing.
 
 Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
-Current release SHA-256: `0b3803d627c94fcccae4f8b0635b41b8ceb1e05133cbaf3ac47fffd9bca87131`.
+Previous release SHA-256: `0b3803d627c94fcccae4f8b0635b41b8ceb1e05133cbaf3ac47fffd9bca87131`.
 Both ROM aliases match. Native suites, full Fluffy regression and campaign/
 country static checks pass; refresh is idempotent. Perrserker's complete
 ability name and description were visually verified.
+
+## Natural-play balancing: opening matrix and alternate starts
+
+`test_eclipse_balance_openings.py --mode 0|1|2 [--nuzlocke]` uses current-ROM
+New Game checkpoints for all nine country/starter combinations. It obtains
+World Gear and changes settings through native menus, then battles without
+stat/EXP/HP edits, forced outcomes, healing items or retries. Before the fix,
+all nine Normal and Easy cases won while all nine Hard cases lost against
+the level-11 rival. Hard's first rival now receives +1 instead of +5 levels.
+All 36 current cases pass: nine each Easy, Normal, Hard and Hard/Nuzlocke.
+Each victory survives native Save and cold Continue with settings intact.
+`data/balance/opening-baseline.json` and `opening-current.json` retain the
+measurements. Each choice uses one checkpoint; multiple RNG seeds, a full
+Nuzlocke campaign and hardware remain unverified.
+
+`test_eclipse_balance_first_badge.py` earns Normal-mode badges from French
+Torchic and German Charmander starts. Both use twelve repeatable native
+practice battles to reach level 16 and win the first gym, ending at level 17.
+They use no party/stat/EXP writes or forced outcomes; exact party records
+survive Save/cold Continue. A lone Hard Bulbasaur lost the default
+Eevee/Pidgey practice match. Selecting the Oddish/Poliwag trainer (`--practice 4`) instead earns
+the Hard first badge: six native practice wins (57 attack selections),
+level 16 preparation, two gym attack selections and level 17 afterward.
+The evolved party and stage 2 survive cold Continue. This measures a chosen
+preparation route, not a complete Hard campaign or many-seed win rate.
+
+Non-legendary rematch testing loads the earned six-partner Krakow save.
+Its initial levels are 62/23/46/33/50/40; the first Rock rematch defeated
+this undertrained team despite native training-kit TMs and purchased supplies.
+The new training harness measures repeatable Champion-route battles with
+native EXP and the party's existing Exp. Share. This investigation remains
+in progress; a loss is not reported as a completed circuit.
+
+The native party-switch helper now selects Switch by the actual action ID,
+so field-move entries such as Surf cannot redirect a requested switch.
+The battle controller avoids Water Absorb, Volt Absorb, Flash Fire and
+Soundproof immunities in addition to Levitate. Native move learning accepts
+an explicit replacement slot so a caller can preserve Surf and Ice Beam.
+These controller fixes preserve the game's existing ability behavior.
+
+Build: EWRAM 261,196 bytes, IWRAM 29,824 bytes, ROM content 23,288,035 bytes.
+Current release SHA-256: `026c85d5bc0d966ad9d077bf0f711728860b0213c7eb752328ba543ac7c22682`.
+Both ROM aliases match. Full-game balance and physical hardware checks
+remain open.
+
+`audit_eclipse_balance_curve.py` records all 21 authored chapter levels and
+13 rematch difficulty curves in `data/balance/level-curve.json`, checking
+chapter levels against native party declarations. This static audit does
+not assert battle outcomes.

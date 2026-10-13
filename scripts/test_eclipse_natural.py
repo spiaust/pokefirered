@@ -18,6 +18,11 @@ def move_score(e,slot):
  # Levitate is an ability immunity, separate from the normal type table.
  if kind==4 and e.read(b+88+32,1)==26:return -1
  if not power:return 0
+ # Avoid selecting attacks absorbed by native defensive abilities.
+ ability=e.read(b+88+32,1)
+ if (kind,ability) in ((11,11),(13,10)):return -1
+ if kind==10 and ability==18 and not e.read(b+88+76)&32:return -1
+ if ability==43 and move in (173,253,304):return -1
  damage=power*(accuracy or 100)/100
  attack=e.read(b+(2 if kind<=8 else 8),2);defense=e.read(b+88+(4 if kind<=8 else 10),2)
  # Score the current visible stat changes rather than the unboosted stats.
@@ -127,7 +132,8 @@ def effective_speed(e,b):
  return speed
 
 
-def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,revive_species=0,trace=False,matchups=None,fallback_species=0,finish_low_enemy=False,finish=True,status_item=0):
+def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,revive_species=0,trace=False,matchups=None,fallback_species=0,finish_low_enemy=False,finish=True,status_item=0,learn_slot=0):
+ assert learn_slot in range(4)
  action=first_symbol('HandleInputChooseAction');move=first_symbol('HandleInputChooseMove');item_return=first_symbol('CompleteWhenChoseItem');turns=0;heals=0;revived=False
  healing_items=(healing_item,) if isinstance(healing_item,int) else tuple(healing_item)
  for iteration in range(limit):
@@ -147,11 +153,11 @@ def natural_battle(e,limit=1800,learn_moves=(),healing_item=0,healing_limit=0,re
    from test_oxford_gym import count_pocket
    healing_item=next((item for item in healing_items if count_pocket(e,item,0x310,42)),0)
   if learn_moves and e.task_active('Task_InputHandler_SelectOrForgetMove'):
-   # Normal move-forgetting UI: replace the first move, keeping useful coverage.
+   # Use the requested native slot; callers can preserve HM/coverage moves.
    for _ in range(6):
-    if e.read('sMoveSelectionCursorPos',1)==0:break
+    if e.read('sMoveSelectionCursorPos',1)==learn_slot:break
     e.press('DOWN',60)
-   assert e.read('sMoveSelectionCursorPos',1)==0
+   assert e.read('sMoveSelectionCursorPos',1)==learn_slot
    e.press('A',900);continue
   if e.task_active('Task_HandleChooseMonInput'):
    count=e.read('gPlayerPartyCount',1);current=e.read('gBattlerPartyIndexes',2)

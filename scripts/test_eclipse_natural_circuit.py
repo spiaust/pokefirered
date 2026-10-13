@@ -86,7 +86,7 @@ def main():
    talk(e,(6,4),'NO');assert e.var(0x40BF)==i+1 and not e.in_battle()
    supplies=tuple(count_pocket(e,item,0x310,42) for item in (21,24,19,23))
    battle_start(e,(6,4));check_team(e,row,0)
-   result,turns=natural.natural_battle(e,limit=7000,status_item=23,healing_item=(19,21) if restored else 21,healing_limit=sum(count_pocket(e,n,0x310,42) for n in ((19,21) if restored else (21,))),revive_species=31 if restored and i==10 else 150 if has_mewtwo else 31,matchups={94:150,376:31,229:31,197:31,103:229,297:150,3:150,76:150,139:150,141:150,142:150,248:150,62:150,131:150,121:150,230:150,350:150} if has_mewtwo else {76:131,139:26,141:31,142:26,248:31,62:26,131:26,121:26,230:31,350:26},fallback_species=150 if has_mewtwo else 31,finish_low_enemy=not restored,trace=True)
+   result,turns=natural.natural_battle(e,limit=7000,status_item=23,healing_item=(19,21) if restored else 21,healing_limit=sum(count_pocket(e,n,0x310,42) for n in ((19,21) if restored else (21,))),revive_species=31 if restored and i==10 else 150 if has_mewtwo else 31,matchups={94:150,376:31,229:31,197:31,103:229,297:150,3:150,76:150,139:150,141:150,142:150,248:150,62:150,131:150,121:150,230:150,350:150} if has_mewtwo else {76:131,139:26,141:26,142:26,248:31,62:26,131:26,121:26,230:31,350:26},fallback_species=150 if has_mewtwo else 31,finish_low_enemy=not restored,trace=True)
    spent=tuple(before-count_pocket(e,item,0x310,42) for item,before in zip((21,24,19,23),supplies))
    print('Natural circuit:',row['name'],result,turns,'attack selections; Hyper/Revive/FullRestore/FullHeal',spent,flush=True)
    if result!=1:

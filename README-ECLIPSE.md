@@ -884,3 +884,12 @@ It boosts effective contact-move power by 30%, applying to physical and special
 contact attacks under the native type split. Non-contact attacks, fixed damage
 and confusion self-damage remain unchanged. Drain Punch healing and native
 recoil follow the increased damage, including real contact Struggle.
+
+## Opening difficulty balance
+
+Hard mode's first rival is now level 7 against the level-8 starter. This
+opening precedes access to the campaign training loop; subsequent Hard
+trainer battles retain their five-level bonus. All nine starter choices
+passed native opening checks on Easy, Normal, Hard and Hard with Nuzlocke
+enabled, including Save and cold Continue. These are deterministic checks,
+not measured win probabilities. Full-route difficulty balancing remains open.

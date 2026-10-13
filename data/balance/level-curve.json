@@ -1,0 +1,368 @@
+{
+  "method": "Static authored level curve, checked against compiled source party declarations. Not an outcome or difficulty proof.",
+  "campaign": [
+    {
+      "trainer": 100,
+      "city": "Oxford",
+      "country": "England",
+      "kind": "rival",
+      "levels": {
+        "easy": 2,
+        "normal": 6,
+        "hard": 7
+      }
+    },
+    {
+      "trainer": 108,
+      "city": "London",
+      "country": "England",
+      "kind": "gym",
+      "levels": {
+        "easy": 8,
+        "normal": 12,
+        "hard": 17
+      }
+    },
+    {
+      "trainer": 116,
+      "city": "Paris",
+      "country": "France",
+      "kind": "gym",
+      "levels": {
+        "easy": 13,
+        "normal": 17,
+        "hard": 22
+      }
+    },
+    {
+      "trainer": 124,
+      "city": "Brussels",
+      "country": "Belgium",
+      "kind": "gym",
+      "levels": {
+        "easy": 17,
+        "normal": 21,
+        "hard": 26
+      }
+    },
+    {
+      "trainer": 132,
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "kind": "gym",
+      "levels": {
+        "easy": 21,
+        "normal": 25,
+        "hard": 30
+      }
+    },
+    {
+      "trainer": 140,
+      "city": "Berlin",
+      "country": "Germany",
+      "kind": "gym",
+      "levels": {
+        "easy": 25,
+        "normal": 29,
+        "hard": 34
+      }
+    },
+    {
+      "trainer": 148,
+      "city": "Prague",
+      "country": "Czechia",
+      "kind": "enemy",
+      "levels": {
+        "easy": 28,
+        "normal": 32,
+        "hard": 37
+      }
+    },
+    {
+      "trainer": 156,
+      "city": "Vienna",
+      "country": "Austria",
+      "kind": "gym",
+      "levels": {
+        "easy": 31,
+        "normal": 35,
+        "hard": 40
+      }
+    },
+    {
+      "trainer": 164,
+      "city": "Zurich",
+      "country": "Switzerland",
+      "kind": "enemy",
+      "levels": {
+        "easy": 33,
+        "normal": 37,
+        "hard": 42
+      }
+    },
+    {
+      "trainer": 172,
+      "city": "Rome",
+      "country": "Italy",
+      "kind": "gym",
+      "levels": {
+        "easy": 36,
+        "normal": 40,
+        "hard": 45
+      }
+    },
+    {
+      "trainer": 180,
+      "city": "Madrid",
+      "country": "Spain",
+      "kind": "gym",
+      "levels": {
+        "easy": 39,
+        "normal": 43,
+        "hard": 48
+      }
+    },
+    {
+      "trainer": 188,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "kind": "enemy",
+      "levels": {
+        "easy": 41,
+        "normal": 45,
+        "hard": 50
+      }
+    },
+    {
+      "trainer": 196,
+      "city": "Paris1940",
+      "country": "France, 1940",
+      "kind": "nazi",
+      "levels": {
+        "easy": 42,
+        "normal": 46,
+        "hard": 51
+      }
+    },
+    {
+      "trainer": 203,
+      "city": "Warsaw1943",
+      "country": "Poland, 1943",
+      "kind": "nazi",
+      "levels": {
+        "easy": 44,
+        "normal": 48,
+        "hard": 53
+      }
+    },
+    {
+      "trainer": 210,
+      "city": "Berlin1944",
+      "country": "Germany, 1944",
+      "kind": "nazi",
+      "levels": {
+        "easy": 46,
+        "normal": 50,
+        "hard": 55
+      }
+    },
+    {
+      "trainer": 217,
+      "city": "Geneva",
+      "country": "Switzerland",
+      "kind": "enemy",
+      "levels": {
+        "easy": 48,
+        "normal": 52,
+        "hard": 57
+      }
+    },
+    {
+      "trainer": 224,
+      "city": "Athens",
+      "country": "Greece",
+      "kind": "elite",
+      "levels": {
+        "easy": 50,
+        "normal": 54,
+        "hard": 59
+      }
+    },
+    {
+      "trainer": 231,
+      "city": "Athens2",
+      "country": "Greece",
+      "kind": "elite",
+      "levels": {
+        "easy": 51,
+        "normal": 55,
+        "hard": 60
+      }
+    },
+    {
+      "trainer": 238,
+      "city": "Athens3",
+      "country": "Greece",
+      "kind": "elite",
+      "levels": {
+        "easy": 52,
+        "normal": 56,
+        "hard": 61
+      }
+    },
+    {
+      "trainer": 245,
+      "city": "Athens4",
+      "country": "Greece",
+      "kind": "elite",
+      "levels": {
+        "easy": 53,
+        "normal": 57,
+        "hard": 62
+      }
+    },
+    {
+      "trainer": 252,
+      "city": "Champion",
+      "country": "Greece",
+      "kind": "champion",
+      "levels": {
+        "easy": 56,
+        "normal": 60,
+        "hard": 65
+      }
+    }
+  ],
+  "rematches": [
+    {
+      "trainer": 379,
+      "name": "ELLIS",
+      "party_count": 5,
+      "levels": {
+        "easy": 60,
+        "normal": 64,
+        "hard": 69
+      }
+    },
+    {
+      "trainer": 380,
+      "name": "MARINE",
+      "party_count": 5,
+      "levels": {
+        "easy": 61,
+        "normal": 65,
+        "hard": 70
+      }
+    },
+    {
+      "trainer": 381,
+      "name": "SABINE",
+      "party_count": 5,
+      "levels": {
+        "easy": 62,
+        "normal": 66,
+        "hard": 71
+      }
+    },
+    {
+      "trainer": 382,
+      "name": "MAARTEN",
+      "party_count": 5,
+      "levels": {
+        "easy": 63,
+        "normal": 67,
+        "hard": 72
+      }
+    },
+    {
+      "trainer": 383,
+      "name": "GRETA",
+      "party_count": 5,
+      "levels": {
+        "easy": 64,
+        "normal": 68,
+        "hard": 73
+      }
+    },
+    {
+      "trainer": 384,
+      "name": "IRENA",
+      "party_count": 5,
+      "levels": {
+        "easy": 65,
+        "normal": 69,
+        "hard": 74
+      }
+    },
+    {
+      "trainer": 385,
+      "name": "FLAVIA",
+      "party_count": 5,
+      "levels": {
+        "easy": 66,
+        "normal": 70,
+        "hard": 75
+      }
+    },
+    {
+      "trainer": 386,
+      "name": "INES",
+      "party_count": 5,
+      "levels": {
+        "easy": 67,
+        "normal": 71,
+        "hard": 76
+      }
+    },
+    {
+      "trainer": 387,
+      "name": "THALIA",
+      "party_count": 6,
+      "levels": {
+        "easy": 70,
+        "normal": 74,
+        "hard": 79
+      }
+    },
+    {
+      "trainer": 388,
+      "name": "NIKOS",
+      "party_count": 6,
+      "levels": {
+        "easy": 71,
+        "normal": 75,
+        "hard": 80
+      }
+    },
+    {
+      "trainer": 389,
+      "name": "ELENI",
+      "party_count": 6,
+      "levels": {
+        "easy": 72,
+        "normal": 76,
+        "hard": 81
+      }
+    },
+    {
+      "trainer": 390,
+      "name": "LEON",
+      "party_count": 6,
+      "levels": {
+        "easy": 73,
+        "normal": 77,
+        "hard": 82
+      }
+    },
+    {
+      "trainer": 391,
+      "name": "RIVAL",
+      "party_count": 6,
+      "levels": {
+        "easy": 76,
+        "normal": 80,
+        "hard": 85
+      }
+    }
+  ]
+}

@@ -192,3 +192,14 @@ The ending keeps League shelters, country travel and repeatable training availab
 - [x] Add Tough Claws for three regular slots, physical/special contact power,
   drain/recoil/Struggle/fixed/immunity/self-hit guards, Perrserker cold save,
   Binacle evolution and full Fluffy contact regression checks.
+
+- [x] Balance the Hard opening rival separately from later battles; verify
+  all nine starters on Easy/Normal/Hard and Hard with Nuzlocke, native saves
+  and cold Continue (36 deterministic opening cases).
+- [x] Earn Normal first badges with French Torchic and German Charmander
+  through native training, level-up and cold-save party persistence.
+- [ ] Complete naturally trained non-legendary rematch coverage. The initial
+  undertrained party lost Ellis; native late-route training is being measured.
+- [x] Earn the Hard first badge with Bulbasaur through six favorable native
+  practice battles; retain evolved-party/badge state after cold Continue.
+- [ ] Expand full-route difficulty/Nuzlocke coverage and prepared-team balance.
